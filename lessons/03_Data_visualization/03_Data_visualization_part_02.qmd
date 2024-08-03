@@ -1,0 +1,331 @@
+---
+title: "Day 3: Data visualization - Part 2"
+subtitle: "BSTA 511/611, OHSU"
+author: "Meike Niederhausen, PhD"
+date: "10/4/2023"
+categories: ["Week 2"]
+format: 
+  revealjs:
+      incremental: false
+      scrollable: true
+      chalkboard: true
+      theme: sky
+      width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
+      height: 825 #900 #800 #default 700; 788 for 3:4, 1200
+      slide-number: true
+      html-math-method: mathjax
+  # html:
+  #   link-external-newwindow: true
+  #   toc: true
+execute:
+  echo: true
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=20))  # set global text size for ggplots
+```
+
+# Back to research question
+
+
+## Case study: discrimination in developmental disability support (1.7.1)
+
+* __Previous research__
+  * Researchers examined DDS expenditures for developmentally disabled residents by ethnicity
+  * Found that the mean annual expenditures on Hispanics was less than that on White non-Hispanics. 
+* __Result__: an allegation of ethnic discrimination was brought against the California DDS.
+* __Question: Are the data sufficient evidence of ethnic discrimination?__
+
+
+
+## Load `dds.discr` dataset from `oibiostat` package
+
+::: {style="font-size: 90%;"}
+* The textbook's datasets are in the R package `oibiostat`
+* Make sure the `oibiostat` package is installed before running the code below.
+
+* Load the `oibiostat` package and the dataset `dds.discr`
+
+__[the code below needs to be run _every time_ you restart R or render a Qmd file]{style="color:darkorange"}__
+```{r}
+library(oibiostat)
+data("dds.discr")
+```
+
+* After loading the dataset `dds.discr` using `data("dds.discr")`, you will see `dds.discr` in the Data list of the Environment window.
+:::
+
+
+## `glimpse()`
+
+::: {style="font-size: 80%;"}
+__New: `glimpse()`__
+
+* Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types. 
+* `glimpse()` tends to have nicer output for `tibbles` than `str()`
+:::
+```{r}
+library(tidyverse)
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+<!-- ![](/img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+
+
+## Recall previous data viz
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| fig.height: 7
+#| fig.width: 7
+#| code-line-numbers: "7-12"
+ggplot(data = dds.discr, 
+       aes(x = expenditures,
+           y = ethnicity)) + 
+  geom_boxplot(color="darkgrey") + 
+  labs(x = "Annual Expenditures ($)",
+       y = "Race and ethnicity") +
+  geom_jitter(     
+    aes(color = ethnicity),      
+    alpha = 0.3,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4))      
+```
+
+:::
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| fig.height: 7
+#| fig.width: 7
+#| code-line-numbers: "4"
+ggplot(data = dds.discr, 
+       aes(x = age,
+           y = expenditures)) + 
+  geom_point() +       
+  labs(x = "Age",
+       y = "Annual Expenditures ($)") 
+```
+:::
+:::
+
+
+## Visualize in more detail: 
+
+ethnicity, age, and expenditures (code on next slide)
+
+```{r}
+#| echo: false
+#| fig.width: 12
+#| fig.height: 7
+#| code-line-numbers: "1-2, 5,9"
+dds.discr_Hips_WhnH <- dds.discr %>%  
+  filter(ethnicity == "White not Hispanic" | ethnicity == "Hispanic" ) %>% 
+  droplevels() 
+
+ggplot(data = dds.discr_Hips_WhnH,   
+       aes(x = expenditures,
+           y = age.cohort)) + 
+  geom_boxplot(color="darkgrey") + 
+  facet_grid(rows = "ethnicity") +   
+  labs(x = "Annual Expenditures ($)",
+       y = "Race and ethnicity") +
+  geom_jitter(     
+    aes(color = ethnicity),      
+    alpha = 0.3,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4)) +
+  theme(axis.title.x = element_text(size=20),
+        axis.text.x  = element_text(size=16),
+        axis.title.y = element_text(size=20),
+        axis.text.y  = element_text(size=16))
+```
+
+
+## Code for Visualize in more detail: ethnicity, age, and expenditures
+
+::: {style="font-size: 80%;"}
+Plot on previous slide
+:::
+```{r}
+#| eval: false
+#| code-line-numbers: "1-2,5,9"
+dds.discr_Hips_WhnH <- dds.discr %>%  
+  filter(ethnicity == "White not Hispanic" | ethnicity == "Hispanic" ) %>% 
+  droplevels()   # remove empty factor levels
+
+ggplot(data = dds.discr_Hips_WhnH,   
+       aes(x = expenditures,
+           y = age.cohort)) + 
+  geom_boxplot(color="darkgrey") + 
+  facet_grid(rows = "ethnicity") +   
+  labs(x = "Annual Expenditures ($)",
+       y = "Race and ethnicity") +
+  geom_jitter(     
+    aes(color = ethnicity),      
+    alpha = 0.3,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4))      
+```
+
+
+## Mean annual DDS expenditures by race/ethnicity: default long format
+
+::: columns
+::: {.column width="45%"}
+```{r}
+#| code-line-numbers: "3,5"
+mean_expend <- 
+  dds.discr_Hips_WhnH %>% 
+  group_by(
+    ethnicity, age.cohort)%>% 
+  summarize(
+    ave = mean(expenditures))
+```
+:::
+
+::: {.column width="55%"}
+```{r}
+mean_expend
+```
+:::
+:::
+
+## Mean annual DDS expenditures by race/ethnicity: wide format
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| code-line-numbers: "3-5"
+mean_expend_wide <- 
+  mean_expend %>% 
+  pivot_wider(
+    names_from = ethnicity,
+    values_from = ave)
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+mean_expend_wide
+```
+:::
+:::
+
+
+## Differences in mean annual DDS expenditures by age cohort and race/ethnicity
+
+```{r}
+#| code-line-numbers: "2"
+mean_expend_wide <- mean_expend_wide %>% 
+  mutate(diff_mean = `White not Hispanic` - Hispanic)
+
+mean_expend_wide
+```
+
+::: {style="font-size: 80%;"}
+__Question__: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?
+:::
+
+## Simpson’s paradox
+
+::: {style="font-size: 80%;"}
+* This case study is an example of __confounding__ known as Simpson’s paradox
+
+* __Simpson’s paradox__ happens when an association observed in several groups disappears or reverses direction when the groups are combined. 
+
+* In other words, an association between two variables $X$ and $Y$ may disappear or reverse direction once data are partitioned into subpopulations based on a third variable $Z$ (i.e., a confounding variable).
+:::
+
+![](/img_slides/ddsConfounding.png){fig-align="center"}
+
+# The tidyverse
+
+![[Artwork by @allison_horst](https://allisonhorst.com/)](/img_slides/tidyverse_celestial.png){fig-align="center"}
+
+
+## Tools for wrangling data
+
+::: {style="font-size: 70%;"}
+- `tidyverse` functions
+    + `tidyverse` is a [suite of packages](https://www.tidyverse.org/packages/) that implement `tidy` methods for data importing, cleaning, wrangling, and visualizing
+    + load the `tidyverse` packages by running the code `library(tidyverse)` 
+        * Don't forget to first install `tidyverse`!
+
+- Functions to easily work with rows and columns, such as
+    + subset rows/columns
+    + add new rows/columns
+    + join together different data sets
+    + make data _long_ or _wide_
+
+- There are often many steps to tidy data
+    + we string together commands 
+    + to be performed sequentially 
+    + using pipes `%>%`
+:::
+
+
+## Summary of data wrangling so far
+
+::: {style="font-size: 80%;"}
+* The pipe `%>%` to string together commands in sequence
+* `mutate()` to add a new variable to a dataset
+* `select()` to select columns (or deselect columns with -variable)
+* `filter()` to select specific rows
+* `pivot_wider()` to reshape a dataset from a long to a wide format
+
+__Summarizing data__
+
+* `tabyl()` from `janitor` package to make frequency tables of categorical variables
+* `summarize()` to get summary statistics of variables
+* `group_by()` to group data by categorical variables before finding summaries
+:::
+
+## What packages are included in the `tidyverse`? {.smaller}
+
+::: columns
+::: {.column width="35%"}
+__Core packages__  
+These automatically load when loading the tidyverse package
+
+![[https://www.tidyverse.org/](https://www.tidyverse.org/)](/img_slides/tidyverse_core.png){fig-align="center"}
+:::
+
+::: {.column width="65%"}
+
+List of all packages:
+
+```{r}
+tidyverse_packages(include_self = TRUE)
+```
+
+* Packages not a part of the core get installed with the tidyverse suite, but need to be loaded separately.  
+* See [https://www.tidyverse.org/packages/](https://www.tidyverse.org/packages/) for more info.
+
+:::
+:::
+

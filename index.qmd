@@ -1,0 +1,110 @@
+---
+title: ""
+toc: false
+page-layout: full
+link-external-newwindow: true
+---
+
+::: {style="background-color: #3070BF"}
+::: {style="color: #FFFFFF"}
+::: grid
+::: g-col-4
+![](images/Bsta513.png){fig-align="center" width="337"}
+:::
+
+::: g-col-7
+
+ 
+
+# EPI 525: Biostatistics 1
+
+### Fall 2024
+
+Welcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.
+:::
+:::
+
+:::
+:::
+
+::: {style="background-color: #5BAFF8"}
+::: {style="color: #FFFFFF"}
+
+ 
+
+::: grid
+
+::: g-col-3
+
+:::
+
+::: {.g-col-4}
+[{{< iconify material-symbols folder size=24px >}}](https://ohsuitg-my.sharepoint.com/:f:/r/personal/wakim_ohsu_edu/Documents/Teaching/Classes/S2024_BSTA_513_613/Student_files?csf=1&web=1&e=951UeH) OneDrive Folder
+:::
+
+::: g-col-4
+
+[{{< iconify fluent video-recording-20-filled size=24px >}}](https://echo360.org/section/1124906b-db5a-43c1-809d-5eadfbba4aad/public) Echo360 page
+:::
+
+::: g-col-2
+:::
+
+:::
+:::
+:::
+
+
+::: grid
+::: g-col-3
+### Instructor
+
+{{< iconify fluent person-24-filled size=24px >}} [Dr. Nicky Wakim](instructors.qmd)
+
+{{< iconify bi building-fill size=24px >}} Vanport 622A
+
+{{< iconify tabler mail-filled size=24px >}} [wakim\@ohsu.edu](mailto:wakim@ohsu.edu)
+:::
+
+::: g-col-3
+### Office Hours
+
+[OH with Nicky](https://ohsu.webex.com/meet/wakim)
+
+{{< iconify icon-park-solid time size=24px >}} W 3 - 4pm
+
+[OH with TA](https://pdx.zoom.us/j/84711194675)
+
+{{< iconify icon-park-solid time size=24px >}} T 5:30 - 7pm
+
+:::
+
+::: g-col-3
+### Course details
+
+{{< iconify fa6-solid calendar-days size=24px >}} Mondays, Wednesdays
+
+{{< iconify fa6-solid calendar size=24px >}} Sept 30 - Dec ?
+
+{{< iconify icon-park-solid time size=24px >}} 1:00 PM - 2:50 PM
+
+{{< iconify fa6-solid person-chalkboard size=24px >}} In-person, VPT 515
+:::
+
+::: g-col-3
+### Contacting me
+
+E-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: grid
+::: g-col-9
+:::
+
+::: g-col-3
+[{{< iconify icomoon-free github size=24px >}} View the source on GitHub](https://github.com/nwakim/F24_EPI_525)
+:::
+:::

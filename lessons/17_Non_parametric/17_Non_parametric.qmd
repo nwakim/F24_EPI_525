@@ -1,0 +1,33 @@
+---
+title: "Day 17: Nonparametric tests - Supplemental material"
+subtitle: "BSTA 511/611"
+author: "Meike Niederhausen, PhD"
+institute: "OHSU-PSU School of Public Health"
+date: "11/29/2023"
+categories: ["Week 10"]
+format: 
+  # revealjs:
+  #     incremental: false
+  #     scrollable: true
+  #     chalkboard: true
+  #     theme: sky
+  #     width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
+  #     height: 825 #900 #800 #default 700; 788 for 3:4, 1200
+  #     slide-number: true
+  #     html-math-method: mathjax
+  html:
+    link-external-newwindow: true
+    toc: true
+execute:
+  echo: true
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+
+* [Download](https://drive.google.com/file/d/1Kl15Q5EPbDz6u1Hg-rXCFxFI7_g2Ht-l/view?usp=sharing) pdf of slides
+
+* 12/2/23: See updates made to [code file](../slides_code/Day17_bsta511_code.qmd) for creating ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+    * Search "New:" for updates made. 
+  

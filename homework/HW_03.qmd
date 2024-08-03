@@ -1,0 +1,119 @@
+---
+title: "Homework 3"
+author: "Your name here - update this!!!!"
+date: "Due 10/21/24"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Updated 10/18/23: Moved questions on Day 7 material to HW 4.
+
+**Due 10/21/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+:::{.callout-important}
+* The non-R exercises (see sections `Book exercises` and `Non-book exercise`) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
+    * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand._
+* If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
+:::
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+
+# Book exercises {.unnumbered}
+
+## 3.4 Baggage fees {.unnumbered}
+
+
+
+## 3.5 Gull clutch size {.unnumbered}
+
+<font color="green">Review the solution in the back of the book for exercise 3.5.</font>
+
+### (a) {.unnumbered}
+
+<font color="green">For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.</font>
+
+### (b) {.unnumbered}
+
+<font color="green">For part (b), the answer is _not_ correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation.</font>
+
+
+
+## 3.6 Scooping ice cream  {.unnumbered}
+
+
+## 3.8 Chickenpox, Part I.  {.unnumbered}
+
+<font color="green">For #3.8, calculate the binomial probabilities two ways:  
+(1) using the formula (can use R to calculate factorials or the choose function) and  
+(2) using R functions for binomial distribution probabilities. </font>
+
+
+## 3.10 Chickenpox, Part II.  {.unnumbered}
+
+<font color="green">For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.</font>
+
+
+## !!! Instructions for Normal probability exercises !!! {.unnumbered}
+
+:::{.callout-important}
+
+Additional Instructions - IMPORTANT!!!
+
+* For __ALL__ normal distribution exercises: 
+  * make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
+  * calculate probabilities using **both**
+      * z-table
+      * R
+:::
+
+
+
+# Non-book exercise
+
+## Clinican time with patients
+
+*Suppose a clinician schedules 20 minutes to spend with each of their patients. However, they sometimes run over or end earlier. Based on past data, the mean "extra" time they spend with a patient is 3 minutes with a standard deviation of 2 minutes. Suppose they see 13 patients today and the extra times they spend with  patients are independent from patient to patient.*
+
+### Expected total time
+
+**Find the expected total time they will spend with all of their patients today.**
+
+
+
+
+
+### SD of total time
+
+**Find the standard deviation of the total time they will spend with all of their patients today.**
+
+
+
+

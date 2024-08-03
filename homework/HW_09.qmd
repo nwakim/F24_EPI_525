@@ -1,0 +1,418 @@
+---
+title: "Homework 9"
+author: "Your name here - update this!!!!"
+date: "Due 12/4/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 4
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Due Monday, 12/4/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_9_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_9_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+
+### R & LaTeX code {.unnumbered}
+
+* See the .qmd files with the code from class notes for LaTeX and R code.
+* The LaTeX code will make it easier to show your work in computations.
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+# Book exercises {.unnumbered}
+
+## 6.12 Trends in the residuals {.unnumbered}
+
+
+
+
+## 6.20 Guppies, Part IV {.unnumbered}
+
+
+
+
+## 6.26 (a, e) Helmets and lunches {.unnumbered}
+
+[__Skip parts (b)-(d). To complete (e), use that the slope from part (b) is −0.537, and the intercept is 55.34.__]{style="color:purple"}
+
+[_Note: if you have time, it would be good practice to calculate the regression line as well. This was covered on the previous assignment._]{style="color:purple"} 
+
+
+
+
+## 6.28 Guppies, Part V {.unnumbered}
+
+
+
+
+## 6.32 (a, b) Guppies, Part VI  {.unnumbered}
+
+[__Skip part (c).__]{style="color:purple"}
+
+
+
+
+
+# R exercises 
+
+## Load all the packages you need below here. 
+
+```{r}
+
+```
+
+
+## R1: Life expectancy vs. CO2 emissions 
+
+Use the dataset `Gapminder_2011_LifeExp_CO2.csv`
+
+Data were downloaded from https://www.gapminder.org/data/.  
+
+* __Life expectancy__ = the average number of years a newborn child would live if current mortality patterns were to stay the same. Source: https://www.gminder.org/data/documentation/gd004/
+
+* __CO2 emissions (tons per person)__ = Carbon dioxide emissions from the burning of fossil fuels (metric tons of CO2 per person). Source: https://cdiac.ess-dive.lbl.gov/
+
+* 2011 is the most recent year with the most complete data
+
+### Load data
+
+__Load the dataset `Gapminder_2011_LifeExp_CO2.csv` and do a quick inspection of it. What are the dimensions? Variable names?__
+
+
+
+
+### Linear association?
+
+__Make a scatterplot of life expectancy vs. CO2 emissions per person showing the best fit line and describe the relationship between the variables. In addition comment on whether the relationship looks linear or not.__
+
+
+
+
+### SLR
+
+__Run the simple linear regression of life expectancy vs.CO2 emissions per person, and write out the corresponding regression equation. __
+
+
+
+
+### Prediction
+
+__Using the regression equation, what is the expected life expectancy for a country with $CO_2$ emissions 20 metric tons per person?__
+
+
+
+
+### Independent data points?
+
+__Explain whether you think the data point are independent of each other or not.__
+
+
+
+
+### Normality of residuals?
+
+__Make a histogram, density plot, and boxplot of the model's residuals. What is the distribution shape of the residuals? What shape do we want them to have?__
+
+
+
+
+### QQ plot
+
+__Make a QQ plot of the model's residuals.Explain whether or not the distribution of the residuals deviates from normality and how you made that conclusion based on the QQ plot.__
+
+
+
+
+### Random Normal QQ plots
+
+__Make 5 QQ plots with points randomly generated from a normal distribution, where the number of points matches the sample size used in the linear model.__
+
+
+
+
+### QQ plot comparison
+
+__Compare the QQ plot of the model's residuals to the randomly generated QQ plots. Is the QQ plot of the residuals similar to the randomly generated plots or different? Based on the these QQ plots, do you think it's possible that the residuals could be normally distributed?__
+
+
+
+
+### Equality of variance of the residuals?
+
+__Make a residual plot. Describe what the plot looks like and whether there are any patterns in the residuals, and whether the equality of variance assumption the residuals seems to be satisfied or not.__
+
+
+
+
+### Transformation: log(x)
+
+__Add a new variable to the dataset for the natural logarithm (`log()`) of the CO2 emissions per person values.__
+
+
+
+
+### Linear association (with transformation)?
+
+__Make a scatterplot of life expectancy vs. log of CO2 emissions per person showing the best fit line and describe the relationship between the variables. In addition comment on whether the relationship looks linear or not.__
+
+
+
+
+### SLR (with transformation)
+
+__Run the simple linear regression of life expectancy vs.CO2 emissions per person, and write out the corresponding regression equation.__
+
+
+
+
+### Prediction (with transformation)
+
+__Using the regression equation, what is the expected life expectancy for a country with $CO_2$ emissions 20 metric tons per person?__
+
+
+
+
+### Compare predictions from without and with transformation
+
+__Compare the predicted values from the models with and without the transformation. Which is bigger and why? Explain in terms of visually comparing the respective regression lines on the scatterplots.__
+
+
+
+
+### Normality of residuals (with transformation)?
+
+__Make a histogram, density plot, and boxplot of the model's residuals. What is the distribution shape of the residuals? What shape do we want them to have?__
+
+
+
+
+### QQ plot (with transformation)
+
+__Make a QQ plot of the model's residuals.Explain whether or not the distribution of the residuals deviates from normality and how you made that conclusion based on the QQ plot.__
+
+
+
+
+### Random Normal QQ plots (with transformation)
+
+__Compare the QQ plot of the model's residuals to the randomly generated QQ plots (use the ones you generated above). Is the QQ plot of the residuals similar to the randomly generated plots or different? Based on the these QQ plots, do you think it's possible that the residuals could be normally distributed?__
+
+
+
+
+### Equality of variance of the residuals (with transformation)?
+
+__Make a residual plot. Describe what the plot looks like and whether there are any patterns in the residuals, and whether the equality of variance assumption the residuals seems to be satisfied or not.__
+
+
+
+
+### Comparison of models without and with transformation
+
+__Which of the models do you think has a better fit? Make sure your explanation comments on each of the LINE assumptions, and also compare the $R^2$ values from the models.__
+
+
+
+
+# Nonparametric-Tests
+
+
+## NPT 1: Sign test
+
+__Vegetarian diet and cholesterol levels__
+
+When covering paired t-tests on Day 10 Part 2, the class notes used the example of testing whether a vegetarian diet changed cholesterol levels. The data are in the file `chol213.csv` at <https://niederhausen.github.io/BSTA_511_F23/data/chol213.csv>. In this exercise we will use non-parametric tests to test for a change and compare the results to the paired t-test.
+
+
+### Hypotheses
+
+__What are the hypotheses for the (Wilcoxon) Signed-rank test (2-sided) in the context of the problem?__ 
+
+
+
+
+### $D^+$ and $D^-$
+
+__Calculate $D^+$ and $D^-$, the number of positive and negative differences when the differences are calculated as `After - Before`.__ 
+
+
+
+### Probability distribution
+
+__What probability distribution can be used to model the number of positive differences? Make sure to specify its parameters.__ 
+
+
+
+
+### Exact probability
+
+__Find the exact probability that there were at most 3 positive differences.__ 
+
+
+
+
+### Sign test in R
+
+__Run the sign test in R. What is the sign test p-value and how does it compare to the p-value of the paired t-test (check the class notes for this)? __ 
+
+
+
+
+### S
+
+__The sign test output includes the value for `S`. What is `S` and what does it measure?__ 
+
+
+
+
+### p-value
+
+__Does the probability that there were at most 3 positive differences match the p-value from the R output? Why or why not?__ 
+
+
+
+
+### Normal approximation
+
+__Would it be appropriate to use a normal approximation to calculate the p-value for this test? Why or why not?__ 
+
+
+
+## NPT 2: (Wilcoxon) Signed-rank test
+
+__Vegetarian diet and cholesterol levels__
+
+When covering paired t-tests on Day 10 Part 2, the class notes used the example of testing whether a vegetarian diet changed cholesterol levels. The data are in the file `chol213.csv` at <https://niederhausen.github.io/BSTA_511_F23/data/chol213.csv>. In this exercise we will use non-parametric tests to test for a change and compare the results to the paired t-test.
+
+
+### Hypotheses
+
+__What are the hypotheses for the sign test (2-sided) in the context of the problem?__ 
+
+
+
+
+### Signed ranks
+
+__Find the signed ranks. Make sure to account for ties when doing so.__ 
+
+
+
+
+### $T^+$
+
+__Calculate the sum of the positive ranks ( $T^+$ ) __ 
+
+
+
+
+### Exact p-value
+
+__Can an exact p-value for the (Wilcoxon) Signed-rank test be calculated? Why or why not?__ 
+
+
+
+
+### Normal approximation
+
+__Is it appropriate to use the normal approximation method in this case?__ 
+
+
+
+
+### Test in R
+
+__Run the (Wilcoxon) Signed-rank test in R. What is the  p-value and how does it compare to the p-value of the sign test and the paired t-test (check the class notes for this)?__ 
+
+
+
+
+### Condition
+
+__There's one more condition that should be satisfied  to use the (Wilcoxon) Signed-rank test that has not been asked about yet in these questions. What is it and do you think it's satisfied?__ 
+
+
+
+
+
+
+## NPT 3: Wilcoxon rank-sum test
+
+__Does caffeine increase finger taps/min?__
+
+When covering 2-sample t-tests on Day 11, the class notes used the example of testing whether caffeine increases finger taps/min. The data are in the file `CaffeineTaps.csv` at <https://niederhausen.github.io/BSTA_511_F23/data/CaffeineTaps.csv>. In this exercise we will use a non-parametric test and compare the results to the paired t-test.
+
+
+### Condition
+
+__What condition needs to be satisfied to apply the Wilcoxon rank-sum test and is it satisfied for these data?__ 
+
+
+
+
+[__Answer the following questions using the Wilcoxon rank-sum test whether you think the condition has been satisfied or not.__ ]{style="color:green"}
+
+### Why Wilcoxon rank-sum test?
+
+__How would we know to use the Wilcoxon rank-sum test instead of the sign test or (Wilcoxon) Signed-rank test?__ 
+
+
+
+
+### Hypotheses
+
+__What are the hypotheses for the Wilcoxon rank-sum test (1-sided) in the context of the problem? __ 
+
+
+
+### Exact test in R
+
+__Run the exact Wilcoxon rank-sum test in R. What warning(s) does it give you?__ 
+
+
+
+
+### Normal approximation test in R
+
+__Run the Wilcoxon rank-sum test in R with the normal approximation. Comment on whether it is appropriate to use the normal approximation or not in this case.__ 
+
+
+
+
+### p-value
+
+__What is the p-value and how does it compare to the p-value of the 2-sample t-test (check the class notes for this)?__ 
+
+
+
+### Conclusion
+
+__Write a conclusion to the test in the context of the problem.__ 
+
+
+
+

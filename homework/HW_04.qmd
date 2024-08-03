@@ -1,0 +1,173 @@
+---
+title: "Homework 4"
+author: "Your name here - update this!!!!"
+date: "Due 10/28/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Due 10/28/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_4_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_4_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+:::{.callout-important}
+* The non-R exercises (see sections `Book exercises` and `Non-book exercise`) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
+    * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand._
+* The R exercises are to be completed using Quarto.
+* If you complete part of the assignment not using Quarto, you will be uploading 3 files on Sakai for HW 4: qmd & html files for your R work, and a pdf with your written work. 
+* If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
+:::
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+
+# Book exercises {.unnumbered}
+
+## !!! Instructions for Normal probability exercises !!! {.unnumbered}
+
+:::{.callout-important}
+
+Additional Instructions - IMPORTANT!!!
+
+* For __ALL__ normal distribution exercises: 
+  * make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
+  * calculate probabilities using **both**
+      * z-table
+      * R
+:::
+
+## 3.20 Area under the curve, Part II {.unnumbered}
+
+
+
+## 3.22 Triathlon times {.unnumbered}
+
+
+
+## 3.28 Arsenic poisoning {.unnumbered}
+
+
+
+## 3.30 Find the SD {.unnumbered}
+
+
+
+## 3.32 Chickenpox, Part III  {.unnumbered}
+
+
+
+## 3.38 Stenographer’s typos {.unnumbered}
+
+
+
+## 3.40 Osteosarcoma in NYC {.unnumbered}
+
+
+
+## 4.2 Heights of adults {.unnumbered}
+
+
+
+
+# Non-book exercise
+
+## The Ethan Allen
+
+On October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?  
+
+* The maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds. 
+* Data from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.
+
+
+If the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.
+
+
+### Maximum average weight
+
+__With 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?__
+
+
+
+### Probability an individual weighs more than the maximum average weight 
+
+__Assuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.__
+
+
+
+### Probability a random sample of 47 American adults has an average weight greater than the maximum average weight
+
+__Calculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.__  
+
+
+
+### What theorem did you use in the previous part, and why were you able to apply it to this problem?
+
+
+
+### Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?  
+
+
+# R exercises 
+
+## Load all the packages you need below here. 
+
+
+## R1: Youth weights
+
+In this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below. 
+
+
+:::{.callout-important}
+
+You will need to install and load the `moderndive` R package to use the `rep_sample_n()` command from the class notes.
+
+:::
+
+
+### Use the `set.seed()` command to set a randomization seed. Use whatever number you want for the seed.
+
+
+
+### Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.
+
+
+
+### Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.
+
+
+
+### Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.
+
+
+### Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?
+
+
+
+### What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?
+
+

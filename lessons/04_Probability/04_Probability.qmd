@@ -1,0 +1,32 @@
+---
+title: "Day 4: Probability Part 1"
+subtitle: "BSTA 511/611, OHSU"
+author: "Meike Niederhausen, PhD"
+date: "10/9/2023"
+categories: ["Week 3"]
+format: 
+  # revealjs:
+  #     incremental: false
+  #     scrollable: true
+  #     chalkboard: true
+  #     theme: sky
+  #     width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
+  #     height: 825 #900 #800 #default 700; 788 for 3:4, 1200
+  #     slide-number: true
+  #     html-math-method: mathjax
+  html:
+    link-external-newwindow: true
+    toc: true
+execute:
+  echo: true
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+
+* [Download](../LaTeX_slides/Day04_bsta511.pdf) slides
+
+
+
+{{< pdf ../LaTeX_slides/Day04_bsta511.pdf width=100% height=1000 >}}

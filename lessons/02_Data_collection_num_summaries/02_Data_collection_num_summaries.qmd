@@ -1,0 +1,1066 @@
+---
+title: "Lesson 2: Data collection & numerical summaries"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "09/25/2023"
+categories: ["Week 1"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 2 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+```
+
+# Goals for today {.smaller}
+
+* (1.3) __Data collection principles__
+  - Population vs. sample
+  - Sampling methods
+  - Experiments vs. Observational studies
+
+* (1.2) __Intro to Data__
+  - Data types
+  - How are data stored in R?
+  - Working with data in R
+  
+* (1.4) __Summarizing numerical data__ 
+  - Mean, median, mode, SD, IQR, range, 5 number summary
+  - Empirical Rule
+  - robust statistics
+
+* __R packages__ -> __[install for next class!!!]{style="color:darkorange"}__
+
+
+
+
+# Recap of last time {.smaller}
+
+::: columns
+::: {.column width="40%"}
+*  Open RStudio on your computer (not R!)
+
+![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](/img_slides/01_md_r.png){fig-align="center"}
+
+
+
+* Basic math using R
+
+:::
+
+::: {.column width="60%"}
+* Creating and rendering Quarto files
+
+![](/img_slides/Day1_compare_qmd_html.png){fig-align="center"}
+
+* Formatting text & headers
+* Code chunks
+:::
+:::
+
+
+## Useful keyboard shortcuts {.smaller}
+
+
+[Full list of keyboard shortcuts](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts)\
+\ 
+
++------------------------------------------+--------------------+-----------------+
+| action                                   | mac                | windows/linux   |
++==========================================+====================+=================+
+| Run code in qmd (or script)              | cmd + enter        | ctrl + enter    |
++------------------------------------------+--------------------+-----------------+
+| `<-`                                     | option + -         | alt + -         |
++------------------------------------------+--------------------+-----------------+
+| interrupt currently running command      | esc                | esc             |
++------------------------------------------+--------------------+-----------------+
+| in console, retrieve previously run code | up/down            | up/down         |
++------------------------------------------+--------------------+-----------------+
+| keyboard shortcut help                   | option + shift + k | alt + shift + k |
++------------------------------------------+--------------------+-----------------+
+
+\
+
+### Practice
+
+Try typing code below in your qmd (with shortcut) and evaluating it:
+
+```{r}
+#| eval: false
+y <- 5
+y
+```
+
+
+## Another resource for an introduction to R
+
+* If you would like another perspective on what we covered the first week, you might find __Danielle Navarro’s__ online book __*Learning Statistics with R*__ to be helpful. 
+
+* Download free pdf: [https://learningstatisticswithr.com/](https://learningstatisticswithr.com/)
+
+* See Sections 3.1-3.7.1 for some of the topics we covered on first day 
+
+
+# MoRitz's tip of the day
+
+Customize your RStudio interface!  
+[https://www.pipinghotdata.com/posts/2020-09-07-introducing-the-rstudio-ide-and-r-markdown/#background](https://www.pipinghotdata.com/posts/2020-09-07-introducing-the-rstudio-ide-and-r-markdown/#background)
+
+
+::: columns
+::: {.column width="40%"}
+
+![](/img_slides/IMG_4163_compressed.jpeg){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+![](/img_slides/adjust-panels.gif){fig-align="center"}
+:::
+:::
+
+
+
+
+
+# (1.3) Data collection principles
+
+*  Population vs. sample
+* Sampling methods
+*  Experiments vs. Observational studies
+
+
+## Population vs. sample
+
+\
+
+### (Target) Population
+
+* group of interest being studied
+* group from which the sample is selected
+  - studies often have _inclusion_ and/or _exclusion_ criteria
+
+\
+
+### Sample
+
+* group on which data are collected
+* often a small subset of the population
+
+
+## Sampling methods (1/4) {.smaller}
+
+Goal is to get a __representative__ sample of the population:  
+the characteristics of the sample are similar to the characteristics of the population
+
+::: columns
+::: {.column width="49%"}
+__Simple random sample (SRS)__  
+
+* each individual of a population has the _same chance_ of being sampled
+* randomly sampled
+* considered best way to sample
+
+![](/img_slides/sampleRandomHealthPlan.png){fig-align="center"}
+
+:::
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+__Convenience sample__  
+
+* easily accessible individuals are _more likely_ to be included in the sample than other individuals
+* a common "pitfall"
+
+![](/img_slides/sampleConvenienceHealthPlan.png){fig-align="center"}
+
+:::
+:::
+
+
+
+## Sampling methods (2/4) {.smaller}
+
+_Good sampling plans don't guarantee samples representative of the population_
+
+::: columns
+::: {.column width="49%"}
+__Non-response bias__
+
+* non-response rates can be high
+* are all groups within a population being reached?
+* unrepresentative sample  
+=> skewed results
+
+![](/img_slides/sampleNonResponseHealthPlan.png){fig-align="center"}
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+__"Random" samples can be unrepresentative by random chance__
+
+* In a SRS each case in the population has an equal chance of being included in the sample
+* But by random chance alone a random sample might contain a higher proportion of one group over another
+* Ex: a SRS might by chance include 70% men (unlikely, but theoretically possible)
+
+:::
+:::
+
+## Sampling methods (3/4) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+* __Simple random sample (SRS)__
+  * each individual of a population has the _same chance_ of being sampled
+  * _statistical methods taught in this class assume a SRS!_
+
+* __Stratified sampling__
+  * divide population into groups (strata) before selecting cases within each stratum (often via SRS)
+  * usually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups
+:::
+
+::: {.column width="50%"}
+![](/img_slides/simple_stratified.png){fig-align="center"}
+:::
+:::
+
+## Sampling methods (4/4) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+* __Cluster sample__
+  * first divide population into groups (clusters)
+  * then sample a fixed number of clusters, and include _all_ observations from chosen clusters
+  * clusters are often hospitals, clinicians, schools, etc., where each cluster will have similar services/ policies/ etc. 
+  * cases within clusters usually very diverse
+
+
+* __Multistage sample__
+  * similar to a cluster sample, but select a random sample within each selected cluster instead of all individuals
+:::
+
+::: {.column width="50%"}
+![](/img_slides/cluster_multistage.png){fig-align="center"}
+
+:::
+:::
+
+## Experiments (1/2) 
+
+::: {style="font-size: 75%;"}
+* Researchers assign individuals to different __treatment__ or __intervention groups__
+  * __control group__: often receive a __placebo__ or usual care
+  * different treatment groups are often called __study arms__
+* __Randomization__
+  * group assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)
+  * randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
+      * treatment is the only systematic difference between groups
+      * establish causality
+  * __blocking (stratification)__: group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e. gender, age group)
+
+:::
+
+## Experiments (2/2) 
+
+::: {style="font-size: 90%;"}
+
+* __Replication__
+  * accomplished by collecting a sufficiently large sample
+  * results usually more reliable with a large sample size
+      * often less variability
+      * more likely to be representative of population
+* Some studies are not ethical to carry out as experiments
+:::
+
+
+## Observational studies 
+
+::: {style="font-size: 90%;"}
+* data are observed and recorded without interference
+* often done via surveys, electronic health records, or medical chart reviews
+* cohorts
+* associations between variables can be established, but not causality
+    * Individuals with different characteristics may also differ in other ways that influence response
+* confounding variables (lurking variable)
+  * variables associated with both the explanatory and response variables
+
+* prospective vs. retrospective studies
+:::
+
+## Comparing study designs
+
+![[Science Media Centre](https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/)](/img_slides/strength_of_evidence.jpeg){fig-align="center"}
+
+
+
+## Systematic Reviews example
+
+![[STEM: Systematically Testing the Evidence on Marijuana](https://www.cannabisevidence.org/)](/img_slides/STEM_systematic_review.jpg){fig-align="center"}
+
+::: columns
+::: {.column width="85%"}
+::: {style="font-size: 65%;"}
+STEM is a collaborative project between the US Department of Veterans Affairs and the [Center for Evidence-based Policy](https://centerforevidencebasedpolicy.org/) at Oregon Health & Science University.  
+The project is funded by the US Department of Veterans Affairs: Office of Rural Health.
+:::
+:::
+
+::: {.column width="15%"}
+![](/img_slides/logo_CenterEvidenceBasedPolicy.jpg){fig-align="center"}
+:::
+:::
+
+# (1.2) Intro to Data
+
+![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](/img_slides/horst_data_cowboy.png){fig-align="center"}
+
+
+
+## How are data stored, how do we use them? {.smaller}
+
+- Often, data are in an Excel sheet, or a plain text file (.csv, .txt)
+- .csv files open in Excel automatically, but actually are plain text
+- Usually, columns are variables/measures and rows are observations (i.e. a person's measurements)
+
+### Data in R 
+
+* We can import data from many file types, including .csv, .txt., and .xlsx
+    * We will cover this on a later date
+* Once imported, R typically stores data as __data frames__, or __tibbles__ if using the `tidyverse` package (more on this later).
+    * For our purposes, these are essentially the same, and I will tend to use the terms interchangeably.
+    * These are examples of what we call __object types__ in R.
+
+
+
+## Data frame example
+
+::: columns
+::: {.column width="54%"}
+
+```{r}
+df <- data.frame(
+  IDs=1:3, 
+  gender=c("male", "female", "Male"), 
+  age=c(28, 35.5, 31),
+  trt = c("control", "1", "1"),
+  Veteran = c(FALSE, TRUE, TRUE)
+  )
+df
+```
+
+* __Vectors__ vs. __data frames__
+    * a data frame is a collection (or array or table) of vectors
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="44%"}
+::: {style="font-size: 90%;"}
+* Different columns can be of different data types (i.e. numeric vs. text)
+* Both numeric and text can be stored within a column (stored together as *text*).
+
+* Vectors and data frames are examples of _**objects**_ in R. 
+  + There are other types of R objects to store data, such as matrices, lists.
+:::
+:::
+:::
+
+
+## Observations & variables
+
+::: columns
+::: {.column width="60%"}
+
+```{r}
+df
+```
+
+![[ISLBS](https://www.openintro.org/book/biostat/)](/img_slides/Fig1.8_variable_types.png){fig-align="center"}
+
+:::
+::: {.column width="40%"}
+::: {style="font-size: 90%;"}
+* Book refers to a dataset as a _data matrix_ 
+
+* Rows are usually __observations__
+* Columns are usually __variables__ 
+
+
+* __[How many observations are in this dataset?]{style="color:green"}__
+
+* __[What are the variable types in this dataset?]{style="color:green"}__
+::: 
+:::
+:::
+
+
+
+
+## Variable (column) types
+::: {style="font-size: 70%;"}
+R type | variable type| description
+---|---|---
+integer | discrete | integer-valued numbers
+double or numeric | continuous| numbers that are decimals
+factor  | categorical | categorical variables stored with levels (groups)
+character | categorical | text, "strings"
+logical | categorical | boolean (TRUE, FALSE)
+
+<!-- Each variable (column) in a data frame can be of a different type. -->
+
+* View the __structure__ of our data frame to see what the variable types are:
+:::
+```{r}
+str(df)
+```
+
+<!-- * Note that the ID column is _integer_ type since the values are all whole numbers, although we likely would think of it as being a categorical variable and thus prefer it to be a factor. -->
+
+
+
+
+## Fisher's (or Anderson's) Iris data set {.smaller}
+
+Data description: 
+
+* n = 150 
+* 3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+  + 50 measurements of each type of Iris
+* __variables__:
+  + sepal length, sepal width, petal length, petal width, and species
+
+_[Can the iris species be determined by these variables?]{style="color:purple"}_
+
+<center><img src="/img_slides/Iris_types.png" width="70%" height="50%"><img src="/img_slides/Iris_parts.png" width="28%" height="50%"></center>
+[Gareth Duffy](https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project)
+
+
+
+## View the `iris` dataset
+
+::: {style="font-size: 80%;"}
+* The `iris` dataset is already pre-loaded in *base* R and ready to use.
+* Type the following command in the console window
+  - _Warning: this command cannot be rendered. It will give an error._
+:::
+
+\
+
+:::columns
+::: {.column width="30%"}
+```{r}
+#| eval: false
+
+View(iris)
+```
+::: {style="font-size: 80%;"}
+A new tab in the scripting window should appear with the `iris` dataset.
+:::
+:::
+
+::: {.column width="70%"}
+
+![](/img_slides/screenshot_iris_View.png){fig-align="center"}
+:::
+:::
+
+
+## Data structure
+
+* What are the different __variable types__ in this data set?
+
+\
+
+```{r}
+str(iris)   # structure of data
+```
+
+
+
+
+## Data set summary
+
+```{r}
+summary(iris)
+```
+
+
+
+## Data set info
+
+```{r}
+dim(iris)
+nrow(iris)
+ncol(iris)
+names(iris)
+```
+
+
+
+
+## View the beginning or end of a dataset
+
+```{r}
+head(iris)
+tail(iris)
+```
+
+
+
+## Specify how many rows to view at beginning or end of a dataset
+
+```{r}
+head(iris, 3)
+tail(iris, 2)
+```
+
+
+
+## The `$`
+
+- Suppose we want to single out the column of petal width values.
+- One way to do this is to use the `$`
+    * `DatSetName$VariableName`
+
+```{r}
+iris$Petal.Width
+```
+
+
+
+## Example using the `$`
+
+The `$` is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.
+
+\
+
+```{r}
+mean(iris$Petal.Width)
+sd(iris$Petal.Width)
+median(iris$Petal.Width)
+```
+
+
+
+## Inline code
+
+::: {style="font-size: 90%;"}
+* With markdown you can also report __R code output inline__ with the text instead of using a chunk.
+
+::: columns
+::: {.column width="50%"}
+Text in editor:
+
+![](/img_slides/screenshot_code_inline_petalwidth.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+Output: 
+
+The mean petal width for all 3 species combined is `r round(mean(iris$Petal.Width),1)` 
+(SD = `r round(sd(iris$Petal.Width),1)`) cm.
+
+:::
+:::
+
+- Reporting summary statistics this way in a report, makes the numbers computationally reproducible.
+- For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.
+:::
+
+
+# (1.4) Summarizing numerical data 
+
+::: columns
+::: {.column width="30%"}
+Measures of center &  spread
+
+:::
+
+::: {.column width="70%"}
+
+![[https://xkcd.com/937/](https://xkcd.com/937/)](/img_slides/xkcd_tornadoguard.png){fig-align="center"}
+
+:::
+:::
+
+
+
+## Table 1 example
+
+::: columns
+::: {.column width="60%"}
+![](/img_slides/Table1_Barton.png){fig-align="center"}
+:::
+
+::: {.column width="40%"}
+*Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis*  
+J Barton et al.  
+Arthritis Care & Research.  
+2021 Sep 27
+[https://pubmed.ncbi.nlm.nih.gov/34569172/](https://pubmed.ncbi.nlm.nih.gov/34569172/) 
+:::
+:::
+
+
+
+## Measures of center: mean
+
+::: {style="font-size: 80%;"}
+__[Sample mean]{style="color:darkorange"}__: the average value of observations
+
+$$\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}$$  
+
+where $x_1, x_2, \ldots, x_n$ represent the $n$ observed values in a sample
+
+
+__Example__: What is the mean age in the toy dataset `df` defined earlier?
+:::
+
+```{r}
+#| eval: false
+#| echo: false
+
+
+df <- data.frame(
+  IDs=1:3, 
+  gender=c("male", "female", "Male"), 
+  age=c(28, 35.5, 31),
+  trt = c("control", "1", "1"),
+  Veteran = c(FALSE, TRUE, TRUE)
+  )
+df
+```
+
+
+```{r}
+df
+mean(df$age)
+```
+
+
+
+## Measures of center: median
+
+::: {style="font-size: 90%;"}
+* The __[median]{style="color:darkorange"}__ is the middle value of the observations in a sample.  
+
+* The median is the 50th percentile, meaning
+  - 50% of observations lie below and
+  - 50% of observations lie above the median.
+:::
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 90%;"}
+* If the number of observations is 
+  - odd: the median is the middle observed value
+  - even: the median is the average of the two middle observed values
+:::
+:::
+
+::: {.column width="50%"}
+```{r}
+df$age
+median(df$age)
+median(c(df$age, 67))
+```
+
+:::
+:::
+
+
+## Measures of center: mean vs. median
+
+```{r}
+#| echo: false
+#| fig.height: 4
+#| fig.width: 14
+
+iris_long <- iris %>% pivot_longer(Sepal.Length:Petal.Width, names_to = "msr")
+
+ggplot(iris_long, aes(x= value)) +
+  facet_grid(cols = vars(msr)) +
+  geom_histogram() +
+  labs(title = "Iris sepal and petal lengths & widths")
+
+```
+
+```{r}
+summary(iris)
+```
+
+
+## Measures of center: mode
+
+__[mode]{style="color:darkorange"}__: the most frequent value in a dataset
+
+```{r}
+#| echo: false
+#| fig.height: 6
+#| fig.width: 14
+
+ggplot(iris_long, aes(x= value)) +
+  facet_grid(cols = vars(msr)) +
+  geom_histogram() +
+  labs(title = "Iris sepal and petal lengths & widths")
+
+```
+
+
+
+## Measures of spread: standard deviation (SD) (1/3) {.smaller}
+
+__standard deviation__ is (approximately) the average distance between a typical observation and the mean 
+
+- An observation's **deviation** is the distance between its value $x$ and the sample mean $\overline{x}$: deviation = $x - \overline{x}$.
+
+```{r}
+#| echo: false
+#| fig.height: 4
+#| fig.width: 14
+
+sim_diff_sd <- data.frame(
+  id = 1:100,
+  sd1 = rnorm(1000, mean = 0, sd = 10),
+  sd2 = rnorm(1000, mean = 0, sd = 30),
+  sd3 = rnorm(1000, mean = 0, sd = 50)
+)
+
+sim_diff_sd_long <- sim_diff_sd %>%
+  pivot_longer(sd1:sd3, names_to = "sd")
+
+ggplot(sim_diff_sd_long, aes(x= value)) +
+  facet_grid(cols = vars(sd)) +
+  geom_histogram() +
+  labs(title = "Simulated data with different standard deviations")
+
+```
+
+
+
+## Measures of spread: SD  (2/3) {.smaller}
+
+- The **sample variance** $s^2$ is the sum of squared deviations divided by the number of observations minus 1.
+$$s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}$$
+    where $x_1, x_2, \dots, x_n$ represent the $n$ observed values.
+
+- The **standard deviation** $s$ is the square root of the variance.
+$$s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}$$
+
+
+
+
+## Measures of spread: SD  (3/3) 
+
+::: columns
+::: {.column width="40%"}
+
+::: {style="font-size: 80%;"}
+Let's calculate the sample standard deviation for our toy example
+:::
+
+```{r}
+df$age
+
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+mean(df$age)
+sd(df$age)
+```
+
+:::
+:::
+
+$s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} =$
+
+<!-- \sqrt{\frac{({28 - 31.5)}^{2}+({35.5 - 31.5)}^{2}+({31 - 31.5)}^{2}}{3-1}} = 3.775 -->
+
+
+
+## Empirical Rule: one way to think about the SD (1/2) 
+
+::: {style="font-size: 80%;"}
+
+::: columns
+::: {.column width="40%"}
+For symmetric bell-shaped data, about
+
+* 68% of the data are within 1 SD of the mean
+* 95% of the data are within 2 SD's of the mean
+* 99.7% of the data are within 3 SD's of the mean
+
+These percentages are based off of percentages of a true normal distribution.
+:::
+::: {.column width="60%"}
+
+![[https://statistics-made-easy.com/empirical-rule/](https://statistics-made-easy.com/empirical-rule/)](/img_slides/empirical-rule.png){fig-align="center" width="660"}
+
+:::
+:::
+:::
+
+
+## Empirical Rule: one way to think about the SD (2/2)
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 8
+hist(iris$Sepal.Width)
+
+```
+
+:::
+
+::: {.column width="50%"}
+```{r}
+mean(iris$Sepal.Width)
+sd(iris$Sepal.Width)
+```
+
+:::
+:::
+
+
+## Measures of spread: interquartile range (IQR) (1/2) {.smaller}
+
+The $p^{th}$ percentile is the observation such that $p\%$ of the remaining observations fall below this observation.
+
+  - The *first quartile* $Q_1$ is the $25^{th}$ percentile.
+  - The *second quartile* $Q_2$, i.e., the median, is the $50^{th}$ percentile.
+  - The *third quartile* $Q_3$ is the $75^{th}$ percentile.
+    
+The __[interquartile range (IQR)]{style="color:darkorange"}__ is the distance between the third and first quartiles.
+$$IQR = Q_3 - Q_1$$
+
+* IQR is the width of the *middle half* of the data
+
+
+
+## Measures of spread: IQR (2/2)
+
+__[5 number summary]{style="color:darkorange"}__
+```{r}
+summary(iris$Sepal.Width)
+```
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| echo: false
+#| fig.height: 5
+#| fig.width: 5
+
+hist(iris$Sepal.Width)
+```
+
+:::
+
+::: {.column width="60%"}
+What is the IQR of the sepal widths?
+
+```{r}
+quantile(iris$Sepal.Width, c(.25, .75))
+diff(quantile(iris$Sepal.Width, c(.25, .75)))
+
+IQR(iris$Sepal.Width)
+```
+
+:::
+:::
+
+
+## Robust estimates
+
+Summary statistics are called __[robust estimates]{style="color:darkorange"}__ if extreme observations have little effect on their values
+
+estimate | robust? 
+---| ---
+mean | 
+median |
+mode |
+standard deviaiton |
+IQR |
+range |
+
+
+
+
+# R Packages
+
+<!-- background-image: url(img/tidyverse_celestial.jpg) -->
+<!-- background-size: cover -->
+
+![](/img_slides/tidyverse_celestial.jpg){fig-align="center"}
+
+
+
+
+## R Packages
+
+A good analogy for R packages is that they   
+are like apps you can download onto a mobile phone:
+
+![[ModernDive Figure 1.4](https://moderndive.netlify.com/1-getting-started.html#packages)](/img_slides/R_vs_R_packages.png){fig-align="center"}
+
+
+## Installing packages
+
+::: {style="font-size: 80%;"}
+- Packages contain additional functions and data
+
+Two options to install packages:
+
+1. `install.packages()` _or_
+2. The "Packages" tab in Files/Plots/Packages/Help/Viewer window
+:::
+
+```{r}
+#| eval: false
+
+install.packages("dplyr")   # only do this ONCE, use quotes
+```
+
+:::columns
+::: {.column width="50%"}
+::: {style="font-size: 80%;"}
++ **Only install packages once** *(unless you want to update them)*
++ Installed from [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) = package mothership
+:::
+:::
+
+::: {.column width="50%"}
+![](/img_slides/screenshot_packages_window.png){fig-align="center"}
+:::
+:::
+
+
+## Video on installing packages
+
+* Danielle Navarro’s YouTube video on __*Installing and loading R packages*__: [https://www.youtube.com/watch?v=kpHZVyDvEhQ](https://www.youtube.com/watch?v=kpHZVyDvEhQ)
+
+
+## Load packages with `library()` command
+
+::: {style="font-size: 80%;"}
+- Tip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file. 
+- Use the `library()` command to load each required package.
+- Packages need to be reloaded *every* time you open Rstudio. 
+:::
+
+```{r}
+library(dplyr)    # run this every time you open Rstudio
+```
+
+::: {style="font-size: 80%;"}
+- You can use a function without loading the package with `PackageName::CommandName`
+:::
+```{r}
+dplyr::arrange(iris, Petal.Width)   # what does arrange do?
+```
+
+
+
+
+## Install the packages listed below [before Day 3]{style="color:darkorange"}
+
+* `knitr` 
+  - this might actually already be installed
+  - check your packages list
+* `tidyverse` 
+  - this is actually a bundle of packages
+  - *Warning: it will take a while to install!!!*
+  - see more info at [https://tidyverse.tidyverse.org/](https://tidyverse.tidyverse.org/) 
+* `rstatix`
+  - for summary statistics of a dataset
+* `janitor`
+  - for cleaning and exploring data
+* `ggridges`
+  - for creating ridgeline plots
+* `devtools` 
+  - used to create R packages
+  - for our purposes, needed to install some packages
+* `oi_biostat_data` 
+  - this package is on github 
+  - __see the next slide for directions on how to install `oi_biostat_data`__
+
+
+## Directions for installing package `oibiostat` 
+
+::: {style="font-size: 70%;"}
+* The textbook's datasets are in the R package `oibiostat`
+* Explanation of code below
+  * Installation of `oibiostat` package requires first installing `devtools` package
+  * The code `devtools::install_github()` tells R to use the command `install_github()` from the `devtools` package without loading the entire package and all of its commands (which `library(devtools)` would do).
+:::
+  
+```{r}
+#| eval: false
+
+install.packages("devtools")
+devtools::install_github("OI-Biostat/oi_biostat_data", force = TRUE)
+```
+
+::: {style="font-size: 70%;"}
+* After running the code above, put `#` in front of the commands so that RStudio doesn't evaluate them when rendering.
+* Now load the `oibiostat` package
+  * [the code below needs to be run _every time_ you restart R or knit an Rmd file]{style="color:darkorange"}
+:::
+
+```{r}
+library(oibiostat)
+```
+
+
+# A visual dataset {.smaller}
+
+Compare water sources across the world by country and family income
+
+![[Gapminder Dollarstreet](https://www.gapminder.org/dollar-street?topic=get-water)](/img_slides/gapminder_dollarstreet_getwater.jpg){fig-align="center"}
+
+
+Check out Gapminder's Dollar Street for many more examples: [https://www.gapminder.org/dollar-street](https://www.gapminder.org/dollar-street) 
+
+
+
+
