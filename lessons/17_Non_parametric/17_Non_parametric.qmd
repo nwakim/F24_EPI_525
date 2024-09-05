@@ -1,33 +1,1087 @@
 ---
 title: "Day 17: Nonparametric tests - Supplemental material"
-subtitle: "BSTA 511/611"
-author: "Meike Niederhausen, PhD"
-institute: "OHSU-PSU School of Public Health"
-date: "11/29/2023"
-categories: ["Week 10"]
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "09/25/2024"
+categories: ["Week 6"]
 format: 
-  # revealjs:
-  #     incremental: false
-  #     scrollable: true
-  #     chalkboard: true
-  #     theme: sky
-  #     width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
-  #     height: 825 #900 #800 #default 700; 788 for 3:4, 1200
-  #     slide-number: true
-  #     html-math-method: mathjax
-  html:
-    link-external-newwindow: true
+  revealjs:
+    theme: "../simple_NW.scss"
     toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 8 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
 execute:
   echo: true
-# editor: visual
-editor_options: 
-  chunk_output_type: console
+  freeze: auto
 ---
 
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(echo = TRUE, fig.height=2.5, fig.width=4, message = FALSE, warning = FALSE)
+```
 
-* [Download](https://drive.google.com/file/d/1Kl15Q5EPbDz6u1Hg-rXCFxFI7_g2Ht-l/view?usp=sharing) pdf of slides
+## Load packages
 
-* 12/2/23: See updates made to [code file](../slides_code/Day17_bsta511_code.qmd) for creating ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
-    * Search "New:" for updates made. 
+* Packages need to be loaded _every time_ you restart R or render an Qmd file
+
+```{r}
+# run these every time you open Rstudio
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(gt)
+library(broom) 
+library(here) 
+library(pwr) 
+library(BSDA)  # NEW package!!!
+```
+
+
+- You can check whether a package has been loaded or not 
+  - by looking at the Packages tab and 
+  - seeing whether it has been checked off or not
+  
+  
+
+# MoRitz's tip: write "nice" R code
+
+Check out the tidyverse style guide: https://style.tidyverse.org/index.html
+
+Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and  Chapter 5: [ggplot2](https://style.tidyverse.org/ggplot2.html#ggplot2)
+
+
+
+# Goals for today (Supplemental material)
+
+
+* Why us a nonparametric approach?
+* What the following tests are & when to use them
+
+* __Sign test__ 
+    * for paired data or single samples
+* __(Wilcoxon) sign-rank test__ 
+    * for paired data or single samples
+    * accounts for sizes of differences
+* __Wilcoxon Rank-sum test__ 
+    * for two independent samples
+    * a.k.a __Mann-Whitney U test__
+* __Kruskal-Wallis test__
+    * nonparametric ANOVA test
+
+
+* How to use R for each test & interpret the results
+
+## Additional resource
+
+* Chapter 13: Nonparametric tests of Pagano's _Principles of Biostatistics_, 2022 edition
+* Can download chapter from OHSU library eBook at <https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&pq-origsite=primo>
+
+
+# Nonparametric tests
+
+## Background: parametric vs nonparametric
+
+* Prior inference of means methods had conditions assuming the underlying population(s) was (were) normal (or at least approximately normal).
+* Normal distribution is completely described (parameterized) by two parameters: $\mu$ and $\sigma$. 
+* The first was often the parameter of interest, while the latter was assumed known ( $Z$-test) or estimated ( $t$-tests).
+* The above are therefore described as __parametric__ procedures.
+
+* __Nonparametric__ procedures 
+    * Make fewer assumptions about the structure of the underlying  population from which the samples were collected.
+    * Work well when distributional assumptions are in doubt.
+   
+
+
+## The good and the bad about nonparametric tests
+
+__Good__  
+
+* Fewer assumptions 
+* Tests are based on ranks
+    * Therefore outliers have no greater influence than non-outliers.
+    * Since tests are based on ranks we can apply these procedures to
+ordinal data 
+        * (where means and standard deviations are not meaningful).
+
+__Drawbacks__
+
+* Less powerful than parametric tests (due to loss of information when data are converted to ranks)
+* While the test is easy, it may require substantial (computer) work to develop a confidence interval [by "inverting" the test].
+* Theory was developed for continuous data (where ties are not possible); if population or data contain many ties, then a correction to the procedures must be implemented.
+* Some procedures have "large" and "small" sample versions; the small sample versions require special tables or a computer.
+
+
+
+# Sign test
+
+For paired data or single samples
+
+
+
+## Example: Intraocular pressure of glaucoma patients
+
+
+* Intraocular pressure of glaucoma patients is often reduced by treatment with adrenaline. 
+* A __new synthetic drug__ is being considered, but it is more expensive than the __current adrenaline alternative__. 
+* 7 glaucoma patients were treated with both drugs: 
+    * one eye with adrenaline and 
+    * the other with the synthetic drug
+* __Reduction in pressure__ was recorded in each eye after following treatment (larger numbers indicate greater reduction)
+
+
+
+
+```{r}
+IOP_table <- tibble(
+  Patient = 1:7,
+  Adren = c(3.5, 2.6, 3, 1.9, 2.9, 2.4, 2),
+  Synth = c(3.2, 3.1, 3.3, 2.4, 2.9, 2.8, 2.6)
+  ) %>% 
+  mutate(
+    d = Synth - Adren,
+    Sign = case_when(
+      d < 0 ~ "-",
+      d > 0 ~ "+"
+      )
+    )
+IOP_table %>% gt()
+
+```
+
+* __d__ is the difference in reduction of pressure: __Synth - Adren__
+* __Sign__ is `+` if the difference is positive and `-` if the difference is negative
+
+
+
+
+### Visualize the differences
+
+Visualize the differences in reduction of pressure $d$ : __Synth - Adren__
+
+
+
+```{r}
+ggplot(IOP_table, aes(x = d)) +
+  geom_dotplot()
+```
+
+
+
+```{r}
+ggplot(IOP_table, aes(x = d)) +
+  geom_density()
+```
+
+
+
+
+
+## Hypotheses & "statistic" (Sign test)
+
+
+__Hypotheses__
+
+$H_0:$ The median difference in the population is 0  
+$H_a:$ The median difference in the population is NOT 0
+
+<hr>
+
+__"Statistic"__  
+
+$D^+$ = number of positive differences  
+$D^-$ = number of negative differences
+
+<hr>
+
+What are $D^+$ and $D^-$ for our example?
+
+
+
+```{r}
+IOP_table %>% gt()
+```
+
+
+
+
+
+## Exact p-value (Sign test)
+
+* If the median difference is 0 ( $H_0$ is true) , then 
+      * half the population consists of positive differences 
+      * while half have negative differences.
+
+* Let $p=P(\textrm{neg. diff.})=P(\textrm{pos. diff.})= 0.5$
+
+<hr>
+
+* If the median difference is 0 ( $H_0$ is true), 
+      * then a sample of $n$ differences 
+          * behaves like $n$ trials in a binomial experiment 
+          * where "success" is analogous to seeing a positive difference.
+      * By symmetry ( $p=0.5$ ), the same distribution applies to negative differences, i.e.,
+
+$$D^+ \textrm{ and } D^- \sim \textrm{Bin}(n,p=0.5)$$ 
+<hr>
+
+* Thus the (exact) p-value is calculated using the Binomial distribution
+
+
+
+
+## Glaucoma example (exact) p-value
+
+
+* 7 differences: 
+  * 1 negative ( $D^-$ )
+  * 5 were positive ( $D^+$ )
+  * 1 difference is 0 and is discarded
+* Thus the effective sample size is $n=6$.
+
+<hr>
+__One-sided p-value__ = probability that we would see 1 or fewer negative signs among the $n=6$ differences, if the median difference is really 0
+
+<hr>
+
+__Two-sided p-value__ = 2 $\times$ One-sided p-value
+
+```{r}
+# 2-sided p-value: 2*P(D^- <= 1)
+2*pbinom(1, size = 6, p = 0.5)
+```
+
+
+
+$$D^- \sim \textrm{Bin}(n=6,p=0.5)$$ 
+
+<br>
+
+<hr>
+
+$$p-value = P(D^- \leq 1) \\
+= P(D^-=0) + P(D^-=1) \\
+= \frac{6!}{0!6!} (0.5)^6 + \frac{6!}{1!5!} (0.5)^6 \\
+\approx 0.1094$$
+
+<hr>
+
+$$p-value \times 2 \approx 0.2188$$
+
+
+
+## Sign test in R: Glaucoma example
+
+Below we create the dataset as a tibble (and add the signs):
+
+```{r}
+IOP <- tibble(
+  Patient = 1:7,
+  Adren = c(3.5, 2.6, 3, 1.9, 2.9, 2.4, 2),
+  Synth = c(3.2, 3.1, 3.3, 2.4, 2.9, 2.8, 2.6)
+  ) %>% 
+  mutate(d = Synth - Adren,
+    Sign = case_when(
+      d < 0 ~ "-",
+      d > 0 ~ "+"))
+
+IOP %>% gt()
+```
+
+Recall we're testing the population median.  
+Here's the sample median:
+```{r}
+median(IOP$d)
+```
+
+
+
+## Sign test in R: Glaucoma example (specifying both columns)
+
+```{r}
+library(BSDA)  # new package!! Make sure to first install it
+# Can't "tidy" the output
+SIGN.test(x = IOP$Synth, y = IOP$Adren, alternative = "two.sided", conf.level = 0.95)
+```
+
+
+
+
+### Sign test in R: Glaucoma example (specifying differences)
+
+```{r}
+# Note output calls this a "One-sample Sign-Test"
+SIGN.test(x = IOP$d, alternative = "two.sided", conf.level = 0.95)
+```
+
+
+
+
+## Conclusion
+
+
+Recall the hypotheses to the sign test:
+
+$H_0:$ The median population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is 0.
+
+$H_a:$ The median population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is NOT 0.
+
+* Significance level: $\alpha$ = 0.05
+* p-value = 0.2188
+
+
+__Conclusion__:
+
+The median difference in reduction of intraocular pressure between eyes being treated with the synthetic drug and adrenaline for seven glaucoma patients was 0.4 (95% CI: -0.2, 0.6).  
+There is insufficient evidence the reduction in intraocular pressure differs when using the synthetic drug and adrenaline (2-sided sign test $p$-value = 0.219). 
+
+
+
+## Sign test with large samples: p-value normal approximation
+
+* If the sample size is large, say greater than 20, 
+    * then binomial probabilities can be approximated using normal probabilities
+
+* Normal approximation: 
+
+$$\mu = np =n(0.5)=n/2\\
+\sigma=\sqrt{np(1-p)}=\sqrt{n(0.5)(0.5)}= \sqrt{n}/2$$
+
+* Thus we have the test statistic:
+
+$$z=\frac{D^- −n/2}{\sqrt{n}/2}$$
+
+* With access to a computer, it's better to use the exact binomial probabilities instead of the normal approximation.
+
+
+
+## Sign test with one sample
+
+* One can use the sign test when testing just one sample.
+* Note that we did this when in R, when running the sign test using just the differences.
+* For one sample, we can specify the null population median value:
+
+$H_0:$ The population median is $m$  
+$H_a:$ The population median is NOT $m$
+
+Example: Run sign test for paired data with null $m = 0.7$: 
+
+```{r}
+SIGN.test(x = IOP$d, md = 0.7, alternative = "two.sided", conf.level = 0.95)
+```
+
+
+
+
+# (Wilcoxon) Signed-rank test
+
+For paired data or single samples;  
+accounts for sizes of differences
+
+
+## (Wilcoxon) Signed-rank test
+
+* Like the sign test, the (Wilcoxon) signed-rank test is used for
+    * paired samples (i.e., a single set of differences) or 
+    * a one-sample comparison against a specified value
+
+* However, this test _does_ make use of information concerning the size
+ of the differences.
+ 
+<hr>
+ 
+ __Hypotheses__
+
+$H_0:$ the population is __symmetric around some value__ $\tilde{\mu}_0$  
+$H_a:$ the population is __not symmetric around some value__ $\tilde{\mu}_0$
+
+* Even if the population has a mean/median equal to $\tilde{\mu}_0$, the
+ test may reject the null if the population isn't symmetric, thus only use if the data (differences) are symmetric. 
+* If the population is symmetric 
+    * then the mean and median coincide, 
+    * thus often the null hypothesis is phrased in terms of the median difference being 0
+ 
+
+
+
+## Example: calculate signed ranks
+
+* Rank the absolute values of the differences from smallest to largest
+* For ties, take the average of the highest and lowest tied ranks
+    * I.e. if ranks 3-7 are tied, then assign (3+7)/2 = 5 as the rank
+* Then calculate the signed ranks as +/- the rank depending on whether the sign is +/-
+
+```{r}
+IOP_ranks <- IOP %>% 
+  mutate(
+    Rank = c(1.5, 4.5, 1.5, 4.5, NA, 3, 6),
+    Signed_rank = case_when(
+      d < 0 ~ -Rank,
+      d > 0 ~ Rank
+      )
+    )
+IOP_ranks %>% gt()
+```
+
+
+### New: Calculate ranks using R's `rank()` function
+
+* Below I create the ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+* This doesn't require first sorting the data. 
+* However, it includes a difference of 0 in the ranking, and thus below I first remove the row with $d=0$ from the data.
+* In the output below, I called this column `Rank_R`.
+
+```{r}
+IOP_Ranks_R <- IOP_ranks %>% 
+  filter(d != 0) %>% 
+  mutate(
+    # create column with absolute values of differences
+    # it's the absolute values that get ranked
+    abs_d = abs(d), 
+    # create column with ranks that accounts for ties using R's rank() function
+    # you don't need to first sort the data to use this command
+    Rank_R = rank(abs_d, ties.method = "average"),
+    Signed_Rank_R = case_when(
+      d < 0 ~ -Rank_R,
+      d > 0 ~ Rank_R
+      )
+    ) 
+
+IOP_Ranks_R %>% gt()
+
+```
+
+
+
+## Test statistic (Wilcoxon) Signed-rank test
+
+__If the null is true:__
+
+* The population is symmetric around some point ( $\tilde{\mu}_0 = 0$ ,
+  typically), and 
+
+* The __overall size of the positive ranks should be about the same
+  as the overall size of negative ranks__.
+
+Note: 
+
+* The sum of the ranks $1,2,\dotsc, n$ is always $n(n+1)/2$,
+* which can be broken down as the 
+    * sum of the positive ranks ( $T^+$ )
+    * plus the sum of the negative ranks ( $T^-$ )
+
+Thus, any of the following can be used as a test statistic and will lead to the same conclusion:
+     
+* $T^+$
+* $T^-$
+* $T^+$ - $T^-$
+* $\min(T^+,T^−) = T_0$
+
+
+
+## Example: calculate sums of signed ranks
+
+```{r}
+IOP_ranks %>% gt()
+```
+
+* Sum of the positive ranks 
+    * $T^+$ = 1.5 + 3 + 4.5 + 4.5 + 6 = 19.5
+
+* Sum of the negative ranks
+    * $T^-$ = -1.5
+
+* The sum of the ranks $1,2,\dotsc, n$ is always $n(n+1)/2$:
+    * $n(n+1)/2 = 6(7)/2 = 21$
+    * $T^+ + |T^-| = 19.5 + |-1.5| = 21$
+
+
+
+## Exact p-value (Wilcoxon) Signed-rank test (fyi) (1/2)
+
+* __Exact p-value__ is preferable
+    * This is the default method in R's `wilcox.test()`
+        * if the samples contain less than 50 finite values 
+        * and __there are no ties__
+          * _R will automatically use normal approximation method if there are ties_
+
+* _We will not be calculating the exact p-value "by hand." We will be using R for this._
+
+<hr>
+
+<br>
+
+$$p-value = 2 * P(\min(T^+,T^−) \leq t)$$
+
+* $t$ is the smaller of the calculated sums of the positive and negative ranks
+* To calculate the exact p-value, we need the probability of each possible sum of ranks.
+
+### Exact p-value (Wilcoxon) Signed-rank test (fyi) (2/2)
+
+
+* To calculate the exact p-value, we need the probability of each possible sum of ranks:
+    * list all possible combinations of positive and negative ranks for the sample size,
+    * calculate the sum of the positive ranks ( $T^+$ ) for each possible combination (or $T^-$ ), and
+    * then figure out the probability of each possible $T^+$ (assuming all combinations are equally likely)
+
+Example when $n=3$ : (from https://online.stat.psu.edu/stat415/lesson/20/20.2)
+
+<center><img src="img/ExactW_n3.gif" width="50%">
+<img src="img/ExactW_n3_prob.png" width="40%">
+</center>    
+
+See https://online.stat.psu.edu/stat415/lesson/20/20.2 for more details.
+
+
+
+## Normal approximation p-value (Wilcoxon) Signed-rank test (fyi)
+
+* __Normal approximation__ method:
+    * If the number of non-zero differences is at least 16, then a normal approximation can be used.
+    * Have the option to apply a continuity correct (default) or not 
+* _We will not be calculating the p-value "by hand." We will be using R for this._
+
+<hr>
+
+Test statistic:
+
+$$Z_{T_{min}} = \frac{T_{min} - \frac{n(n+1)}{4}}{\sqrt{\frac{n(n+1)(2n+1)}{24}}}$$
+
+* $T_{min} = \min(T^+,T^−)$
+* $n$ = sample size
+* Test statistic $Z_{T_{min}}$ follows a standard normal distribution $N(0,1)$
+* Use normal distribution to calculate p-value
+
+
+See https://online.stat.psu.edu/stat415/lesson/20/20.2 for more details.
+
+
+
+## (Wilcoxon) Signed-rank test in R: Glaucoma example
+
+"Attempt" with exact p-value & specifying columns for paired data 
+
+```{r}
+#| warning: true
+# Exact p-value
+wilcox.test(x = IOP$Synth, y = IOP$Adren, paired = TRUE, 
+	alternative = c("two.sided"), mu = 0, 
+	exact = TRUE)
+```
+
+
+
+## (Wilcoxon) Signed-rank test in R: Glaucoma example
+
+"Attempt" with exact p-value & running one sample test with differences
+
+```{r}
+#| warning: true
+# Exact p-value
+wilcox.test(x = IOP$d, 
+		alternative = c("two.sided"), mu = 0, 
+		exact = TRUE, correct = TRUE)
+```
+
+
+
+## (Wilcoxon) Signed-rank test in R: Glaucoma example
+
+"Attempt" with approximate p-value & specifying columns for paired data 
+
+```{r}
+#| warning: true
+# Normal approximation with continuity correction
+wilcox.test(x = IOP$Synth, y = IOP$Adren, paired = TRUE, 
+		alternative = c("two.sided"), mu = 0, 
+		exact = FALSE, correct = TRUE)
+```
+
+No more warnings!! However,... should we be using the normal approximation here?
+
+
+
+## Conclusion
+
+Recall the hypotheses to the (Wilcoxon) Signed-rank test:
+
+$H_0:$ the population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is __symmetric around__ $\tilde{\mu}_0 =0$  
+$H_a:$ the population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is __not symmetric around__ $\tilde{\mu}_0 =0$
+
+* Significance level: $\alpha$ = 0.05
+* p-value = 0.07314
+
+
+__Conclusion__:
+
+There is insufficient evidence the differences in reduction in intraocular pressure differs between the synthetic drug and adrenaline are symmetric about 0 (2-sided Wilcoxon signed rank test $p$-value = 0.07314)
+
+However,... 
+
+
+
+
+# Wilcoxon rank-sum test
+
+For two independent samples  
+a.k.a Mann-Whitney U test
+
+
+## Wilcoxon rank-sum test
+
+* The nonparametric alternative to the two-sample $t$-test
+    * used to analyze two samples selected from separate (independent)
+populations
+* Also called the Mann-Whitney U test.
+* Unlike the signed-rank test, there is no need to assume symmetry
+
+* Necessary __condition__ is that the two populations being compared 
+    * have the same shape (both right skewed, both left skewed, or both symmetric), 
+    * so any noted difference is due to a shift in the median
+
+* Since they have the same shape, when summarizing the test, we can describe the results in terms of a difference in medians.  
+
+
+__Hypotheses__:
+
+$H_0:$ the two populations have the same median  
+$H_a:$ the two populations do NOT have the same median
+
+
+
+## Example
+
+Dr. Priya Chaudhary (OHSU) examined the evoked membrane current of dental sensory neurons (in rats) under control conditions and a mixture of capsaicin plus capsazepine (CPZ). [J. Dental Research} 80:1518--23, 2001.](https://journals.sagepub.com/doi/10.1177/00220345010800060801)
+
+
+```{r}
+CPZdata <- tibble(
+  control = c(3024, 2164, 864, 780, 125, 110),
+  cap_CPZ = c(426, 232, 130, 94, 75, 55)
+  ) 
+
+CPZdata %>% gt()
+
+CPZdata %>% get_summary_stats(type = "median") %>% gt()
+```
+
+
+
+## Visualize the data
+
+__Do the independent samples have the same distribution?__
+
+Control group
+
+```{r}
+ggplot(CPZdata, aes(x = control)) +
+  geom_dotplot()
+
+ggplot(CPZdata, aes(x = control)) +
+  geom_boxplot()
+
+ggplot(CPZdata, aes(x = control)) +
+  geom_density()
+```
+
+Cap + CPZ group
+
+```{r}
+ggplot(CPZdata, aes(x = cap_CPZ)) +
+  geom_dotplot()
+
+ggplot(CPZdata, aes(x = cap_CPZ)) +
+  geom_boxplot()
+
+ggplot(CPZdata, aes(x = cap_CPZ)) +
+  geom_density()
+```
+
+
+
+## Calculating ranks and test statistic $W$
+
+1. Combine the two samples together (keep track of which observations came from each sample).
+
+2. Rank the full set of $N=n_1 + n_2$ observations. 
+    * If ties exist, assign average ranks to the tied values (as with the signed-rank test).
+
+3. Sum the ranks corresponding to those observations from the smaller
+sample. 
+    * This is a time-saving step; you could also have used the larger sample.
+    * Call this sum $W$.
+
+4. If $n_1, n_2$ are both less than 10, then use an exact test (can only be done if no ties are present)
+    * otherwise use the  large-sample normal approximation.
+
+In our example, both groups have equal n; choose either for computing W.
+
+$$W_{CPZ}=1+2+3+6+7+8 = 27$$
+
+$$W_{control}=4+5+9+10+11+12 = 51$$
+
+```{r}
+CPZdata_long <- CPZdata %>% 
+  pivot_longer(cols = c(control,cap_CPZ), 
+               names_to = "Group",
+               values_to = "Current") %>% 
+  arrange(Current) %>% 
+  mutate(Rank = 1:12)
+
+CPZdata_long %>% gt()
+```
+
+
+### New: calculate ranks's using `rank()`
+
+* Below I create the ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+* This doesn't require first sorting the data. 
+* In the output below, I called this column `Rank_R`.
+
+```{r}
+CPZdata_long <- CPZdata_long %>% 
+  mutate(
+    # create column with ranks that accounts for ties using R's rank() function
+    # you don't need to first sort the data to use this command
+    Rank_R = rank(Current, ties.method = "average")
+    ) 
+
+CPZdata_long %>% gt()
+
+```    
+ 
+ 
+## Exact p-value approach
+
+* __If $n_1, n_2$ are both less than 10, then use an exact test__, 
+    * otherwise use the large-sample normal approximation.
+    * However, exact method can only be done if __no ties__ are present
+
+* p-value is the probability of getting a rank sum $W$ as extreme or more extreme than the observed one.
+    * Multiply the 1-tail probability by 2 for the 2-tailed probability
+
+$$p-value = 2 \cdot P(W_{CPZ} \leq 27)$$
+
+* To calculate $P(W_{CPZ} \leq 27)$, 
+    * we need to enumerate all possible sets ranks for the sample size,  
+    * calculate the sum of ranks for each set of possible ranks,
+    * and then the probability for each sum (assuming each set of ranks is equally likely).
+
+<hr>
+
+* _We will not be calculating the p-value "by hand." We will be using R for this._
+
+
+
+## Normal approximation approach
+
+If the null hypothesis is true, then the mean of the sum of the ranks from the smaller-sized group will be
+
+$$\mu_W = \dfrac{n_s \cdot (n_s + n_l + 1)}{2},$$
+with a standard deviation of
+
+$$\sigma_W = \sqrt{ \dfrac{n_s\cdot n_l \cdot (n_s + n_l + 1)}{12} }.$$
+Provided both groups are large ( $\geq 10$ ),
+
+$$Z = \frac{W - \mu_W}{\sigma_W}  \approx Normal(0,1)$$
+
+
+
+### Example:
+
+We have $W=27$ and $n_l = n_s = 6$:
+
+$$\mu_W = \dfrac{6 \cdot (6 + 6 +1 )}{2} = 39 \\
+\sigma_W  = \sqrt{\dfrac{6\cdot 6 \cdot (6+6+1)}{12}} = \sqrt{39} \approx 6.2450 \\
+z \approx \frac{27-39}{6.2450} = -1.921538$$
+
+
+The two-sided $p$-value is 
+$$p=2 \cdot P(Z < -1.921538)=0.05466394$$ 
+
+    
+```{r}
+2 * pnorm((27-39) / sqrt(39))
+```
+
+
+
+## Wilcoxon rank-sum test in R: with wide data
+
+```{r}
+glimpse(CPZdata)
+```
+
+
+Exact p-value
+```{r}
+#| warning: true
+wilcox.test(x = CPZdata$cap_CPZ, y = CPZdata$control, 
+            alternative = c("two.sided"), mu = 0, 
+            exact = TRUE) 
+```
+
+
+
+## Wilcoxon rank-sum test in R: with wide data
+
+Normal approximation p-value without CC
+
+```{r}
+wilcox.test(x = CPZdata$cap_CPZ, y = CPZdata$control, 
+	alternative = c("two.sided"), mu = 0, 
+	exact = FALSE, correct = FALSE) %>% tidy() %>% gt()
+```
+
+Normal approximation p-value with CC
+
+```{r}
+wilcox.test(x = CPZdata$cap_CPZ, y = CPZdata$control, 
+	alternative = c("two.sided"), mu = 0, 
+	exact = FALSE, correct = TRUE) %>% tidy() %>% gt()
+```
+
+
+
+
+## Wilcoxon rank-sum test in R: with long data
+
+Make data long (if it's not already long):
+
+```{r}
+CPZdata_long <- CPZdata %>% 
+  pivot_longer(cols = c(control,cap_CPZ), 
+               names_to = "Group",
+               values_to = "Current")
+
+head(CPZdata_long)
+```
+
+
+
+
+Exact p-value
+```{r}
+#| warning: true
+wilcox.test(Current ~ Group, 
+            data = CPZdata_long, 
+            alternative = c("two.sided"), 
+            mu = 0, 
+            exact = TRUE) %>% 
+  tidy() %>% gt() 
+```
+
+
+
+
+
+
+
+## Conclusion
+
+
+
+Recall the hypotheses to the (Wilcoxon) Signed-rank test:
+
+$H_0:$ the control and treated populations have the same median  
+$H_a:$ the control and treated populations do NOT have the same median
+
+* Significance level: $\alpha$ = 0.05
+* p-value = 0.06494
+
+
+__Conclusion__:
+
+There is suggestive but inconclusive evidence that the evoked membrane current of dental sensory neurons (in rats) differs between the control group and the group exposed to a mixture of capsaicin plus capsazepine (2-sided Wilcoxon rank-sum test $p$-value = 0.06494).
+
+
+
+# Kruskal-Wallis test
+
+Nonparametric ANOVA test
+
+
+## Kruskal-Wallis test: nonparametric ANOVA test
+
+* Recall that an ANOVA tests means from more than 2 groups
+* Conditions for ANOVA include
+    * Sample sizes in each group group are large (each $n \ge 30$),  
+        * OR the data are relatively normally distributed in each group
+    * Variability is "similar" in all group groups
+
+* If these conditions are in doubt, or if the response is ordinal, then the Kruskal-Wallis test is an alternative.
+
+\begin{align}
+H_0 &: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k\\
+\text{vs. } H_A&: \text{At least one pair } \text{pop median}_i \neq \text{pop median}_j \text{ for } i \neq j
+\end{align}
+
+* K-W test is an extension of the (Wilcoxon) rank-sum test to more than 2 groups
+    * With $k=2$ groups, the K-W test is the same as the rank-sum test
+
+
+
+## K-W test statistic: $H$ (fyi)
+
+$$H = \frac{12}{{N(N + 1)}} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N + 1)$$
+
+* $k$ is the number of groups,
+* $n_i$ is the number of observations in group  $i$
+* $N = n_1 + \ldots + n_k$ is the total number of observations across all groups,
+* $R_i$ is the sum of ranks for group $i$
+
+The test statistic $H$ has a Chi-squared distribution with $k-1$ degrees of freedom:
+
+$$H \sim \chi^2_{k-1}$$
+
+Ranks are calculated similarly to the (Wilcoxon) rank-sum test.
+
+
+
+## Ranks for the K-W test
+
+1. Combine the $k$ samples together (keep track of which observations came from each sample).
+2. Rank the full set of $N = n_1 + \ldots + n_k$ observations. 
+    * If ties exist, assign average ranks to the tied values (as with the signed-rank test).
+3. Then sum the ranks within each of the $k$ groups
+    * Label the sums of the ranks for each group as $R_1, \ldots + R_k$.
+
+If $H_0$ is true, we expect the populations to have the same medians, and thus the ranks to be similar as well.
+
+
+
+## Example: Ozone levels by month 
+
+* `airquality` data included in base R - no need to load it
+* Daily air quality measurements in New York, May to September 1973.
+* Question: do ozone levels differ by month?
+
+```{r}
+glimpse(airquality)
+```
+
+
+```{r}
+Oz_mnth <- airquality %>% 
+  group_by(Month) %>% 
+  get_summary_stats(Ozone, 
+    show = c("n", "mean", "median", "sd"))
+Oz_mnth %>% gt()
+
+max(Oz_mnth$sd) / min(Oz_mnth$sd)
+```
+
+
+```{r}
+#| fig.height: 5.0
+ggplot(airquality,
+       aes(x = Ozone, y = factor(Month))) +
+  geom_boxplot()
+```
+
+
+
+## Example: calculate ranks (fyi) 
+
+```{r}
+ranks_Oz_mnth <- airquality %>% 
+  select(Ozone, Month) 
+
+summary(ranks_Oz_mnth)
+
+ranks_Oz_mnth <- ranks_Oz_mnth %>% 
+  drop_na(Ozone) %>% 
+  arrange(Ozone) %>% 
+  mutate(Rank = 1:nrow(.))
+```
+
+Ranks below do not take into account ties!!
+
+```{r}
+head(ranks_Oz_mnth, 20)
+```
+
+
+Sum of ranks for each group: (not taking into account ties!!)
+
+```{r}
+ranks_Oz_mnth %>% 
+  group_by(Month) %>% 
+  summarise(sumRank = sum(Rank))
+```
+
+
+
+### New: calculate ranks's using `rank()`
+
+* Below I create the ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+* This doesn't require first sorting the data. 
+* In the output below, I called this column `Rank_R`.
+
+```{r}
+ranks_Oz_mnth <- ranks_Oz_mnth %>% 
+  mutate(
+    # create column with ranks that accounts for ties using R's rank() function
+    # you don't need to first sort the data to use this command
+    Rank_R = rank(Ozone, ties.method = "average")
+    ) 
+
+# Compare "simple" ranks not including ties with tie-corrected ranks
+head(ranks_Oz_mnth, 20)
+
+``` 
+
+
+## K-W test in R
+
+```{r}
+kruskal.test(Ozone ~ Month, data = airquality)
+
+kruskal.test(Ozone ~ Month, data = airquality) %>% tidy() %>% gt()
+```
+
+There is sufficient evidence that the median ozone levels are different in at least two months from May - September, 1973 in New York City (p < 0.001; Kruskal-Wallis test).
+
+
+* (fyi) Since the K-W test is significant, follow-up with pairwise (Wilcoxon) rank-sum tests using a multiple comparison procedure to identify which months have different medians.
+
+
+
+
+# Permutation tests & bootstrapping
+
+another option to consider
+
+
+
+## Permutation tests & bootstrapping
+
+* In some cases we saw that the conditions failed or the sample size was too small for a normal approximation and there were ties in ranks preventing us from using an exact method.
+
+* Another nonparametric option to consider is a permutation test or bootstrapping.
+
+* If you're interested in learning more about this approach, check out the [ModernDive Statistical Inference via Data Science](https://moderndive.com/index.html) book by Chester Ismay and Albert Kim.
+    * Ch 7: [Sampling](https://moderndive.com/7-sampling.html)
+    * Ch 8: [Bootstrapping and Confidence Intervals](https://moderndive.com/8-confidence-intervals.html)
+    * Ch 9: [Hypothesis Testing](https://moderndive.com/9-hypothesis-testing.html)
+
+
+
+
+
+
+
   

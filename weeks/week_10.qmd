@@ -1,0 +1,100 @@
+---
+title: "Week 10"
+description: "Simple Linear Regression and Nonparametric tests"
+date: "11/27/2023"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Exam retakes
+
+* Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th
+    * [Exam question topics for retakes](https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_question_topics_BSTA511_F23.pdf) (resource on Sakai)
+* Retake for Exam 3 will be on Fri, Dec 12th; time & place TBD
+
+## Day 16 
+
+* Simple Linear Regression Part 2
+* Sections 6.3-6.4
+* Recording: in class [Webex](https://ohsu.webex.com/ohsu/ldr.php?RCID=6bbe6b19b81fdae1c5076ecebdfc4e59) recording only
+
+### Slides
+
+* [html](../slides/Day16_bsta511.qmd)
+* [pdf](https://drive.google.com/file/d/1KjlSuxNYC3A2El2yfJoYNa-hhscO98R9/view?usp=sharing)
+* Slides with [notes](../slides_drawings/Day16_bsta511_notes.qmd)
+* [webpage](../slides_md/Day16_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day16_bsta511_code.qmd), [html](../slides_code/Day16_bsta511_code.qmd)
+
+
+
+
+
+### Datasets
+
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
+
+* [lifeexp_femlit_water_2011.csv](/data/lifeexp_femlit_water_2011.csv)
+
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+<!-- * Questions from [HW 9](../homework/HW_9_F23_bsta511.qmd) -->
+<!--     * Book # 5.46, 5.48, R1, 5.44 -->
+
+
+## Day 17 
+
+* Nonparametric tests
+* This material is not in our textbook. Please see Chapter 13: Nonparametric tests of Pagano's _Principles of Biostatistics_, 2022 edition as a supplementary resource.
+    * This chapter can be downloaded from the OHSU library's eBook at <https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&pq-origsite=primo>
+
+### Slides
+
+* [pdf](https://drive.google.com/file/d/1Kl15Q5EPbDz6u1Hg-rXCFxFI7_g2Ht-l/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1Klf9EAfhdyM-vIGxwpbITCfp-t7yHoEY/view?usp=sharing)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day17_bsta511_code.qmd), [html](../slides_code/Day17_bsta511_code.qmd)
+    * 12/2/23: Updates made to code file for creating ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+    * Search "New:" for updates made. 
+    * Updates are not in the slides.
+
+### Datasets
+
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
+
+* No datasets needed for Day 17
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* Work on HW 9
+
+## Homework
+
+* [HW 9](../homework/HW_9_F23_bsta511.qmd) due on __Mon, 12/4__
+    * Datasets
+        * [Gapminder_2011_LifeExp_CO2.csv](/data/Gapminder_2011_LifeExp_CO2.csv)
+        * [chol213.csv](/data/chol213.csv) (from Day 10 Part 2)
+        * [CaffeineTaps.csv](/data/CaffeineTaps.csv) (from Day 11)
+    * Covers Days 16-17
+    * For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
+    * Do not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed.
+
+
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  

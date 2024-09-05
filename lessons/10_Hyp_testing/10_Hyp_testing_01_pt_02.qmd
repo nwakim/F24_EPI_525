@@ -1,9 +1,9 @@
 ---
 title: "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)"
-subtitle: "BSTA 511/611"
-author: "Meike Niederhausen, PhD"
-institute: "OHSU-PSU School of Public Health"
-date: "11/1/2023"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "09/25/2024"
 categories: ["Week 6"]
 format: 
   revealjs:
@@ -16,7 +16,7 @@ format:
     show-slide-number: all
     width: 1600
     height: 1100
-    footer: Lesson 1 Slides
+    footer: Lesson 8 Slides
     html-math-method: mathjax
     highlight-style: arrow
 execute:

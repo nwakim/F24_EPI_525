@@ -1,0 +1,106 @@
+---
+title: "Week 2"
+description: "Data collection & EDA"
+date: "10/2/2023"
+date-modified: "10/5/2023"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+## Day02 
+
+* Data collection & numerical summaries
+* Sections 1.1-1.4
+
+### Slides
+
+* [html](../slides/Day02_bsta511.qmd)
+* [pdf](https://drive.google.com/file/d/1I59wEibQe1sXi5urIkYEv-lW1NHU6zzC/view?usp=sharing)
+* [webpage](../slides_md/Day02_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day02_bsta511_code.qmd), [html](../slides_code/Day02_bsta511_code.qmd)
+
+### Recordings
+
+* __Pre-recorded__ lessons are on Echo Cloud (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on Sakai. Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  
+
+### Class discussion
+
+Please look over the following topics. We will be discussing these in class. 
+
+* Slide 45: __Robust estimates__
+* HW 1 
+    * Book problems: 1.8, 1.20, 1.31
+* R packages: any difficulty installing packages?
+
+## Day03 
+
+* Data visualization, exploratory data analysis (EDA), and summarizing categorical data
+* Sections 1.5-1.7 & supplementary material
+
+:::{.callout-note}
+As I mentioned in the recording, the various options in more complex figures I usually look up how to implement when I need them. I show them so that you are aware of some of the functionality and options one has in creating figures using the ggplot2 package. At the end of the slides, we cover how to create tables summarizing data, especially categorical data. This part has some very useful code and data wrangling in it.
+:::
+
+
+### Slides
+
+* [html](../slides/Day03_bsta511.qmd)
+* [pdf](https://drive.google.com/file/d/1IdkNDrcdGWozHGMrk28B5PXjDx-_ylqo/view?usp=sharing)
+* [webpage](../slides_md/Day03_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code.qmd), [html](../slides_code/Day03_bsta511_code.qmd)
+
+### Class discussion
+
+* Can distribution shape and sample size be determined from a boxplot? (see slide 30)
+* Is there evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures? Why or why not?
+
+### Part 2 slides
+
+The Day 3 Part 2 slides include extra EDA to examine further the question of whether there is evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures based on the data.
+
+* [html](../slides/Day03_bsta511_part2.qmd)
+* [pdf](https://drive.google.com/file/d/1IofJF8cXrEyfVokBOw0WOcQGuGfETvsu/view?usp=sharing)
+* [webpage](../slides_md/Day03_bsta511_md_part2.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part2.qmd), [html](../slides_code/Day03_bsta511_code_part2.qmd)
+
+
+### Part 3 slides: Data Wrangling
+
+The Day 3 Part 3 slides provide more data wrangling examples. Some of the functions covered were used in the Day 3 Part 2 slides. 
+
+_HW 2 makes reference to some of the functions in these slides._
+
+* [pdf](https://drive.google.com/file/d/1IfubP0ei-5jTIVs33dyoEqjMIY-Q8qBe/view?usp=sharing)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part3_data_wrangling.qmd), [html](../slides_code/Day03_bsta511_code_part3_data_wrangling.qmd)
+
+## Homework
+
+* [HW 1](../homework/HW_1_F23_bsta511.qmd) due on Sat, 10/7
+    * Covers Days 1-2
+* [HW 2](../homework/HW_2_F23_bsta511.qmd) due on Sat, 10/14
+    * Covers Days 3-5
+* HW 3 due on Sat, 10/21
+    * Covers Days 6-7
+
+### Why is `{.unnumbered}` included at the end of some of the section headers on the HW?
+
+* I added the option for the sections to be numbered in the YAML (`number-sections: true`) so that the R exercises at the end of the file are numbered. 
+* However, the book exercises already have their own numbering, and so I added `{.unnumbered}` to the section headers of the book exercises so that they are not numbered twice. 
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page. 

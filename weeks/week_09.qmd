@@ -1,0 +1,93 @@
+---
+title: "Week 9"
+description: "ANOVA and Simple Linear Regression"
+date: "11/20/2023"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Exam retakes
+
+* Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th
+    * [Exam question topics for retakes](https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_question_topics_BSTA511_F23.pdf) (resource on Sakai)
+* Retake for Exam 3 will be on Fri, Dec 12th; time & place TBD
+
+## Day 14 
+
+* ANOVA = Analysis of Variance
+* Comparing more than 2 means
+* Section 5.5
+
+:::{.callout-note}
+I moved the Kruskal-Wallis test to Day 17, when we cover the other non-parametric tests.
+:::
+
+### Slides
+
+_Note: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides._ 
+
+* [html](../slides/Day14_bsta511.qmd)
+* [pdf](https://drive.google.com/file/d/1KQfFdPsd-Gpur7b8gtdAlc6vu0IF0jMv/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1KZ2bLZz5CPPR5VV2nUvAFR6W7ZJDAuTw/view?usp=sharing)
+* [webpage](../slides_md/Day14_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day14_bsta511_code.qmd), [html](../slides_code/Day14_bsta511_code.qmd)
+
+
+### Datasets
+
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
+
+* [DisabilityEmployment.txt](/data/DisabilityEmployment.txt)
+
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* Slide 12: "Hypothetical examples" question
+* Slide 29 questions
+* Questions from [HW 8](../homework/HW_8_F23_bsta511.qmd)
+    * Book # 5.46, 5.48, R1, 5.44
+
+
+## Day 15 
+
+* Simple Linear Regression (part 1)
+* Sections 6.1, 6.2
+
+
+### Slides
+
+* [pdf](https://drive.google.com/file/d/1KdvWhhX4SkbPGFi_JLo6FluDo-Oegnlg/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1raQjJSDPNjOgy9BTQsA4gUnxRqFgl35z/view?usp=sharing)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day15_bsta511_code.qmd), [html](../slides_code/Day15_bsta511_code.qmd)
+
+
+
+### Datasets
+
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
+
+* [lifeexp_femlit_water_2011.csv](/data/lifeexp_femlit_water_2011.csv)
+
+
+## Homework
+
+* [HW 8](../homework/HW_8_F23_bsta511.qmd) due on __Mon, 11/27__
+    * Covers Days 14-15
+    * For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
+    * Do not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed.
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  

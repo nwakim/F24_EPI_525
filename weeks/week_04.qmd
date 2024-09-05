@@ -1,0 +1,81 @@
+---
+title: "Week 4"
+description: "Random variables and probability distributions"
+date: "10/16/2023"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Day06 
+
+* Random variables: Section 3.1
+* Binomial distribution: Section 3.2
+
+### Slides
+
+* [html](../slides/Day06_bsta511.qmd)
+* [pdf](../LaTeX_slides/Day06_bsta511.pdf)
+* Slides with [notes](https://drive.google.com/file/d/1IyPAIWGBVqXGRh61OH-RQQVS2BAx1fRo/view?usp=sharing)
+* Calculating probabilities in R code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Probability_distributions_in_R_bsta511.qmd), [html](../slides_code/Probability_distributions_in_R_bsta511.qmd)
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* Example 3.3 on pg 2 of slides
+    * Write R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.
+    * Hint: start with `x <- 1:6`.
+* Example 3.10 on pg 5 of slides
+    * Write R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.
+* Example 3.11 on pg 6 of slides
+* Example 3.17 on pg 10 of slides
+    * _Hint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die._
+* Example 3.22 parts (1) and (2) on pg 14 of slides
+
+
+## Day07    
+
+* Normal distribution: Section 3.3
+* Poisson distribution: Section 3.4
+
+
+### Slides
+
+* [html](../slides/Day07_bsta511.qmd)
+* [pdf](../LaTeX_slides/Day07_bsta511.pdf)
+* Slides with [notes](https://drive.google.com/file/d/1J8sN83ZHQjoIkBoGioJa7q8jXFeD6Fh5/view?usp=sharing)
+* Calculating probabilities in R code file (same file as listed above for Day 6): [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Probability_distributions_in_R_bsta511.qmd), [html](../slides_code/Probability_distributions_in_R_bsta511.qmd)
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* Example 3.3 parts (1) and (3) on pg 7 of slides
+* Example 3.8 parts (2) and (3) on pg 11 of slides
+* HW problems 
+    * 3.28, 3.32
+
+## Homework
+
+* [HW 3](../homework/HW_3_F23_bsta511.qmd) due on Sat, 10/21
+    * Covers Days 6-7
+
+### Why is `{.unnumbered}` included at the end of some of the section headers on the HW?
+
+* I added the option for the sections to be numbered in the YAML (`number-sections: true`) so that the R exercises at the end of the file are numbered. 
+* However, the book exercises already have their own numbering, and so I added `{.unnumbered}` to the section headers of the book exercises so that they are not numbered twice. 
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  

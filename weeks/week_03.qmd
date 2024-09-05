@@ -1,0 +1,70 @@
+---
+title: "Week 3"
+description: "Probability"
+date: "10/9/2023"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Day04 
+
+* Probability
+* Sections 2.1 - 2.2.4
+
+### Slides
+
+* [html](../slides/Day04_bsta511.qmd)
+* [pdf](../LaTeX_slides/Day04_bsta511.pdf)
+* Slides with [notes](https://drive.google.com/file/d/1Iq9v4wEQOpeWDH5PGXpspoC5RBB9WBui/view?usp=sharing)
+
+
+### Class discussion
+
+* Example 2.3 on pg 4 of slides
+* Example 2.6 on pgs 8-9 of slides
+
+## Day05    
+
+* Bayes' Rule
+
+
+### Slides
+
+* [html](../slides/Day05_bsta511.qmd)
+* [pdf](../LaTeX_slides/Day05_bsta511.pdf)
+* Slides with [notes](https://drive.google.com/file/d/1Is2JXTYLhp6e6Ia4dBF9SunrVgZhRkXQ/view?usp=sharing)
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* Example 2.10 on pg 6 of slides
+* Added in class: Textbook exerices 2.18 (from HW)
+
+
+## Homework
+
+* [HW 2](../homework/HW_2_F23_bsta511.qmd) due on Sat, 10/14
+    * Covers Days 3-5
+* HW 3 due on Sat, 10/21
+    * Covers Days 6-7
+
+### Why is `{.unnumbered}` included at the end of some of the section headers on the HW?
+
+* I added the option for the sections to be numbered in the YAML (`number-sections: true`) so that the R exercises at the end of the file are numbered. 
+* However, the book exercises already have their own numbering, and so I added `{.unnumbered}` to the section headers of the book exercises so that they are not numbered twice. 
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  

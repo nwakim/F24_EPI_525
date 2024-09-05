@@ -1,29 +1,28 @@
 ---
 title: "Day 3: Data visualization - Part 2"
-subtitle: "BSTA 511/611, OHSU"
-author: "Meike Niederhausen, PhD"
 date: "10/4/2023"
 categories: ["Week 2"]
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
 format: 
   revealjs:
-      incremental: false
-      scrollable: true
-      chalkboard: true
-      theme: sky
-      width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
-      height: 825 #900 #800 #default 700; 788 for 3:4, 1200
-      slide-number: true
-      html-math-method: mathjax
-  # html:
-  #   link-external-newwindow: true
-  #   toc: true
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 3 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
 execute:
   echo: true
-# editor: visual
-editor_options: 
-  chunk_output_type: console
+  freeze: auto
 ---
-
 
 ```{r}
 #| label: "setup" 

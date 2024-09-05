@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Meike Niederhausen, PhD">
+<meta name="dcterms.date" content="2023-10-02">
+
+<title>BSTA 511/611 Fall 2023 - Day 2: Data collection &amp; numerical summaries</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/IMG_8165sq_med.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">BSTA 511/611 Fall 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../class_slides.html" rel="" target="">
+ <span class="menu-text">Slides</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../weeks.html" rel="" target="">
+ <span class="menu-text">Weeks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../homework.html" rel="" target="">
+ <span class="menu-text">Homework</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Day 2: Data collection &amp; numerical summaries</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../instructors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weeks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#goals-for-today" id="toc-goals-for-today" class="nav-link active" data-scroll-target="#goals-for-today">Goals for today</a></li>
+  <li><a href="#recap-of-last-time" id="toc-recap-of-last-time" class="nav-link" data-scroll-target="#recap-of-last-time">Recap of last time</a>
+  <ul class="collapse">
+  <li><a href="#useful-keyboard-shortcuts" id="toc-useful-keyboard-shortcuts" class="nav-link" data-scroll-target="#useful-keyboard-shortcuts">Useful keyboard shortcuts</a>
+  <ul class="collapse">
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
+  </ul></li>
+  <li><a href="#another-resource-for-an-introduction-to-r" id="toc-another-resource-for-an-introduction-to-r" class="nav-link" data-scroll-target="#another-resource-for-an-introduction-to-r">Another resource for an introduction to R</a></li>
+  </ul></li>
+  <li><a href="#moritzs-tip-of-the-day" id="toc-moritzs-tip-of-the-day" class="nav-link" data-scroll-target="#moritzs-tip-of-the-day">MoRitz’s tip of the day</a></li>
+  <li><a href="#data-collection-principles" id="toc-data-collection-principles" class="nav-link" data-scroll-target="#data-collection-principles">(1.3) Data collection principles</a>
+  <ul class="collapse">
+  <li><a href="#population-vs.-sample" id="toc-population-vs.-sample" class="nav-link" data-scroll-target="#population-vs.-sample">Population vs.&nbsp;sample</a>
+  <ul class="collapse">
+  <li><a href="#target-population" id="toc-target-population" class="nav-link" data-scroll-target="#target-population">(Target) Population</a></li>
+  <li><a href="#sample" id="toc-sample" class="nav-link" data-scroll-target="#sample">Sample</a></li>
+  </ul></li>
+  <li><a href="#sampling-methods-14" id="toc-sampling-methods-14" class="nav-link" data-scroll-target="#sampling-methods-14">Sampling methods (1/4)</a>
+  <ul class="collapse">
+  <li><a href="#sampling-methods-24" id="toc-sampling-methods-24" class="nav-link" data-scroll-target="#sampling-methods-24">Sampling methods (2/4)</a></li>
+  <li><a href="#sampling-methods-34" id="toc-sampling-methods-34" class="nav-link" data-scroll-target="#sampling-methods-34">Sampling methods (3/4)</a></li>
+  <li><a href="#sampling-methods-44" id="toc-sampling-methods-44" class="nav-link" data-scroll-target="#sampling-methods-44">Sampling methods (4/4)</a></li>
+  </ul></li>
+  <li><a href="#experiments-12" id="toc-experiments-12" class="nav-link" data-scroll-target="#experiments-12">Experiments (1/2)</a>
+  <ul class="collapse">
+  <li><a href="#experiments-22" id="toc-experiments-22" class="nav-link" data-scroll-target="#experiments-22">Experiments (2/2)</a></li>
+  </ul></li>
+  <li><a href="#observational-studies" id="toc-observational-studies" class="nav-link" data-scroll-target="#observational-studies">Observational studies</a></li>
+  <li><a href="#comparing-study-designs" id="toc-comparing-study-designs" class="nav-link" data-scroll-target="#comparing-study-designs">Comparing study designs</a></li>
+  <li><a href="#systematic-reviews-example" id="toc-systematic-reviews-example" class="nav-link" data-scroll-target="#systematic-reviews-example">Systematic Reviews example</a></li>
+  </ul></li>
+  <li><a href="#intro-to-data" id="toc-intro-to-data" class="nav-link" data-scroll-target="#intro-to-data">(1.2) Intro to Data</a>
+  <ul class="collapse">
+  <li><a href="#how-are-data-stored-how-do-we-use-them" id="toc-how-are-data-stored-how-do-we-use-them" class="nav-link" data-scroll-target="#how-are-data-stored-how-do-we-use-them">How are data stored, how do we use them?</a>
+  <ul class="collapse">
+  <li><a href="#data-in-r" id="toc-data-in-r" class="nav-link" data-scroll-target="#data-in-r">Data in R</a></li>
+  </ul></li>
+  <li><a href="#data-frame-example" id="toc-data-frame-example" class="nav-link" data-scroll-target="#data-frame-example">Data frame example</a></li>
+  <li><a href="#observations-variables" id="toc-observations-variables" class="nav-link" data-scroll-target="#observations-variables">Observations &amp; variables</a></li>
+  <li><a href="#variable-column-types" id="toc-variable-column-types" class="nav-link" data-scroll-target="#variable-column-types">Variable (column) types</a></li>
+  <li><a href="#fishers-or-andersons-iris-data-set" id="toc-fishers-or-andersons-iris-data-set" class="nav-link" data-scroll-target="#fishers-or-andersons-iris-data-set">Fisher’s (or Anderson’s) Iris data set</a></li>
+  <li><a href="#view-the-iris-dataset" id="toc-view-the-iris-dataset" class="nav-link" data-scroll-target="#view-the-iris-dataset">View the <code>iris</code> dataset</a></li>
+  <li><a href="#data-structure" id="toc-data-structure" class="nav-link" data-scroll-target="#data-structure">Data structure</a></li>
+  <li><a href="#data-set-summary" id="toc-data-set-summary" class="nav-link" data-scroll-target="#data-set-summary">Data set summary</a></li>
+  <li><a href="#data-set-info" id="toc-data-set-info" class="nav-link" data-scroll-target="#data-set-info">Data set info</a></li>
+  <li><a href="#view-the-beginning-or-end-of-a-dataset" id="toc-view-the-beginning-or-end-of-a-dataset" class="nav-link" data-scroll-target="#view-the-beginning-or-end-of-a-dataset">View the beginning or end of a dataset</a></li>
+  <li><a href="#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" id="toc-specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" class="nav-link" data-scroll-target="#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset">Specify how many rows to view at beginning or end of a dataset</a></li>
+  <li><a href="#the" id="toc-the" class="nav-link" data-scroll-target="#the">The <code>$</code></a></li>
+  <li><a href="#example-using-the" id="toc-example-using-the" class="nav-link" data-scroll-target="#example-using-the">Example using the <code>$</code></a></li>
+  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code">Inline code</a></li>
+  </ul></li>
+  <li><a href="#summarizing-numerical-data" id="toc-summarizing-numerical-data" class="nav-link" data-scroll-target="#summarizing-numerical-data">(1.4) Summarizing numerical data</a>
+  <ul class="collapse">
+  <li><a href="#table-1-example" id="toc-table-1-example" class="nav-link" data-scroll-target="#table-1-example">Table 1 example</a></li>
+  <li><a href="#measures-of-center-mean" id="toc-measures-of-center-mean" class="nav-link" data-scroll-target="#measures-of-center-mean">Measures of center: mean</a></li>
+  <li><a href="#measures-of-center-median" id="toc-measures-of-center-median" class="nav-link" data-scroll-target="#measures-of-center-median">Measures of center: median</a></li>
+  <li><a href="#measures-of-center-mean-vs.-median" id="toc-measures-of-center-mean-vs.-median" class="nav-link" data-scroll-target="#measures-of-center-mean-vs.-median">Measures of center: mean vs.&nbsp;median</a></li>
+  <li><a href="#measures-of-center-mode" id="toc-measures-of-center-mode" class="nav-link" data-scroll-target="#measures-of-center-mode">Measures of center: mode</a></li>
+  <li><a href="#measures-of-spread-standard-deviation-sd-13" id="toc-measures-of-spread-standard-deviation-sd-13" class="nav-link" data-scroll-target="#measures-of-spread-standard-deviation-sd-13">Measures of spread: standard deviation (SD) (1/3)</a>
+  <ul class="collapse">
+  <li><a href="#measures-of-spread-sd-23" id="toc-measures-of-spread-sd-23" class="nav-link" data-scroll-target="#measures-of-spread-sd-23">Measures of spread: SD (2/3)</a></li>
+  <li><a href="#measures-of-spread-sd-33" id="toc-measures-of-spread-sd-33" class="nav-link" data-scroll-target="#measures-of-spread-sd-33">Measures of spread: SD (3/3)</a></li>
+  </ul></li>
+  <li><a href="#empirical-rule-one-way-to-think-about-the-sd-12" id="toc-empirical-rule-one-way-to-think-about-the-sd-12" class="nav-link" data-scroll-target="#empirical-rule-one-way-to-think-about-the-sd-12">Empirical Rule: one way to think about the SD (1/2)</a>
+  <ul class="collapse">
+  <li><a href="#empirical-rule-one-way-to-think-about-the-sd-22" id="toc-empirical-rule-one-way-to-think-about-the-sd-22" class="nav-link" data-scroll-target="#empirical-rule-one-way-to-think-about-the-sd-22">Empirical Rule: one way to think about the SD (2/2)</a></li>
+  </ul></li>
+  <li><a href="#measures-of-spread-interquartile-range-iqr-12" id="toc-measures-of-spread-interquartile-range-iqr-12" class="nav-link" data-scroll-target="#measures-of-spread-interquartile-range-iqr-12">Measures of spread: interquartile range (IQR) (1/2)</a></li>
+  <li><a href="#measures-of-spread-iqr-22" id="toc-measures-of-spread-iqr-22" class="nav-link" data-scroll-target="#measures-of-spread-iqr-22">Measures of spread: IQR (2/2)</a></li>
+  <li><a href="#robust-estimates" id="toc-robust-estimates" class="nav-link" data-scroll-target="#robust-estimates">Robust estimates</a></li>
+  </ul></li>
+  <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R Packages</a>
+  <ul class="collapse">
+  <li><a href="#installing-packages" id="toc-installing-packages" class="nav-link" data-scroll-target="#installing-packages">Installing packages</a></li>
+  <li><a href="#video-on-installing-packages" id="toc-video-on-installing-packages" class="nav-link" data-scroll-target="#video-on-installing-packages">Video on installing packages</a></li>
+  <li><a href="#load-packages-with-library-command" id="toc-load-packages-with-library-command" class="nav-link" data-scroll-target="#load-packages-with-library-command">Load packages with <code>library()</code> command</a></li>
+  <li><a href="#install-the-packages-listed-below-before-day-3" id="toc-install-the-packages-listed-below-before-day-3" class="nav-link" data-scroll-target="#install-the-packages-listed-below-before-day-3">Install the packages listed below <span style="color:darkorange">before Day 3</span></a></li>
+  <li><a href="#directions-for-installing-package-oibiostat" id="toc-directions-for-installing-package-oibiostat" class="nav-link" data-scroll-target="#directions-for-installing-package-oibiostat">Directions for installing package <code>oibiostat</code></a></li>
+  </ul></li>
+  <li><a href="#a-visual-dataset" id="toc-a-visual-dataset" class="nav-link" data-scroll-target="#a-visual-dataset">A visual dataset</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Day 2: Data collection &amp; numerical summaries</h1>
+<p class="subtitle lead">BSTA 511/611 Fall 2023, OHSU</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Week 2</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Meike Niederhausen, PhD </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="goals-for-today" class="level1">
+<h1>Goals for today</h1>
+<ul>
+<li>(1.3) <strong>Data collection principles</strong>
+<ul>
+<li>Population vs.&nbsp;sample</li>
+<li>Sampling methods</li>
+<li>Experiments vs.&nbsp;Observational studies</li>
+</ul></li>
+<li>(1.2) <strong>Intro to Data</strong>
+<ul>
+<li>Data types</li>
+<li>How are data stored in R?</li>
+<li>Working with data in R</li>
+</ul></li>
+<li>(1.4) <strong>Summarizing numerical data</strong>
+<ul>
+<li>Mean, median, mode, SD, IQR, range, 5 number summary</li>
+<li>Empirical Rule</li>
+<li>robust statistics</li>
+</ul></li>
+<li><strong>R packages</strong> -&gt; <strong><span style="color:darkorange">install for next class!!!</span></strong></li>
+</ul>
+</section>
+<section id="recap-of-last-time" class="level1">
+<h1>Recap of last time</h1>
+<ul>
+<li>Open RStudio on your computer (not R!)</li>
+<li>Basic math using R</li>
+<li>Creating and rendering Quarto files</li>
+<li>Formatting text &amp; headers</li>
+<li>Code chunks</li>
+</ul>
+<section id="useful-keyboard-shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="useful-keyboard-shortcuts">Useful keyboard shortcuts</h2>
+<p><a href="https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts">Full list of keyboard shortcuts</a></p>
+<table class="table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 25%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>action</th>
+<th>mac</th>
+<th>windows/linux</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Run code in qmd (or script)</td>
+<td>cmd + enter</td>
+<td>ctrl + enter</td>
+</tr>
+<tr class="even">
+<td><code>&lt;-</code></td>
+<td>option + -</td>
+<td>alt + -</td>
+</tr>
+<tr class="odd">
+<td>interrupt currently running command</td>
+<td>esc</td>
+<td>esc</td>
+</tr>
+<tr class="even">
+<td>in console, retrieve previously run code</td>
+<td>up/down</td>
+<td>up/down</td>
+</tr>
+<tr class="odd">
+<td>keyboard shortcut help</td>
+<td>option + shift + k</td>
+<td>alt + shift + k</td>
+</tr>
+</tbody>
+</table>
+<section id="practice" class="level3">
+<h3 class="anchored" data-anchor-id="practice">Practice</h3>
+<p>Try typing code below in your qmd (with shortcut) and evaluating it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="another-resource-for-an-introduction-to-r" class="level2">
+<h2 class="anchored" data-anchor-id="another-resource-for-an-introduction-to-r">Another resource for an introduction to R</h2>
+<ul>
+<li><p>If you would like another perspective on what we covered the first week, you might find <strong>Danielle Navarro’s</strong> online book <strong><em>Learning Statistics with R</em></strong> to be helpful.</p></li>
+<li><p>Download free pdf: <a href="https://learningstatisticswithr.com/">https://learningstatisticswithr.com/</a></p></li>
+<li><p>See Sections 3.1-3.7.1 for some of the topics we covered on first day</p></li>
+</ul>
+</section>
+</section>
+<section id="moritzs-tip-of-the-day" class="level1">
+<h1>MoRitz’s tip of the day</h1>
+<p>Customize your RStudio interface!<br>
+<a href="https://www.pipinghotdata.com/posts/2020-09-07-introducing-the-rstudio-ide-and-r-markdown/#background">https://www.pipinghotdata.com/posts/2020-09-07-introducing-the-rstudio-ide-and-r-markdown/#background</a></p>
+</section>
+<section id="data-collection-principles" class="level1">
+<h1>(1.3) Data collection principles</h1>
+<ul>
+<li>Population vs.&nbsp;sample</li>
+<li>Sampling methods</li>
+<li>Experiments vs.&nbsp;Observational studies</li>
+</ul>
+<section id="population-vs.-sample" class="level2">
+<h2 class="anchored" data-anchor-id="population-vs.-sample">Population vs.&nbsp;sample</h2>
+<section id="target-population" class="level3">
+<h3 class="anchored" data-anchor-id="target-population">(Target) Population</h3>
+<ul>
+<li>group of interest being studied</li>
+<li>group from which the sample is selected
+<ul>
+<li>studies often have <em>inclusion</em> and/or <em>exclusion</em> criteria</li>
+</ul></li>
+</ul>
+</section>
+<section id="sample" class="level3">
+<h3 class="anchored" data-anchor-id="sample">Sample</h3>
+<ul>
+<li>group on which data are collected</li>
+<li>often a small subset of the population</li>
+</ul>
+</section>
+</section>
+<section id="sampling-methods-14" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-methods-14">Sampling methods (1/4)</h2>
+<p>Goal is to get a <strong>representative</strong> sample of the population:<br>
+the characteristics of the sample are similar to the characteristics of the population</p>
+<p><strong>Simple random sample (SRS)</strong></p>
+<ul>
+<li>each individual of a population has the <em>same chance</em> of being sampled</li>
+<li>randomly sampled</li>
+<li>considered best way to sample</li>
+</ul>
+<p><strong>Convenience sample</strong></p>
+<ul>
+<li>easily accessible individuals are <em>more likely</em> to be included in the sample than other individuals</li>
+<li>a common “pitfall”</li>
+</ul>
+<section id="sampling-methods-24" class="level3">
+<h3 class="anchored" data-anchor-id="sampling-methods-24">Sampling methods (2/4)</h3>
+<p><em>Good sampling plans don’t guarantee samples representative of the population</em></p>
+<p><strong>Non-response bias</strong></p>
+<ul>
+<li>non-response rates can be high</li>
+<li>are all groups within a population being reached?</li>
+<li>unrepresentative sample<br>
+=&gt; skewed results</li>
+</ul>
+<p><strong>“Random” samples can be unrepresentative by random chance</strong></p>
+<ul>
+<li>In a SRS each case in the population has an equal chance of being included in the sample</li>
+<li>But by random chance alone a random sample might contain a higher proportion of one group over another</li>
+<li>Ex: a SRS might by chance include 70% men (unlikely, but theoretically possible)</li>
+</ul>
+</section>
+<section id="sampling-methods-34" class="level3">
+<h3 class="anchored" data-anchor-id="sampling-methods-34">Sampling methods (3/4)</h3>
+<ul>
+<li><strong>Simple random sample (SRS)</strong>
+<ul>
+<li>each individual of a population has the <em>same chance</em> of being sampled</li>
+<li><em>statistical methods taught in this class assume a SRS!</em></li>
+</ul></li>
+<li><strong>Stratified sampling</strong>
+<ul>
+<li>divide population into groups (strata) before selecting cases within each stratum (often via SRS)</li>
+<li>usually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups</li>
+</ul></li>
+</ul>
+</section>
+<section id="sampling-methods-44" class="level3">
+<h3 class="anchored" data-anchor-id="sampling-methods-44">Sampling methods (4/4)</h3>
+<ul>
+<li><strong>Cluster sample</strong>
+<ul>
+<li>first divide population into groups (clusters)</li>
+<li>then sample a fixed number of clusters, and include <em>all</em> observations from chosen clusters</li>
+<li>clusters are often hospitals, clinicians, schools, etc., where each cluster will have similar services/ policies/ etc.</li>
+<li>cases within clusters usually very diverse</li>
+</ul></li>
+<li><strong>Multistage sample</strong>
+<ul>
+<li>similar to a cluster sample, but select a random sample within each selected cluster instead of all individuals</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="experiments-12" class="level2">
+<h2 class="anchored" data-anchor-id="experiments-12">Experiments (1/2)</h2>
+<ul>
+<li>Researchers assign individuals to different <strong>treatment</strong> or <strong>intervention groups</strong>
+<ul>
+<li><strong>control group</strong>: often receive a <strong>placebo</strong> or usual care</li>
+<li>different treatment groups are often called <strong>study arms</strong></li>
+</ul></li>
+<li><strong>Randomization</strong>
+<ul>
+<li>group assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)</li>
+<li>randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
+<ul>
+<li>treatment is the only systematic difference between groups</li>
+<li>establish causality</li>
+</ul></li>
+<li><strong>blocking (stratification)</strong>: group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e.&nbsp;gender, age group)</li>
+</ul></li>
+</ul>
+<section id="experiments-22" class="level3">
+<h3 class="anchored" data-anchor-id="experiments-22">Experiments (2/2)</h3>
+<ul>
+<li><strong>Replication</strong>
+<ul>
+<li>accomplished by collecting a sufficiently large sample</li>
+<li>results usually more reliable with a large sample size
+<ul>
+<li>often less variability</li>
+<li>more likely to be representative of population</li>
+</ul></li>
+</ul></li>
+<li>Some studies are not ethical to carry out as experiments</li>
+</ul>
+</section>
+</section>
+<section id="observational-studies" class="level2">
+<h2 class="anchored" data-anchor-id="observational-studies">Observational studies</h2>
+<ul>
+<li>data are observed and recorded without interference</li>
+<li>often done via surveys, electronic health records, or medical chart reviews</li>
+<li>cohorts</li>
+<li>associations between variables can be established, but not causality
+<ul>
+<li>Individuals with different characteristics may also differ in other ways that influence response</li>
+</ul></li>
+<li>confounding variables (lurking variable)
+<ul>
+<li>variables associated with both the explanatory and response variables</li>
+</ul></li>
+<li>prospective vs.&nbsp;retrospective studies</li>
+</ul>
+</section>
+<section id="comparing-study-designs" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-study-designs">Comparing study designs</h2>
+<p><a href="https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/">Science Media Centre</a></p>
+</section>
+<section id="systematic-reviews-example" class="level2">
+<h2 class="anchored" data-anchor-id="systematic-reviews-example">Systematic Reviews example</h2>
+<p><a href="https://www.cannabisevidence.org/">STEM: Systematically Testing the Evidence on Marijuana</a></p>
+<p>STEM is a collaborative project between the US Department of Veterans Affairs and the <a href="https://centerforevidencebasedpolicy.org/">Center for Evidence-based Policy</a> at Oregon Health &amp; Science University.<br>
+The project is funded by the US Department of Veterans Affairs: Office of Rural Health.</p>
+</section>
+</section>
+<section id="intro-to-data" class="level1">
+<h1>(1.2) Intro to Data</h1>
+<section id="how-are-data-stored-how-do-we-use-them" class="level2">
+<h2 class="anchored" data-anchor-id="how-are-data-stored-how-do-we-use-them">How are data stored, how do we use them?</h2>
+<ul>
+<li>Often, data are in an Excel sheet, or a plain text file (.csv, .txt)</li>
+<li>.csv files open in Excel automatically, but actually are plain text</li>
+<li>Usually, columns are variables/measures and rows are observations (i.e.&nbsp;a person’s measurements)</li>
+</ul>
+<section id="data-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="data-in-r">Data in R</h3>
+<ul>
+<li>We can import data from many file types, including .csv, .txt., and .xlsx
+<ul>
+<li>We will cover this on a later date</li>
+</ul></li>
+<li>Once imported, R typically stores data as <strong>data frames</strong>, or <strong>tibbles</strong> if using the <code>tidyverse</code> package (more on this later).
+<ul>
+<li>For our purposes, these are essentially the same, and I will tend to use the terms interchangeably.</li>
+<li>These are examples of what we call <strong>object types</strong> in R.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="data-frame-example" class="level2">
+<h2 class="anchored" data-anchor-id="data-frame-example">Data frame example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">IDs=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">gender=</span><span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"Male"</span>), </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">age=</span><span class="fu">c</span>(<span class="dv">28</span>, <span class="fl">35.5</span>, <span class="dv">31</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">trt =</span> <span class="fu">c</span>(<span class="st">"control"</span>, <span class="st">"1"</span>, <span class="st">"1"</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Veteran =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  IDs gender  age     trt Veteran
+1   1   male 28.0 control   FALSE
+2   2 female 35.5       1    TRUE
+3   3   Male 31.0       1    TRUE</code></pre>
+</div>
+</div>
+<ul>
+<li><p><strong>Vectors</strong> vs.&nbsp;<strong>data frames</strong></p>
+<ul>
+<li>a data frame is a collection (or array or table) of vectors</li>
+</ul></li>
+<li><p>Different columns can be of different data types (i.e.&nbsp;numeric vs.&nbsp;text)</p></li>
+<li><p>Both numeric and text can be stored within a column (stored together as <em>text</em>).</p></li>
+<li><p>Vectors and data frames are examples of <em><strong>objects</strong></em> in R.</p>
+<ul>
+<li>There are other types of R objects to store data, such as matrices, lists.</li>
+</ul></li>
+</ul>
+</section>
+<section id="observations-variables" class="level2">
+<h2 class="anchored" data-anchor-id="observations-variables">Observations &amp; variables</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  IDs gender  age     trt Veteran
+1   1   male 28.0 control   FALSE
+2   2 female 35.5       1    TRUE
+3   3   Male 31.0       1    TRUE</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Book refers to a dataset as a <em>data matrix</em></p></li>
+<li><p>Rows are usually <strong>observations</strong></p></li>
+<li><p>Columns are usually <strong>variables</strong></p></li>
+<li><p><strong><span style="color:green">How many observations are in this dataset?</span></strong></p></li>
+<li><p><strong><span style="color:green">What are the variable types in this dataset?</span></strong></p></li>
+</ul>
+</section>
+<section id="variable-column-types" class="level2">
+<h2 class="anchored" data-anchor-id="variable-column-types">Variable (column) types</h2>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>R type</th>
+<th>variable type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>integer</td>
+<td>discrete</td>
+<td>integer-valued numbers</td>
+</tr>
+<tr class="even">
+<td>double or numeric</td>
+<td>continuous</td>
+<td>numbers that are decimals</td>
+</tr>
+<tr class="odd">
+<td>factor</td>
+<td>categorical</td>
+<td>categorical variables stored with levels (groups)</td>
+</tr>
+<tr class="even">
+<td>character</td>
+<td>categorical</td>
+<td>text, “strings”</td>
+</tr>
+<tr class="odd">
+<td>logical</td>
+<td>categorical</td>
+<td>boolean (TRUE, FALSE)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>View the <strong>structure</strong> of our data frame to see what the variable types are:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   3 obs. of  5 variables:
+ $ IDs    : int  1 2 3
+ $ gender : chr  "male" "female" "Male"
+ $ age    : num  28 35.5 31
+ $ trt    : chr  "control" "1" "1"
+ $ Veteran: logi  FALSE TRUE TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="fishers-or-andersons-iris-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="fishers-or-andersons-iris-data-set">Fisher’s (or Anderson’s) Iris data set</h2>
+<p>Data description:</p>
+<ul>
+<li>n = 150</li>
+<li>3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+<ul>
+<li>50 measurements of each type of Iris</li>
+</ul></li>
+<li><strong>variables</strong>:
+<ul>
+<li>sepal length, sepal width, petal length, petal width, and species</li>
+</ul></li>
+</ul>
+<p><em><span style="color:purple">Can the iris species be determined by these variables?</span></em></p>
+<center>
+<img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%">
+</center>
+<p><a href="https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project">Gareth Duffy</a></p>
+</section>
+<section id="view-the-iris-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="view-the-iris-dataset">View the <code>iris</code> dataset</h2>
+<ul>
+<li>The <code>iris</code> dataset is already pre-loaded in <em>base</em> R and ready to use.</li>
+<li>Type the following command in the console window
+<ul>
+<li><em>Warning: this command cannot be rendered. It will give an error.</em></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A new tab in the scripting window should appear with the <code>iris</code> dataset.</p>
+</section>
+<section id="data-structure" class="level2">
+<h2 class="anchored" data-anchor-id="data-structure">Data structure</h2>
+<ul>
+<li>What are the different <strong>variable types</strong> in this data set?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iris)   <span class="co"># structure of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="data-set-summary" class="level2">
+<h2 class="anchored" data-anchor-id="data-set-summary">Data set summary</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+       Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+                
+                
+                </code></pre>
+</div>
+</div>
+</section>
+<section id="data-set-info" class="level2">
+<h2 class="anchored" data-anchor-id="data-set-info">Data set info</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150   5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"     </code></pre>
+</div>
+</div>
+</section>
+<section id="view-the-beginning-or-end-of-a-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="view-the-beginning-or-end-of-a-dataset">View the beginning or end of a dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+145          6.7         3.3          5.7         2.5 virginica
+146          6.7         3.0          5.2         2.3 virginica
+147          6.3         2.5          5.0         1.9 virginica
+148          6.5         3.0          5.2         2.0 virginica
+149          6.2         3.4          5.4         2.3 virginica
+150          5.9         3.0          5.1         1.8 virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset">Specify how many rows to view at beginning or end of a dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(iris, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+149          6.2         3.4          5.4         2.3 virginica
+150          5.9         3.0          5.1         1.8 virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="the" class="level2">
+<h2 class="anchored" data-anchor-id="the">The <code>$</code></h2>
+<ul>
+<li>Suppose we want to single out the column of petal width values.</li>
+<li>One way to do this is to use the <code>$</code>
+<ul>
+<li><code>DatSetName$VariableName</code></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>Petal.Width</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3
+ [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2
+ [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3
+ [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3
+ [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3
+ [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8
+[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8
+[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3
+[145] 2.5 2.3 1.9 2.0 2.3 1.8</code></pre>
+</div>
+</div>
+</section>
+<section id="example-using-the" class="level2">
+<h2 class="anchored" data-anchor-id="example-using-the">Example using the <code>$</code></h2>
+<p>The <code>$</code> is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.199333</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7622377</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.3</code></pre>
+</div>
+</div>
+</section>
+<section id="inline-code" class="level2">
+<h2 class="anchored" data-anchor-id="inline-code">Inline code</h2>
+<ul>
+<li>With markdown you can also report <strong>R code output inline</strong> with the text instead of using a chunk.</li>
+</ul>
+<p>Text in editor:</p>
+<p>The mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.</p>
+<ul>
+<li>Reporting summary statistics this way in a report, makes the numbers computationally reproducible.</li>
+<li>For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.</li>
+</ul>
+</section>
+</section>
+<section id="summarizing-numerical-data" class="level1">
+<h1>(1.4) Summarizing numerical data</h1>
+<p>Measures of center &amp; spread</p>
+<section id="table-1-example" class="level2">
+<h2 class="anchored" data-anchor-id="table-1-example">Table 1 example</h2>
+<p><em>Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis</em><br>
+J Barton et al.<br>
+Arthritis Care &amp; Research.<br>
+2021 Sep 27 <a href="https://pubmed.ncbi.nlm.nih.gov/34569172/">https://pubmed.ncbi.nlm.nih.gov/34569172/</a></p>
+</section>
+<section id="measures-of-center-mean" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-center-mean">Measures of center: mean</h2>
+<p><strong><span style="color:darkorange">Sample mean</span></strong>: the average value of observations</p>
+<p><span class="math display">\[\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}\]</span></p>
+<p>where <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values in a sample</p>
+<p><strong>Example</strong>: What is the mean age in the toy dataset <code>df</code> defined earlier?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  IDs gender  age     trt Veteran
+1   1   male 28.0 control   FALSE
+2   2 female 35.5       1    TRUE
+3   3   Male 31.0       1    TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 31.5</code></pre>
+</div>
+</div>
+</section>
+<section id="measures-of-center-median" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-center-median">Measures of center: median</h2>
+<ul>
+<li><p>The <strong><span style="color:darkorange">median</span></strong> is the middle value of the observations in a sample.</p></li>
+<li><p>The median is the 50th percentile, meaning</p>
+<ul>
+<li>50% of observations lie below and</li>
+<li>50% of observations lie above the median.</li>
+</ul></li>
+<li><p>If the number of observations is</p>
+<ul>
+<li>odd: the median is the middle observed value</li>
+<li>even: the median is the average of the two middle observed values</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 28.0 35.5 31.0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 31</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(<span class="fu">c</span>(df<span class="sc">$</span>age, <span class="dv">67</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 33.25</code></pre>
+</div>
+</div>
+</section>
+<section id="measures-of-center-mean-vs.-median" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-center-mean-vs.-median">Measures of center: mean vs.&nbsp;median</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Day02_bsta511_code_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="1344"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+       Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+                
+                
+                </code></pre>
+</div>
+</div>
+</section>
+<section id="measures-of-center-mode" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-center-mode">Measures of center: mode</h2>
+<p><strong><span style="color:darkorange">mode</span></strong>: the most frequent value in a dataset</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Day02_bsta511_code_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="1344"></p>
+</div>
+</div>
+</section>
+<section id="measures-of-spread-standard-deviation-sd-13" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-spread-standard-deviation-sd-13">Measures of spread: standard deviation (SD) (1/3)</h2>
+<p><strong>standard deviation</strong> is (approximately) the average distance between a typical observation and the mean</p>
+<ul>
+<li>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span>.</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Day02_bsta511_code_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="1344"></p>
+</div>
+</div>
+<section id="measures-of-spread-sd-23" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-spread-sd-23">Measures of spread: SD (2/3)</h3>
+<ul>
+<li><p>The <strong>sample variance</strong> <span class="math inline">\(s^2\)</span> is the sum of squared deviations divided by the number of observations minus 1. <span class="math display">\[s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}\]</span> where <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values.</p></li>
+<li><p>The <strong>standard deviation</strong> <span class="math inline">\(s\)</span> is the square root of the variance. <span class="math display">\[s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}\]</span></p></li>
+</ul>
+</section>
+<section id="measures-of-spread-sd-33" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-spread-sd-33">Measures of spread: SD (3/3)</h3>
+<p>Let’s calculate the sample standard deviation for our toy example</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 28.0 35.5 31.0</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 31.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.774917</code></pre>
+</div>
+</div>
+<p><span class="math inline">\(s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} =\)</span></p>
+<!-- \sqrt{\frac{({28 - 31.5)}^{2}+({35.5 - 31.5)}^{2}+({31 - 31.5)}^{2}}{3-1}} = 3.775 -->
+</section>
+</section>
+<section id="empirical-rule-one-way-to-think-about-the-sd-12" class="level2">
+<h2 class="anchored" data-anchor-id="empirical-rule-one-way-to-think-about-the-sd-12">Empirical Rule: one way to think about the SD (1/2)</h2>
+<p>For symmetric bell-shaped data, about</p>
+<ul>
+<li>68% of the data are within 1 SD of the mean</li>
+<li>95% of the data are within 2 SD’s of the mean</li>
+<li>99.7% of the data are within 3 SD’s of the mean</li>
+</ul>
+<p>These percentages are based off of percentages of a true normal distribution.</p>
+<section id="empirical-rule-one-way-to-think-about-the-sd-22" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-rule-one-way-to-think-about-the-sd-22">Empirical Rule: one way to think about the SD (2/2)</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Day02_bsta511_code_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.057333</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4358663</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="measures-of-spread-interquartile-range-iqr-12" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-spread-interquartile-range-iqr-12">Measures of spread: interquartile range (IQR) (1/2)</h2>
+<p>The <span class="math inline">\(p^{th}\)</span> percentile is the observation such that <span class="math inline">\(p\%\)</span> of the remaining observations fall below this observation.</p>
+<ul>
+<li>The <em>first quartile</em> <span class="math inline">\(Q_1\)</span> is the <span class="math inline">\(25^{th}\)</span> percentile.</li>
+<li>The <em>second quartile</em> <span class="math inline">\(Q_2\)</span>, i.e., the median, is the <span class="math inline">\(50^{th}\)</span> percentile.</li>
+<li>The <em>third quartile</em> <span class="math inline">\(Q_3\)</span> is the <span class="math inline">\(75^{th}\)</span> percentile.</li>
+</ul>
+<p>The <strong><span style="color:darkorange">interquartile range (IQR)</span></strong> is the distance between the third and first quartiles. <span class="math display">\[IQR = Q_3 - Q_1\]</span></p>
+<ul>
+<li>IQR is the width of the <em>middle half</em> of the data</li>
+</ul>
+</section>
+<section id="measures-of-spread-iqr-22" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-spread-iqr-22">Measures of spread: IQR (2/2)</h2>
+<p><strong><span style="color:darkorange">5 number summary</span></strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  2.000   2.800   3.000   3.057   3.300   4.400 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Day02_bsta511_code_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<p>What is the IQR of the sepal widths?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>25% 75% 
+2.8 3.3 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span>(<span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>75% 
+0.5 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+</div>
+</section>
+<section id="robust-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="robust-estimates">Robust estimates</h2>
+<p>Summary statistics are called <strong><span style="color:darkorange">robust estimates</span></strong> if extreme observations have little effect on their values</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>estimate</th>
+<th>robust?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>median</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mode</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>standard deviaiton</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>IQR</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>range</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="r-packages" class="level1">
+<h1>R Packages</h1>
+<p>A good analogy for R packages is that they<br>
+are like apps you can download onto a mobile phone:</p>
+<section id="installing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
+<ul>
+<li>Packages contain additional functions and data</li>
+</ul>
+<p>Two options to install packages:</p>
+<ol type="1">
+<li><code>install.packages()</code> <em>or</em></li>
+<li>The “Packages” tab in Files/Plots/Packages/Help/Viewer window</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)   <span class="co"># only do this ONCE, use quotes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><strong>Only install packages once</strong> <em>(unless you want to update them)</em></li>
+<li>Installed from <a href="https://cran.r-project.org/">Comprehensive R Archive Network (CRAN)</a> = package mothership</li>
+</ul>
+</section>
+<section id="video-on-installing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="video-on-installing-packages">Video on installing packages</h2>
+<ul>
+<li>Danielle Navarro’s YouTube video on <strong><em>Installing and loading R packages</em></strong>: <a href="https://www.youtube.com/watch?v=kpHZVyDvEhQ">https://www.youtube.com/watch?v=kpHZVyDvEhQ</a></li>
+</ul>
+</section>
+<section id="load-packages-with-library-command" class="level2">
+<h2 class="anchored" data-anchor-id="load-packages-with-library-command">Load packages with <code>library()</code> command</h2>
+<ul>
+<li>Tip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.</li>
+<li>Use the <code>library()</code> command to load each required package.</li>
+<li>Packages need to be reloaded <em>every</em> time you open Rstudio.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)    <span class="co"># run this every time you open Rstudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>You can use a function without loading the package with <code>PackageName::CommandName</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">arrange</span>(iris, Petal.Width)   <span class="co"># what does arrange do?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+1            4.9         3.1          1.5         0.1     setosa
+2            4.8         3.0          1.4         0.1     setosa
+3            4.3         3.0          1.1         0.1     setosa
+4            5.2         4.1          1.5         0.1     setosa
+5            4.9         3.6          1.4         0.1     setosa
+6            5.1         3.5          1.4         0.2     setosa
+7            4.9         3.0          1.4         0.2     setosa
+8            4.7         3.2          1.3         0.2     setosa
+9            4.6         3.1          1.5         0.2     setosa
+10           5.0         3.6          1.4         0.2     setosa
+11           5.0         3.4          1.5         0.2     setosa
+12           4.4         2.9          1.4         0.2     setosa
+13           5.4         3.7          1.5         0.2     setosa
+14           4.8         3.4          1.6         0.2     setosa
+15           5.8         4.0          1.2         0.2     setosa
+16           5.4         3.4          1.7         0.2     setosa
+17           4.6         3.6          1.0         0.2     setosa
+18           4.8         3.4          1.9         0.2     setosa
+19           5.0         3.0          1.6         0.2     setosa
+20           5.2         3.5          1.5         0.2     setosa
+21           5.2         3.4          1.4         0.2     setosa
+22           4.7         3.2          1.6         0.2     setosa
+23           4.8         3.1          1.6         0.2     setosa
+24           5.5         4.2          1.4         0.2     setosa
+25           4.9         3.1          1.5         0.2     setosa
+26           5.0         3.2          1.2         0.2     setosa
+27           5.5         3.5          1.3         0.2     setosa
+28           4.4         3.0          1.3         0.2     setosa
+29           5.1         3.4          1.5         0.2     setosa
+30           4.4         3.2          1.3         0.2     setosa
+31           5.1         3.8          1.6         0.2     setosa
+32           4.6         3.2          1.4         0.2     setosa
+33           5.3         3.7          1.5         0.2     setosa
+34           5.0         3.3          1.4         0.2     setosa
+35           4.6         3.4          1.4         0.3     setosa
+36           5.1         3.5          1.4         0.3     setosa
+37           5.7         3.8          1.7         0.3     setosa
+38           5.1         3.8          1.5         0.3     setosa
+39           5.0         3.5          1.3         0.3     setosa
+40           4.5         2.3          1.3         0.3     setosa
+41           4.8         3.0          1.4         0.3     setosa
+42           5.4         3.9          1.7         0.4     setosa
+43           5.7         4.4          1.5         0.4     setosa
+44           5.4         3.9          1.3         0.4     setosa
+45           5.1         3.7          1.5         0.4     setosa
+46           5.0         3.4          1.6         0.4     setosa
+47           5.4         3.4          1.5         0.4     setosa
+48           5.1         3.8          1.9         0.4     setosa
+49           5.1         3.3          1.7         0.5     setosa
+50           5.0         3.5          1.6         0.6     setosa
+51           4.9         2.4          3.3         1.0 versicolor
+52           5.0         2.0          3.5         1.0 versicolor
+53           6.0         2.2          4.0         1.0 versicolor
+54           5.8         2.7          4.1         1.0 versicolor
+55           5.7         2.6          3.5         1.0 versicolor
+56           5.5         2.4          3.7         1.0 versicolor
+57           5.0         2.3          3.3         1.0 versicolor
+58           5.6         2.5          3.9         1.1 versicolor
+59           5.5         2.4          3.8         1.1 versicolor
+60           5.1         2.5          3.0         1.1 versicolor
+61           6.1         2.8          4.7         1.2 versicolor
+62           5.8         2.7          3.9         1.2 versicolor
+63           5.5         2.6          4.4         1.2 versicolor
+64           5.8         2.6          4.0         1.2 versicolor
+65           5.7         3.0          4.2         1.2 versicolor
+66           5.5         2.3          4.0         1.3 versicolor
+67           5.7         2.8          4.5         1.3 versicolor
+68           6.6         2.9          4.6         1.3 versicolor
+69           5.6         2.9          3.6         1.3 versicolor
+70           6.1         2.8          4.0         1.3 versicolor
+71           6.4         2.9          4.3         1.3 versicolor
+72           6.3         2.3          4.4         1.3 versicolor
+73           5.6         3.0          4.1         1.3 versicolor
+74           5.5         2.5          4.0         1.3 versicolor
+75           5.6         2.7          4.2         1.3 versicolor
+76           5.7         2.9          4.2         1.3 versicolor
+77           6.2         2.9          4.3         1.3 versicolor
+78           5.7         2.8          4.1         1.3 versicolor
+79           7.0         3.2          4.7         1.4 versicolor
+80           5.2         2.7          3.9         1.4 versicolor
+81           6.1         2.9          4.7         1.4 versicolor
+82           6.7         3.1          4.4         1.4 versicolor
+83           6.6         3.0          4.4         1.4 versicolor
+84           6.8         2.8          4.8         1.4 versicolor
+85           6.1         3.0          4.6         1.4 versicolor
+86           6.1         2.6          5.6         1.4  virginica
+87           6.4         3.2          4.5         1.5 versicolor
+88           6.9         3.1          4.9         1.5 versicolor
+89           6.5         2.8          4.6         1.5 versicolor
+90           5.9         3.0          4.2         1.5 versicolor
+91           5.6         3.0          4.5         1.5 versicolor
+92           6.2         2.2          4.5         1.5 versicolor
+93           6.3         2.5          4.9         1.5 versicolor
+94           6.0         2.9          4.5         1.5 versicolor
+95           5.4         3.0          4.5         1.5 versicolor
+96           6.7         3.1          4.7         1.5 versicolor
+97           6.0         2.2          5.0         1.5  virginica
+98           6.3         2.8          5.1         1.5  virginica
+99           6.3         3.3          4.7         1.6 versicolor
+100          6.0         2.7          5.1         1.6 versicolor
+101          6.0         3.4          4.5         1.6 versicolor
+102          7.2         3.0          5.8         1.6  virginica
+103          6.7         3.0          5.0         1.7 versicolor
+104          4.9         2.5          4.5         1.7  virginica
+105          5.9         3.2          4.8         1.8 versicolor
+106          6.3         2.9          5.6         1.8  virginica
+107          7.3         2.9          6.3         1.8  virginica
+108          6.7         2.5          5.8         1.8  virginica
+109          6.5         3.0          5.5         1.8  virginica
+110          6.3         2.7          4.9         1.8  virginica
+111          7.2         3.2          6.0         1.8  virginica
+112          6.2         2.8          4.8         1.8  virginica
+113          6.1         3.0          4.9         1.8  virginica
+114          6.4         3.1          5.5         1.8  virginica
+115          6.0         3.0          4.8         1.8  virginica
+116          5.9         3.0          5.1         1.8  virginica
+117          5.8         2.7          5.1         1.9  virginica
+118          6.4         2.7          5.3         1.9  virginica
+119          7.4         2.8          6.1         1.9  virginica
+120          5.8         2.7          5.1         1.9  virginica
+121          6.3         2.5          5.0         1.9  virginica
+122          6.5         3.2          5.1         2.0  virginica
+123          5.7         2.5          5.0         2.0  virginica
+124          5.6         2.8          4.9         2.0  virginica
+125          7.7         2.8          6.7         2.0  virginica
+126          7.9         3.8          6.4         2.0  virginica
+127          6.5         3.0          5.2         2.0  virginica
+128          7.1         3.0          5.9         2.1  virginica
+129          7.6         3.0          6.6         2.1  virginica
+130          6.8         3.0          5.5         2.1  virginica
+131          6.7         3.3          5.7         2.1  virginica
+132          6.4         2.8          5.6         2.1  virginica
+133          6.9         3.1          5.4         2.1  virginica
+134          6.5         3.0          5.8         2.2  virginica
+135          7.7         3.8          6.7         2.2  virginica
+136          6.4         2.8          5.6         2.2  virginica
+137          6.4         3.2          5.3         2.3  virginica
+138          7.7         2.6          6.9         2.3  virginica
+139          6.9         3.2          5.7         2.3  virginica
+140          7.7         3.0          6.1         2.3  virginica
+141          6.9         3.1          5.1         2.3  virginica
+142          6.8         3.2          5.9         2.3  virginica
+143          6.7         3.0          5.2         2.3  virginica
+144          6.2         3.4          5.4         2.3  virginica
+145          5.8         2.8          5.1         2.4  virginica
+146          6.3         3.4          5.6         2.4  virginica
+147          6.7         3.1          5.6         2.4  virginica
+148          6.3         3.3          6.0         2.5  virginica
+149          7.2         3.6          6.1         2.5  virginica
+150          6.7         3.3          5.7         2.5  virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="install-the-packages-listed-below-before-day-3" class="level2">
+<h2 class="anchored" data-anchor-id="install-the-packages-listed-below-before-day-3">Install the packages listed below <span style="color:darkorange">before Day 3</span></h2>
+<ul>
+<li><code>knitr</code>
+<ul>
+<li>this might actually already be installed</li>
+<li>check your packages list</li>
+</ul></li>
+<li><code>tidyverse</code>
+<ul>
+<li>this is actually a bundle of packages</li>
+<li><em>Warning: it will take a while to install!!!</em></li>
+<li>see more info at <a href="https://tidyverse.tidyverse.org/">https://tidyverse.tidyverse.org/</a></li>
+</ul></li>
+<li><code>rstatix</code>
+<ul>
+<li>for summary statistics of a dataset</li>
+</ul></li>
+<li><code>janitor</code>
+<ul>
+<li>for cleaning and exploring data</li>
+</ul></li>
+<li><code>ggridges</code>
+<ul>
+<li>for creating ridgeline plots</li>
+</ul></li>
+<li><code>devtools</code>
+<ul>
+<li>used to create R packages</li>
+<li>for our purposes, needed to install some packages</li>
+</ul></li>
+<li><code>oi_biostat_data</code>
+<ul>
+<li>this package is on github</li>
+<li><strong>see the next slide for directions on how to install <code>oi_biostat_data</code></strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="directions-for-installing-package-oibiostat" class="level2">
+<h2 class="anchored" data-anchor-id="directions-for-installing-package-oibiostat">Directions for installing package <code>oibiostat</code></h2>
+<ul>
+<li>The textbook’s datasets are in the R package <code>oibiostat</code></li>
+<li>Explanation of code below
+<ul>
+<li>Installation of <code>oibiostat</code> package requires first installing <code>devtools</code> package</li>
+<li>The code <code>devtools::install_github()</code> tells R to use the command <code>install_github()</code> from the <code>devtools</code> package without loading the entire package and all of its commands (which <code>library(devtools)</code> would do).</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"OI-Biostat/oi_biostat_data"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>After running the code above, put <code>#</code> in front of the commands so that RStudio doesn’t evaluate them when rendering.</li>
+<li>Now load the <code>oibiostat</code> package
+<ul>
+<li><span style="color:darkorange">the code below needs to be run <em>every time</em> you restart R or knit an Rmd file</span></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(oibiostat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="a-visual-dataset" class="level1">
+<h1>A visual dataset</h1>
+<p>Compare water sources across the world by country and family income</p>
+<p><a href="https://www.gapminder.org/dollar-street?topic=get-water">Gapminder Dollarstreet water sources</a></p>
+<p>Check out Gapminder’s Dollar Street for many more examples: <a href="https://www.gapminder.org/dollar-street">https://www.gapminder.org/dollar-street</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
