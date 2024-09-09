@@ -703,15 +703,15 @@
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#goals-for-today",
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#goals-for-today",
     "title": "Lesson 3: Data visualization",
-    "section": "",
-    "text": "Exploratory Data Analysis (EDA) (Sections 1.4, 1.5, 1.6, 1.7.1)\n\nData visualization with ggplot\n\nnumerical & categorical variables, and relationships between variables\n\nSummarizing numerical data\nFrequency (two-way) tables\n\nSome data wrangling techniques along the way\n\n\n\n\n\nArtwork by @allison_horst"
+    "section": "Goals for today",
+    "text": "Goals for today\n\n\n\nExploratory Data Analysis (EDA) (Sections 1.4, 1.5, 1.6, 1.7.1)\n\nData visualization with ggplot\n\nnumerical & categorical variables, and relationships between variables\n\nSummarizing numerical data\nFrequency (two-way) tables\n\nSome data wrangling techniques along the way\n\n\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#international-day-of-women-in-statistics-and-data-science",
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#international-day-of-women-in-statistics-and-data-science",
     "title": "Lesson 3: Data visualization",
     "section": "International Day of Women in Statistics and Data Science",
-    "text": "International Day of Women in Statistics and Data Science\nTuesday, October 10, 2022\n12 am - 11:59 pm UTC (5pm 10/9 to 4:59 pm 10/10 here)\n\n\n\nInternational Day of Women in Statistics and Data Science"
+    "text": "International Day of Women in Statistics and Data Science\nTuesday, October 10, 2022\n12 am - 11:59 pm UTC (5pm 10/9 to 4:59 pm 10/10 here)\n\nInternational Day of Women in Statistics and Data Science"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#mimis-tip-of-the-day-sending-messages-in-slack",
@@ -746,7 +746,7 @@
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#load-packages-with-library-command",
     "title": "Lesson 3: Data visualization",
     "section": "Load packages with library() command",
-    "text": "Load packages with library() command\n\n\nTip: at the top of your Qmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\n\nPackages need to be reloaded every time you open Rstudio.\nlibrary() commands to load needed packages must be in the Qmd file\n\n\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(ggridges)\nlibrary(janitor)\nlibrary(rstatix)\n\n\nAttaching package: 'rstatix'\n\n\nThe following object is masked from 'package:janitor':\n\n    make_clean_names\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!\n\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+    "text": "Load packages with library() command\n\n\nTip: at the top of your Qmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\n\nPackages need to be reloaded every time you open Rstudio.\nlibrary() commands to load needed packages must be in the Qmd file\n\n\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(ggridges)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!\n\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#case-study-description",
@@ -816,21 +816,21 @@
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#grammar-of-ggplot2",
     "title": "Lesson 3: Data visualization",
     "section": "Grammar of ggplot2",
-    "text": "Grammar of ggplot2\n\n\n\nKieran Healy"
+    "text": "Grammar of ggplot2\n\nKieran Healy"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#histograms",
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#histograms",
     "title": "Lesson 3: Data visualization",
     "section": "Histograms",
-    "text": "Histograms\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram() \n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures)) +\n  geom_histogram() \n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Histograms\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures)) +\n  geom_histogram()"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#histograms-showing-proportions",
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#histograms-showing-proportions",
     "title": "Lesson 3: Data visualization",
     "section": "Histograms showing proportions",
-    "text": "Histograms showing proportions\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density)))  \n\nWarning: `stat(density)` was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(density)` instead.\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density))) +  \n  scale_y_continuous(labels =   \n      scales::percent_format())  \n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Histograms showing proportions\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density)))  \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density))) +  \n  scale_y_continuous(labels =   \n      scales::percent_format())"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#distribution-shapes",
@@ -844,7 +844,7 @@
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#density-plots",
     "title": "Lesson 3: Data visualization",
     "section": "Density plots",
-    "text": "Density plots\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_density() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram() \n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Density plots\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_density() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram()"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#dot-plots",
@@ -893,7 +893,7 @@
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#ridgeline-plot",
     "title": "Lesson 3: Data visualization",
     "section": "Ridgeline plot",
-    "text": "Ridgeline plot\n\n\n\n# library(ggridges)\nggplot(data = dds.discr,\n       aes(x = expenditures,\n           y = ethnicity,      \n           fill = ethnicity)      \n       ) + \n  geom_density_ridges(      \n    alpha = 0.3,      \n    show.legend = FALSE) +      \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\",\n       title =        \n\"Expenditures by race and \n       \\nethnicity\")       \n\n\n\n\nPicking joint bandwidth of 5520"
+    "text": "Ridgeline plot\n\n\n\n# library(ggridges)\nggplot(data = dds.discr,\n       aes(x = expenditures,\n           y = ethnicity,      \n           fill = ethnicity)      \n       ) + \n  geom_density_ridges(      \n    alpha = 0.3,      \n    show.legend = FALSE) +      \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\",\n       title =        \n\"Expenditures by race and \n       \\nethnicity\")"
   },
   {
     "objectID": "lessons/03_Data_visualization/03_Data_visualization.html#transforming-data-1.4.5",
@@ -1040,7 +1040,7 @@
     "href": "lessons/03_Data_visualization/03_Data_visualization.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
     "title": "Lesson 3: Data visualization",
     "section": "Case study: discrimination in developmental disability support (1.7.1)",
-    "text": "Case study: discrimination in developmental disability support (1.7.1)\n\nPrevious research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?"
+    "text": "Case study: discrimination in developmental disability support (1.7.1)\n\nPrevious research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\n\n\n\nLesson 3 Slides"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries_key_info.html",
@@ -2202,14 +2202,14 @@
     "href": "homework.html",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/7/23\n\n\nHomework 1\n\n\n4 min\n\n\n\n\n10/14/23\n\n\nHomework 2\n\n\n6 min\n\n\n\n\n10/28/23\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/4/23\n\n\nHomework 5\n\n\n3 min\n\n\n\n\n11/11/23\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/18/23\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/27/23\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/4/23\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n10/21/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/7/23\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n10/14/23\n\n\nHomework 2\n\n\n6 min\n\n\n\n\n10/28/23\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/4/23\n\n\nHomework 5\n\n\n3 min\n\n\n\n\n11/11/23\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/18/23\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/27/23\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/4/23\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n10/21/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homework.html#assignments",
     "href": "homework.html#assignments",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/7/23\n\n\nHomework 1\n\n\n4 min\n\n\n\n\n10/14/23\n\n\nHomework 2\n\n\n6 min\n\n\n\n\n10/28/23\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/4/23\n\n\nHomework 5\n\n\n3 min\n\n\n\n\n11/11/23\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/18/23\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/27/23\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/4/23\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n10/21/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/7/23\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n10/14/23\n\n\nHomework 2\n\n\n6 min\n\n\n\n\n10/28/23\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/4/23\n\n\nHomework 5\n\n\n3 min\n\n\n\n\n11/11/23\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/18/23\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/27/23\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/4/23\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n10/21/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homework.html#solutions",
@@ -2691,29 +2691,29 @@
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#what-is-r",
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#what-is-r",
     "title": "Lesson 1: Intro to R & Rstudio",
-    "section": "",
-    "text": "A programming language\nFocus on statistical modeling and data analysis\n\nimport data, manipulate data, run statistics, make plots\n\nUseful for data science\nGreat visualizations\nAlso useful for most anything else you’d want to tell a computer to do\nInterfaces with other languages i.e. python, C++, bash\n\n\n\n\n\nFor the history and details: Wikipedia\n\nan interpreted language (run it through a command line)\nprocedural programming with functions\nWhy “R”?? Scheme inspired S (invented at Bell Labs in 1976) which inspired R since 1st letters of original authors (free and open source! in 2000)"
+    "section": "What is R?",
+    "text": "What is R?\n\n\n\nA programming language\nFocus on statistical modeling and data analysis\n\nimport data, manipulate data, run statistics, make plots\n\nUseful for data science\nGreat visualizations\nAlso useful for most anything else you’d want to tell a computer to do\nInterfaces with other languages i.e. python, C++, bash\n\n\n\n\n\nFor the history and details: Wikipedia\n\nan interpreted language (run it through a command line)\nprocedural programming with functions\nWhy “R”?? Scheme inspired S (invented at Bell Labs in 1976) which inspired R since 1st letters of original authors (free and open source! in 2000)"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#what-is-rstudio",
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#what-is-rstudio",
     "title": "Lesson 1: Intro to R & Rstudio",
-    "section": "",
-    "text": "R is a programming language\n\nRStudio is an integrated development environment (IDE)\n= an interface to use R (with perks!)\n\n\n\n\n\nModern Dive"
+    "section": "What is RStudio?",
+    "text": "What is RStudio?\n\n\nR is a programming language\n\nRStudio is an integrated development environment (IDE)\n= an interface to use R (with perks!)\n\n\n\nModern Dive"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#open-rstudio-on-your-computer-not-r",
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#open-rstudio-on-your-computer-not-r",
     "title": "Lesson 1: Intro to R & Rstudio",
-    "section": "",
-    "text": "Modern Dive"
+    "section": "Open RStudio on your computer (not R!)",
+    "text": "Open RStudio on your computer (not R!)\n\nModern Dive"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#rstudio-anatomy",
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#rstudio-anatomy",
     "title": "Lesson 1: Intro to R & Rstudio",
-    "section": "",
-    "text": "Emma Rand\n\n\nRead more about RStudio’s layout in Section 3.4 of “Getting Used to R, RStudio, and R Markdown” (Ismay and Kennedy 2016)"
+    "section": "RStudio anatomy",
+    "text": "RStudio anatomy\n\nEmma RandRead more about RStudio’s layout in Section 3.4 of “Getting Used to R, RStudio, and R Markdown” (Ismay and Kennedy 2016)"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#coding-in-the-console",
@@ -2783,7 +2783,7 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#quarto-.qmd-file-code-text",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Quarto = .qmd file = Code + text",
-    "text": "Quarto = .qmd file = Code + text\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+    "text": "Quarto = .qmd file = Code + text\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#create-a-quarto-file-.qmd",
@@ -2811,7 +2811,7 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#create-html-file",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "4. Create html file",
-    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
+    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#qmd-file-vs.-its-html-output",
@@ -2825,7 +2825,7 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#formatting-text",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Formatting text",
-    "text": "Formatting text\n\nbold, italics, superscripts & subscripts, strikethrough, verbatim, etc.\n\n\nText is formatted through a markup language called Markdown (Wikipedia)\n\nOther markup languages include html (webapges) and LaTeX (math)\nAll text formatting is specified via code\n“Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read” 1\n\nNewer versions of RStudio include a Visual editor as well that makes formatting text similar to using a word processor."
+    "text": "Formatting text\n\nbold, italics, superscripts & subscripts, strikethrough, verbatim, etc.\n\n\nText is formatted through a markup language called Markdown (Wikipedia)\n\nOther markup languages include html (webapges) and LaTeX (math)\nAll text formatting is specified via code\n“Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read” 1\n\nNewer versions of RStudio include a Visual editor as well that makes formatting text similar to using a word processor.\n\n\n\n\n\n\nFrom Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#formatting-text-visual-editor",
@@ -2853,7 +2853,7 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#headers",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Headers",
-    "text": "Headers\n\nOrganize your documents using headers to create sections and subsections\nUse # at the beginning of the line to create headers\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure there is no space before the #, and there IS a space after the # in order for the header to work properly."
+    "text": "Headers\n\nOrganize your documents using headers to create sections and subsections\nUse # at the beginning of the line to create headers\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nMake sure there is no space before the #, and there IS a space after the # in order for the header to work properly."
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#rstudio-tip",
@@ -2881,7 +2881,7 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#what-does-a-code-chunk-look-like",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "What does a code chunk look like?",
-    "text": "What does a code chunk look like?\nAn empty code chunk looks like this:\nVisual editor\n\nSource editor\n\n\n\n\n\n\n\nImportant\n\n\n\nNote that a code chunks start with ```{r} and ends with ```. Make sure there is no space before ```."
+    "text": "What does a code chunk look like?\nAn empty code chunk looks like this:\nVisual editor\n\nSource editor\n\n\n\n\n\n\n\nImportant\n\n\nNote that a code chunks start with ```{r} and ends with ```. Make sure there is no space before ```."
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#enter-and-run-code-1n",
@@ -2895,14 +2895,14 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#enter-and-run-code-2n",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Enter and run code (2/n)",
-    "text": "Enter and run code (2/n)\n\n\nRun all code in a chunk by\n\nby clicking the play button in the top right corner of the chunk\n\nThe code output appears below the code chunk\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe output should also appear in the Console.\nSettings can be changed so that the output appears only in the Console and not below the code chunk:\n\nSelect  (to right of Render button) and then Chunk Output in Console."
+    "text": "Enter and run code (2/n)\n\n\nRun all code in a chunk by\n\nby clicking the play button in the top right corner of the chunk\n\nThe code output appears below the code chunk\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe output should also appear in the Console.\nSettings can be changed so that the output appears only in the Console and not below the code chunk:\n\nSelect  (to right of Render button) and then Chunk Output in Console."
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#useful-keyboard-shortcuts",
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#useful-keyboard-shortcuts",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Useful keyboard shortcuts",
-    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#yaml-metadata",
@@ -2916,14 +2916,14 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#simple-yaml-example",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Simple YAML example",
-    "text": "Simple YAML example\n\n\nThe default YAML includes a title and author that appear at the top of the output file. In the example below, I also added in a date option\n\n\n\n\nYAML:\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nThe YAML must start and end with 3 dashes ---.\nThe first set of --- must be on the very first line."
+    "text": "Simple YAML example\n\n\nThe default YAML includes a title and author that appear at the top of the output file. In the example below, I also added in a date option\n\n\n\n\nYAML:\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe YAML must start and end with 3 dashes ---.\nThe first set of --- must be on the very first line."
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#change-the-output-file-type",
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#change-the-output-file-type",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "Change the output file type",
-    "text": "Change the output file type\n\n\n\nThe YAML specifies the format of the output file:\n\nhtml, Word, pdf, slides, website, book, etc.\n\nThis is done by changing the format: option\n\n\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio.\n\n\n\n\n\n\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\n\n\n\n\n\n\n\nOutput format\nYAML\n\n\n\n\nhtml\nformat: html\n\n\nWord\nformat: docx\n\n\npdf2\nformat: pdf\n\n\nhtml slides\nformat: revealjs\n\n\nPPT slides\nformat: pptx"
+    "text": "Change the output file type\n\n\n\nThe YAML specifies the format of the output file:\n\nhtml, Word, pdf, slides, website, book, etc.\n\nThis is done by changing the format: option\n\n\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio.\n\n\n\n\n\n\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\n\n\n\n\n\n\n\nOutput format\nYAML\n\n\n\n\nhtml\nformat: html\n\n\nWord\nformat: docx\n\n\npdf1\nformat: pdf\n\n\nhtml slides\nformat: revealjs\n\n\nPPT slides\nformat: pptx\n\n\n\n\n\nrequires LaTeX installation"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#section",
@@ -2937,7 +2937,7 @@
     "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#you-will-get-frustrated-while-learning-r",
     "title": "Lesson 1: Intro to R & Rstudio",
     "section": "You WILL get frustrated while learning R!",
-    "text": "You WILL get frustrated while learning R!\nFrom Garrett Grolemund’s Prologue of his book Hands-On Programming with R3:\n\nAs you learn to program, you are going to get frustrated. You are learning a new language, and it will take time to become fluent. But frustration is not just natural, it’s actually a positive sign that you should watch for. Frustration is your brain’s way of being lazy; it’s trying to get you to quit and go do something easy or fun. If you want to get physically fitter, you need to push your body even though it complains. If you want to get better at programming, you’ll need to push your brain. Recognize when you get frustrated and see it as a good thing: you’re now stretching yourself. Push yourself a little further every day, and you’ll soon be a confident programmer."
+    "text": "You WILL get frustrated while learning R!\nFrom Garrett Grolemund’s Prologue of his book Hands-On Programming with R1:\n\nAs you learn to program, you are going to get frustrated. You are learning a new language, and it will take time to become fluent. But frustration is not just natural, it’s actually a positive sign that you should watch for. Frustration is your brain’s way of being lazy; it’s trying to get you to quit and go do something easy or fun. If you want to get physically fitter, you need to push your body even though it complains. If you want to get better at programming, you’ll need to push your brain. Recognize when you get frustrated and see it as a good thing: you’re now stretching yourself. Push yourself a little further every day, and you’ll soon be a confident programmer.\n\nGrolemund, Garrett. 2014. Hands-on Programming with R. O’Reilly. https://rstudio-education.github.io/hopr/"
   },
   {
     "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#resources",
@@ -3616,7 +3616,7 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#useful-keyboard-shortcuts",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Useful keyboard shortcuts",
-    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#another-resource-for-an-introduction-to-r",
@@ -3630,7 +3630,7 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#population-vs.-sample",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Population vs. sample",
-    "text": "Population vs. sample\n\n\n\n(Target) Population\n\ngroup of interest being studied\ngroup from which the sample is selected\n\nstudies often have inclusion and/or exclusion criteria\n\n\n\n\n\n\nSample\n\ngroup on which data are collected\noften a small subset of the population"
+    "text": "Population vs. sample\n\n\n(Target) Population\n\ngroup of interest being studied\ngroup from which the sample is selected\n\nstudies often have inclusion and/or exclusion criteria\n\n\n\n\nSample\n\ngroup on which data are collected\noften a small subset of the population"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#sampling-methods-14",
@@ -3686,7 +3686,7 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#comparing-study-designs",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Comparing study designs",
-    "text": "Comparing study designs\n\n\n\nScience Media Centre"
+    "text": "Comparing study designs\n\nScience Media Centre"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#systematic-reviews-example",
@@ -3700,7 +3700,7 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#how-are-data-stored-how-do-we-use-them",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "How are data stored, how do we use them?",
-    "text": "How are data stored, how do we use them?\n\nOften, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\nData in R\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+    "text": "How are data stored, how do we use them?\n\nOften, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\nData in R\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#data-frame-example",
@@ -3819,21 +3819,21 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#measures-of-center-mean-vs.-median",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Measures of center: mean vs. median",
-    "text": "Measures of center: mean vs. median\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+    "text": "Measures of center: mean vs. median\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#measures-of-center-mode",
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#measures-of-center-mode",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Measures of center: mode",
-    "text": "Measures of center: mode\nmode: the most frequent value in a dataset\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Measures of center: mode\nmode: the most frequent value in a dataset"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#measures-of-spread-standard-deviation-sd-13",
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#measures-of-spread-standard-deviation-sd-13",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Measures of spread: standard deviation (SD) (1/3)",
-    "text": "Measures of spread: standard deviation (SD) (1/3)\nstandard deviation is (approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\).\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+    "text": "Measures of spread: standard deviation (SD) (1/3)\nstandard deviation is (approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\)."
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#measures-of-spread-sd-23",
@@ -3882,14 +3882,14 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#robust-estimates",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Robust estimates",
-    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nestimate\nrobust?\n\n\n\n\nmean\n\n\n\nmedian\n\n\n\nmode\n\n\n\nstandard deviaiton\n\n\n\nIQR\n\n\n\nrange"
+    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nestimate\nrobust?\n\n\n\n\nmean\n\n\n\nmedian\n\n\n\nmode\n\n\n\nstandard deviaiton\n\n\n\nIQR\n\n\n\nrange\n\n\n\n\n\n\nLesson 2 Slides"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#r-packages-1",
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#r-packages-1",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "R Packages",
-    "text": "R Packages\nA good analogy for R packages is that they\nare like apps you can download onto a mobile phone:\n\n\n\nModernDive Figure 1.4"
+    "text": "R Packages\nA good analogy for R packages is that they\nare like apps you can download onto a mobile phone:\n\nModernDive Figure 1.4"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#installing-packages",
@@ -4015,7 +4015,7 @@
     "href": "lessons/04_Probability/04_Probability.html#more-probability-rules",
     "title": "Day 4: Probability Part 1",
     "section": "More Probability Rules",
-    "text": "More Probability Rules\n\nGeneral Multiplication Rule For events \\(A\\) and \\(B\\), \\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\nConditional Probability Definition The conditional probability of an event A given an event or condition B is\n\\[\\mathbb{P}(A|B)=\\]\nIf \\(A\\) and \\(B\\) are independent events, then\n\n\\[\\mathbb{P}(A|B) =\\]\n\\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\n\nSum of Conditional Probabilities \\(\\mathbb{P}(A|B)\\) is a probability, meaning that it satisfies the usual probability rules. In particular, \\[\\mathbb{P}(A|B) + \\mathbb{P}(A^C|B) =\\]\n\n\nExample 5. Diabetes and hypertension revisited. Diabetes and hypertension are two of the most common diseases in Western, industrialized nations. In the United States, approximately 9% of the population have diabetes, while about 30% of adults have high blood pressure. The two diseases frequently occur together: an estimated 6% of the population have both diabetes and hypertension. Let D represent the event of having diabetes, and H the event of having hypertension. Is the event of someone being hypertensive independent of the event that someone has diabetes?\n\n\nExample 6. Seat belts Seat belt use is the most effective way to save lives and reduce injuries in motor vehicle crashes. In a 2014 survey, respondents were asked, \"How often do you use seat belts when you drive or ride in a car?\". The following table shows the distribution of seat belt usage by sex.\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\n\nCalculate the marginal probability that a randomly chosen individual always wears seatbelts.\nWhat is the probability that a randomly chosen female always wears seatbelts?\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are female?\nsame as previous\nWhat is the probability of a randomly chosen individual being female and always wearing seatbelts?\nSeat belts cont’d\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are male?\nCalculate the probability that an individual who never wears seatbelts is male.\nDoes gender seem independent of seat belt usage?"
+    "text": "More Probability Rules\n\nGeneral Multiplication Rule For events \\(A\\) and \\(B\\), \\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\nConditional Probability Definition The conditional probability of an event A given an event or condition B is\n\\[\\mathbb{P}(A|B)=\\]\nIf \\(A\\) and \\(B\\) are independent events, then\n\n\\[\\mathbb{P}(A|B) =\\]\n\\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\n\nSum of Conditional Probabilities \\(\\mathbb{P}(A|B)\\) is a probability, meaning that it satisfies the usual probability rules. In particular, \\[\\mathbb{P}(A|B) + \\mathbb{P}(A^C|B) =\\]\n\n\nExample 5. Diabetes and hypertension revisited. Diabetes and hypertension are two of the most common diseases in Western, industrialized nations. In the United States, approximately 9% of the population have diabetes, while about 30% of adults have high blood pressure. The two diseases frequently occur together: an estimated 6% of the population have both diabetes and hypertension. Let D represent the event of having diabetes, and H the event of having hypertension. Is the event of someone being hypertensive independent of the event that someone has diabetes?\n\n\nExample 6. Seat belts Seat belt use is the most effective way to save lives and reduce injuries in motor vehicle crashes. In a 2014 survey, respondents were asked, \"How often do you use seat belts when you drive or ride in a car?\". The following table shows the distribution of seat belt usage by sex.\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\n\nCalculate the marginal probability that a randomly chosen individual always wears seatbelts.\nWhat is the probability that a randomly chosen female always wears seatbelts?\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are female?\nsame as previous\nWhat is the probability of a randomly chosen individual being female and always wearing seatbelts?\nSeat belts cont’d\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are male?\nCalculate the probability that an individual who never wears seatbelts is male.\nDoes gender seem independent of seat belt usage?\n\n\n\n\nLesson 1 Slides"
   },
   {
     "objectID": "lessons/09_Confidence_intervals/09_Confidence_intervals.html",
@@ -4499,5 +4499,138 @@
     "title": "EPI 525 Syllabus",
     "section": "Institutional Policies and Resources",
     "text": "Institutional Policies and Resources\n\nStatement Regarding Students with Disabilities\nOHSU is committed to inclusive and accessible learning environments in compliance with federal and state law. If you have a disability or think you may have a disability (mental health, attention-related, learning, vision, hearing, physical or health impacts) contact the Office for Student Access at (503) 494-0082 or OHSU Student Access to have a confidential conversation about academic accommodations. Information is also available at Student Access Website. Because accommodations may take time to implement and cannot be applied retroactively, it is important to have this discussion as soon as possible.\nPortland State students also have similar resources available via the PSU Disability Resource Center (website http://www.pdx.edu/drc ). Please contact the DRC at tel. (503) 725-4150 or email at drc@pdx.edu\n\n\nStudent Evaluation of Courses\nCourse evaluation results are extremely important and used to help improve courses and the learning experience of future students. Responses will always remain anonymous and will only be available to instructors after grades have been posted. The results of scaled questions and comments go to both the instructor and their unit head/supervisor. Refer to Student Evaluation of Courses and Instructional Effectiveness, *Policy No. 02-50-035.\n*To access the OHSU Student Evaluation of Courses and Instructional Effectiveness Policy, you must log into the OHSU O2 website.\n\n\nCopyright Information\nCopyright laws and fair use policies protect the rights of those who have produced the material. The copy in this course has been provided for private study, scholarship, or research. Other uses may require permission from the copyright holder. The user of this work is responsible for adhering to copyright law of the U.S. (Title 17, U.S. Code). To help you familiarize yourself with copyright and fair use policies, the University encourages you to visit its Copyright Web Page\nSakai course web sites contain material protected by copyrights held by the instructor, other individuals or institutions. Such material is used for educational purposes in accord with copyright law and/or with permission given by the owners of the original material. You may download one copy of the materials on any single computer for non-commercial, personal, or educational purposes only, provided that you (1) do not modify it, (2) use it only for the duration of this course, and (3) include both this notice and any copyright notice originally included with the material. Beyond this use, no material from the course web site may be copied, reproduced, re-published, uploaded, posted, transmitted, or distributed in any way without the permission of the original copyright holder. The instructor assumes no responsibility for individuals who improperly use copyrighted material placed on the web site.\n\n\nSyllabi Changes and Retention\nSyllabi are considered to be a learning agreement between students and the faculty of record. Information contained in syllabi, other than the minimum requirements, may be subject to change as deemed appropriate by the faculty of record in concurrence with the academic program and the Office of the Provost. Refer to the *Course Syllabi Policy, 02-50-050.\n*To access the OHSU Course Syllabus Policy, you must log into the OHSU O2 website.\n\n\nCommitment to Diversity & Inclusion\nOHSU is committed to creating and fostering a learning and working environment based on open communication and mutual respect. If you encounter sexual harassment, sexual misconduct, sexual assault, or discrimination based on race, color, religion, age, national origin, veteran’s status, ancestry, sex, marital status, pregnancy or parenting status, sexual orientation, gender identity, disability or any other protected status please contact the Affirmative Action and Equal Opportunity Department at 503-494-5148 or aaeo@ohsu.edu. Inquiries about Title IX compliance or sex/gender discrimination and harassment may be directed to the OHSU Title IX Coordinator at 503-494-0258 or titleix@ohsu.edu.\n\n\nModified Operations, Policy 01-40-010\nPortland Campus:  Marquam Hill and South Waterfront\nStudents should review O2 or call OHSU’s weather alert line at 503-494-9021 for the most up-to-date information on OHSU-wide modified operations which include but are not limited to delays or closures for inclement weather.\nIf your home institution is not on the Portland campus (Marquam Hill or South Waterfront, contact your home institution for more information.\n\n\nOHSU Resources Available to Students*:\nRemote Learning Resources\nThe Remote Learning webpage on O2 contains concise, practical resources, and strategies for students that need to quickly transition to a fully remote instructional format.\nRegistrar’s Office\nMackenzie Hall, Rm. 1120\n503-494-7800; Email the Registrar\nStudent Registration Information: \nTo Register for Classes\nOHSU ITG Help Desk\nRegular staff hours are 6 a.m. to 6 p.m., Monday through Friday, but phones are answered seven days a week, 24 hours a day. Call 503 494-2222.\nTeaching and Learning Center\nAcademic Support Counseling and Sakai Course Management System, please contact the TLC Help Desk at 877-972-5249 or email TLC Help Desk\nStudent Academic Support Services\nFor resources on improving student’s study strategies, time management, motivation, test-taking skills and more, Please access the Student Academic Support Services Sakai page. For one-on-one appointments or to arrange a workshop for students, please contact Emily Hillhouse.\nConfidential Advocacy Program\nSupport for OHSU employees, students, and volunteers who have experienced any form of sexual misconduct, including sexual harassment, sexual assault, intimate-partner violence, stalking, relationship/dating violence, and other forms — regardless of when or where it took place. Contact Us.\nConcourse Syllabus Management\nFor help with accessing your Concourse Syllabus:  Please contact the Sakai help Desk for all other Concourse inquiries please visit the Concourse Support - Sakai or please contact the Mark Rivera at rivermar@ohsu.edu or call 503-494-0934\nPublic Safety\nOHSU Public Safety-Portland Campus (Marquam Hill and South Waterfront)\n\nEmergency on Campus: 503-494-4444 (Portland)\nNon-emergency: 503-494-7744; Contact Public Safety\n\nStudent Health & Wellness Center \nBaird Hall, Rm. 18 (Primary Care) and Rm. 6 (Behavioral Health)\n503-494-8665; For urgent care after hours, 503-494-8311 and ask for the Nurse on call.\nWellness Center Information  \nWellness Center Website\nIf your home institution is not on the Portland campus, contact your home institution student support services for more information.\nOmbudsman Office\nGaines Hall, Rm. 117\n707 SW Gaines Street, Portland, OR 97239\n503-494-5397; Contact Ombudsman; Ombudsman Website\nLibrary: Biomedical Information Communication Center\nBICC Library Hours of Operation\n\n\nPrivacy While Learning\nStudents may be asked to take classes remotely through videoconferencing software like WebEx. Some of these remote classes will be recorded. Any recording will capture the presenter’s audio, video, and computer screen. Student video and audio will be recorded if and when you unmute your audio and share your video during the recorded sessions. These recordings will not be shared with or accessible to the public without prior written consent. \n\n\nStudent Central\nKey information for students across OHSU’s Schools of Dentistry, Medicine, Nursing, the OHSU-PSU School of Public Health and the College of Pharmacy. Student Central helps you find out more about student services, resources, policies and technology."
+  },
+  {
+    "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#goals-for-today",
+    "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#goals-for-today",
+    "title": "Lesson 2: Data collection & numerical summaries",
+    "section": "Goals for today",
+    "text": "Goals for today\n\n(1.3) Data collection principles\n\nPopulation vs. sample\nSampling methods\nExperiments vs. Observational studies\n\n(1.2) Intro to Data\n\nData types\nHow are data stored in R?\nWorking with data in R\n\n(1.4) Summarizing numerical data\n\nMean, median, mode, SD, IQR, range, 5 number summary\nEmpirical Rule\nrobust statistics\n\nR packages -&gt; install for next class!!!"
+  },
+  {
+    "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#recap-of-last-time",
+    "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#recap-of-last-time",
+    "title": "Lesson 2: Data collection & numerical summaries",
+    "section": "Recap of last time",
+    "text": "Recap of last time\n\n\n\nOpen RStudio on your computer (not R!)\n\n\n\n\nModern Dive\n\n\n\nBasic math using R\n\n\n\nCreating and rendering Quarto files\n\n\n\n\n\n\n\nFormatting text & headers\nCode chunks"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#useful-keyboard-shortcuts-1",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#useful-keyboard-shortcuts-1",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Useful keyboard shortcuts",
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#another-resource-for-an-introduction-to-r",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#another-resource-for-an-introduction-to-r",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Another resource for an introduction to R",
+    "text": "Another resource for an introduction to R\n\nIf you would like another perspective on what we covered the first week, you might find Danielle Navarro’s online book Learning Statistics with R to be helpful.\nDownload free pdf: https://learningstatisticswithr.com/\nSee Sections 3.1-3.7.1 for some of the topics we covered on first day"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#r-packages-1",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#r-packages-1",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "R Packages",
+    "text": "R Packages\nA good analogy for R packages is that they\nare like apps you can download onto a mobile phone:\n\nModernDive Figure 1.4"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#installing-packages",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#installing-packages",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Installing packages",
+    "text": "Installing packages\n\n\nPackages contain additional functions and data\n\nTwo options to install packages:\n\ninstall.packages() or\nThe “Packages” tab in Files/Plots/Packages/Help/Viewer window\n\n\n\ninstall.packages(\"dplyr\")   # only do this ONCE, use quotes\n\n\n\n\n\nOnly install packages once (unless you want to update them)\nInstalled from Comprehensive R Archive Network (CRAN) = package mothership"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#video-on-installing-packages",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#video-on-installing-packages",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Video on installing packages",
+    "text": "Video on installing packages\n\nDanielle Navarro’s YouTube video on Installing and loading R packages: https://www.youtube.com/watch?v=kpHZVyDvEhQ"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#load-packages-with-library-command",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#load-packages-with-library-command",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\n\nTip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\nPackages need to be reloaded every time you open Rstudio.\n\n\n\nlibrary(dplyr)    # run this every time you open Rstudio\n\n\n\nYou can use a function without loading the package with PackageName::CommandName\n\n\n\ndplyr::arrange(iris, Petal.Width)   # what does arrange do?\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species\n1            4.9         3.1          1.5         0.1     setosa\n2            4.8         3.0          1.4         0.1     setosa\n3            4.3         3.0          1.1         0.1     setosa\n4            5.2         4.1          1.5         0.1     setosa\n5            4.9         3.6          1.4         0.1     setosa\n6            5.1         3.5          1.4         0.2     setosa\n7            4.9         3.0          1.4         0.2     setosa\n8            4.7         3.2          1.3         0.2     setosa\n9            4.6         3.1          1.5         0.2     setosa\n10           5.0         3.6          1.4         0.2     setosa\n11           5.0         3.4          1.5         0.2     setosa\n12           4.4         2.9          1.4         0.2     setosa\n13           5.4         3.7          1.5         0.2     setosa\n14           4.8         3.4          1.6         0.2     setosa\n15           5.8         4.0          1.2         0.2     setosa\n16           5.4         3.4          1.7         0.2     setosa\n17           4.6         3.6          1.0         0.2     setosa\n18           4.8         3.4          1.9         0.2     setosa\n19           5.0         3.0          1.6         0.2     setosa\n20           5.2         3.5          1.5         0.2     setosa\n21           5.2         3.4          1.4         0.2     setosa\n22           4.7         3.2          1.6         0.2     setosa\n23           4.8         3.1          1.6         0.2     setosa\n24           5.5         4.2          1.4         0.2     setosa\n25           4.9         3.1          1.5         0.2     setosa\n26           5.0         3.2          1.2         0.2     setosa\n27           5.5         3.5          1.3         0.2     setosa\n28           4.4         3.0          1.3         0.2     setosa\n29           5.1         3.4          1.5         0.2     setosa\n30           4.4         3.2          1.3         0.2     setosa\n31           5.1         3.8          1.6         0.2     setosa\n32           4.6         3.2          1.4         0.2     setosa\n33           5.3         3.7          1.5         0.2     setosa\n34           5.0         3.3          1.4         0.2     setosa\n35           4.6         3.4          1.4         0.3     setosa\n36           5.1         3.5          1.4         0.3     setosa\n37           5.7         3.8          1.7         0.3     setosa\n38           5.1         3.8          1.5         0.3     setosa\n39           5.0         3.5          1.3         0.3     setosa\n40           4.5         2.3          1.3         0.3     setosa\n41           4.8         3.0          1.4         0.3     setosa\n42           5.4         3.9          1.7         0.4     setosa\n43           5.7         4.4          1.5         0.4     setosa\n44           5.4         3.9          1.3         0.4     setosa\n45           5.1         3.7          1.5         0.4     setosa\n46           5.0         3.4          1.6         0.4     setosa\n47           5.4         3.4          1.5         0.4     setosa\n48           5.1         3.8          1.9         0.4     setosa\n49           5.1         3.3          1.7         0.5     setosa\n50           5.0         3.5          1.6         0.6     setosa\n51           4.9         2.4          3.3         1.0 versicolor\n52           5.0         2.0          3.5         1.0 versicolor\n53           6.0         2.2          4.0         1.0 versicolor\n54           5.8         2.7          4.1         1.0 versicolor\n55           5.7         2.6          3.5         1.0 versicolor\n56           5.5         2.4          3.7         1.0 versicolor\n57           5.0         2.3          3.3         1.0 versicolor\n58           5.6         2.5          3.9         1.1 versicolor\n59           5.5         2.4          3.8         1.1 versicolor\n60           5.1         2.5          3.0         1.1 versicolor\n61           6.1         2.8          4.7         1.2 versicolor\n62           5.8         2.7          3.9         1.2 versicolor\n63           5.5         2.6          4.4         1.2 versicolor\n64           5.8         2.6          4.0         1.2 versicolor\n65           5.7         3.0          4.2         1.2 versicolor\n66           5.5         2.3          4.0         1.3 versicolor\n67           5.7         2.8          4.5         1.3 versicolor\n68           6.6         2.9          4.6         1.3 versicolor\n69           5.6         2.9          3.6         1.3 versicolor\n70           6.1         2.8          4.0         1.3 versicolor\n71           6.4         2.9          4.3         1.3 versicolor\n72           6.3         2.3          4.4         1.3 versicolor\n73           5.6         3.0          4.1         1.3 versicolor\n74           5.5         2.5          4.0         1.3 versicolor\n75           5.6         2.7          4.2         1.3 versicolor\n76           5.7         2.9          4.2         1.3 versicolor\n77           6.2         2.9          4.3         1.3 versicolor\n78           5.7         2.8          4.1         1.3 versicolor\n79           7.0         3.2          4.7         1.4 versicolor\n80           5.2         2.7          3.9         1.4 versicolor\n81           6.1         2.9          4.7         1.4 versicolor\n82           6.7         3.1          4.4         1.4 versicolor\n83           6.6         3.0          4.4         1.4 versicolor\n84           6.8         2.8          4.8         1.4 versicolor\n85           6.1         3.0          4.6         1.4 versicolor\n86           6.1         2.6          5.6         1.4  virginica\n87           6.4         3.2          4.5         1.5 versicolor\n88           6.9         3.1          4.9         1.5 versicolor\n89           6.5         2.8          4.6         1.5 versicolor\n90           5.9         3.0          4.2         1.5 versicolor\n91           5.6         3.0          4.5         1.5 versicolor\n92           6.2         2.2          4.5         1.5 versicolor\n93           6.3         2.5          4.9         1.5 versicolor\n94           6.0         2.9          4.5         1.5 versicolor\n95           5.4         3.0          4.5         1.5 versicolor\n96           6.7         3.1          4.7         1.5 versicolor\n97           6.0         2.2          5.0         1.5  virginica\n98           6.3         2.8          5.1         1.5  virginica\n99           6.3         3.3          4.7         1.6 versicolor\n100          6.0         2.7          5.1         1.6 versicolor\n101          6.0         3.4          4.5         1.6 versicolor\n102          7.2         3.0          5.8         1.6  virginica\n103          6.7         3.0          5.0         1.7 versicolor\n104          4.9         2.5          4.5         1.7  virginica\n105          5.9         3.2          4.8         1.8 versicolor\n106          6.3         2.9          5.6         1.8  virginica\n107          7.3         2.9          6.3         1.8  virginica\n108          6.7         2.5          5.8         1.8  virginica\n109          6.5         3.0          5.5         1.8  virginica\n110          6.3         2.7          4.9         1.8  virginica\n111          7.2         3.2          6.0         1.8  virginica\n112          6.2         2.8          4.8         1.8  virginica\n113          6.1         3.0          4.9         1.8  virginica\n114          6.4         3.1          5.5         1.8  virginica\n115          6.0         3.0          4.8         1.8  virginica\n116          5.9         3.0          5.1         1.8  virginica\n117          5.8         2.7          5.1         1.9  virginica\n118          6.4         2.7          5.3         1.9  virginica\n119          7.4         2.8          6.1         1.9  virginica\n120          5.8         2.7          5.1         1.9  virginica\n121          6.3         2.5          5.0         1.9  virginica\n122          6.5         3.2          5.1         2.0  virginica\n123          5.7         2.5          5.0         2.0  virginica\n124          5.6         2.8          4.9         2.0  virginica\n125          7.7         2.8          6.7         2.0  virginica\n126          7.9         3.8          6.4         2.0  virginica\n127          6.5         3.0          5.2         2.0  virginica\n128          7.1         3.0          5.9         2.1  virginica\n129          7.6         3.0          6.6         2.1  virginica\n130          6.8         3.0          5.5         2.1  virginica\n131          6.7         3.3          5.7         2.1  virginica\n132          6.4         2.8          5.6         2.1  virginica\n133          6.9         3.1          5.4         2.1  virginica\n134          6.5         3.0          5.8         2.2  virginica\n135          7.7         3.8          6.7         2.2  virginica\n136          6.4         2.8          5.6         2.2  virginica\n137          6.4         3.2          5.3         2.3  virginica\n138          7.7         2.6          6.9         2.3  virginica\n139          6.9         3.2          5.7         2.3  virginica\n140          7.7         3.0          6.1         2.3  virginica\n141          6.9         3.1          5.1         2.3  virginica\n142          6.8         3.2          5.9         2.3  virginica\n143          6.7         3.0          5.2         2.3  virginica\n144          6.2         3.4          5.4         2.3  virginica\n145          5.8         2.8          5.1         2.4  virginica\n146          6.3         3.4          5.6         2.4  virginica\n147          6.7         3.1          5.6         2.4  virginica\n148          6.3         3.3          6.0         2.5  virginica\n149          7.2         3.6          6.1         2.5  virginica\n150          6.7         3.3          5.7         2.5  virginica"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#install-the-packages-listed-below-before-day-3",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#install-the-packages-listed-below-before-day-3",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "lessons/01_Intro_to_R/01_Intro_to_R.html#directions-for-installing-package-oibiostat",
+    "href": "lessons/01_Intro_to_R/01_Intro_to_R.html#directions-for-installing-package-oibiostat",
+    "title": "Lesson 1: Intro to R & Rstudio",
+    "section": "Directions for installing package oibiostat",
+    "text": "Directions for installing package oibiostat\n\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "lessons/05_Bayes_thm/05_Bayes_thm.html#eaxample",
+    "href": "lessons/05_Bayes_thm/05_Bayes_thm.html#eaxample",
+    "title": "Lesson 5: Probability Part 2 - Bayes’ Rule",
+    "section": "Eaxample",
+    "text": "Eaxample\n\nExample 1. How accurate is rapid testing for COVID-19? \nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n\"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.\"\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+  },
+  {
+    "objectID": "lessons/05_Bayes_thm/05_Bayes_thm.html#bayes-theorem-section-2.2.5",
+    "href": "lessons/05_Bayes_thm/05_Bayes_thm.html#bayes-theorem-section-2.2.5",
+    "title": "Lesson 5: Probability Part 2 - Bayes’ Rule",
+    "section": "Bayes’ Theorem (Section 2.2.5)",
+    "text": "Bayes’ Theorem (Section 2.2.5)\nIn the previous examples we derived the formula for Bayes’ Theorem.\n\nTheorem 2 (Bayes’ Theorem). If the sample space \\(S\\) can be split into disjoint events \\(A_1, A_2, ..., A_k\\) that make up all possible outcomes in \\(S\\), and if \\(\\mathbb{P}(A_i)&gt;0\\) for \\(i=1,\\ldots, k\\) and \\(\\mathbb{P}(B)&gt;0\\), then\n\\[\\mathbb{P}(A_1 | B) =\n\\frac{\\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1)}\n{\\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1) + \\mathbb{P}(B|A_2) \\cdot \\mathbb{P}(A_2) + ... +\n\\mathbb{P}(B|A_k) \\cdot \\mathbb{P}(A_k)}\\]\n\nSpecial case of Bayes’ Theorem for sample space being split into \\(A\\) and \\(A^c\\):\n\\[\\mathbb{P}(A | B) =\n\\frac{\\mathbb{P}(B|A) \\cdot \\mathbb{P}(A)}\n{\\mathbb{P}(B|A) \\cdot \\mathbb{P}(A) + \\mathbb{P}(B|A^c) \\cdot \\mathbb{P}(A^c) }\\]"
+  },
+  {
+    "objectID": "lessons/05_Bayes_thm/05_Bayes_thm.html#section",
+    "href": "lessons/05_Bayes_thm/05_Bayes_thm.html#section",
+    "title": "Lesson 5: Probability Part 2 - Bayes’ Rule",
+    "section": "",
+    "text": "Theorem 3 (Law of Total Probability). (denominator of Bayes’ Theorem)\nIf the sample space \\(S\\) can be split into disjoint events \\(A_1, A_2, ..., A_k\\) that make up all possible outcomes in \\(S\\), and if \\(\\mathbb{P}(A_i)&gt;0\\) for \\(i=1,\\ldots, k\\) and \\(\\mathbb{P}(B)&gt;0\\), then\n\\[%\\left(\n\\begin{array}{ccl}\n\\mathbb{P}(B)&=& \\mathbb{P}(B\\ \\textrm{and}\\ A_1) + \\mathbb{P}(B\\ \\textrm{and}\\ A_2) + \\ldots + \\mathbb{P}(B\\ \\textrm{and}\\ A_k)\\\\\n           &=& \\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1) + \\mathbb{P}(B|A_2) \\cdot \\mathbb{P}(A_2) + \\ldots + \\mathbb{P}(B|A_k) \\cdot \\mathbb{P}(A_k)\n\\end{array}\n%\\right)\\]"
+  },
+  {
+    "objectID": "lessons/05_Bayes_thm/05_Bayes_thm.html#section-1",
+    "href": "lessons/05_Bayes_thm/05_Bayes_thm.html#section-1",
+    "title": "Lesson 5: Probability Part 2 - Bayes’ Rule",
+    "section": "",
+    "text": "Special case of Law of Total Probability for sample space being split into \\(A\\) and \\(A^c\\):\n\\[%\\left(\n\\begin{array}{ccl}\n\\mathbb{P}(B)&=&\\mathbb{P}(B\\ \\textrm{and}\\ A) + \\mathbb{P}(B\\ \\textrm{and}\\ A^C)\\\\\n           &=& \\mathbb{P}(B|A) \\cdot \\mathbb{P}(A)+ \\mathbb{P}(B | A^C)\\cdot \\mathbb{P}(A^C)\n\\end{array}\n%\\right)\\]"
+  },
+  {
+    "objectID": "lessons/05_Bayes_thm/05_Bayes_thm.html#section-2",
+    "href": "lessons/05_Bayes_thm/05_Bayes_thm.html#section-2",
+    "title": "Lesson 5: Probability Part 2 - Bayes’ Rule",
+    "section": "",
+    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 1 Slides"
+  },
+  {
+    "objectID": "lessons/01_R_activity/01_R_activity.html#r1-formatting-text-practice",
+    "href": "lessons/01_R_activity/01_R_activity.html#r1-formatting-text-practice",
+    "title": "R Activity #1",
+    "section": "R1: Formatting text practice",
+    "text": "R1: Formatting text practice\nWrite a sentence (or a few) using all the different types of formatting text shown in slide 29 of the Day 1 slides. Your choice of text does not matter or even need to make sense. Although the TA will appreciate it if you make them laugh."
+  },
+  {
+    "objectID": "lessons/01_R_activity/01_R_activity.html#r2-brfss",
+    "href": "lessons/01_R_activity/01_R_activity.html#r2-brfss",
+    "title": "R Activity #1",
+    "section": "R2: BRFSS",
+    "text": "R2: BRFSS\nThe Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey of 350,000 people in the United States. The BRFSS is designed to identify risk factors in the adult population and report emerging health trends. For example, respondents are asked about their diet, weekly exercise, possible tobacco use, and health care coverage.\nThe dataset cdc is a sample of 20,000 people from the survey conducted in 2000, and contains responses from a subset of the questions asked on the survey.\nLoad the cdc dataset from the web using the source() command below:\n\nsource(\"http://www.openintro.org/stat/data/cdc.R\")\n\n\nAnswer the questions below about the cdc dataset.\nPlease do not delete the statements of the questions so that they remained numbered in the correct order.\nShow the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the knitted html file.\nWrite your answers in complete sentences as if communicating the results to a collaborator.\n\n\nHow many rows and columns are in the dataset?\nFor each variable, what identify both its “statistical” variable type (numerical (discrete, continuous) or categorical (nominal, ordinal) and its R variable type.\nFill in your answers in the table I created below.\n\n\n\n\nvariable name\nR type\nvariable type\n\n\n\n\ngenhlth\nfill in\nfill in\n\n\nexerany\netc.\n\n\n\nhlthplan\n\n\n\n\nsmoke100\n\n\n\n\nheight\n\n\n\n\nweight\n\n\n\n\nwtdesire\n\n\n\n\nage\n\n\n\n\ngender\n\n\n\n\n\n\nWhat is the difference between the average weight and the average desired weight?\nWhich of the height, weight, and desired weight variables has the most variability? Which has the least variability?\nCalculate the mean of the hlthplan variable. How do we interpret this mean? In other words, what does this mean measure?"
+  },
+  {
+    "objectID": "lessons/01_R_activity/01_R_activity.html#downloading-libraries",
+    "href": "lessons/01_R_activity/01_R_activity.html#downloading-libraries",
+    "title": "R Activity #1",
+    "section": "",
+    "text": "Load all the packages you need below here."
+  },
+  {
+    "objectID": "lessons/01_R_activity/01_R_activity.html",
+    "href": "lessons/01_R_activity/01_R_activity.html",
+    "title": "R Activity #1",
+    "section": "",
+    "text": "Load all the packages you need below here."
   }
 ]

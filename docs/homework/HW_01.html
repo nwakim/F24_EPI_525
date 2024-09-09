@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
-
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -4547,11 +4513,6 @@ vertical-align: -.125em;
   <li><a href="#income-at-the-coffee-shop" id="toc-income-at-the-coffee-shop" class="nav-link" data-scroll-target="#income-at-the-coffee-shop">1.31 Income at the coffee shop</a></li>
   <li><a href="#midrange" id="toc-midrange" class="nav-link" data-scroll-target="#midrange">1.32 Midrange</a></li>
   </ul></li>
-  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises">R exercises</a>
-  <ul class="collapse">
-  <li><a href="#r1-formatting-text-practice" id="toc-r1-formatting-text-practice" class="nav-link" data-scroll-target="#r1-formatting-text-practice">R1: Formatting text practice</a></li>
-  <li><a href="#r2-brfss" id="toc-r2-brfss" class="nav-link" data-scroll-target="#r2-brfss">R2: BRFSS</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -4659,97 +4620,6 @@ Slack invite link: <a href="https://join.slack.com/t/slack-zlc9838/shared_invite
 </section>
 <section id="midrange" class="level2">
 <h2 class="anchored" data-anchor-id="midrange">1.32 Midrange</h2>
-</section>
-</section>
-<section id="r-exercises" class="level1">
-<h1>R exercises</h1>
-<ol type="1">
-<li><strong><font color="green">Load all the packages you need below here. </font></strong></li>
-</ol>
-<section id="r1-formatting-text-practice" class="level2">
-<h2 class="anchored" data-anchor-id="r1-formatting-text-practice">R1: Formatting text practice</h2>
-<p>Write a sentence (or a few) using all the different types of formatting text shown in slide 29 of the Day 1 slides. Your choice of text does not matter or even need to make sense. Although the TA will appreciate it if you make them laugh.</p>
-</section>
-<section id="r2-brfss" class="level2">
-<h2 class="anchored" data-anchor-id="r2-brfss">R2: BRFSS</h2>
-<p>The Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey of 350,000 people in the United States. The BRFSS is designed to identify risk factors in the adult population and report emerging health trends. For example, respondents are asked about their diet, weekly exercise, possible tobacco use, and health care coverage.</p>
-<p>The dataset <code>cdc</code> is a sample of 20,000 people from the survey conducted in 2000, and contains responses from a subset of the questions asked on the survey.</p>
-<p>Load the <code>cdc</code> dataset from the web using the <code>source()</code> command below:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;http://www.openintro.org/stat/data/cdc.R&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>Answer the questions below about the <code>cdc</code> dataset.</li>
-<li>Please do not delete the statements of the questions so that they remained numbered in the correct order.</li>
-<li>Show the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the knitted html file.</li>
-<li>Write your answers in complete sentences as if communicating the results to a collaborator.</li>
-</ul>
-<ol start="2" type="1">
-<li><p><strong><font color="green">How many rows and columns are in the dataset?</font></strong></p></li>
-<li><p><strong><font color="green">For each variable, what identify both its “statistical” variable type (numerical (discrete, continuous) or categorical (nominal, ordinal) and its R variable type.</font></strong><br>
-<em>Fill in your answers in the table I created below.</em></p></li>
-</ol>
-<table class="table">
-<thead>
-<tr class="header">
-<th>variable name</th>
-<th>R type</th>
-<th>variable type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>genhlth</td>
-<td>fill in</td>
-<td>fill in</td>
-</tr>
-<tr class="even">
-<td>exerany</td>
-<td>etc.</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>hlthplan</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>smoke100</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>height</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>weight</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>wtdesire</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>age</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>gender</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ol start="4" type="1">
-<li><p><strong><font color="green">What is the difference between the average weight and the average desired weight?</font></strong></p></li>
-<li><p><strong><font color="green">Which of the height, weight, and desired weight variables has the most variability? Which has the least variability?</font></strong></p></li>
-<li><p><strong><font color="green">Calculate the mean of the <code>hlthplan</code> variable. How do we interpret this mean? In other words, what does this mean measure?</font></strong></p></li>
-</ol>
 
 
 </section>

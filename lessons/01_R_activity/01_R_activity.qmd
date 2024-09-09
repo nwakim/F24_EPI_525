@@ -1,0 +1,81 @@
+---
+title: "R Activity #1"
+author: "Meike Niederhausen and Nicky Wakim"
+date: "10/7/24"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    theme: lumen
+    self-contained: true
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Downloading libraries
+
+1. __<font color="green">Load all the packages you need below here. </font>__
+
+## R1: Formatting text practice
+
+Write a sentence (or a few) using all the different types of formatting text shown in slide 29 of the Day 1 slides. Your choice of text does not matter or even need to make sense. Although the TA will appreciate it if you make them laugh.
+
+
+## R2: BRFSS
+
+The Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey of 350,000 people in the United States. The BRFSS is designed to identify risk factors in the adult population and report emerging health trends. For example, respondents are asked about their diet, weekly exercise, possible tobacco use, and health care coverage.
+
+The dataset `cdc` is a sample of 20,000 people from the survey conducted in 2000, and contains responses from a subset of the questions asked on the survey.
+
+Load the `cdc` dataset from the web using the `source()` command below:
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+* Answer the questions below about the `cdc` dataset. 
+* Please do not delete the statements of the questions so that they remained numbered in the correct order. 
+* Show the work of your calculations using R code within a code chunk. Make sure that both your code and output are visible in the knitted html file.
+* Write your answers in complete sentences as if communicating the results to a collaborator. 
+
+
+2. __<font color="green">How many rows and columns are in the dataset?</font>__
+
+
+
+
+3. __<font color="green">For each variable, what identify both its "statistical" variable type (numerical (discrete, continuous) or categorical (nominal, ordinal) and its R variable type.</font>__  
+*Fill in your answers in the table I created below.*
+
+variable name | R type | variable type
+---| ---| ---
+genhlth    | fill in    |  fill in
+exerany    |  etc.   |
+hlthplan    |     |
+smoke100    |     |
+height    |     |
+weight    |     |
+wtdesire    |     |
+age    |     |
+gender    |     |
+
+
+
+4.  __<font color="green">What is the difference between the average weight and the average desired weight?</font>__
+
+
+
+5.  __<font color="green">Which of the height, weight, and desired weight variables has the most variability? Which has the least variability?</font>__
+
+
+
+
+6.  __<font color="green">Calculate the mean of the `hlthplan` variable. How do we interpret this mean? In other words, what does this mean measure?</font>__
+
+
+

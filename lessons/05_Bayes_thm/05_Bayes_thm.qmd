@@ -24,6 +24,7 @@ execute:
   freeze: auto
 ---
 
+## Eaxample
 
 ::: example
 **Example 1**. ***How accurate is rapid testing for COVID-19?** *
@@ -86,7 +87,8 @@ specimens.\"*
     negative test result?*
 :::
 
-**Bayes' Theorem (Section 2.2.5)**
+
+## Bayes' Theorem (Section 2.2.5)
 
 In the previous examples we derived the formula for Bayes' Theorem.
 
@@ -109,6 +111,8 @@ $$\mathbb{P}(A | B) =
 \frac{\mathbb{P}(B|A) \cdot \mathbb{P}(A)}
 {\mathbb{P}(B|A) \cdot \mathbb{P}(A) + \mathbb{P}(B|A^c) \cdot \mathbb{P}(A^c) }$$
 
+##
+
 ::: theorem
 **Theorem 3** (Law of Total Probability). *(denominator of Bayes'
 Theorem)*
@@ -125,6 +129,8 @@ $\mathbb{P}(A_i)>0$ for $i=1,\ldots, k$ and $\mathbb{P}(B)>0$, then*
 %\right)$$*
 :::
 
+##
+
 Special case of Law of Total Probability for sample space being split
 into $A$ and $A^c$:
 
@@ -135,6 +141,7 @@ $$%\left(
 \end{array}
 %\right)$$
 
+## 
 ::: example
 **Example 4**. ***Antibody test for COVID-19***
 
