@@ -1,7 +1,7 @@
 ---
 title: "Homework 6"
 author: "Your name here - update this!!!!"
-date: "Due 11/11/23"
+date: "Due 11/16/24"
 format: 
   html:
     link-external-newwindow: true
@@ -21,11 +21,10 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-*Updated 11/6/23: moved Day 12 questions to HW 7*
 
-**Due 11/11/23**
+**Due 11/16/24**
 
-Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_6_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_6_F23_bsta511.qmd)
+Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_06.qmd).
 
 
 ## Directions {.unnumbered}
