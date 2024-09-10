@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n0.1\nTypes of study designs?\n\n\n\n\n\n\n\n\n\n\n1\nIntroduction to R & RStudio\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Data collection, Summarizing numerical data\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n2\n10/7\n3\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n\n\n\n\n\n\n\n\n\n10/9\n4\nProbability\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n3\n10/14\n5\nBayes’ Theorem\n\n\n\n\n\n\n\n\n\n10/16\n6\nRandom variables, Binomial distribution\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n4\n10/21\n7\nNormal and Poisson distributions\n\n\n\n\n\n\n\n\n\n10/23\n8\nVariability in estimates\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n5\n10/28\n\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nConfidence Intervals\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n6\n11/4\n10\nHypothesis Testing: Single-sample with t-distribution & Two-sample paired data\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing: Two-sample independent data; Power\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for a single proportion or difference in proportions\n\n\n\n\n\n\n\n\n\n11/13\n13\nChi-squared tests, Fishers exact test\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n8\n11/18\n\n\n\n\n\n\n\n\n\n\n\n11/20\n14\nComparing Means with ANOVA\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n9\n11/25\n15\nSimple Linear Regression\n\n\n\n\n\n\n\n\n\n11/26?\n\nHW 8 due @ 11 pm\n\n\n\n\n\n\n\n\n10\n12/2\n16\nSimple Linear Regression\n\n\n\n\n\n\n\n\n\n12/4\n17\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\n\n\n\n\n\n\n\n\n\n12/5\n\nHW ?? due @ 11 pm\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day"
+    "text": "Week\nDate\nLes-son\nTopic\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n\n\n\n\n\n\n\n\n\n\nR1\nDownloading R and RStudio\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n\n\n\n\n\n\n\n\n\n\nR2\nIntroduction to R & RStudio\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n\n\n\n\n\n\n\n\n\n\nR3\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n\n\n\n\n\n\n\n\n\n\nR4\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n\n\n\n\n\n\n\n\n\n\nR5\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n\n\n\n\n\n\n\n\n\n11/26?\n\nHW 8 due @ 11 pm\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due @ 11 pm\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -2216,7 +2216,7 @@
     "href": "homework.html#solutions",
     "title": "Homework Assignments and Solutions",
     "section": "Solutions",
-    "text": "Solutions\nPlease note that you need to download the .html file to see the LaTeX math properly.\n\n\n\n\n\n\n\n\nHomework\n.qmd file\n.html file\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4\n\n\n\n\n5\n\n\n\n\n6\n\n\n\n\n7\n\n\n\n\n8\n\n\n\n\n9"
+    "text": "Solutions\nPlease note that you need to download the .html file to see the LaTeX math properly.\n\n\n\n\n\n\n\n\n\nHomework\nAnswers\n.qmd file\n.html file\n\n\n\n\n1\n\n\n\n\n\n2\n\n\n\n\n\n3\n\n\n\n\n\n4\n\n\n\n\n\n5\n\n\n\n\n\n6\n\n\n\n\n\n7\n\n\n\n\n\n8\n\n\n\n\n\n9"
   },
   {
     "objectID": "homework_solutions.html",
@@ -2572,22 +2572,22 @@
     "objectID": "homework/HW_04.html#the-ethan-allen",
     "href": "homework/HW_04.html#the-ethan-allen",
     "title": "Homework 4",
-    "section": "1.1 The Ethan Allen",
-    "text": "1.1 The Ethan Allen\nOn October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?\n\nThe maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds.\nData from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.\n\nIf the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.\n\n1.1.1 Maximum average weight\nWith 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?\n\n\n1.1.2 Probability an individual weighs more than the maximum average weight\nAssuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.\n\n\n1.1.3 Probability a random sample of 47 American adults has an average weight greater than the maximum average weight\nCalculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.\n\n\n1.1.4 What theorem did you use in the previous part, and why were you able to apply it to this problem?\n\n\n1.1.5 Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?"
+    "section": "2.1 The Ethan Allen",
+    "text": "2.1 The Ethan Allen\nOn October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?\n\nThe maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds.\nData from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.\n\nIf the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.\n\n2.1.1 Maximum average weight\nWith 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?\n\n\n2.1.2 Probability an individual weighs more than the maximum average weight\nAssuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.\n\n\n2.1.3 Probability a random sample of 47 American adults has an average weight greater than the maximum average weight\nCalculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.\n\n\n2.1.4 What theorem did you use in the previous part, and why were you able to apply it to this problem?\n\n\n2.1.5 Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?"
   },
   {
     "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "title": "Homework 4",
-    "section": "2.1 Load all the packages you need below here.",
-    "text": "2.1 Load all the packages you need below here."
+    "section": "3.1 Load all the packages you need below here.",
+    "text": "3.1 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_04.html#r1-youth-weights",
     "href": "homework/HW_04.html#r1-youth-weights",
     "title": "Homework 4",
-    "section": "2.2 R1: Youth weights",
-    "text": "2.2 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n2.2.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n2.2.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n2.2.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n2.2.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n2.2.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n2.2.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
+    "section": "3.2 R1: Youth weights",
+    "text": "3.2 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n3.2.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n3.2.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n3.2.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n3.2.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n3.2.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n3.2.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
   },
   {
     "objectID": "homework/HW_07.html",
@@ -4632,5 +4632,215 @@
     "title": "R Activity #1",
     "section": "",
     "text": "Load all the packages you need below here."
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#goals-for-today",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#goals-for-today",
+    "title": "Lesson 1: Data collection",
+    "section": "Goals for today",
+    "text": "Goals for today\n\n(1.3) Data collection principles\n\nPopulation vs. sample\nSampling methods\nExperiments vs. Observational studies"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#population-vs.-sample",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#population-vs.-sample",
+    "title": "Lesson 1: Data collection",
+    "section": "Population vs. sample",
+    "text": "Population vs. sample\n\n\n\n\n(Target) Population\n\n\n\nGroup of interest being studied\nGroup from which the sample is selected\n\nStudies often have inclusion and/or exclusion criteria\n\nAlmost always too expensive or logistically impossible to collect data for every case in a population\n\n\n\n\n\n\nSample\n\n\n\nGroup on which data are collected\nOften a small subset of the population\nEasier to collect data on\nIf we do it right, we might be able to answer our question about the target population"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-14",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-14",
+    "title": "Lesson 1: Data collection",
+    "section": "Sampling methods (1/4)",
+    "text": "Sampling methods (1/4)\n\n\nSimple random sample (SRS)\n\nEach individual of a population has the same chance of being sampled\nRandomly sampled\nConsidered best way to sample\n\n\n\n\n\n\n\n\n\nConvenience sample\n\nEasily accessible individuals are more likely to be included in the sample than other individuals\nA common “pitfall”"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-24",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-24",
+    "title": "Lesson 1: Data collection",
+    "section": "Sampling methods (2/4)",
+    "text": "Sampling methods (2/4)\nGood sampling plans don’t guarantee samples representative of the population\n\n\nNon-response bias\n\nnon-response rates can be high\nare all groups within a population being reached?\nunrepresentative sample\n=&gt; skewed results\n\n\n\n\n\n\n\n\n\n“Random” samples can be unrepresentative by random chance\n\nIn a SRS each case in the population has an equal chance of being included in the sample\nBut by random chance alone a random sample might contain a higher proportion of one group over another\nEx: a SRS might by chance include 70% men (unlikely, but theoretically possible)"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-34",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-34",
+    "title": "Lesson 1: Data collection",
+    "section": "Sampling methods (3/4)",
+    "text": "Sampling methods (3/4)\n\n\n\nSimple random sample (SRS)\n\nEach individual of a population has the same chance of being sampled\nStatistical methods taught in this class assume a SRS!\n\nStratified sampling\n\nDivide population into groups (strata) before selecting cases within each stratum (often via SRS)\nUsually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-44",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-44",
+    "title": "Lesson 1: Data collection",
+    "section": "Sampling methods (4/4)",
+    "text": "Sampling methods (4/4)\n\n\n\nCluster sample\n\nFirst divide population into groups (clusters)\nThen sample a fixed number of clusters, and include all observations from chosen clusters\nClusters are often hospitals, clinicians, schools, etc., where each cluster will have similar services/ policies/ etc.\nCases within clusters usually very diverse\n\nMultistage sample\n\nSimilar to a cluster sample, but select a random sample within each selected cluster instead of all individuals"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#experiments-12",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#experiments-12",
+    "title": "Lesson 1: Data collection",
+    "section": "Experiments (1/2)",
+    "text": "Experiments (1/2)\n\nResearchers assign individuals to different treatment or intervention groups\n\ncontrol group: often receive a placebo or usual care\ndifferent treatment groups are often called study arms\n\nRandomization\n\ngroup assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)\nrandomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics\n\ntreatment is the only systematic difference between groups\nestablish causality\n\nblocking (stratification): group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e. gender, age group)"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#experiments-22",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#experiments-22",
+    "title": "Lesson 1: Data collection",
+    "section": "Experiments (2/2)",
+    "text": "Experiments (2/2)\n\nReplication\n\naccomplished by collecting a sufficiently large sample\nresults usually more reliable with a large sample size\n\noften less variability\nmore likely to be representative of population\n\n\nSome studies are not ethical to carry out as experiments"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#observational-studies",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#observational-studies",
+    "title": "Lesson 1: Data collection",
+    "section": "Observational studies",
+    "text": "Observational studies\n\ndata are observed and recorded without interference\noften done via surveys, electronic health records, or medical chart reviews\ncohorts\nassociations between variables can be established, but not causality\n\nIndividuals with different characteristics may also differ in other ways that influence response\n\nconfounding variables (lurking variable)\n\nvariables associated with both the explanatory and response variables\n\nprospective vs. retrospective studies"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#comparing-study-designs",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#comparing-study-designs",
+    "title": "Lesson 1: Data collection",
+    "section": "Comparing study designs",
+    "text": "Comparing study designs\n\nScience Media Centre"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#systematic-reviews-example",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#systematic-reviews-example",
+    "title": "Lesson 1: Data collection",
+    "section": "Systematic Reviews example",
+    "text": "Systematic Reviews example\n\n\n\nSTEM: Systematically Testing the Evidence on Marijuana\n\n\n\n\n\nSTEM is a collaborative project between the US Department of Veterans Affairs and the Center for Evidence-based Policy at Oregon Health & Science University.\nThe project is funded by the US Department of Veterans Affairs: Office of Rural Health.\n\n\n\n\n\n\n\n\n\n\n\nLesson 1 Slides"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere",
+    "title": "Lesson 1: Data collection",
+    "section": "Poll everywhere",
+    "text": "Poll everywhere\nWhy are data important?"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#asking-a-question",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#asking-a-question",
+    "title": "Lesson 1: Data collection",
+    "section": "Asking a question",
+    "text": "Asking a question\n\nData provide evidence that help us answer questions\nBut we need to start with a clearly articulated question\n\n \n\nIn this class, we will be working towards articulating our questions and systemically answering them with data\n\n \n\nHow do we formulate a clearly articulated question?"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#examples-of-questions",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#examples-of-questions",
+    "title": "Lesson 1: Data collection",
+    "section": "Examples of questions",
+    "text": "Examples of questions\n\nDo bluefin tuna from the Atlantic Ocean have particularly high levels of mercury, such that they are unsafe for human consumption?\n\n \n\nFor infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?\n\n \n\nDoes a recently developed drug designed to treat glioblastoma, a form of brain cancer, appear more effective at inducing tumor shrinkage than the drug currently on the market?"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#identifying-the-target-population",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#identifying-the-target-population",
+    "title": "Lesson 1: Data collection",
+    "section": "Identifying the target population",
+    "text": "Identifying the target population\nLet’s focus on the second research question:\n\nFor infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?\n\nWhat is the target population here?\n\nInfants predisposed to developing a peanut allergy\nWe could get more specific with “Infants aged 0 to 5 years old” or “Infants aged 0 to 5 years old who have eczema, egg allergy, or both”\n\nIn this case we are defining exactly how old “infants” are and what “predisposed” means"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#from-target-population-to-sample",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#from-target-population-to-sample",
+    "title": "Lesson 1: Data collection",
+    "section": "From target population to sample",
+    "text": "From target population to sample\n\nOnce we have a well articulated target populaton, we have inclusion or exclusion criteria for individuals\nNow we can start sampling from our target population…"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#sampling",
+    "title": "Lesson 1: Data collection",
+    "section": "Sampling",
+    "text": "Sampling\n\nGoal is to get a representative sample of the population: the characteristics of the sample are similar to the characteristics of the population\nThere are different ways to sample from a target population\nTypes of sampling that we discuss\n\nSimple random sample (SRS)\nConvenient sample\nStratified sample\nCluster sample\nMultistage sample"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-basic-approaches",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-basic-approaches",
+    "title": "Lesson 1: Data collection",
+    "section": "Sampling methods: Basic approaches",
+    "text": "Sampling methods: Basic approaches\n\n\nSimple random sample (SRS)\n\nEach individual of a population has the same chance of being sampled\nRandomly sampled\nConsidered best way to sample\n\n\n\n\n\n\n\n\n\nConvenience sample\n\nEasily accessible individuals are more likely to be included in the sample than other individuals\nA common “pitfall”"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#potential-issues-with-sampling",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#potential-issues-with-sampling",
+    "title": "Lesson 1: Data collection",
+    "section": "Potential issues with sampling",
+    "text": "Potential issues with sampling\nGood sampling plans don’t guarantee samples representative of the population\n\n\nNon-response bias\n\nAre all groups within a population being reached?\nUnrepresentative sample can skew results\nExample: survey only administered in English can lead to non-response bias that under-represents individuals who do not fluently speak English"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#another-potential-when-sampling",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#another-potential-when-sampling",
+    "title": "Lesson 1: Data collection",
+    "section": "Another potential when sampling",
+    "text": "Another potential when sampling\n“Random” samples can be unrepresentative by random chance\n\nIn a SRS each case in the population has an equal chance of being included in the sample\nBut by random chance alone a random sample might contain a higher proportion of one group over another\nExample: a SRS might by chance include 70% men (unlikely, but theoretically possible)\nIf it is important for our data to represent specific groups (to answer our research question), then we may consider more complex sampling methods"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#potential-bias-with-sampling",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#potential-bias-with-sampling",
+    "title": "Lesson 1: Data collection",
+    "section": "Potential bias with sampling",
+    "text": "Potential bias with sampling\nGood sampling plans don’t guarantee samples representative of the population\n\n\nNon-response bias\n\nAre all groups within a population being reached?\nUnrepresentative sample can skew results\nExample: survey only administered in English can lead to non-response bias that under-represents individuals who do not fluently speak English\n\nHere, bias is stemming from an oversight on the way we are administering our survey (not from the sampling mechanism itself)"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#example-in-my-own-work",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#example-in-my-own-work",
+    "title": "Lesson 1: Data collection",
+    "section": "Example in my own work",
+    "text": "Example in my own work\n\nResearch question: Does community-led education (in addition to education from a practitioner) of vaccination increase HPV vaccination among children?\nTarget population: Children between the age of 9 and 17 years old who have not completed their HPV vaccination\nWe are doing a stratified and cluster sample!!\nIt is important to have a representative sample of bigger and smaller counties in Oregon\nBut we will also be sampling from entire counties (our clusters)"
+  },
+  {
+    "objectID": "homework/HW_03.html#area-under-the-curve-part-ii",
+    "href": "homework/HW_03.html#area-under-the-curve-part-ii",
+    "title": "Homework 3",
+    "section": "3.20 Area under the curve, Part II",
+    "text": "3.20 Area under the curve, Part II"
+  },
+  {
+    "objectID": "homework/HW_03.html#triathlon-times",
+    "href": "homework/HW_03.html#triathlon-times",
+    "title": "Homework 3",
+    "section": "3.22 Triathlon times",
+    "text": "3.22 Triathlon times"
+  },
+  {
+    "objectID": "homework/HW_03.html#arsenic-poisoning",
+    "href": "homework/HW_03.html#arsenic-poisoning",
+    "title": "Homework 3",
+    "section": "3.28 Arsenic poisoning",
+    "text": "3.28 Arsenic poisoning"
+  },
+  {
+    "objectID": "homework/HW_03.html#find-the-sd",
+    "href": "homework/HW_03.html#find-the-sd",
+    "title": "Homework 3",
+    "section": "3.30 Find the SD",
+    "text": "3.30 Find the SD"
+  },
+  {
+    "objectID": "homework/HW_03.html#chickenpox-part-iii",
+    "href": "homework/HW_03.html#chickenpox-part-iii",
+    "title": "Homework 3",
+    "section": "3.32 Chickenpox, Part III",
+    "text": "3.32 Chickenpox, Part III"
+  },
+  {
+    "objectID": "homework/HW_03.html#stenographers-typos",
+    "href": "homework/HW_03.html#stenographers-typos",
+    "title": "Homework 3",
+    "section": "3.38 Stenographer’s typos",
+    "text": "3.38 Stenographer’s typos"
+  },
+  {
+    "objectID": "homework/HW_03.html#osteosarcoma-in-nyc",
+    "href": "homework/HW_03.html#osteosarcoma-in-nyc",
+    "title": "Homework 3",
+    "section": "3.40 Osteosarcoma in NYC",
+    "text": "3.40 Osteosarcoma in NYC"
+  },
+  {
+    "objectID": "homework/HW_04.html#clinican-time-with-patients",
+    "href": "homework/HW_04.html#clinican-time-with-patients",
+    "title": "Homework 4",
+    "section": "1.1 Clinican time with patients",
+    "text": "1.1 Clinican time with patients\nSuppose a clinician schedules 20 minutes to spend with each of their patients. However, they sometimes run over or end earlier. Based on past data, the mean “extra” time they spend with a patient is 3 minutes with a standard deviation of 2 minutes. Suppose they see 13 patients today and the extra times they spend with patients are independent from patient to patient.\n\n1.1.1 Expected total time\nFind the expected total time they will spend with all of their patients today.\n\n\n1.1.2 SD of total time\nFind the standard deviation of the total time they will spend with all of their patients today."
   }
 ]

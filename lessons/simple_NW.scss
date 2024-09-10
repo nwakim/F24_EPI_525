@@ -49,13 +49,15 @@ div.cell-output-stdout {
 
 // My added divs
 
+// COMMON USES
+
 // Definitions 
 .definition{
   margin: 1em 0;
   border: 3px solid $blue;
   border-radius: 10px;
 }
-.def-title {
+.def-ttl {
   margin-left: 0em;
   padding-left:  15px;
   padding-top:  5px;
@@ -77,137 +79,20 @@ div.cell-output-stdout {
   border-bottom-right-radius: 10px;
 }
 
-// Theorem
-.theorem{
-  margin: 1em 0;
-  border: 3px solid #20c997;
-  border-radius: 10px;
-}
-.thm-title {
-  margin-left: 0em;
-  padding-left:  15px;
-  padding-top:  5px;
-  padding-bottom: 0.1em;
-  color: white;
-  background-color: #20c997;
-  font-size: 1em;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  //background-image: url("goal.png");
-}
-.thm-cont {
-  margin-left: 0em;
-  padding-top: 5px;
-  padding-left: 15px;
-  color: black;
-  background-color: white;
-  border-bottom-right-radius: 10px;
-}
-
-// Proposition
-.proposition{
-  margin: 1em 0;
-  border: 3px solid #F08897;
-  border-radius: 10px;
-}
-
-.prop-title {
-  margin-left: 0em;
-  padding-left:  15px;
-  padding-top:  5px;
-  padding-bottom: 0.1em;
-  color: white;
-  background-color: #F08897;
-  font-size: 1em;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  //background-image: url("goal.png");
-}
-
-.prop-cont {
-  margin-left: 0em;
-  padding-top: 5px;
-  padding-left: 15px;
-  color: black;
-  background-color: white;
-  border-bottom-right-radius: 10px;
-}
-
-// Axiom
-.axiom{
-  margin: 1em 0;
-  border: 3px solid #d9534f;
-  border-radius: 10px;
-}
-
-.axiom-title {
-  margin-left: 0em;
-  padding-left:  15px;
-  padding-top:  5px;
-  padding-bottom: 0.1em;
-  color: white;
-  background-color: #d9534f;
-  font-size: 1em;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  //background-image: url("goal.png");
-}
-
-.axiom-cont {
-  margin-left: 0em;
-  padding-top: 5px;
-  padding-left: 15px;
-  color: black;
-  background-color: white;
-  border-bottom-right-radius: 10px;
-}
-
-// Proof
-.proof1{
-  margin: 1em 0;
-  border: 3px solid #E25D3B;
-  border-radius: 10px;
-}
-
-.proof-title {
-  margin-left: 0em;
-  padding-left:  15px;
-  padding-top:  5px;
-  padding-bottom: 0.1em;
-  color: white;
-  background-color: #E25D3B;
-  font-size: 1em;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  //background-image: url("goal.png");
-}
-
-.proof-cont {
-  margin-left: 0em;
-  padding-top: 5px;
-  padding-left: 15px;
-  color: black;
-  background-color: white;
-}
-
 // Example
 .example{
   border-radius: 10px;
   margin: 1em 0;
-  border: 3px solid #F1CF58;
+  border: 3px solid $purple;
 }
 
-.ex-title {
+.ex-ttl {
   margin-left: 0em;
   padding-left:  15px;
   padding-top:  5px;
   padding-bottom: 0.1em;
   color: white;
-  background-color: #F1CF58;
+  background-color: $purple;
   font-size: 1em;
   background-size: 40px;
   background-repeat: no-repeat;
@@ -224,28 +109,57 @@ div.cell-output-stdout {
   border-bottom-right-radius: 10px;
 }
 
-// Fact
-.fact{
-  border-radius: 10px;
-  margin: 1em 0;
-  border: 3px solid #006a4e;
-}
 
-.fact-title {
+// JUST NAMED BY COLOR
+
+// blue
+.blue{
+  margin: 1em 0;
+  border: 3px solid $blue;
+  border-radius: 10px;
+}
+.blue-ttl {
   margin-left: 0em;
   padding-left:  15px;
   padding-top:  5px;
   padding-bottom: 0.1em;
   color: white;
-  background-color: #006a4e;
+  background-color: $blue;
   font-size: 1em;
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: 15px center;
   //background-image: url("goal.png");
 }
+.blue-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
 
-.fact-cont {
+// blue2
+.blue2{
+  margin: 1em 0;
+  border: 3px solid $dark-blue;
+  border-radius: 10px;
+}
+.blue2-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $dark-blue;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.blue2-cont {
   margin-left: 0em;
   padding-top: 5px;
   padding-left: 15px;
@@ -255,5 +169,227 @@ div.cell-output-stdout {
 }
 
 
+// pink
+.pink{
+  margin: 1em 0;
+  border: 3px solid $pink;
+  border-radius: 10px;
+}
+.pink-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $pink;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.pink-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+// pink2
+.pink2{
+  margin: 1em 0;
+  border: 3px solid $pink2;
+  border-radius: 10px;
+}
+.pink2-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $pink2;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.pink2-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+// orange
+.orange{
+  margin: 1em 0;
+  border: 3px solid $orange;
+  border-radius: 10px;
+}
+.orange-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $orange;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.orange-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
 
 
+// red
+.red{
+  margin: 1em 0;
+  border: 3px solid $red;
+  border-radius: 10px;
+}
+.red-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $red;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.red-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+// purple
+.purple{
+  margin: 1em 0;
+  border: 3px solid $purple;
+  border-radius: 10px;
+}
+.purple-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $purple;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.purple-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+// purple2
+.purple2{
+  margin: 1em 0;
+  border: 3px solid $purple2;
+  border-radius: 10px;
+}
+.purple2-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $purple2;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.purple2-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+// green
+.green{
+  margin: 1em 0;
+  border: 3px solid $green;
+  border-radius: 10px;
+}
+.green-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $green;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.green-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}
+
+// green2
+.green2{
+  margin: 1em 0;
+  border: 3px solid $green2;
+  border-radius: 10px;
+}
+.green2-ttl {
+  margin-left: 0em;
+  padding-left:  15px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $green2;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  //background-image: url("goal.png");
+}
+.green2-cont {
+  margin-left: 0em;
+  padding-top: 5px;
+  padding-left: 15px;
+  color: black;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+}

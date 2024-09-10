@@ -22,14 +22,14 @@ format:
 
 Please note that you need to download the `.html` file to see the LaTeX math properly.
 
-| Homework | `.qmd` file                                                                     | `.html` file                                                    |
-|----------|---------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| 1        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 2        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 3        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 4        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 5        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 6        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 7        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 8        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
-| 9        | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| Homework | Answers | `.qmd` file                                                                     | `.html` file                                                    |
+|--------------|-----------|--------------------------------|-------------------------|
+| 1        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 2        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 3        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 4        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 5        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 6        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 7        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 8        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |
+| 9        |         | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} |

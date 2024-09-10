@@ -1,0 +1,303 @@
+---
+title: "Lesson 1: Data collection"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "09/30/2024"
+categories: ["Week 1"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 1 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+# Learning Objectives
+
+1. Contextualize the difference between Population vs. sample
+2. Sampling methods
+3. Experiments vs. Observational studies
+
+# Learning Objectives
+
+## Poll everywhere
+
+Why are data important?
+
+## Asking a question
+
+- Data provide evidence that help us answer questions
+- But we need to start with a clearly articulated question
+
+ 
+
+- In this class, we will be working towards **articulating our questions** and **systemically answering them with data**
+
+ 
+
+- How do we formulate a clearly articulated question?
+
+## Examples of questions
+
+1. Do bluefin tuna from the Atlantic Ocean have particularly high levels of mercury, such that
+they are unsafe for human consumption?
+
+ 
+
+2. For infants predisposed to developing a peanut allergy, is there evidence that introducing
+peanut products early in life is an effective strategy for reducing the risk of developing a
+peanut allergy?
+
+ 
+
+3. Does a recently developed drug designed to treat glioblastoma, a form of brain cancer, appear
+more effective at inducing tumor shrinkage than the drug currently on the market?
+
+## Population vs. sample
+
+::: columns
+::: column
+
+::: green2
+::: green2-ttl
+(Target) Population
+:::
+::: green2-cont
+* Group of interest being studied
+* Group from which the sample is selected
+  - Studies often have _inclusion_ and/or _exclusion_ criteria
+* Almost always too expensive or logistically impossible to collect data for every case in a population
+  
+:::
+:::
+:::
+
+::: column
+::: pink
+::: pink-ttl
+Sample
+::: 
+::: pink-cont
+* Group on which data are collected
+* Often a **small subset** of the population
+* Easier to collect data on 
+* If we do it right, we might be able to answer our question about the target population
+:::
+:::
+
+:::
+:::
+
+## Identifying the target population
+
+Let's focus on the second research question:
+
+2. For infants predisposed to developing a peanut allergy, is there evidence that introducing
+peanut products early in life is an effective strategy for reducing the risk of developing a
+peanut allergy?
+
+What is the target population here?
+
+- Infants predisposed to developing a peanut allergy
+
+- We could get more specific with "Infants aged 0 to 5 years old" or "Infants aged 0 to 5 years old who have eczema, egg allergy, or both"
+  - In this case we are defining exactly how old "infants" are and what "predisposed" means
+  
+## From target population to sample
+
+- Once we have a well articulated target populaton, we have inclusion or exclusion criteria for individuals
+
+- Now we can start sampling from our target population...
+
+# Learning Objectives
+
+## Sampling 
+
+- Goal is to get a __representative__ sample of the population: the characteristics of the sample are similar to the characteristics of the population
+- There are different ways to sample from a target population
+- Types of sampling that we discuss
+    - Simple random sample (SRS)
+    - Convenient sample
+    - Stratified sample
+    - Cluster sample
+    - Multistage sample
+
+## Sampling methods: Basic approaches
+
+::: columns
+::: {.column width="49%"}
+__Simple random sample (SRS)__  
+
+* Each individual of a population has the _same chance_ of being sampled
+* Randomly sampled
+* Considered best way to sample
+
+![](../img_slides/sampleRandomHealthPlan.png){fig-align="center"}
+
+:::
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+__Convenience sample__  
+
+* Easily accessible individuals are _more likely_ to be included in the sample than other individuals
+* A common "pitfall"
+
+![](../img_slides/sampleConvenienceHealthPlan.png){fig-align="center"}
+
+:::
+:::
+
+
+
+## Potential bias with sampling
+
+_Good sampling plans don't guarantee samples representative of the population_
+
+::: columns
+::: {.column width="49%"}
+__Non-response bias__
+
+* Are all groups within a population being reached?
+* Unrepresentative sample can skew results
+* Example: survey only administered in English can lead to non-response bias that under-represents individuals who do not fluently speak English
+  - Here, bias is stemming from an oversight on the way we are administering our survey (not from the sampling mechanism itself)
+
+:::
+
+::: {.column width="51%"}
+
+![](../img_slides/sampleNonResponseHealthPlan.png){fig-align="center"}
+
+:::
+:::
+
+## Another potential when sampling
+
+__"Random" samples can be unrepresentative by random chance__
+
+* In a SRS each case in the population has an equal chance of being included in the sample
+* But by random chance alone a random sample might contain a higher proportion of one group over another
+* Example: a SRS might by chance include 70% men (unlikely, but theoretically possible)
+
+* If it is important for our data to represent specific groups (to answer our research question), then we may consider more complex sampling methods
+  * 
+
+## Sampling methods (3/4) 
+
+::: columns
+::: {.column width="50%"}
+* __Simple random sample (SRS)__
+  * Each individual of a population has the _same chance_ of being sampled
+  * _Statistical methods taught in this class assume a SRS!_
+
+* __Stratified sampling__
+  * Divide population into groups (strata) before selecting cases within each stratum (often via SRS)
+  * Usually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups
+:::
+
+::: {.column width="50%"}
+![](../img_slides/simple_stratified.png){fig-align="center"}
+:::
+:::
+
+## Sampling methods (4/4) 
+
+::: columns
+::: {.column width="50%"}
+* __Cluster sample__
+  * First divide population into groups (clusters)
+  * Then sample a fixed number of clusters, and include _all_ observations from chosen clusters
+  * Clusters are often hospitals, clinicians, schools, etc., where each cluster will have similar services/ policies/ etc. 
+  * Cases within clusters usually very diverse
+
+
+* __Multistage sample__
+  * Similar to a cluster sample, but select a random sample within each selected cluster instead of all individuals
+:::
+
+::: {.column width="50%"}
+![](../img_slides/cluster_multistage.png){fig-align="center"}
+
+:::
+:::
+
+## Example in my own work 
+
+- Research question: Does community-led education (in addition to education from a practitioner) of vaccination increase HPV vaccination among children? 
+- Target population: Children between the age of 9 and 17 years old who have not completed their HPV vaccination
+- We are doing a stratified and cluster sample!!
+- It is important to have a representative sample of bigger and smaller counties in Oregon
+- But we will also be sampling from entire counties (our clusters) 
+
+# Learning Objectives
+
+## Experiments (1/2) 
+
+* Researchers assign individuals to different __treatment__ or __intervention groups__
+  * __control group__: often receive a __placebo__ or usual care
+  * different treatment groups are often called __study arms__
+* __Randomization__
+  * group assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)
+  * randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
+      * treatment is the only systematic difference between groups
+      * establish causality
+  * __blocking (stratification)__: group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e. gender, age group)
+
+
+## Experiments (2/2) 
+
+* __Replication__
+  * accomplished by collecting a sufficiently large sample
+  * results usually more reliable with a large sample size
+      * often less variability
+      * more likely to be representative of population
+* Some studies are not ethical to carry out as experiments
+
+
+## Observational studies 
+
+* data are observed and recorded without interference
+* often done via surveys, electronic health records, or medical chart reviews
+* cohorts
+* associations between variables can be established, but not causality
+    * Individuals with different characteristics may also differ in other ways that influence response
+* confounding variables (lurking variable)
+  * variables associated with both the explanatory and response variables
+
+* prospective vs. retrospective studies
+
+
+## Comparing study designs
+
+![[Science Media Centre](https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/)](../img_slides/strength_of_evidence.jpeg){fig-align="center"}
+
+
+
+## Systematic Reviews example
+
+![[STEM: Systematically Testing the Evidence on Marijuana](https://www.cannabisevidence.org/)](../img_slides/STEM_systematic_review.jpg){fig-align="center"}
+
+::: columns
+::: {.column width="85%"}
+::: {style="font-size: 65%;"}
+STEM is a collaborative project between the US Department of Veterans Affairs and the [Center for Evidence-based Policy](https://centerforevidencebasedpolicy.org/) at Oregon Health & Science University.  
+The project is funded by the US Department of Veterans Affairs: Office of Rural Health.
+:::
+:::
+
+::: {.column width="15%"}
+![](../img_slides/logo_CenterEvidenceBasedPolicy.jpg){fig-align="center"}
+:::
+:::
+
