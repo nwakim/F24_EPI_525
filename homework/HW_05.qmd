@@ -1,6 +1,6 @@
 ---
 title: "Homework 5"
-subtitle: "Lessons 7-8"
+subtitle: "Lessons 9-10"
 author: "Your name here - update this!!!!"
 date: "Due 11/7/24"
 format: 
@@ -46,6 +46,8 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 # Book exercises {.unnumbered}
 
+## 4.2 Heights of adults {.unnumbered}
+
 
 ## 4.4 Mental health, Part I {.unnumbered}
 
@@ -58,25 +60,55 @@ It is a good idea to try rendering your document from time to time as you go alo
 ## 4.8 Age at first marriage, Part I {.unnumbered}
 
 
+# Non-book
 
-## 5.6 Working backwards, Part II {.unnumbered}
+## Clinican time with patients
 
+*Suppose a clinician schedules 20 minutes to spend with each of their patients. However, they sometimes run over or end earlier. Based on past data, the mean "extra" time they spend with a patient is 3 minutes with a standard deviation of 2 minutes. Suppose they see 13 patients today and the extra times they spend with  patients are independent from patient to patient.*
 
+### Expected total time
 
-## 5.10 t⋆ vs. z⋆ {.unnumbered}
-
-
-
-## 5.12 Auto exhaust and lead exposure {.unnumbered}
-
+**Find the expected total time they will spend with all of their patients today.**
 
 
-## 5.16 Paired or not, Part II {.unnumbered}
+### SD of total time
+
+**Find the standard deviation of the total time they will spend with all of their patients today.**
+
+## The Ethan Allen
+
+On October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?  
+
+* The maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds. 
+* Data from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.
+
+
+If the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.
+
+
+### Maximum average weight
+
+__With 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?__
 
 
 
-## 5.22 DDT exposure {.unnumbered}
+### Probability an individual weighs more than the maximum average weight 
 
+__Assuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.__
+
+
+
+### Probability a random sample of 47 American adults has an average weight greater than the maximum average weight
+
+__Calculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.__  
+
+
+
+### What theorem did you use in the previous part, and why were you able to apply it to this problem?
+
+
+
+### Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?  
 
 
 # R exercises 

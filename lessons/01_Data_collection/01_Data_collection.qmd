@@ -1,6 +1,6 @@
 ---
 title: "Lesson 1: Data collection"
-author: "Meike Niederhausen and Nicky Wakim"
+author: "Nicky Wakim, Meike Niederhausen"
 title-slide-attributes:
     data-background-color: "#3070BF"
 date: "09/30/2024"
@@ -67,11 +67,11 @@ more effective at inducing tumor shrinkage than the drug currently on the market
 ::: columns
 ::: column
 
-::: green2
-::: green2-ttl
+::: red
+::: red-ttl
 (Target) Population
 :::
-::: green2-cont
+::: red-cont
 * Group of interest being studied
 * Group from which the sample is selected
   - Studies often have _inclusion_ and/or _exclusion_ criteria

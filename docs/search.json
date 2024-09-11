@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n\n\n\n\n\n\n\n\n\n\nR1\nDownloading R and RStudio\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n\n\n\n\n\n\n\n\n\n\nR2\nIntroduction to R & RStudio\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n\n\n\n\n\n\n\n\n\n\nR3\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n\n\n\n\n\n\n\n\n\n\nR4\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n\n\n\n\n\n\n\n\n\n\nR5\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n\n\n\n\n\n\n\n\n\n11/26?\n\nHW 8 due @ 11 pm\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due @ 11 pm\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\nR1\nDownloading R and RStudio\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.1-1.2, 1.4\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\nR2\nIntroduction to R & RStudio\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\nR3\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\nR4\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\nR5\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n11/26?\n\nHW 8 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -1935,22 +1935,22 @@
     "objectID": "homework/HW_05.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_05.html#load-all-the-packages-you-need-below-here.",
     "title": "Homework 5",
-    "section": "1.1 Load all the packages you need below here.",
-    "text": "1.1 Load all the packages you need below here."
+    "section": "2.1 Load all the packages you need below here.",
+    "text": "2.1 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_05.html#r1-youth-weights",
     "href": "homework/HW_05.html#r1-youth-weights",
     "title": "Homework 5",
-    "section": "1.2 R1: Youth weights",
-    "text": "1.2 R1: Youth weights\nIn this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples.\n\n1.2.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n1.2.2 CI\nSuppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS “population.”\n\n\n1.2.3 Another CI\nCalculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40."
+    "section": "2.2 R1: Youth weights",
+    "text": "2.2 R1: Youth weights\nIn this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples.\n\n2.2.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n2.2.2 CI\nSuppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS “population.”\n\n\n2.2.3 Another CI\nCalculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40."
   },
   {
     "objectID": "homework/HW_05.html#r2-swim-times",
     "href": "homework/HW_05.html#r2-swim-times",
     "title": "Homework 5",
-    "section": "1.3 R2: Swim times",
-    "text": "1.3 R2: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n1.3.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n1.3.2 Dot plot of differences\nCreate a dot plot of the differences in swim times and comment on the distribution shape.\n\n\n1.3.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
+    "section": "2.3 R2: Swim times",
+    "text": "2.3 R2: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n2.3.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n2.3.2 Dot plot of differences\nCreate a dot plot of the differences in swim times and comment on the distribution shape.\n\n\n2.3.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
   },
   {
     "objectID": "homework/HW_02.html",
@@ -2202,14 +2202,14 @@
     "href": "homework.html",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/10/24\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n10/17/24\n\n\nHomework 2\n\n\n6 min\n\n\n\n\n10/25/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n10/31/24\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/7/24\n\n\nHomework 5\n\n\n3 min\n\n\n\n\n11/16/24\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/21/24\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/26/24\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/5/24\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/10/24\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n10/17/24\n\n\nHomework 2\n\n\n3 min\n\n\n\n\n10/25/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n10/31/24\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/7/24\n\n\nHomework 5\n\n\n5 min\n\n\n\n\n11/16/24\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/21/24\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/26/24\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/5/24\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homework.html#assignments",
     "href": "homework.html#assignments",
     "title": "Homework Assignments and Solutions",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/10/24\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n10/17/24\n\n\nHomework 2\n\n\n6 min\n\n\n\n\n10/25/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n10/31/24\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/7/24\n\n\nHomework 5\n\n\n3 min\n\n\n\n\n11/16/24\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/21/24\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/26/24\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/5/24\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\n10/10/24\n\n\nHomework 1\n\n\n2 min\n\n\n\n\n10/17/24\n\n\nHomework 2\n\n\n3 min\n\n\n\n\n10/25/24\n\n\nHomework 3\n\n\n3 min\n\n\n\n\n10/31/24\n\n\nHomework 4\n\n\n5 min\n\n\n\n\n11/7/24\n\n\nHomework 5\n\n\n5 min\n\n\n\n\n11/16/24\n\n\nHomework 6\n\n\n6 min\n\n\n\n\n11/21/24\n\n\nHomework 7\n\n\n4 min\n\n\n\n\n11/26/24\n\n\nHomework 8\n\n\n5 min\n\n\n\n\n12/5/24\n\n\nHomework 9\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homework.html#solutions",
@@ -2503,7 +2503,7 @@
     "href": "homework/HW_04.html#directions",
     "title": "Homework 4",
     "section": "Directions",
-    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises (see sections Book exercises and Non-book exercise) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.\n\nSome problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.\n\nThe R exercises are to be completed using Quarto.\nIf you complete part of the assignment not using Quarto, you will be uploading 3 files on Sakai for HW 4: qmd & html files for your R work, and a pdf with your written work.\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe R exercises are to be completed using Quarto.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_04.html#instructions-for-normal-probability-exercises",
@@ -2572,22 +2572,22 @@
     "objectID": "homework/HW_04.html#the-ethan-allen",
     "href": "homework/HW_04.html#the-ethan-allen",
     "title": "Homework 4",
-    "section": "2.1 The Ethan Allen",
-    "text": "2.1 The Ethan Allen\nOn October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?\n\nThe maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds.\nData from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.\n\nIf the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.\n\n2.1.1 Maximum average weight\nWith 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?\n\n\n2.1.2 Probability an individual weighs more than the maximum average weight\nAssuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.\n\n\n2.1.3 Probability a random sample of 47 American adults has an average weight greater than the maximum average weight\nCalculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.\n\n\n2.1.4 What theorem did you use in the previous part, and why were you able to apply it to this problem?\n\n\n2.1.5 Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?"
+    "section": "1.1 The Ethan Allen",
+    "text": "1.1 The Ethan Allen\nOn October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?\n\nThe maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds.\nData from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.\n\nIf the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.\n\n1.1.1 Maximum average weight\nWith 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?\n\n\n1.1.2 Probability an individual weighs more than the maximum average weight\nAssuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.\n\n\n1.1.3 Probability a random sample of 47 American adults has an average weight greater than the maximum average weight\nCalculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.\n\n\n1.1.4 What theorem did you use in the previous part, and why were you able to apply it to this problem?\n\n\n1.1.5 Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?"
   },
   {
     "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "title": "Homework 4",
-    "section": "3.1 Load all the packages you need below here.",
-    "text": "3.1 Load all the packages you need below here."
+    "section": "1.1 Load all the packages you need below here.",
+    "text": "1.1 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_04.html#r1-youth-weights",
     "href": "homework/HW_04.html#r1-youth-weights",
     "title": "Homework 4",
-    "section": "3.2 R1: Youth weights",
-    "text": "3.2 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n3.2.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n3.2.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n3.2.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n3.2.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n3.2.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n3.2.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
+    "section": "3.7 R1: Youth weights",
+    "text": "3.7 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n3.7.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n3.7.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n3.7.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n3.7.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n3.7.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n3.7.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
   },
   {
     "objectID": "homework/HW_07.html",
@@ -4842,5 +4842,110 @@
     "title": "Homework 4",
     "section": "1.1 Clinican time with patients",
     "text": "1.1 Clinican time with patients\nSuppose a clinician schedules 20 minutes to spend with each of their patients. However, they sometimes run over or end earlier. Based on past data, the mean “extra” time they spend with a patient is 3 minutes with a standard deviation of 2 minutes. Suppose they see 13 patients today and the extra times they spend with patients are independent from patient to patient.\n\n1.1.1 Expected total time\nFind the expected total time they will spend with all of their patients today.\n\n\n1.1.2 SD of total time\nFind the standard deviation of the total time they will spend with all of their patients today."
+  },
+  {
+    "objectID": "homework/HW_05.html#heights-of-adults",
+    "href": "homework/HW_05.html#heights-of-adults",
+    "title": "Homework 5",
+    "section": "4.2 Heights of adults",
+    "text": "4.2 Heights of adults"
+  },
+  {
+    "objectID": "homework/HW_05.html#clinican-time-with-patients",
+    "href": "homework/HW_05.html#clinican-time-with-patients",
+    "title": "Homework 5",
+    "section": "1.1 Clinican time with patients",
+    "text": "1.1 Clinican time with patients\nSuppose a clinician schedules 20 minutes to spend with each of their patients. However, they sometimes run over or end earlier. Based on past data, the mean “extra” time they spend with a patient is 3 minutes with a standard deviation of 2 minutes. Suppose they see 13 patients today and the extra times they spend with patients are independent from patient to patient.\n\n1.1.1 Expected total time\nFind the expected total time they will spend with all of their patients today.\n\n\n1.1.2 SD of total time\nFind the standard deviation of the total time they will spend with all of their patients today."
+  },
+  {
+    "objectID": "homework/HW_05.html#the-ethan-allen",
+    "href": "homework/HW_05.html#the-ethan-allen",
+    "title": "Homework 5",
+    "section": "1.2 The Ethan Allen",
+    "text": "1.2 The Ethan Allen\nOn October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?\n\nThe maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds.\nData from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.\n\nIf the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.\n\n1.2.1 Maximum average weight\nWith 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?\n\n\n1.2.2 Probability an individual weighs more than the maximum average weight\nAssuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.\n\n\n1.2.3 Probability a random sample of 47 American adults has an average weight greater than the maximum average weight\nCalculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.\n\n\n1.2.4 What theorem did you use in the previous part, and why were you able to apply it to this problem?\n\n\n1.2.5 Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?"
+  },
+  {
+    "objectID": "homework/HW_04.html#what-are-the-dimensions-and-column-names-of-the-dataset",
+    "href": "homework/HW_04.html#what-are-the-dimensions-and-column-names-of-the-dataset",
+    "title": "Homework 4",
+    "section": "2.1 What are the dimensions and column names of the dataset?",
+    "text": "2.1 What are the dimensions and column names of the dataset?"
+  },
+  {
+    "objectID": "homework/HW_04.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
+    "href": "homework/HW_04.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
+    "title": "Homework 4",
+    "section": "2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?",
+    "text": "2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?"
+  },
+  {
+    "objectID": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
+    "href": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
+    "title": "Homework 4",
+    "section": "2.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.",
+    "text": "2.3 Using numerical and graphical summaries, describe the distribution of ages among study participants."
+  },
+  {
+    "objectID": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
+    "href": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
+    "title": "Homework 4",
+    "section": "2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.",
+    "text": "2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants."
+  },
+  {
+    "objectID": "homework/HW_04.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
+    "href": "homework/HW_04.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
+    "title": "Homework 4",
+    "section": "2.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?",
+    "text": "2.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question."
+  },
+  {
+    "objectID": "homework/HW_04.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
+    "href": "homework/HW_04.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
+    "title": "Homework 4",
+    "section": "2.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data.",
+    "text": "2.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
+  },
+  {
+    "objectID": "homework/HW_04.html#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
+    "href": "homework/HW_04.html#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
+    "title": "Homework 4",
+    "section": "3.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
+    "text": "3.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
+  },
+  {
+    "objectID": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
+    "href": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
+    "title": "Homework 4",
+    "section": "3.2 What proportion of Americans at least 25 years of age are college graduates?",
+    "text": "3.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old."
+  },
+  {
+    "objectID": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
+    "href": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
+    "title": "Homework 4",
+    "section": "3.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?",
+    "text": "3.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
+  },
+  {
+    "objectID": "homework/HW_04.html#two-way-table",
+    "href": "homework/HW_04.html#two-way-table",
+    "title": "Homework 4",
+    "section": "3.4 Two-way table",
+    "text": "3.4 Two-way table\nConstruct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?"
+  },
+  {
+    "objectID": "homework/HW_04.html#relative-risk",
+    "href": "homework/HW_04.html#relative-risk",
+    "title": "Homework 4",
+    "section": "3.5 Relative Risk",
+    "text": "3.5 Relative Risk\nIn this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
+  },
+  {
+    "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here.-1",
+    "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here.-1",
+    "title": "Homework 4",
+    "section": "3.6 Load all the packages you need below here.",
+    "text": "3.6 Load all the packages you need below here."
   }
 ]
