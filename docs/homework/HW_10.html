@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Your name here - update this!!!!">
-<meta name="dcterms.date" content="2024-12-05">
+<meta name="dcterms.date" content="2024-12-12">
 
-<title>Biostatistics 1 - Homework 9</title>
+<title>Biostatistics 1 - Homework 10 (OPTIONAL)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
-}
-
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -4475,6 +4441,17 @@ vertical-align: -.125em;
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
 
 </head>
 
@@ -4534,34 +4511,85 @@ vertical-align: -.125em;
   <ul class="collapse">
   <li><a href="#r-latex-code" id="toc-r-latex-code" class="nav-link" data-scroll-target="#r-latex-code">R &amp; LaTeX code</a></li>
   </ul></li>
-  <li><a href="#book-exercises" id="toc-book-exercises" class="nav-link" data-scroll-target="#book-exercises">Book exercises</a>
-  <ul class="collapse">
-  <li><a href="#work-hours-and-education" id="toc-work-hours-and-education" class="nav-link" data-scroll-target="#work-hours-and-education">5.44 Work hours and education</a></li>
-  <li><a href="#child-care-hours" id="toc-child-care-hours" class="nav-link" data-scroll-target="#child-care-hours">5.46 Child care hours</a></li>
-  <li><a href="#truefalse-anova-part-ii" id="toc-truefalse-anova-part-ii" class="nav-link" data-scroll-target="#truefalse-anova-part-ii">5.48 True/False: ANOVA, Part II</a></li>
-  </ul></li>
+  <li><a href="#identify-relationships-part-ii" id="toc-identify-relationships-part-ii" class="nav-link" data-scroll-target="#identify-relationships-part-ii">6.2 Identify relationships, Part II</a></li>
+  <li><a href="#over-under-part-ii" id="toc-over-under-part-ii" class="nav-link" data-scroll-target="#over-under-part-ii">6.6 Over-under, Part II</a></li>
+  <li><a href="#guppies-part-i" id="toc-guppies-part-i" class="nav-link" data-scroll-target="#guppies-part-i">6.10 Guppies, Part I</a></li>
+  <li><a href="#trends-in-the-residuals" id="toc-trends-in-the-residuals" class="nav-link" data-scroll-target="#trends-in-the-residuals">6.12 Trends in the residuals</a></li>
+  <li><a href="#guppies-part-iv" id="toc-guppies-part-iv" class="nav-link" data-scroll-target="#guppies-part-iv">6.20 Guppies, Part IV</a></li>
+  <li><a href="#a-e-helmets-and-lunches" id="toc-a-e-helmets-and-lunches" class="nav-link" data-scroll-target="#a-e-helmets-and-lunches">6.26 (a, e) Helmets and lunches</a></li>
+  <li><a href="#guppies-part-v" id="toc-guppies-part-v" class="nav-link" data-scroll-target="#guppies-part-v">6.28 Guppies, Part V</a></li>
+  <li><a href="#a-b-guppies-part-vi" id="toc-a-b-guppies-part-vi" class="nav-link" data-scroll-target="#a-b-guppies-part-vi">6.32 (a, b) Guppies, Part VI</a></li>
   <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises"><span class="header-section-number">1</span> R exercises</a>
   <ul class="collapse">
   <li><a href="#load-all-the-packages-you-need-below-here." id="toc-load-all-the-packages-you-need-below-here." class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here."><span class="header-section-number">1.1</span> Load all the packages you need below here.</a></li>
-  <li><a href="#r1-palmer-penguins-anova" id="toc-r1-palmer-penguins-anova" class="nav-link" data-scroll-target="#r1-palmer-penguins-anova"><span class="header-section-number">1.2</span> R1: Palmer Penguins ANOVA</a>
+  <li><a href="#r2-palmer-penguins-slr" id="toc-r2-palmer-penguins-slr" class="nav-link" data-scroll-target="#r2-palmer-penguins-slr"><span class="header-section-number">1.2</span> R2: Palmer Penguins SLR</a>
   <ul class="collapse">
-  <li><a href="#dotplots" id="toc-dotplots" class="nav-link" data-scroll-target="#dotplots"><span class="header-section-number">1.2.1</span> Dotplots</a></li>
-  <li><a href="#which-groups-significantly-different" id="toc-which-groups-significantly-different" class="nav-link" data-scroll-target="#which-groups-significantly-different"><span class="header-section-number">1.2.2</span> Which groups significantly different?</a></li>
-  <li><a href="#hypotheses-in-words" id="toc-hypotheses-in-words" class="nav-link" data-scroll-target="#hypotheses-in-words"><span class="header-section-number">1.2.3</span> Hypotheses in words</a></li>
-  <li><a href="#hypotheses-in-symbols" id="toc-hypotheses-in-symbols" class="nav-link" data-scroll-target="#hypotheses-in-symbols"><span class="header-section-number">1.2.4</span> Hypotheses in symbols</a></li>
-  <li><a href="#run-anova-in-r" id="toc-run-anova-in-r" class="nav-link" data-scroll-target="#run-anova-in-r"><span class="header-section-number">1.2.5</span> Run ANOVA in R</a></li>
-  <li><a href="#sst" id="toc-sst" class="nav-link" data-scroll-target="#sst"><span class="header-section-number">1.2.6</span> SST</a></li>
-  <li><a href="#msg-mse" id="toc-msg-mse" class="nav-link" data-scroll-target="#msg-mse"><span class="header-section-number">1.2.7</span> MSG &amp; MSE</a></li>
-  <li><a href="#f-statistic" id="toc-f-statistic" class="nav-link" data-scroll-target="#f-statistic"><span class="header-section-number">1.2.8</span> F statistic</a></li>
-  <li><a href="#p-value" id="toc-p-value" class="nav-link" data-scroll-target="#p-value"><span class="header-section-number">1.2.9</span> p-value</a></li>
-  <li><a href="#decision" id="toc-decision" class="nav-link" data-scroll-target="#decision"><span class="header-section-number">1.2.10</span> Decision?</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">1.2.11</span> Conclusion</a></li>
-  <li><a href="#technical-conditions" id="toc-technical-conditions" class="nav-link" data-scroll-target="#technical-conditions"><span class="header-section-number">1.2.12</span> Technical conditions</a></li>
-  <li><a href="#post-hoc-pairwise-t-tests-no-correction" id="toc-post-hoc-pairwise-t-tests-no-correction" class="nav-link" data-scroll-target="#post-hoc-pairwise-t-tests-no-correction"><span class="header-section-number">1.2.13</span> Post-hoc pairwise t-tests: no correction</a></li>
-  <li><a href="#post-hoc-pairwise-t-tests-bonferroni-correction" id="toc-post-hoc-pairwise-t-tests-bonferroni-correction" class="nav-link" data-scroll-target="#post-hoc-pairwise-t-tests-bonferroni-correction"><span class="header-section-number">1.2.14</span> Post-hoc pairwise t-tests: Bonferroni correction</a></li>
-  <li><a href="#hypothetical-bonferroni-correction" id="toc-hypothetical-bonferroni-correction" class="nav-link" data-scroll-target="#hypothetical-bonferroni-correction"><span class="header-section-number">1.2.15</span> Hypothetical Bonferroni correction</a></li>
-  <li><a href="#post-hoc-pairwise-t-tests-tukeys-honest-significance-test-correction" id="toc-post-hoc-pairwise-t-tests-tukeys-honest-significance-test-correction" class="nav-link" data-scroll-target="#post-hoc-pairwise-t-tests-tukeys-honest-significance-test-correction"><span class="header-section-number">1.2.16</span> Post-hoc pairwise t-tests: Tukey’s Honest Significance Test correction</a></li>
-  <li><a href="#tukey-confidence-intervals" id="toc-tukey-confidence-intervals" class="nav-link" data-scroll-target="#tukey-confidence-intervals"><span class="header-section-number">1.2.17</span> Tukey confidence intervals</a></li>
+  <li><a href="#scatterplots" id="toc-scatterplots" class="nav-link" data-scroll-target="#scatterplots"><span class="header-section-number">1.2.1</span> Scatterplots</a></li>
+  <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations"><span class="header-section-number">1.2.2</span> Correlations</a></li>
+  <li><a href="#compare-associations" id="toc-compare-associations" class="nav-link" data-scroll-target="#compare-associations"><span class="header-section-number">1.2.3</span> Compare associations</a></li>
+  <li><a href="#body-mass-vs.-flipper-length-slr" id="toc-body-mass-vs.-flipper-length-slr" class="nav-link" data-scroll-target="#body-mass-vs.-flipper-length-slr"><span class="header-section-number">1.2.4</span> Body mass vs. flipper length SLR</a></li>
+  <li><a href="#regression-equation" id="toc-regression-equation" class="nav-link" data-scroll-target="#regression-equation"><span class="header-section-number">1.2.5</span> Regression equation</a></li>
+  <li><a href="#b_1-calculation" id="toc-b_1-calculation" class="nav-link" data-scroll-target="#b_1-calculation"><span class="header-section-number">1.2.6</span> <span class="math inline">\(b_1\)</span> calculation</a></li>
+  <li><a href="#interpret-intercept" id="toc-interpret-intercept" class="nav-link" data-scroll-target="#interpret-intercept"><span class="header-section-number">1.2.7</span> Interpret intercept</a></li>
+  <li><a href="#interpret-slope" id="toc-interpret-slope" class="nav-link" data-scroll-target="#interpret-slope"><span class="header-section-number">1.2.8</span> Interpret slope</a></li>
+  <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction"><span class="header-section-number">1.2.9</span> Prediction</a></li>
+  </ul></li>
+  <li><a href="#r1-life-expectancy-vs.-co2-emissions" id="toc-r1-life-expectancy-vs.-co2-emissions" class="nav-link" data-scroll-target="#r1-life-expectancy-vs.-co2-emissions"><span class="header-section-number">1.3</span> R1: Life expectancy vs. CO2 emissions</a>
+  <ul class="collapse">
+  <li><a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data"><span class="header-section-number">1.3.1</span> Load data</a></li>
+  <li><a href="#linear-association" id="toc-linear-association" class="nav-link" data-scroll-target="#linear-association"><span class="header-section-number">1.3.2</span> Linear association?</a></li>
+  <li><a href="#slr" id="toc-slr" class="nav-link" data-scroll-target="#slr"><span class="header-section-number">1.3.3</span> SLR</a></li>
+  <li><a href="#prediction-1" id="toc-prediction-1" class="nav-link" data-scroll-target="#prediction-1"><span class="header-section-number">1.3.4</span> Prediction</a></li>
+  <li><a href="#independent-data-points" id="toc-independent-data-points" class="nav-link" data-scroll-target="#independent-data-points"><span class="header-section-number">1.3.5</span> Independent data points?</a></li>
+  <li><a href="#normality-of-residuals" id="toc-normality-of-residuals" class="nav-link" data-scroll-target="#normality-of-residuals"><span class="header-section-number">1.3.6</span> Normality of residuals?</a></li>
+  <li><a href="#qq-plot" id="toc-qq-plot" class="nav-link" data-scroll-target="#qq-plot"><span class="header-section-number">1.3.7</span> QQ plot</a></li>
+  <li><a href="#random-normal-qq-plots" id="toc-random-normal-qq-plots" class="nav-link" data-scroll-target="#random-normal-qq-plots"><span class="header-section-number">1.3.8</span> Random Normal QQ plots</a></li>
+  <li><a href="#qq-plot-comparison" id="toc-qq-plot-comparison" class="nav-link" data-scroll-target="#qq-plot-comparison"><span class="header-section-number">1.3.9</span> QQ plot comparison</a></li>
+  <li><a href="#equality-of-variance-of-the-residuals" id="toc-equality-of-variance-of-the-residuals" class="nav-link" data-scroll-target="#equality-of-variance-of-the-residuals"><span class="header-section-number">1.3.10</span> Equality of variance of the residuals?</a></li>
+  <li><a href="#transformation-logx" id="toc-transformation-logx" class="nav-link" data-scroll-target="#transformation-logx"><span class="header-section-number">1.3.11</span> Transformation: log(x)</a></li>
+  <li><a href="#linear-association-with-transformation" id="toc-linear-association-with-transformation" class="nav-link" data-scroll-target="#linear-association-with-transformation"><span class="header-section-number">1.3.12</span> Linear association (with transformation)?</a></li>
+  <li><a href="#slr-with-transformation" id="toc-slr-with-transformation" class="nav-link" data-scroll-target="#slr-with-transformation"><span class="header-section-number">1.3.13</span> SLR (with transformation)</a></li>
+  <li><a href="#prediction-with-transformation" id="toc-prediction-with-transformation" class="nav-link" data-scroll-target="#prediction-with-transformation"><span class="header-section-number">1.3.14</span> Prediction (with transformation)</a></li>
+  <li><a href="#compare-predictions-from-without-and-with-transformation" id="toc-compare-predictions-from-without-and-with-transformation" class="nav-link" data-scroll-target="#compare-predictions-from-without-and-with-transformation"><span class="header-section-number">1.3.15</span> Compare predictions from without and with transformation</a></li>
+  <li><a href="#normality-of-residuals-with-transformation" id="toc-normality-of-residuals-with-transformation" class="nav-link" data-scroll-target="#normality-of-residuals-with-transformation"><span class="header-section-number">1.3.16</span> Normality of residuals (with transformation)?</a></li>
+  <li><a href="#qq-plot-with-transformation" id="toc-qq-plot-with-transformation" class="nav-link" data-scroll-target="#qq-plot-with-transformation"><span class="header-section-number">1.3.17</span> QQ plot (with transformation)</a></li>
+  <li><a href="#random-normal-qq-plots-with-transformation" id="toc-random-normal-qq-plots-with-transformation" class="nav-link" data-scroll-target="#random-normal-qq-plots-with-transformation"><span class="header-section-number">1.3.18</span> Random Normal QQ plots (with transformation)</a></li>
+  <li><a href="#equality-of-variance-of-the-residuals-with-transformation" id="toc-equality-of-variance-of-the-residuals-with-transformation" class="nav-link" data-scroll-target="#equality-of-variance-of-the-residuals-with-transformation"><span class="header-section-number">1.3.19</span> Equality of variance of the residuals (with transformation)?</a></li>
+  <li><a href="#comparison-of-models-without-and-with-transformation" id="toc-comparison-of-models-without-and-with-transformation" class="nav-link" data-scroll-target="#comparison-of-models-without-and-with-transformation"><span class="header-section-number">1.3.20</span> Comparison of models without and with transformation</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#nonparametric-tests" id="toc-nonparametric-tests" class="nav-link" data-scroll-target="#nonparametric-tests"><span class="header-section-number">2</span> Nonparametric-Tests</a>
+  <ul class="collapse">
+  <li><a href="#npt-1-sign-test" id="toc-npt-1-sign-test" class="nav-link" data-scroll-target="#npt-1-sign-test"><span class="header-section-number">2.1</span> NPT 1: Sign test</a>
+  <ul class="collapse">
+  <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses"><span class="header-section-number">2.1.1</span> Hypotheses</a></li>
+  <li><a href="#d-and-d-" id="toc-d-and-d-" class="nav-link" data-scroll-target="#d-and-d-"><span class="header-section-number">2.1.2</span> <span class="math inline">\(D^+\)</span> and <span class="math inline">\(D^-\)</span></a></li>
+  <li><a href="#probability-distribution" id="toc-probability-distribution" class="nav-link" data-scroll-target="#probability-distribution"><span class="header-section-number">2.1.3</span> Probability distribution</a></li>
+  <li><a href="#exact-probability" id="toc-exact-probability" class="nav-link" data-scroll-target="#exact-probability"><span class="header-section-number">2.1.4</span> Exact probability</a></li>
+  <li><a href="#sign-test-in-r" id="toc-sign-test-in-r" class="nav-link" data-scroll-target="#sign-test-in-r"><span class="header-section-number">2.1.5</span> Sign test in R</a></li>
+  <li><a href="#s" id="toc-s" class="nav-link" data-scroll-target="#s"><span class="header-section-number">2.1.6</span> S</a></li>
+  <li><a href="#p-value" id="toc-p-value" class="nav-link" data-scroll-target="#p-value"><span class="header-section-number">2.1.7</span> p-value</a></li>
+  <li><a href="#normal-approximation" id="toc-normal-approximation" class="nav-link" data-scroll-target="#normal-approximation"><span class="header-section-number">2.1.8</span> Normal approximation</a></li>
+  </ul></li>
+  <li><a href="#npt-2-wilcoxon-signed-rank-test" id="toc-npt-2-wilcoxon-signed-rank-test" class="nav-link" data-scroll-target="#npt-2-wilcoxon-signed-rank-test"><span class="header-section-number">2.2</span> NPT 2: (Wilcoxon) Signed-rank test</a>
+  <ul class="collapse">
+  <li><a href="#hypotheses-1" id="toc-hypotheses-1" class="nav-link" data-scroll-target="#hypotheses-1"><span class="header-section-number">2.2.1</span> Hypotheses</a></li>
+  <li><a href="#signed-ranks" id="toc-signed-ranks" class="nav-link" data-scroll-target="#signed-ranks"><span class="header-section-number">2.2.2</span> Signed ranks</a></li>
+  <li><a href="#t" id="toc-t" class="nav-link" data-scroll-target="#t"><span class="header-section-number">2.2.3</span> <span class="math inline">\(T^+\)</span></a></li>
+  <li><a href="#exact-p-value" id="toc-exact-p-value" class="nav-link" data-scroll-target="#exact-p-value"><span class="header-section-number">2.2.4</span> Exact p-value</a></li>
+  <li><a href="#normal-approximation-1" id="toc-normal-approximation-1" class="nav-link" data-scroll-target="#normal-approximation-1"><span class="header-section-number">2.2.5</span> Normal approximation</a></li>
+  <li><a href="#test-in-r" id="toc-test-in-r" class="nav-link" data-scroll-target="#test-in-r"><span class="header-section-number">2.2.6</span> Test in R</a></li>
+  <li><a href="#condition" id="toc-condition" class="nav-link" data-scroll-target="#condition"><span class="header-section-number">2.2.7</span> Condition</a></li>
+  </ul></li>
+  <li><a href="#npt-3-wilcoxon-rank-sum-test" id="toc-npt-3-wilcoxon-rank-sum-test" class="nav-link" data-scroll-target="#npt-3-wilcoxon-rank-sum-test"><span class="header-section-number">2.3</span> NPT 3: Wilcoxon rank-sum test</a>
+  <ul class="collapse">
+  <li><a href="#condition-1" id="toc-condition-1" class="nav-link" data-scroll-target="#condition-1"><span class="header-section-number">2.3.1</span> Condition</a></li>
+  <li><a href="#why-wilcoxon-rank-sum-test" id="toc-why-wilcoxon-rank-sum-test" class="nav-link" data-scroll-target="#why-wilcoxon-rank-sum-test"><span class="header-section-number">2.3.2</span> Why Wilcoxon rank-sum test?</a></li>
+  <li><a href="#hypotheses-2" id="toc-hypotheses-2" class="nav-link" data-scroll-target="#hypotheses-2"><span class="header-section-number">2.3.3</span> Hypotheses</a></li>
+  <li><a href="#exact-test-in-r" id="toc-exact-test-in-r" class="nav-link" data-scroll-target="#exact-test-in-r"><span class="header-section-number">2.3.4</span> Exact test in R</a></li>
+  <li><a href="#normal-approximation-test-in-r" id="toc-normal-approximation-test-in-r" class="nav-link" data-scroll-target="#normal-approximation-test-in-r"><span class="header-section-number">2.3.5</span> Normal approximation test in R</a></li>
+  <li><a href="#p-value-1" id="toc-p-value-1" class="nav-link" data-scroll-target="#p-value-1"><span class="header-section-number">2.3.6</span> p-value</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">2.3.7</span> Conclusion</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -4572,7 +4600,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 9</h1>
+<h1 class="title">Homework 10 (OPTIONAL)</h1>
 </div>
 
 
@@ -4589,7 +4617,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 5, 2024</p>
+      <p class="date">December 12, 2024</p>
     </div>
   </div>
   
@@ -4599,7 +4627,7 @@ vertical-align: -.125em;
 
 </header>
 
-<p><strong>Due 12/5/24</strong></p>
+<p><strong>Due 12/12/24</strong></p>
 <p>Download the .qmd file for this assignment from <a href="https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_09.qmd">Github</a>.</p>
 <section id="directions" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="directions">Directions</h2>
@@ -4628,104 +4656,305 @@ Tip
 </div>
 </section>
 </section>
-<section id="book-exercises" class="level1 unnumbered">
-<h1 class="unnumbered">Book exercises</h1>
-<section id="work-hours-and-education" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="work-hours-and-education">5.44 Work hours and education</h2>
+<section id="identify-relationships-part-ii" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="identify-relationships-part-ii">6.2 Identify relationships, Part II</h2>
 </section>
-<section id="child-care-hours" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="child-care-hours">5.46 Child care hours</h2>
+<section id="over-under-part-ii" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="over-under-part-ii">6.6 Over-under, Part II</h2>
 </section>
-<section id="truefalse-anova-part-ii" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="truefalse-anova-part-ii">5.48 True/False: ANOVA, Part II</h2>
+<section id="guppies-part-i" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="guppies-part-i">6.10 Guppies, Part I</h2>
 </section>
+<section id="trends-in-the-residuals" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="trends-in-the-residuals">6.12 Trends in the residuals</h2>
+</section>
+<section id="guppies-part-iv" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="guppies-part-iv">6.20 Guppies, Part IV</h2>
+</section>
+<section id="a-e-helmets-and-lunches" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-e-helmets-and-lunches">6.26 (a, e) Helmets and lunches</h2>
+<p><span style="color:purple"><strong>Skip parts (b)-(d). To complete (e), use that the slope from part (b) is −0.537, and the intercept is 55.34.</strong></span></p>
+<p><span style="color:purple"><em>Note: if you have time, it would be good practice to calculate the regression line as well. This was covered on the previous assignment.</em></span></p>
+</section>
+<section id="guppies-part-v" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="guppies-part-v">6.28 Guppies, Part V</h2>
+</section>
+<section id="a-b-guppies-part-vi" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-b-guppies-part-vi">6.32 (a, b) Guppies, Part VI</h2>
+<p><span style="color:purple"><strong>Skip part (c).</strong></span></p>
 </section>
 <section id="r-exercises" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> R exercises</h1>
 <section id="load-all-the-packages-you-need-below-here." class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here."><span class="header-section-number">1.1</span> Load all the packages you need below here.</h2>
 </section>
-<section id="r1-palmer-penguins-anova" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="r1-palmer-penguins-anova"><span class="header-section-number">1.2</span> R1: Palmer Penguins ANOVA</h2>
-<ul>
-<li>Use the <code>penguins</code> data from the <code>palmerpenguins</code> package.
-<ul>
-<li>Don’t forget to first <strong>install</strong> the <code>palmerpenguins</code> package</li>
-</ul></li>
-<li>You can learn more about the Palmer penguins data at <a href="https://allisonhorst.github.io/palmerpenguins/" class="uri">https://allisonhorst.github.io/palmerpenguins/</a></li>
-<li>We will test whether there are differences in penguins’ mean bill depths when comparing different species.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="r2-palmer-penguins-slr" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="r2-palmer-penguins-slr"><span class="header-section-number">1.2</span> R2: Palmer Penguins SLR</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="dotplots" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="dotplots"><span class="header-section-number">1.2.1</span> Dotplots</h3>
-<p><strong>Make a dotplot of the penguins’ bill depths stratified by species type. Include points for the mean of each species type as well as a horizontal dashed line for the overall mean.</strong> <em>See example from class for the plot I’m describing.</em></p>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Below I frequently use the terminology <em>variable1 vs. variable2</em>. When we write this, the first variable is <span class="math inline">\(y\)</span> (vertical axis) and the second is <span class="math inline">\(x\)</span> (horizontal axis). Thus it’s always <span class="math inline">\(y\)</span> vs. <span class="math inline">\(x\)</span> (NOT <span class="math inline">\(x\)</span> vs. <span class="math inline">\(y\)</span>).</p>
+</div>
+</div>
+<section id="scatterplots" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="scatterplots"><span class="header-section-number">1.2.1</span> Scatterplots</h3>
+<ul>
+<li><strong>For each of the following pairs of variables, make a scatterplot showing the best fit line and describe the relationship between the variables.</strong></li>
+<li>In particular address
+<ul>
+<li>whether the association is linear,</li>
+<li>how strong it is (based purely on the plot), and</li>
+<li>what direction (positive, negative, or neither).</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><p><strong>body mass vs. flipper length</strong></p></li>
+<li><p><strong>bill depth vs. flipper length</strong></p></li>
+<li><p><strong>bill depth vs. bill length</strong></p></li>
+</ol>
 </section>
-<section id="which-groups-significantly-different" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="which-groups-significantly-different"><span class="header-section-number">1.2.2</span> Which groups significantly different?</h3>
-<p><strong>Based on the figure, which pairs of species look like they have significantly different mean bill depths?</strong></p>
+<section id="correlations" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="correlations"><span class="header-section-number">1.2.2</span> Correlations</h3>
+<ul>
+<li><strong>For each of the following pairs of variables, find the correlation coefficient <span class="math inline">\(r\)</span>.</strong></li>
+</ul>
+<ol type="1">
+<li><p><strong>body mass vs. flipper length</strong></p></li>
+<li><p><strong>bill depth vs. flipper length</strong></p></li>
+<li><p><strong>bill depth vs. bill length</strong></p></li>
+</ol>
 </section>
-<section id="hypotheses-in-words" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="hypotheses-in-words"><span class="header-section-number">1.2.3</span> Hypotheses in words</h3>
-<p><strong>Write out in words the null and alternative hypotheses.</strong></p>
+<section id="compare-associations" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="compare-associations"><span class="header-section-number">1.2.3</span> Compare associations</h3>
+<p><strong>Which pair of variables has the strongest association? Which has the weakest? Explain how you determined this.</strong></p>
 </section>
-<section id="hypotheses-in-symbols" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="hypotheses-in-symbols"><span class="header-section-number">1.2.4</span> Hypotheses in symbols</h3>
-<p><strong>Write out in symbols the null and alternative hypotheses.</strong></p>
+<section id="body-mass-vs.-flipper-length-slr" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="body-mass-vs.-flipper-length-slr"><span class="header-section-number">1.2.4</span> Body mass vs. flipper length SLR</h3>
+<p><strong>Run the simple linear regression model for body mass vs. flipper length, and display the regression table output.</strong></p>
 </section>
-<section id="run-anova-in-r" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" class="anchored" data-anchor-id="run-anova-in-r"><span class="header-section-number">1.2.5</span> Run ANOVA in R</h3>
-<p><strong>Using R, run the hypothesis test and display the output.</strong></p>
+<section id="regression-equation" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="regression-equation"><span class="header-section-number">1.2.5</span> Regression equation</h3>
+<p><strong>Write out the regression equation for this model, using the variable names instead of the generic <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, and inserting the regression coefficient values.</strong></p>
 </section>
-<section id="sst" class="level3" data-number="1.2.6">
-<h3 data-number="1.2.6" class="anchored" data-anchor-id="sst"><span class="header-section-number">1.2.6</span> SST</h3>
-<p><strong>Using the values from the ANOVA table, calculate the value of the SST (total sum of squares).</strong></p>
+<section id="b_1-calculation" class="level3" data-number="1.2.6">
+<h3 data-number="1.2.6" class="anchored" data-anchor-id="b_1-calculation"><span class="header-section-number">1.2.6</span> <span class="math inline">\(b_1\)</span> calculation</h3>
+<p><strong>Very that the formula</strong> <span class="math inline">\(b_1 = r \cdot \frac{s_y}{s_x}\)</span> <strong>holds for this example using the values of the statistics.</strong></p>
 </section>
-<section id="msg-mse" class="level3" data-number="1.2.7">
-<h3 data-number="1.2.7" class="anchored" data-anchor-id="msg-mse"><span class="header-section-number">1.2.7</span> MSG &amp; MSE</h3>
-<p><strong>Using the values from the ANOVA table, verify (calculate) the values of the MSG (mean square groups) and MSE (mean square error).</strong></p>
+<section id="interpret-intercept" class="level3" data-number="1.2.7">
+<h3 data-number="1.2.7" class="anchored" data-anchor-id="interpret-intercept"><span class="header-section-number">1.2.7</span> Interpret intercept</h3>
+<p><strong>Write a sentence interpreting the intercept for this example. Is it meaningful in this example?</strong></p>
 </section>
-<section id="f-statistic" class="level3" data-number="1.2.8">
-<h3 data-number="1.2.8" class="anchored" data-anchor-id="f-statistic"><span class="header-section-number">1.2.8</span> F statistic</h3>
-<p><strong>Using the values from the ANOVA table, verify (calculate) the value of the F statistic.</strong></p>
+<section id="interpret-slope" class="level3" data-number="1.2.8">
+<h3 data-number="1.2.8" class="anchored" data-anchor-id="interpret-slope"><span class="header-section-number">1.2.8</span> Interpret slope</h3>
+<p><strong>Write a sentence interpreting the slope for this example.</strong></p>
 </section>
-<section id="p-value" class="level3" data-number="1.2.9">
-<h3 data-number="1.2.9" class="anchored" data-anchor-id="p-value"><span class="header-section-number">1.2.9</span> p-value</h3>
-<p><strong>Using the values from the ANOVA table, verify (calculate) the p-value.</strong></p>
+<section id="prediction" class="level3" data-number="1.2.9">
+<h3 data-number="1.2.9" class="anchored" data-anchor-id="prediction"><span class="header-section-number">1.2.9</span> Prediction</h3>
+<p><strong>What is the expected body mass of a penguin with flipper length 210 mm based on the model?</strong></p>
 </section>
-<section id="decision" class="level3" data-number="1.2.10">
-<h3 data-number="1.2.10" class="anchored" data-anchor-id="decision"><span class="header-section-number">1.2.10</span> Decision?</h3>
-<p><strong>Based on the p-value, will we reject or fail to reject the null hypothesis? Why?</strong></p>
 </section>
-<section id="conclusion" class="level3" data-number="1.2.11">
-<h3 data-number="1.2.11" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">1.2.11</span> Conclusion</h3>
-<p><strong>Write a conclusion to the hypothesis test in the context of the problem.</strong></p>
+<section id="r1-life-expectancy-vs.-co2-emissions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="r1-life-expectancy-vs.-co2-emissions"><span class="header-section-number">1.3</span> R1: Life expectancy vs. CO2 emissions</h2>
+<p>Use the dataset <code>Gapminder_2011_LifeExp_CO2.csv</code></p>
+<p>Data were downloaded from https://www.gapminder.org/data/.</p>
+<ul>
+<li><p><strong>Life expectancy</strong> = the average number of years a newborn child would live if current mortality patterns were to stay the same. Source: https://www.gminder.org/data/documentation/gd004/</p></li>
+<li><p><strong>CO2 emissions (tons per person)</strong> = Carbon dioxide emissions from the burning of fossil fuels (metric tons of CO2 per person). Source: https://cdiac.ess-dive.lbl.gov/</p></li>
+<li><p>2011 is the most recent year with the most complete data</p></li>
+</ul>
+<section id="load-data" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="load-data"><span class="header-section-number">1.3.1</span> Load data</h3>
+<p><strong>Load the dataset <code>Gapminder_2011_LifeExp_CO2.csv</code> and do a quick inspection of it. What are the dimensions? Variable names?</strong></p>
 </section>
-<section id="technical-conditions" class="level3" data-number="1.2.12">
-<h3 data-number="1.2.12" class="anchored" data-anchor-id="technical-conditions"><span class="header-section-number">1.2.12</span> Technical conditions</h3>
-<p><strong>Investigate whether the technical conditions for using an ANOVA been satisfied. </strong></p>
+<section id="linear-association" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="linear-association"><span class="header-section-number">1.3.2</span> Linear association?</h3>
+<p><strong>Make a scatterplot of life expectancy vs. CO2 emissions per person showing the best fit line and describe the relationship between the variables. In addition comment on whether the relationship looks linear or not.</strong></p>
 </section>
-<section id="post-hoc-pairwise-t-tests-no-correction" class="level3" data-number="1.2.13">
-<h3 data-number="1.2.13" class="anchored" data-anchor-id="post-hoc-pairwise-t-tests-no-correction"><span class="header-section-number">1.2.13</span> Post-hoc pairwise t-tests: no correction</h3>
-<p><strong>Run post-hoc pairwise t-tests using NO p-value correction. Which pairs of species have significantly different bill depths?</strong></p>
+<section id="slr" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="slr"><span class="header-section-number">1.3.3</span> SLR</h3>
+<p><strong>Run the simple linear regression of life expectancy vs.CO2 emissions per person, and write out the corresponding regression equation. </strong></p>
 </section>
-<section id="post-hoc-pairwise-t-tests-bonferroni-correction" class="level3" data-number="1.2.14">
-<h3 data-number="1.2.14" class="anchored" data-anchor-id="post-hoc-pairwise-t-tests-bonferroni-correction"><span class="header-section-number">1.2.14</span> Post-hoc pairwise t-tests: Bonferroni correction</h3>
-<p><strong>Run post-hoc pairwise t-tests using a Bonferroni correction. Which pairs of species have significantly different bill depths?</strong></p>
+<section id="prediction-1" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="prediction-1"><span class="header-section-number">1.3.4</span> Prediction</h3>
+<p><strong>Using the regression equation, what is the expected life expectancy for a country with <span class="math inline">\(CO_2\)</span> emissions 20 metric tons per person?</strong></p>
 </section>
-<section id="hypothetical-bonferroni-correction" class="level3" data-number="1.2.15">
-<h3 data-number="1.2.15" class="anchored" data-anchor-id="hypothetical-bonferroni-correction"><span class="header-section-number">1.2.15</span> Hypothetical Bonferroni correction</h3>
-<p><strong>If <em>hypothetically</em> the p-value comparing the mean bill depths of the Adelie and Chinstrap species were 0.03 without any p-value adjustment, what would the p-value be after running the post-hoc pairwise t-tests using a Bonferroni correction?</strong></p>
+<section id="independent-data-points" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="independent-data-points"><span class="header-section-number">1.3.5</span> Independent data points?</h3>
+<p><strong>Explain whether you think the data point are independent of each other or not.</strong></p>
 </section>
-<section id="post-hoc-pairwise-t-tests-tukeys-honest-significance-test-correction" class="level3" data-number="1.2.16">
-<h3 data-number="1.2.16" class="anchored" data-anchor-id="post-hoc-pairwise-t-tests-tukeys-honest-significance-test-correction"><span class="header-section-number">1.2.16</span> Post-hoc pairwise t-tests: Tukey’s Honest Significance Test correction</h3>
-<p><strong>Run post-hoc pairwise t-tests using Tukey’s Honest Significance Test correction. Which pairs of species have significantly different bill depths?</strong></p>
+<section id="normality-of-residuals" class="level3" data-number="1.3.6">
+<h3 data-number="1.3.6" class="anchored" data-anchor-id="normality-of-residuals"><span class="header-section-number">1.3.6</span> Normality of residuals?</h3>
+<p><strong>Make a histogram, density plot, and boxplot of the model’s residuals. What is the distribution shape of the residuals? What shape do we want them to have?</strong></p>
 </section>
-<section id="tukey-confidence-intervals" class="level3" data-number="1.2.17">
-<h3 data-number="1.2.17" class="anchored" data-anchor-id="tukey-confidence-intervals"><span class="header-section-number">1.2.17</span> Tukey confidence intervals</h3>
-<p><strong>Make a plot showing the 95% family-wise Tukey confidence intervals. How does this plot visually confirm the which pairs of species have significantly different bill depths?</strong></p>
+<section id="qq-plot" class="level3" data-number="1.3.7">
+<h3 data-number="1.3.7" class="anchored" data-anchor-id="qq-plot"><span class="header-section-number">1.3.7</span> QQ plot</h3>
+<p><strong>Make a QQ plot of the model’s residuals.Explain whether or not the distribution of the residuals deviates from normality and how you made that conclusion based on the QQ plot.</strong></p>
+</section>
+<section id="random-normal-qq-plots" class="level3" data-number="1.3.8">
+<h3 data-number="1.3.8" class="anchored" data-anchor-id="random-normal-qq-plots"><span class="header-section-number">1.3.8</span> Random Normal QQ plots</h3>
+<p><strong>Make 5 QQ plots with points randomly generated from a normal distribution, where the number of points matches the sample size used in the linear model.</strong></p>
+</section>
+<section id="qq-plot-comparison" class="level3" data-number="1.3.9">
+<h3 data-number="1.3.9" class="anchored" data-anchor-id="qq-plot-comparison"><span class="header-section-number">1.3.9</span> QQ plot comparison</h3>
+<p><strong>Compare the QQ plot of the model’s residuals to the randomly generated QQ plots. Is the QQ plot of the residuals similar to the randomly generated plots or different? Based on the these QQ plots, do you think it’s possible that the residuals could be normally distributed?</strong></p>
+</section>
+<section id="equality-of-variance-of-the-residuals" class="level3" data-number="1.3.10">
+<h3 data-number="1.3.10" class="anchored" data-anchor-id="equality-of-variance-of-the-residuals"><span class="header-section-number">1.3.10</span> Equality of variance of the residuals?</h3>
+<p><strong>Make a residual plot. Describe what the plot looks like and whether there are any patterns in the residuals, and whether the equality of variance assumption the residuals seems to be satisfied or not.</strong></p>
+</section>
+<section id="transformation-logx" class="level3" data-number="1.3.11">
+<h3 data-number="1.3.11" class="anchored" data-anchor-id="transformation-logx"><span class="header-section-number">1.3.11</span> Transformation: log(x)</h3>
+<p><strong>Add a new variable to the dataset for the natural logarithm (<code>log()</code>) of the CO2 emissions per person values.</strong></p>
+</section>
+<section id="linear-association-with-transformation" class="level3" data-number="1.3.12">
+<h3 data-number="1.3.12" class="anchored" data-anchor-id="linear-association-with-transformation"><span class="header-section-number">1.3.12</span> Linear association (with transformation)?</h3>
+<p><strong>Make a scatterplot of life expectancy vs. log of CO2 emissions per person showing the best fit line and describe the relationship between the variables. In addition comment on whether the relationship looks linear or not.</strong></p>
+</section>
+<section id="slr-with-transformation" class="level3" data-number="1.3.13">
+<h3 data-number="1.3.13" class="anchored" data-anchor-id="slr-with-transformation"><span class="header-section-number">1.3.13</span> SLR (with transformation)</h3>
+<p><strong>Run the simple linear regression of life expectancy vs.CO2 emissions per person, and write out the corresponding regression equation.</strong></p>
+</section>
+<section id="prediction-with-transformation" class="level3" data-number="1.3.14">
+<h3 data-number="1.3.14" class="anchored" data-anchor-id="prediction-with-transformation"><span class="header-section-number">1.3.14</span> Prediction (with transformation)</h3>
+<p><strong>Using the regression equation, what is the expected life expectancy for a country with <span class="math inline">\(CO_2\)</span> emissions 20 metric tons per person?</strong></p>
+</section>
+<section id="compare-predictions-from-without-and-with-transformation" class="level3" data-number="1.3.15">
+<h3 data-number="1.3.15" class="anchored" data-anchor-id="compare-predictions-from-without-and-with-transformation"><span class="header-section-number">1.3.15</span> Compare predictions from without and with transformation</h3>
+<p><strong>Compare the predicted values from the models with and without the transformation. Which is bigger and why? Explain in terms of visually comparing the respective regression lines on the scatterplots.</strong></p>
+</section>
+<section id="normality-of-residuals-with-transformation" class="level3" data-number="1.3.16">
+<h3 data-number="1.3.16" class="anchored" data-anchor-id="normality-of-residuals-with-transformation"><span class="header-section-number">1.3.16</span> Normality of residuals (with transformation)?</h3>
+<p><strong>Make a histogram, density plot, and boxplot of the model’s residuals. What is the distribution shape of the residuals? What shape do we want them to have?</strong></p>
+</section>
+<section id="qq-plot-with-transformation" class="level3" data-number="1.3.17">
+<h3 data-number="1.3.17" class="anchored" data-anchor-id="qq-plot-with-transformation"><span class="header-section-number">1.3.17</span> QQ plot (with transformation)</h3>
+<p><strong>Make a QQ plot of the model’s residuals.Explain whether or not the distribution of the residuals deviates from normality and how you made that conclusion based on the QQ plot.</strong></p>
+</section>
+<section id="random-normal-qq-plots-with-transformation" class="level3" data-number="1.3.18">
+<h3 data-number="1.3.18" class="anchored" data-anchor-id="random-normal-qq-plots-with-transformation"><span class="header-section-number">1.3.18</span> Random Normal QQ plots (with transformation)</h3>
+<p><strong>Compare the QQ plot of the model’s residuals to the randomly generated QQ plots (use the ones you generated above). Is the QQ plot of the residuals similar to the randomly generated plots or different? Based on the these QQ plots, do you think it’s possible that the residuals could be normally distributed?</strong></p>
+</section>
+<section id="equality-of-variance-of-the-residuals-with-transformation" class="level3" data-number="1.3.19">
+<h3 data-number="1.3.19" class="anchored" data-anchor-id="equality-of-variance-of-the-residuals-with-transformation"><span class="header-section-number">1.3.19</span> Equality of variance of the residuals (with transformation)?</h3>
+<p><strong>Make a residual plot. Describe what the plot looks like and whether there are any patterns in the residuals, and whether the equality of variance assumption the residuals seems to be satisfied or not.</strong></p>
+</section>
+<section id="comparison-of-models-without-and-with-transformation" class="level3" data-number="1.3.20">
+<h3 data-number="1.3.20" class="anchored" data-anchor-id="comparison-of-models-without-and-with-transformation"><span class="header-section-number">1.3.20</span> Comparison of models without and with transformation</h3>
+<p><strong>Which of the models do you think has a better fit? Make sure your explanation comments on each of the LINE assumptions, and also compare the <span class="math inline">\(R^2\)</span> values from the models.</strong></p>
+</section>
+</section>
+</section>
+<section id="nonparametric-tests" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Nonparametric-Tests</h1>
+<section id="npt-1-sign-test" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="npt-1-sign-test"><span class="header-section-number">2.1</span> NPT 1: Sign test</h2>
+<p><strong>Vegetarian diet and cholesterol levels</strong></p>
+<p>When covering paired t-tests on Day 10 Part 2, the class notes used the example of testing whether a vegetarian diet changed cholesterol levels. The data are in the file <code>chol213.csv</code> at <a href="https://niederhausen.github.io/BSTA_511_F23/data/chol213.csv" class="uri">https://niederhausen.github.io/BSTA_511_F23/data/chol213.csv</a>. In this exercise we will use non-parametric tests to test for a change and compare the results to the paired t-test.</p>
+<section id="hypotheses" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="hypotheses"><span class="header-section-number">2.1.1</span> Hypotheses</h3>
+<p><strong>What are the hypotheses for the (Wilcoxon) Signed-rank test (2-sided) in the context of the problem?</strong></p>
+</section>
+<section id="d-and-d-" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="d-and-d-"><span class="header-section-number">2.1.2</span> <span class="math inline">\(D^+\)</span> and <span class="math inline">\(D^-\)</span></h3>
+<p><strong>Calculate <span class="math inline">\(D^+\)</span> and <span class="math inline">\(D^-\)</span>, the number of positive and negative differences when the differences are calculated as <code>After - Before</code>.</strong></p>
+</section>
+<section id="probability-distribution" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="probability-distribution"><span class="header-section-number">2.1.3</span> Probability distribution</h3>
+<p><strong>What probability distribution can be used to model the number of positive differences? Make sure to specify its parameters.</strong></p>
+</section>
+<section id="exact-probability" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="exact-probability"><span class="header-section-number">2.1.4</span> Exact probability</h3>
+<p><strong>Find the exact probability that there were at most 3 positive differences.</strong></p>
+</section>
+<section id="sign-test-in-r" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="sign-test-in-r"><span class="header-section-number">2.1.5</span> Sign test in R</h3>
+<p><strong>Run the sign test in R. What is the sign test p-value and how does it compare to the p-value of the paired t-test (check the class notes for this)? </strong></p>
+</section>
+<section id="s" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="s"><span class="header-section-number">2.1.6</span> S</h3>
+<p><strong>The sign test output includes the value for <code>S</code>. What is <code>S</code> and what does it measure?</strong></p>
+</section>
+<section id="p-value" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="p-value"><span class="header-section-number">2.1.7</span> p-value</h3>
+<p><strong>Does the probability that there were at most 3 positive differences match the p-value from the R output? Why or why not?</strong></p>
+</section>
+<section id="normal-approximation" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="normal-approximation"><span class="header-section-number">2.1.8</span> Normal approximation</h3>
+<p><strong>Would it be appropriate to use a normal approximation to calculate the p-value for this test? Why or why not?</strong></p>
+</section>
+</section>
+<section id="npt-2-wilcoxon-signed-rank-test" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="npt-2-wilcoxon-signed-rank-test"><span class="header-section-number">2.2</span> NPT 2: (Wilcoxon) Signed-rank test</h2>
+<p><strong>Vegetarian diet and cholesterol levels</strong></p>
+<p>When covering paired t-tests on Day 10 Part 2, the class notes used the example of testing whether a vegetarian diet changed cholesterol levels. The data are in the file <code>chol213.csv</code> at <a href="https://niederhausen.github.io/BSTA_511_F23/data/chol213.csv" class="uri">https://niederhausen.github.io/BSTA_511_F23/data/chol213.csv</a>. In this exercise we will use non-parametric tests to test for a change and compare the results to the paired t-test.</p>
+<section id="hypotheses-1" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="hypotheses-1"><span class="header-section-number">2.2.1</span> Hypotheses</h3>
+<p><strong>What are the hypotheses for the sign test (2-sided) in the context of the problem?</strong></p>
+</section>
+<section id="signed-ranks" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="signed-ranks"><span class="header-section-number">2.2.2</span> Signed ranks</h3>
+<p><strong>Find the signed ranks. Make sure to account for ties when doing so.</strong></p>
+</section>
+<section id="t" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="t"><span class="header-section-number">2.2.3</span> <span class="math inline">\(T^+\)</span></h3>
+<p><strong>Calculate the sum of the positive ranks ( <span class="math inline">\(T^+\)</span> ) </strong></p>
+</section>
+<section id="exact-p-value" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="exact-p-value"><span class="header-section-number">2.2.4</span> Exact p-value</h3>
+<p><strong>Can an exact p-value for the (Wilcoxon) Signed-rank test be calculated? Why or why not?</strong></p>
+</section>
+<section id="normal-approximation-1" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="normal-approximation-1"><span class="header-section-number">2.2.5</span> Normal approximation</h3>
+<p><strong>Is it appropriate to use the normal approximation method in this case?</strong></p>
+</section>
+<section id="test-in-r" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="test-in-r"><span class="header-section-number">2.2.6</span> Test in R</h3>
+<p><strong>Run the (Wilcoxon) Signed-rank test in R. What is the p-value and how does it compare to the p-value of the sign test and the paired t-test (check the class notes for this)?</strong></p>
+</section>
+<section id="condition" class="level3" data-number="2.2.7">
+<h3 data-number="2.2.7" class="anchored" data-anchor-id="condition"><span class="header-section-number">2.2.7</span> Condition</h3>
+<p><strong>There’s one more condition that should be satisfied to use the (Wilcoxon) Signed-rank test that has not been asked about yet in these questions. What is it and do you think it’s satisfied?</strong></p>
+</section>
+</section>
+<section id="npt-3-wilcoxon-rank-sum-test" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="npt-3-wilcoxon-rank-sum-test"><span class="header-section-number">2.3</span> NPT 3: Wilcoxon rank-sum test</h2>
+<p><strong>Does caffeine increase finger taps/min?</strong></p>
+<p>When covering 2-sample t-tests on Day 11, the class notes used the example of testing whether caffeine increases finger taps/min. The data are in the file <code>CaffeineTaps.csv</code> at <a href="https://niederhausen.github.io/BSTA_511_F23/data/CaffeineTaps.csv" class="uri">https://niederhausen.github.io/BSTA_511_F23/data/CaffeineTaps.csv</a>. In this exercise we will use a non-parametric test and compare the results to the paired t-test.</p>
+<section id="condition-1" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="condition-1"><span class="header-section-number">2.3.1</span> Condition</h3>
+<p><strong>What condition needs to be satisfied to apply the Wilcoxon rank-sum test and is it satisfied for these data?</strong></p>
+<p><span style="color:green"><strong>Answer the following questions using the Wilcoxon rank-sum test whether you think the condition has been satisfied or not.</strong></span></p>
+</section>
+<section id="why-wilcoxon-rank-sum-test" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="why-wilcoxon-rank-sum-test"><span class="header-section-number">2.3.2</span> Why Wilcoxon rank-sum test?</h3>
+<p><strong>How would we know to use the Wilcoxon rank-sum test instead of the sign test or (Wilcoxon) Signed-rank test?</strong></p>
+</section>
+<section id="hypotheses-2" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="hypotheses-2"><span class="header-section-number">2.3.3</span> Hypotheses</h3>
+<p><strong>What are the hypotheses for the Wilcoxon rank-sum test (1-sided) in the context of the problem? </strong></p>
+</section>
+<section id="exact-test-in-r" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="exact-test-in-r"><span class="header-section-number">2.3.4</span> Exact test in R</h3>
+<p><strong>Run the exact Wilcoxon rank-sum test in R. What warning(s) does it give you?</strong></p>
+</section>
+<section id="normal-approximation-test-in-r" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="normal-approximation-test-in-r"><span class="header-section-number">2.3.5</span> Normal approximation test in R</h3>
+<p><strong>Run the Wilcoxon rank-sum test in R with the normal approximation. Comment on whether it is appropriate to use the normal approximation or not in this case.</strong></p>
+</section>
+<section id="p-value-1" class="level3" data-number="2.3.6">
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="p-value-1"><span class="header-section-number">2.3.6</span> p-value</h3>
+<p><strong>What is the p-value and how does it compare to the p-value of the 2-sample t-test (check the class notes for this)?</strong></p>
+</section>
+<section id="conclusion" class="level3" data-number="2.3.7">
+<h3 data-number="2.3.7" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">2.3.7</span> Conclusion</h3>
+<p><strong>Write a conclusion to the test in the context of the problem.</strong></p>
 
 
 </section>
