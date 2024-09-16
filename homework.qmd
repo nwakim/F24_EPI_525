@@ -6,12 +6,10 @@ format:
     link-external-newwindow: true
 ---
 
-## Structure
-
 ## Homeworks
 
 | Homework      | Due date (\@11pm) | Assignment                                                                                             | Answers                                                         | Solutions (`.qmd`)                                                              | Solutions (`.html`)\*                                                 |
-|---------------|-------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+|------------|------------|------------|------------|------------|------------|
 | 0             | 10/3              | [[{{< iconify material-symbols assignment size=29px >}}](/homework/HW_00.qmd)]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mingcute web-fill size=29px >}}]{style="color:#f8f5f0;"} |
 | 1             | 10/10             | [[{{< iconify material-symbols assignment size=29px >}}](/homework/HW_01.qmd)]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mingcute web-fill size=29px >}}]{style="color:#f8f5f0;"} |
 | 2             | 10/17             | [[{{< iconify material-symbols assignment size=29px >}}](/homework/HW_02.qmd)]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mingcute web-fill size=29px >}}]{style="color:#f8f5f0;"} |
@@ -25,3 +23,15 @@ format:
 | 10 (optional) | 12/12             | [[{{< iconify material-symbols assignment size=29px >}}](/homework/HW_10.qmd)]{style="color:#f8f5f0;"} | [{{< iconify ph key-fill size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify icon-park-twotone file-code size=29px >}}]{style="color:#f8f5f0;"} | [{{< iconify mingcute web-fill size=29px >}}]{style="color:#f8f5f0;"} |
 
 \*Please note that you need to download the `.html` file to see the LaTeX math properly.
+
+## Structure
+
+There are three distinct parts to our homework:
+
+| Homework part           | Due date             | What is required?                                                                                                                                                                                                                                                              | Col3 |
+|-------------------------|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
+| Individual assignment   | Date specified above | You will complete the homework assignment, and turn in an individual copy of your work. This will be graded for completion.                                                                                                                                                    |      |
+| Group solutions         |                      | With groups of 4, you will make a homework key for 4 questions (that Nicky chooses). Each group member will be in charge of turning in one question's solutions. This will be graded for correctness. The group will receive the same grade, which is summed across questions. |      |
+| Individual presentation |                      | For homeworks \_\_ and \_\_\_, you will also need to make a video or meet with me. You will use less than 10 minutes to explain your homework question solutions. This will be graded for correctness.                                                                         |      |
+
+If you are having any group dynamic issues, please please please come see me earlier rather than later! We will come up with options for moving forward!
