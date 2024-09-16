@@ -1,0 +1,149 @@
+---
+title: "R3: Quarto in R"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/9/2024"
+categories: ["Week 1"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: R3 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+# Saving your work with Quarto
+
+or, creating reproducible reports
+
+![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_rmarkdown_wizards_quarto.png){fig-align="center"}
+
+## Example: creating an html file
+
+::: columns
+::: {.column width="50%"}
+.qmd file
+![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+html output  
+![](../img_slides/default_quarto_html.png){fig-align="center"}
+:::
+:::
+
+
+## Quarto = `.qmd` file = Code + text
+
+`knitr` is a package that converts `.qmd` files containing code + markdown syntax to a plain text `.md` markdown file, and then to other formats (html, pdf, Word, etc)
+
+![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../img_slides/horst_quarto_schematic2.png){fig-align="center"}
+
+
+
+
+
+
+
+# Basic Quarto example
+
+![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../img_slides/horst_quarto_moon_penguins.png){fig-align="center"}
+
+
+##  1. Create a Quarto file (`.qmd`) 
+
+**Two options:**
+
+1. click on File $\rightarrow$ New File $\rightarrow$ Quarto Document...$\rightarrow$ OK, 
+1. or in upper left corner of RStudio click on ![](../img_slides/green_plus_create_file.png){width="70"}
+$\rightarrow$ 
+![](../img_slides/select_quarto_option.png){width="250"}
+
+
+::: columns
+::: {.column width="50%"}
+**Pop-up window selections:**
+
+* Enter a title and your name
+* Select `HTML` output format (default)
+* Engine: select `Knitr`
+* Editor: Select `Use visual markdown editor`
+* Click `Create`
+:::
+
+::: {.column width="50%"}
+
+![](../img_slides/01_qmd_screenshot_popup.png)
+:::
+:::
+
+##  2. Create a Quarto file (`.qmd`) 
+   
+* After clicking on `Create`, you should then see the following in your editor window:
+
+![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+
+## 3. Save the Quarto file (`.qmd`) 
+
+* __Save the file__ by 
+    + selecting `File -> Save`, 
+    + or clicking on ![](../img_slides/01_Script_Save.png){width="33" height="24"} (towards the left above the scripting window),
+    + or keyboard shortcut
+        * PC:   _Ctrl + s_
+        * Mac:   _Command + s_
+        
+
+* You will need to specify
+    + a __filename__ to save the file as
+        - ALWAYS use __.qmd__ as the filename extension for Quarto files
+    + the __folder__ to save the file in
+
+
+## 4. Create html file 
+
+We create the html file by **rendering** the .qmd file.  
+
+Two options:
+
+1. click on the Render icon ![](../img_slides/render_icon.png) at the top of the editor window, 
+1. or use keyboard shortcuts
+    * Mac: *Command+Shift+K* 
+    * PC:  *Ctrl+Shift+K*
+
+* A new window will open with the html output.
+* You will now see both .qmd and .html files in the folder where you saved the .qmd file.
+
+
+:::{.callout-note}
+* The template .qmd file that RStudio creates will render to an html file by default.
+* The output format can be changed to create a Word doc, pdf, slides, etc.
+:::
+
+## .qmd file vs. its html output 
+
+::: columns
+::: {.column width="50%"}
+.qmd file
+![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+html output  
+![](../img_slides/default_quarto_html.png){fig-align="center"}
+
+:::
+:::
+
+

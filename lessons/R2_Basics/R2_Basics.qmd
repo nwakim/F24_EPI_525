@@ -1,0 +1,272 @@
+---
+title: "R2: R Basics"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/7/2024"
+categories: ["Week 2"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: R2 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+```
+
+
+## Open RStudio on your computer (not R!)
+
+![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
+
+
+## RStudio anatomy 
+
+
+![[Emma Rand](http://www-users.york.ac.uk/~er13/17C%20-%202018/pracs/01IntroductionToModuleAndRStudio.html#what_are_r_and_rstudio)](../img_slides/RStudio_Anatomy.svg){fig-align="center"}
+
+Read more about RStudio's layout in Section 3.4 of "[Getting Used to R, RStudio, and R Markdown](https://rbasics.netlify.com/3-rstudiobasics.html#rstudio-layout)" (Ismay and Kennedy 2016) 
+
+
+# Let's code! R Basics 
+
+![[Artwork by @allison_horst](https://allisonhorst.com/everything-else)](../img_slides/horst_timeline_Rlearning.png){fig-align="center"}
+
+
+## Coding in the console  
+ 
+::: columns
+::: {.column width="50%"}
+When you first open R, the console should be empty.
+
+![](../img_slides/01_console_empty.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+__Typing and executing code in the console __
+
+* Type code in the console (blue text)
+* Press __return__ to execute the code
+* Output shown below in black
+
+![](../img_slides/01_console_commands2.png){fig-align="center"}
+:::
+:::
+
+
+## Math calculations using R
+
+* Rules for order of operations are followed
+* Spaces between numbers and characters are ignored
+
+::: columns
+::: {.column width="50%"}
+```{r}
+10^2
+3 ^ 7
+6/9
+9-43
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+4^3-2* 7+9 /2
+```
+
+The equation above is computed as $$4^3 − (2 \cdot 7) + \frac{9}{2}$$ 
+:::
+:::
+
+
+## Variables (saved R objects) 
+
+Variables are used to store data, figures, model output, etc.
+
+::: columns
+::: {.column width="49%"}
+* Can assign a variable using either `=` or `<-`
+    - __Using `<-` is preferable__
+
+Assign just one value:
+```{r}
+x = 5
+x
+x <- 5
+x
+```
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+Assign a __vector__ of values
+
+* Consecutive integers using `:`
+
+```{r}
+a <- 3:10
+a
+```
+
+* __Concatenate__ a string of numbers
+
+```{r}
+b <- c(5, 12, 2, 100, 8)
+b
+```
+:::
+:::
+
+
+## Doing math with variables
+
+::: columns
+::: {.column width="50%"}
+Math using variables with just one value
+```{r}
+x <- 5
+x
+
+x + 3
+
+y <- x^2
+y
+```
+:::
+
+::: {.column width="50%"}
+Math on vectors of values:  
+__element-wise__ computation
+```{r}
+a <- 3:6
+a
+
+a+2; a*3
+
+a*a
+```
+:::
+:::
+
+## Variables can include text (characters)
+
+```{r}
+hi <- "hello"
+hi
+
+greetings <- c("Guten Tag", "Hola", hi)
+greetings
+```
+
+
+## Using functions
+
+* `mean()` is an example of a function
+* functions have "arguments" that can be specified within the `()`
+* `?mean` in console will show help file for `mean()`
+
+::: columns
+::: {.column width="50%"}
+Function <font color="darkorange">arguments specified</font> by name:
+
+```{r}
+mean(x = 1:4)
+```
+
+```{r}
+seq(from = 1, to = 12, by = 3)
+seq(by = 3, to = 12, from = 1)
+```
+:::
+
+::: {.column width="50%"}
+Function <font color="darkorange">arguments not specified</font>, but listed in order:
+```{r}
+mean(1:4)
+```
+
+```{r}
+seq(1, 12, 3)
+```
+
+:::
+:::
+
+
+## Common console errors (1/2)
+ 
+__Incomplete commands__ 
+
+::: columns
+::: {.column width="50%"}
+* When the console is waiting for a new command, the prompt line begins with `>`
+  + If the console prompt is `+`, then a previous command is incomplete
+  + You can finish typing the command in the console window
+:::
+   
+::: {.column width="50%"}
+Example:
+
+```{r}
+#| error: true
+#| message: true
+#| warning: true
+#| prompt: true
+3 + (2*6
+)
+```
+:::
+:::
+
+
+## Common console errors (2/2)
+
+__Object is not found__
+
+* This happens when text is entered for a non-existent variable (object)
+
+Example:
+
+```{r}
+#| error: true
+hello
+```
+
+* Can be due to missing quotes
+
+```{r}
+#| error: true
+install.packages(dplyr) 
+# correct code is: install.packages("dplyr")
+```
+
+

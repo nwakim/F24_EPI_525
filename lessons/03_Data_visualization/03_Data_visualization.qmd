@@ -61,69 +61,19 @@ theme_set(theme_bw(base_size = 22))
 :::
 
 ::: {.column width="50%"}
-![[Artwork by @allison_horst](https://allisonhorst.com/)](/img_slides/horst_ggplot2_exploratory.png){fig-align="center"}
+![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/horst_ggplot2_exploratory.png){fig-align="center"}
 
 :::
 :::
-
-
-## International Day of Women in Statistics and Data Science 
-
-Tuesday, October 10, 2022
-
-12 am - 11:59 pm UTC (5pm 10/9 to 4:59 pm 10/10 here)
-
-![[International Day of Women in Statistics and Data Science](http://www.idwsds.org/)](/img_slides/IDWSDS-logo-large.png){fig-align="center"}
-
-
-## Mimi's tip of the day: sending messages in Slack 
-
-::: columns
-::: {.column width="70%"}
-
-Are you frustrated that Slack sends a message when you press Enter? You can change that! 
-
-::: {layout-ncol=2}
-![](/img_slides/Slack_preferences.png){width=255}
-
-![](/img_slides/Slack_preferences_startnewline.png){width=515}
-:::  
-
-:::
-
-::: {.column width="30%"}
-![](/img_slides/mimi_IMG_4498.png){fig-align="center"}
-:::
-:::
-
-
-## Recap of last time 
-
-* (1.3) __Data collection principles__
-  - Population vs. sample
-  - Sampling methods
-  - Experiments vs. Observational studies
-
-* (1.2) __Intro to Data__
-  - Data types
-    - Numerical: discrete (integer in R), continuous (double or numeric in R)
-    - Categorical: ordinal, nominal
-        - character or factor in R
-  - How are data stored in R? data frames, tibbles
-  - Working with data in R: `dim()`, `nrow()`, `ncol()`, `names()`, `str()`, 
-  `summary()`, `head()`, `tail()`, `$` 
-  
-* (1.4) __Summarizing numerical data__ 
-  - `mean()`, `median()`, `sd()`, `quantile()`
 
 # R Packages
 
 A good analogy for R packages is that they   
 are like apps you can download onto a mobile phone:
 
-<img src="https://moderndive.netlify.com/images/shutterstock/R_vs_R_packages.png" width="80%" height="100%">
+![](../img_slides/R_vs_R_packages.png){fig-align="center"}
 
-[ModernDive Figure 1.4](https://moderndive.netlify.com/1-getting-started.html#packages)
+[ModernDive Figure 1.4](https://moderndive.com/1-getting-started.html#packages)
 
 
 ## From last time: Install the pacakges listed below
@@ -264,7 +214,7 @@ length(unique(dds.discr$id)) # How many unique id's are there?
 str(dds.discr)      # base R
 ```
 
-<!-- ![](/img_slides/dds.discr_str.png){fig-align="center"} -->
+<!-- ![](../img_slides/dds.discr_str.png){fig-align="center"} -->
 
 
 ## `glimpse()`
@@ -280,7 +230,7 @@ library(tidyverse)
 glimpse(dds.discr)  # from tidyverse package (dplyr)
 ```
 
-<!-- ![](/img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
 
 
 ## `summary()`
@@ -309,7 +259,7 @@ tbl_summary(dds.discr)
 :::
 
 ::: {.column width="50%"}
-![](/img_slides/dds.discr_gtsummary.jpg){fig-align="center" height="650"}
+![](../img_slides/dds.discr_gtsummary.jpg){fig-align="center" height="650"}
 :::
 :::
 
@@ -318,26 +268,26 @@ tbl_summary(dds.discr)
 
 ::: columns
 ::: {.column width="40%"}
-![[ggplot](https://ggplot2.tidyverse.org/index.html)](/img_slides/ggplotlogo.png){fig-align="center" height="400"}
+![[ggplot](https://ggplot2.tidyverse.org/index.html)](../img_slides/ggplotlogo.png){fig-align="center" height="400"}
 :::
 
 ::: {.column width="60%"}
-![[Artwork by @allison_horst](https://allisonhorst.com/)](/img_slides/ggplot2_masterpiece.png){fig-align="center" height="400"}
+![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/ggplot2_masterpiece.png){fig-align="center" height="400"}
 :::
 :::
 
 ## What data (variables) are included in the plot below?
 
-![](/img_slides/ggplot_basics_from_ppt_figure_only.png){fig-align="center"}
+![](../img_slides/ggplot_basics_from_ppt_figure_only.png){fig-align="center"}
 
 ## Basics of a ggplot
 
-![](/img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
+![](../img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
 
 
 ## Grammar of ggplot2
 
-![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](/img_slides/khealy_ggplot1.png){fig-align="center"}
+![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](../img_slides/khealy_ggplot1.png){fig-align="center"}
 
 
 ## Histograms
@@ -398,7 +348,7 @@ ggplot(data = dds.discr,
 
 ## Distribution shapes
 
-![](/img_slides/distribution_shapes.png){fig-align="center"}
+![](../img_slides/distribution_shapes.png){fig-align="center"}
 
 ## Density plots
 What is being measured on the vertical axes?
@@ -485,10 +435,10 @@ ggplot(data = dds.discr,
 
 ## Boxplots: 5 number summary visualization 
 
-<!-- ![](/img_slides/boxplot_no_outliers.png) -->
-No outliers:  ![[https://www.simplypsychology.org/boxplots.html](https://www.simplypsychology.org/boxplots.html)](/img_slides/boxplot_no_outliers.png){fig-align="center" height="280"}
+<!-- ![](../img_slides/boxplot_no_outliers.png) -->
+No outliers:  ![[https://www.simplypsychology.org/boxplots.html](https://www.simplypsychology.org/boxplots.html)](../img_slides/boxplot_no_outliers.png){fig-align="center" height="280"}
 
-With  outliers: ![[https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)](/img_slides/boxplot_w_outliers.png){fig-align="center" height="300"}
+With  outliers: ![[https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51)](../img_slides/boxplot_w_outliers.png){fig-align="center" height="300"}
 
 
 # Visualizing relationships between numerical and categorical variables (1.6.3)
@@ -746,7 +696,7 @@ Two variables $x$ and $y$ are
 * The closer $r$ is to ±1, the stronger the linear association.
 :::
 
-![](/img_slides/MD_correlation1-1.png){fig-align="center"}
+![](../img_slides/MD_correlation1-1.png){fig-align="center"}
 
 
 
@@ -775,7 +725,7 @@ cor(dds.discr$age, dds.discr$expenditures)
 ::: {.column width="50%"}
 Rossman & Chance's applet
 
-![](/img_slides/screenshot_guess_corr_iscam.png){fig-align="center"}
+![](../img_slides/screenshot_guess_corr_iscam.png){fig-align="center"}
 
 Tracks performance of guess vs. actual, error vs. actual, and error vs. trial
 
@@ -788,7 +738,7 @@ Tracks performance of guess vs. actual, error vs. actual, and error vs. trial
 Or, for the Atari-like experience
 
 
-![[http://guessthecorrelation.com/](http://guessthecorrelation.com/)](/img_slides/screenshot_guess_corr_atari.png){fig-align="center"}
+![[http://guessthecorrelation.com/](http://guessthecorrelation.com/)](../img_slides/screenshot_guess_corr_atari.png){fig-align="center"}
 
 :::
 :::
@@ -897,13 +847,13 @@ ggplot(data = dds.discr,
 <!-- ::: {layout-ncol=3} -->
 ::: columns
 ::: {.column width="33%"}
-![[dplyr](https://dplyr.tidyverse.org/)](/img_slides/hex-dplyr.png){fig-align="center" height="300"}
+![[dplyr](https://dplyr.tidyverse.org/)](../img_slides/hex-dplyr.png){fig-align="center" height="300"}
 :::
 ::: {.column width="33%"}
-![[magrittr](https://magrittr.tidyverse.org/)](/img_slides/magrittr.png){fig-align="center" height="300"}
+![[magrittr](https://magrittr.tidyverse.org/)](../img_slides/magrittr.png){fig-align="center" height="300"}
 :::
 ::: {.column width="33%"}
-![[janitor](https://cran.r-project.org/web/packages/janitor/readme/README.html)](/img_slides/janitor_logo_small.png){fig-align="center" height="300"}
+![[janitor](https://cran.r-project.org/web/packages/janitor/readme/README.html)](../img_slides/janitor_logo_small.png){fig-align="center" height="300"}
 :::
 :::
 

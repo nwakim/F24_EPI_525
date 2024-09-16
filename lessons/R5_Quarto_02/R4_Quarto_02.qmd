@@ -1,0 +1,614 @@
+---
+title: "R4: Quarto Continued"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/14/2024"
+categories: ["Week 1"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: R4 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+## Recall our Quarto document from last class
+
+# 3 types of Quarto content
+
+1. [*Text*, lists, images, tables, links]{style="color:darkorange"}
+2. Code chunks
+3. YAML metadata 
+
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../img_slides/horst_hedgehog_text_code.png){fig-align="center"}
+
+## Formatting text  
+
+* __bold__, _italics_, super^scripts^ & sub~scripts~, ~~strikethrough~~, `verbatim`, etc. \
+\
+
+
+* Text is formatted through a markup language called `Markdown` ([Wikipedia](https://en.wikipedia.org/wiki/Markdown))
+    * Other markup languages include html (webapges) and LaTeX (math)
+    * All text formatting is specified via *code*
+    * "Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read" [^1]
+* Newer versions of RStudio include a `Visual editor` as well that makes formatting text similar to using a word processor. 
+
+
+![](../img_slides/visual_editor_quarto.png){fig-align="center"}
+
+[^1]: From Quarto's Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html
+
+## Formatting text: `Visual editor`  
+
+* Using the `Visual editor` is similar to using a wordprocessor, such as Word
+* Keyboard shortcuts usually work as well (_shown for Mac below_)
+
+![](../img_slides/visual_editor_options_expanded_quarto.png){fig-align="center"}
+
+## Practice 
+
+1.  Part 1
+    1.  Using the visual editor, practice formatting text in your qmd file, such as making text **bold**, *italicized*, and in `code` format.
+    2.  Add 1^st^, 2^nd^, and 3^rd^ level headers
+    3.  Add a list with a
+        -   sub-list (bullet and/or numbered)
+    4.  Add a table
+    5.  Add whatever else you are interested in!
+2.  Part 2
+    1.  Switch back to the `Source` editor and examine the markdown code that was used for the formatting.
+
+**Questions**:
+
+1.  What went smoothly?
+2.  What hurdles did you encounter?
+
+
+## Formatting text: `Markdown` 
+
++---------------------------------------------------+---------------------------------------------------+
+| Markdown:                                         | Output:                                           |
++===================================================+===================================================+
+| ```                                               | *This text is in italics*, but _so is this text_. |
+| *This text is in italics*, but _so is this text_. |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | **Bold** also has __2 options__                   |
+| **Bold** also has __2 options__                   |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | ~~Should this be deleted?~~                       |
+| ~~Should this be deleted?~~                       |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | Need^super^ or~sub~ scripts?                      |
+| Need^super^ or~sub~ scripts?                      |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | `Code is often formatted as verbatim`             |
+| `Code is often formatted as verbatim`             |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+| ```                                               | > This is a block quote.                          |
+| >This is a block quote.                           |                                                   |
+| ```                                               |                                                   |
++---------------------------------------------------+---------------------------------------------------+
+
+
+<!-- : {tbl-colwidths="\[50,50\]"} -->
+
+
+## Headers 
+
+* Organize your documents using headers to create sections and subsections
+* Use `#` at the beginning of the line to create headers
+
+::: columns
+::: {.column width="50%"}
+Text in editor:
+
+![](../img_slides/screenshot_headers.png){fig-align="center" height="320"}
+
+:::
+
+::: {.column width="50%"}
+Output:
+
+![](../img_slides/screenshot_headers_out.png){fig-align="center" height="320"}
+
+<!-- # Header 1 -->
+
+<!-- ## Header 2 -->
+
+<!-- ### Header 3 -->
+
+<!-- #### Header 4 -->
+
+<!-- ##### Header 5 -->
+
+<!-- ###### Header 6 -->
+
+:::
+:::
+
+
+:::{.callout-important}
+Make sure there is no space before the `#`, and there IS a space after the `#`
+in order for the header to work properly.
+:::
+
+
+
+## RStudio tip
+
+
+You can easily navigate through your .qmd file if you use headers to outline your text
+
+![](../img_slides/default_quarto_html_outline.png){fig-align="center"}
+
+
+# 3 types of Quarto content
+
+1. Text, lists, images, tables, links
+2. [*Code chunks*]{style="color:darkorange"}
+3. YAML metadata 
+
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../img_slides/horst_hedgehog_text_code.png){fig-align="center"}
+
+
+## Code chunks 
+
+::: columns
+::: {.column width="50%"}
+.qmd file
+![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+html output  
+![](../img_slides/default_quarto_html.png){fig-align="center"}
+
+:::
+:::
+
+## Create a code chunk 
+
+3 options to create a code chunk
+
+1. Click on ![](../img_slides/code_chunk_insert_icon.png) at top right of the editor window, or
+
+2. [__Keyboard shortcut__]{style="color:darkorange"}
+
+|     |                        |
+|-----|------------------------|
+| Mac | *Command + Option + I* |
+| PC  | *Ctrl + Alt + I*       |
+
+3. `Visual editor`: Select `Insert` -> `Executable Cell` -> `R`
+
+![](../img_slides/code_chunk_insert_visual.png)
+
+
+## What does a code chunk look like? 
+
+An empty code chunk looks like this:
+
+`Visual editor`
+
+![](../img_slides/01_qmd_chunk_empty_visual.png)
+
+`Source editor`
+
+![](../img_slides/01_qmd_chunk_empty_source.png)
+
+:::{.callout-important}
+Note that a code chunks start with ` ```{r} ` and ends with ` ``` `.  Make sure there is no space before ` ``` `.
+:::
+
+## Enter and run code (1/n) 
+
+* __Type R code__ inside code chunks 
+* __Select code__ you want to run, by 
+    - placing the cursor in the line of code you want to run, 
+    - __*or*__ highlighting the code you want to run
+
+::: columns
+::: {.column width="50%"}
+
+* __Run selected code__ by
+    - clicking on the ![](../img_slides/01_Script_Run.png) button in the top right corner of the scripting window and choosing `Run Selected Line(s)`, 
+    - or typing one of the following key combinations:
+
+|     |                        |
+|-----|------------------------|
+| Mac | __ctrl + return__      |
+| PC  | __command + return__   |
+
+* _Where does the output appear?_
+:::
+
+::: {.column width="50%"}
+
+![](../img_slides/01_qmd_coding1a.png){fig-align="center"}
+
+:::
+:::
+
+## Enter and run code (2/n)
+
+::: {style="font-size: 80%;"}
+* __Run all code__ in a chunk by
+    - by clicking the play button in the top right corner of the chunk
+
+* The code output appears below the code chunk
+:::
+
+![](../img_slides/01_qmd_coding2.png){fig-align="center"}
+
+:::{.callout-note}
+* The output should also appear in the Console. 
+* Settings can be changed so that the output appears only in the Console and not below the code chunk: 
+    * Select {{< fa solid gear >}} (to right of Render button) and then _Chunk Output in Console_.
+:::
+
+
+## Useful keyboard shortcuts 
+
+[Full list of keyboard shortcuts](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts)\
+\ 
+
++------------------------------------------+--------------------+-----------------+
+| action                                   | mac                | windows/linux   |
++==========================================+====================+=================+
+| Run code in qmd (or script)              | cmd + enter        | ctrl + enter    |
++------------------------------------------+--------------------+-----------------+
+| `<-`                                     | option + -         | alt + -         |
++------------------------------------------+--------------------+-----------------+
+| interrupt currently running command      | esc                | esc             |
++------------------------------------------+--------------------+-----------------+
+| in console, retrieve previously run code | up/down            | up/down         |
++------------------------------------------+--------------------+-----------------+
+| keyboard shortcut help                   | option + shift + k | alt + shift + k |
++------------------------------------------+--------------------+-----------------+
+
+\
+
+### Practice
+
+Try typing code below in your qmd (with shortcut) and evaluating it:
+
+```{r}
+#| eval: false
+y <- 5
+y
+```
+
+
+# 3 types of Quarto content
+
+1. Text, lists, images, tables, links
+2. Code chunks
+3. [*YAML metadata*]{style="color:darkorange"} 
+
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../img_slides/horst_hedgehog_text_code.png){fig-align="center"}
+
+
+## `YAML` metadata
+
+Many output options can be set in the **YAML metadata**, which is the *first set of code in the file starting and ending with* `---`.
+
+-   It sets the configuration specifications for the output file
+-   YAML is an acronym for 
+    - *yet another markup language*, or 
+    - *YAML ain't markup language*
+
+## Simple `YAML` example 
+
+::: {style="font-size: 70%;"}
+* The default YAML includes a **title** and **author** that appear at the top of the output file. In the example below, I also added in a **date** option
+:::
+
+::: columns 
+::: {.column width="50%"}
+
+YAML:
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "My first Quarto file"
+author: "Meike"
+date: "9/25/2023"
+format: html
+editor: visual
+---
+```
+
+:::
+
+::: {.column width="50%"}
+Output:
+
+![](../img_slides/yaml_simple_output.png){fig-align="center"}
+:::
+:::
+
+:::{.callout-important}
+* The YAML **must** start and end with 3 dashes `---`.
+* The first set of `---` **must** be on the very first line.
+:::
+
+
+## Change the output file type 
+
+::: columns
+::: {.column width="35%"}
+* The YAML specifies the format of the output file:
+    * html, Word, pdf, slides, website, book, etc.
+* This is done by changing the `format:` option 
+
+:::
+
+::: {.column width="65%"}
+![[Illustration by Alison Hill and Allison Horst, for RStudio.](https://allisonhorst.com/horst-hill-collaborations)](../img_slides/horst_hedgehog_output_types.png){fig-align="center"}
+:::
+:::
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "My first Quarto file"
+author: "Meike"
+date: "9/25/2023"
+format: html
+editor: visual
+---
+```
+
+:::
+
+::: {.column width="60%"}
++------------------------+----------------------------------+
+| Output format          | YAML                             |
++========================+==================================+
+| html                   | `format: html`                   |
++------------------------+----------------------------------+
+| Word                   | `format: docx`                   |
++------------------------+----------------------------------+
+| pdf[^2]                | `format: pdf`                    |
++------------------------+----------------------------------+
+| html slides            | `format: revealjs`               |
++------------------------+----------------------------------+
+| PPT slides             | `format: pptx`                   |
++------------------------+----------------------------------+
+
+:::
+:::
+
+[^2]:  requires LaTeX installation 
+
+## 
+
+![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/horst_r_first_then.png){fig-align="center"}
+
+
+## You WILL get frustrated while learning R! 
+
+From Garrett Grolemund's Prologue of his book _Hands-On Programming with R_[^3]:
+
+
+> As you learn to program, you are going to get frustrated. You are learning a new language, and it will take time to become fluent. But frustration is not just natural, it’s actually a positive sign that you should watch for. Frustration is your brain’s way of being lazy; it’s trying to get you to quit and go do something easy or fun. If you want to get physically fitter, you need to push your body even though it complains. If you want to get better at programming, you’ll need to push your brain. Recognize when you get frustrated and see it as a good thing: you’re now stretching yourself. Push yourself a little further every day, and you’ll soon be a confident programmer.
+
+
+[^3]: Grolemund, Garrett. 2014. Hands-on Programming with R. O’Reilly. [https://rstudio-education.github.io/hopr/](https://rstudio-education.github.io/hopr/)
+
+
+## Resources 
+
+- [Official Quarto guide:](https://quarto.org/docs/guide/) https://quarto.org/docs/guide/
+    - [Markdown basics:](https://quarto.org/docs/authoring/markdown-basics.html) https://quarto.org/docs/authoring/markdown-basics.html
+        - Text formatting, headings, linnks, images, lists, tables, equations, diagrams, page breaks, keyboard shortcuts, and more!
+    - [Code blocks:](https://quarto.org/docs/computations/r.html#code-blocks) https://quarto.org/docs/computations/r.html#code-blocks
+        - [Chunk options:](https://quarto.org/docs/computations/r.html#chunk-options) https://quarto.org/docs/computations/r.html#chunk-options
+  
+- Mine Çetinkaya-Rundel's [Quarto tip a day:](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/) https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/      
+- Hadley Wickham's [R for Data Science:](https://r4ds.hadley.nz/) https://r4ds.hadley.nz/ 
+    _ See Chapter 29 for Quarto
+
+# R Packages
+
+<!-- background-image: url(img/tidyverse_celestial.jpg) -->
+<!-- background-size: cover -->
+
+![](../img_slides/tidyverse_celestial.jpg){fig-align="center"}
+
+
+
+
+## R Packages
+
+A good analogy for R packages is that they   
+are like apps you can download onto a mobile phone:
+
+![[ModernDive Figure 1.4](https://moderndive.netlify.com/1-getting-started.html#packages)](../img_slides/R_vs_R_packages.png){fig-align="center"}
+
+
+## Installing packages
+
+::: {style="font-size: 80%;"}
+- Packages contain additional functions and data
+
+Two options to install packages:
+
+1. `install.packages()` _or_
+2. The "Packages" tab in Files/Plots/Packages/Help/Viewer window
+:::
+
+```{r}
+#| eval: false
+
+install.packages("dplyr")   # only do this ONCE, use quotes
+```
+
+:::columns
+::: {.column width="50%"}
+::: {style="font-size: 80%;"}
++ **Only install packages once** *(unless you want to update them)*
++ Installed from [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) = package mothership
+:::
+:::
+
+::: {.column width="50%"}
+![](../img_slides/screenshot_packages_window.png){fig-align="center"}
+:::
+:::
+
+
+## Video on installing packages
+
+* Danielle Navarro’s YouTube video on __*Installing and loading R packages*__: [https://www.youtube.com/watch?v=kpHZVyDvEhQ](https://www.youtube.com/watch?v=kpHZVyDvEhQ)
+
+
+## Load packages with `library()` command
+
+::: {style="font-size: 80%;"}
+- Tip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file. 
+- Use the `library()` command to load each required package.
+- Packages need to be reloaded *every* time you open Rstudio. 
+:::
+
+```{r}
+library(dplyr)    # run this every time you open Rstudio
+```
+
+::: {style="font-size: 80%;"}
+- You can use a function without loading the package with `PackageName::CommandName`
+:::
+```{r}
+dplyr::arrange(iris, Petal.Width)   # what does arrange do?
+```
+
+
+
+
+## Install the packages listed below [before Day 3]{style="color:darkorange"}
+
+* `knitr` 
+  - this might actually already be installed
+  - check your packages list
+* `tidyverse` 
+  - this is actually a bundle of packages
+  - *Warning: it will take a while to install!!!*
+  - see more info at [https://tidyverse.tidyverse.org/](https://tidyverse.tidyverse.org/) 
+* `rstatix`
+  - for summary statistics of a dataset
+* `janitor`
+  - for cleaning and exploring data
+* `ggridges`
+  - for creating ridgeline plots
+* `devtools` 
+  - used to create R packages
+  - for our purposes, needed to install some packages
+* `oi_biostat_data` 
+  - this package is on github 
+  - __see the next slide for directions on how to install `oi_biostat_data`__
+
+
+## Directions for installing package `oibiostat` 
+
+::: {style="font-size: 70%;"}
+* The textbook's datasets are in the R package `oibiostat`
+* Explanation of code below
+  * Installation of `oibiostat` package requires first installing `devtools` package
+  * The code `devtools::install_github()` tells R to use the command `install_github()` from the `devtools` package without loading the entire package and all of its commands (which `library(devtools)` would do).
+:::
+  
+```{r}
+#| eval: false
+
+install.packages("devtools")
+devtools::install_github("OI-Biostat/oi_biostat_data", force = TRUE)
+```
+
+::: {style="font-size: 70%;"}
+* After running the code above, put `#` in front of the commands so that RStudio doesn't evaluate them when rendering.
+* Now load the `oibiostat` package
+  * [the code below needs to be run _every time_ you restart R or knit an Rmd file]{style="color:darkorange"}
+:::
+
+```{r}
+library(oibiostat)
+```
+
+
+# A visual dataset 
+
+Compare water sources across the world by country and family income
+
+![[Gapminder Dollarstreet](https://www.gapminder.org/dollar-street?topic=get-water)](../img_slides/gapminder_dollarstreet_getwater.jpg){fig-align="center"}
+
+
+Check out Gapminder's Dollar Street for many more examples: [https://www.gapminder.org/dollar-street](https://www.gapminder.org/dollar-street) 
+
+
+
+
+
+    
+## Useful keyboard shortcuts {.smaller}
+
+
+[Full list of keyboard shortcuts](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts)\
+\ 
+
++------------------------------------------+--------------------+-----------------+
+| action                                   | mac                | windows/linux   |
++==========================================+====================+=================+
+| Run code in qmd (or script)              | cmd + enter        | ctrl + enter    |
++------------------------------------------+--------------------+-----------------+
+| `<-`                                     | option + -         | alt + -         |
++------------------------------------------+--------------------+-----------------+
+| interrupt currently running command      | esc                | esc             |
++------------------------------------------+--------------------+-----------------+
+| in console, retrieve previously run code | up/down            | up/down         |
++------------------------------------------+--------------------+-----------------+
+| keyboard shortcut help                   | option + shift + k | alt + shift + k |
++------------------------------------------+--------------------+-----------------+
+
+\
+
+### Practice
+
+Try typing code below in your qmd (with shortcut) and evaluating it:
+
+```{r}
+#| eval: false
+y <- 5
+y
+```
+
+
+## Another resource for an introduction to R
+
+* If you would like another perspective on what we covered the first week, you might find __Danielle Navarro’s__ online book __*Learning Statistics with R*__ to be helpful. 
+
+* Download free pdf: [https://learningstatisticswithr.com/](https://learningstatisticswithr.com/)
+
+* See Sections 3.1-3.7.1 for some of the topics we covered on first day 

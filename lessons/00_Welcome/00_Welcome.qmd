@@ -1,0 +1,112 @@
+---
+title: "Welcome to EPI 525!"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "09/30/2024"
+categories: ["Week 1"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 1 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+## Nicky Wakim (she/her)
+
+::: columns
+::: {.column width="45%"}
+-   **Call me "Nicky," "Dr. W," "Professor Wakim," or any combo!**
+
+-   Assistant Professor of Biostatistics
+
+     
+
+-   Originally from DC area (Virginia side!)
+
+-   Two kitties
+
+-   Volleyball, biking, spikeball, pickleball
+
+-   But also sleeping, TV, and reading
+
+-   Just started taking a couple classes at PCC (French, ceramics, yoga)
+
+-   Slowly regrowing my plant collection after moving from Michigan
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="25%"}
+![](../img_slides/bike.JPG){width="450"} 
+![](../img_slides/cats.mov){width="450"} ![](../img_slides/crater_lake.jpeg){width="450"}
+:::
+
+::: {.column width="25%"}
+![](../img_slides/Narrows.JPG){width="450"}
+:::
+:::
+
+## Some important tasks
+
+-   [Join the Slack page!](https://join.slack.com/t/epi525f24/shared_invite/zt-2q9fpa8h3-Yc5U91Ps0MjnemADzTM5Vw)
+
+-   Star the class website: <https://nwakim.github.io/F24_EPI_525/>
+
+-   Complete the [WhenIsGood](https://whenisgood.net/BSTA_550_OH) for office hours
+
+-   Complete Homework 0 by this Thursday at 11pm!
+
+-   Highly suggest that you make an appointment with a learning specialist through [Student Academic Support Services](https://sakai.ohsu.edu/portal/site/Student_Support)!
+
+## Let's visit the class website
+
+-   Homepage
+
+    -   GitHub
+
+-   Syllabus
+
+-   Schedule
+
+    -   Weeks, class info, exams, homeworks
+
+-   Search
+
+::: orange
+::: orange-ttl
+Important Note
+:::
+
+::: orange-cont
+**This is my first time teaching the course.** I will work hard to answer your questions in class, but I will often need some time outside of class to make sure I give you the best answer possible! Also, many of the examples are not my own. I will work to improve examples, but if you have feedback or suggestions, I am happy to hear them!
+:::
+:::
+
+## Let's go through the syllabus!
+
+[Syllabus page](https://nwakim.github.io/F2023_BSTA_550/syllabus.html)
+
+## Structure for this course
+
+- Learning the basic tools to understand statistics
+
+- For each tool we learn, there is another tool to learn 
+
+- EDIT THIS SLIDE!!
+
+## Things to discuss
+
+- We have homework every week
+  - Homework 8 is due on 11/26 (Wednesday before Thanksgiving break)
+  - You will have the option of turning it in with Homework 9

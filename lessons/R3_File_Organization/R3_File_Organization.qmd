@@ -1,0 +1,211 @@
+---
+title: "R3: File Organization"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/9/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: R3 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+## Using OneDrive
+
+-   We all have free access to OneDrive to store files
+
+-   [Let's login](https://login.microsoftonline.com/) into our online accounts
+
+-   [You can also download OneDrive for your desktop](https://www.microsoft.com/en-us/microsoft-365/onedrive/download)
+
+    -   Allows you to access the OneDrive from your computer's interface instead of the browser
+
+    -   Creates a link between your computer and the cloud!
+
+-   Let me show you mine
+
+    -   I can access all the files through RStudio as well!
+
+-   Let's take a couple minutes to log into OneDrive
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+## Folder organization
+
+-   Make a folder for our class!
+    -   I suggest naming it something like `EPI_525_F24` to indicate the class and the term
+-   Make these folders in your computer
+
+    -   Only make them in OneDrive **if** you have a desktop connection
+
+::: columns
+::: column
+-   For a project, I have the following folders
+
+    -   Background
+    -   Code
+    -   Data_Raw
+    -   Data_Processed
+    -   Dissemination
+    -   Reports
+    -   Meetings
+:::
+
+::: column
+-   For our class, I suggest making one folder for the course with the following folders in it:
+
+    -   Data
+    -   Homework
+    -   Lessons
+    -   R_activities
+    -   And other folders if you want
+:::
+:::
+
+-   Take a few minutes to create these folders
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+## Aside: folder and file naming
+
+There are a few good practices for naming files and folders for easy tracking:
+
+1. Keep the name short and relevant
+2. Use leading numbers to help organize sequential items
+3. Use dates in the format "YYYY-MM-DD" so that files are in chronological order
+4. You can label different versions if you would like to 
+5. Use "_" to separate sections of the name
+    - I also use this to separate words, but some people say you should use "-" to separate words
+
+## Let's go into `R_activities`
+
+- Make a folder called something like `R3_work`
+
+- We are going to stay in the `R_activities` folder
+
+## Creating project in RStudio
+
+-   Way to designate a working directory: basically your home base when working in R
+
+    -   We have to tell R exactly where we are in our folders and where to find other things
+
+    -   A project makes it easier to tell R where we are
+
+-   Basic steps to create a project
+
+    -   Go into RStudio
+
+    -   Create new project for this class (under `File` or top right corner)
+
+-   Once we have projects, we can open one are R will automatically know that its location is the start of our working directory
+
+-   Let me show you my process
+
+    -   I will create one in my Sample_folder
+
+    -   I will show you how I switch between classes
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+## Creating a new `qmd` file
+
+-   Basic steps
+
+    -   Create new `.qmd` (under `File` or top left corner)
+
+    -   Decide on document types/options
+
+-   Let me show you my process
+
+-   Create a `.qmd` in your Sample_folder under any folder (maybe Notes is good)
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
+## `here` package
+
+::: columns
+::: column
+-   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+
+-   Just substitute `.Rmd` with `.qmd`
+
+-   Basically, a `.qmd` file and `.R` file work differently
+
+    -   We haven't worked much with `.R` files
+
+-   For `.qmd` files, the automatic directory is the folder it is in
+
+    -   But we want it to be the main project folder
+
+-   `here` can help with that
+:::
+
+::: column
+![](images/paths.png){fig-align="center"}
+:::
+:::
+
+## Install `here` package
+
+-   Install `here` package: you can do this in your console (not inside `.qmd` file)
+
+```{r}
+#| eval: false
+install.packages("here")
+```
+
+-   Within your console, type `here()` and enter
+
+    -   Try this with `getwd()` as well
+
+## Using `here()` to load data
+
+-   There `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
+
+-   To load the dataset in our `.qmd` file, we will use:
+
+```{r}
+#| eval: false
+data = read_excel(here("./Data/CH05Q01.xls"))
+data = read_excel(here("Data", "CH05Q01.xls"))
+```
+
+::: red
+::: red-ttl
+Watch out when using lubridate package simultaneously
+:::
+
+::: red-cont
+Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will tell R to use the function `here()` within the `here` package instead of `lubridate`'s `here()` function. To call lubridate's function, we'd use `lubridate::here()`
+:::
+:::
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
