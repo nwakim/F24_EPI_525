@@ -23,7 +23,10 @@ editor_options:
 
 ## Key Course Info
 
--   If an assignment on Sakai is closed, please email me AND the TAs your assignment
+-   If an assignment on Sakai is closed or you are submitting late work, please email me AND the TAs your work
+-   For homework, you will have TWO no-questions-asked, 3-day extensions: one for the first assignment, and one for either the solutions or presentation. You just need to send me and the TAs a quick email saying "I am using my no-questions-asked extension for Homework \_\_ assignment/solutions/presentation."
+-   Attendance policy: attend in person and fill out exit tickets for 12 out of the 19 classes
+-   The class will end on December 9, 2024. **All coursework is expected to be completed by December 13, 2024 at 11pm.**
 
 ## Description
 
@@ -43,9 +46,9 @@ At the end of this course, students should be able to...
 
 ## Meeting Times
 
-Mondays          1:00 PM -- 2:50 PM PST in RPV Room A/B
+Mondays          1:00 PM -- 2:50 PM PST in VPT 515
 
-Wednesdays    1:00 PM -- 2:50 PM PST in RPV Room A/B
+Wednesdays    1:00 PM -- 2:50 PM PST in VPT 515
 
 ```{r}
 #| echo: false
@@ -58,7 +61,7 @@ g=3
 
 The primary textbook for EPI 525 will be *Introductory Statistics for the Life and Biomedical Sciences* by Vu and Harrington.
 
--   The textbook website is https://openintro.org/book/biostat/, which includes links to acquire the book as either a pdf or paperback. The pdf of the textbook is free, other than an optional contribution.
+-   The textbook website is <https://openintro.org/book/biostat/>, which includes links to acquire the book as either a pdf or paperback. The pdf of the textbook is **free**, other than an optional contribution.
 -   After acquiring the pdf version of the book, you will also have the option to download a tablet friendly version pdf with smaller margins – I actually prefer the tablet version even on my computer.
 
 #### Supplemental Readings (Optional)
@@ -153,7 +156,7 @@ The course is structured around the following four components:
 +--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Lecture                        | In person    | Twice, Weekly | Course content is provided through in-person lectures. Lectures will consist of didactic lessons, interactive examples, PollEverywhere questions, and work time. Sessions will be recorded through Echo360 and linked to this site. **Attending or viewing the lecture within 7 days of the original lecture date is mandatory.** Class attendance will be taken through an Exit Ticket. You must take the Exit Ticket to verify your attendance.                        |
 +--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Homework                       | Online       | Weekly        | The course includes 9 homework assignments. They are an opportunity for you to engage with important concepts, practice coding, and apply calculating skills. Homework assignments should be submitted online, and will be graded for completeness by the TAs. Students are encouraged to work in groups for homework assignments, but each person should do their own summary and hand in their work. **Homework assignments will be due on Thursday at 11 PM.**        |
+| Homework Assignment            | Online       | Weekly        | The course includes 9 homework assignments. They are an opportunity for you to engage with important concepts, practice coding, and apply calculating skills. Homework assignments should be submitted online, and will be graded for completeness by the TAs. Students are encouraged to work in groups for homework assignments, but each person should do their own summary and hand in their work. **Homework assignments will be due on Thursday at 11 PM.**        |
 +--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Homework Solutions             | Online       | Weekly        | The course includes 9 homework solutions. With groups of 4, you will make a homework key for 4 questions (that Nicky chooses). Each group member will be in charge of turning in one question's solutions. Homework solutions should be submitted online, and will be graded by the TAs for correctness. The group will receive the same grade, which is summed across questions. **Homework solutions will be due week following the assignment on \_\_\_\_ at 11 PM.** |
 +--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -179,11 +182,13 @@ Grades will be based on homework assignments, midterm exam, class "attendance", 
 +:-------------------------:+:----------------------:+:----------------:+:-----------------------------:+
 | **Course activity**       | **Type of Assessment** | **Due Dates**    | **Percentage of final grade** |
 +---------------------------+------------------------+------------------+-------------------------------+
-| Homework Assignment       | Formative              | Every week       | 33%                           |
+| Homework Assignment       | Formative              | Every week       | 27%                           |
 +---------------------------+------------------------+------------------+-------------------------------+
 | Homework Solutions        | Summative              | Every week       | 40%                           |
 +---------------------------+------------------------+------------------+-------------------------------+
-| Homework Presentations    | Summative              | Twice in quarter | 20%                           |
+| Homework Presentations    | Summative              | Twice in quarter | 18%                           |
++---------------------------+------------------------+------------------+-------------------------------+
+| Group evals               | N/A                    | Twice in quarter | 8%                            |
 +---------------------------+------------------------+------------------+-------------------------------+
 | Exit tickets (Attendance) | N/A                    | Twice Weekly     | 5%                            |
 +---------------------------+------------------------+------------------+-------------------------------+
@@ -192,7 +197,7 @@ Grades will be based on homework assignments, midterm exam, class "attendance", 
 
 ### Homework grading
 
-No student has the same amount of time available to dedicate to homework. This class may not be a priority to you, you may be taking several other courses, or you may need to dedicate time to other activities. Homeworks are **formative assessments**, meaning its purpose is to help you learn and practice. To reduce the pressure on you to have perfect homework (the first time around), I have a very simple grading policy: **Your homework will be given a check mark if you turn in completed work (whether it is correct or wrong).** I highly encourage you to stay up-to-date with the homeworks and put in as much effort as you can. This will be the most helpful work in this class!
+No student has the same amount of time available to dedicate to homework. This class may not be a priority to you, you may be taking several other courses, or you may need to dedicate time to other activities. Homework assignments are **formative assessments**, meaning its purpose is to help you learn and practice. To reduce the pressure on you to have perfect homework (the first time around), I have a very simple grading policy: **Your homework will be given a check mark if you turn in completed work (whether it is correct or wrong).** I highly encourage you to stay up-to-date with the homeworks and put in as much effort as you can. This will be the most helpful work in this class!
 
 Because each homework assignment has dependent assignments (solutions and presentations), I will not accept late homework. If you have an accomodation, then there are exceptions to this. If you turn it in a couple hours after the assignment is closed, that is fine! The main reason why I have this strict rule is so that you do not get behind on your homework nor prevent your group from moving forward on the solutions.
 
@@ -253,7 +258,7 @@ Every professor has different expectations when assigning certain work or provid
 +--------------------+------------------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 | Homework           | Formative              | -   Work out each problem on your own as much as you can                                | -   Discuss problems with your group                                                               |
 |                    |                        |                                                                                         |                                                                                                    |
-|                    |                        | -   Talk through problems with a peer                                                   | -   For answers that involve writing sentences, check with me or a TA if your answer is sufficient |
+| assignment         |                        | -   Talk through problems with a peer                                                   | -   For answers that involve writing sentences, check with me or a TA if your answer is sufficient |
 |                    |                        |                                                                                         |                                                                                                    |
 |                    |                        | -   Go to Office Hours for help                                                         | -   Go to Office Hours to ask about your work                                                      |
 |                    |                        |                                                                                         |                                                                                                    |
@@ -282,7 +287,7 @@ I encourage you to make your best effort to submit all assignments on time, but 
 
 -   For homework, I ask you to email me and the TAs directly about any late submissions. You can explain your circumstances and may ask us for an extension. I am very likely to grant an extension, but **I want to emphasize how important it will be to stay on track with your homework**! Your group is depending on you, and delaying homework may only add stress on the next homework!
 
--   For homework, you will have TWO no-questions-asked, 3-day extensions: one for the first assignment part and one for either the solutions or presentation. Please use this wisely! You just need to send me a quick email saying "I am using my no-questions-asked extension for Lab \_\_."
+-   For homework, you will have TWO no-questions-asked, 3-day extensions: one for the first assignment part and one for either the solutions or presentation. Please use this wisely! You just need to send me a quick email saying "I am using my no-questions-asked extension for Homework \_\_ assignment/solutions/presentation."
 
 -   If you have a emergency involving your self, family, pet, friend, classmate, or anything/one deemed important to you, **please do not worry about immediately contacting me**. We can work something out after your emergency. If I contact you during an emergency, it is only because I am worried, and you do NOT need to respond until you are able. 
 
@@ -294,7 +299,7 @@ If you think a question was incorrectly graded, first compare your answer to the
 
 You are expected to attend class, participate in-class polls, and complete the exit ticket. For students who miss class or need a review, I will make video and audio recordings of lectures available. There are no guarantees against technical or other challenges for the recording availability or quality.
 
-**You will need to attend at least 12 classes in person.** While I want attendance to be a flexible thing, I need to set certain requirements around in-person attendance to align with the school's policy.
+**You will need to attend at least 12 classes in person.** There are 19 classes total, so you are welcome to watch the recordings for up to 7 classes in lieu of in-person attendance. While I want attendance to be a flexible thing, I need to set certain requirements around in-person attendance to align with the school's policy.
 
 This is meant to keep you on track within the course and prevent a pile up of material. Make sure to complete the exit ticket at the end of class to demonstrate attendance.
 
@@ -302,7 +307,7 @@ This is meant to keep you on track within the course and prevent a pile up of ma
 
 Please note that this section has been motivated by [Dr. Steven Bedrick's Course Policies and Grading site](https://dmice.ohsu.edu/bedricks/courses/bmi525/policies.html) for BMI 525. (Note that this is a good example of informal attribution of someone else's work.)
 
-In this class, it is easy to use ChatGPT or other AI tools to solve your homework for you. Many problems follow a basic structure that is especially easy for ChatGPT to solve. In this class, you may use ChatGPT to help with your homework. You may even ask for direct answers. However, there are a few things I do not want you to do:
+In this class, it is easy to use ChatGPT or other AI tools to solve your homework for you. Many problems follow a basic structure that is especially easy for ChatGPT to solve. In this class, you **may** use ChatGPT to help with your homework. You may even ask for direct answers. However, there are a few things I do not want you to do:
 
 -   **Do not copy ChatGPT's answer directly into your homework.** Your homework is graded for full credit if you turn it in, in any state, so turning in ChatGPT's answers is unacceptable. I rather see half-written answers that show what you're thinking than see a correct answer from ChatGPT.
 
@@ -312,8 +317,10 @@ In this class, it is easy to use ChatGPT or other AI tools to solve your homewor
 
 At the end of the day, ChatGPT is a resource that will be available to you in a job and outside of school. Thus, we should use it as a tool in school as well! Let me know if ChatGPT helped you understand something! I would love to incorporate it into future classes!
 
+If I notice your work closely resembles ChatGPT, I will ask that you either redo your work or accept zero points on the assignment.
+
 ::: callout-important
-You can think of this class as assembling a toolbox. When a handyperson starts working for the first time, they need to buy their tools. For their first few jobs, they might need help finding their tools, or remembering which tool is best used for what action. Eventually, they get to know their tools well, and using them appropriately becomes second nature.
+You can think of this class as assembling a toolbox. When a handyperson starts working for the first time, they need to acquire new tools. For their first few jobs, they might need help finding their tools, or remembering which tool is best used for what action. Eventually, they get to know their tools well, and using them appropriately becomes second nature.
 
 **For now, ChatGPT can help us find and use our tools, but we need to work towards using them as second nature!**
 :::
@@ -326,7 +333,7 @@ You can think of this class as assembling a toolbox. When a handyperson starts w
 *]{.underline}I believe that everyone has the ability to be successful in this course and I have put a lot of effort into designing the course in a way that maximizes your learning to ensure your success. Please talk to me before or after class or stop by my office if there is anything you want to discuss or about which you are unclear. I want to be supportive of your learning and growth.
 
 [*Inclusive & supportive learning community*]{.underline}\
-I believe that learning happens best when we all learn together, as a community. This means creating a space characterized by generous listening, civility, humility, patience, and hospitality. I will attempt to promote a safe climate where we examine content from multiple cultural perspectives, and I will strive to create and maintain a classroom atmosphere in which you feel free to both listen to others and express your views and ask questions to increase your learning.
+I believe that learning happens best when we all learn together, as a community. This means creating a space characterized by generous listening, civility, humility, patience, and hospitality. I will attempt to promote a safe climate where we examine content from multiple perspectives. I will strive to create and maintain a classroom atmosphere in which you feel free to both listen to others and express your views and ask questions to increase your learning.
 
 [*Openness to feedback*]{.underline}\
 I appreciate straightforward feedback from you regarding how well the class is meeting your needs. Let me know if material is not clear or when its relevance to the student learning outcomes for the course is not apparent. In particular, let me know if you identify bias or stereotyping in my teaching materials as I will seek to continuously improve. Please also let me know if there's an aspect of the class you find particularly interesting, helpful, or enjoyable!
@@ -335,24 +342,24 @@ I appreciate straightforward feedback from you regarding how well the class is m
 *]{.underline}I will monitor email as well as the discussion board daily and try respond to all messages within 24 hours Monday-Friday.
 
 [*Clear guidelines and prompt feedback on assignments*]{.underline}\
-I will provide clear instructions for all assignments, and a grading rubric when applicable. I will provide detailed feedback on your submissions and will update grades promptly in Sakai.
+I will provide clear instructions for all assignments, and a grading rubric when applicable. The TAs and I will provide detailed feedback on your submissions and will update grades promptly in Sakai.
 
 ### Student Expectations and Resources
 
 [*Attend class*]{.underline}**\
-**You are expected to attend all scheduled class meetings synchronously or watch the recording within 7 days. Attendance is taken through exit tickets. If you have issues accessing the poll on a specific day, please let me know. 
+**You are expected to attend at least 12 scheduled class meetings in-person. Attendance is taken through exit tickets. If you have issues accessing the poll on a specific day, please let me know. 
 
 [*Participate**\
-***]{.underline}I encourage you to participate actively in class and online discussions. I will expect all students, and all instructors, to be respectful of each other's contributions, whether I agree with them or not. Professional interactions are expected.
+***]{.underline}I encourage you to participate actively in class and in Slack discussions. I will expect all students, and all instructors, to be respectful of each other's contributions, whether I agree with them or not. Professional interactions are expected.
 
 [*Build rapport*]{.underline}\
-If you find that you have any trouble keeping up with assignments or other aspects of the course, make sure you let me know as early as possible. As you will find, building rapport and effective relationships are key to becoming an effective professional. Make sure that you are proactive in informing me when difficulties arise during the quarter so that I can help you find a solution.
+If you find that you have any trouble keeping up with assignments or other aspects of the course, make sure you let me know as early as possible. As you will find, building rapport and effective relationships are key to becoming an effective professional. Make sure that you are proactive in informing me when difficulties arise during the quarter so that I can help you find a solution in regards to coursework.
 
 [*Complete assignments*]{.underline}\
-All assignments for this course will be submitted electronically through Sakai unless otherwise instructed.  I encourage you to make your best effort to submit all assignments on time, but I understand that sometimes circumstances arise that are beyond our control. If you need an extension, please contact me in congruence with the Late Policy.
+All assignments for this course will be submitted electronically through Sakai unless otherwise instructed. I encourage you to make your best effort to submit all assignments on time, but I understand that sometimes circumstances arise that are beyond our control. If you need an extension, please contact me in congruence with the Late Policy.
 
 [*Seek help if you need it*]{.underline}**\
-**I believe it is important to support the physical and emotional well‐being of my students. If you are experiencing physical or mental health issues, I encourage you to use the resources on campus such as those listed below. If you have a health issue that is affecting your performance or participation in the course, and/or if you need help connecting with these resources, please contact me.
+**I believe it is important to support the physical and emotional well‐being of my students. If you are experiencing physical and/or mental health issues, I encourage you to use the resources on campus such as those listed below. If you have a health issue that is affecting your performance or participation in the course, and/or if you need help connecting with these resources, please contact me.
 
 -   Student Health and Wellness Center (SHW), [Website](https://www.ohsu.edu/education/student-health-and-wellness), 503-494-8665 (OHSU Students only)
 
@@ -361,7 +368,7 @@ All assignments for this course will be submitted electronically through Sakai u
 [*Inform your instructor of any accommodations needed*]{.underline}\
 You should speak with or email me before or during the first week of classes regarding any special needs. Students seeking academic accommodations should register with the appropriate service under the School policies below.
 
-Some religious holidays may occur on regularly scheduled class days. Because available class hours are so limited in number, we will have to hold class on all such days. Class video recordings will be available and you are encouraged to engage with the material outside of the regular class time. You are also encouraged to come to office hours with questions from the session.
+Some religious holidays may occur on regularly scheduled class days. Because available class hours are so limited in number, we will have to hold class on all such days. Class video recordings will be available and you are encouraged to engage with the material outside of the regular class time. Please email me about your absence. I will excuse the absece from your grade. You are also encouraged to come to office hours with questions from the session.
 
 [*Commit to integrity*]{.underline}**\
 **As a student in this course (and at PSU or OHSU) you are expected to maintain high degrees of professionalism, commitment to active learning and participation in this class and also integrity in your behavior in and out of the classroom.
@@ -384,10 +391,6 @@ E-mail should be used only for messages that are private in nature. Please send 
 ### SPH Writing Lab
 
 The School of Public Health Writing Support serves graduate students (master's and PhD) in SPH, offering help on all professional writing tasks, including class papers, dissertations, job application documents, personal statements, and grant applications, to name a few. Leslie Bienen, MFA, DVM offers one-on-one writing support and other workshops. Appointments are virtual for the time being. You can make an appointment by contacting [writingsupportsph\@pdx.edu](mailto:writingsupportsph@pdx.edu) or making an appointment through [Calendly](https://calendly.com/writingsupportsph/writing-meeting).
-
-### Grammarly Subscription
-
-The School of Public Health students have access to a subscription version of Grammarly. While Grammarly cannot improve the argument and flow of your work, it can help with spelling, grammar, and sentence structure. If you are interested in this tool, please add your name to this email [form](https://docs.google.com/forms/d/1IQWFsARrTJlasK2a5JTonR4ygr8MxqIzbh_bAxKmWWI/edit?ts=614ce07a) and they will get you added to the subscription. Be sure to use your PSU login credentials to access the form.
 
 ### Student Wellness
 
