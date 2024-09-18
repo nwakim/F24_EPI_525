@@ -1,0 +1,42 @@
+---
+title: "Homework 3 Answers"
+subtitle: "BSTA 550"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+Selected answers (or hints) not provided at the end the book:
+
+-   Chapter 5
+
+    -   NTB \# 1: 0.3916
+
+-   Chapter 7
+
+    -   \# 2: $X\in(0,\infty)$, continuous; $Y\in\{0,1,2,\ldots\}$, discrete
+
+    -   \# 10: $X_j\in[0,\infty),j=1,\ldots,100$; $Y\in[0,\infty)$; both continuous
+
+    -   \# 16: $Y$ could be 0
+
+    -   \# 18: Yes, a r.v. can be both. Give an example!
+
+-   Chapter 8
+
+    -   \# 2: (a) $p(x)=\binom{7}{x}(.5)^7$ for $x=0,1,2,\ldots,7$
+
+    -   \# 9: (a) $c = \frac{1}{8}$
+
+    -   \# 10:
+
+        ::: center
+        |  $x$   |  2   |  4  |  6   |  8   |
+        |:------:|:----:|:---:|:----:|:----:|
+        | $p(x)$ | 3/10 | 1/2 | 3/20 | 1/20 |
+        :::

@@ -1,0 +1,44 @@
+---
+title: "Homework 2 Answers"
+subtitle: "BSTA 550"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+Selected answers (or hints) not provided at the end the book:
+
+-   Chapter 22
+
+    -   \# 30: (a) 2,835     (b) 405     (c) 10,780     (d) 7,980
+
+    -   \# 40: 0.6666667
+
+    -   \# 42: 0.002116402 (This is the answer when $n=5$. Your answer needs to be in terms of $n$.)
+
+    -   \# 44: 0.3
+
+    -   \# 46: 0.3333333
+
+    -   \# 48: 0.007936508 (This is the answer when $n=5$. Your answer needs to be in terms of $n$.)
+
+-   Chapter 3
+
+    -   \# 4: (a) 0.111328    (b) 0.004872    0.995128
+
+    -   \# 10: (c) 0.384 If you have the right answer to (c), then you should be able to figure out the rest (see (e)).
+
+    -   \# 12: No.
+
+    -   NTB #1: (a) 0.0799     (b) 0.07553     (c) 0.0655
+
+-   Chapter 4
+
+    -   #4: 0.25
+
+    -   \# 12: (a) 0.4285714     (b) 0.4285714     (c) 0.1428571

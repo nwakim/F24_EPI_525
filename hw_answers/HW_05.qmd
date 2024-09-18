@@ -1,0 +1,66 @@
+---
+title: "Homework 5 Answers"
+subtitle: "BSTA 550"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+Selected answers (or hints) not provided at the end the book:
+
+-   Chapter 12
+
+    -   \# 2:  64.8
+
+    -   \# 12:  1,096,357
+
+-   Chapter 13
+
+    -   \# 4:  (a) 260/9     (b) 2.833     (c) $2.679\times 10^{-5}$     (d) Same idea as (c) Replace 10's with 100.     
+
+    -   \# 6:  (a) $p_X(x)=\binom{4}{x}.3^x .7^{4-x}$, for $x=0,1,\ldots,4$     (d) 0.3483     (e) 0.9163     (f) 0.0233     (g) 1
+
+    -   \# 8:  (a) T     (b) F     (c) F     (d) F     (e) T     (f) T    (g) T
+
+    -   \# 10:  (a) T     (b) T    (c) F     (d) T    (e) T     (f) F    (g) T     (h) T (nonnegative instead of positive)     (i) F
+
+-   Chapter 15
+
+    -   \# 18  (a) Bin(21,0.65)     (b) 4.78     
+
+-   Chapter 16
+
+    -   \# 8  (a) 14.28      (b) code below     (c) $1.03\times 10^{-6}$    (d) 10 questions: 91.43 minutes    
+    ```{r}
+    1-pgeom(q = 18, prob = 0.07)
+    ## OR
+    pgeom(q = 18, prob = 0.07, lower.tail = F)
+    ```
+
+
+-   Chapter 17
+
+    -   \# 6   (a) 400, 87.18     (b) No     
+
+    -   \# 12   (c) 0.8000
+
+-   Chapter 18
+
+    -   \# 24  (c) 0.8571
+
+    -   \# 26  162,754.8
+
+-   Chapter 19
+
+    -   \# 6:  (c) 15.625     (d) 0.0486     (f) 0.0488
+
+    -   \# 18:   100
+
+-   Chapter 20
+
+    -   \# 2:  (a) 0.0001     (b) Discrete since $X$ has a finite number of possible values. Uniform since each outcome is equally likely.     (c) $X$ = randomly selected 4-digit ID#; $X=0000,0001,\ldots,9999$     (d) 5000.5     (e) 8,333,333.25

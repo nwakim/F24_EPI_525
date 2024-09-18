@@ -1,0 +1,120 @@
+---
+title: "Homework 8 Answers"
+subtitle: "BSTA 550"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+Selected answers (or hints) not provided at the end the book:
+
+-   Chapter 25
+
+    -   \# 4:   7/16
+
+    -   \# 8:  (a) $\frac{25}{228}$     (b) $f_X(x)=\frac{1}{12}(x+1)$, for $0\leq x\leq 4$     (c) $f_Y(y)=\frac{3}{76}(y^2+1)$, for $0\leq y\leq 4$
+
+    -   \# 18:  5/6
+
+    -   \# 24:  (a) $f_X(x)=-2e^{-2x}+2e^{-x}$, for $x\geq 0$     (b) $f_Y(y)=2e^{-2y}$, for $y\geq 0$
+
+-   Chapter 26
+
+    -   \# 12:  (b) $\frac{233}{256}$     (c) $\frac{65}{256}$     (d) $\frac{1}{512}$
+
+    -   \# 20:  (a) Yes.     (b) $\frac{15}{16}$
+
+    -   NTB \# 3: (b) 0.09999546   (d) $f_Z(z) =\Big(\frac{11}{5} - \frac{2z}{5}\Big)e^{-2z}$, for what values of $z$?
+
+-   Chapter 27
+
+    -   \# 6: $f_{X|Y}(x|y)=\frac{e^{-x/4-y/5}}{4(e^{-y/5}-e^{-9y/20})}$, for $0< x< y$
+
+    -   \# 8: $f_{X|Y}(x|y)=\frac{1-x^2}{1-y-\frac{(1-y)^3}{3}}$, for $0\leq x, 0\leq y, x+y\leq 1$
+
+    -   \# 12: (a) $f_{X|Y}(x|y)=\frac{1}{2}$    (c) $\frac{4}{7}$
+
+-   Chapter 28
+
+    -   \# 10: (a) 8/9     (b) 14/3     
+
+    -   \# 18: 4/5
+
+-   Chapter 29
+
+    -   \# 10: (a) 26/81     (b) 74/9
+
+    -   \# 14: (a) 67/3     (b) 1/14     (c) 25/12     (d) $\sqrt{25/12}$
+
+    -   \# 26: 250
+
+    -   \# 32: See notes (or book) for the proof from the discrete random variables case. The proof doesn't depend on what type of random variable (discrete vs. continuous) is being used.
+
+    -   NTB \# 3: (a) 63     (b) 287/3     (c) -1, 41/3     (d) -7, 287/3
+
+-   Chapter 30
+
+    -   \# 4: $f_x(x)=1/2$ for $2\leq x\leq 4$
+
+    -   \# 8: (a) T     (b) T     (c) F
+
+    -   \# 10: (a) F     (b) T
+
+    -   \# 12: (a) T     (b) T     (c) F     (d) T
+
+-   Chapter 31
+
+    -   \# 14: (a) 0.25     (b) 0.02887     (c) 0.063     (d) 0.0145     (e) 0.01625     (f) 0.0055     (f) 6.195    (g) 0.00433     (h) 61.95     (i) 0.0433
+
+    -   \# 17: 2.25
+
+    -   \# 18: 7/15
+
+-   Chapter 32
+
+    -   \# 8: 0.2526
+
+    -   \# 5: 0.8047
+
+    -   \# 10: 0.4323
+
+-   Chapter 33
+
+    -   #10: (a) $f_x(x)=\frac{x}{9}e^{-x/3}$ for $x> 0$     (b) 0.4963
+
+-   Chapter 35
+
+    -   \# 6: (a) 0     (b) -1.13     (c) $\pm 0.32$
+
+    -   \# 10: (a) 0.0475     (b) 0.0475     (c) 0.2283     (d) 68.97 to 81.03     (e) 48 to 102     (f) 68.97
+
+    -   \# 24: (a) 0.2119     (b) 0.0011
+
+    -   NTB \# 5:   0.002
+
+-   Chapter 36
+
+    -   \# 4: 0.0044
+
+    -   \# 12: (a) 0.9525     (b) 0.7939     (c) 0.7939
+
+    -   \# 14: 0.5911
+
+    -   \# 16: (a) $R=8.225\sigma+25\mu$     (b) $R=16.45\sigma+100\mu$     (c) $R=164.5\sigma+10,000\mu$     (d) $R=1.645\sqrt{n}\sigma+n\mu$
+
+-   Chapter 37
+
+    -   \# 2: 0.8869
+
+    -   \# 4: 0.0023
+
+    -   \# 20: 0.3936
+
+    -   \# 24: 0.4562
+
+    -   \# 30: (b) 0.0022     (c) $478.696\approx 479$

@@ -1,0 +1,76 @@
+---
+title: "Homework 6 Answers"
+subtitle: "BSTA 550"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+Selected answers (or hints) not provided at the end the book:
+
+-   Calculus Review
+
+    -   (a)  $c(\frac{y^{2}}{2}+y^{2})$
+
+    -   (b)  $\frac{8}{9}xy^{2}+\frac{5}{9}y^{4}$
+
+    -   (c)  $\frac{8}{9}x^{2}y+\frac{20}{9}xy^{3}$
+
+    -   (d)  $-2e^{-2y}+2e^{-y}$
+
+    -   (e)  $xe^{-x}$
+
+    -   (f)  $-\frac{2}{3}(e^{-7x}-e^{-4x})$
+
+    -   (g)  $\frac{9}{2}$
+
+    -   (h)  $\frac{9}{2}$
+
+    -   (i)  $\frac{9}{2}$
+
+    -   (j)  $\frac{9}{2}$
+
+-   Chapter 24
+
+    -   \# 2: (a) Discrete     (b) Discrete     (c) Continuous
+
+    -   \# 22: $$f_X(x) = \left\{
+                \begin{array}{ll}
+                    0 & \quad x <0 \\
+                    \frac{7x}{4} & \quad 0\leq x\leq 1 \\
+                    0 & \quad 1< x< 7 \\
+                    \frac{1}{8} & \quad 7\leq x\leq 8 \\
+                    0 & \quad  x>8 \\
+                \end{array}
+            \right.$$
+
+-   Chapter 25
+
+    -   \# 4:   7/16
+
+    -   \# 8:  (a) $\frac{25}{228}$     (b) $f_X(x)=\frac{1}{12}(x+1)$, for $0\leq x\leq 4$     (c) $f_Y(y)=\frac{3}{76}(y^2+1)$, for $0\leq y\leq 4$
+
+    -   \# 18:  5/6
+
+    -   \# 24:  (a) $f_X(x)=-2e^{-2x}+2e^{-x}$, for $x\geq 0$     (b) $f_Y(y)=2e^{-2y}$, for $y\geq 0$
+
+-   Chapter 26
+
+    -   \# 12:  (b) $\frac{233}{256}$     (c) $\frac{65}{256}$     (d) $\frac{1}{512}$
+
+    -   \# 20:  (a) Yes.     (b) $\frac{15}{16}$
+
+    -   NTB \# 3: (b) 0.09999546   (d) $f_Z(z) =\Big(\frac{11}{5} - \frac{2z}{5}\Big)e^{-2z}$, for what values of $z$?
+
+-   Chapter 27
+
+    -   \# 6: $f_{X|Y}(x|y)=\frac{e^{-x/4-y/5}}{4(e^{-y/5}-e^{-9y/20})}$, for $0< x< y$
+
+    -   \# 8: $f_{X|Y}(x|y)=\frac{1-x^2}{1-y-\frac{(1-y)^3}{3}}$, for $0\leq x, 0\leq y, x+y\leq 1$
+
+    -   \# 12: (a) $f_{X|Y}(x|y)=\frac{1}{2}$    (c) $\frac{4}{7}$

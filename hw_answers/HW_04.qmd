@@ -1,0 +1,44 @@
+---
+title: "Homework 4 Answers"
+subtitle: "BSTA 550"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+Selected answers (or hints) not provided at the end the book:
+
+-   Chapter 9
+
+    -   NTB \# 1 Partial answers:
+
+        -   
+
+            (g) $p_{X|Y}(X=\text{high school}| Y=\text{no smoking at all}) = 0.476$
+
+        -   
+
+            (h) $p_{Y|X}( Y=\text{no smoking at all}|X=\text{high school}) = 0.200$
+
+-   Chapter 10
+
+    -   \# 6:  750.5
+
+    -   \# 8:  0.9
+
+    -   \# 10:   201
+
+    -   \# 14:   (a) 1.875     (b) 3.125     
+
+-   Chapter 11
+
+    -   \# 2:  1.6
+
+    -   \# 18:  a) 48.5     (b) 96     
+
+    -   \# 20:  $\approx$ 23.077
