@@ -1,0 +1,279 @@
+---
+title: "R04: Intro to Quarto doc, packages, and importing data"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/7/2024"
+categories: ["Week 2"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    toc: true
+    toc-depth: 1
+    toc-title: Class Overview
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: R2 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+## How are data stored, how do we use them? 
+
+- Often, data are in an Excel sheet, or a plain text file (.csv, .txt)
+- `.csv` files open in Excel automatically, but actually are plain text
+- Usually, columns are variables/measures and rows are observations (i.e. a person's measurements)
+
+### Data in R 
+
+* We can import data from many file types, including .csv, .txt., and .xlsx
+    * We will cover this on a later date
+* Once imported, R typically stores data as __data frames__, or __tibbles__ if using the `tidyverse` package (more on this later).
+    * For our purposes, these are essentially the same, and I will tend to use the terms interchangeably.
+    * These are examples of what we call __object types__ in R.
+
+
+
+## Data frame example
+
+::: columns
+::: {.column width="54%"}
+
+```{r}
+df <- data.frame(
+  IDs=1:3, 
+  gender=c("male", "female", "Male"), 
+  age=c(28, 35.5, 31),
+  trt = c("control", "1", "1"),
+  Veteran = c(FALSE, TRUE, TRUE)
+  )
+df
+```
+
+* __Vectors__ vs. __data frames__
+    * a data frame is a collection (or array or table) of vectors
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="44%"}
+::: {style="font-size: 90%;"}
+* Different columns can be of different data types (i.e. numeric vs. text)
+* Both numeric and text can be stored within a column (stored together as *text*).
+
+* Vectors and data frames are examples of _**objects**_ in R. 
+  + There are other types of R objects to store data, such as matrices, lists.
+:::
+:::
+:::
+
+
+## Observations & variables
+
+::: columns
+::: {.column width="60%"}
+
+```{r}
+df
+```
+
+![[ISLBS](https://www.openintro.org/book/biostat/)](../img_slides/Fig1.8_variable_types.png){fig-align="center"}
+
+:::
+::: {.column width="40%"}
+::: {style="font-size: 90%;"}
+* Book refers to a dataset as a _data matrix_ 
+
+* Rows are usually __observations__
+* Columns are usually __variables__ 
+
+
+* __[How many observations are in this dataset?]{style="color:green"}__
+
+* __[What are the variable types in this dataset?]{style="color:green"}__
+::: 
+:::
+:::
+
+
+
+
+## Variable (column) types
+::: {style="font-size: 70%;"}
+R type | variable type| description
+---|---|---
+integer | discrete | integer-valued numbers
+double or numeric | continuous| numbers that are decimals
+factor  | categorical | categorical variables stored with levels (groups)
+character | categorical | text, "strings"
+logical | categorical | boolean (TRUE, FALSE)
+
+<!-- Each variable (column) in a data frame can be of a different type. -->
+
+* View the __structure__ of our data frame to see what the variable types are:
+:::
+```{r}
+str(df)
+```
+
+<!-- * Note that the ID column is _integer_ type since the values are all whole numbers, although we likely would think of it as being a categorical variable and thus prefer it to be a factor. -->
+
+
+
+
+## Fisher's (or Anderson's) Iris data set 
+
+Data description: 
+
+* n = 150 
+* 3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+  + 50 measurements of each type of Iris
+* __variables__:
+  + sepal length, sepal width, petal length, petal width, and species
+
+_[Can the iris species be determined by these variables?]{style="color:purple"}_
+
+<center><img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%"></center>
+[Gareth Duffy](https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project)
+
+
+
+## View the `iris` dataset
+
+::: {style="font-size: 80%;"}
+* The `iris` dataset is already pre-loaded in *base* R and ready to use.
+* Type the following command in the console window
+  - _Warning: this command cannot be rendered. It will give an error._
+:::
+
+\
+
+:::columns
+::: {.column width="30%"}
+```{r}
+#| eval: false
+
+View(iris)
+```
+::: {style="font-size: 80%;"}
+A new tab in the scripting window should appear with the `iris` dataset.
+:::
+:::
+
+::: {.column width="70%"}
+
+![](../img_slides/screenshot_iris_View.png){fig-align="center"}
+:::
+:::
+
+
+## Data structure
+
+* What are the different __variable types__ in this data set?
+
+\
+
+```{r}
+str(iris)   # structure of data
+```
+
+
+
+
+## Data set summary
+
+```{r}
+summary(iris)
+```
+
+
+
+## Data set info
+
+```{r}
+dim(iris)
+nrow(iris)
+ncol(iris)
+names(iris)
+```
+
+
+
+
+## View the beginning or end of a dataset
+
+```{r}
+head(iris)
+tail(iris)
+```
+
+
+
+## Specify how many rows to view at beginning or end of a dataset
+
+```{r}
+head(iris, 3)
+tail(iris, 2)
+```
+
+
+
+## The `$`
+
+- Suppose we want to single out the column of petal width values.
+- One way to do this is to use the `$`
+    * `DatSetName$VariableName`
+
+```{r}
+iris$Petal.Width
+```
+
+
+
+## Example using the `$`
+
+The `$` is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.
+
+\
+
+```{r}
+mean(iris$Petal.Width)
+sd(iris$Petal.Width)
+median(iris$Petal.Width)
+```
+
+
+
+## Inline code
+
+::: {style="font-size: 90%;"}
+* With markdown you can also report __R code output inline__ with the text instead of using a chunk.
+
+::: columns
+::: {.column width="50%"}
+Text in editor:
+
+![](../img_slides/screenshot_code_inline_petalwidth.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+Output: 
+
+The mean petal width for all 3 species combined is `r round(mean(iris$Petal.Width),1)` 
+(SD = `r round(sd(iris$Petal.Width),1)`) cm.
+
+:::
+:::
+
+- Reporting summary statistics this way in a report, makes the numbers computationally reproducible.
+- For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.
+:::

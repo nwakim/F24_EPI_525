@@ -4,7 +4,6 @@ author: "Nicky Wakim, Meike Niederhausen"
 title-slide-attributes:
     data-background-color: "#3070BF"
 date: "09/30/2024"
-categories: ["Week 1"]
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -23,11 +22,18 @@ execute:
 
 # Learning Objectives
 
-1. Contextualize the difference between Population vs. sample
-2. Sampling methods
-3. Experiments vs. Observational studies
+1. Contextualize the difference between a target population and its sample.
+2. Explain different sampling methods and understand their advantages. 
+3. Understand two overarching study designs, experiments and observational studies.
 
 # Learning Objectives
+
+::: lob
+1. Contextualize the difference between a target population and its sample.
+:::
+
+2. Explain different sampling methods and understand their advantages. 
+3. Understand two overarching study designs, experiments and observational studies.
 
 ## Poll everywhere
 
@@ -119,6 +125,13 @@ What is the target population here?
 - Now we can start sampling from our target population...
 
 # Learning Objectives
+
+1. Contextualize the difference between a target population and its sample.
+
+::: lob
+2. Explain different sampling methods and understand their advantages. 
+:::
+3. Understand two overarching study designs, experiments and observational studies.
 
 ## Sampling 
 
@@ -242,62 +255,125 @@ __"Random" samples can be unrepresentative by random chance__
 
 # Learning Objectives
 
+1. Contextualize the difference between a target population and its sample.
+2. Explain different sampling methods and understand their advantages. 
+
+::: lob
+3. Understand two overarching study designs, experiments and observational studies.
+:::
+
+## Two basic study designs
+
+::: columns
+::: column
+::: pink2
+::: pink2-ttl
+Experiment
+:::
+::: pink2-cont
+
+Researchers directly influence how data arise
+
+- Such as: assigning groups of individuals to different treatments and assessing how the outcome varies across treatment groups
+
+- Three major parts to an experiment
+  - Control
+  - Randomization
+  - Replication
+  
+:::
+:::
+::: 
+::: column
+::: green2
+::: green2-ttl
+Observational study
+:::
+::: green2-cont
+
+Researchers merely observe and record data, without interfering
+with how the data arise
+
+- For example, to investigate why certain diseases develop, researchers
+might collect data by conducting surveys, reviewing medical records, or following a cohort of
+many similar individuals.
+:::
+:::
+:::
+:::
+
 ## Experiments (1/2) 
 
 * Researchers assign individuals to different __treatment__ or __intervention groups__
-  * __control group__: often receive a __placebo__ or usual care
-  * different treatment groups are often called __study arms__
+  * __Control group__: often receive a __placebo__ or usual care
+  * Different treatment groups are often called __study arms__
 * __Randomization__
-  * group assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)
-  * randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
-      * treatment is the only systematic difference between groups
-      * establish causality
-  * __blocking (stratification)__: group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e. gender, age group)
+  * Group assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)
+  * Randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
+      * Treatment is the only systematic difference between groups
+      * Establish causality
+  * Different than random sampling! 
 
 
 ## Experiments (2/2) 
 
 * __Replication__
-  * accomplished by collecting a sufficiently large sample
-  * results usually more reliable with a large sample size
-      * often less variability
-      * more likely to be representative of population
+  * Accomplished by collecting a sufficiently large sample
+  * Results usually more reliable with a large sample size
+      * Often less variability
+      * More likely to be representative of population
 * Some studies are not ethical to carry out as experiments
 
 
 ## Observational studies 
 
-* data are observed and recorded without interference
-* often done via surveys, electronic health records, or medical chart reviews
-* cohorts
-* associations between variables can be established, but not causality
+* Data are observed and recorded without interference
+* Often done via surveys, electronic health records, or medical chart reviews
+* Cohorts
+* Associations between variables can be established, **but not causality**
     * Individuals with different characteristics may also differ in other ways that influence response
-* confounding variables (lurking variable)
-  * variables associated with both the explanatory and response variables
+* Confounding variables (lurking variable)
+  * Variables associated with both the explanatory and response variables
 
-* prospective vs. retrospective studies
+## Observational studies: prospective vs. retrospective studies
+
+Some studies can have prospective and retrospective data!
+
+::: columns
+::: column
+::: blue
+::: blue-ttl
+Prospective
+:::
+::: blue-cont
+
+- Identifies participants and collects information **at scheduled times or as events unfold**.
+:::
+:::
+::: 
+::: column
+::: orange
+::: orange-ttl
+Retrospective
+:::
+::: orange-cont
+
+- Collect data **after events have taken place**, such as from medical records
+:::
+:::
+:::
+:::
+
+Example: The Cancer Care Outcomes Research and Surveillance Consortium
+(CanCORS) enrolled participants with lung or colorectal cancer, collected information about
+diagnosis, treatment, and previous health behavior (retrospective), but also maintained contact with participants to gather data about long-term outcomes (prospective).
 
 
 ## Comparing study designs
 
 ![[Science Media Centre](https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/)](../img_slides/strength_of_evidence.jpeg){fig-align="center"}
 
+## 
 
 
-## Systematic Reviews example
-
-![[STEM: Systematically Testing the Evidence on Marijuana](https://www.cannabisevidence.org/)](../img_slides/STEM_systematic_review.jpg){fig-align="center"}
-
-::: columns
-::: {.column width="85%"}
-::: {style="font-size: 65%;"}
-STEM is a collaborative project between the US Department of Veterans Affairs and the [Center for Evidence-based Policy](https://centerforevidencebasedpolicy.org/) at Oregon Health & Science University.  
-The project is funded by the US Department of Veterans Affairs: Office of Rural Health.
-:::
-:::
-
-::: {.column width="15%"}
-![](../img_slides/logo_CenterEvidenceBasedPolicy.jpg){fig-align="center"}
-:::
-:::
 

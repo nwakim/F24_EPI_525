@@ -1,8 +1,8 @@
 ---
 title: "Homework 2"
-subtitle: "Lessons 3-4"
+subtitle: "Due 10/17/24"
 author: "Your name here - update this!!!!"
-date: "Due 10/17/24"
+date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
@@ -21,9 +21,6 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
-**Due 10/17/24**
 
 Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_02.qmd).
 

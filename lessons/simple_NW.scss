@@ -51,6 +51,21 @@ div.cell-output-stdout {
 
 // COMMON USES
 
+// Learning Objectives
+.lob{
+  margin-left: 0em;
+  padding-left:  25px;
+  padding-top:  5px;
+  padding-bottom: 0.1em;
+  color: white;
+  background-color: $dark-blue;
+  font-size: 1em;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  border-radius: 15px;
+}
+
 // Definitions 
 .definition{
   margin: 1em 0;

@@ -12,7 +12,7 @@
 
   <meta name="author" content="Meike Niederhausen and Nicky Wakim">
   <meta name="dcterms.date" content="2024-10-02">
-  <title>Biostatistics 1 - Lesson 2: Data collection &amp; numerical summaries</title>
+  <title>Biostatistics 1 - Lesson 2: Intro to data &amp; numerical summaries</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,7 +393,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#3070BF" class="quarto-title-block center">
-  <h1 class="title">Lesson 2: Data collection &amp; numerical summaries</h1>
+  <h1 class="title">Lesson 2: Intro to data &amp; numerical summaries</h1>
   <p class="subtitle">TB sections 1.2, 1.4</p>
 
 <div class="quarto-title-authors">
@@ -433,26 +433,6 @@ Meike Niederhausen and Nicky Wakim
 <h2>Intro to Data</h2>
 
 <img data-src="../img_slides/horst_data_cowboy.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
-<section id="how-are-data-stored-how-do-we-use-them" class="slide level2">
-<h2>How are data stored, how do we use them?</h2>
-<ul>
-<li>Often, data are in an Excel sheet, or a plain text file (.csv, .txt)</li>
-<li>.csv files open in Excel automatically, but actually are plain text</li>
-<li>Usually, columns are variables/measures and rows are observations (i.e.&nbsp;a person’s measurements)</li>
-</ul>
-<h3 id="data-in-r">Data in R</h3>
-<ul>
-<li>We can import data from many file types, including .csv, .txt., and .xlsx
-<ul>
-<li>We will cover this on a later date</li>
-</ul></li>
-<li>Once imported, R typically stores data as <strong>data frames</strong>, or <strong>tibbles</strong> if using the <code>tidyverse</code> package (more on this later).
-<ul>
-<li>For our purposes, these are essentially the same, and I will tend to use the terms interchangeably.</li>
-<li>These are examples of what we call <strong>object types</strong> in R.</li>
-</ul></li>
-</ul>
-</section>
 <section id="data-frame-example" class="slide level2">
 <h2>Data frame example</h2>
 <div class="columns">
@@ -510,7 +490,7 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/Fig1.8_variable_types.png"></p>
+<p><img data-src="../img_slides/Fig1.8_variable_types.png"></p>
 <figcaption><a href="https://www.openintro.org/book/biostat/">ISLBS</a></figcaption>
 </figure>
 </div>
@@ -605,7 +585,7 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 <p><em><span style="color:purple">Can the iris species be determined by these variables?</span></em></p>
 <center>
-<img src="../../img_slides/Iris_types.png" width="70%" height="50%"><img src="../../img_slides/Iris_parts.png" width="28%" height="50%">
+<img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%">
 </center>
 <p><a href="https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project">Gareth Duffy</a></p>
 </section>
@@ -633,7 +613,7 @@ Meike Niederhausen and Nicky Wakim
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/screenshot_iris_View.png"></p>
+<p><img data-src="../img_slides/screenshot_iris_View.png"></p>
 </figure>
 </div>
 </div>
@@ -744,50 +724,6 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="the" class="slide level2">
-<h2>The <code>$</code></h2>
-<ul>
-<li>Suppose we want to single out the column of petal width values.</li>
-<li>One way to do this is to use the <code>$</code>
-<ul>
-<li><code>DatSetName$VariableName</code></li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>iris<span class="sc">$</span>Petal.Width</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3
- [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2
- [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3
- [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3
- [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3
- [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8
-[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8
-[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3
-[145] 2.5 2.3 1.9 2.0 2.3 1.8</code></pre>
-</div>
-</div>
-</section>
-<section id="example-using-the" class="slide level2">
-<h2>Example using the <code>$</code></h2>
-<p>The <code>$</code> is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.</p>
-<p><br>
-</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.199333</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.7622377</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">median</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.3</code></pre>
-</div>
-</div>
-</section>
 <section id="inline-code" class="slide level2">
 <h2>Inline code</h2>
 <div style="font-size: 90%;">
@@ -799,7 +735,7 @@ Meike Niederhausen and Nicky Wakim
 <p>Text in editor:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/screenshot_code_inline_petalwidth.png"></p>
+<p><img data-src="../img_slides/screenshot_code_inline_petalwidth.png"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -822,7 +758,7 @@ Meike Niederhausen and Nicky Wakim
 </div><div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/xkcd_tornadoguard.png"></p>
+<p><img data-src="../img_slides/xkcd_tornadoguard.png"></p>
 <figcaption><a href="https://xkcd.com/937/">https://xkcd.com/937/</a></figcaption>
 </figure>
 </div>
@@ -835,7 +771,7 @@ Meike Niederhausen and Nicky Wakim
 <div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/Table1_Barton.png"></p>
+<p><img data-src="../img_slides/Table1_Barton.png"></p>
 </figure>
 </div>
 </div><div class="column" style="width:40%;">
@@ -855,14 +791,14 @@ Arthritis Care &amp; Research.<br>
 <p><strong>Example</strong>: What is the mean age in the toy dataset <code>df</code> defined earlier?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  IDs gender  age     trt Veteran
 1   1   male 28.0 control   FALSE
 2   2 female 35.5       1    TRUE
 3   3   Male 31.0       1    TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 31.5</code></pre>
 </div>
@@ -893,15 +829,15 @@ Arthritis Care &amp; Research.<br>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 28.0 35.5 31.0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">median</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">median</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 31</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">median</span>(<span class="fu">c</span>(df<span class="sc">$</span>age, <span class="dv">67</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">median</span>(<span class="fu">c</span>(df<span class="sc">$</span>age, <span class="dv">67</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 33.25</code></pre>
 </div>
@@ -912,8 +848,8 @@ Arthritis Care &amp; Research.<br>
 <section id="measures-of-center-mean-vs.-median" class="slide level2">
 <h2>Measures of center: mean vs.&nbsp;median</h2>
 
-<img data-src="02_Data_collection_num_summaries_files/figure-revealjs/unnamed-chunk-16-1.png" width="1344" class="r-stretch"><div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-14-1.png" width="1344" class="r-stretch"><div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
@@ -936,7 +872,7 @@ Arthritis Care &amp; Research.<br>
 <h2>Measures of center: mode</h2>
 <p><strong><span style="color:darkorange">mode</span></strong>: the most frequent value in a dataset</p>
 
-<img data-src="02_Data_collection_num_summaries_files/figure-revealjs/unnamed-chunk-18-1.png" width="1344" class="r-stretch"></section>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-16-1.png" width="1344" class="r-stretch"></section>
 <section id="measures-of-spread-standard-deviation-sd-13" class="slide level2">
 <h2>Measures of spread: standard deviation (SD) (1/3)</h2>
 <p><strong>standard deviation</strong> is (approximately) the average distance between a typical observation and the mean</p>
@@ -944,7 +880,7 @@ Arthritis Care &amp; Research.<br>
 <li>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span>.</li>
 </ul>
 
-<img data-src="02_Data_collection_num_summaries_files/figure-revealjs/unnamed-chunk-19-1.png" width="1344" class="r-stretch"></section>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-17-1.png" width="1344" class="r-stretch"></section>
 <section id="measures-of-spread-sd-23" class="slide level2">
 <h2>Measures of spread: SD (2/3)</h2>
 <ul>
@@ -960,18 +896,18 @@ Arthritis Care &amp; Research.<br>
 <p>Let’s calculate the sample standard deviation for our toy example</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 28.0 35.5 31.0</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 31.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.774917</code></pre>
 </div>
@@ -996,7 +932,7 @@ Arthritis Care &amp; Research.<br>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/empirical-rule.png" width="660"></p>
+<p><img data-src="../img_slides/empirical-rule.png" width="660"></p>
 <figcaption><a href="https://statistics-made-easy.com/empirical-rule/">https://statistics-made-easy.com/empirical-rule/</a></figcaption>
 </figure>
 </div>
@@ -1009,18 +945,18 @@ Arthritis Care &amp; Research.<br>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="02_Data_collection_num_summaries_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.057333</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4358663</code></pre>
 </div>
@@ -1045,7 +981,7 @@ Arthritis Care &amp; Research.<br>
 <h2>Measures of spread: IQR (2/2)</h2>
 <p><strong><span style="color:darkorange">5 number summary</span></strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">summary</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">summary</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
   2.000   2.800   3.000   3.057   3.300   4.400 </code></pre>
@@ -1055,23 +991,23 @@ Arthritis Care &amp; Research.<br>
 <div class="column" style="width:40%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="02_Data_collection_num_summaries_files/figure-revealjs/unnamed-chunk-25-1.png" width="480"></p>
+<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-23-1.png" width="480"></p>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
 <p>What is the IQR of the sepal widths?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>25% 75% 
 2.8 3.3 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">diff</span>(<span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">diff</span>(<span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>75% 
 0.5 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="fu">IQR</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">IQR</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5</code></pre>
 </div>

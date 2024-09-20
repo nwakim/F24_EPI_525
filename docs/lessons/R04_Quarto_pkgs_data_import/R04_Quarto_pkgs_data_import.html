@@ -10,9 +10,9 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Nicky Wakim, Meike Niederhausen">
-  <meta name="dcterms.date" content="2024-09-30">
-  <title>Biostatistics 1 - Lesson 1: Data collection</title>
+  <meta name="author" content="Meike Niederhausen and Nicky Wakim">
+  <meta name="dcterms.date" content="2024-10-07">
+  <title>Biostatistics 1 - R04: Intro to Quarto doc, packages, and importing data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -328,430 +393,402 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#3070BF" class="quarto-title-block center">
-  <h1 class="title">Lesson 1: Data collection</h1>
+  <h1 class="title">R04: Intro to Quarto doc, packages, and importing data</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Nicky Wakim, Meike Niederhausen 
+Meike Niederhausen and Nicky Wakim 
 </div>
 </div>
 </div>
 
-  <p class="date">2024-09-30</p>
+  <p class="date">2024-10-07</p>
 </section>
-<section id="learning-objectives" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li>Contextualize the difference between a target population and its sample.</li>
-<li>Explain different sampling methods and understand their advantages.</li>
-<li>Understand two overarching study designs, experiments and observational studies.</li>
-</ol>
-</section>
-
-<section>
-<section id="learning-objectives-1" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<div class="lob">
-<ol type="1">
-<li>Contextualize the difference between a target population and its sample.</li>
-</ol>
-</div>
-<ol start="2" type="1">
-<li>Explain different sampling methods and understand their advantages.</li>
-<li>Understand two overarching study designs, experiments and observational studies.</li>
-</ol>
-</section>
-<section id="poll-everywhere" class="slide level2">
-<h2>Poll everywhere</h2>
-<p>Why are data important?</p>
-</section>
-<section id="asking-a-question" class="slide level2">
-<h2>Asking a question</h2>
+<section id="how-are-data-stored-how-do-we-use-them" class="slide level2">
+<h2>How are data stored, how do we use them?</h2>
 <ul>
-<li>Data provide evidence that help us answer questions</li>
-<li>But we need to start with a clearly articulated question</li>
+<li>Often, data are in an Excel sheet, or a plain text file (.csv, .txt)</li>
+<li><code>.csv</code> files open in Excel automatically, but actually are plain text</li>
+<li>Usually, columns are variables/measures and rows are observations (i.e.&nbsp;a person’s measurements)</li>
 </ul>
-<p>&nbsp;</p>
+<h3 id="data-in-r">Data in R</h3>
 <ul>
-<li>In this class, we will be working towards <strong>articulating our questions</strong> and <strong>systemically answering them with data</strong></li>
-</ul>
-<p>&nbsp;</p>
+<li>We can import data from many file types, including .csv, .txt., and .xlsx
 <ul>
-<li>How do we formulate a clearly articulated question?</li>
+<li>We will cover this on a later date</li>
+</ul></li>
+<li>Once imported, R typically stores data as <strong>data frames</strong>, or <strong>tibbles</strong> if using the <code>tidyverse</code> package (more on this later).
+<ul>
+<li>For our purposes, these are essentially the same, and I will tend to use the terms interchangeably.</li>
+<li>These are examples of what we call <strong>object types</strong> in R.</li>
+</ul></li>
 </ul>
 </section>
-<section id="examples-of-questions" class="slide level2">
-<h2>Examples of questions</h2>
-<ol type="1">
-<li>Do bluefin tuna from the Atlantic Ocean have particularly high levels of mercury, such that they are unsafe for human consumption?</li>
-</ol>
-<p>&nbsp;</p>
-<ol start="2" type="1">
-<li>For infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?</li>
-</ol>
-<p>&nbsp;</p>
-<ol start="3" type="1">
-<li>Does a recently developed drug designed to treat glioblastoma, a form of brain cancer, appear more effective at inducing tumor shrinkage than the drug currently on the market?</li>
-</ol>
-</section>
-<section id="population-vs.-sample" class="slide level2">
-<h2>Population vs.&nbsp;sample</h2>
+<section id="data-frame-example" class="slide level2">
+<h2>Data frame example</h2>
 <div class="columns">
-<div class="column">
-<div class="red">
-<div class="red-ttl">
-<p>(Target) Population</p>
+<div class="column" style="width:54%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="at">IDs=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">gender=</span><span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"Male"</span>), </span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="at">age=</span><span class="fu">c</span>(<span class="dv">28</span>, <span class="fl">35.5</span>, <span class="dv">31</span>),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="at">trt =</span> <span class="fu">c</span>(<span class="st">"control"</span>, <span class="st">"1"</span>, <span class="st">"1"</span>),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="at">Veteran =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  )</span>
+<span id="cb1-8"><a href="#cb1-8"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  IDs gender  age     trt Veteran
+1   1   male 28.0 control   FALSE
+2   2 female 35.5       1    TRUE
+3   3   Male 31.0       1    TRUE</code></pre>
 </div>
-<div class="red-cont">
+</div>
 <ul>
-<li>Group of interest being studied</li>
-<li>Group from which the sample is selected
+<li><strong>Vectors</strong> vs.&nbsp;<strong>data frames</strong>
 <ul>
-<li>Studies often have <em>inclusion</em> and/or <em>exclusion</em> criteria</li>
-</ul></li>
-<li>Almost always too expensive or logistically impossible to collect data for every case in a population</li>
-</ul>
-</div>
-</div>
-</div><div class="column">
-<div class="pink">
-<div class="pink-ttl">
-<p>Sample</p>
-</div>
-<div class="pink-cont">
-<ul>
-<li>Group on which data are collected</li>
-<li>Often a <strong>small subset</strong> of the population</li>
-<li>Easier to collect data on</li>
-<li>If we do it right, we might be able to answer our question about the target population</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="identifying-the-target-population" class="slide level2">
-<h2>Identifying the target population</h2>
-<p>Let’s focus on the second research question:</p>
-<ol start="2" type="1">
-<li>For infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?</li>
-</ol>
-<p>What is the target population here?</p>
-<ul>
-<li><p>Infants predisposed to developing a peanut allergy</p></li>
-<li><p>We could get more specific with “Infants aged 0 to 5 years old” or “Infants aged 0 to 5 years old who have eczema, egg allergy, or both”</p>
-<ul>
-<li>In this case we are defining exactly how old “infants” are and what “predisposed” means</li>
+<li>a data frame is a collection (or array or table) of vectors</li>
 </ul></li>
 </ul>
-</section>
-<section id="from-target-population-to-sample" class="slide level2">
-<h2>From target population to sample</h2>
-<ul>
-<li><p>Once we have a well articulated target populaton, we have inclusion or exclusion criteria for individuals</p></li>
-<li><p>Now we can start sampling from our target population…</p></li>
-</ul>
-</section></section>
-<section>
-<section id="learning-objectives-2" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li>Contextualize the difference between a target population and its sample.</li>
-</ol>
-<div class="lob">
-<ol start="2" type="1">
-<li>Explain different sampling methods and understand their advantages.</li>
-</ol>
-</div>
-<ol start="3" type="1">
-<li>Understand two overarching study designs, experiments and observational studies.</li>
-</ol>
-</section>
-<section id="sampling" class="slide level2">
-<h2>Sampling</h2>
-<ul>
-<li>Goal is to get a <strong>representative</strong> sample of the population: the characteristics of the sample are similar to the characteristics of the population</li>
-<li>There are different ways to sample from a target population</li>
-<li>Types of sampling that we discuss
-<ul>
-<li>Simple random sample (SRS)</li>
-<li>Convenient sample</li>
-<li>Stratified sample</li>
-<li>Cluster sample</li>
-<li>Multistage sample</li>
-</ul></li>
-</ul>
-</section>
-<section id="sampling-methods-basic-approaches" class="slide level2">
-<h2>Sampling methods: Basic approaches</h2>
-<div class="columns">
-<div class="column" style="width:49%;">
-<p><strong>Simple random sample (SRS)</strong></p>
-<ul>
-<li>Each individual of a population has the <em>same chance</em> of being sampled</li>
-<li>Randomly sampled</li>
-<li>Considered best way to sample</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/sampleRandomHealthPlan.png"></p>
-</figure>
-</div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:49%;">
-<p><strong>Convenience sample</strong></p>
+</div><div class="column" style="width:44%;">
+<div style="font-size: 90%;">
 <ul>
-<li>Easily accessible individuals are <em>more likely</em> to be included in the sample than other individuals</li>
-<li>A common “pitfall”</li>
+<li><p>Different columns can be of different data types (i.e.&nbsp;numeric vs.&nbsp;text)</p></li>
+<li><p>Both numeric and text can be stored within a column (stored together as <em>text</em>).</p></li>
+<li><p>Vectors and data frames are examples of <em><strong>objects</strong></em> in R.</p>
+<ul>
+<li>There are other types of R objects to store data, such as matrices, lists.</li>
+</ul></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/sampleConvenienceHealthPlan.png"></p>
-</figure>
 </div>
 </div>
 </div>
 </section>
-<section id="potential-bias-with-sampling" class="slide level2">
-<h2>Potential bias with sampling</h2>
-<p><em>Good sampling plans don’t guarantee samples representative of the population</em></p>
+<section id="observations-variables" class="slide level2">
+<h2>Observations &amp; variables</h2>
 <div class="columns">
-<div class="column" style="width:49%;">
-<p><strong>Non-response bias</strong></p>
-<ul>
-<li>Are all groups within a population being reached?</li>
-<li>Unrepresentative sample can skew results</li>
-<li>Example: survey only administered in English can lead to non-response bias that under-represents individuals who do not fluently speak English
-<ul>
-<li>Here, bias is stemming from an oversight on the way we are administering our survey (not from the sampling mechanism itself)</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:51%;">
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  IDs gender  age     trt Veteran
+1   1   male 28.0 control   FALSE
+2   2 female 35.5       1    TRUE
+3   3   Male 31.0       1    TRUE</code></pre>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img_slides/sampleNonResponseHealthPlan.png"></p>
+<p><img data-src="../img_slides/Fig1.8_variable_types.png"></p>
+<figcaption><a href="https://www.openintro.org/book/biostat/">ISLBS</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div style="font-size: 90%;">
+<ul>
+<li><p>Book refers to a dataset as a <em>data matrix</em></p></li>
+<li><p>Rows are usually <strong>observations</strong></p></li>
+<li><p>Columns are usually <strong>variables</strong></p></li>
+<li><p><strong><span style="color:green">How many observations are in this dataset?</span></strong></p></li>
+<li><p><strong><span style="color:green">What are the variable types in this dataset?</span></strong></p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="variable-column-types" class="slide level2">
+<h2>Variable (column) types</h2>
+<div style="font-size: 70%;">
+<table>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>R type</th>
+<th>variable type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>integer</td>
+<td>discrete</td>
+<td>integer-valued numbers</td>
+</tr>
+<tr class="even">
+<td>double or numeric</td>
+<td>continuous</td>
+<td>numbers that are decimals</td>
+</tr>
+<tr class="odd">
+<td>factor</td>
+<td>categorical</td>
+<td>categorical variables stored with levels (groups)</td>
+</tr>
+<tr class="even">
+<td>character</td>
+<td>categorical</td>
+<td>text, “strings”</td>
+</tr>
+<tr class="odd">
+<td>logical</td>
+<td>categorical</td>
+<td>boolean (TRUE, FALSE)</td>
+</tr>
+</tbody>
+</table>
+<!-- Each variable (column) in a data frame can be of a different type. -->
+<ul>
+<li>View the <strong>structure</strong> of our data frame to see what the variable types are:</li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   3 obs. of  5 variables:
+ $ IDs    : int  1 2 3
+ $ gender : chr  "male" "female" "Male"
+ $ age    : num  28 35.5 31
+ $ trt    : chr  "control" "1" "1"
+ $ Veteran: logi  FALSE TRUE TRUE</code></pre>
+</div>
+</div>
+<!-- * Note that the ID column is _integer_ type since the values are all whole numbers, although we likely would think of it as being a categorical variable and thus prefer it to be a factor. -->
+</section>
+<section id="fishers-or-andersons-iris-data-set" class="slide level2">
+<h2>Fisher’s (or Anderson’s) Iris data set</h2>
+<p>Data description:</p>
+<ul>
+<li>n = 150</li>
+<li>3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+<ul>
+<li>50 measurements of each type of Iris</li>
+</ul></li>
+<li><strong>variables</strong>:
+<ul>
+<li>sepal length, sepal width, petal length, petal width, and species</li>
+</ul></li>
+</ul>
+<p><em><span style="color:purple">Can the iris species be determined by these variables?</span></em></p>
+<center>
+<img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%">
+</center>
+<p><a href="https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project">Gareth Duffy</a></p>
+</section>
+<section id="view-the-iris-dataset" class="slide level2">
+<h2>View the <code>iris</code> dataset</h2>
+<div style="font-size: 80%;">
+<ul>
+<li>The <code>iris</code> dataset is already pre-loaded in <em>base</em> R and ready to use.</li>
+<li>Type the following command in the console window
+<ul>
+<li><em>Warning: this command cannot be rendered. It will give an error.</em></li>
+</ul></li>
+</ul>
+</div>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">View</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div style="font-size: 80%;">
+<p>A new tab in the scripting window should appear with the <code>iris</code> dataset.</p>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/screenshot_iris_View.png"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="another-potential-when-sampling" class="slide level2">
-<h2>Another potential when sampling</h2>
-<p><strong>“Random” samples can be unrepresentative by random chance</strong></p>
+<section id="data-structure" class="slide level2">
+<h2>Data structure</h2>
 <ul>
-<li><p>In a SRS each case in the population has an equal chance of being included in the sample</p></li>
-<li><p>But by random chance alone a random sample might contain a higher proportion of one group over another</p></li>
-<li><p>Example: a SRS might by chance include 70% men (unlikely, but theoretically possible)</p></li>
-<li><p>If it is important for our data to represent specific groups (to answer our research question), then we may consider more complex sampling methods</p>
+<li>What are the different <strong>variable types</strong> in this data set?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">str</span>(iris)   <span class="co"># structure of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="data-set-summary" class="slide level2">
+<h2>Data set summary</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+       Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+                
+                
+                </code></pre>
+</div>
+</div>
+</section>
+<section id="data-set-info" class="slide level2">
+<h2>Data set info</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">dim</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150   5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">nrow</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ncol</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">names</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"     </code></pre>
+</div>
+</div>
+</section>
+<section id="view-the-beginning-or-end-of-a-dataset" class="slide level2">
+<h2>View the beginning or end of a dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">tail</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+145          6.7         3.3          5.7         2.5 virginica
+146          6.7         3.0          5.2         2.3 virginica
+147          6.3         2.5          5.0         1.9 virginica
+148          6.5         3.0          5.2         2.0 virginica
+149          6.2         3.4          5.4         2.3 virginica
+150          5.9         3.0          5.1         1.8 virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" class="slide level2">
+<h2>Specify how many rows to view at beginning or end of a dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">head</span>(iris, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">tail</span>(iris, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+149          6.2         3.4          5.4         2.3 virginica
+150          5.9         3.0          5.1         1.8 virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="the" class="slide level2">
+<h2>The <code>$</code></h2>
 <ul>
-<li></li>
+<li>Suppose we want to single out the column of petal width values.</li>
+<li>One way to do this is to use the <code>$</code>
+<ul>
+<li><code>DatSetName$VariableName</code></li>
 </ul></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>iris<span class="sc">$</span>Petal.Width</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3
+ [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2
+ [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3
+ [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3
+ [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3
+ [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8
+[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8
+[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3
+[145] 2.5 2.3 1.9 2.0 2.3 1.8</code></pre>
+</div>
+</div>
 </section>
-<section id="sampling-methods-34" class="slide level2">
-<h2>Sampling methods (3/4)</h2>
+<section id="example-using-the" class="slide level2">
+<h2>Example using the <code>$</code></h2>
+<p>The <code>$</code> is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.</p>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.199333</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7622377</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">median</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.3</code></pre>
+</div>
+</div>
+</section>
+<section id="inline-code" class="slide level2">
+<h2>Inline code</h2>
+<div style="font-size: 90%;">
+<ul>
+<li>With markdown you can also report <strong>R code output inline</strong> with the text instead of using a chunk.</li>
+</ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li><strong>Simple random sample (SRS)</strong>
-<ul>
-<li>Each individual of a population has the <em>same chance</em> of being sampled</li>
-<li><em>Statistical methods taught in this class assume a SRS!</em></li>
-</ul></li>
-<li><strong>Stratified sampling</strong>
-<ul>
-<li>Divide population into groups (strata) before selecting cases within each stratum (often via SRS)</li>
-<li>Usually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
+<p>Text in editor:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img_slides/simple_stratified.png"></p>
+<p><img data-src="../img_slides/screenshot_code_inline_petalwidth.png"></p>
 </figure>
 </div>
-</div>
-</div>
-</section>
-<section id="sampling-methods-44" class="slide level2">
-<h2>Sampling methods (4/4)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Cluster sample</strong>
-<ul>
-<li>First divide population into groups (clusters)</li>
-<li>Then sample a fixed number of clusters, and include <em>all</em> observations from chosen clusters</li>
-<li>Clusters are often hospitals, clinicians, schools, etc., where each cluster will have similar services/ policies/ etc.</li>
-<li>Cases within clusters usually very diverse</li>
-</ul></li>
-<li><strong>Multistage sample</strong>
-<ul>
-<li>Similar to a cluster sample, but select a random sample within each selected cluster instead of all individuals</li>
-</ul></li>
-</ul>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/cluster_multistage.png"></p>
-</figure>
+<p>Output:</p>
+<p>The mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.</p>
 </div>
 </div>
-</div>
-</section>
-<section id="example-in-my-own-work" class="slide level2">
-<h2>Example in my own work</h2>
 <ul>
-<li>Research question: Does community-led education (in addition to education from a practitioner) of vaccination increase HPV vaccination among children?</li>
-<li>Target population: Children between the age of 9 and 17 years old who have not completed their HPV vaccination</li>
-<li>We are doing a stratified and cluster sample!!</li>
-<li>It is important to have a representative sample of bigger and smaller counties in Oregon</li>
-<li>But we will also be sampling from entire counties (our clusters)</li>
-</ul>
-</section></section>
-<section>
-<section id="learning-objectives-3" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li>Contextualize the difference between a target population and its sample.</li>
-<li>Explain different sampling methods and understand their advantages.</li>
-</ol>
-<div class="lob">
-<ol start="3" type="1">
-<li>Understand two overarching study designs, experiments and observational studies.</li>
-</ol>
-</div>
-</section>
-<section id="two-basic-study-designs" class="slide level2">
-<h2>Two basic study designs</h2>
-<div class="columns">
-<div class="column">
-<div class="pink2">
-<div class="pink2-ttl">
-<p>Experiment</p>
-</div>
-<div class="pink2-cont">
-<p>Researchers directly influence how data arise</p>
-<ul>
-<li><p>Such as: assigning groups of individuals to different treatments and assessing how the outcome varies across treatment groups</p></li>
-<li><p>Three major parts to an experiment</p>
-<ul>
-<li>Control</li>
-<li>Randomization</li>
-<li>Replication</li>
-</ul></li>
+<li>Reporting summary statistics this way in a report, makes the numbers computationally reproducible.</li>
+<li>For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.</li>
 </ul>
 </div>
-</div>
-</div><div class="column">
-<div class="green2">
-<div class="green2-ttl">
-<p>Observational study</p>
-</div>
-<div class="green2-cont">
-<p>Researchers merely observe and record data, without interfering with how the data arise</p>
-<ul>
-<li>For example, to investigate why certain diseases develop, researchers might collect data by conducting surveys, reviewing medical records, or following a cohort of many similar individuals.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="experiments-12" class="slide level2">
-<h2>Experiments (1/2)</h2>
-<ul>
-<li>Researchers assign individuals to different <strong>treatment</strong> or <strong>intervention groups</strong>
-<ul>
-<li><strong>Control group</strong>: often receive a <strong>placebo</strong> or usual care</li>
-<li>Different treatment groups are often called <strong>study arms</strong></li>
-</ul></li>
-<li><strong>Randomization</strong>
-<ul>
-<li>Group assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)</li>
-<li>Randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
-<ul>
-<li>Treatment is the only systematic difference between groups</li>
-<li>Establish causality</li>
-</ul></li>
-<li>Different than random sampling!</li>
-</ul></li>
-</ul>
-</section>
-<section id="experiments-22" class="slide level2">
-<h2>Experiments (2/2)</h2>
-<ul>
-<li><strong>Replication</strong>
-<ul>
-<li>Accomplished by collecting a sufficiently large sample</li>
-<li>Results usually more reliable with a large sample size
-<ul>
-<li>Often less variability</li>
-<li>More likely to be representative of population</li>
-</ul></li>
-</ul></li>
-<li>Some studies are not ethical to carry out as experiments</li>
-</ul>
-</section>
-<section id="observational-studies" class="slide level2">
-<h2>Observational studies</h2>
-<ul>
-<li>Data are observed and recorded without interference</li>
-<li>Often done via surveys, electronic health records, or medical chart reviews</li>
-<li>Cohorts</li>
-<li>Associations between variables can be established, <strong>but not causality</strong>
-<ul>
-<li>Individuals with different characteristics may also differ in other ways that influence response</li>
-</ul></li>
-<li>Confounding variables (lurking variable)
-<ul>
-<li>Variables associated with both the explanatory and response variables</li>
-</ul></li>
-</ul>
-</section>
-<section id="observational-studies-prospective-vs.-retrospective-studies" class="slide level2">
-<h2>Observational studies: prospective vs.&nbsp;retrospective studies</h2>
-<p>Some studies can have prospective and retrospective data!</p>
-<div class="columns">
-<div class="column">
-<div class="blue">
-<div class="blue-ttl">
-<p>Prospective</p>
-</div>
-<div class="blue-cont">
-<ul>
-<li>Identifies participants and collects information <strong>at scheduled times or as events unfold</strong>.</li>
-</ul>
-</div>
-</div>
-</div><div class="column">
-<div class="orange">
-<div class="orange-ttl">
-<p>Retrospective</p>
-</div>
-<div class="orange-cont">
-<ul>
-<li>Collect data <strong>after events have taken place</strong>, such as from medical records</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<p>Example: The Cancer Care Outcomes Research and Surveillance Consortium (CanCORS) enrolled participants with lung or colorectal cancer, collected information about diagnosis, treatment, and previous health behavior (retrospective), but also maintained contact with participants to gather data about long-term outcomes (prospective).</p>
-</section>
-<section id="comparing-study-designs" class="slide level2">
-<h2>Comparing study designs</h2>
-
-<img data-src="../img_slides/strength_of_evidence.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/">Science Media Centre</a></p></section>
-<section id="section" class="slide level2">
-<h2></h2>
 
 <div class="footer footer-default">
-<p>Lesson 1 Slides</p>
+<p>R2 Slides</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -965,6 +1002,44 @@ Nicky Wakim, Meike Niederhausen
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

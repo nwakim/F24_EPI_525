@@ -1,6 +1,6 @@
 ---
 title: "Homework 2 Answers"
-subtitle: "BSTA 550"
+subtitle: "EPI 525"
 date-modified: "today"
 format: 
   html: 
@@ -11,34 +11,42 @@ editor_options:
   chunk_output_type: console
 ---
 
-Selected answers (or hints) not provided at the end the book:
+These are the **some** numeric/short answers to the homework. Often, these answers are insufficient for your own work or solutions. I just wanted to give you a part of the answer to help guide you in the right direction.
 
--   Chapter 22
 
-    -   \# 30: (a) 2,835     (b) 405     (c) 10,780     (d) 7,980
+# Book exercises {.unnumbered}
 
-    -   \# 40: 0.6666667
+## 1.24 Income and education in US counties {.unnumbered}
 
-    -   \# 42: 0.002116402 (This is the answer when $n=5$. Your answer needs to be in terms of $n$.)
 
-    -   \# 44: 0.3
+## 1.28 Mix-and-match {.unnumbered}
 
-    -   \# 46: 0.3333333
 
-    -   \# 48: 0.007936508 (This is the answer when $n=5$. Your answer needs to be in terms of $n$.)
 
--   Chapter 3
+## 1.36 Associations {.unnumbered}
 
-    -   \# 4: (a) 0.111328    (b) 0.004872    0.995128
 
-    -   \# 10: (c) 0.384 If you have the right answer to (c), then you should be able to figure out the rest (see (e)).
+## 1.38 Smoking and stenosis {.unnumbered}
+*See Section1.6.2 for more on how the relative risk is calculated.*
 
-    -   \# 12: No.
+## 2.6 Poverty and language {.unnumbered}
 
-    -   NTB #1: (a) 0.0799     (b) 0.07553     (c) 0.0655
+*Part (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See [https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/](https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/) for some examples.* 
 
--   Chapter 4
+## 2.8 School absences {.unnumbered}
 
-    -   #4: 0.25
+*Part (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See [https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/](https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/) for some examples.*  
 
-    -   \# 12: (a) 0.4285714     (b) 0.4285714     (c) 0.1428571
+## 2.10 Health coverage, frequencies {.unnumbered}
+
+
+## 2.14 Health coverage, relative frequencies {.unnumbered}
+
+## 2.18 Predisposition for thrombosis {.unnumbered}
+
+
+## 2.24 Breast cancer and age {.unnumbered}
+
+# Non-book exercise
+
+Suppose a patient has abdominal pain and their clinician suspects that they either have disease 1, disease 2, or no disease, where the probability of having abdominal pain if they have disease 1 is 0.80, the probability of having abdominal pain if they have disease 2 is 0.90, and the probability of having abdominal pain if they have no disease is 0.01. Based on the patient’s medical history, the probability of having disease 1 is 0.009, having disease 2 is 0.001, and having no disease is 0.99. What is the probability the patient has disease 2 given that they have abdominal pain? 

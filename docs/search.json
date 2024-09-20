@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.1-1.2, 1.4\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n11/26?\n\nHW 8 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.1-1.2, 1.4\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n11/26?\n\nHW 8 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -1957,7 +1957,7 @@
     "href": "homework/HW_02.html",
     "title": "Homework 2",
     "section": "",
-    "text": "Due 10/17/24\nDownload the .qmd file for this assignment from Github."
+    "text": "Download the .qmd file for this assignment from Github."
   },
   {
     "objectID": "homework/HW_02.html#directions",
@@ -4505,7 +4505,7 @@
     "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#goals-for-today",
     "title": "Lesson 2: Data collection & numerical summaries",
     "section": "Goals for today",
-    "text": "Goals for today\n\n(1.3) Data collection principles\n\nPopulation vs. sample\nSampling methods\nExperiments vs. Observational studies\n\n(1.2) Intro to Data\n\nData types\nHow are data stored in R?\nWorking with data in R\n\n(1.4) Summarizing numerical data\n\nMean, median, mode, SD, IQR, range, 5 number summary\nEmpirical Rule\nrobust statistics\n\nR packages -&gt; install for next class!!!"
+    "text": "Goals for today\n\n(1.2) Intro to Data\n\nData types\nHow are data stored in R?\nWorking with data in R\n\n(1.4) Summarizing numerical data\n\nMean, median, mode, SD, IQR, range, 5 number summary\nEmpirical Rule\nrobust statistics"
   },
   {
     "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#recap-of-last-time",
@@ -4680,21 +4680,21 @@
     "href": "lessons/01_Data_collection/01_Data_collection.html#experiments-12",
     "title": "Lesson 1: Data collection",
     "section": "Experiments (1/2)",
-    "text": "Experiments (1/2)\n\nResearchers assign individuals to different treatment or intervention groups\n\ncontrol group: often receive a placebo or usual care\ndifferent treatment groups are often called study arms\n\nRandomization\n\ngroup assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)\nrandomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics\n\ntreatment is the only systematic difference between groups\nestablish causality\n\nblocking (stratification): group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e. gender, age group)"
+    "text": "Experiments (1/2)\n\nResearchers assign individuals to different treatment or intervention groups\n\nControl group: often receive a placebo or usual care\nDifferent treatment groups are often called study arms\n\nRandomization\n\nGroup assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)\nRandomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics\n\nTreatment is the only systematic difference between groups\nEstablish causality\n\nDifferent than random sampling!"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#experiments-22",
     "href": "lessons/01_Data_collection/01_Data_collection.html#experiments-22",
     "title": "Lesson 1: Data collection",
     "section": "Experiments (2/2)",
-    "text": "Experiments (2/2)\n\nReplication\n\naccomplished by collecting a sufficiently large sample\nresults usually more reliable with a large sample size\n\noften less variability\nmore likely to be representative of population\n\n\nSome studies are not ethical to carry out as experiments"
+    "text": "Experiments (2/2)\n\nReplication\n\nAccomplished by collecting a sufficiently large sample\nResults usually more reliable with a large sample size\n\nOften less variability\nMore likely to be representative of population\n\n\nSome studies are not ethical to carry out as experiments"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#observational-studies",
     "href": "lessons/01_Data_collection/01_Data_collection.html#observational-studies",
     "title": "Lesson 1: Data collection",
     "section": "Observational studies",
-    "text": "Observational studies\n\ndata are observed and recorded without interference\noften done via surveys, electronic health records, or medical chart reviews\ncohorts\nassociations between variables can be established, but not causality\n\nIndividuals with different characteristics may also differ in other ways that influence response\n\nconfounding variables (lurking variable)\n\nvariables associated with both the explanatory and response variables\n\nprospective vs. retrospective studies"
+    "text": "Observational studies\n\nData are observed and recorded without interference\nOften done via surveys, electronic health records, or medical chart reviews\nCohorts\nAssociations between variables can be established, but not causality\n\nIndividuals with different characteristics may also differ in other ways that influence response\n\nConfounding variables (lurking variable)\n\nVariables associated with both the explanatory and response variables"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#comparing-study-designs",
@@ -7130,7 +7130,7 @@
     "href": "hw_answers/HW_01.html",
     "title": "Homework 1 Answers",
     "section": "",
-    "text": "Selected answers (or hints) not provided at the end the book:\n\nChapter 2\n\n# 4: 0.35\n# 8: 0.03125\n# 16: 0.48\n# 30: (a) 0.189     (b) 0.811     (c) 0.189"
+    "text": "These are the some numeric/short answers to the homework. Often, these answers are insufficient for your own work or solutions. I just wanted to give you a part of the answer to help guide you in the right direction."
   },
   {
     "objectID": "hw_answers/HW_07.html",
@@ -7151,7 +7151,7 @@
     "href": "hw_answers/HW_02.html",
     "title": "Homework 2 Answers",
     "section": "",
-    "text": "Selected answers (or hints) not provided at the end the book:\n\nChapter 22\n\n# 30: (a) 2,835     (b) 405     (c) 10,780     (d) 7,980\n# 40: 0.6666667\n# 42: 0.002116402 (This is the answer when \\(n=5\\). Your answer needs to be in terms of \\(n\\).)\n# 44: 0.3\n# 46: 0.3333333\n# 48: 0.007936508 (This is the answer when \\(n=5\\). Your answer needs to be in terms of \\(n\\).)\n\nChapter 3\n\n# 4: (a) 0.111328    (b) 0.004872    0.995128\n# 10: (c) 0.384 If you have the right answer to (c), then you should be able to figure out the rest (see (e)).\n# 12: No.\nNTB #1: (a) 0.0799     (b) 0.07553     (c) 0.0655\n\nChapter 4\n\n#4: 0.25\n# 12: (a) 0.4285714     (b) 0.4285714     (c) 0.1428571"
+    "text": "These are the some numeric/short answers to the homework. Often, these answers are insufficient for your own work or solutions. I just wanted to give you a part of the answer to help guide you in the right direction."
   },
   {
     "objectID": "hw_answers/HW_08.html",
@@ -7201,5 +7201,474 @@
     "title": "Homework 7",
     "section": "1.3 PSS3: Legalize Marijuana, Part III.",
     "text": "1.3 PSS3: Legalize Marijuana, Part III.\n\n1.3.1 Power\nIn exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.3.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power?\n\n\n1.3.3 Effect size\nIf we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why?"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#sinusitis-and-antibiotics-part-i.",
+    "href": "hw_answers/HW_01.html#sinusitis-and-antibiotics-part-i.",
+    "title": "Homework 1 Answers",
+    "section": "1.2 Sinusitis and antibiotics, Part I.",
+    "text": "1.2 Sinusitis and antibiotics, Part I.\n\na\n78%\n\n\nb\n80%\n\n\nc\nControl\n\n\nd"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#buteyko-method-study-components",
+    "href": "hw_answers/HW_01.html#buteyko-method-study-components",
+    "title": "Homework 1 Answers",
+    "section": "1.4 Buteyko method, study components",
+    "text": "1.4 Buteyko method, study components\n\na\n\n\nb\n600\n\n\nc"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#smoking-habits-of-uk-residents",
+    "href": "hw_answers/HW_01.html#smoking-habits-of-uk-residents",
+    "title": "Homework 1 Answers",
+    "section": "1.8 Smoking habits of UK residents",
+    "text": "1.8 Smoking habits of UK residents\n\na\n\n\nb\n1691\n\n\nc"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#herbal-remedies",
+    "href": "hw_answers/HW_01.html#herbal-remedies",
+    "title": "Homework 1 Answers",
+    "section": "1.12 Herbal remedies",
+    "text": "1.12 Herbal remedies"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#city-council-survey",
+    "href": "hw_answers/HW_01.html#city-council-survey",
+    "title": "Homework 1 Answers",
+    "section": "1.20 City council survey",
+    "text": "1.20 City council survey"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#income-at-the-coffee-shop",
+    "href": "hw_answers/HW_01.html#income-at-the-coffee-shop",
+    "title": "Homework 1 Answers",
+    "section": "1.31 Income at the coffee shop",
+    "text": "1.31 Income at the coffee shop"
+  },
+  {
+    "objectID": "hw_answers/HW_01.html#midrange",
+    "href": "hw_answers/HW_01.html#midrange",
+    "title": "Homework 1 Answers",
+    "section": "1.32 Midrange",
+    "text": "1.32 Midrange"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#income-and-education-in-us-counties",
+    "href": "hw_answers/HW_02.html#income-and-education-in-us-counties",
+    "title": "Homework 2 Answers",
+    "section": "1.24 Income and education in US counties",
+    "text": "1.24 Income and education in US counties"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#mix-and-match",
+    "href": "hw_answers/HW_02.html#mix-and-match",
+    "title": "Homework 2 Answers",
+    "section": "1.28 Mix-and-match",
+    "text": "1.28 Mix-and-match"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#associations",
+    "href": "hw_answers/HW_02.html#associations",
+    "title": "Homework 2 Answers",
+    "section": "1.36 Associations",
+    "text": "1.36 Associations"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#smoking-and-stenosis",
+    "href": "hw_answers/HW_02.html#smoking-and-stenosis",
+    "title": "Homework 2 Answers",
+    "section": "1.38 Smoking and stenosis",
+    "text": "1.38 Smoking and stenosis\nSee Section1.6.2 for more on how the relative risk is calculated."
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#poverty-and-language",
+    "href": "hw_answers/HW_02.html#poverty-and-language",
+    "title": "Homework 2 Answers",
+    "section": "2.6 Poverty and language",
+    "text": "2.6 Poverty and language\nPart (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the VennDiagram or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples."
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#school-absences",
+    "href": "hw_answers/HW_02.html#school-absences",
+    "title": "Homework 2 Answers",
+    "section": "2.8 School absences",
+    "text": "2.8 School absences\nPart (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the VennDiagram or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples."
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#health-coverage-frequencies",
+    "href": "hw_answers/HW_02.html#health-coverage-frequencies",
+    "title": "Homework 2 Answers",
+    "section": "2.10 Health coverage, frequencies",
+    "text": "2.10 Health coverage, frequencies"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#health-coverage-relative-frequencies",
+    "href": "hw_answers/HW_02.html#health-coverage-relative-frequencies",
+    "title": "Homework 2 Answers",
+    "section": "2.14 Health coverage, relative frequencies",
+    "text": "2.14 Health coverage, relative frequencies"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#predisposition-for-thrombosis",
+    "href": "hw_answers/HW_02.html#predisposition-for-thrombosis",
+    "title": "Homework 2 Answers",
+    "section": "2.18 Predisposition for thrombosis",
+    "text": "2.18 Predisposition for thrombosis"
+  },
+  {
+    "objectID": "hw_answers/HW_02.html#breast-cancer-and-age",
+    "href": "hw_answers/HW_02.html#breast-cancer-and-age",
+    "title": "Homework 2 Answers",
+    "section": "2.24 Breast cancer and age",
+    "text": "2.24 Breast cancer and age"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#two-basic-study-designs",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#two-basic-study-designs",
+    "title": "Lesson 1: Data collection",
+    "section": "Two basic study designs",
+    "text": "Two basic study designs\n\n\n\n\nExperiment\n\n\nResearchers directly influence how data arise\n\nSuch as: assigning groups of individuals to different treatments and assessing how the outcome varies across treatment groups\nThree major parts to an experiment\n\nControl\nRandomization\nReplication\n\n\n\n\n\n\n\nObservational study\n\n\nResearchers merely observe and record data, without interfering with how the data arise\n\nFor example, to investigate why certain diseases develop, researchers might collect data by conducting surveys, reviewing medical records, or following a cohort of many similar individuals."
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#observational-studies-prospective-vs.-retrospective-studies",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#observational-studies-prospective-vs.-retrospective-studies",
+    "title": "Lesson 1: Data collection",
+    "section": "Observational studies: prospective vs. retrospective studies",
+    "text": "Observational studies: prospective vs. retrospective studies\nSome studies can have prospective and retrospective data!\n\n\n\n\nProspective\n\n\n\nIdentifies participants and collects information at scheduled times or as events unfold.\n\n\n\n\n\n\nRetrospective\n\n\n\nCollect data after events have taken place, such as from medical records\n\n\n\n\n\nExample: The Cancer Care Outcomes Research and Surveillance Consortium (CanCORS) enrolled participants with lung or colorectal cancer, collected information about diagnosis, treatment, and previous health behavior (retrospective), but also maintained contact with participants to gather data about long-term outcomes (prospective)."
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#section",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#section",
+    "title": "Lesson 1: Data collection",
+    "section": "",
+    "text": "Lesson 1 Slides"
+  },
+  {
+    "objectID": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#intro-to-data",
+    "href": "lessons/02_Data_collection_num_summaries/02_Data_collection_num_summaries.html#intro-to-data",
+    "title": "Lesson 2: Data collection & numerical summaries",
+    "section": "Intro to Data",
+    "text": "Intro to Data\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#intro-to-data",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#intro-to-data",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Intro to Data",
+    "text": "Intro to Data\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#how-are-data-stored-how-do-we-use-them",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#how-are-data-stored-how-do-we-use-them",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "How are data stored, how do we use them?",
+    "text": "How are data stored, how do we use them?\n\nOften, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\nData in R\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-frame-example",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-frame-example",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Data frame example",
+    "text": "Data frame example\n\n\n\ndf &lt;- data.frame(\n  IDs=1:3, \n  gender=c(\"male\", \"female\", \"Male\"), \n  age=c(28, 35.5, 31),\n  trt = c(\"control\", \"1\", \"1\"),\n  Veteran = c(FALSE, TRUE, TRUE)\n  )\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\nVectors vs. data frames\n\na data frame is a collection (or array or table) of vectors\n\n\n\n\n\n\n\nDifferent columns can be of different data types (i.e. numeric vs. text)\nBoth numeric and text can be stored within a column (stored together as text).\nVectors and data frames are examples of objects in R.\n\nThere are other types of R objects to store data, such as matrices, lists."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Observations & variables",
+    "text": "Observations & variables\n\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\n\n\nISLBS\n\n\n\n\n\nBook refers to a dataset as a data matrix\nRows are usually observations\nColumns are usually variables\nHow many observations are in this dataset?\nWhat are the variable types in this dataset?"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#variable-column-types",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#variable-column-types",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Variable (column) types",
+    "text": "Variable (column) types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)\n\n\n\n\n\nView the structure of our data frame to see what the variable types are:\n\n\n\nstr(df)\n\n'data.frame':   3 obs. of  5 variables:\n $ IDs    : int  1 2 3\n $ gender : chr  \"male\" \"female\" \"Male\"\n $ age    : num  28 35.5 31\n $ trt    : chr  \"control\" \"1\" \"1\"\n $ Veteran: logi  FALSE TRUE TRUE"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#fishers-or-andersons-iris-data-set",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nvariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\nCan the iris species be determined by these variables?\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#view-the-iris-dataset",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#view-the-iris-dataset",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n\n\n\n\n\n\nView(iris)\n\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-structure",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-structure",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-set-summary",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-set-summary",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-set-info",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#data-set-info",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Data set info",
+    "text": "Data set info\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\""
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#the",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#the",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "The $",
+    "text": "The $\n\nSuppose we want to single out the column of petal width values.\nOne way to do this is to use the $\n\nDatSetName$VariableName\n\n\n\niris$Petal.Width\n\n  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3\n [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2\n [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3\n [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3\n [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3\n [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8\n[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8\n[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3\n[145] 2.5 2.3 1.9 2.0 2.3 1.8"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-using-the",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-using-the",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Example using the $",
+    "text": "Example using the $\nThe $ is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.\n\n\n\nmean(iris$Petal.Width)\n\n[1] 1.199333\n\nsd(iris$Petal.Width)\n\n[1] 0.7622377\n\nmedian(iris$Petal.Width)\n\n[1] 1.3"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#inline-code",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#inline-code",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#table-1-example",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#table-1-example",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Table 1 example",
+    "text": "Table 1 example\n\n\n\n\n\n\n\n\nAre We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of center: mean",
+    "text": "Measures of center: mean\n\nSample mean: the average value of observations\n\\[\\overline{x} = \\frac{x_1+x_2+\\cdots+x_n}{n} = \\sum_{i=1}^{n}\\frac{x_i}{n}\\]\nwhere \\(x_1, x_2, \\ldots, x_n\\) represent the \\(n\\) observed values in a sample\nExample: What is the mean age in the toy dataset df defined earlier?\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\nmean(df$age)\n\n[1] 31.5"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-median",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-median",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of center: median",
+    "text": "Measures of center: median\n\n\nThe median is the middle value of the observations in a sample.\nThe median is the 50th percentile, meaning\n\n50% of observations lie below and\n50% of observations lie above the median.\n\n\n\n\n\n\n\nIf the number of observations is\n\nodd: the median is the middle observed value\neven: the median is the average of the two middle observed values\n\n\n\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\nmedian(df$age)\n\n[1] 31\n\nmedian(c(df$age, 67))\n\n[1] 33.25"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean-vs.-median",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean-vs.-median",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of center: mean vs. median",
+    "text": "Measures of center: mean vs. median\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mode",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mode",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of center: mode",
+    "text": "Measures of center: mode\nmode: the most frequent value in a dataset"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-standard-deviation-sd-13",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-standard-deviation-sd-13",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of spread: standard deviation (SD) (1/3)",
+    "text": "Measures of spread: standard deviation (SD) (1/3)\nstandard deviation is (approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\)."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-23",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-23",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of spread: SD (2/3)",
+    "text": "Measures of spread: SD (2/3)\n\nThe sample variance \\(s^2\\) is the sum of squared deviations divided by the number of observations minus 1. \\[s^2 = \\frac{(x_1 - \\overline{x})^2+(x_2 - \\overline{x})^2+\\cdots+(x_n - \\overline{x})^2}{n-1} = \\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}\\] where \\(x_1, x_2, \\dots, x_n\\) represent the \\(n\\) observed values.\nThe standard deviation \\(s\\) is the square root of the variance. \\[s = \\sqrt{\\frac{({x_1 - \\overline{x})}^{2}+({x_2 - \\overline{x})}^{2}+\\cdots+({x_n - \\overline{x})}^{2}}{n-1}} = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}}\\]"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-33",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-33",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of spread: SD (3/3)",
+    "text": "Measures of spread: SD (3/3)\n\n\n\nLet’s calculate the sample standard deviation for our toy example\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\n\n\n\nmean(df$age)\n\n[1] 31.5\n\nsd(df$age)\n\n[1] 3.774917\n\n\n\n\n\\(s = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}} =\\)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-12",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-12",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Empirical Rule: one way to think about the SD (1/2)",
+    "text": "Empirical Rule: one way to think about the SD (1/2)\n\n\n\nFor symmetric bell-shaped data, about\n\n68% of the data are within 1 SD of the mean\n95% of the data are within 2 SD’s of the mean\n99.7% of the data are within 3 SD’s of the mean\n\nThese percentages are based off of percentages of a true normal distribution.\n\n\n\n\nhttps://statistics-made-easy.com/empirical-rule/"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-22",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-22",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Empirical Rule: one way to think about the SD (2/2)",
+    "text": "Empirical Rule: one way to think about the SD (2/2)\n\n\n\nhist(iris$Sepal.Width)\n\n\n\n\n\n\nmean(iris$Sepal.Width)\n\n[1] 3.057333\n\nsd(iris$Sepal.Width)\n\n[1] 0.4358663"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-interquartile-range-iqr-12",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-interquartile-range-iqr-12",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of spread: interquartile range (IQR) (1/2)",
+    "text": "Measures of spread: interquartile range (IQR) (1/2)\nThe \\(p^{th}\\) percentile is the observation such that \\(p\\%\\) of the remaining observations fall below this observation.\n\nThe first quartile \\(Q_1\\) is the \\(25^{th}\\) percentile.\nThe second quartile \\(Q_2\\), i.e., the median, is the \\(50^{th}\\) percentile.\nThe third quartile \\(Q_3\\) is the \\(75^{th}\\) percentile.\n\nThe interquartile range (IQR) is the distance between the third and first quartiles. \\[IQR = Q_3 - Q_1\\]\n\nIQR is the width of the middle half of the data"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-iqr-22",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-iqr-22",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Measures of spread: IQR (2/2)",
+    "text": "Measures of spread: IQR (2/2)\n5 number summary\n\nsummary(iris$Sepal.Width)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  2.000   2.800   3.000   3.057   3.300   4.400 \n\n\n\n\n\n\n\n\n\n\nWhat is the IQR of the sepal widths?\n\nquantile(iris$Sepal.Width, c(.25, .75))\n\n25% 75% \n2.8 3.3 \n\ndiff(quantile(iris$Sepal.Width, c(.25, .75)))\n\n75% \n0.5 \n\nIQR(iris$Sepal.Width)\n\n[1] 0.5"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#robust-estimates",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#robust-estimates",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Robust estimates",
+    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nestimate\nrobust?\n\n\n\n\nmean\n\n\n\nmedian\n\n\n\nmode\n\n\n\nstandard deviaiton\n\n\n\nIQR\n\n\n\nrange\n\n\n\n\n\n\nLesson 2 Slides"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Include organization\n\nHave them do a data management script!!\n\nself-contained not a proper yaml command now\ncitations!! in zotero!!\nGit and GitHub!!"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html#to-nicky",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html#to-nicky",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Include organization\n\nHave them do a data management script!!\n\nself-contained not a proper yaml command now\ncitations!! in zotero!!\nGit and GitHub!!"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html#announcements",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "Announcements",
+    "text": "Announcements"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html#key-dates",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "How are data stored, how do we use them?",
+    "text": "How are data stored, how do we use them?\n\nOften, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\nData in R\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data frame example",
+    "text": "Data frame example\n\n\n\ndf &lt;- data.frame(\n  IDs=1:3, \n  gender=c(\"male\", \"female\", \"Male\"), \n  age=c(28, 35.5, 31),\n  trt = c(\"control\", \"1\", \"1\"),\n  Veteran = c(FALSE, TRUE, TRUE)\n  )\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\nVectors vs. data frames\n\na data frame is a collection (or array or table) of vectors\n\n\n\n\n\n\n\nDifferent columns can be of different data types (i.e. numeric vs. text)\nBoth numeric and text can be stored within a column (stored together as text).\nVectors and data frames are examples of objects in R.\n\nThere are other types of R objects to store data, such as matrices, lists."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Observations & variables",
+    "text": "Observations & variables\n\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\n\n\nISLBS\n\n\n\n\n\nBook refers to a dataset as a data matrix\nRows are usually observations\nColumns are usually variables\nHow many observations are in this dataset?\nWhat are the variable types in this dataset?"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Variable (column) types",
+    "text": "Variable (column) types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)\n\n\n\n\n\nView the structure of our data frame to see what the variable types are:\n\n\n\nstr(df)\n\n'data.frame':   3 obs. of  5 variables:\n $ IDs    : int  1 2 3\n $ gender : chr  \"male\" \"female\" \"Male\"\n $ age    : num  28 35.5 31\n $ trt    : chr  \"control\" \"1\" \"1\"\n $ Veteran: logi  FALSE TRUE TRUE"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nvariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\nCan the iris species be determined by these variables?\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n\n\n\n\n\n\nView(iris)\n\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-structure",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-structure",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set info",
+    "text": "Data set info\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\""
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#the",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "The $",
+    "text": "The $\n\nSuppose we want to single out the column of petal width values.\nOne way to do this is to use the $\n\nDatSetName$VariableName\n\n\n\niris$Petal.Width\n\n  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3\n [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2\n [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3\n [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3\n [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3\n [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8\n[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8\n[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3\n[145] 2.5 2.3 1.9 2.0 2.3 1.8"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Example using the $",
+    "text": "Example using the $\nThe $ is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.\n\n\n\nmean(iris$Petal.Width)\n\n[1] 1.199333\n\nsd(iris$Petal.Width)\n\n[1] 0.7622377\n\nmedian(iris$Petal.Width)\n\n[1] 1.3"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#inline-code",
+    "href": "lessons/R04_Quarto_pkgs_data_import/R04_Quarto_pkgs_data_import.html#inline-code",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.\n\n\n\n\nR2 Slides"
   }
 ]
