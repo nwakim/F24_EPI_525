@@ -4441,17 +4441,6 @@ vertical-align: -.125em;
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  
-  <script>
-    (function () {
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-  </script>
-
 
 </head>
 
@@ -4520,41 +4509,30 @@ vertical-align: -.125em;
   <li><a href="#paired-or-not-part-ii" id="toc-paired-or-not-part-ii" class="nav-link" data-scroll-target="#paired-or-not-part-ii">5.16 Paired or not, Part II</a></li>
   <li><a href="#ddt-exposure" id="toc-ddt-exposure" class="nav-link" data-scroll-target="#ddt-exposure">5.22 DDT exposure</a></li>
   </ul></li>
-  <li><a href="#pss" id="toc-pss" class="nav-link" data-scroll-target="#pss"><span class="header-section-number">1</span> PSS</a>
+  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises"><span class="header-section-number">1</span> R exercises</a>
   <ul class="collapse">
-  <li><a href="#pss1-4.22-testing-for-food-safety." id="toc-pss1-4.22-testing-for-food-safety." class="nav-link" data-scroll-target="#pss1-4.22-testing-for-food-safety."><span class="header-section-number">1.1</span> PSS1: 4.22 Testing for food safety.</a></li>
-  <li><a href="#pss2-auto-exhaust-and-lead-exposure-revisited." id="toc-pss2-auto-exhaust-and-lead-exposure-revisited." class="nav-link" data-scroll-target="#pss2-auto-exhaust-and-lead-exposure-revisited."><span class="header-section-number">1.2</span> PSS2: Auto exhaust and lead exposure revisited.</a>
+  <li><a href="#load-all-the-packages-you-need-below-here." id="toc-load-all-the-packages-you-need-below-here." class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here."><span class="header-section-number">1.1</span> Load all the packages you need below here.</a></li>
+  <li><a href="#r1-dds-expenditures-by-ethnicity" id="toc-r1-dds-expenditures-by-ethnicity" class="nav-link" data-scroll-target="#r1-dds-expenditures-by-ethnicity"><span class="header-section-number">1.2</span> R1: DDS expenditures by ethnicity</a>
   <ul class="collapse">
-  <li><a href="#power" id="toc-power" class="nav-link" data-scroll-target="#power"><span class="header-section-number">1.2.1</span> Power</a></li>
-  <li><a href="#sample-size" id="toc-sample-size" class="nav-link" data-scroll-target="#sample-size"><span class="header-section-number">1.2.2</span> Sample size</a></li>
-  <li><a href="#effect-size" id="toc-effect-size" class="nav-link" data-scroll-target="#effect-size"><span class="header-section-number">1.2.3</span> Effect size</a></li>
-  <li><a href="#sided-vs.-1-sided" id="toc-sided-vs.-1-sided" class="nav-link" data-scroll-target="#sided-vs.-1-sided"><span class="header-section-number">1.2.4</span> 2-sided vs. 1-sided</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises"><span class="header-section-number">2</span> R exercises</a>
-  <ul class="collapse">
-  <li><a href="#load-all-the-packages-you-need-below-here." id="toc-load-all-the-packages-you-need-below-here." class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here."><span class="header-section-number">2.1</span> Load all the packages you need below here.</a></li>
-  <li><a href="#r1-dds-expenditures-by-ethnicity" id="toc-r1-dds-expenditures-by-ethnicity" class="nav-link" data-scroll-target="#r1-dds-expenditures-by-ethnicity"><span class="header-section-number">2.2</span> R1: DDS expenditures by ethnicity</a>
-  <ul class="collapse">
-  <li><a href="#new-dataset" id="toc-new-dataset" class="nav-link" data-scroll-target="#new-dataset"><span class="header-section-number">2.2.1</span> New dataset</a></li>
-  <li><a href="#data-viz" id="toc-data-viz" class="nav-link" data-scroll-target="#data-viz"><span class="header-section-number">2.2.2</span> Data viz</a></li>
-  <li><a href="#t-test-conditions" id="toc-t-test-conditions" class="nav-link" data-scroll-target="#t-test-conditions"><span class="header-section-number">2.2.3</span> t-test conditions</a></li>
-  <li><a href="#log-transformation" id="toc-log-transformation" class="nav-link" data-scroll-target="#log-transformation"><span class="header-section-number">2.2.4</span> Log-transformation</a></li>
-  <li><a href="#data-viz-log-transformed-expenditures" id="toc-data-viz-log-transformed-expenditures" class="nav-link" data-scroll-target="#data-viz-log-transformed-expenditures"><span class="header-section-number">2.2.5</span> Data viz: log-transformed expenditures</a></li>
-  <li><a href="#t-test-conditions-log-transformed-expenditures" id="toc-t-test-conditions-log-transformed-expenditures" class="nav-link" data-scroll-target="#t-test-conditions-log-transformed-expenditures"><span class="header-section-number">2.2.6</span> t-test conditions: log-transformed expenditures</a></li>
-  <li><a href="#summary-stats-log-transformed-expenditures" id="toc-summary-stats-log-transformed-expenditures" class="nav-link" data-scroll-target="#summary-stats-log-transformed-expenditures"><span class="header-section-number">2.2.7</span> Summary stats: log-transformed expenditures</a></li>
-  <li><a href="#test" id="toc-test" class="nav-link" data-scroll-target="#test"><span class="header-section-number">2.2.8</span> Test</a></li>
-  <li><a href="#df" id="toc-df" class="nav-link" data-scroll-target="#df"><span class="header-section-number">2.2.9</span> df</a></li>
-  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><span class="header-section-number">2.2.10</span> CI</a></li>
-  <li><a href="#test-original-expenditure-values" id="toc-test-original-expenditure-values" class="nav-link" data-scroll-target="#test-original-expenditure-values"><span class="header-section-number">2.2.11</span> Test original expenditure values</a></li>
-  <li><a href="#ci-using-original-expenditure-values" id="toc-ci-using-original-expenditure-values" class="nav-link" data-scroll-target="#ci-using-original-expenditure-values"><span class="header-section-number">2.2.12</span> CI using original expenditure values</a></li>
-  <li><a href="#age-groups" id="toc-age-groups" class="nav-link" data-scroll-target="#age-groups"><span class="header-section-number">2.2.13</span> Age groups</a></li>
-  <li><a href="#data-viz-by-age-groups" id="toc-data-viz-by-age-groups" class="nav-link" data-scroll-target="#data-viz-by-age-groups"><span class="header-section-number">2.2.14</span> Data viz by age groups</a></li>
-  <li><a href="#t-test-conditions-age-groups" id="toc-t-test-conditions-age-groups" class="nav-link" data-scroll-target="#t-test-conditions-age-groups"><span class="header-section-number">2.2.15</span> t-test conditions: age groups</a></li>
-  <li><a href="#summary-stats-age-groups" id="toc-summary-stats-age-groups" class="nav-link" data-scroll-target="#summary-stats-age-groups"><span class="header-section-number">2.2.16</span> Summary stats: age groups</a></li>
-  <li><a href="#t-test-age-groups" id="toc-t-test-age-groups" class="nav-link" data-scroll-target="#t-test-age-groups"><span class="header-section-number">2.2.17</span> t-test: age groups</a></li>
-  <li><a href="#ci-age-groups" id="toc-ci-age-groups" class="nav-link" data-scroll-target="#ci-age-groups"><span class="header-section-number">2.2.18</span> CI: age groups</a></li>
-  <li><a href="#discrimination-in-dds-expenditures" id="toc-discrimination-in-dds-expenditures" class="nav-link" data-scroll-target="#discrimination-in-dds-expenditures"><span class="header-section-number">2.2.19</span> Discrimination in DDS expenditures?</a></li>
+  <li><a href="#new-dataset" id="toc-new-dataset" class="nav-link" data-scroll-target="#new-dataset"><span class="header-section-number">1.2.1</span> New dataset</a></li>
+  <li><a href="#data-viz" id="toc-data-viz" class="nav-link" data-scroll-target="#data-viz"><span class="header-section-number">1.2.2</span> Data viz</a></li>
+  <li><a href="#t-test-conditions" id="toc-t-test-conditions" class="nav-link" data-scroll-target="#t-test-conditions"><span class="header-section-number">1.2.3</span> t-test conditions</a></li>
+  <li><a href="#log-transformation" id="toc-log-transformation" class="nav-link" data-scroll-target="#log-transformation"><span class="header-section-number">1.2.4</span> Log-transformation</a></li>
+  <li><a href="#data-viz-log-transformed-expenditures" id="toc-data-viz-log-transformed-expenditures" class="nav-link" data-scroll-target="#data-viz-log-transformed-expenditures"><span class="header-section-number">1.2.5</span> Data viz: log-transformed expenditures</a></li>
+  <li><a href="#t-test-conditions-log-transformed-expenditures" id="toc-t-test-conditions-log-transformed-expenditures" class="nav-link" data-scroll-target="#t-test-conditions-log-transformed-expenditures"><span class="header-section-number">1.2.6</span> t-test conditions: log-transformed expenditures</a></li>
+  <li><a href="#summary-stats-log-transformed-expenditures" id="toc-summary-stats-log-transformed-expenditures" class="nav-link" data-scroll-target="#summary-stats-log-transformed-expenditures"><span class="header-section-number">1.2.7</span> Summary stats: log-transformed expenditures</a></li>
+  <li><a href="#test" id="toc-test" class="nav-link" data-scroll-target="#test"><span class="header-section-number">1.2.8</span> Test</a></li>
+  <li><a href="#df" id="toc-df" class="nav-link" data-scroll-target="#df"><span class="header-section-number">1.2.9</span> df</a></li>
+  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><span class="header-section-number">1.2.10</span> CI</a></li>
+  <li><a href="#test-original-expenditure-values" id="toc-test-original-expenditure-values" class="nav-link" data-scroll-target="#test-original-expenditure-values"><span class="header-section-number">1.2.11</span> Test original expenditure values</a></li>
+  <li><a href="#ci-using-original-expenditure-values" id="toc-ci-using-original-expenditure-values" class="nav-link" data-scroll-target="#ci-using-original-expenditure-values"><span class="header-section-number">1.2.12</span> CI using original expenditure values</a></li>
+  <li><a href="#age-groups" id="toc-age-groups" class="nav-link" data-scroll-target="#age-groups"><span class="header-section-number">1.2.13</span> Age groups</a></li>
+  <li><a href="#data-viz-by-age-groups" id="toc-data-viz-by-age-groups" class="nav-link" data-scroll-target="#data-viz-by-age-groups"><span class="header-section-number">1.2.14</span> Data viz by age groups</a></li>
+  <li><a href="#t-test-conditions-age-groups" id="toc-t-test-conditions-age-groups" class="nav-link" data-scroll-target="#t-test-conditions-age-groups"><span class="header-section-number">1.2.15</span> t-test conditions: age groups</a></li>
+  <li><a href="#summary-stats-age-groups" id="toc-summary-stats-age-groups" class="nav-link" data-scroll-target="#summary-stats-age-groups"><span class="header-section-number">1.2.16</span> Summary stats: age groups</a></li>
+  <li><a href="#t-test-age-groups" id="toc-t-test-age-groups" class="nav-link" data-scroll-target="#t-test-age-groups"><span class="header-section-number">1.2.17</span> t-test: age groups</a></li>
+  <li><a href="#ci-age-groups" id="toc-ci-age-groups" class="nav-link" data-scroll-target="#ci-age-groups"><span class="header-section-number">1.2.18</span> CI: age groups</a></li>
+  <li><a href="#discrimination-in-dds-expenditures" id="toc-discrimination-in-dds-expenditures" class="nav-link" data-scroll-target="#discrimination-in-dds-expenditures"><span class="header-section-number">1.2.19</span> Discrimination in DDS expenditures?</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -4658,117 +4636,91 @@ Important
 <h2 class="unnumbered anchored" data-anchor-id="ddt-exposure">5.22 DDT exposure</h2>
 </section>
 </section>
-<section id="pss" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> PSS</h1>
-<section id="pss1-4.22-testing-for-food-safety." class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="pss1-4.22-testing-for-food-safety."><span class="header-section-number">1.1</span> PSS1: 4.22 Testing for food safety.</h2>
-<p>Do exercise 4.22 from textbook.</p>
+<section id="r-exercises" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> R exercises</h1>
+<section id="load-all-the-packages-you-need-below-here." class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here."><span class="header-section-number">1.1</span> Load all the packages you need below here.</h2>
 </section>
-<section id="pss2-auto-exhaust-and-lead-exposure-revisited." class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="pss2-auto-exhaust-and-lead-exposure-revisited."><span class="header-section-number">1.2</span> PSS2: Auto exhaust and lead exposure revisited.</h2>
-<section id="power" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="power"><span class="header-section-number">1.2.1</span> Power</h3>
-<p><strong>In exercise 5.12, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?</strong></p>
-</section>
-<section id="sample-size" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="sample-size"><span class="header-section-number">1.2.2</span> Sample size</h3>
-<p><strong>For the same test, what sample size would be needed for 80% power? How about 90% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not?</strong></p>
-</section>
-<section id="effect-size" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="effect-size"><span class="header-section-number">1.2.3</span> Effect size</h3>
-<p><strong>Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use <span class="math inline">\(\alpha\)</span> = 0.05.</strong></p>
-</section>
-<section id="sided-vs.-1-sided" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="sided-vs.-1-sided"><span class="header-section-number">1.2.4</span> 2-sided vs. 1-sided</h3>
-<p><strong>Continuing with the previous question, what happens to the effect size they can detect if the test is two sided instead of one-sided?</strong></p>
-</section>
-</section>
-</section>
-<section id="r-exercises" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> R exercises</h1>
-<section id="load-all-the-packages-you-need-below-here." class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here."><span class="header-section-number">2.1</span> Load all the packages you need below here.</h2>
-</section>
-<section id="r1-dds-expenditures-by-ethnicity" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="r1-dds-expenditures-by-ethnicity"><span class="header-section-number">2.2</span> R1: DDS expenditures by ethnicity</h2>
+<section id="r1-dds-expenditures-by-ethnicity" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="r1-dds-expenditures-by-ethnicity"><span class="header-section-number">1.2</span> R1: DDS expenditures by ethnicity</h2>
 <ul>
 <li>In these exercises you will use R to work through the discrimination in developmental disability support example from Section 5.3.4 (pg. 253) in the textbook.</li>
 <li>The data are in the <code>oibiostats</code> package and called <code>dds.discr</code>.</li>
 </ul>
-<section id="new-dataset" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="new-dataset"><span class="header-section-number">2.2.1</span> New dataset</h3>
+<section id="new-dataset" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="new-dataset"><span class="header-section-number">1.2.1</span> New dataset</h3>
 <p><strong>Create a new dataset that only includes the White (non Hispanic) and Hispanic ethnicities. Use this new dataset for the following questions.</strong></p>
 </section>
-<section id="data-viz" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="data-viz"><span class="header-section-number">2.2.2</span> Data viz</h3>
+<section id="data-viz" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="data-viz"><span class="header-section-number">1.2.2</span> Data viz</h3>
 <p><strong>Create density plots and box plots of the expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?</strong></p>
 </section>
-<section id="t-test-conditions" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="t-test-conditions"><span class="header-section-number">2.2.3</span> t-test conditions</h3>
+<section id="t-test-conditions" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="t-test-conditions"><span class="header-section-number">1.2.3</span> t-test conditions</h3>
 <p><strong>Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied?</strong></p>
 </section>
-<section id="log-transformation" class="level3" data-number="2.2.4">
-<h3 data-number="2.2.4" class="anchored" data-anchor-id="log-transformation"><span class="header-section-number">2.2.4</span> Log-transformation</h3>
+<section id="log-transformation" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="log-transformation"><span class="header-section-number">1.2.4</span> Log-transformation</h3>
 <p><strong>The book recommends log-transforming the expenditure values before testing. Create a new column in the dataset with the transformed values. The R command for the natural logarithm is <code>log()</code>. </strong></p>
 </section>
-<section id="data-viz-log-transformed-expenditures" class="level3" data-number="2.2.5">
-<h3 data-number="2.2.5" class="anchored" data-anchor-id="data-viz-log-transformed-expenditures"><span class="header-section-number">2.2.5</span> Data viz: log-transformed expenditures</h3>
+<section id="data-viz-log-transformed-expenditures" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="data-viz-log-transformed-expenditures"><span class="header-section-number">1.2.5</span> Data viz: log-transformed expenditures</h3>
 <p><strong>Create density plots and box plots of the log-transformed expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?</strong></p>
 </section>
-<section id="t-test-conditions-log-transformed-expenditures" class="level3" data-number="2.2.6">
-<h3 data-number="2.2.6" class="anchored" data-anchor-id="t-test-conditions-log-transformed-expenditures"><span class="header-section-number">2.2.6</span> t-test conditions: log-transformed expenditures</h3>
+<section id="t-test-conditions-log-transformed-expenditures" class="level3" data-number="1.2.6">
+<h3 data-number="1.2.6" class="anchored" data-anchor-id="t-test-conditions-log-transformed-expenditures"><span class="header-section-number">1.2.6</span> t-test conditions: log-transformed expenditures</h3>
 <p><strong>Are the conditions for a t-test comparing the mean log-transformed expenditures of the two ethnicities satisfied?</strong></p>
 </section>
-<section id="summary-stats-log-transformed-expenditures" class="level3" data-number="2.2.7">
-<h3 data-number="2.2.7" class="anchored" data-anchor-id="summary-stats-log-transformed-expenditures"><span class="header-section-number">2.2.7</span> Summary stats: log-transformed expenditures</h3>
+<section id="summary-stats-log-transformed-expenditures" class="level3" data-number="1.2.7">
+<h3 data-number="1.2.7" class="anchored" data-anchor-id="summary-stats-log-transformed-expenditures"><span class="header-section-number">1.2.7</span> Summary stats: log-transformed expenditures</h3>
 <p><strong>Calculate the means, standard deviations, and sample sizes for the log-transformed expenditures stratified by ethnicity, and compare them to the ones in the book. Which group had a larger mean?</strong></p>
 </section>
-<section id="test" class="level3" data-number="2.2.8">
-<h3 data-number="2.2.8" class="anchored" data-anchor-id="test"><span class="header-section-number">2.2.8</span> Test</h3>
+<section id="test" class="level3" data-number="1.2.8">
+<h3 data-number="1.2.8" class="anchored" data-anchor-id="test"><span class="header-section-number">1.2.8</span> Test</h3>
 <p><strong>Run the appropriate statistical test in R to verify the test statistic in the text and get the actual p-value. In which order was the difference in means calculated, and is this same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.</strong></p>
 </section>
-<section id="df" class="level3" data-number="2.2.9">
-<h3 data-number="2.2.9" class="anchored" data-anchor-id="df"><span class="header-section-number">2.2.9</span> df</h3>
+<section id="df" class="level3" data-number="1.2.9">
+<h3 data-number="1.2.9" class="anchored" data-anchor-id="df"><span class="header-section-number">1.2.9</span> df</h3>
 <p><strong>How do the degrees of freedom (df) from the hypothesis test compare to the df used by the book? Why are they different? Which degrees df (book vs. test output) leads to a bigger p-value?</strong></p>
 </section>
-<section id="ci" class="level3" data-number="2.2.10">
-<h3 data-number="2.2.10" class="anchored" data-anchor-id="ci"><span class="header-section-number">2.2.10</span> CI</h3>
+<section id="ci" class="level3" data-number="1.2.10">
+<h3 data-number="1.2.10" class="anchored" data-anchor-id="ci"><span class="header-section-number">1.2.10</span> CI</h3>
 <p><strong>What is the 95% CI? Write an interpretation of the CI in the context of the research question. </strong></p>
 </section>
-<section id="test-original-expenditure-values" class="level3" data-number="2.2.11">
-<h3 data-number="2.2.11" class="anchored" data-anchor-id="test-original-expenditure-values"><span class="header-section-number">2.2.11</span> Test original expenditure values</h3>
+<section id="test-original-expenditure-values" class="level3" data-number="1.2.11">
+<h3 data-number="1.2.11" class="anchored" data-anchor-id="test-original-expenditure-values"><span class="header-section-number">1.2.11</span> Test original expenditure values</h3>
 <p><strong>Run the appropriate statistical test in R using the original expenditure values. What are the test statistic and p-value? Does the conclusion of the test change?</strong></p>
 </section>
-<section id="ci-using-original-expenditure-values" class="level3" data-number="2.2.12">
-<h3 data-number="2.2.12" class="anchored" data-anchor-id="ci-using-original-expenditure-values"><span class="header-section-number">2.2.12</span> CI using original expenditure values</h3>
+<section id="ci-using-original-expenditure-values" class="level3" data-number="1.2.12">
+<h3 data-number="1.2.12" class="anchored" data-anchor-id="ci-using-original-expenditure-values"><span class="header-section-number">1.2.12</span> CI using original expenditure values</h3>
 <p><strong>What is the 95% CI? Write an interpretation of the CI in the context of the research question. Which of the CI’s (log-transformed vs not) is easier to interpret?</strong></p>
 </section>
-<section id="age-groups" class="level3" data-number="2.2.13">
-<h3 data-number="2.2.13" class="anchored" data-anchor-id="age-groups"><span class="header-section-number">2.2.13</span> Age groups</h3>
+<section id="age-groups" class="level3" data-number="1.2.13">
+<h3 data-number="1.2.13" class="anchored" data-anchor-id="age-groups"><span class="header-section-number">1.2.13</span> Age groups</h3>
 <p><strong>The book’s example goes on to analyze the data stratified by age groups, since age is a confounder in expenditure amounts. Create two new datasets restricted to the age groups 13-17 and 22-50, respectively.</strong></p>
 </section>
-<section id="data-viz-by-age-groups" class="level3" data-number="2.2.14">
-<h3 data-number="2.2.14" class="anchored" data-anchor-id="data-viz-by-age-groups"><span class="header-section-number">2.2.14</span> Data viz by age groups</h3>
+<section id="data-viz-by-age-groups" class="level3" data-number="1.2.14">
+<h3 data-number="1.2.14" class="anchored" data-anchor-id="data-viz-by-age-groups"><span class="header-section-number">1.2.14</span> Data viz by age groups</h3>
 <p><strong>Create density plots and box plots of the expenditures stratified by ethnicity for each of the age groups separately. Comment on the distribution shapes. Are there any outliers?</strong></p>
 </section>
-<section id="t-test-conditions-age-groups" class="level3" data-number="2.2.15">
-<h3 data-number="2.2.15" class="anchored" data-anchor-id="t-test-conditions-age-groups"><span class="header-section-number">2.2.15</span> t-test conditions: age groups</h3>
+<section id="t-test-conditions-age-groups" class="level3" data-number="1.2.15">
+<h3 data-number="1.2.15" class="anchored" data-anchor-id="t-test-conditions-age-groups"><span class="header-section-number">1.2.15</span> t-test conditions: age groups</h3>
 <p><strong>Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?</strong></p>
 </section>
-<section id="summary-stats-age-groups" class="level3" data-number="2.2.16">
-<h3 data-number="2.2.16" class="anchored" data-anchor-id="summary-stats-age-groups"><span class="header-section-number">2.2.16</span> Summary stats: age groups</h3>
+<section id="summary-stats-age-groups" class="level3" data-number="1.2.16">
+<h3 data-number="1.2.16" class="anchored" data-anchor-id="summary-stats-age-groups"><span class="header-section-number">1.2.16</span> Summary stats: age groups</h3>
 <p><strong>Calculate the means, standard deviations, and sample sizes for the expenditures stratified by ethnicity and the age groups, and compare them to the ones in the book. Which group had a larger mean?</strong></p>
 </section>
-<section id="t-test-age-groups" class="level3" data-number="2.2.17">
-<h3 data-number="2.2.17" class="anchored" data-anchor-id="t-test-age-groups"><span class="header-section-number">2.2.17</span> t-test: age groups</h3>
+<section id="t-test-age-groups" class="level3" data-number="1.2.17">
+<h3 data-number="1.2.17" class="anchored" data-anchor-id="t-test-age-groups"><span class="header-section-number">1.2.17</span> t-test: age groups</h3>
 <p><strong>Run the appropriate statistical tests for both age groups in R to verify the test statistics, df’s, and p-values in the text. In which order were the differences in means calculated, and are they the same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.</strong></p>
 </section>
-<section id="ci-age-groups" class="level3" data-number="2.2.18">
-<h3 data-number="2.2.18" class="anchored" data-anchor-id="ci-age-groups"><span class="header-section-number">2.2.18</span> CI: age groups</h3>
+<section id="ci-age-groups" class="level3" data-number="1.2.18">
+<h3 data-number="1.2.18" class="anchored" data-anchor-id="ci-age-groups"><span class="header-section-number">1.2.18</span> CI: age groups</h3>
 <p><strong>What are the 95% CI’s for each of the age groups? Write interpretations of the CI’s in the context of the research question. Does they suggest there are differences in expenditures between the two ethnicities? Why or why not?</strong></p>
 </section>
-<section id="discrimination-in-dds-expenditures" class="level3" data-number="2.2.19">
-<h3 data-number="2.2.19" class="anchored" data-anchor-id="discrimination-in-dds-expenditures"><span class="header-section-number">2.2.19</span> Discrimination in DDS expenditures?</h3>
+<section id="discrimination-in-dds-expenditures" class="level3" data-number="1.2.19">
+<h3 data-number="1.2.19" class="anchored" data-anchor-id="discrimination-in-dds-expenditures"><span class="header-section-number">1.2.19</span> Discrimination in DDS expenditures?</h3>
 <p><strong>Even though the p-values for the age-stratified tests were not significant, is it possible that there was discrimination in DDS expenditures?</strong></p>
 
 

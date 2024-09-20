@@ -78,39 +78,6 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 
 
-# PSS
-
-## PSS1: 4.22 Testing for food safety.
-
-Do exercise 4.22 from textbook.
-
-
-## PSS2: Auto exhaust and lead exposure revisited.
-
-### Power
-
-__In exercise 5.12, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?__ 
-
-
-
-### Sample size
-
-__For the same test, what sample size would be needed for 80% power? How about 90% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not?__ 
-
-
-
-### Effect size
-
-__Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05.__ 
-
-
-
-### 2-sided vs. 1-sided 
-
-__Continuing with the previous question, what happens to the effect size they can detect if the test is two sided instead of one-sided?__ 
-
-
-
 # R exercises 
 
 ## Load all the packages you need below here. 
