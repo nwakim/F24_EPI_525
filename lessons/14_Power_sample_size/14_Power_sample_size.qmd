@@ -1,0 +1,694 @@
+---
+title: "Lesson 14: Power and sample size calculations"
+subtitle: "TB sections 5.4"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "11/13/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 14 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(gt)
+library(broom) # new-ish
+library(here) # new-ish
+library(pwr) # NEW!!
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
+
+set.seed(456)
+```
+
+
+# Power and sample size calculations
+
+* Critical values & rejection region
+
+* Type I & II errors
+
+* Power
+
+* How to calculate sample size needed for a study?
+
+<hr>
+
+* Materials are from 
+    * __Section 4.3.4__ Decision errors
+    * __Section 5.4__ Power calculations for a difference of means
+    * plus notes
+
+
+
+## Critical values 
+
+::: {style="font-size: 90%;"}
+
+* __Critical values__ are the cutoff values that determine whether a test statistic is statistically significant or not.
+* If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+
+::: columns
+::: {.column width="49%"}
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+cv90 <- 1.645
+cv95 <- 1.96
+cv99 <- 2.575
+
+ggplot(NULL, aes(c(-3,3))) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.8, xlim = c(-3, -cv99)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.6, xlim = c(-cv99, -cv95)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.4, xlim = c(-cv95, -cv90)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.1, xlim = c(-cv90, cv90)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.4, xlim = c(cv90, cv95)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.6, xlim = c(cv95, cv99)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.8, xlim = c(cv99, 3)) +
+  labs(x = "z", y = "") +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = c(-cv99, -cv95, -cv90, 0, cv90, cv95, cv99)) +
+  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
+  annotate("text", x = -2.8, y = .1, label = ".005") +
+  annotate("text", x = -2.2, y = .1, label = ".025") +
+  annotate("text", x = -1.7, y = .1, label = ".05") +
+  annotate("text", x = 2.8, y = .1, label = ".005") +
+  annotate("text", x = 2.2, y = .1, label = ".025") +
+  annotate("text", x = 1.7, y = .1, label = ".05") +
+  labs(title="Critical Values for a Normal Distribution") +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+
+* Critical values are determined by 
+    * the significance level $\alpha$, 
+    * whether a test is 1- or 2-sided, &
+    * the probability distribution being used to calculate the p-value (such as normal or t-distribution).
+* The critical values in the figure should look very familiar! 
+    * Where have we used these before?
+
+:::
+:::
+<br>
+
+* How can we calculate the critical values using R?
+:::
+
+
+## Rejection region
+
+* If the absolute value of the test statistic is greater than the critical value, we reject $H_0$
+    * In this case the test statistic is in the __rejection region__.
+    * Otherwise it's in the nonrejection region.
+
+::: columns
+::: {.column width="60%"}
+
+![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](/img_slides/RejectionRegion.png){fig-align="center"}
+
+:::
+::: {.column width="40%"}
+
+* What do rejection regions look like for 1-sided tests?
+
+:::
+:::
+
+
+# Hypothesis Testing "Errors" 
+
+![[StatisticsSolutions](https://www.statisticssolutions.com/to-err-is-human-what-are-type-i-and-ii-errors/)](/img_slides/rachnovblog-768x310.jpg){fig-align="center"}
+
+
+## Justice system analogy 
+
+<br><br>
+
+![[Type I and Type II Errors - Making Mistakes in the Justice System](http://www.intuitor.com/statistics/T1T2Errors.html)](/img_slides/intuitor_charts.png){fig-align="center"}
+
+
+## Type I & II Errors
+
+::: columns
+::: {.column width="40%"}
+
+![](/img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
+
+::: {style="font-size: 90%;"}
+
+* [$\alpha$]{style="color:violet"} = probability of making a [__Type I error__]{style="color:violet"}
+    * This is the significance level (usually 0.05)
+    * Set before study starts
+* [$\beta$]{style="color:green"} = probability of making a [__Type II error__]{style="color:green"}
+* Ideally we want
+    * small Type I & II errors and
+    * big power
+
+::: 
+:::
+
+::: {.column width="60%"}
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+cv90 <- 1.645
+cv95 <- 1.96
+cv99 <- 2.575
+
+ggplot(NULL, aes(c(-3,7))) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(-3, -1.96)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "skyblue", alpha =0.4, xlim = c(-1.96, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(1.96,4)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "sienna1", alpha =0.7, xlim = c(-1, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "green3", alpha =0.3, xlim = c(1.96, 6)) +
+  labs(x = "", y = "", title="Type I & II errors and power") +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = c(-2, -1, 0, 1, 2, 3, 4)) +
+  annotate("text", x = -3, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 2, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 3, y = .15, label = "Power", hjust=0, size=6) +
+  annotate("text", x = .4, y = .05, label = "P(Type II error)", hjust=0, size=6) +
+  annotate("text", x = -1, y = .3, label = "Null Population", hjust=0, size=6) +
+  annotate("text", x = 2, y = .3, label = "Alternative Population", hjust=0, size=6) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+
+::: {style="font-size: 90%;"}
+Applet for visualizing Type I & II errors and power: 
+<https://rpsychologist.com/d3/NHST/>
+
+:::
+
+:::
+:::
+
+
+## Relationship between Type I & II errors 
+
+* __Type I vs. Type II error__
+    * Decreasing P(Type I error) leads to 
+        * increasing P(Type II error)
+    * We typically keep P(Type I error) = $\alpha$ set to 0.05
+        
+From the applet at <https://rpsychologist.com/d3/NHST/>
+
+::: columns
+::: {.column width="50%"}
+
+![](/img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+![](/img_slides/power_applet_screenshot_alpha01.png){fig-align="center"}
+:::
+:::
+
+
+## Relationship between Type II errors and power
+
+<center>__Power__ = P(correctly rejecting the null hypothesis)</center>
+
+<br>
+
+::: columns
+::: {.column width="49%"}
+
+* Power is also called the
+    * true positive rate,
+    * probability of detection, or 
+    * the _sensitivity_ of a test
+    
+![](/img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
+
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+
+* __Power vs. Type II error__
+
+    * Power = 1 - P(Type II error) = 1 - $\beta$
+
+    * Thus as $\beta$ = P(Type II error) decreases, the power increases
+
+    * P(Type II error) decreases as the mean of the alternative population shits further away from the mean of the null population (effect size gets bigger).
+
+    * Typically want at least 80% power; 90% power is good
+:::
+:::
+
+
+
+## Example calculating power
+
+::: {style="font-size: 90%;"}
+
+* Suppose the mean of the null population is 0 ( $H_0: \mu=0$ ) with standard error 1
+* Find the power of a 2-sided test if the actual $\mu=3$, assuming the SE doesn't change.
+
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+cv90 <- 1.645
+cv95 <- 1.96
+cv99 <- 2.575
+
+ggplot(NULL, aes(c(-3,7))) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(-3, -1.96)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "skyblue", alpha =0.4, xlim = c(-1.96, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(1.96,4)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "sienna1", alpha =0.7, xlim = c(-1, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "green3", alpha =0.3, xlim = c(1.96, 6)) +
+  labs(x = "", y = "", title="Type I & II errors and power") +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = c(-2, -1, 0, 1, 2, 3, 4)) +
+  annotate("text", x = -3, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 2, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 3, y = .15, label = "Power", hjust=0, size=6) +
+  annotate("text", x = .4, y = .05, label = "P(Type II error)", hjust=0, size=6) +
+  annotate("text", x = -1, y = .3, label = "Null Population", hjust=0, size=6) +
+  annotate("text", x = 2, y = .3, label = "Alternative Population", hjust=0, size=6) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+:::
+
+::: {.column width="50%"}
+* Power = $P($Reject $H_0$ when alternative pop is $N(3,1))$
+* When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
+* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$:
+:::
+:::
+
+
+```{r}
+# left tail + right tail:
+pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)
+```
+
+:::
+
+::: {style="font-size: 70%;"}
+The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
+:::
+
+::: {style="font-size: 90%;"}
+* Note that this power calculation specified the value of the SE instead of the standard deviation and sample size $n$ individually.
+:::
+
+
+## __Sample size__ calculation for testing one mean
+
+::: {style="font-size: 90%;"}
+
+* Recall in our body temperature example that $\mu_0=98.6$ °F and $\bar{x}= 98.25$ °F. 
+    * The _p_-value from the hypothesis test was highly significant (very small).
+    * What would the sample size $n$ need to be for 80% power?
+
+* [__Calculate $n$__]{style="color:green"}, 
+    * given $\alpha$, power ( $1-\beta$ ), "true" alternative mean $\mu$, and null $\mu_0$, 
+    * _assuming_ the test statistic is normal (instead of t-distribution):
+
+::: columns
+::: {.column width="30%"}
+
+$$n=\left(s\frac{z_{1-\alpha/2}+z_{1-\beta}}{\mu-\mu_0}\right)^2$$
+:::
+
+::: {.column width="70%"}
+```{r}
+mu <- 98.25
+mu0 <- 98.6
+sd <- 0.73
+alpha <- 0.05
+beta <- 0.20
+n <- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2
+n
+ceiling(n)  # always round UP to the next highest integer 
+```
+:::
+:::
+
+_We would only need a sample size of 35 for 80% power!_  
+However, this is an under-estimate since we used the normal instead of t-distribution.
+:::
+
+::: {style="font-size: 70%;"}
+See <http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality>.
+:::
+
+
+## __Power__ calculation for testing one mean
+
+::: {style="font-size: 90%;"}
+Conversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.
+
+* [__Calculate power__]{style="color:green"}, 
+    * given $\alpha$, $n$, "true" alternative mean $\mu$, and null $\mu_0$, 
+    * _assuming_ the test statistic is normal (instead of t-distribution)
+
+$$1-\beta=
+		\Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
+		\quad ,\quad \text{where } z=\frac{\mu-\mu_0}{s/\sqrt{n}}$$
+
+$\Phi$ is the probability for a standard normal distribution 
+
+```{r}
+mu <- 98.25; mu0 <- 98.6; sd <- 0.73; alpha <- 0.05; n <- 130
+(z <- (mu-mu0) / (sd/sqrt(n)) )
+
+(Power <- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2)))
+```
+
+If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting $H_0$ when the sample size is 130.  
+
+:::
+
+
+## R package `pwr` for power analyses
+
+::: {style="font-size: 90%;"}
+
+* Use `pwr.t.test` for both one- and two-sample t-tests.  
+* Specify all parameters _except for_ the one being solved for.
+
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),`  
+`alternative = c("two.sided", "less", "greater"))`
+
+`d` is __Cohen's d__ effect size: small = 0.2, medium = 0.5, large = 0.8
+
+::: columns
+::: {.column width="49%"}
+One-sample test (or paired t-test):
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+
+$$d = \frac{\mu-\mu_0}{s}$$ 
+
+:::
+:::
+
+::: columns
+::: {.column width="49%"}
+Two-sample test (independent):
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+
+$$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
+
+:::
+:::
+
+:::
+
+::: {style="font-size: 80%;"}
+* $\bar{x}_1 - \bar{x}_2$ is the difference in means between the two groups that one would want to be able to detect as being significant,
+* $s_{pooled}$ is the pooled SD between the two groups - often assume have same sd in each group
+
+
+* R package `pwr` for basic statistical tests
+    * <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
+:::
+
+
+## `pwr`: __sample size__ for one mean test 
+
+::: {style="font-size: 80%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\mu-\mu_0}{s}$ 
+
+Specify all parameters _except for_ the sample size:
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+library(pwr)
+t.n <- pwr.t.test(
+  d = (98.6-98.25)/0.73, 
+  sig.level = 0.05, 
+  power = 0.80, 
+  type = "one.sample")
+
+t.n
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| fig.width: 8
+#| fig.height: 5
+plot(t.n)
+```
+:::
+:::
+
+
+## `pwr`: __power__ for one mean test 
+
+::: {style="font-size: 80%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\mu-\mu_0}{s}$ 
+
+Specify all parameters _except for_ the power:
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+t.power <- pwr.t.test(
+  d = (98.6-98.25)/0.73, 
+  sig.level = 0.05, 
+  # power = 0.80, 
+  n = 130,
+  type = "one.sample")
+
+t.power
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+plot(t.power)
+```
+:::
+:::
+ 
+
+## `pwr`: Two-sample t-test: __sample size__
+
+::: {style="font-size: 70%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+::: {style="font-size: 85%;"}
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$
+
+__Example__: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3. 
+
+Specify all parameters _except for_ the sample size:
+:::
+
+::: {style="font-size: 90%;"}
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+t2.n <- pwr.t.test(
+  d = 2/2.3, 
+  sig.level = 0.05, 
+  power = 0.80, 
+  type = "two.sample") 
+
+t2.n
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| fig.width: 10
+#| fig.height: 5
+plot(t2.n)
+```
+:::
+:::
+
+:::
+
+## `pwr`: Two-sample t-test: __power__
+
+::: {style="font-size: 70%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+::: {style="font-size: 85%;"}
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$
+
+__Example__: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3. 
+
+Specify all parameters _except for_ the power:
+:::
+
+::: {style="font-size: 90%;"}
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+t2.power <- pwr.t.test(
+  d = 2/2.3, 
+  sig.level = 0.05, 
+  # power = 0.80, 
+  n = 22,
+  type = "two.sample") 
+
+t2.power
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| fig.width: 10
+#| fig.height: 5
+plot(t2.power)
+```
+:::
+:::
+
+:::
+
+## What information do we need for a power (or sample size) calculation?
+
+::: columns
+::: {.column width="40%"}
+There are 4 pieces of information:
+
+1. Level of significance $\alpha$
+    * Usually fixed to 0.05
+1. Power
+    * Ideally at least 0.80
+1. Sample size
+1. Effect size (expected change)
+
+Given any 3 pieces of information, we can solve for the 4th.
+:::
+
+::: {.column width="60%"}
+```{r}
+pwr.t.test(
+  d = (98.6-98.25)/0.73,
+  sig.level = 0.05, 
+  # power = 0.80, 
+  n=130,
+  type = "one.sample")
+```
+:::
+:::
+
+
+## More software for power and sample size calculations: PASS 
+
+* PASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.
+    * Even if you don't have access to PASS, their [documentation](https://www.ncss.com/software/pass/pass-documentation/) is very good and free online.
+    * Documentation includes formulas and references.
+    * PASS documentation for powering [means](https://www.ncss.com/software/pass/pass-documentation/#Means)
+        * One mean, paired means, two independent means
+
+* One-sample t-test documentation:
+<https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf>
+
+
+## OCTRI-BERD power & sample size presentations
+
+::: {style="font-size: 90%;"}
+
+* __Power and Sample Size 101__
+  * Presented by Meike Niederhausen; April 13, 2023
+  * Slides: <http://bit.ly/PSS101-BERD-April2023>
+  * [Recording](https://echo360.org/media/10f37fa6-7196-4525-bd64-6b9fcca60ac0/public)
+
+* __Power and Sample Size for Clinical Trials: An Introduction__
+  * Presented by Yiyi Chen; Feb 18, 2021
+  * Slides: http://bit.ly/PSS-ClinicalTrials
+  * [Recording](https://echo360.org/lesson/9a21deb8-258d-4305-bdc9-7effdc35e719/classroom)
+
+* __Planning a Study with Power and Sample Size Considerations in Mind__
+  * Presented by David Yanez; May 29, 2019
+  * [Slides](https://www.ohsu.edu/sites/default/files/2019-12/PowerAndSampleSize_29MAY2019.pdf)
+  * [Recording](https://echo360.org/lesson/44c9a3e9-b8ec-4042-84d8-4758cc779a1f/classroom)
+
+* __Power and Sample Size Simulations in R__
+  * Presented by Robin Baudier; Sept 21, 2023
+  * [Slides](https://www.slideshare.net/ssuser84c78e/octri-pss-simulations-in-r-seminarpdf)
+  * [Recording](https://echo360.org/media/12e6e603-13f9-4b50-bf76-787185acdfce/public)
+
+:::

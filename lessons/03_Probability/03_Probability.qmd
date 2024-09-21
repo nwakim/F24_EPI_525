@@ -1,0 +1,201 @@
+---
+title: "Lesson 3: Defining Probability"
+subtitle: "TB sections 2.1"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/7/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 3 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+::: example
+**Example 1**. ***Rolling fair 6-sided dice***
+
+1.  *Suppose you roll a fair 6-sided die.*
+
+    1.  *What are all the possible outcomes?*
+
+    2.  *What is the probability that you roll a 4?*
+
+    3.  *What is the probability that you roll an even number?*
+
+    4.  *What is the probability that you roll an even number and a 2?*
+
+    5.  *What is the probability that you roll a 2 and a 5?*
+
+    6.  *What is the probability that you did not roll a 3?*
+
+2.  *Suppose you roll **two** fair 6-sided dice.*
+
+    1.  *What is the probability that you roll a 2 with the first die
+        and a 5 with the second die?*
+
+    2.  *What is the probability that the sum of the two dice is 10?*
+:::
+
+## What is a probability?
+
+::: definition
+**Definition 2**. *The **probability** of an outcome is the proportion
+of times the outcome would occur if the random phenomenon could be
+observed an infinite number of times.*
+:::
+
+**Law of Large Numbers** As more observations are collected, the
+proportion of occurrences with a particular outcome converges to the
+probability $p$ of that outcome.
+
+## Probabilities of Equally Likely Outcomes
+
+## Probability Definitions and Rules
+
+1.  The **sample space** $S$ is the set of all possible outcomes.
+
+2.  **Events** are sets or collections of outcomes.
+
+3.  **Disjoint** or **mutually exclusive** events Events $A$ and $B$ are
+    disjoint (or, mutually exclusive) if
+
+4.  **Addition Rule for Disjoint Events** If $A$ and $B$ are disjoint
+    events, then the probability that at least one of them will occur is
+
+5.  **General Addition Rule** If $A$ and $B$ are any two events,
+    disjoint or not, then the probability that at least one of them will
+    occur is
+
+6.  **Complement** The complement of event $A$ is denoted $A^C$, and
+    $A^C$ represents all outcomes not in $A$.
+
+::: example
+**Example 3**. ***Diabetes and hypertension.** Diabetes and hypertension
+are two of the most common diseases in Western, industrialized nations.
+In the United States, approximately 9% of the population have diabetes,
+while about 30% of adults have high blood pressure. The two diseases
+frequently occur together: an estimated 6% of the population have both
+diabetes and hypertension. Let D represent the event of having diabetes,
+and H the event of having hypertension.*
+
+1.  *Are the events having hypertension and having diabetes mutually
+    exclusive?*
+
+2.  *Draw a Venn diagram summarizing the variables and their associated
+    probabilities.*
+
+3.  *Calculate the probability of having diabetes or hypertension.*
+
+4.  *What percent of Americans have neither hypertension nor diabetes?*
+:::
+
+::: example
+**Example 4**. *Pulling cards from a standard deck of cards*
+
+1.  *Supposed you randomly pull 5 cards one after another from a
+    standard deck of cards,*
+
+    1.  ***replacing** a card before pulling another one. What is the
+        probability of pulling the sequence of
+        $\diamondsuit, \diamondsuit, \spadesuit, \heartsuit, \spadesuit$?*
+
+    2.  ***without replacing** any of the cards. What is the probability
+        of pulling the sequence of
+        $\diamondsuit, \diamondsuit, \spadesuit, \heartsuit, \spadesuit$?*
+
+2.  *Supposed you pull a red card from the deck. What is the probability
+    that it is a heart?*
+:::
+
+## More Probability Rules
+
+1.  **General Multiplication Rule** For events $A$ and $B$,
+    $$\mathbb{P}(A\ \mathrm{and}\  B)=$$
+
+2.  **Conditional Probability Definition** The conditional probability
+    of an event A given an event or condition B is
+
+    $$\mathbb{P}(A|B)=$$
+
+3.  If $A$ and $B$ are **independent** events, then
+
+    1.  $$\mathbb{P}(A|B) =$$
+
+    2.  $$\mathbb{P}(A\ \mathrm{and}\  B)=$$
+
+4.  **Sum of Conditional Probabilities** $\mathbb{P}(A|B)$ is a
+    probability, meaning that it satisfies the usual probability rules.
+    In particular, $$\mathbb{P}(A|B) + \mathbb{P}(A^C|B) =$$
+
+::: example
+**Example 5**. ***Diabetes and hypertension revisited.** Diabetes and
+hypertension are two of the most common diseases in Western,
+industrialized nations. In the United States, approximately 9% of the
+population have diabetes, while about 30% of adults have high blood
+pressure. The two diseases frequently occur together: an estimated 6% of
+the population have both diabetes and hypertension. Let D represent the
+event of having diabetes, and H the event of having hypertension. Is the
+event of someone being hypertensive independent of the event that
+someone has diabetes?*
+:::
+
+::: example
+**Example 6**. ***Seat belts** Seat belt use is the most effective way
+to save lives and reduce injuries in motor vehicle crashes. In a 2014
+survey, respondents were asked, \"How often do you use seat belts when
+you drive or ride in a car?\". The following table shows the
+distribution of seat belt usage by sex.*
+
+::: center
+                             **Seat Belt Usage**                                                      
+  ------------- ---------- --------------------- ----------------- ------------- ---------- --------- -----------
+          *3-7*                         *Always*   *Nearly always*   *Sometimes*   *Seldom*   *Never*     *Total*
+    *2-8 *Sex**     *Male*             *146,018*          *19,492*       *7,614*    *3,145*   *4,719*   *180,988*
+                  *Female*             *229,246*          *16,695*       *5,549*    *1,815*   *2,675*   *255,980*
+          *2-8*    *Total*             *375,264*          *36,187*      *13,163*    *4,960*   *7,394*   *436,968*
+:::
+
+1.  *Calculate the marginal probability that a randomly chosen
+    individual always wears seatbelts.*
+
+2.  *What is the probability that a randomly chosen female always wears
+    seatbelts?*
+
+3.  *What is the probability of a randomly chosen individual always
+    wearing seatbelts, given that they are female?*
+
+    *same as previous*
+
+4.  *What is the probability of a randomly chosen individual being
+    female and always wearing seatbelts?*
+
+    ***Seat belts cont'd***
+
+    ::: center
+                                 **Seat Belt Usage**                                                      
+      ------------- ---------- --------------------- ----------------- ------------- ---------- --------- -----------
+              *3-7*                         *Always*   *Nearly always*   *Sometimes*   *Seldom*   *Never*     *Total*
+        *2-8 *Sex**     *Male*             *146,018*          *19,492*       *7,614*    *3,145*   *4,719*   *180,988*
+                      *Female*             *229,246*          *16,695*       *5,549*    *1,815*   *2,675*   *255,980*
+              *2-8*    *Total*             *375,264*          *36,187*      *13,163*    *4,960*   *7,394*   *436,968*
+    :::
+
+5.  *What is the probability of a randomly chosen individual always
+    wearing seatbelts, given that they are male?*
+
+6.  *Calculate the probability that an individual who never wears
+    seatbelts is male.*
+
+7.  *Does gender seem independent of seat belt usage?*
+:::
+

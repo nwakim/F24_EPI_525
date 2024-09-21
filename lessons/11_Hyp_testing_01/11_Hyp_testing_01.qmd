@@ -1,0 +1,803 @@
+---
+title: "Lesson 11: Hypothesis testing for mean from one-sample"
+subtitle: "TB sections 4.3, 5.1"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "11/4/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 11 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(gt)
+library(broom) # NEW!!
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
+
+set.seed(456)
+```
+
+
+## Where are we?
+
+<br>
+<br>
+
+![](../img_slides/flowchart_511_continuous.png){fig-align="center"}
+
+## Where are we? Continuous outcome zoomed in
+
+<br>
+<br>
+
+![](../img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+
+
+## Goals for today: Part 1 
+
+### (4.3, 5.1) Hypothesis testing for mean from one sample  
+
+* Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
+
+::: columns
+::: {.column width="50%"}
+* [Steps of a hypothesis test:]{style="color:purple"}
+    1. level of significance
+    1. null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
+    1. test statistic
+    1. p-value
+    1. conclusion
+:::
+::: {.column width="50%"}
+* [Run a hypothesis test in R]{style="color:green"}
+    * Load a dataset - need to specify location of dataset
+    * R projects
+    * Run a t-test in R
+    * `tidy()` the test output using `broom` package
+:::
+:::
+
+### (4.3.3) Confidence intervals (CIs) vs. hypothesis tests 
+
+
+## Goals for today: Part 2 - Class discussion
+
+### (5.2) Inference for __mean difference__ from dependent/paired 2 samples  
+
+* Inference: CIs and hypothesis testing
+* Exploratory data analysis (EDA) to visualize data
+* Run paired t-test in R
+
+### One-sided CIs
+
+### Class discussion
+
+* Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.
+* Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.
+* In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code. 
+
+
+## MoRitz's tip of the day: use [__R projects__]{style="color:darkorange"} to organize analyses
+
+::: columns
+::: {.column width="30%"}
+![](../img_slides/Moritz_tongue_IMG_1741.png){fig-align="center"}
+:::
+::: {.column width="70%"}
+
+MoRitz loves using R projects to 
+
+* organize analyses and 
+* make it easier to load data files 
+* and also save output
+
+Other bonuses include 
+
+* making to it easier to collaborate with others, 
+* including yourself when accessing files from different computers.
+
+<br>
+
+
+We will discuss how to use projects later in today's slides when loading a dataset.  
+See file [Projects in RStudio](../resources/Projects_in_R.html) for more information.
+
+:::
+:::
+
+
+## Is 98.6°F  really the mean "healthy" body temperature? {.smaller}
+
+* __Where did the 98.6°F value come from?__
+    * German physician Carl Reinhold August [Wunderlich](https://www.google.com/books/edition/_/a6UNq33GPfIC?hl=en&gbpv=1&pg=PP14) determined  98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.
+
+* [1992 JAMA article](https://jamanetwork.com/journals/jama/article-abstract/400116) by Mackowiak, Wasserman, & Levine
+    * They claim that 98.2°F (36.8°C) is a more accurate average body temp
+    * Sample: n = 148 healthy men and women aged 18 - 40 years
+
+* In January 2020, a group from Stanford published _[Decreasing human body temperature in the United States since the Industrial Revolution](https://elifesciences.org/articles/49555)_ in eLIFE.
+    * "determined that mean body temperature in men and women, after adjusting for age, height, weight and, in some models date and time of day, has decreased monotonically by 0.03°C (0.05°F) per birth decade"
+    * September 2023 update: _[Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm](https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098)_ in JAMA Internal Medicine
+        * Average is 36.64 °C (97.95 °F); "range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C" (97.23 to 98.40 °F); based 2008-2017 data
+        * "findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges."
+
+* NYT article [The Average Human Body Temperature Is Not 98.6 Degrees](../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf), Oct 12, 2023, by Dana G. Smith
+
+__[Question:]{style="color:darkorange"} based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?__
+
+
+
+## Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?
+
+
+Two approaches to answer this question:
+
+1. Create a __[confidence interval (CI)]{style="color:purple"}__ for the population mean $\mu$ and determine whether 98.6°F is inside the CI or not.
+    * is 98.6°F a plausible value?
+
+2. Run a __[hypothesis test]{style="color:green"}__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not.
+    * This does not give us a range of plausible values for the population mean $\mu$.
+    
+    * Instead, we calculate a _test statistic_ and _p-value_ 
+        * to see how likely we are to observe the sample mean $\bar{x}$
+        * or a more extreme sample mean 
+        * assuming that the population mean $\mu$ is 98.6°F.
+
+
+
+## Approach 1: Create a [95% C I]{style="color:purple"} for the population mean body temperature
+
+* Use data based on the results from the 1992 JAMA study
+    * The original dataset used in the JAMA article is not available
+    * However, Allen Shoemaker from Calvin College created a [dataset](http://jse.amstat.org/datasets/normtemp.dat.txt) with the same summary statistics as in the JAMA article, which we will use:
+
+$$\bar{x} = 98.25,~s=0.733,~n=130$$
+CI for $\mu$:
+
+```{r}
+#| include: false
+n <- 130
+xbar <- 98.25
+sd <- 0.733
+(tstar <- qt(.975, df=n-1))  # df = n-1
+(se <- sd/sqrt(n))
+(moe <- tstar * se) 
+(LB <- xbar - moe)
+(UB <- xbar + moe)
+```
+::: columns
+::: {.column width="50%"}
+\begin{align}
+\bar{x} &\pm t^*\cdot\frac{s}{\sqrt{n}}\\
+98.25 &\pm `r round(tstar,3)`\cdot\frac{0.733}{\sqrt{130}}\\
+98.25 &\pm `r round(moe,3)`\\
+(`r round(LB, 3)`&, `r round(UB, 3)`)
+\end{align}
+
+:::
+
+::: {.column width="50%"}
+Used $t^*$ = `qt(.975, df=129)` 
+
+Conclusion:  
+We are 95% confident that the (population) mean body temperature is between `r round(LB, 3)`°F and `r round(UB, 3)`°F.
+
+* _How does the CI compare to 98.6°F?_
+:::
+:::
+
+
+
+## Approach 2: [Hypothesis Test]{style="color:green"} 
+
+From before: 
+
+* Run a __hypothesis test__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not.
+    * This does not give us a range of plausible values for the population mean $\mu$.
+    
+    * Instead, we calculate a _test statistic_ and _p-value_ 
+        * to see how likely we are to observe the sample mean $\bar{x}$
+        * or a more extreme sample mean 
+        * assuming that the population mean $\mu$ is 98.6°F.
+
+__How do we calculate a _test statistic_ and _p-value_?__
+
+
+
+
+## Recall the sampling distribution of the mean
+
+From the __[Central Limit Theorem (CLT)]{style="color:darkorange"}__, we know that
+
+* For **["large" sample sizes]{style="color:cornflowerblue"}** ( $n\geq 30$ ),
+    * the [__sampling distribution__ of the sample mean]{style="color:green"}
+    * can be approximated by a __normal distribution__,with 
+      * _mean_ equal to the _population mean_ value $\mu$, and 
+      * _standard deviation_ $\frac{\sigma}{\sqrt{n}}$
+
+$$\bar{X}\sim N\Big(\mu_{\bar{X}} = \mu, \sigma_{\bar{X}}= \frac{\sigma}{\sqrt{n}}\Big)$$
+
+* For **[small sample sizes]{style="color:cornflowerblue"}**, if the population is known to be normally distributed, then
+    * the same result holds
+
+
+
+## Case 1: suppose we know the population sd $\sigma$
+
+* [How likely we are to observe the sample mean $\bar{x}$ ,]{style="color:green"}
+    * [or a more extreme sample mean, ]{style="color:green"}
+    * [assuming that the population mean $\mu$ is 98.6°F?]{style="color:green"}
+* Use $\bar{x} = 98.25$, $\sigma=0.733$, and $n=130$
+
+```{r}
+#| include: false
+n <- 130
+xbar <- 98.25
+sd <- 0.733
+(tstar <- qt(.975, df=n-1))  # df = n-1
+(se <- sd/sqrt(n))
+mu <- 98.6
+mu + 0.06*(1:3)
+mu - 0.06*(1:3)
+
+(tstat <- (xbar - mu)/se)
+pnorm(tstat)
+
+# right tail cutoff
+(mu-xbar) + mu
+```
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+# specify upper and lower bounds of shaded region below
+mu <- 98.6
+std <- se
+
+ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = std)) + 
+  # stat_function(fun = dnorm, 
+  #               args = list(mean = mu, sd = std), 
+  #         # specify the upper and lower bounds of the shaded region:
+  #               xlim = c(mu-4*std, xbar),             
+  #               geom = "area", fill = "darkblue") +
+  # the breaks values below might need to be adjusted 
+  # if there are too many values showing on the x-axis
+  # scale_x_continuous(breaks=(mu-4*std):(mu+4*std)) +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks=c(mu, mu - 0.06*(1:5), mu + 0.06*(1:5))) +
+  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
+  labs(y = "", 
+       x = "sample mean",
+       title = "Sampling distribution of mean body temperatures") 
+```
+
+:::
+::: {.column width="50%"}
+
+:::
+:::
+
+<!-- * Calculate a _test statistic_ and _p-value_  -->
+
+
+## Case 2: we don't know the population sd $\sigma$ 
+
+::: columns
+::: {.column width="40%"}
+
+* This is usually the case in real life
+* We estimate $\sigma$ with the sample standard deviation $s$
+* From last time, we know that in this case we need to use the __t-distribution with d.f. = n-1__, instead of the normal distribution 
+* [Question: How likely we are to observe the sample mean $\bar{x}$ or a more extreme sample mean, assuming that the population mean $\mu$ is 98.6°F?]{style="color:green"}
+* Use $\bar{x} = 98.25$, $s=0.733$, and $n=130$
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| include: false
+n <- 130
+xbar <- 98.25
+sd <- 0.733
+(tstar <- qt(.975, df=n-1))  # df = n-1
+(se <- sd/sqrt(n))
+mu <- 98.6
+mu + 0.06*(1:3)
+mu - 0.06*(1:3)
+
+(tstat <- (xbar - mu)/se)
+pnorm(tstat)
+pt(tstat, df=n-1)
+2*pt(tstat, df=n-1)
+
+
+```
+
+:::
+:::
+
+
+## Steps in a Hypothesis Test
+
+1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
+
+1. Specify the __[null]{style="color:darkorange"}__ ( $H_0$ ) and __[alternative]{style="color:darkorange"}__ ( $H_A$ ) __[hypotheses]{style="color:darkorange"}__
+    1. In symbols
+    1. In words
+    1. Alternative: one- or two-sided?
+
+1. Calculate the __[test statistic]{style="color:darkorange"}__. 
+
+1. Calculate the __[p-value]{style="color:darkorange"}__ based on the observed test statistic and its sampling distribution
+
+1. Write a __[conclusion]{style="color:darkorange"}__ to the hypothesis test
+    1. Do we reject or fail to reject $H_0$?
+    1. Write a conclusion in the context of the problem
+
+
+## Step 2: Null & Alternative Hypotheses (1/2)
+
+In statistics, a __hypothesis__ is a statement about the value of an __unknown population parameter__.
+
+
+A __[hypothesis test]{style="color:darkorange"}__ consists of a test between two competing hypotheses: 
+
+1. a __[null]{style="color:darkorange"}__ hypothesis $H_0$ (pronounced “H-naught”) vs. 
+1. an __[alternative]{style="color:darkorange"}__ hypothesis $H_A$ (also denoted $H_1$)
+
+Example of hypotheses in words: 
+
+\begin{aligned}
+H_0 &: \text{The population mean body temperature is 98.6°F}\\
+\text{vs. } H_A &: \text{The population mean body temperature is not 98.6°F}
+\end{aligned}
+
+1. $H_0$ is a claim that there is “no effect” or “no difference of interest.”
+1. $H_A$ is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis $H_0$
+
+## Step 2: Null & Alternative Hypotheses (2/2)
+
+__[Notation for hypotheses:]{style="color:green"}__
+
+\begin{aligned}
+H_0 &: \mu = \mu_0\\
+\text{vs. } H_A&: \mu \neq, <, \textrm{or}, > \mu_0
+\end{aligned}
+
+We call $\mu_0$ the *null value*
+
+::: columns
+::: {.column width="40%"}
+$H_A: \mu \neq \mu_0$
+
+::: {style="font-size: 90%;"}
+* not choosing a priori whether we believe the population mean is greater or less than the null value $\mu_0$
+:::
+:::
+
+::: {.column width="30%"}
+$H_A: \mu < \mu_0$
+
+::: {style="font-size: 90%;"}
+* believe the population mean is **less** than the null value $\mu_0$
+:::
+:::
+
+::: {.column width="30%"}
+$H_A: \mu > \mu_0$
+
+::: {style="font-size: 90%;"}
+* believe the population mean is **greater** than the null value $\mu_0$
+:::
+:::
+:::
+
+* $H_A: \mu \neq \mu_0$ is the most common option, since it's the most conservative
+
+Example: 
+
+\begin{aligned}
+H_0 &: \mu = 98.6\\
+\text{vs. } H_A&: \mu \neq 98.6
+\end{aligned}
+
+
+## Step 3: [Test statistic]{style="color:darkorange"} (& its distribution)
+::: columns
+::: {.column width="50%"}
+__[Case 1: know population sd $\sigma$]{style="color:purple"}__
+
+$$
+\text{test statistic} = z_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
+$$
+
+* Statistical theory tells us that [$z_{\bar{x}}$]{style="color:purple"} follows a [__Standard Normal distribution__ $N(0,1)$]{style="color:purple"}
+:::
+
+::: {.column width="50%"}
+
+__[Case 2: don't know population sd $\sigma$]{style="color:green"}__
+
+$$
+\text{test statistic} = t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+$$
+
+* Statistical theory tells us that [$t_{\bar{x}}$]{style="color:green"} follows a [__Student's t distribution__ with degrees of freedom (df) = $n-1$]{style="color:green"}
+
+:::
+:::
+
+::: {style="font-size: 90%;"}
+$\bar{x}$ = sample mean, $\mu_0$ = hypothesized population mean from $H_0$,  
+$\sigma$ = _population_ standard deviation, $s$ = _sample_ standard deviation,  
+$n$ = sample size
+:::
+
+__[Assumptions]{style="color:darkorange"}__: same as CLT
+
+* __Independent observations__: the observations were collected independently.
+* __Approximately normal sample or big n__: the distribution of the sample should be approximately normal, _or_ the sample size should be at least 30.
+
+
+## Step 3: Test statistic calculation
+
+Recall that $\bar{x} = 98.25$, $s=0.733$, and $n=130.$
+
+The test statistic is:
+
+$$t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+= \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
+= -5.45$$
+
+* Statistical theory tells us that $t_{\bar{x}}$ follows a __Student's t-distribution__ with $d.f. = n-1 = 129$.
+
+::: columns
+::: {.column width="75%"}
+```{r}
+#| fig.height: 4
+#| fig.width: 10
+#| echo: false
+ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
+  stat_function(fun = dt, args = list(df = 129)) + 
+  ylab("") + 
+  xlab("t-dist with df = 129") +
+  scale_y_continuous(breaks = NULL) + 
+  geom_vline(xintercept = c(-5.45,5.45), 
+             color = "red")
+```
+
+:::
+::: {.column width="25%"}
+__Assumptions met?__
+:::
+:::
+
+## Step 4: p-value
+
+The __[p-value]{style="color:darkorange"}__ is the [__probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true.]{style="color:darkblue"} 
+
+::: columns
+::: {.column width="50%"}
+* The $p$-value is a quantification of "surprise"
+    * Assuming $H_0$ is true, _how surprised are we with the observed results_?
+    * _Ex_: assuming that the true mean body temperature is 98.6°F, how surprised are we to get a sample mean of 98.25°F  (or more extreme)?
+    
+* If the $p$-value is "small," it means there's a small probability that we would get the observed statistic (or more extreme) when $H_0$ is true.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+# specify upper and lower bounds of shaded region below
+mu <- 98.6
+std <- se
+
+ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = std)) + 
+  # stat_function(fun = dnorm, 
+  #               args = list(mean = mu, sd = std), 
+  #         # specify the upper and lower bounds of the shaded region:
+  #               xlim = c(mu-4*std, xbar),             
+  #               geom = "area", fill = "darkblue") +
+  # the breaks values below might need to be adjusted 
+  # if there are too many values showing on the x-axis
+  # scale_x_continuous(breaks=(mu-4*std):(mu+4*std)) +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks=c(mu, mu - 0.06*(1:5), mu + 0.06*(1:5))) +
+  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
+  labs(y = "", 
+       x = "sample mean",
+       title = "Sampling distribution of mean body temperatures") 
+```
+:::
+:::
+
+
+
+## Step 4: p-value calculation 
+
+Calculate the _p_-value using the __Student's t-distribution__ with $d.f. = n-1 = 129$:
+
+$$p-value=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}$$
+
+```{r}
+# use pt() instead of pnorm()
+# need to specify df
+2*pt(-5.4548, df = 130-1, lower.tail = TRUE)
+```  
+
+```{r}
+#| fig.height: 4
+#| fig.width: 10
+#| echo: false
+ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
+  stat_function(fun = dt, args = list(df = 129)) + 
+  ylab("") + 
+  xlab("t-dist with df = 129") +
+  scale_y_continuous(breaks = NULL) + 
+  geom_vline(xintercept = c(-5.45,5.45), 
+             color = "red")
+```
+
+## Step 4: p-value estimation using $t$-table
+
+* $t$-table only gives us *bounds* on the p-value
+* Recall from using the $t$-table for CIs, that the table gives us the cutoff values for varying tail probabilities (1-tail & 2-tail)
+* Find the row with the appropriate degrees of freedom
+    * Use next smallest df in table if actual df not shown
+    * I.e., for df = 129, use df = 100 in table
+* Figure out where the test statistic's absolute value is in relation to the values in the columns, i.e. between which columns is the test statistic?
+* The header rows for those columns gives the lower & upper bounds for the p-value
+    * Choosing one-tail vs. two-tail test, depends on the alternative hypothesis $H_A$.
+    * For a 2-sided test ( $H_A: \mu \neq \mu_0$ ), use two-tails 
+    * For a 1-sided test ( $H_A: \mu < \textrm{or} > \mu_0$ ), use one-tail 
+
+
+## Using a $t$-table to estimate p-value
+
+::: columns
+::: {.column width="50%"}
+![](../img_slides/t-table_appendix_part1.png){fig-align="center"}
+:::
+::: {.column width="50%"}
+![](../img_slides/t-table_appendix_part2.png){fig-align="center"}
+:::
+:::
+
+
+
+## Step 1: Significance Level $\alpha$
+
+* __Before doing a hypothesis test__, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
+* We call this the __[significance level]{style="color:darkorange"}__, denoted by the Greek symbol [alpha ( $\alpha$ )]{style="color:darkorange"}
+* [Typical $\alpha$]{style="color:darkblue"} values are 
+    * 0.05 - _most common by far!!_
+    * 0.01 and 0.1
+* Decision rule:    
+    * When [$p$-value < $\alpha$]{style="color:green"}, we "__[reject]{style="color:green"}__ the null hypothesis [$H_0$]{style="color:green"}."
+    * When [$p$-value $\geq \alpha$]{style="color:purple"}, we "__[fail to reject]{style="color:purple"}__ the null hypothesis [$H_0$]{style="color:purple"}."
+
+:::{.callout-important}
+* "Failing to reject" $H_0$ is __NOT__ the same as "accepting" $H_0$! 
+* By failing to reject $H_0$ we are just saying that we don't have sufficient evidence to support the alternative $H_A$.
+* _This does not imply that $H_0$ is true!!_
+:::
+
+
+
+
+## Step 5: Conclusion to hypothesis test
+
+\begin{aligned}
+H_0 &: \mu = 98.6\\
+\text{vs. } H_A&: \mu \neq 98.6
+\end{aligned}
+
+* Recall the $p$-value = $2.410889 \times 10^{-07}$ 
+* Use $\alpha$ = 0.05.
+* Do we reject or fail to reject $H_0$?
+
+__Conclusion statement__:
+
+* Basic: ("stats class" conclusion)
+    * There is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( $p$-value < 0.001).
+
+* Better: ("manuscript style" conclusion)
+    * The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value < 0.001).
+
+
+## Confidence Intervals vs. Hypothesis Testing
+
+* See also V&H Section 4.3.3
+
+# Running a t-test in R
+
+* Working directory
+* Load a dataset - need to specify location of dataset
+* R projects
+* Run a t-test in R
+* `tidy()` the test output using `broom` package
+
+## Working directory
+
+* In order to load a dataset from a file, you need to tell R where the dataset is located
+* To do this you also need to know the location from which R is working, i.e. your __working directory__
+* You can figure out your working directory by running the `getwd()` function.
+
+```{r}
+getwd()
+```
+
+* Above is the working directory of this slides file
+    * _In this case, this is NOT the location of the actual qmd file though!_
+
+* To make it easier to juggle the working directory, the location of your qmd file, and the location of the data, 
+    * [I highly recommend using __R Projects__!]{style="color:darkred"}
+
+## R projects
+
+* I *highly, highly, HIGHLY* recommend using R Projects to organize your analyses and make it easier to load data files and also save output.
+* When you create an R Project on your computer, the Project is associated with the folder (directory) you created it in. 
+  * This folder becomes the "root" of your working directory, and RStudio's point of reference from where to load files from and to. 
+* I create separate Projects for every analysis project and every class I teach. 
+* You can run multiple sessions of RStudio by opening different Projects, and the environments (or working directory) of each are working independently of each other. 
+
+:::{.callout-note}
+* Although we are using Quarto files, 
+    * I will show how to set up and use a __"regular" R Project__
+    * instead of "Quarto Project"
+* Quarto Projects include extra features and thus complexity. Once you are used to how regular R Projects work, you can try out a Quarto Project. 
+:::
+
+## How to create an R Project
+
+* Demonstration in class recording
+* Posit's (RStudio's) directions for creating Projects
+  * [https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects)
+
+* See file [Projects in RStudio](../resources/Projects_in_R.html) for more information on R Projects.
+
+
+## Load the dataset
+
+* The data are in a csv file called `BodyTemperatures.csv`
+* You need to tell R where the dataset is located!
+* I recommend saving all datasets in a folder called data. 
+    * The code I will be providing you will be set up this way.
+
+* To make it easier to specify where the dataset is located, I recommend using the `here()` function from the `here` package: `here::here()`.
+
+```{r}
+# read_csv() is a function from the readr package that is a part of the tidyverse
+library(here)   # first install this package
+
+BodyTemps <- read_csv(here::here("data", "BodyTemperatures.csv"))
+#                     location: look in "data" folder
+#                               for the file "BodyTemperatures.csv"
+
+glimpse(BodyTemps)
+```
+
+## `here::here()`
+
+General use of `here::here()`
+
+`here::here("folder_name", "filename")`
+
+::: columns
+::: {.column width="50%"}
+Resources for `here::here()`:
+
+* [how to use the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/) (Jenny Richmond)
+* [Ode to the here package](https://github.com/jennybc/here_here) (Jenny Bryan)
+
+[Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) (Jenny Bryan)
+:::
+::: {.column width="50%"}
+![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_here.png){fig-align="center"}
+:::
+:::
+
+
+## `t.test`: base R's function for testing one mean 
+
+* Use the body temperature example with $H_A: \mu \neq 98.6$
+* We called the dataset `BodyTemps` when we loaded it
+
+```{r}
+glimpse(BodyTemps)
+
+(temps_ttest <- t.test(x = BodyTemps$Temperature,
+       # alternative = "two.sided",  # default
+       mu = 98.6))
+```
+
+Note that the test output also gives the 95% CI using the t-distribution.
+
+
+## `tidy()` the `t.test` output
+
+* Use the `tidy()` function from the `broom` package for briefer output in table format that's stored as a `tibble`
+* Combined with the `gt()` function from the `gt` package, we get a nice table 
+
+```{r}
+tidy(temps_ttest) %>% 
+  gt()
+```
+
+* Since the `tidy()` output is a tibble, we can easily `pull()` specific values from it:
+
+::: columns
+::: {.column width="50%"}
+
+Using base R's `$`
+```{r}
+tidy(temps_ttest)$p.value  
+```
+
+Advantage: quick and easy
+:::
+
+::: {.column width="50%"}
+Or the `tidyverse` way: using `pull()` from `dplyr` package 
+```{r}
+tidy(temps_ttest) %>% pull(p.value)
+```
+
+Advantage: can use together with piping (`%>%`) other functions
+:::
+:::
+
+
+## What's next? 
+
+CI's and hypothesis testing for different scenarios:
+
+
+| Day | Section |  Population parameter   |       Symbol        |       Point estimate       |            Symbol             |
+|:----:|:------:|:----------:|:--------:|:----------:|:-------:|
+| 10  |   5.1   |        Pop mean         |        $\mu$        |        Sample mean         |           $\bar{x}$           |
+| 10  |   5.2   | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff |         $\bar{x}_{d}$         |
+| 11  |   5.3   |    Diff in pop means    |    $\mu_1-\mu_2$    |    Diff in sample means    |    $\bar{x}_1 - \bar{x}_2$    |
+| 12  |   8.1   |     Pop proportion      |         $p$         |        Sample prop         |         $\widehat{p}$         |
+| 12  |   8.2   |   Diff in pop prop's    |      $p_1-p_2$      |   Diff in sample prop's    | $\widehat{p}_1-\widehat{p}_2$ |
+
+

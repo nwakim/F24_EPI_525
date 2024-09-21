@@ -1,0 +1,174 @@
+---
+title: "Lesson 5: Conditional Probability"
+subtitle: "TB sections 2.2"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/9/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1600
+    height: 1100
+    footer: Lesson 5 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+## Eaxample
+
+::: example
+**Example 1**. ***How accurate is rapid testing for COVID-19?** *
+
+*From the iHealth® website
+<https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details>:*
+
+*\"Based on the results of a clinical study where the iHealth® COVID-19
+Antigen Rapid Test was compared to an FDA authorized molecular
+SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly
+identified 94.3% of positive specimens and 98.1% of negative
+specimens.\"*
+
+*Suppose you take the iHealth® rapid test.*
+
+1.  *What is the probability of a positive test result?*
+
+2.  *What is the probability of having COVID-19 if you get a positive
+    test result?*
+
+3.  *What is the probability of not having COVID-19 if you get a
+    negative test result?*
+
+***What information were we given?***
+
+*First, let's define our events of interest:*
+
+-   *$D$ = event one has disease (COVID-19)*
+
+-   *$D^c$ = event one does not have disease*
+
+-   *$T^+$ = event one tests positive for disease*
+
+-   *$T^-$ = event one tests negative for disease*
+
+*Translate given information into mathematical notation:*
+
+-   *Test correctly gives a positive result 94.3% of the time:*
+
+-   *Test correctly gives a negative result 98.1% of the time:*
+
+-   *What are all the possible scenarios of test results?*
+
+*Given: $\mathbb{P}(T^+|D) = 0.943$, $\ \ \mathbb{P}(T^-|D^c) = 0.981$*
+
+***Solutions to questions***
+
+1.  *What is the probability of a positive test result?*
+
+    *Given: $\mathbb{P}(T^+|D) = 0.943$,
+    $\ \ \mathbb{P}(T^-|D^c) = 0.981$*
+
+2.  *What is the probability of having COVID-19 if you get a positive
+    test result?*
+
+    *Given: $\mathbb{P}(T^+|D) = 0.943$,
+    $\ \ \mathbb{P}(T^-|D^c) = 0.981$*
+
+3.  *What is the probability of not having COVID-19 if you get a
+    negative test result?*
+:::
+
+
+## Bayes' Theorem (Section 2.2.5)
+
+In the previous examples we derived the formula for Bayes' Theorem.
+
+::: theorem
+**Theorem 2** (Bayes' Theorem). *If the sample space $S$ can be split
+into disjoint events $A_1, A_2, ..., A_k$ that make up all possible
+outcomes in $S$, and if $\mathbb{P}(A_i)>0$ for $i=1,\ldots, k$ and
+$\mathbb{P}(B)>0$, then*
+
+*$$\mathbb{P}(A_1 | B) = 
+\frac{\mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1)}
+{\mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1) + \mathbb{P}(B|A_2) \cdot \mathbb{P}(A_2) + ... + 
+\mathbb{P}(B|A_k) \cdot \mathbb{P}(A_k)}$$*
+:::
+
+Special case of Bayes' Theorem for sample space being split into $A$ and
+$A^c$:
+
+$$\mathbb{P}(A | B) = 
+\frac{\mathbb{P}(B|A) \cdot \mathbb{P}(A)}
+{\mathbb{P}(B|A) \cdot \mathbb{P}(A) + \mathbb{P}(B|A^c) \cdot \mathbb{P}(A^c) }$$
+
+##
+
+::: theorem
+**Theorem 3** (Law of Total Probability). *(denominator of Bayes'
+Theorem)*
+
+*If the sample space $S$ can be split into disjoint events
+$A_1, A_2, ..., A_k$ that make up all possible outcomes in $S$, and if
+$\mathbb{P}(A_i)>0$ for $i=1,\ldots, k$ and $\mathbb{P}(B)>0$, then*
+
+*$$%\left(
+\begin{array}{ccl}
+\mathbb{P}(B)&=& \mathbb{P}(B\ \textrm{and}\ A_1) + \mathbb{P}(B\ \textrm{and}\ A_2) + \ldots + \mathbb{P}(B\ \textrm{and}\ A_k)\\
+           &=& \mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1) + \mathbb{P}(B|A_2) \cdot \mathbb{P}(A_2) + \ldots + \mathbb{P}(B|A_k) \cdot \mathbb{P}(A_k)
+\end{array}
+%\right)$$*
+:::
+
+##
+
+Special case of Law of Total Probability for sample space being split
+into $A$ and $A^c$:
+
+$$%\left(
+\begin{array}{ccl}
+\mathbb{P}(B)&=&\mathbb{P}(B\ \textrm{and}\ A) + \mathbb{P}(B\ \textrm{and}\ A^C)\\
+           &=& \mathbb{P}(B|A) \cdot \mathbb{P}(A)+ \mathbb{P}(B | A^C)\cdot \mathbb{P}(A^C)
+\end{array}
+%\right)$$
+
+## 
+::: example
+**Example 4**. ***Antibody test for COVID-19***
+
+*According to the [FDA's EUA Authorized Serology Test Performance
+website](https://www.fda.gov/medical-devices/coronavirus-disease-2019-covid-19-emergency-use-authorizations-medical-devices/eua-authorized-serology-test-performance),
+the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for
+COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is
+20%.*
+
+*Question: What is the specificity of the antibody test?*
+
+***What information were we given?***
+
+*First, let's define our events of interest:*
+
+-   *$A$ = event one has antibodies for COVID-19*
+
+-   *$A^c$ = event one does not have antibodies*
+
+-   *$T^+$ = event one tests positive for antibodies*
+
+-   *$T^-$ = event one tests negative for antibodies*
+
+*Translate given information into mathematical notation:*
+
+-   *Sensitivity is 98.1%:*
+
+-   *PPV is 98.4%:*
+
+-   *Prevalence is 20%:*
+
+***Solution:***
+:::
