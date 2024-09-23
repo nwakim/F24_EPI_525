@@ -151,17 +151,13 @@ Your learning and practicing of R will hopefully not be limited to this course. 
 
 The course is structured around the following four components:
 
-+:------------------------------:+:------------:+:-------------:+:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Component**                  | **Modality** | **Frequency** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-+--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Lecture                        | In person    | Twice, Weekly | Course content is provided through in-person lectures. Lectures will consist of didactic lessons, interactive examples, PollEverywhere questions, and work time. Sessions will be recorded through Echo360 and linked to this site. **Attending or viewing the lecture within 7 days of the original lecture date is mandatory.** Class attendance will be taken through an Exit Ticket. You must take the Exit Ticket to verify your attendance.                        |
-+--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Homework Assignment            | Online       | Weekly        | The course includes 9 homework assignments. They are an opportunity for you to engage with important concepts, practice coding, and apply calculating skills. Homework assignments should be submitted online, and will be graded for completeness by the TAs. Students are encouraged to work in groups for homework assignments, but each person should do their own summary and hand in their work. **Homework assignments will be due on Thursday at 11 PM.**        |
-+--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Homework Solutions             | Online       | Weekly        | The course includes 9 homework solutions. With groups of 4, you will make a homework key for 4 questions (that Nicky chooses). Each group member will be in charge of turning in one question's solutions. Homework solutions should be submitted online, and will be graded by the TAs for correctness. The group will receive the same grade, which is summed across questions. **Homework solutions will be due week following the assignment on \_\_\_\_ at 11 PM.** |
-+--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Homework Solution Presentation | Online       | 2x            | The course includes 2 presentations on homework solutions. For two homeworks, you will also be asked to make a video presentation or schedule a meeting with Nicky to present your thought process and explain your solutions. You will explain the same problem that you made solutions for. Videos will be submitted online and meetings will be help over Webex.                                                                                                      |
-+--------------------------------+--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                |              |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|:------------------------------:|:------------:|:-------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         **Component**          | **Modality** | **Frequency** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|            Lecture             |  In person   | Twice, Weekly | Course content is provided through in-person lectures. Lectures will consist of didactic lessons, interactive examples, PollEverywhere questions, and work time. Sessions will be recorded through Echo360 and linked to this site. **Attending or viewing the lecture within 7 days of the original lecture date is mandatory.** Class attendance will be taken through an Exit Ticket. You must take the Exit Ticket to verify your attendance.                        |
+|      Homework Assignment       |    Online    |    Weekly     | The course includes 9 homework assignments. They are an opportunity for you to engage with important concepts, practice coding, and apply calculating skills. Homework assignments should be submitted online, and will be graded for completeness by the TAs. Students are encouraged to work in groups for homework assignments, but each person should do their own summary and hand in their work. **Homework assignments will be due on Thursday at 11 PM.**        |
+|       Homework Solutions       |    Online    |    Weekly     | The course includes 9 homework solutions. With groups of 4, you will make a homework key for 4 questions (that Nicky chooses). Each group member will be in charge of turning in one question's solutions. Homework solutions should be submitted online, and will be graded by the TAs for correctness. The group will receive the same grade, which is summed across questions. **Homework solutions will be due week following the assignment on \_\_\_\_ at 11 PM.** |
+| Homework Solution Presentation |    Online    |      2x       | The course includes 2 presentations on homework solutions. For two homeworks, you will also be asked to make a video presentation or schedule a meeting with Nicky to present your thought process and explain your solutions. You will explain one of the problems that your group made solutions for. Videos will be submitted online and meetings will be help over Webex.                                                                                            |
 
 #### Types of assessments
 
@@ -179,21 +175,15 @@ Letter grades will be assigned roughly according to the following scheme: A (\>=
 
 Grades will be based on homework assignments, midterm exam, class "attendance", and final exam, as follows:
 
-+:-------------------------:+:----------------------:+:----------------:+:-----------------------------:+
-| **Course activity**       | **Type of Assessment** | **Due Dates**    | **Percentage of final grade** |
-+---------------------------+------------------------+------------------+-------------------------------+
-| Homework Assignment       | Formative              | Every week       | 27%                           |
-+---------------------------+------------------------+------------------+-------------------------------+
-| Homework Solutions        | Summative              | Every week       | 40%                           |
-+---------------------------+------------------------+------------------+-------------------------------+
-| Homework Presentations    | Summative              | Twice in quarter | 18%                           |
-+---------------------------+------------------------+------------------+-------------------------------+
-| Group evals               | N/A                    | Twice in quarter | 8%                            |
-+---------------------------+------------------------+------------------+-------------------------------+
-| Exit tickets (Attendance) | N/A                    | Twice Weekly     | 5%                            |
-+---------------------------+------------------------+------------------+-------------------------------+
-| Mid-Quarter Feedback      | N/A                    | 10/28            | 2%                            |
-+---------------------------+------------------------+------------------+-------------------------------+
+|                           |                        |                  |                               |
+|:-------------------------:|:----------------------:|:----------------:|:-----------------------------:|
+|    **Course activity**    | **Type of Assessment** |  **Due Dates**   | **Percentage of final grade** |
+|    Homework Assignment    |       Formative        |    Every week    |              27%              |
+|    Homework Solutions     |       Summative        |    Every week    |              40%              |
+|  Homework Presentations   |       Summative        | Twice in quarter |              18%              |
+|        Group evals        |          N/A           | Twice in quarter |              8%               |
+| Exit tickets (Attendance) |          N/A           |   Twice Weekly   |              5%               |
+|   Mid-Quarter Feedback    |          N/A           |      10/28       |              2%               |
 
 ### Homework grading
 
@@ -237,19 +227,14 @@ Every professor has different expectations when assigning certain work or provid
 
 ### Resources
 
-+:-------------------------------:+:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Resource**                    | **What is it?**                                                                                                                                                                                                                                                                                                           | **How do I use it?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-+---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Office Hours                    | Blocks of time a professor or TA dedicates for questions. The teaching staff will be located in a specific room. Several students may enter the space at a time and will ask specific or broad questions. If many students attend office hours, a queue will be created so that students can be served equally.           | The main use of office hours is to ask questions about an assignment or lecture notes. You are welcome to sit and do homework in office hours. OH are also an informal way of meeting fellow students to collaborate with.                                                                                                                                                                                                                                                                    |
-+---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 |                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|:-------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|          **Resource**           | **What is it?**                                                                                                                                                                                                                                                                                                           | **How do I use it?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|          Office Hours           | Blocks of time a professor or TA dedicates for questions. The teaching staff will be located in a specific room. Several students may enter the space at a time and will ask specific or broad questions. If many students attend office hours, a queue will be created so that students can be served equally.           | The main use of office hours is to ask questions about an assignment or lecture notes. You are welcome to sit and do homework in office hours. OH are also an informal way of meeting fellow students to collaborate with.                                                                                                                                                                                                                                                                    |
 | Lectures and lecture recordings | Time shared between the professor and students where the professor conveys important class material. Material discussed in lectures include concepts, calculations, code, and examples. Lectures are a mix of presentation of information, working through examples together, interactive activities, and in-class polls. | Students should attend lectures in person if possible. You should attempt to understand new material presented by following the presentation slides, taking notes on additional details that may conveyed verbally, and working through examples with the professor. Students are encouraged to ask questions when you don't understand the material at any point in the lecture.                                                                                                             |
-+---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Textbooks                       | Written and published material that explains concepts, steps through calculations, provides examples, and provides practice problems. The listed textbook is the basis for this course. While I am to cover all topics in class, the textbook provides alternative explanations and additional examples.                  | While coming to class having read the accompanying textbook chapters helps understanding during class, I do not expect students to have read it. I see the textbook as a good resource if you are struggling with a specific topic after class, in need of an example while working on homework, or want additional practice when studying for the exam. Textbook problems will be the bulk of our homework.                                                                                  |
-+---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Website                         | The course website is designed by me so that you have access to all the course materials in a more organized and flexible way. All resources delivered from me to you will be available on the website. Any assignments turned in will be through Sakai.                                                                  | You can navigate through different course resources and information using the left-side tabs or top navigation bar. Course materials, like lecture notes, homework, data examples, and recordings, can be found under each week's page under the schedule tab. You can also find the individual resources under the "Course Materials" tab on the left. Links to turn in assignments through Sakai will be given on the website. Please explore the tabs and get a sense of the organization. |
-+---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Sakai                           | Sakai is a learning management system for higher ed. This is the university sanctioned LMS where we will submit assignments.                                                                                                                                                                                              | You will turn in assignments through Sakai under the "Submissions" tab. Generally, there will be a link to each assignment on the course website. You can also view your grades under "Gradebook" and links to Webex under "Webex."                                                                                                                                                                                                                                                           |
-+---------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|            Textbooks            | Written and published material that explains concepts, steps through calculations, provides examples, and provides practice problems. The listed textbook is the basis for this course. While I am to cover all topics in class, the textbook provides alternative explanations and additional examples.                  | While coming to class having read the accompanying textbook chapters helps understanding during class, I do not expect students to have read it. I see the textbook as a good resource if you are struggling with a specific topic after class, in need of an example while working on homework, or want additional practice when studying for the exam. Textbook problems will be the bulk of our homework.                                                                                  |
+|             Website             | The course website is designed by me so that you have access to all the course materials in a more organized and flexible way. All resources delivered from me to you will be available on the website. Any assignments turned in will be through Sakai.                                                                  | You can navigate through different course resources and information using the left-side tabs or top navigation bar. Course materials, like lecture notes, homework, data examples, and recordings, can be found under each week's page under the schedule tab. You can also find the individual resources under the "Course Materials" tab on the left. Links to turn in assignments through Sakai will be given on the website. Please explore the tabs and get a sense of the organization. |
+|              Sakai              | Sakai is a learning management system for higher ed. This is the university sanctioned LMS where we will submit assignments.                                                                                                                                                                                              | You will turn in assignments through Sakai under the "Submissions" tab. Generally, there will be a link to each assignment on the course website. You can also view your grades under "Gradebook" and links to Webex under "Webex."                                                                                                                                                                                                                                                           |
 
 ### Assignments
 
@@ -267,6 +252,16 @@ Every professor has different expectations when assigning certain work or provid
 |                    |                        | -   Search your issue on Stack Exchange/Stack Overflow                                  |                                                                                                    |
 |                    |                        |                                                                                         |                                                                                                    |
 |                    |                        | -   Ask fellow students on Slack                                                        |                                                                                                    |
++--------------------+------------------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+| Homework solutions | Summative              | -   Discuss work with your group to compile thoughts and work                           | -   Discuss problems with your group                                                               |
+|                    |                        |                                                                                         |                                                                                                    |
+|                    |                        | -   Go to Office Hours for help                                                         | -   Get clarification on any missed points                                                         |
+|                    |                        |                                                                                         |                                                                                                    |
+|                    |                        | -   Write down work that shows your thought process                                     | -   Go to Office Hours to ask about your work                                                      |
+|                    |                        |                                                                                         |                                                                                                    |
+|                    |                        | -   Search your issue on Stack Exchange/Stack Overflow                                  | -   Prepare notes on how to change your work for your presentation                                 |
+|                    |                        |                                                                                         |                                                                                                    |
+|                    |                        | -   Ask other students and groups in person or on Slack                                 |                                                                                                    |
 +--------------------+------------------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 | Class Exit Tickets | N/A                    | -   Bring appropriate electronic device to participate in polls                         | -   Review muddiest and clearest points from the week                                              |
 |                    |                        |                                                                                         |                                                                                                    |
@@ -404,207 +399,14 @@ Students across the country experience food insecurity at alarming rates. OHSU a
 
 Students who have children can use the PSU resource: [Resource Center for Students with Children](https://www.pdx.edu/students-with-children/). Resources are mostly focused on students with younger children. There are several great resources available, including: family-friendly study spaces, new baby starter packs, free kids clothing, and further information on financial resources for childcare.
 
-## School Policies and Resources
+# Additional information
 
-### School of Public Health Handbook
+Please go to the Syllabus tab in Sakai for the following information:
 
-All students are responsible for following the policies and expectations outlined in the student handbook for their program of study. Students are responsible for their own academic work and are expected to have read and practice principles of academic honesty, [as presented in the handbook](https://ohsu-psu-sph.org/current-graduate-students/policies-procedures/).
+-   School Policies and Resources
 
-### Student Access & Accommodations
+-   OHSU Competencies
 
-The School of Public Health values diversity and inclusion; we are committed to fostering mutual respect and full participation for all students. My goal is to create a learning environment that is equitable, usable, inclusive, and welcoming. If any aspects of instruction or course design result in barriers to your inclusion or learning, please notify me. 
+-   Institutional Policies and Resources
 
--   **If you are already registered with disability services** at either OHSU or PSU and you are taking a course at the opposite institution, you need to **contact the office you're registered with to transfer your accommodations**.
-
--   **If you are not already registered with a disability services office**, and you have, or think you may have, a disability that may affect your work in this class, and feel you need accommodations, use the following table for guidance about which office to contact to initiate accommodations.
-
-**Resource Table**
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| ***Enrollment University and Standing***                                                                                                                         | ***Where to Seek Accommodations***                                                              |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| *Undergraduate School of Public Health major*                                                                                                                    | [*PSU's Disability Resource Center*](http://www.pdx.edu/drc "PSU’s Disability Resource Center") |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   *503-725-4150*                                                                              |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   *Smith Memorial Student Union, Room 116*                                                    |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   [*drc\@pdx.edu*](mailto:drc@pdx.edu "drc@pdx.edu")                                          |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| All PSU-registering Dual Degree (MSW/MPH and MURP/MPH) Graduate School of Public Health Majors and all PSU-registering PhD students admitted prior to fall 2016. | *PSU's Disability Resource Center*                                                              |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   *503-725-4150*                                                                              |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   *Smith Memorial Student Union, Room 116*                                                    |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   [*drc\@pdx.edu*](mailto:drc@pdx.edu)                                                        |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | -   [*www.pdx.edu/drc*](http://www.pdx.edu/drc)                                                 |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| *Graduate School of Public Health major (irrespective of institution at which you register)*                                                                     | *OHSU's Office for Student Access*                                                              |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | *(503) 494-0082*                                                                                |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | [*StudentAccess\@OHSU.edu*](mailto:StudentAccess@OHSU.edu)                                      |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | *OHSU Auditorium Building 330*                                                                  |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| *Non-SPH major, PSU-enrolled student*                                                                                                                            | *PSU's Disability Resource Center*                                                              |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | *503-725-4150*                                                                                  |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | *Smith Memorial Student Union, Room 116*                                                        |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | [*drc\@pdx.edu*](mailto:drc@pdx.edu)                                                            |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | [*www.pdx.edu/drc*](http://www.pdx.edu/drc)                                                     |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-| *Non-SPH major, OHSU-enrolled student*                                                                                                                           | *OHSU's Office for Student Access*                                                              |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | *(503) 494-0082*                                                                                |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | [*StudentAccess\@OHSU.edu*](mailto:StudentAccess@OHSU.edu)                                      |
-|                                                                                                                                                                  |                                                                                                 |
-|                                                                                                                                                                  | *OHSU Auditorium Building 330*                                                                  |
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-
- 
-
-For more information related accessibility and accommodations, please see the "Statement Regarding Students with Disabilities" within the Institutional Policies section of this syllabus.
-
-### Title IX
-
-*The School of Public Health is committed to providing an environment free of all forms of prohibited discrimination and discriminatory harassment. The School of Public Health students who have questions about an incident related to Title IX are welcome to contact either the OHSU or PSU's Title IX Coordinator and they will direct you to the appropriate resource or office. Title IX pertains to any form of sex/gender discrimination, discriminatory harassment, sexual harassment or sexual violence.*
-
--   *PSU's Title IX Coordinator is Julie Caron, she may be reached at [titleixccordinator\@pdx.edu](mailto:titleixccordinator@pdx.edu) or 503-725-4410. Julie's office is located at [1600 SW 4th Ave](https://www.google.com/maps/search/1600+SW+4th+Ave?entry=gmail&source=g), In the Richard and Maureen Neuberger Center RMNC - Suite 830.*
-
--   The OHSU Title IX Coordinator's may be reachedat 503-494-0258 or [titleix\@ohsu.edu](mailto:titleix@ohsu.edu) and is located at 2525 SW 3rd St.
-
-*Please note that faculty and the Title IX Coordinators will keep the information you disclose private but are not confidential. If you would like to speak with a confidential advocate, who will not disclose the information to a university official without your written consent, you may contact an advocate at PSU or OHSU.*
-
--   [*PSU's confidential advocates*](https://www.pdx.edu/womens-resource-center/schedule-confidential-advocacy-appointment) *are available in Women's Resource Center (serving all genders) in Smith Student Memorial Union 479. You may schedule an appointment by (503-725-5672) or schedule on line at [https://psuwrc.youcanbook.me](https://psuwrc.youcanbook.me/)[.]{.underline} For more information about resources at PSU, please see PSU's [Response to Sexual Misconduct website.](https://www.pdx.edu/sexual-assault/)*
--   OHSU's advocates are available through the Confidential Advocacy Program (CAP) at 833-495-CAPS (2277) or by email [CAPsupport\@ohsu.edu](mailto:CAPsupport@ohsu.edu), but please note, email is not a secure form of communication. Also visit [www.ohsu.edu/CAP](http://www.ohsu.edu/CAP).
-
-*At OHSU, if you encounter any harassment, or discrimination based on race, color, religion, age, national origin or ancestry, veteran or military status, sex, marital status, pregnancy or parenting status, sexual orientation, gender identity or expression, disability or any other protected status, please contact the Affirmative Action and Equal Opportunity (AAEO) Department at 503-494-5148 or [aaeo\@ohsu.edu](mailto:aaeo@ohsu.edu).*
-
-*At PSU, you may contact the Office of Equity and Compliance if you experience any form of discrimination or discriminatory harassment as listed above at [equityandcompliance\@pdx.edu](mailto:equityandcompliance@pdx.edu) or by calling 503-725-5919.*
-
-### Technical Support
-
-The [OHSU ITG Help Desk](http://www.ohsu.edu/xd/about/services/information-technology/contact-us/index.cfm "OHSU ITG Help Desk") is available to assist students with email account or network account access issues between 6 a.m. and 6 p.m., Monday through Friday at 503-494-2222. For technical support in using the Sakai Course Management System, please contact the [Sakai Help Desk ](https://www.ohsu.edu/xd/education/teaching-and-learning-center/tools-and-services/sakai.cfm "Sakai Help Desk")at 877-972-5249 or email us at [sakai\@ohsu.edu](mailto:sakai@ohsu.edu "Email the Sakai help desk")
-
-## OHSU Competencies
-
-#### List of OHSU Graduation Core Competencies
-
--   Professional Knowledge and Skills
-
--   Professionalism
-
--   Information Literacy
-
--   Communication
-
--   Teamwork
-
--   Community Engagement, Social Justice and Equity
-
--   Patient Centered Care
-
-**To access a descriptive list of OHSU Graducation Core Competencies:** [OHSU Graduation Core Competencies](https://www.ohsu.edu/sites/default/files/2020-11/OHSU%20Graduation%20Core%20Competencies%202020.pdf "OHSU Graduation Core Competencies")
-
-## Institutional Policies and Resources
-
-### Statement Regarding Students with Disabilities
-
-OHSU is committed to inclusive and accessible learning environments in compliance with federal and state law. If you have a disability or think you may have a disability (mental health, attention-related, learning, vision, hearing, physical or health impacts) contact the Office for Student Access at (503) 494-0082 or [OHSU Student Access](mailto:studentaccess@ohsu.edu "OHSU Student Access") to have a confidential conversation about academic accommodations. Information is also available at [Student Access Website](http://www.ohsu.edu/student-access "Student Access Website"). Because accommodations may take time to implement and cannot be applied retroactively, it is important to have this discussion as soon as possible.
-
-Portland State students also have similar resources available via the PSU Disability Resource Center (website <http://www.pdx.edu/drc> ). Please contact the DRC at tel. (503) 725-4150 or email at [drc\@pdx.edu](mailto:drc@pdx.edu "Disability Resource Center")
-
-### Student Evaluation of Courses
-
-Course evaluation results are extremely important and used to help improve courses and the learning experience of future students. Responses will always remain anonymous and will only be available to instructors after grades have been posted. The results of scaled questions and comments go to both the instructor and their unit head/supervisor. Refer to Student Evaluation of Courses and Instructional Effectiveness, \*[Policy No. 02-50-035](https://o2.ohsu.edu/policies-and-compliance/ohsu-policy-manual/chapter-2-student-affairs/ohsu-policy-02-50-035.cfm "Student Evaluationvof Courses Policy").
-
-\*To access the OHSU Student Evaluation of Courses and Instructional Effectiveness Policy, you must log into the [OHSU O2 website](https://o2.ohsu.edu/ "OHSU O2 website").
-
-### Copyright Information
-
-Copyright laws and fair use policies protect the rights of those who have produced the material. The copy in this course has been provided for private study, scholarship, or research. Other uses may require permission from the copyright holder. The user of this work is responsible for adhering to copyright law of the U.S. (Title 17, U.S. Code). To help you familiarize yourself with copyright and fair use policies, the University encourages you to visit its [Copyright Web Page](https://www.ohsu.edu/xd/education/library/services/copyright/ "Copyright Web Page")
-
-Sakai course web sites contain material protected by copyrights held by the instructor, other individuals or institutions. Such material is used for educational purposes in accord with copyright law and/or with permission given by the owners of the original material. You may download one copy of the materials on any single computer for non-commercial, personal, or educational purposes only, provided that you (1) do not modify it, (2) use it only for the duration of this course, and (3) include both this notice and any copyright notice originally included with the material. Beyond this use, no material from the course web site may be copied, reproduced, re-published, uploaded, posted, transmitted, or distributed in any way without the permission of the original copyright holder. The instructor assumes no responsibility for individuals who improperly use copyrighted material placed on the web site.
-
-### Syllabi Changes and Retention
-
-Syllabi are considered to be a learning agreement between students and the faculty of record. Information contained in syllabi, other than the minimum requirements, may be subject to change as deemed appropriate by the faculty of record in concurrence with the academic program and the Office of the Provost. Refer to the \*[Course Syllabi Policy, 02-50-050.](https://o2.ohsu.edu/policies-and-compliance/ohsu-policy-manual/chapter-2-student-affairs/ohsu-policy-02-50-050.cfm "Course Syllabi Policy, 02-50-050.")
-
-\*To access the OHSU Course Syllabus Policy, you must log into the [OHSU O2 website](#0 "OHSU O2 website").
-
-### Commitment to Diversity & Inclusion
-
-OHSU is committed to creating and fostering a learning and working environment based on open communication and mutual respect. If you encounter sexual harassment, sexual misconduct, sexual assault, or discrimination based on race, color, religion, age, national origin, veteran's status, ancestry, sex, marital status, pregnancy or parenting status, sexual orientation, gender identity, disability or any other protected status please contact the Affirmative Action and Equal Opportunity Department at 503-494-5148 or [aaeo\@ohsu.edu](mailto:aaeo@ohsu.edu). Inquiries about Title IX compliance or sex/gender discrimination and harassment may be directed to the OHSU Title IX Coordinator at 503-494-0258 or [titleix\@ohsu.edu.](mailto:titleix@ohsu.edu.)
-
-### Modified Operations, Policy 01-40-010
-
-**Portland Campus:  Marquam Hill and South Waterfront**
-
-Students should review O2 or call [OHSU's weather alert](https://www.ohsu.edu/xd/about/visiting/weather/ "OHSU’s weather alert") line at 503-494-9021 for the most up-to-date information on OHSU-wide modified operations which include but are not limited to delays or closures for inclement weather.
-
-***If your home institution is not on the Portland campus (Marquam Hill or South Waterfront, contact your home institution for more information.***
-
-### OHSU Resources Available to Students\*:
-
-**Remote Learning Resources\
-**The [Remote Learning webpage on O2](https://o2.ohsu.edu/student-central/transforming-learning.cfm "Remote Learning webpage on O2") contains concise, practical resources, and strategies for students that need to quickly transition to a fully remote instructional format.
-
-**Registrar's Office**\
-Mackenzie Hall, Rm. 1120\
-503-494-7800; [Email the Registrar](mailto:regohsu@ohsu.edu "Email the Registrar")
-
-**Student Registration Information:** \
-[To Register for Classes](http://www.ohsu.edu/xd/education/student-services/registrar/registration-information/index.cfm "Student Registration")
-
-**OHSU ITG Help Desk**\
-Regular staff hours are 6 a.m. to 6 p.m., Monday through Friday, but phones are answered seven days a week, 24 hours a day. Call 503 494-2222.
-
-**Teaching and Learning Center**\
-Academic Support Counseling and Sakai Course Management System, please contact the TLC Help Desk at 877-972-5249 or email [TLC Help Desk](mailto:sakai@ohsu.edu "TLC Help Desk")
-
-**Student Academic Support Services\
-**For resources on improving student's study strategies, time management, motivation, test-taking skills and more, Please access the [Student Academic Support Services Sakai page](https://sakai.ohsu.edu/portal/site/Student_Support "Student Academic Support"). For one-on-one appointments or to arrange a workshop for students, please contact [Emily Hillhouse](mailto:learningsupport@ohsu.edu "Learning Support").
-
-**Confidential Advocacy Program\
-**Support for OHSU employees, students, and volunteers who have experienced any form of sexual misconduct, including sexual harassment, sexual assault, intimate-partner violence, stalking, relationship/dating violence, and other forms --- regardless of when or where it took place. [Contact Us.](https://www.ohsu.edu/confidential-advocacy-program "CAP")
-
-**Concourse Syllabus Management\
-**For help with accessing your Concourse Syllabus:  Please contact the Sakai help Desk for all other Concourse inquiries please visit the [Concourse Support - Sakai](https://sakai.ohsu.edu/portal/site/concourse-syllabus-support "Concourse Support - Sakai") or please contact the Mark Rivera at [rivermar\@ohsu.edu ](mailto:rivermar@ohsu.edu "rivermar@ohsu.edu")or call 503-494-0934
-
-**Public Safety\
-[OHSU Public Safety-Portland Campus (Marquam Hill and South Waterfront)](https://www.ohsu.edu/xd/about/services/public-safety/ "https://www.ohsu.edu/xd/about/services/public-safety/")**
-
--   Emergency on Campus: 503-494-4444 (Portland)
-
--   Non-emergency: 503-494-7744; [Contact Public Safety](mailto:pubsafe@ohsu.edu "Contact Public Safety")
-
-**Student Health & Wellness Center** \
-Baird Hall, Rm. 18 (Primary Care) and Rm. 6 (Behavioral Health)\
-503-494-8665; For urgent care after hours, 503-494-8311 and ask for the Nurse on call.\
-[Wellness Center Information](mailto:SHW@ohsu.edu "Wellness Center Information")  \
-[Wellness Center Website](http://www.ohsu.edu/xd/education/student-services/joseph-trainer-health-wellness-center/ "Wellness Center Website")
-
-***If your home institution is not on the Portland campus, contact your home institution student support services for more information.***
-
-**Ombudsman Office**\
-Gaines Hall, Rm. 117\
-707 SW Gaines Street, Portland, OR 97239\
-503-494-5397; [Contact Ombudsman](mailto:graybill@ohsu.edu "Ombudsman"); [Ombudsman Website](https://www.ohsu.edu/xd/about/services/ombudsman/ "Ombudsman Website")
-
-**Library: Biomedical Information Communication Center**\
-[BICC Library Hours of Operation](http://www.ohsu.edu/xd/education/library/about/hours.cfm "BICC Library Hours of Operation")
-
-### Privacy While Learning
-
-Students may be asked to take classes remotely through videoconferencing software like WebEx. Some of these remote classes will be recorded. Any recording will capture the presenter's audio, video, and computer screen. Student video and audio will be recorded if and when you unmute your audio and share your video during the recorded sessions. These recordings will not be shared with or accessible to the public without prior written consent. 
-
-### Student Central
-
-Key information for students across OHSU's Schools of Dentistry, Medicine, Nursing, the OHSU-PSU School of Public Health and the College of Pharmacy. [Student Central](https://o2.ohsu.edu/student-central/index.cfm "Student Central") helps you find out more about student services, resources, policies and technology.
+I do not include them here because I do not have the bandwidth to make sure all links and resources are up-to-date.
