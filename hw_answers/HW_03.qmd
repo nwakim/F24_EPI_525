@@ -1,6 +1,6 @@
 ---
 title: "Homework 3 Answers"
-subtitle: "BSTA 550"
+subtitle: "EPI 525"
 date-modified: "today"
 format: 
   html: 
@@ -11,32 +11,78 @@ editor_options:
   chunk_output_type: console
 ---
 
-Selected answers (or hints) not provided at the end the book:
+# Book exercises {.unnumbered}
 
--   Chapter 5
+## 3.4 Baggage fees {.unnumbered}
 
-    -   NTB \# 1: 0.3916
 
--   Chapter 7
 
-    -   \# 2: $X\in(0,\infty)$, continuous; $Y\in\{0,1,2,\ldots\}$, discrete
+## 3.5 Gull clutch size {.unnumbered}
 
-    -   \# 10: $X_j\in[0,\infty),j=1,\ldots,100$; $Y\in[0,\infty)$; both continuous
+Review the solution in the back of the book for exercise 3.5.
 
-    -   \# 16: $Y$ could be 0
+### (a) {.unnumbered}
 
-    -   \# 18: Yes, a r.v. can be both. Give an example!
+For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.
 
--   Chapter 8
+### (b) {.unnumbered}
 
-    -   \# 2: (a) $p(x)=\binom{7}{x}(.5)^7$ for $x=0,1,2,\ldots,7$
+For part (b), the answer is _not_ correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation.
 
-    -   \# 9: (a) $c = \frac{1}{8}$
 
-    -   \# 10:
 
-        ::: center
-        |  $x$   |  2   |  4  |  6   |  8   |
-        |:------:|:----:|:---:|:----:|:----:|
-        | $p(x)$ | 3/10 | 1/2 | 3/20 | 1/20 |
-        :::
+## 3.6 Scooping ice cream  {.unnumbered}
+
+
+## 3.8 Chickenpox, Part I.  {.unnumbered}
+
+For #3.8, calculate the binomial probabilities two ways:  
+(1) using the formula (can use R to calculate factorials or the choose function) and  
+(2) using R functions for binomial distribution probabilities. 
+
+
+## 3.10 Chickenpox, Part II.  {.unnumbered}
+
+For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
+
+
+## !!! Instructions for Normal probability exercises !!! {.unnumbered}
+
+:::{.callout-important}
+
+Additional Instructions - IMPORTANT!!!
+
+* For __ALL__ normal distribution exercises: 
+  * make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
+  * calculate probabilities using **both**
+      * z-table
+      * R
+:::
+
+## 3.20 Area under the curve, Part II {.unnumbered}
+
+
+
+## 3.22 Triathlon times {.unnumbered}
+
+
+
+## 3.28 Arsenic poisoning {.unnumbered}
+
+
+
+## 3.30 Find the SD {.unnumbered}
+
+
+
+## 3.32 Chickenpox, Part III  {.unnumbered}
+
+
+
+## 3.38 Stenographer’s typos {.unnumbered}
+
+
+
+## 3.40 Osteosarcoma in NYC {.unnumbered}
+
+

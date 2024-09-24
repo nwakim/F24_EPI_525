@@ -52,15 +52,15 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 3.5 Gull clutch size {.unnumbered}
 
-<font color="green">Review the solution in the back of the book for exercise 3.5.</font>
+Review the solution in the back of the book for exercise 3.5.
 
 ### (a) {.unnumbered}
 
-<font color="green">For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.</font>
+For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.
 
 ### (b) {.unnumbered}
 
-<font color="green">For part (b), the answer is _not_ correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation.</font>
+For part (b), the answer is _not_ correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation.
 
 
 
@@ -69,14 +69,14 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 3.8 Chickenpox, Part I.  {.unnumbered}
 
-<font color="green">For #3.8, calculate the binomial probabilities two ways:  
+For #3.8, calculate the binomial probabilities two ways:  
 (1) using the formula (can use R to calculate factorials or the choose function) and  
-(2) using R functions for binomial distribution probabilities. </font>
+(2) using R functions for binomial distribution probabilities. 
 
 
 ## 3.10 Chickenpox, Part II.  {.unnumbered}
 
-<font color="green">For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.</font>
+For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
 
 
 ## !!! Instructions for Normal probability exercises !!! {.unnumbered}
