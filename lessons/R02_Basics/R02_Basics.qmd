@@ -1,22 +1,18 @@
 ---
-title: "R2: R Basics"
+title: "R02: R Basics"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
 date: "10/7/2024"
-categories: ["Week 2"]
 format: 
   revealjs:
     theme: "../simple_NW.scss"
-    toc: true
-    toc-depth: 1
-    toc-title: Class Overview
     chalkboard: true
     slide-number: true
     show-slide-number: all
-    width: 1600
+    width: 1955
     height: 1100
-    footer: R2 Slides
+    footer: R02 Slides
     html-math-method: mathjax
     highlight-style: arrow
 execute:
@@ -41,20 +37,18 @@ library(here)
 ```
 
 
-## Open RStudio on your computer (not R!)
+## We will open RStudio on our computer (not R!)
 
 ![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
 
 
-## RStudio anatomy 
+## RStudio anatomy
+
+![[Emma Rand](https://buzzrbeeline.blog/2018/07/04/rstudio-anatomy/)](../img_slides/RStudio_Anatomy.svg){fig-align="center"}
 
 
-![[Emma Rand](http://www-users.york.ac.uk/~er13/17C%20-%202018/pracs/01IntroductionToModuleAndRStudio.html#what_are_r_and_rstudio)](../img_slides/RStudio_Anatomy.svg){fig-align="center"}
 
-Read more about RStudio's layout in Section 3.4 of "[Getting Used to R, RStudio, and R Markdown](https://rbasics.netlify.com/3-rstudiobasics.html#rstudio-layout)" (Ismay and Kennedy 2016) 
-
-
-# Let's code! R Basics 
+## Let's code! R Basics 
 
 ![[Artwork by @allison_horst](https://allisonhorst.com/everything-else)](../img_slides/horst_timeline_Rlearning.png){fig-align="center"}
 
@@ -82,17 +76,22 @@ __Typing and executing code in the console __
 
 ## Math calculations using R
 
+* We can use R as a calculator!!
 * Rules for order of operations are followed
 * Spaces between numbers and characters are ignored
 
+ 
+
 ::: columns
 ::: {.column width="50%"}
+
 ```{r}
 10^2
 3 ^ 7
 6/9
 9-43
 ```
+
 :::
 
 ::: {.column width="50%"}
@@ -113,7 +112,8 @@ Variables are used to store data, figures, model output, etc.
 ::: columns
 ::: {.column width="49%"}
 * Can assign a variable using either `=` or `<-`
-    - __Using `<-` is preferable__
+    - __Using `<-` is preferable__ for certain occasions
+    - I usually just use `=` because less typing hehe
 
 Assign just one value:
 ```{r}
@@ -146,6 +146,11 @@ b
 :::
 :::
 
+## Let's try it out!
+
+- Create a new variable `y` that is assigned the value of 8
+- Create a new variable `c` that is assigned the vector of values 15 through 20
+- Create a new variable `d` that is assigned the vector of values 16 through 19 and 22.
 
 ## Doing math with variables
 
@@ -176,6 +181,11 @@ a*a
 ```
 :::
 :::
+
+## Let's try it out!
+
+- Use the variable name `y` to find the addition of `y` and 5
+- Add 5 to the vector `c`
 
 ## Variables can include text (characters)
 
@@ -221,6 +231,9 @@ seq(1, 12, 3)
 :::
 :::
 
+## Now let's look back at our slides on summarizing numerical data
+
+- We will calculate the ___ for `c`
 
 ## Common console errors (1/2)
  

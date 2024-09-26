@@ -11475,72 +11475,72 @@
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#open-rstudio-on-your-computer-not-r",
     "href": "lessons/R02_Basics/R02_Basics.html#open-rstudio-on-your-computer-not-r",
-    "title": "R2: R Basics",
-    "section": "",
-    "text": "Modern Dive"
+    "title": "R02: R Basics",
+    "section": "Open RStudio on your computer (not R!)",
+    "text": "Open RStudio on your computer (not R!)\n\nModern Dive"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#rstudio-anatomy",
     "href": "lessons/R02_Basics/R02_Basics.html#rstudio-anatomy",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "RStudio anatomy",
-    "text": "RStudio anatomy\n\n\n\nEmma Rand\n\n\nRead more about RStudio’s layout in Section 3.4 of “Getting Used to R, RStudio, and R Markdown” (Ismay and Kennedy 2016)"
+    "text": "RStudio anatomy\n\nEmma Rand"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#coding-in-the-console",
     "href": "lessons/R02_Basics/R02_Basics.html#coding-in-the-console",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Coding in the console",
     "text": "Coding in the console\n\n\nWhen you first open R, the console should be empty.\n\n\n\n\n\n\nTyping and executing code in the console \n\nType code in the console (blue text)\nPress return to execute the code\nOutput shown below in black"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#math-calculations-using-r",
     "href": "lessons/R02_Basics/R02_Basics.html#math-calculations-using-r",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Math calculations using R",
-    "text": "Math calculations using R\n\nRules for order of operations are followed\nSpaces between numbers and characters are ignored\n\n\n\n\n10^2\n\n[1] 100\n\n3 ^ 7\n\n[1] 2187\n\n6/9\n\n[1] 0.6666667\n\n9-43\n\n[1] -34\n\n\n\n\n4^3-2* 7+9 /2\n\n[1] 54.5\n\n\nThe equation above is computed as \\[4^3 − (2 \\cdot 7) + \\frac{9}{2}\\]"
+    "text": "Math calculations using R\n\nWe can use R as a calculator!!\nRules for order of operations are followed\nSpaces between numbers and characters are ignored\n\n \n\n\n\n10^2\n\n[1] 100\n\n3 ^ 7\n\n[1] 2187\n\n6/9\n\n[1] 0.6666667\n\n9-43\n\n[1] -34\n\n\n\n\n4^3-2* 7+9 /2\n\n[1] 54.5\n\n\nThe equation above is computed as \\[4^3 − (2 \\cdot 7) + \\frac{9}{2}\\]"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#variables-saved-r-objects",
     "href": "lessons/R02_Basics/R02_Basics.html#variables-saved-r-objects",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Variables (saved R objects)",
-    "text": "Variables (saved R objects)\nVariables are used to store data, figures, model output, etc.\n\n\n\nCan assign a variable using either = or &lt;-\n\nUsing &lt;- is preferable\n\n\nAssign just one value:\n\nx = 5\nx\n\n[1] 5\n\nx &lt;- 5\nx\n\n[1] 5\n\n\n\n\n\nAssign a vector of values\n\nConsecutive integers using :\n\n\na &lt;- 3:10\na\n\n[1]  3  4  5  6  7  8  9 10\n\n\n\nConcatenate a string of numbers\n\n\nb &lt;- c(5, 12, 2, 100, 8)\nb\n\n[1]   5  12   2 100   8"
+    "text": "Variables (saved R objects)\nVariables are used to store data, figures, model output, etc.\n\n\n\nCan assign a variable using either = or &lt;-\n\nUsing &lt;- is preferable for certain occasions\nI usually just use = because less typing hehe\n\n\nAssign just one value:\n\nx = 5\nx\n\n[1] 5\n\nx &lt;- 5\nx\n\n[1] 5\n\n\n\n\n\nAssign a vector of values\n\nConsecutive integers using :\n\n\na &lt;- 3:10\na\n\n[1]  3  4  5  6  7  8  9 10\n\n\n\nConcatenate a string of numbers\n\n\nb &lt;- c(5, 12, 2, 100, 8)\nb\n\n[1]   5  12   2 100   8"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#doing-math-with-variables",
     "href": "lessons/R02_Basics/R02_Basics.html#doing-math-with-variables",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Doing math with variables",
     "text": "Doing math with variables\n\n\nMath using variables with just one value\n\nx &lt;- 5\nx\n\n[1] 5\n\nx + 3\n\n[1] 8\n\ny &lt;- x^2\ny\n\n[1] 25\n\n\n\nMath on vectors of values:\nelement-wise computation\n\na &lt;- 3:6\na\n\n[1] 3 4 5 6\n\na+2; a*3\n\n[1] 5 6 7 8\n\n\n[1]  9 12 15 18\n\na*a\n\n[1]  9 16 25 36"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#variables-can-include-text-characters",
     "href": "lessons/R02_Basics/R02_Basics.html#variables-can-include-text-characters",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Variables can include text (characters)",
     "text": "Variables can include text (characters)\n\nhi &lt;- \"hello\"\nhi\n\n[1] \"hello\"\n\ngreetings &lt;- c(\"Guten Tag\", \"Hola\", hi)\ngreetings\n\n[1] \"Guten Tag\" \"Hola\"      \"hello\""
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#using-functions",
     "href": "lessons/R02_Basics/R02_Basics.html#using-functions",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Using functions",
     "text": "Using functions\n\nmean() is an example of a function\nfunctions have “arguments” that can be specified within the ()\n?mean in console will show help file for mean()\n\n\n\nFunction arguments specified by name:\n\nmean(x = 1:4)\n\n[1] 2.5\n\n\n\nseq(from = 1, to = 12, by = 3)\n\n[1]  1  4  7 10\n\nseq(by = 3, to = 12, from = 1)\n\n[1]  1  4  7 10\n\n\n\nFunction arguments not specified, but listed in order:\n\nmean(1:4)\n\n[1] 2.5\n\n\n\nseq(1, 12, 3)\n\n[1]  1  4  7 10"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#common-console-errors-12",
     "href": "lessons/R02_Basics/R02_Basics.html#common-console-errors-12",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Common console errors (1/2)",
     "text": "Common console errors (1/2)\nIncomplete commands\n\n\n\nWhen the console is waiting for a new command, the prompt line begins with &gt;\n\nIf the console prompt is +, then a previous command is incomplete\nYou can finish typing the command in the console window\n\n\n\nExample:\n\n&gt; 3 + (2*6\n+ )\n\n[1] 15"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#common-console-errors-22",
     "href": "lessons/R02_Basics/R02_Basics.html#common-console-errors-22",
-    "title": "R2: R Basics",
+    "title": "R02: R Basics",
     "section": "Common console errors (2/2)",
-    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")"
+    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")\n\n\n\nR02 Slides"
   },
   {
     "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html",
@@ -11730,5 +11730,47 @@
     "title": "Key Info and Announcements",
     "section": "Key Dates",
     "text": "Key Dates"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#we-will-open-rstudio-on-our-computer-not-r",
+    "href": "lessons/R02_Basics/R02_Basics.html#we-will-open-rstudio-on-our-computer-not-r",
+    "title": "R02: R Basics",
+    "section": "We will open RStudio on our computer (not R!)",
+    "text": "We will open RStudio on our computer (not R!)\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#lets-code-r-basics",
+    "href": "lessons/R02_Basics/R02_Basics.html#lets-code-r-basics",
+    "title": "R02: R Basics",
+    "section": "Let’s code! R Basics",
+    "text": "Let’s code! R Basics\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#lets-try-it-out",
+    "href": "lessons/R02_Basics/R02_Basics.html#lets-try-it-out",
+    "title": "R02: R Basics",
+    "section": "Let’s try it out!",
+    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22."
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#lets-try-it-out-1",
+    "href": "lessons/R02_Basics/R02_Basics.html#lets-try-it-out-1",
+    "title": "R02: R Basics",
+    "section": "Let’s try it out!",
+    "text": "Let’s try it out!\n\nUse the variable name y to find the addition of y and 5\nAdd 5 to the vector c"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#now-lets-look-back-at-our-slides-on-summarizing-numerical-data",
+    "href": "lessons/R02_Basics/R02_Basics.html#now-lets-look-back-at-our-slides-on-summarizing-numerical-data",
+    "title": "R02: R Basics",
+    "section": "Now let’s look back at our slides on summarizing numerical data",
+    "text": "Now let’s look back at our slides on summarizing numerical data\n\nWe will calculate the ___ for c"
+  },
+  {
+    "objectID": "lessons/00_Welcome/00_Welcome.html#let-me-know-if-you-have-questions",
+    "href": "lessons/00_Welcome/00_Welcome.html#let-me-know-if-you-have-questions",
+    "title": "Welcome to EPI 525!",
+    "section": "Let me know if you have questions",
+    "text": "Let me know if you have questions\nOr if there’s any contradicting information… I surely made mistakes!!"
   }
 ]
