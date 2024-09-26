@@ -27,6 +27,8 @@ execute:
 knitr::opts_chunk$set(echo = TRUE, fig.height=2.5, fig.width=4, message = FALSE, warning = FALSE)
 ```
 
+## Time for final course evals!
+
 ## Load packages
 
 * Packages need to be loaded _every time_ you restart R or render an Qmd file

@@ -4,18 +4,15 @@ author: "Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
 date: "09/30/2024"
-categories: ["Week 1"]
 format: 
   revealjs:
     theme: "../simple_NW.scss"
     chalkboard: true
     slide-number: true
     show-slide-number: all
-    width: 1600
+    width: 1955
     height: 1100
     footer: Lesson 1 Slides
-    html-math-method: mathjax
-    highlight-style: arrow
 execute:
   echo: true
   freeze: auto
@@ -42,18 +39,31 @@ execute:
 -   But also sleeping, TV, and reading
 
 -   Proud plant mamma
+
+-   *A few other things about myself that I will share non-publicly*
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="25%"}
-![](../img_slides/bike.JPG){width="450"} 
-![](../img_slides/cats.mov){width="450"} ![](../img_slides/crater_lake.jpeg){width="450"}
+![](../img_slides/bike.JPG){width="450"} ![](../img_slides/cats.mov){width="450"} ![](../img_slides/crater_lake.jpeg){width="450"}
 :::
 
 ::: {.column width="25%"}
 ![](../img_slides/Narrows.JPG){width="450"}
+:::
+:::
+
+## 
+
+::: orange
+::: orange-ttl
+Important Note
+:::
+
+::: orange-cont
+**This is my first time teaching the course.** I will work hard to answer your questions in class, but I will often need some time outside of class to make sure I give you the best answer possible! Also, many of the examples are not my own. I will work to improve examples, but if you have feedback or suggestions, I am happy to hear them!
 :::
 :::
 
@@ -67,56 +77,75 @@ execute:
 
 -   Complete Homework 0 by this Thursday at 11pm!
 
--   Highly suggest that you make an appointment with a learning specialist through [Student Academic Support Services](https://sakai.ohsu.edu/portal/site/Student_Support)!
+    -   Includes some items above
+    -   Think about what day of the week you would like your homeworks due
 
-## Let's visit the class website
+-   Highly suggest that you make an appointment with a learning specialist through [Student Academic Success Center](https://sakai.ohsu.edu/portal/site/Student_Support)!
 
--   Homepage
+## Let's visit the website: Homepage
 
-    -   GitHub
+![[Homepage](https://nwakim.github.io/F24_EPID_525/)](../img_slides/site_homepage1.png)
 
--   Syllabus
+## Let's visit the website: Syllabus
 
--   Schedule
+-   Course learning objectives
+-   Textbook in shared folder!
+-   R: we will start to learn this programming language
+-   Assessments and grade breakdowns
+-   Homework: 3 parts + grading
+-   Feedback: in the form of exit tickets, group evals, midterm feedback, and final course
+-   How to succeed in this course: resources and assignments explained
+-   Late work policy / Attendance policy
+-   ChatGPT and other AI technology
+-   Course expectations: a few ways that I will show you respect and commitment to you as students
+    -   And a few ways I expect from you!
+-   Communicating with me: give me 24 hours to reply M-F
+    -   Online communication is not my strength!
 
-    -   Weeks, class info, exams, homeworks
+## Let's visit the website: Schedule (1/2)
 
--   Search
+-   Weeks, class info, exams, homeworks
 
-::: orange
-::: orange-ttl
-Important Note
-:::
+![](../img_slides/site_homepage2.png){fig-align="center"}
 
-::: orange-cont
-**This is my first time teaching the course.** I will work hard to answer your questions in class, but I will often need some time outside of class to make sure I give you the best answer possible! Also, many of the examples are not my own. I will work to improve examples, but if you have feedback or suggestions, I am happy to hear them!
-:::
-:::
+## Let's visit the website: Schedule (2/2)
 
-## Let's go through the syllabus!
+|                                                                                                                                                             |              |                                                                                                                                                                                                                                                               |
+|:------------------|:---------------|:------------------------------------|
+| [[{{< iconify akar-icons info-fill size=80px >}}](lessons/01_Outcomes_Events_Sample/01_Outcomes_Events_Sample_key_info.qmd)]{style="color:#f8f5f0;"}        | Key Info     | I will post announcements and other important class related information here. This will often include logistics for the class and other helpful information. For example, if I change a due date or discuss a common mistake in homework, I will put it here. |
+| [[{{< iconify ri slideshow-fill size=80px >}}](lessons/17_Negative_binomial_rv/17_Negative_binomial_rv.qmd)]{style="color:#f8f5f0;"}                        | Slides QMD   | These are the basic slides that will open in your browser.                                                                                                                                                                                                    |
+| [[{{< iconify bi file-earmark-pdf-fill size=80px >}}](lessons/01_Outcomes_Events_Sample/01_Outcomes_Events_Sample.pdf)]{style="color:#f8f5f0;"}             | Slides PDF   | These are the slides in pdf form. I try to save the slides in pdf form for easy note taking. I'm not always the best at posting these before class, so make sure you know how to save your own copy of pdf slides!                                            |
+| [[{{< iconify pepicons-pop pen-circle-filled size=80px >}}](lessons/01_Outcomes_Events_Sample/01_Outcomes_Events_Sample_notes.pdf)]{style="color:#f8f5f0;"} | Slides Notes | These are the annotated slides in pdf form. In class, I add my own notes to slides. After class, I will post them here.                                                                                                                                       |
+| [[{{< iconify mdi video size=90px >}}](mothing)]{style="color:#f8f5f0;"}                                                                                    | Recording    | I record our classes. This will be a link to the OneDrive folder containing this recording.                                                                                                                                                                   |
+| [[{{< iconify pajamas question size=80px >}}](lessons/01_Outcomes_Events_Sample/01_Outcomes_Events_Sample_muddy_points.qmd)]{style="color:#f8f5f0;"}        | Muddy Points | You will have a chance to ask questions about class in your exit tickets. If I notice a trend in confusion, I will add explanations to these "Muddy Points"                                                                                                   |
 
-[Syllabus page](https://nwakim.github.io/F2023_BSTA_550/syllabus.html)
+## Let's visit the website: Search
+
+## Let's visit the website: Homework!
 
 ## Decision on Homework due dates
 
-- I have some set due dates in the schedule
+-   I have some set due dates in the schedule
 
-- Please look at your other classes, your calendar, etc
+-   Please look at your other classes, your calendar, etc
 
-- Consider what day of the week you would like to turn in your assignment, solutions, and video/meeting
+-   Consider what day of the week you would like to turn in your assignment, solutions, and video/meeting
 
-- Question in HW 0 to cast your vote and share your opinion
+-   Question in HW 0 to cast your vote and share your opinion
+
+-   We have homework every week
+
+    -   Homework 8 is due on 11/26 (Wednesday before Thanksgiving break)
+    -   You will have the option of turning it in with Homework 9
 
 ## Structure for this course
 
-- Learning the basic tools to understand statistics
+-   Learning the basic tools to understand statistics
 
-- For each tool we learn, there is another tool to learn 
+-   It is going to feel useless at times, but I swear it is not!
 
-- EDIT THIS SLIDE!!
+-   This class will help you build a toolbox that allows to analyze data while understanding the inner theory at play
 
-## Things to discuss
+## What we will cover
 
-- We have homework every week
-  - Homework 8 is due on 11/26 (Wednesday before Thanksgiving break)
-  - You will have the option of turning it in with Homework 9
+![](../img_slides/course_map.png){fig-align="center"}
