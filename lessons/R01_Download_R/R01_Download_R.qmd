@@ -1,0 +1,91 @@
+---
+title: "R1: Download + Intro to R & Rstudio"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "09/30/2024"
+categories: ["Week 1"]
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R01 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+```
+
+# Introduction to R
+
+![[Artwork by \@allison_horst](https://allisonhorst.com/everything-else)](../img_slides/horst_welcome_R.png){fig-align="center"}
+
+## What is R?
+
+::: columns
+::: {.column width="70%"}
+-   A programming language
+-   Focus on statistical modeling and data analysis
+-   Useful for epidemiology, biostatistics, and data science
+-   Great visualizations
+:::
+
+::: {.column width="30%"}
+![](../img_slides/R_logo.png)
+:::
+:::
+
+## What is RStudio?
+
+::: columns
+::: {.column width="50%"}
+R is a programming language
+:::
+
+::: {.column width="50%"}
+RStudio is an integrated development environment (IDE)\
+= an interface to use R (with perks!)
+:::
+:::
+
+![[Modern Dive](https://moderndive.com/1-getting-started.html#r-rstudio)](../img_slides/r_vs_rstudio_1.png){fig-align="center"}
+
+## We open RStudio on our computer (not R!)
+
+![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
+
+## So let's take some time to download each!
+
+-   You must install R first
+    -   Even if you have R installed already, I highly recommend installing the latest version
+    -   In the future, you will periodically want to update this
+    -   Windows: Download from <https://cran.rstudio.com/bin/windows/base/> from the link "Download R 4.1.1 for Windows"
+    -   Mac OS X: Download the latest .pkg file (top link, currently R-4.1.1.pkg) from <https://cran.rstudio.com/bin/macosx/>
+-   Install RStudio Desktop Open Source License (second)
+    -   Select download file corresponding to your operating system from <https://posit.co/download/rstudio-desktop/#download>
+    
+- If you get them both installed, then you can open up RStudio and start checking it out
+
+## RStudio anatomy
+
+![[Emma Rand](https://buzzrbeeline.blog/2018/07/04/rstudio-anatomy/)](../img_slides/RStudio_Anatomy.svg){fig-align="center"}

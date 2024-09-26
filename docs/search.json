@@ -11352,5 +11352,383 @@
     "title": "Key Info and Announcements",
     "section": "",
     "text": "Jamie Jones in coming at the end of next class to discuss IP/PE!!"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html#what-is-r",
+    "href": "lessons/R01_Download_R/R01_Download_R.html#what-is-r",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "What is R?",
+    "text": "What is R?\n\n\n\nA programming language\nFocus on statistical modeling and data analysis\nUseful for epidemiology, biostatistics, and data science\nGreat visualizations"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html#what-is-rstudio",
+    "href": "lessons/R01_Download_R/R01_Download_R.html#what-is-rstudio",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "What is RStudio?",
+    "text": "What is RStudio?\n\n\nR is a programming language\n\nRStudio is an integrated development environment (IDE)\n= an interface to use R (with perks!)\n\n\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html#open-rstudio-on-your-computer-not-r",
+    "href": "lessons/R01_Download_R/R01_Download_R.html#open-rstudio-on-your-computer-not-r",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "Open RStudio on your computer (not R!)",
+    "text": "Open RStudio on your computer (not R!)\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html#rstudio-anatomy",
+    "href": "lessons/R01_Download_R/R01_Download_R.html#rstudio-anatomy",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "RStudio anatomy",
+    "text": "RStudio anatomy\n\n\nEmma Rand\nR01 Slides"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html#we-open-rstudio-on-our-computer-not-r",
+    "href": "lessons/R01_Download_R/R01_Download_R.html#we-open-rstudio-on-our-computer-not-r",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "We open RStudio on our computer (not R!)",
+    "text": "We open RStudio on our computer (not R!)\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html#so-lets-take-some-time-to-download-each",
+    "href": "lessons/R01_Download_R/R01_Download_R.html#so-lets-take-some-time-to-download-each",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "So let’s take some time to download each!",
+    "text": "So let’s take some time to download each!\n\nYou must install R first\n\nEven if you have R installed already, I highly recommend installing the latest version\nIn the future, you will periodically want to update this\nWindows: Download from https://cran.rstudio.com/bin/windows/base/ from the link “Download R 4.1.1 for Windows”\nMac OS X: Download the latest .pkg file (top link, currently R-4.1.1.pkg) from https://cran.rstudio.com/bin/macosx/\n\nInstall RStudio Desktop Open Source License (second)\n\nSelect download file corresponding to your operating system from https://posit.co/download/rstudio-desktop/#download\n\nIf you get them both installed, then you can open up RStudio and start checking it out"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html",
+    "title": "R3: File Organization",
+    "section": "",
+    "text": "We all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#using-onedrive",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#using-onedrive",
+    "title": "R3: File Organization",
+    "section": "",
+    "text": "We all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#folder-organization",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#folder-organization",
+    "title": "R3: File Organization",
+    "section": "Folder organization",
+    "text": "Folder organization\n\nMake a folder for our class!\n\nI suggest naming it something like EPI_525_F24 to indicate the class and the term\n\nMake these folders in your computer\n\nOnly make them in OneDrive if you have a desktop connection\n\n\n\n\n\nFor a project, I have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nLessons\nR_activities\nAnd other folders if you want\n\n\n\n\n\nTake a few minutes to create these folders\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#aside-folder-and-file-naming",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#aside-folder-and-file-naming",
+    "title": "R3: File Organization",
+    "section": "Aside: folder and file naming",
+    "text": "Aside: folder and file naming\nThere are a few good practices for naming files and folders for easy tracking:\n\nKeep the name short and relevant\nUse leading numbers to help organize sequential items\nUse dates in the format “YYYY-MM-DD” so that files are in chronological order\nYou can label different versions if you would like to\nUse “_” to separate sections of the name\n\nI also use this to separate words, but some people say you should use “-” to separate words"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#lets-go-into-r_activities",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#lets-go-into-r_activities",
+    "title": "R3: File Organization",
+    "section": "Let’s go into R_activities",
+    "text": "Let’s go into R_activities\n\nMake a folder called something like R3_work\nWe are going to stay in the R_activities folder"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#creating-project-in-rstudio",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#creating-project-in-rstudio",
+    "title": "R3: File Organization",
+    "section": "Creating project in RStudio",
+    "text": "Creating project in RStudio\n\nWay to designate a working directory: basically your home base when working in R\n\nWe have to tell R exactly where we are in our folders and where to find other things\nA project makes it easier to tell R where we are\n\nBasic steps to create a project\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nOnce we have projects, we can open one are R will automatically know that its location is the start of our working directory\nLet me show you my process\n\nI will create one in my Sample_folder\nI will show you how I switch between classes\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#creating-a-new-qmd-file",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#creating-a-new-qmd-file",
+    "title": "R3: File Organization",
+    "section": "Creating a new qmd file",
+    "text": "Creating a new qmd file\n\nBasic steps\n\nCreate new .qmd (under File or top left corner)\nDecide on document types/options\n\nLet me show you my process\nCreate a .qmd in your Sample_folder under any folder (maybe Notes is good)\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#here-package",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#here-package",
+    "title": "R3: File Organization",
+    "section": "here package",
+    "text": "here package\n\n\n\nGood source for the here package\nJust substitute .Rmd with .qmd\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#install-here-package",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#install-here-package",
+    "title": "R3: File Organization",
+    "section": "Install here package",
+    "text": "Install here package\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well"
+  },
+  {
+    "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html#using-here-to-load-data",
+    "href": "lessons/R03_Reproducibility/R03_Reproducibility.html#using-here-to-load-data",
+    "title": "R3: File Organization",
+    "section": "Using here() to load data",
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html",
+    "href": "lessons/R02_Basics/R02_Basics.html",
+    "title": "R2: R Basics",
+    "section": "",
+    "text": "Modern Dive"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#open-rstudio-on-your-computer-not-r",
+    "href": "lessons/R02_Basics/R02_Basics.html#open-rstudio-on-your-computer-not-r",
+    "title": "R2: R Basics",
+    "section": "",
+    "text": "Modern Dive"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#rstudio-anatomy",
+    "href": "lessons/R02_Basics/R02_Basics.html#rstudio-anatomy",
+    "title": "R2: R Basics",
+    "section": "RStudio anatomy",
+    "text": "RStudio anatomy\n\n\n\nEmma Rand\n\n\nRead more about RStudio’s layout in Section 3.4 of “Getting Used to R, RStudio, and R Markdown” (Ismay and Kennedy 2016)"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#coding-in-the-console",
+    "href": "lessons/R02_Basics/R02_Basics.html#coding-in-the-console",
+    "title": "R2: R Basics",
+    "section": "Coding in the console",
+    "text": "Coding in the console\n\n\nWhen you first open R, the console should be empty.\n\n\n\n\n\n\nTyping and executing code in the console \n\nType code in the console (blue text)\nPress return to execute the code\nOutput shown below in black"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#math-calculations-using-r",
+    "href": "lessons/R02_Basics/R02_Basics.html#math-calculations-using-r",
+    "title": "R2: R Basics",
+    "section": "Math calculations using R",
+    "text": "Math calculations using R\n\nRules for order of operations are followed\nSpaces between numbers and characters are ignored\n\n\n\n\n10^2\n\n[1] 100\n\n3 ^ 7\n\n[1] 2187\n\n6/9\n\n[1] 0.6666667\n\n9-43\n\n[1] -34\n\n\n\n\n4^3-2* 7+9 /2\n\n[1] 54.5\n\n\nThe equation above is computed as \\[4^3 − (2 \\cdot 7) + \\frac{9}{2}\\]"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#variables-saved-r-objects",
+    "href": "lessons/R02_Basics/R02_Basics.html#variables-saved-r-objects",
+    "title": "R2: R Basics",
+    "section": "Variables (saved R objects)",
+    "text": "Variables (saved R objects)\nVariables are used to store data, figures, model output, etc.\n\n\n\nCan assign a variable using either = or &lt;-\n\nUsing &lt;- is preferable\n\n\nAssign just one value:\n\nx = 5\nx\n\n[1] 5\n\nx &lt;- 5\nx\n\n[1] 5\n\n\n\n\n\nAssign a vector of values\n\nConsecutive integers using :\n\n\na &lt;- 3:10\na\n\n[1]  3  4  5  6  7  8  9 10\n\n\n\nConcatenate a string of numbers\n\n\nb &lt;- c(5, 12, 2, 100, 8)\nb\n\n[1]   5  12   2 100   8"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#doing-math-with-variables",
+    "href": "lessons/R02_Basics/R02_Basics.html#doing-math-with-variables",
+    "title": "R2: R Basics",
+    "section": "Doing math with variables",
+    "text": "Doing math with variables\n\n\nMath using variables with just one value\n\nx &lt;- 5\nx\n\n[1] 5\n\nx + 3\n\n[1] 8\n\ny &lt;- x^2\ny\n\n[1] 25\n\n\n\nMath on vectors of values:\nelement-wise computation\n\na &lt;- 3:6\na\n\n[1] 3 4 5 6\n\na+2; a*3\n\n[1] 5 6 7 8\n\n\n[1]  9 12 15 18\n\na*a\n\n[1]  9 16 25 36"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#variables-can-include-text-characters",
+    "href": "lessons/R02_Basics/R02_Basics.html#variables-can-include-text-characters",
+    "title": "R2: R Basics",
+    "section": "Variables can include text (characters)",
+    "text": "Variables can include text (characters)\n\nhi &lt;- \"hello\"\nhi\n\n[1] \"hello\"\n\ngreetings &lt;- c(\"Guten Tag\", \"Hola\", hi)\ngreetings\n\n[1] \"Guten Tag\" \"Hola\"      \"hello\""
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#using-functions",
+    "href": "lessons/R02_Basics/R02_Basics.html#using-functions",
+    "title": "R2: R Basics",
+    "section": "Using functions",
+    "text": "Using functions\n\nmean() is an example of a function\nfunctions have “arguments” that can be specified within the ()\n?mean in console will show help file for mean()\n\n\n\nFunction arguments specified by name:\n\nmean(x = 1:4)\n\n[1] 2.5\n\n\n\nseq(from = 1, to = 12, by = 3)\n\n[1]  1  4  7 10\n\nseq(by = 3, to = 12, from = 1)\n\n[1]  1  4  7 10\n\n\n\nFunction arguments not specified, but listed in order:\n\nmean(1:4)\n\n[1] 2.5\n\n\n\nseq(1, 12, 3)\n\n[1]  1  4  7 10"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#common-console-errors-12",
+    "href": "lessons/R02_Basics/R02_Basics.html#common-console-errors-12",
+    "title": "R2: R Basics",
+    "section": "Common console errors (1/2)",
+    "text": "Common console errors (1/2)\nIncomplete commands\n\n\n\nWhen the console is waiting for a new command, the prompt line begins with &gt;\n\nIf the console prompt is +, then a previous command is incomplete\nYou can finish typing the command in the console window\n\n\n\nExample:\n\n&gt; 3 + (2*6\n+ )\n\n[1] 15"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#common-console-errors-22",
+    "href": "lessons/R02_Basics/R02_Basics.html#common-console-errors-22",
+    "title": "R2: R Basics",
+    "section": "Common console errors (2/2)",
+    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "",
+    "text": "Often, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\n\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "",
+    "text": "Often, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\n\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data frame example",
+    "text": "Data frame example\n\n\n\ndf &lt;- data.frame(\n  IDs=1:3, \n  gender=c(\"male\", \"female\", \"Male\"), \n  age=c(28, 35.5, 31),\n  trt = c(\"control\", \"1\", \"1\"),\n  Veteran = c(FALSE, TRUE, TRUE)\n  )\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\nVectors vs. data frames\n\na data frame is a collection (or array or table) of vectors\n\n\n\n\n\n\n\nDifferent columns can be of different data types (i.e. numeric vs. text)\nBoth numeric and text can be stored within a column (stored together as text).\nVectors and data frames are examples of objects in R.\n\nThere are other types of R objects to store data, such as matrices, lists."
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Observations & variables",
+    "text": "Observations & variables\n\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\n\n\nISLBS\n\n\n\n\n\nBook refers to a dataset as a data matrix\nRows are usually observations\nColumns are usually variables\nHow many observations are in this dataset?\nWhat are the variable types in this dataset?"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Variable (column) types",
+    "text": "Variable (column) types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)\n\n\n\n\n\nView the structure of our data frame to see what the variable types are:\n\n\n\nstr(df)\n\n'data.frame':   3 obs. of  5 variables:\n $ IDs    : int  1 2 3\n $ gender : chr  \"male\" \"female\" \"Male\"\n $ age    : num  28 35.5 31\n $ trt    : chr  \"control\" \"1\" \"1\"\n $ Veteran: logi  FALSE TRUE TRUE"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nvariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\nCan the iris species be determined by these variables?\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n\n\n\n\n\n\nView(iris)\n\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-structure",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-structure",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set info",
+    "text": "Data set info\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\""
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#the",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "The $",
+    "text": "The $\n\nSuppose we want to single out the column of petal width values.\nOne way to do this is to use the $\n\nDatSetName$VariableName\n\n\n\niris$Petal.Width\n\n  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3\n [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2\n [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3\n [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3\n [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3\n [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8\n[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8\n[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3\n[145] 2.5 2.3 1.9 2.0 2.3 1.8"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Example using the $",
+    "text": "Example using the $\nThe $ is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.\n\n\n\nmean(iris$Petal.Width)\n\n[1] 1.199333\n\nsd(iris$Petal.Width)\n\n[1] 0.7622377\n\nmedian(iris$Petal.Width)\n\n[1] 1.3"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#inline-code",
+    "href": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html#inline-code",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html",
+    "title": "R3: Quarto in R",
+    "section": "",
+    "text": "or, creating reproducible reports\n\n\n\nArtwork by @allison_horst\n\n\n\n\n\n\n.qmd file \n\nhtml output\n\n\n\n\n\n\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#example-creating-an-html-file",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#example-creating-an-html-file",
+    "title": "R3: Quarto in R",
+    "section": "",
+    "text": ".qmd file \n\nhtml output"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#quarto-.qmd-file-code-text",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#quarto-.qmd-file-code-text",
+    "title": "R3: Quarto in R",
+    "section": "",
+    "text": "knitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-a-quarto-file-.qmd",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-a-quarto-file-.qmd",
+    "title": "R3: Quarto in R",
+    "section": "1. Create a Quarto file (.qmd)",
+    "text": "1. Create a Quarto file (.qmd)\nTwo options:\n\nclick on File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Quarto Document…\\(\\rightarrow\\) OK,\nor in upper left corner of RStudio click on  \\(\\rightarrow\\) \n\n\n\nPop-up window selections:\n\nEnter a title and your name\nSelect HTML output format (default)\nEngine: select Knitr\nEditor: Select Use visual markdown editor\nClick Create"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-a-quarto-file-.qmd-1",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-a-quarto-file-.qmd-1",
+    "title": "R3: Quarto in R",
+    "section": "2. Create a Quarto file (.qmd)",
+    "text": "2. Create a Quarto file (.qmd)\n\nAfter clicking on Create, you should then see the following in your editor window:"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#save-the-quarto-file-.qmd",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#save-the-quarto-file-.qmd",
+    "title": "R3: Quarto in R",
+    "section": "3. Save the Quarto file (.qmd)",
+    "text": "3. Save the Quarto file (.qmd)\n\nSave the file by\n\nselecting File -&gt; Save,\nor clicking on  (towards the left above the scripting window),\nor keyboard shortcut\n\nPC: Ctrl + s\nMac: Command + s\n\n\nYou will need to specify\n\na filename to save the file as\n\nALWAYS use .qmd as the filename extension for Quarto files\n\nthe folder to save the file in"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-html-file",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-html-file",
+    "title": "R3: Quarto in R",
+    "section": "4. Create html file",
+    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#qmd-file-vs.-its-html-output",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#qmd-file-vs.-its-html-output",
+    "title": "R3: Quarto in R",
+    "section": ".qmd file vs. its html output",
+    "text": ".qmd file vs. its html output\n\n\n.qmd file \n\nhtml output"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R_key_info.html",
+    "href": "lessons/R01_Download_R/R01_Download_R_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Include organization\n\nHave them do a data management script!!\n\nself-contained not a proper yaml command now\ncitations!! in zotero!!\nGit and GitHub!!"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R_key_info.html#to-nicky",
+    "href": "lessons/R01_Download_R/R01_Download_R_key_info.html#to-nicky",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Include organization\n\nHave them do a data management script!!\n\nself-contained not a proper yaml command now\ncitations!! in zotero!!\nGit and GitHub!!"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R_key_info.html#announcements",
+    "href": "lessons/R01_Download_R/R01_Download_R_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "Announcements",
+    "text": "Announcements"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R_key_info.html#key-dates",
+    "href": "lessons/R01_Download_R/R01_Download_R_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates"
   }
 ]
