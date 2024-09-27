@@ -75,14 +75,18 @@ RStudio is an integrated development environment (IDE)\
 
 ## So let's take some time to download each!
 
+-   Use this link to start: <https://posit.co/download/rstudio-desktop/> 
+-   I will click on this link!
+
+ 
+
 -   You must install R first
     -   Even if you have R installed already, I highly recommend installing the latest version
     -   In the future, you will periodically want to update this
-    -   Windows: Download from <https://cran.rstudio.com/bin/windows/base/> from the link "Download R 4.1.1 for Windows"
-    -   Mac OS X: Download the latest .pkg file (top link, currently R-4.1.1.pkg) from <https://cran.rstudio.com/bin/macosx/>
 -   Install RStudio Desktop Open Source License (second)
-    -   Select download file corresponding to your operating system from <https://posit.co/download/rstudio-desktop/#download>
-    
+
+   
+
 - If you get them both installed, then you can open up RStudio and start checking it out
 
 ## RStudio anatomy

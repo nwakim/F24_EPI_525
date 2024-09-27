@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "EPI 525: Biostatistics 1",
     "section": "",
-    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n Echo360 page\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n TBD\nOH with TA\n TBD\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec ?\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n Echo360 page\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n TBD\nOH with Liv\n TBD\nOH with Miyuki\n TBD\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "schedule.html",
@@ -11393,7 +11393,7 @@
     "href": "lessons/R01_Download_R/R01_Download_R.html#so-lets-take-some-time-to-download-each",
     "title": "R1: Download + Intro to R & Rstudio",
     "section": "So let’s take some time to download each!",
-    "text": "So let’s take some time to download each!\n\nYou must install R first\n\nEven if you have R installed already, I highly recommend installing the latest version\nIn the future, you will periodically want to update this\nWindows: Download from https://cran.rstudio.com/bin/windows/base/ from the link “Download R 4.1.1 for Windows”\nMac OS X: Download the latest .pkg file (top link, currently R-4.1.1.pkg) from https://cran.rstudio.com/bin/macosx/\n\nInstall RStudio Desktop Open Source License (second)\n\nSelect download file corresponding to your operating system from https://posit.co/download/rstudio-desktop/#download\n\nIf you get them both installed, then you can open up RStudio and start checking it out"
+    "text": "So let’s take some time to download each!\n\nUse this link to start: https://posit.co/download/rstudio-desktop/\nI will click on this link!\n\n \n\nYou must install R first\n\nEven if you have R installed already, I highly recommend installing the latest version\nIn the future, you will periodically want to update this\n\nInstall RStudio Desktop Open Source License (second)\n\n \n\nIf you get them both installed, then you can open up RStudio and start checking it out"
   },
   {
     "objectID": "lessons/R03_Reproducibility/R03_Reproducibility.html",
@@ -11779,5 +11779,12 @@
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "Where are we?",
     "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/R01_Download_R/R01_Download_R.html",
+    "href": "lessons/R01_Download_R/R01_Download_R.html",
+    "title": "R1: Download + Intro to R & Rstudio",
+    "section": "",
+    "text": "Artwork by @allison_horst\n\n\n\n\n\n\n\nA programming language\nFocus on statistical modeling and data analysis\nUseful for epidemiology, biostatistics, and data science\nGreat visualizations\n\n\n\n\n\n\n\n\n\n\nR is a programming language\n\nRStudio is an integrated development environment (IDE)\n= an interface to use R (with perks!)\n\n\n\n\n\nModern Dive\n\n\n\n\n\n\n\n\nModern Dive\n\n\n\n\n\n\nUse this link to start: https://posit.co/download/rstudio-desktop/\nI will click on this link!\n\n \n\nYou must install R first\n\nEven if you have R installed already, I highly recommend installing the latest version\nIn the future, you will periodically want to update this\n\nInstall RStudio Desktop Open Source License (second)\n\n \n\nIf you get them both installed, then you can open up RStudio and start checking it out\n\n\n\n\n\n\n\nEmma Rand"
   }
 ]
