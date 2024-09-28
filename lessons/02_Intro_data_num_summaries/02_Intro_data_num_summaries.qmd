@@ -31,31 +31,137 @@ library(tidyverse)
 library(lubridate)
 library(janitor)
 library(here)
+library(oibiostat)
 
 # terminal: for icons
 # quarto install extension quarto-ext/fontawesome
 
 # set ggplot theme for slides 
 theme_set(theme_bw(base_size = 22))
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 # Learning Objectives
 
-* (1.2) __Intro to Data__
-  - Data types
-  - How are data stored in R?
-  - Working with data in R
+1. Define descriptive statistics, including measures of center, spread, position, and shape.
+2. Explain which descriptive statistics are influenced by extreme values, and which are not.
+3. Use a histogram to identify the shape of a distribution.
+4. Explain how a distribution's shape relates to descriptive statistics.
+5. Use R to calculate descriptive statistics for features in a dataset.
   
-* (1.4) __Summarizing numerical data__ 
-  - Mean, median, mode, SD, IQR, range, 5 number summary
-  - Empirical Rule
-  - robust statistics
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
 
 # Learning Objectives
 
 ## Intro to Data
 
 ![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_data_cowboy.png){fig-align="center"}
+
+## Observations, variables, and data matrices
+
+
+
+## Example: the frog study
+
+In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring. This section introduces the \data{frog} dataset, which originates from a 2013 study about maternal investment in a frog species.\footnote{Chen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.} Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced. Researchers were interested in investigating how maternal investment varies with altitude and collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.
+
+
+## Four rows from frog data matrix
+
+\captionsetup[table]{labelformat=empty}
+
+```{r echo=FALSE}
+data(frog) 
+```
+
+|   | altitude | latitude | egg.size | clutch.size | clutch.volume | body.size |
+|---|----------|----------|----------|-------------|---------------|-----------|
+| 1 | 3,462.00 | 34.82    | 1.95     | 181.97      | 177.83        | 3.63      |
+| 2 | 3,462.00 | 34.82    | 1.95     | 269.15      | 257.04        | 3.63      |
+| 3 | 3,462.00 | 34.82    | 1.95     | 158.49      | 151.36        | 3.72      |
+|150| 2,597.00 | 34.05    | 2.24     | 537.03      | 776.25        | NA        |
+
+
+##  *FAMuSS* Variables and their descriptions
+
+$$
+\begin{figure}
+\centering
+\begin{tabular}{rlrrrrr}
+  \hline
+ & altitude & latitude & egg.size & clutch.size & clutch.volume & body.size \\ 
+  \hline
+1 & 3,462.00 & 34.82 & 1.95 & 181.97 & 177.83 & 3.63 \\ 
+  2 & 3,462.00 & 34.82 & 1.95 & 269.15 & 257.04 & 3.63 \\ 
+  3 & 3,462.00 & 34.82 & 1.95 & 158.49 & 151.36 & 3.72 \\ 
+  150 & 2,597.00 & 34.05 & 2.24 & 537.03 & 776.25 & NA \\ 
+   \hline
+\end{tabular}
+\caption{Data matrix for the \data{frog} dataset.} 
+\label{frogDF}
+\end{figure}
+$$
+	
+## Types of Variables
+
+::: columns
+::: column
+::: orange
+::: orange-ttl
+Numerical variables
+:::
+::: orange-cont
+**Numerical variables** take on numerical values, such that numerical operations (sums, differences, etc.) are reasonable.
+  
+  - Discrete: only take on integer values (e.g., \# of family members)
+  
+  - Continuous: can take on any value within a specified range (e.g., height)
+  
+:::
+:::
+:::
+::: column
+::: pink
+::: pink-ttl
+Categorical variables
+:::
+::: pink-cont
+**Categorical variables** take on values that are names or labels; the possible values are called the variable's *levels*.
+
+  - Ordinal: exists some natural ordering of levels (e.g., level of education)
+  - Nominal: no natural ordering of levels (e.g., gender identity)
+  
+:::
+:::
+:::
+:::
+
+
+## Types of variables
+
+![](../img_slides/variableTypes.png)  
+
+## Exploring data with simple tools
+
+- Techniques for exploring and summarizing data **differ** for numerical versus categorical variables.
+
+ 
+
+- Numerical and graphical summaries are useful for examining variables one at a time
+  - Can also be used for exploring the relationships between variables
+  
+ 
+
+- Let's start looking into ways to summarize and explore numerical data!
+
+
+
+
+
+
+
 
 
 ## Data frame example

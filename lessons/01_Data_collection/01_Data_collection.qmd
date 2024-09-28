@@ -20,22 +20,25 @@ execute:
 
 # Learning Objectives
 
-1. Contextualize the difference between a target population and its sample.
+1. Define and compare a target population and its sample.
 2. Explain different sampling methods and understand their advantages. 
-3. Understand two overarching study designs, experiments and observational studies.
+3. Define and compare experiments and observational studies.
+
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
 
 # Learning Objectives
 
 ::: lob
-1. Contextualize the difference between a target population and its sample.
+1. Define and compare a target population and its sample.
 :::
 
 2. Explain different sampling methods and understand their advantages. 
-3. Understand two overarching study designs, experiments and observational studies.
+3. Define and compare experiments and observational studies.
 
-## Poll everywhere
+## Poll Everywhere Question 1
 
-Why are data important?
 
 ## Asking a question
 
@@ -109,6 +112,20 @@ Let's focus on the second research question:
 peanut products early in life is an effective strategy for reducing the risk of developing a
 peanut allergy?
 
+ 
+
+## Poll Everywhere Question 2
+
+## Identifying the target population
+
+Let's focus on the second research question:
+
+2. For infants predisposed to developing a peanut allergy, is there evidence that introducing
+peanut products early in life is an effective strategy for reducing the risk of developing a
+peanut allergy?
+
+ 
+
 What is the target population here?
 
 - Infants predisposed to developing a peanut allergy
@@ -124,12 +141,12 @@ What is the target population here?
 
 # Learning Objectives
 
-1. Contextualize the difference between a target population and its sample.
+1. Define and compare a target population and its sample.
 
 ::: lob
 2. Explain different sampling methods and understand their advantages. 
 :::
-3. Understand two overarching study designs, experiments and observational studies.
+3. Define and compare experiments and observational studies.
 
 ## Sampling 
 
@@ -197,12 +214,13 @@ __Non-response bias__
 
 __"Random" samples can be unrepresentative by random chance__
 
-* In a SRS each case in the population has an equal chance of being included in the sample
+* In a simple random sample (SRS), each case in the population has an equal chance of being included in the sample
 * But by random chance alone a random sample might contain a higher proportion of one group over another
 * Example: a SRS might by chance include 70% men (unlikely, but theoretically possible)
 
+ 
+
 * If it is important for our data to represent specific groups (to answer our research question), then we may consider more complex sampling methods
-  * 
 
 ## Sampling methods (3/4) 
 
@@ -211,6 +229,10 @@ __"Random" samples can be unrepresentative by random chance__
 * __Simple random sample (SRS)__
   * Each individual of a population has the _same chance_ of being sampled
   * _Statistical methods taught in this class assume a SRS!_
+  
+ 
+
+ 
 
 * __Stratified sampling__
   * Divide population into groups (strata) before selecting cases within each stratum (often via SRS)
@@ -243,21 +265,17 @@ __"Random" samples can be unrepresentative by random chance__
 :::
 :::
 
-## Example in my own work 
+## Poll Everywhere Question 3
 
-- Research question: Does community-led education (in addition to education from a practitioner) of vaccination increase HPV vaccination among children? 
-- Target population: Children between the age of 9 and 17 years old who have not completed their HPV vaccination
-- We are doing a stratified and cluster sample!!
-- It is important to have a representative sample of bigger and smaller counties in Oregon
-- But we will also be sampling from entire counties (our clusters) 
+
 
 # Learning Objectives
 
-1. Contextualize the difference between a target population and its sample.
+1. Define and compare a target population and its sample.
 2. Explain different sampling methods and understand their advantages. 
 
 ::: lob
-3. Understand two overarching study designs, experiments and observational studies.
+3. Define and compare experiments and observational studies.
 :::
 
 ## Two basic study designs
@@ -295,6 +313,10 @@ with how the data arise
 - For example, to investigate why certain diseases develop, researchers
 might collect data by conducting surveys, reviewing medical records, or following a cohort of
 many similar individuals.
+
+- Often the only available way to study your research question
+
+  - Due to ethical considerations, funds, or availability of data
 :::
 :::
 :::
@@ -310,7 +332,7 @@ many similar individuals.
   * Randomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics
       * Treatment is the only systematic difference between groups
       * Establish causality
-  * Different than random sampling! 
+  * Different than random sampling! Once we have the sample, then we randomize!!
 
 
 ## Experiments (2/2) 
@@ -362,7 +384,7 @@ Retrospective
 :::
 :::
 
-Example: The Cancer Care Outcomes Research and Surveillance Consortium
+**Example:** The Cancer Care Outcomes Research and Surveillance Consortium
 (CanCORS) enrolled participants with lung or colorectal cancer, collected information about
 diagnosis, treatment, and previous health behavior (retrospective), but also maintained contact with participants to gather data about long-term outcomes (prospective).
 
@@ -371,7 +393,7 @@ diagnosis, treatment, and previous health behavior (retrospective), but also mai
 
 ![[Science Media Centre](https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/)](../img_slides/strength_of_evidence.jpeg){fig-align="center"}
 
-## 
+## Poll Everywhere Question 4
 
 
 

@@ -56,18 +56,18 @@ library(here)
 
 ## What is RStudio?
 
+![[Modern Dive](https://moderndive.com/1-getting-started.html#r-rstudio)](../img_slides/r_vs_rstudio_1.png){fig-align="center"}
+
 ::: columns
 ::: {.column width="50%"}
-R is a programming language
+- R is a programming language
 :::
 
 ::: {.column width="50%"}
-RStudio is an integrated development environment (IDE)\
-= an interface to use R (with perks!)
+- RStudio is an integrated development environment (IDE)\
+    - An interface to use R (with perks!)
 :::
 :::
-
-![[Modern Dive](https://moderndive.com/1-getting-started.html#r-rstudio)](../img_slides/r_vs_rstudio_1.png){fig-align="center"}
 
 ## We open RStudio on our computer (not R!)
 

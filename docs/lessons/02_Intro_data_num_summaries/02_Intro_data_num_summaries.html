@@ -406,24 +406,21 @@ Meike Niederhausen and Nicky Wakim
 
   <p class="date">2024-10-02</p>
 </section>
+<section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-<ul>
-<li>(1.2) <strong>Intro to Data</strong>
-<ul>
-<li>Data types</li>
-<li>How are data stored in R?</li>
-<li>Working with data in R</li>
-</ul></li>
-<li>(1.4) <strong>Summarizing numerical data</strong>
-<ul>
-<li>Mean, median, mode, SD, IQR, range, 5 number summary</li>
-<li>Empirical Rule</li>
-<li>robust statistics</li>
-</ul></li>
-</ul>
+<ol type="1">
+<li>Define descriptive statistics, including measures of center, spread, position, and shape.</li>
+<li>Explain which descriptive statistics are influenced by extreme values, and which are not.</li>
+<li>Use a histogram to identify the shape of a distribution.</li>
+<li>Explain how a distribution’s shape relates to descriptive statistics.</li>
+<li>Use R to calculate descriptive statistics for features in a dataset.</li>
+</ol>
 </section>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
 
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
 <section>
 <section id="learning-objectives-1" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
@@ -433,6 +430,149 @@ Meike Niederhausen and Nicky Wakim
 <h2>Intro to Data</h2>
 
 <img data-src="../img_slides/horst_data_cowboy.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
+<section id="observations-variables-and-data-matrices" class="slide level2">
+<h2>Observations, variables, and data matrices</h2>
+</section>
+<section id="example-the-frog-study" class="slide level2">
+<h2>Example: the frog study</h2>
+<p>In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring. This section introduces the dataset, which originates from a 2013 study about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced. Researchers were interested in investigating how maternal investment varies with altitude and collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.</p>
+</section>
+<section id="four-rows-from-frog-data-matrix" class="slide level2">
+<h2>Four rows from frog data matrix</h2>
+<table>
+<colgroup>
+<col style="width: 4%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>altitude</th>
+<th>latitude</th>
+<th>egg.size</th>
+<th>clutch.size</th>
+<th>clutch.volume</th>
+<th>body.size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>181.97</td>
+<td>177.83</td>
+<td>3.63</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>269.15</td>
+<td>257.04</td>
+<td>3.63</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>158.49</td>
+<td>151.36</td>
+<td>3.72</td>
+</tr>
+<tr class="even">
+<td>150</td>
+<td>2,597.00</td>
+<td>34.05</td>
+<td>2.24</td>
+<td>537.03</td>
+<td>776.25</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="famuss-variables-and-their-descriptions" class="slide level2">
+<h2><em>FAMuSS</em> Variables and their descriptions</h2>
+<p><span class="math display">\[
+\begin{figure}
+\centering
+\begin{tabular}{rlrrrrr}
+  \hline
+&amp; altitude &amp; latitude &amp; egg.size &amp; clutch.size &amp; clutch.volume &amp; body.size \\
+  \hline
+1 &amp; 3,462.00 &amp; 34.82 &amp; 1.95 &amp; 181.97 &amp; 177.83 &amp; 3.63 \\
+  2 &amp; 3,462.00 &amp; 34.82 &amp; 1.95 &amp; 269.15 &amp; 257.04 &amp; 3.63 \\
+  3 &amp; 3,462.00 &amp; 34.82 &amp; 1.95 &amp; 158.49 &amp; 151.36 &amp; 3.72 \\
+  150 &amp; 2,597.00 &amp; 34.05 &amp; 2.24 &amp; 537.03 &amp; 776.25 &amp; NA \\
+   \hline
+\end{tabular}
+\caption{Data matrix for the \data{frog} dataset.}
+\label{frogDF}
+\end{figure}
+\]</span></p>
+</section>
+<section id="types-of-variables" class="slide level2">
+<h2>Types of Variables</h2>
+<div class="columns">
+<div class="column">
+<div class="orange">
+<div class="orange-ttl">
+<p>Numerical variables</p>
+</div>
+<div class="orange-cont">
+<p><strong>Numerical variables</strong> take on numerical values, such that numerical operations (sums, differences, etc.) are reasonable.</p>
+<ul>
+<li><p>Discrete: only take on integer values (e.g., # of family members)</p></li>
+<li><p>Continuous: can take on any value within a specified range (e.g., height)</p></li>
+</ul>
+</div>
+</div>
+</div><div class="column">
+<div class="pink">
+<div class="pink-ttl">
+<p>Categorical variables</p>
+</div>
+<div class="pink-cont">
+<p><strong>Categorical variables</strong> take on values that are names or labels; the possible values are called the variable’s <em>levels</em>.</p>
+<ul>
+<li>Ordinal: exists some natural ordering of levels (e.g., level of education)</li>
+<li>Nominal: no natural ordering of levels (e.g., gender identity)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="types-of-variables-1" class="slide level2">
+<h2>Types of variables</h2>
+
+<img data-src="../img_slides/variableTypes.png" class="r-stretch"></section>
+<section id="exploring-data-with-simple-tools" class="slide level2">
+<h2>Exploring data with simple tools</h2>
+<ul>
+<li>Techniques for exploring and summarizing data <strong>differ</strong> for numerical versus categorical variables.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Numerical and graphical summaries are useful for examining variables one at a time
+<ul>
+<li>Can also be used for exploring the relationships between variables</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Let’s start looking into ways to summarize and explore numerical data!</li>
+</ul>
+</section>
 <section id="data-frame-example" class="slide level2">
 <h2>Data frame example</h2>
 <div class="columns">
@@ -848,7 +988,7 @@ Arthritis Care &amp; Research.<br>
 <section id="measures-of-center-mean-vs.-median" class="slide level2">
 <h2>Measures of center: mean vs.&nbsp;median</h2>
 
-<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-14-1.png" width="1344" class="r-stretch"><div class="cell">
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-15-1.png" width="1344" class="r-stretch"><div class="cell">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
@@ -872,7 +1012,7 @@ Arthritis Care &amp; Research.<br>
 <h2>Measures of center: mode</h2>
 <p><strong><span style="color:darkorange">mode</span></strong>: the most frequent value in a dataset</p>
 
-<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-16-1.png" width="1344" class="r-stretch"></section>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-17-1.png" width="1344" class="r-stretch"></section>
 <section id="measures-of-spread-standard-deviation-sd-13" class="slide level2">
 <h2>Measures of spread: standard deviation (SD) (1/3)</h2>
 <p><strong>standard deviation</strong> is (approximately) the average distance between a typical observation and the mean</p>
@@ -880,7 +1020,7 @@ Arthritis Care &amp; Research.<br>
 <li>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span>.</li>
 </ul>
 
-<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-17-1.png" width="1344" class="r-stretch"></section>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-18-1.png" width="1344" class="r-stretch"></section>
 <section id="measures-of-spread-sd-23" class="slide level2">
 <h2>Measures of spread: SD (2/3)</h2>
 <ul>
@@ -947,7 +1087,7 @@ Arthritis Care &amp; Research.<br>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -991,7 +1131,7 @@ Arthritis Care &amp; Research.<br>
 <div class="column" style="width:40%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-23-1.png" width="480"></p>
+<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-24-1.png" width="480"></p>
 </div>
 </div>
 </div><div class="column" style="width:60%;">

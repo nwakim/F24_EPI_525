@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "EPI 525: Biostatistics 1",
     "section": "",
-    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n Echo360 page\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nOH with Nicky\n TBD\nOH with Liv\n TBD\nOH with Miyuki\n TBD\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n Echo360 page\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nNicky  TBD\nLiv  TBD\nMiyuki  TBD\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "schedule.html",
@@ -4666,7 +4666,7 @@
     "href": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-34",
     "title": "Lesson 1: Data collection",
     "section": "Sampling methods (3/4)",
-    "text": "Sampling methods (3/4)\n\n\n\nSimple random sample (SRS)\n\nEach individual of a population has the same chance of being sampled\nStatistical methods taught in this class assume a SRS!\n\nStratified sampling\n\nDivide population into groups (strata) before selecting cases within each stratum (often via SRS)\nUsually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups"
+    "text": "Sampling methods (3/4)\n\n\n\nSimple random sample (SRS)\n\nEach individual of a population has the same chance of being sampled\nStatistical methods taught in this class assume a SRS!\n\n\n \n \n\nStratified sampling\n\nDivide population into groups (strata) before selecting cases within each stratum (often via SRS)\nUsually cases within a strata are similar, but are different from other strata with respect to the outcome of interest, such as gender or age groups"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#sampling-methods-44",
@@ -4680,7 +4680,7 @@
     "href": "lessons/01_Data_collection/01_Data_collection.html#experiments-12",
     "title": "Lesson 1: Data collection",
     "section": "Experiments (1/2)",
-    "text": "Experiments (1/2)\n\nResearchers assign individuals to different treatment or intervention groups\n\nControl group: often receive a placebo or usual care\nDifferent treatment groups are often called study arms\n\nRandomization\n\nGroup assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)\nRandomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics\n\nTreatment is the only systematic difference between groups\nEstablish causality\n\nDifferent than random sampling!"
+    "text": "Experiments (1/2)\n\nResearchers assign individuals to different treatment or intervention groups\n\nControl group: often receive a placebo or usual care\nDifferent treatment groups are often called study arms\n\nRandomization\n\nGroup assignment is usually random to ensure similar (balanced) study arms for all variables (observed and unobserved)\nRandomization allows study arm differences in outcomes to be attributed to treatment rather than variability in patient characteristics\n\nTreatment is the only systematic difference between groups\nEstablish causality\n\nDifferent than random sampling! Once we have the sample, then we randomize!!"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#experiments-22",
@@ -4736,7 +4736,7 @@
     "href": "lessons/01_Data_collection/01_Data_collection.html#identifying-the-target-population",
     "title": "Lesson 1: Data collection",
     "section": "Identifying the target population",
-    "text": "Identifying the target population\nLet’s focus on the second research question:\n\nFor infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?\n\nWhat is the target population here?\n\nInfants predisposed to developing a peanut allergy\nWe could get more specific with “Infants aged 0 to 5 years old” or “Infants aged 0 to 5 years old who have eczema, egg allergy, or both”\n\nIn this case we are defining exactly how old “infants” are and what “predisposed” means"
+    "text": "Identifying the target population\nLet’s focus on the second research question:\n\nFor infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#from-target-population-to-sample",
@@ -4771,7 +4771,7 @@
     "href": "lessons/01_Data_collection/01_Data_collection.html#another-potential-when-sampling",
     "title": "Lesson 1: Data collection",
     "section": "Another potential when sampling",
-    "text": "Another potential when sampling\n“Random” samples can be unrepresentative by random chance\n\nIn a SRS each case in the population has an equal chance of being included in the sample\nBut by random chance alone a random sample might contain a higher proportion of one group over another\nExample: a SRS might by chance include 70% men (unlikely, but theoretically possible)\nIf it is important for our data to represent specific groups (to answer our research question), then we may consider more complex sampling methods"
+    "text": "Another potential when sampling\n“Random” samples can be unrepresentative by random chance\n\nIn a simple random sample (SRS), each case in the population has an equal chance of being included in the sample\nBut by random chance alone a random sample might contain a higher proportion of one group over another\nExample: a SRS might by chance include 70% men (unlikely, but theoretically possible)\n\n \n\nIf it is important for our data to represent specific groups (to answer our research question), then we may consider more complex sampling methods"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#potential-bias-with-sampling",
@@ -7326,7 +7326,7 @@
     "href": "lessons/01_Data_collection/01_Data_collection.html#two-basic-study-designs",
     "title": "Lesson 1: Data collection",
     "section": "Two basic study designs",
-    "text": "Two basic study designs\n\n\n\n\nExperiment\n\n\nResearchers directly influence how data arise\n\nSuch as: assigning groups of individuals to different treatments and assessing how the outcome varies across treatment groups\nThree major parts to an experiment\n\nControl\nRandomization\nReplication\n\n\n\n\n\n\n\nObservational study\n\n\nResearchers merely observe and record data, without interfering with how the data arise\n\nFor example, to investigate why certain diseases develop, researchers might collect data by conducting surveys, reviewing medical records, or following a cohort of many similar individuals."
+    "text": "Two basic study designs\n\n\n\n\nExperiment\n\n\nResearchers directly influence how data arise\n\nSuch as: assigning groups of individuals to different treatments and assessing how the outcome varies across treatment groups\nThree major parts to an experiment\n\nControl\nRandomization\nReplication\n\n\n\n\n\n\n\nObservational study\n\n\nResearchers merely observe and record data, without interfering with how the data arise\n\nFor example, to investigate why certain diseases develop, researchers might collect data by conducting surveys, reviewing medical records, or following a cohort of many similar individuals.\nOften the only available way to study your research question\n\nDue to ethical considerations, funds, or availability of data"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection.html#observational-studies-prospective-vs.-retrospective-studies",
@@ -11337,7 +11337,7 @@
     "href": "lessons/00_Welcome/00_Welcome.html#what-we-will-cover",
     "title": "Welcome to EPI 525!",
     "section": "What we will cover",
-    "text": "What we will cover\n\n\n\nLesson 1 Slides"
+    "text": "What we will cover"
   },
   {
     "objectID": "lessons/01_Data_collection/01_Data_collection_key_info.html",
@@ -11365,7 +11365,7 @@
     "href": "lessons/R01_Download_R/R01_Download_R.html#what-is-rstudio",
     "title": "R1: Download + Intro to R & Rstudio",
     "section": "What is RStudio?",
-    "text": "What is RStudio?\n\n\nR is a programming language\n\nRStudio is an integrated development environment (IDE)\n= an interface to use R (with perks!)\n\n\n\nModern Dive"
+    "text": "What is RStudio?\n\nModern Dive\n\n\nR is a programming language\n\n\n\nRStudio is an integrated development environment (IDE)\n\n\nAn interface to use R (with perks!)"
   },
   {
     "objectID": "lessons/R01_Download_R/R01_Download_R.html#open-rstudio-on-your-computer-not-r",
@@ -11771,7 +11771,7 @@
     "href": "lessons/00_Welcome/00_Welcome.html#let-me-know-if-you-have-questions",
     "title": "Welcome to EPI 525!",
     "section": "Let me know if you have questions",
-    "text": "Let me know if you have questions\nOr if there’s any contradicting information… I surely made mistakes!!"
+    "text": "Let me know if you have questions\nOr if there’s any contradicting information in the course site… I’m sure I made a mistake somewhere!!\n\n\nLesson 1 Slides"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#where-are-we",
@@ -11786,5 +11786,124 @@
     "title": "R1: Download + Intro to R & Rstudio",
     "section": "",
     "text": "Artwork by @allison_horst\n\n\n\n\n\n\n\nA programming language\nFocus on statistical modeling and data analysis\nUseful for epidemiology, biostatistics, and data science\nGreat visualizations\n\n\n\n\n\n\n\n\n\n\nR is a programming language\n\nRStudio is an integrated development environment (IDE)\n= an interface to use R (with perks!)\n\n\n\n\n\nModern Dive\n\n\n\n\n\n\n\n\nModern Dive\n\n\n\n\n\n\nUse this link to start: https://posit.co/download/rstudio-desktop/\nI will click on this link!\n\n \n\nYou must install R first\n\nEven if you have R installed already, I highly recommend installing the latest version\nIn the future, you will periodically want to update this\n\nInstall RStudio Desktop Open Source License (second)\n\n \n\nIf you get them both installed, then you can open up RStudio and start checking it out\n\n\n\n\n\n\n\nEmma Rand"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#what-we-will-cover",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#what-we-will-cover",
+    "title": "Lesson 1: Data collection",
+    "section": "What we will cover",
+    "text": "What we will cover"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#where-are-we",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#where-are-we",
+    "title": "Lesson 1: Data collection",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-1",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-1",
+    "title": "Lesson 1: Data collection",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-2",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-2",
+    "title": "Lesson 1: Data collection",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#identifying-the-target-population-1",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#identifying-the-target-population-1",
+    "title": "Lesson 1: Data collection",
+    "section": "Identifying the target population",
+    "text": "Identifying the target population\nLet’s focus on the second research question:\n\nFor infants predisposed to developing a peanut allergy, is there evidence that introducing peanut products early in life is an effective strategy for reducing the risk of developing a peanut allergy?\n\n \nWhat is the target population here?\n\nInfants predisposed to developing a peanut allergy\nWe could get more specific with “Infants aged 0 to 5 years old” or “Infants aged 0 to 5 years old who have eczema, egg allergy, or both”\n\nIn this case we are defining exactly how old “infants” are and what “predisposed” means"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-3",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-3",
+    "title": "Lesson 1: Data collection",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-4",
+    "href": "lessons/01_Data_collection/01_Data_collection.html#poll-everywhere-question-4",
+    "title": "Lesson 1: Data collection",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4\n\n\nLesson 1 Slides"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#where-are-we",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#where-are-we",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-famuss-study",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-famuss-study",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Example: the FAMuSS study",
+    "text": "Example: the FAMuSS study\nThe Functional SNPs Associated with Muscle Size and Strength (FAMuSS) study and data is introduced in OI Biostat, Section 1.2.2.\nOne goal of the study—examine the association of demographic, physiological, and genetic characteristics with muscle strength.\n\nIn simpler terms, study the “sports gene” ACTN3."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-famuss-data-matrix",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-famuss-data-matrix",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Four rows from FAMuSS data matrix",
+    "text": "Four rows from FAMuSS data matrix\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#famuss-variables-and-their-descriptions",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#famuss-variables-and-their-descriptions",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "FAMuSS Variables and their descriptions",
+    "text": "FAMuSS Variables and their descriptions\n\\[\n\\begin{figure}\n\\centering\n\\begin{tabular}{rlrrrrr}\n  \\hline\n& altitude & latitude & egg.size & clutch.size & clutch.volume & body.size \\\\\n  \\hline\n1 & 3,462.00 & 34.82 & 1.95 & 181.97 & 177.83 & 3.63 \\\\\n  2 & 3,462.00 & 34.82 & 1.95 & 269.15 & 257.04 & 3.63 \\\\\n  3 & 3,462.00 & 34.82 & 1.95 & 158.49 & 151.36 & 3.72 \\\\\n  150 & 2,597.00 & 34.05 & 2.24 & 537.03 & 776.25 & NA \\\\\n   \\hline\n\\end{tabular}\n\\caption{Data matrix for the \\data{frog} dataset.}\n\\label{frogDF}\n\\end{figure}\n\\]"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Types of Variables",
+    "text": "Types of Variables\n\n\n\n\nNumerical variables\n\n\nNumerical variables take on numerical values, such that numerical operations (sums, differences, etc.) are reasonable.\n\nDiscrete: only take on integer values (e.g., # of family members)\nContinuous: can take on any value within a specified range (e.g., height)\n\n\n\n\n\n\nCategorical variables\n\n\nCategorical variables take on values that are names or labels; the possible values are called the variable’s levels.\n\nOrdinal: exists some natural ordering of levels (e.g., level of education)\nNominal: no natural ordering of levels (e.g., gender identity)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables-1",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables-1",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Types of variables",
+    "text": "Types of variables"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#exploring-data-with-simple-tools",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#exploring-data-with-simple-tools",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Exploring data with simple tools",
+    "text": "Exploring data with simple tools\n\nTechniques for exploring and summarizing data differ for numerical versus categorical variables.\n\n \n\nNumerical and graphical summaries are useful for examining variables one at a time\n\nCan also be used for exploring the relationships between variables\n\n\n \n\nLet’s start looking into ways to summarize and explore numerical data!"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables-and-data-matrices",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables-and-data-matrices",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Observations, variables, and data matrices",
+    "text": "Observations, variables, and data matrices"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-frog-study",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-frog-study",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Example: the frog study",
+    "text": "Example: the frog study\nIn evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring. This section introduces the dataset, which originates from a 2013 study about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced. Researchers were interested in investigating how maternal investment varies with altitude and collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-matrix",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-matrix",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Four rows from frog data matrix",
+    "text": "Four rows from frog data matrix\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA"
   }
 ]
