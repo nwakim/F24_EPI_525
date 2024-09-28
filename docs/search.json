@@ -11905,5 +11905,12 @@
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Four rows from frog data matrix",
     "text": "Four rows from frog data matrix\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#frog-study-variables-and-their-descriptions",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#frog-study-variables-and-their-descriptions",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Frog study: Variables and their descriptions",
+    "text": "Frog study: Variables and their descriptions\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\naltitude\nAltitude of the study site in meters above sea level\n\n\nlatitude\nLatitude of the study site measured in degrees\n\n\negg.size\nAverage diameter of an individual egg to the 0.01 mm\n\n\nclutch.size\nEstimated number of eggs in clutch\n\n\nclutch.volume\nVolume of egg clutch in mm³\n\n\nbody.size\nLength of mother frog in cm"
   }
 ]
