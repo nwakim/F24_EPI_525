@@ -410,11 +410,10 @@ Meike Niederhausen and Nicky Wakim
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li>Define descriptive statistics, including measures of center, spread, position, and shape.</li>
-<li>Explain which descriptive statistics are influenced by extreme values, and which are not.</li>
-<li>Use a histogram to identify the shape of a distribution.</li>
-<li>Explain how a distribution’s shape relates to descriptive statistics.</li>
-<li>Use R to calculate descriptive statistics for features in a dataset.</li>
+<li>Define observations and variables, and recognize them in a data frame.</li>
+<li>Define four variable types in data.</li>
+<li>Define and calculate measures of center (including mean and median).</li>
+<li>Define and calculate measures of spread (including standard deviation and interquartile range).</li>
 </ol>
 </section>
 <section id="where-are-we" class="slide level2">
@@ -424,30 +423,47 @@ Meike Niederhausen and Nicky Wakim
 <section>
 <section id="learning-objectives-1" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-
+<div class="lob">
+<ol type="1">
+<li>Define observations and variables, and recognize them in a data frame.</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Define four variable types in data.</li>
+<li>Define and calculate measures of center (including mean and median).</li>
+<li>Define and calculate measures of spread (including standard deviation and interquartile range).</li>
+</ol>
 </section>
 <section id="intro-to-data" class="slide level2">
 <h2>Intro to Data</h2>
 
-<img data-src="../img_slides/horst_data_cowboy.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
-<section id="observations-variables-and-data-matrices" class="slide level2">
-<h2>Observations, variables, and data matrices</h2>
+<img data-src="../img_slides/horst_data_cowboy.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by @allison_horst</a></p></section>
+<section id="example-the-frog-study1" class="slide level2">
+<h2>Example: the frog study<sup>1</sup></h2>
+<p>In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.</p>
+<p>&nbsp;</p>
+<p>We will be working with the <code>frog</code> dataset, which originates from a 2013 study<sup>2</sup> about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.</p>
+<p>&nbsp;</p>
+<p>Researchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>From <em>Introductory Statistics for the Life and Biomedical Sciences</em></p></li><li id="fn2"><p>Chen, W., et al.&nbsp;Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.</p>
+<h2 id="section"></h2>
+</li></ol></aside></section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
 </section>
-<section id="example-the-frog-study" class="slide level2">
-<h2>Example: the frog study</h2>
-<p>In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring. This section introduces the dataset, which originates from a 2013 study about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced. Researchers were interested in investigating how maternal investment varies with altitude and collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.</p>
-</section>
-<section id="four-rows-from-frog-data-matrix" class="slide level2">
-<h2>Four rows from frog data matrix</h2>
+<section id="four-rows-from-frog-data-frame" class="slide level2">
+<h2>Four rows from frog data frame</h2>
 <table>
 <colgroup>
-<col style="width: 4%">
+<col style="width: 6%">
 <col style="width: 13%">
 <col style="width: 13%">
 <col style="width: 13%">
-<col style="width: 18%">
+<col style="width: 17%">
 <col style="width: 20%">
-<col style="width: 15%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -500,12 +516,88 @@ Meike Niederhausen and Nicky Wakim
 </tbody>
 </table>
 </section>
-<section id="frog-study-variables-and-their-descriptions" class="slide level2">
-<h2>Frog study: Variables and their descriptions</h2>
+<section id="four-rows-from-frog-data-frame-1" class="slide level2">
+<h2>Four rows from frog data frame</h2>
 <table>
 <colgroup>
-<col style="width: 19%">
-<col style="width: 81%">
+<col style="width: 6%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>altitude</th>
+<th>latitude</th>
+<th>egg.size</th>
+<th>clutch.size</th>
+<th>clutch.volume</th>
+<th>body.size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>181.97</td>
+<td>177.83</td>
+<td>3.63</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>269.15</td>
+<td>257.04</td>
+<td>3.63</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>158.49</td>
+<td>151.36</td>
+<td>3.72</td>
+</tr>
+<tr class="even">
+<td>150</td>
+<td>2,597.00</td>
+<td>34.05</td>
+<td>2.24</td>
+<td>537.03</td>
+<td>776.25</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<ul>
+<li>Each <strong>row</strong> is an <span style="color:#BF396F;"><strong>observation</strong></span></li>
+<li>Each <strong>column</strong> is a <span style="color:#459B99;"><strong>variable</strong></span></li>
+<li>All the <span style="color:#BF396F;"><strong>observations</strong></span> and <span style="color:#459B99;"><strong>variables</strong></span> together make a <span style="color:#8043F3;"><strong>data frame</strong></span> (sometimes called data matrix)</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Missing values:</strong> <code>NA</code> means the measured value for body size in clutch #150 is missing</li>
+</ul>
+</section>
+<section id="frog-study-variables-and-their-descriptions" class="slide level2">
+<h2>Frog study: variables and their descriptions</h2>
+<ul>
+<li><span style="color:#459B99;"><strong>Variables</strong></span> are recorded characteristics for each <span style="color:#BF396F;"><strong>observation</strong></span></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -536,13 +628,29 @@ Meike Niederhausen and Nicky Wakim
 </tr>
 <tr class="even">
 <td><code>body.size</code></td>
-<td>Length of mother frog in cm</td>
+<td>Length of egg-laying frog in cm</td>
 </tr>
 </tbody>
 </table>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define observations and variables, and recognize them in a data frame.</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Define four variable types in data.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Define and calculate measures of center (including mean and median).</li>
+<li>Define and calculate measures of spread (including standard deviation and interquartile range).</li>
+</ol>
 </section>
-<section id="types-of-variables" class="slide level2">
-<h2>Types of Variables</h2>
+<section id="types-of-variables-12" class="slide level2">
+<h2>Types of variables (1/2)</h2>
 <div class="columns">
 <div class="column">
 <div class="orange">
@@ -573,104 +681,23 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="types-of-variables-1" class="slide level2">
-<h2>Types of variables</h2>
+<section id="types-of-variables-22" class="slide level2">
+<h2>Types of variables (2/2)</h2>
 
 <img data-src="../img_slides/variableTypes.png" class="r-stretch"></section>
-<section id="exploring-data-with-simple-tools" class="slide level2">
-<h2>Exploring data with simple tools</h2>
-<ul>
-<li>Techniques for exploring and summarizing data <strong>differ</strong> for numerical versus categorical variables.</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>Numerical and graphical summaries are useful for examining variables one at a time
-<ul>
-<li>Can also be used for exploring the relationships between variables</li>
-</ul></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>Let’s start looking into ways to summarize and explore numerical data!</li>
-</ul>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
 </section>
-<section id="data-frame-example" class="slide level2">
-<h2>Data frame example</h2>
-<div class="columns">
-<div class="column" style="width:54%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="at">IDs=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">gender=</span><span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"Male"</span>), </span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="at">age=</span><span class="fu">c</span>(<span class="dv">28</span>, <span class="fl">35.5</span>, <span class="dv">31</span>),</span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="at">trt =</span> <span class="fu">c</span>(<span class="st">"control"</span>, <span class="st">"1"</span>, <span class="st">"1"</span>),</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="at">Veteran =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  )</span>
-<span id="cb1-8"><a href="#cb1-8"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  IDs gender  age     trt Veteran
-1   1   male 28.0 control   FALSE
-2   2 female 35.5       1    TRUE
-3   3   Male 31.0       1    TRUE</code></pre>
-</div>
-</div>
-<ul>
-<li><strong>Vectors</strong> vs.&nbsp;<strong>data frames</strong>
-<ul>
-<li>a data frame is a collection (or array or table) of vectors</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:44%;">
-<div style="font-size: 90%;">
-<ul>
-<li><p>Different columns can be of different data types (i.e.&nbsp;numeric vs.&nbsp;text)</p></li>
-<li><p>Both numeric and text can be stored within a column (stored together as <em>text</em>).</p></li>
-<li><p>Vectors and data frames are examples of <em><strong>objects</strong></em> in R.</p>
-<ul>
-<li>There are other types of R objects to store data, such as matrices, lists.</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
+<section id="poll-everywhere-question-3" class="slide level2">
+<h2>Poll Everywhere Question 3</h2>
 </section>
-<section id="observations-variables" class="slide level2">
-<h2>Observations &amp; variables</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  IDs gender  age     trt Veteran
-1   1   male 28.0 control   FALSE
-2   2 female 35.5       1    TRUE
-3   3   Male 31.0       1    TRUE</code></pre>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/Fig1.8_variable_types.png"></p>
-<figcaption><a href="https://www.openintro.org/book/biostat/">ISLBS</a></figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<div style="font-size: 90%;">
+<section id="variable-column-types-in-r" class="slide level2">
+<h2>Variable (column) types in <code>R</code></h2>
 <ul>
-<li><p>Book refers to a dataset as a <em>data matrix</em></p></li>
-<li><p>Rows are usually <strong>observations</strong></p></li>
-<li><p>Columns are usually <strong>variables</strong></p></li>
-<li><p><strong><span style="color:green">How many observations are in this dataset?</span></strong></p></li>
-<li><p><strong><span style="color:green">What are the variable types in this dataset?</span></strong></p></li>
+<li>We have not done much with <code>R</code> yet, but I want this to serve as a reference for you!</li>
+<li>Variable types (as we speak them) are translated by <code>R</code> a little differently</li>
+<li>Below is the mapping of <code>R</code> types to variable types</li>
 </ul>
-</div>
-</div>
-</div>
-</section>
-<section id="variable-column-types" class="slide level2">
-<h2>Variable (column) types</h2>
-<div style="font-size: 70%;">
 <table>
 <colgroup>
 <col style="width: 33%">
@@ -712,377 +739,182 @@ Meike Niederhausen and Nicky Wakim
 </tr>
 </tbody>
 </table>
-<!-- Each variable (column) in a data frame can be of a different type. -->
-<ul>
-<li>View the <strong>structure</strong> of our data frame to see what the variable types are:</li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>'data.frame':   3 obs. of  5 variables:
- $ IDs    : int  1 2 3
- $ gender : chr  "male" "female" "Male"
- $ age    : num  28 35.5 31
- $ trt    : chr  "control" "1" "1"
- $ Veteran: logi  FALSE TRUE TRUE</code></pre>
-</div>
-</div>
-<!-- * Note that the ID column is _integer_ type since the values are all whole numbers, although we likely would think of it as being a categorical variable and thus prefer it to be a factor. -->
 </section>
-<section id="fishers-or-andersons-iris-data-set" class="slide level2">
-<h2>Fisher’s (or Anderson’s) Iris data set</h2>
-<p>Data description:</p>
+<section id="exploring-data-with-simple-tools" class="slide level2">
+<h2>Exploring data with simple tools</h2>
 <ul>
-<li>n = 150</li>
-<li>3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+<li>Techniques for exploring and summarizing data <strong>differ</strong> for <span style="color:#E75B5C;"><strong>numerical</strong></span> versus <span style="color:#EF85B3;"><strong>categorical</strong></span> variables.</li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>50 measurements of each type of Iris</li>
-</ul></li>
-<li><strong>variables</strong>:
+<li>Numerical and graphical summaries are useful for examining variables one at a time
 <ul>
-<li>sepal length, sepal width, petal length, petal width, and species</li>
+<li>Can also be used for exploring the relationships between variables</li>
+<li><em>Numerical</em> summaries are not just for <span style="color:#E75B5C;"><strong>numerical</strong></span> variables (certain ones are used for <span style="color:#EF85B3;"><strong>categorical</strong></span> variables)</li>
 </ul></li>
 </ul>
-<p><em><span style="color:purple">Can the iris species be determined by these variables?</span></em></p>
-<center>
-<img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%">
-</center>
-<p><a href="https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project">Gareth Duffy</a></p>
-</section>
-<section id="view-the-iris-dataset" class="slide level2">
-<h2>View the <code>iris</code> dataset</h2>
-<div style="font-size: 80%;">
+<p>&nbsp;</p>
 <ul>
-<li>The <code>iris</code> dataset is already pre-loaded in <em>base</em> R and ready to use.</li>
-<li>Type the following command in the console window
+<li><p>Let’s start looking into ways to summarize and explore <span style="color:#E75B5C;"><strong>numerical</strong></span> data!</p>
 <ul>
-<li><em>Warning: this command cannot be rendered. It will give an error.</em></li>
+<li>We will come back to <span style="color:#EF85B3;"><strong>categorical</strong></span> variables another day</li>
 </ul></li>
 </ul>
-</div>
-<p><br>
-</p>
-<div class="columns">
-<div class="column" style="width:30%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">View</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div style="font-size: 80%;">
-<p>A new tab in the scripting window should appear with the <code>iris</code> dataset.</p>
-</div>
-</div><div class="column" style="width:70%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/screenshot_iris_View.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="data-structure" class="slide level2">
-<h2>Data structure</h2>
-<ul>
-<li>What are the different <strong>variable types</strong> in this data set?</li>
-</ul>
-<p><br>
-</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">str</span>(iris)   <span class="co"># structure of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>'data.frame':   150 obs. of  5 variables:
- $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
- $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
- $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
- $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
- $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-</div>
-</div>
-</section>
-<section id="data-set-summary" class="slide level2">
-<h2>Data set summary</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-       Species  
- setosa    :50  
- versicolor:50  
- virginica :50  
-                
-                
-                </code></pre>
-</div>
-</div>
-</section>
-<section id="data-set-info" class="slide level2">
-<h2>Data set info</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">dim</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 150   5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">nrow</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 150</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ncol</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">names</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"     </code></pre>
-</div>
-</div>
-</section>
-<section id="view-the-beginning-or-end-of-a-dataset" class="slide level2">
-<h2>View the beginning or end of a dataset</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">tail</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-145          6.7         3.3          5.7         2.5 virginica
-146          6.7         3.0          5.2         2.3 virginica
-147          6.3         2.5          5.0         1.9 virginica
-148          6.5         3.0          5.2         2.0 virginica
-149          6.2         3.4          5.4         2.3 virginica
-150          5.9         3.0          5.1         1.8 virginica</code></pre>
-</div>
-</div>
-</section>
-<section id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" class="slide level2">
-<h2>Specify how many rows to view at beginning or end of a dataset</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">head</span>(iris, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">tail</span>(iris, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-149          6.2         3.4          5.4         2.3 virginica
-150          5.9         3.0          5.1         1.8 virginica</code></pre>
-</div>
-</div>
-</section>
-<section id="inline-code" class="slide level2">
-<h2>Inline code</h2>
-<div style="font-size: 90%;">
-<ul>
-<li>With markdown you can also report <strong>R code output inline</strong> with the text instead of using a chunk.</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Text in editor:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/screenshot_code_inline_petalwidth.png"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Output:</p>
-<p>The mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.</p>
-</div>
-</div>
-<ul>
-<li>Reporting summary statistics this way in a report, makes the numbers computationally reproducible.</li>
-<li>For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.</li>
-</ul>
-</div>
 </section></section>
 <section>
-<section id="summarizing-numerical-data" class="title-slide slide level1 center">
-<h1>(1.4) Summarizing numerical data</h1>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p>Measures of center &amp; spread</p>
-</div><div class="column" style="width:70%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/xkcd_tornadoguard.png"></p>
-<figcaption><a href="https://xkcd.com/937/">https://xkcd.com/937/</a></figcaption>
-</figure>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define observations and variables, and recognize them in a data frame.</li>
+<li>Define four variable types in data.</li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Define and calculate measures of center (including mean and median).</li>
+</ol>
 </div>
-</div>
-</div>
+<ol start="4" type="1">
+<li>Define and calculate measures of spread (including standard deviation and interquartile range).</li>
+</ol>
 </section>
-<section id="table-1-example" class="slide level2">
-<h2>Table 1 example</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/Table1_Barton.png"></p>
-</figure>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="blue">
+<div class="blue-ttl">
+<p>Warning!</p>
 </div>
-</div><div class="column" style="width:40%;">
-<p><em>Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis</em><br>
-J Barton et al.<br>
-Arthritis Care &amp; Research.<br>
-2021 Sep 27 <a href="https://pubmed.ncbi.nlm.nih.gov/34569172/">https://pubmed.ncbi.nlm.nih.gov/34569172/</a></p>
+<div class="blue-cont">
+<p>I decided to keep some <code>R</code> code in these slides. It’s going to be a little confusing now, but I thought it would be a worthwhile reference as soon as we get through R basics</p>
 </div>
 </div>
 </section>
 <section id="measures-of-center-mean" class="slide level2">
-<h2>Measures of center: mean</h2>
-<div style="font-size: 80%;">
-<p><strong><span style="color:darkorange">Sample mean</span></strong>: the average value of observations</p>
+<h2>Measures of center: <span style="color:#5BAFF8;">mean</span></h2>
+<div class="blue">
+<div class="blue-ttl">
+<p>Sample mean</p>
+</div>
+<div class="blue-cont">
+<p>the average value of observations</p>
 <p><span class="math display">\[\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}\]</span></p>
 <p>where <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values in a sample</p>
-<p><strong>Example</strong>: What is the mean age in the toy dataset <code>df</code> defined earlier?</p>
 </div>
+</div>
+<p><strong>Example</strong>: What is the mean clutch volume in the <code>frog</code> dataset?</p>
+<p><span class="math display">\[\overline{x} = \sum_{i=1}^{431}\frac{x_i}{431}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">mean</span>(frog<span class="sc">$</span>clutch.volume)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  IDs gender  age     trt Veteran
-1   1   male 28.0 control   FALSE
-2   2 female 35.5       1    TRUE
-3   3   Male 31.0       1    TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 31.5</code></pre>
+<pre><code>[1] 882.474</code></pre>
 </div>
 </div>
+<p><strong>Answer:</strong> the mean clutch volume is 882.5 <span class="math inline">\(\text{mm}^3\)</span>.</p>
 </section>
 <section id="measures-of-center-median" class="slide level2">
-<h2>Measures of center: median</h2>
-<div style="font-size: 90%;">
+<h2>Measures of center: <span style="color:#EF85B3;">median</span></h2>
+<div class="pink">
+<div class="pink-ttl">
+<p>Median</p>
+</div>
+<div class="pink-cont">
 <ul>
-<li><p>The <strong><span style="color:darkorange">median</span></strong> is the middle value of the observations in a sample.</p></li>
+<li><p>The middle value of the observations in a sample</p></li>
 <li><p>The median is the 50th percentile, meaning</p>
 <ul>
-<li>50% of observations lie below and</li>
-<li>50% of observations lie above the median.</li>
+<li>50% of observations lie below the median</li>
+<li>50% of observations lie above the median</li>
 </ul></li>
 </ul>
 </div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div style="font-size: 90%;">
+</div>
 <ul>
 <li>If the number of observations is
 <ul>
-<li>odd: the median is the middle observed value</li>
-<li>even: the median is the average of the two middle observed values</li>
+<li>Odd: the median is the middle observed value</li>
+<li>Even: the median is the average of the two middle observed values</li>
 </ul></li>
+<li>We can calculate the median clutch volume</li>
 </ul>
-</div>
-</div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">median</span>(frog<span class="sc">$</span>clutch.volume)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 28.0 35.5 31.0</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">median</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 31</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">median</span>(<span class="fu">c</span>(df<span class="sc">$</span>age, <span class="dv">67</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 33.25</code></pre>
-</div>
-</div>
+<pre><code>[1] 831.7638</code></pre>
 </div>
 </div>
 </section>
 <section id="measures-of-center-mean-vs.-median" class="slide level2">
-<h2>Measures of center: mean vs.&nbsp;median</h2>
+<h2>Measures of center: <span style="color:#5BAFF8;">mean</span> vs.&nbsp;<span style="color:#EF85B3;">median</span></h2>
 
-<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-15-1.png" width="1344" class="r-stretch"><div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-       Species  
- setosa    :50  
- versicolor:50  
- virginica :50  
-                
-                
-                </code></pre>
-</div>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-6-1.png" width="1344" class="r-stretch"><ul>
+<li>Mean values will be pulled towards extreme values</li>
+</ul>
+</section></section>
+<section>
+<section id="learning-objectives-4" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define observations and variables, and recognize them in a data frame.</li>
+<li>Define four variable types in data.</li>
+<li>Define and calculate measures of center (including mean and median).</li>
+</ol>
+<div class="lob">
+<ol start="4" type="1">
+<li>Define and calculate measures of spread (including standard deviation and interquartile range).</li>
+</ol>
 </div>
 </section>
-<section id="measures-of-center-mode" class="slide level2">
-<h2>Measures of center: mode</h2>
-<p><strong><span style="color:darkorange">mode</span></strong>: the most frequent value in a dataset</p>
-
-<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-17-1.png" width="1344" class="r-stretch"></section>
 <section id="measures-of-spread-standard-deviation-sd-13" class="slide level2">
-<h2>Measures of spread: standard deviation (SD) (1/3)</h2>
-<p><strong>standard deviation</strong> is (approximately) the average distance between a typical observation and the mean</p>
+<h2>Measures of spread: <span style="color:#E75B5C;">standard deviation (SD)</span> (1/3)</h2>
+<div class="orange">
+<div class="orange-ttl">
+<p>Standard deviation (SD)</p>
+</div>
+<div class="orange-cont">
+<p>(Approximately) the average distance between a typical observation and the mean</p>
 <ul>
-<li>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span>.</li>
+<li>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span></li>
 </ul>
+</div>
+</div>
 
-<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-18-1.png" width="1344" class="r-stretch"></section>
+<img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-7-1.png" width="1344" class="r-stretch"></section>
 <section id="measures-of-spread-sd-23" class="slide level2">
-<h2>Measures of spread: SD (2/3)</h2>
+<h2>Measures of spread: <span style="color:#E75B5C;">SD</span> (2/3)</h2>
 <ul>
-<li><p>The <strong>sample variance</strong> <span class="math inline">\(s^2\)</span> is the sum of squared deviations divided by the number of observations minus 1. <span class="math display">\[s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}\]</span> where <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values.</p></li>
-<li><p>The <strong>standard deviation</strong> <span class="math inline">\(s\)</span> is the square root of the variance. <span class="math display">\[s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}\]</span></p></li>
+<li>The <strong>sample variance</strong> <span class="math inline">\(s^2\)</span> is the sum of squared deviations divided by the number of observations minus 1. <span class="math display">\[s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}\]</span> where <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>The <span style="color:#E75B5C;"><strong>standard deviation</strong></span> <span class="math inline">\(s\)</span> (or <span class="math inline">\(sd\)</span>) is the square root of the variance. <span class="math display">\[s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}\]</span></li>
 </ul>
 </section>
 <section id="measures-of-spread-sd-33" class="slide level2">
-<h2>Measures of spread: SD (3/3)</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div style="font-size: 80%;">
-<p>Let’s calculate the sample standard deviation for our toy example</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 28.0 35.5 31.0</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 31.5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">sd</span>(df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.774917</code></pre>
-</div>
-</div>
-</div>
-</div>
+<h2>Measures of spread: <span style="color:#E75B5C;">SD</span> (3/3)</h2>
+<p>Let’s calculate the sample standard deviation for the clutch volume:</p>
+<p>&nbsp;</p>
 <p><span class="math inline">\(s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} =\)</span></p>
-<!-- \sqrt{\frac{({28 - 31.5)}^{2}+({35.5 - 31.5)}^{2}+({31 - 31.5)}^{2}}{3-1}} = 3.775 -->
+<ul>
+<li>Doing this by hand would be really time consuming!</li>
+<li><code>R</code> can easily do this for us!</li>
+</ul>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">mean</span>(frog<span class="sc">$</span>clutch.volume)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 882.474</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">sd</span>(frog<span class="sc">$</span>clutch.volume)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 379.0527</code></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><strong>Answer:</strong> The standard deviation of the clutch volume is 379.05 mm<sup>3</sup></p>
 </section>
-<section id="empirical-rule-one-way-to-think-about-the-sd-12" class="slide level2">
-<h2>Empirical Rule: one way to think about the SD (1/2)</h2>
-<div style="font-size: 80%;">
+<section id="empirical-rule-one-way-to-think-about-the-sd" class="slide level2">
+<h2>Empirical Rule: one way to think about the SD</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:45%;">
 <p>For symmetric bell-shaped data, about</p>
 <ul>
 <li>68% of the data are within 1 SD of the mean</li>
@@ -1090,87 +922,73 @@ Arthritis Care &amp; Research.<br>
 <li>99.7% of the data are within 3 SD’s of the mean</li>
 </ul>
 <p>These percentages are based off of percentages of a true normal distribution.</p>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:55%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img_slides/empirical-rule.png" width="660"></p>
-<figcaption><a href="https://statistics-made-easy.com/empirical-rule/">https://statistics-made-easy.com/empirical-rule/</a></figcaption>
+<p><img data-src="../img_slides/empirical-rule.png" width="1000"></p>
+<figcaption><a href="https://statistics-made-easy.com/empirical-rule/" class="uri">https://statistics-made-easy.com/empirical-rule/</a></figcaption>
 </figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="empirical-rule-one-way-to-think-about-the-sd-22" class="slide level2">
-<h2>Empirical Rule: one way to think about the SD (2/2)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.057333</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">sd</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4358663</code></pre>
-</div>
 </div>
 </div>
 </div>
 </section>
 <section id="measures-of-spread-interquartile-range-iqr-12" class="slide level2">
-<h2>Measures of spread: interquartile range (IQR) (1/2)</h2>
+<h2>Measures of spread: <span style="color:#459B99;">interquartile range (IQR)</span> (1/2)</h2>
 <p>The <span class="math inline">\(p^{th}\)</span> percentile is the observation such that <span class="math inline">\(p\%\)</span> of the remaining observations fall below this observation.</p>
 <ul>
 <li>The <em>first quartile</em> <span class="math inline">\(Q_1\)</span> is the <span class="math inline">\(25^{th}\)</span> percentile.</li>
 <li>The <em>second quartile</em> <span class="math inline">\(Q_2\)</span>, i.e., the median, is the <span class="math inline">\(50^{th}\)</span> percentile.</li>
 <li>The <em>third quartile</em> <span class="math inline">\(Q_3\)</span> is the <span class="math inline">\(75^{th}\)</span> percentile.</li>
 </ul>
-<p>The <strong><span style="color:darkorange">interquartile range (IQR)</span></strong> is the distance between the third and first quartiles. <span class="math display">\[IQR = Q_3 - Q_1\]</span></p>
+<div class="green2">
+<div class="green2-ttl">
+<p>Interquartile range (IQR)</p>
+</div>
+<div class="green2-cont">
+<p>The distance between the third and first quartiles. <span class="math display">\[IQR = Q_3 - Q_1\]</span></p>
 <ul>
 <li>IQR is the width of the <em>middle half</em> of the data</li>
 </ul>
+</div>
+</div>
 </section>
 <section id="measures-of-spread-iqr-22" class="slide level2">
-<h2>Measures of spread: IQR (2/2)</h2>
-<p><strong><span style="color:darkorange">5 number summary</span></strong></p>
+<h2>Measures of spread: <span style="color:#459B99;">IQR</span> (2/2)</h2>
+<p><span style="color:#8043F3"><strong>5 number summary</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">summary</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">summary</span>(frog<span class="sc">$</span>clutch.volume)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  2.000   2.800   3.000   3.057   3.300   4.400 </code></pre>
+  151.4   609.6   831.8   882.5  1096.5  2630.3 </code></pre>
 </div>
 </div>
+<p><span class="math display">\[IQR = Q_3 - Q_1 = 1096.5 - 609.6 = 486.9\]</span></p>
+<p>&nbsp;</p>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:38%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-24-1.png" width="480"></p>
+<p><img data-src="02_Intro_data_num_summaries_files/figure-revealjs/unnamed-chunk-10-1.png" width="576"></p>
 </div>
 </div>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:62%;">
 <p>What is the IQR of the sepal widths?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">quantile</span>(frog<span class="sc">$</span>clutch.volume, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>25% 75% 
-2.8 3.3 </code></pre>
+<pre><code>      25%       75% 
+ 609.5773 1096.4782 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">diff</span>(<span class="fu">quantile</span>(iris<span class="sc">$</span>Sepal.Width, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">diff</span>(<span class="fu">quantile</span>(frog<span class="sc">$</span>clutch.volume, <span class="fu">c</span>(.<span class="dv">25</span>, .<span class="dv">75</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>75% 
-0.5 </code></pre>
+<pre><code>     75% 
+486.9009 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">IQR</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">IQR</span>(frog<span class="sc">$</span>clutch.volume)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5</code></pre>
+<pre><code>[1] 486.9009</code></pre>
 </div>
 </div>
 </div>
@@ -1178,46 +996,45 @@ Arthritis Care &amp; Research.<br>
 </section>
 <section id="robust-estimates" class="slide level2">
 <h2>Robust estimates</h2>
-<p>Summary statistics are called <strong><span style="color:darkorange">robust estimates</span></strong> if extreme observations have little effect on their values</p>
+<p>Summary statistics are called <span style="color:#C83532"><strong>robust estimates</strong></span> if extreme observations have little effect on their values</p>
 <table>
 <thead>
 <tr class="header">
-<th>estimate</th>
-<th>robust?</th>
+<th>Estimate</th>
+<th>Robust?</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>mean</td>
-<td></td>
+<td>Sample mean</td>
+<td>❌</td>
 </tr>
 <tr class="even">
-<td>median</td>
-<td></td>
+<td>Median</td>
+<td>✅</td>
 </tr>
 <tr class="odd">
-<td>mode</td>
-<td></td>
+<td>Standard deviation</td>
+<td>❌</td>
 </tr>
 <tr class="even">
-<td>standard deviaiton</td>
-<td></td>
-</tr>
-<tr class="odd">
 <td>IQR</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>range</td>
-<td></td>
+<td>✅</td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li>For samples with many extreme values, the median and IQR might provide a more accurate sense of the center and spread</li>
+</ul>
+</section>
+<section id="poll-everywhere-question-4" class="slide level2">
+<h2>Poll Everywhere Question 4</h2>
 
 <div class="footer footer-default">
 <p>Lesson 2 Slides</p>
 </div>
 </section></section>
+
     </div>
   </div>
 

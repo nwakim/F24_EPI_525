@@ -1,0 +1,37 @@
+---
+title: "R13: Making Table 1"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "11/13/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R13 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+## Table 1 example
+
+::: columns
+::: {.column width="48%"}
+![](../img_slides/Table1_Barton.png){fig-align="center"}
+:::
+
+::: {.column width="52%"}
+*Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis*  
+J Barton et al.  
+Arthritis Care & Research.  
+2021 Sep 27
+[https://pubmed.ncbi.nlm.nih.gov/34569172/](https://pubmed.ncbi.nlm.nih.gov/34569172/) 
+:::
+:::

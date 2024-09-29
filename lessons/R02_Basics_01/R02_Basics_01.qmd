@@ -1,0 +1,294 @@
+---
+title: "R02: R Basics"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/7/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R02 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+```
+
+## We will open RStudio on our computer (not R!)
+
+![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
+
+## RStudio anatomy
+
+![[Emma Rand](https://buzzrbeeline.blog/2018/07/04/rstudio-anatomy/)](../img_slides/RStudio_Anatomy.svg){fig-align="center"}
+
+## Let's code! R Basics
+
+![[Artwork by \@allison_horst](https://allisonhorst.com/everything-else)](../img_slides/horst_timeline_Rlearning.png){fig-align="center"}
+
+## Coding in the console
+
+::: columns
+::: {.column width="50%"}
+When you first open R, the console should be empty.
+
+![](../img_slides/01_console_empty.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+**Typing and executing code in the console**
+
+-   Type code in the console (blue text)
+-   Press **return** to execute the code
+-   Output shown below in black
+
+![](../img_slides/01_console_commands2.png){fig-align="center"}
+:::
+:::
+
+## We have an option of where to write our code
+
+- We can use the console directly
+  - BUT our work won't be saved
+  
+ 
+
+- We can also open up a file called a `.R` file
+  - Hit the new document looking button, then click `R script`
+  - Now we can type in the R script
+  - In the R script, we need to press **cmd + return** or **ctrl + return** to execute the code
+  - Output will show up in the Console!
+  
+ 
+
+- Example by Nicky here!
+
+## Math calculations using R
+
+-   We can use R as a calculator!!
+-   Rules for order of operations are followed
+-   Spaces between numbers and characters are ignored
+
+ 
+
+::: columns
+::: {.column width="50%"}
+```{r}
+10^2
+3 ^ 7
+6/9
+9-43
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+4^3-2* 7+9 /2
+```
+
+The equation above is computed as $$4^3 − (2 \cdot 7) + \frac{9}{2}$$
+:::
+:::
+
+## Variables (saved R objects)
+
+Variables are used to store data, figures, model output, etc.
+
+::: columns
+::: {.column width="49%"}
+-   Can assign a variable using either `=` or `<-`
+    -   **Using `<-` is preferable** for certain occasions
+    -   I usually just use `=` because less typing hehe
+
+Assign just one value:
+
+```{r}
+x = 5
+x
+x <- 5
+x
+```
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+Assign a **vector** of values
+
+-   Consecutive integers using `:`
+
+```{r}
+a <- 3:10
+a
+```
+
+-   **Concatenate** a string of numbers
+
+```{r}
+b <- c(5, 12, 2, 100, 8)
+b
+```
+:::
+:::
+
+## Let's try it out!
+
+-   Create a new variable `y` that is assigned the value of 8
+-   Create a new variable `c` that is assigned the vector of values 15 through 20
+-   Create a new variable `d` that is assigned the vector of values 16 through 19 and 22.
+
+ 
+
+-   Did you notice anything in the `Environment` section of Rstudio?
+
+## Doing math with variables
+
+::: columns
+::: {.column width="50%"}
+Math using variables with just one value
+
+```{r}
+x <- 5
+x
+
+x + 3
+
+y <- x^2
+y
+```
+:::
+
+::: {.column width="50%"}
+Math on vectors of values:\
+**element-wise** computation
+
+```{r}
+a <- 3:6
+a
+
+a+2; a*3
+
+a*a
+```
+:::
+:::
+
+## Let's try it out!
+
+-   Use the variable name `y` to find the addition of `y` and 5
+-   Add 5 to the vector `c`
+
+## Variables can include text (characters)
+
+```{r}
+hi <- "hello"
+hi
+
+greetings <- c("Guten Tag", "Hola", hi)
+greetings
+```
+
+## Using functions
+
+-   `mean()` is an example of a function
+-   functions have "arguments" that can be specified within the `()`
+-   `?mean` in console will show help file for `mean()`
+
+::: columns
+::: {.column width="50%"}
+Function <font color="#BF396F">arguments specified</font> by name:
+
+```{r}
+mean(x = 1:4)
+```
+
+```{r}
+seq(from = 1, to = 12, by = 3)
+seq(by = 3, to = 12, from = 1)
+```
+:::
+
+::: {.column width="50%"}
+Function <font color="#BF396F">arguments not specified</font>, but listed in order:
+
+```{r}
+mean(1:4)
+```
+
+```{r}
+seq(1, 12, 3)
+```
+:::
+:::
+
+## Now let's use some functions for summary statistics
+
+-   We will calculate the mean for `c`
+-   Let's also calculate the standard deviation for `c`
+    -   Recall, our function is `sd()`
+    -   Use `?sd` in the console to identify the arguments for `c`
+
+ 
+
+-   If you have more time, you can try to calculate the median and IQR for `c`
+
+# Getting help with R
+
+## There are many ways to get help when you are stuck
+
+- Use the `?` in front of the function name to get more information!
+  - Usually if I need help with the arguments for a function
+  
+ 
+
+- Google or go to stackoverflow.com
+  - Often when I Google, I get redirected to something like stackoverflow
+  - For example, let's say my `mean` function was outputting `NA`. I would Google something like "keep getting NA for mean in R" Then end up [here](https://stackoverflow.com/questions/25297705/mean-na-rm-true-still-returns-na)
+
+ 
+
+- I can also go to my favoriate AI tool to get help
+  - This is most useful for getting code started if it's complicated (we're not really at that level yet)
+  - I asked ChatGPT "can you give me the code for calculating the mean in R"
+    - [This is what I got](https://chatgpt.com/share/66f8a2b9-9918-8006-88af-0dc7b64bb86a)
+  - For code generation, it gives you WAY too much
+  - I also asked ChatGPT "Why is the mean function in R giving me an NA?" (in above link)
+    
+## More on AI usage
+
+- [In the syllabus](https://nwakim.github.io/F24_EPI_525/syllabus.html#plagiarism-and-attribution)
+- If you cannot trace code back to the class notes, then do NOT use it!
+  - There's different coding practices and functions out there
+  - I'm giving you a specific set of tools that will serve as a good introduction
+  - You should be able to explain all your code and work 
+  
+  
+  

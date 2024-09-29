@@ -43,32 +43,54 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 
 # Learning Objectives
 
-1. Define descriptive statistics, including measures of center, spread, position, and shape.
-2. Explain which descriptive statistics are influenced by extreme values, and which are not.
-3. Use a histogram to identify the shape of a distribution.
-4. Explain how a distribution's shape relates to descriptive statistics.
-5. Use R to calculate descriptive statistics for features in a dataset.
-  
+1.  Define observations and variables, and recognize them in a data frame.
+2.  Define four variable types in data.
+3.  Define and calculate measures of center (including mean and median).
+4.  Define and calculate measures of spread (including standard deviation and interquartile range).
+
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
 # Learning Objectives
 
+::: lob
+1.  Define observations and variables, and recognize them in a data frame.
+:::
+
+2.  Define four variable types in data.
+3.  Define and calculate measures of center (including mean and median).
+4.  Define and calculate measures of spread (including standard deviation and interquartile range).
+
 ## Intro to Data
 
-![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_data_cowboy.png){fig-align="center"}
+![[Artwork by \@allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_data_cowboy.png){fig-align="center"}
 
-## Observations, variables, and data matrices
+## Example: the frog study[^1]
 
+[^1]: From *Introductory Statistics for the Life and Biomedical Sciences*
 
+In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.
 
-## Example: the frog study
+ 
 
-In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring. This section introduces the \data{frog} dataset, which originates from a 2013 study about maternal investment in a frog species.\footnote{Chen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.} Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced. Researchers were interested in investigating how maternal investment varies with altitude and collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.
+We will be working with the `frog` dataset, which originates from a 2013 study[^2] about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.
 
+[^2]: Chen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.
 
-## Four rows from frog data matrix
+    ## 
+
+ 
+
+Researchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.
+
+ 
+
+ 
+
+## Poll Everywhere Question 1
+
+## Four rows from frog data frame
 
 \captionsetup[table]{labelformat=empty}
 
@@ -76,26 +98,63 @@ In evolutionary biology, parental investment refers to the amount of time, energ
 data(frog) 
 ```
 
-|   | altitude | latitude | egg.size | clutch.size | clutch.volume | body.size |
-|---|----------|----------|----------|-------------|---------------|-----------|
-| 1 | 3,462.00 | 34.82    | 1.95     | 181.97      | 177.83        | 3.63      |
-| 2 | 3,462.00 | 34.82    | 1.95     | 269.15      | 257.04        | 3.63      |
-| 3 | 3,462.00 | 34.82    | 1.95     | 158.49      | 151.36        | 3.72      |
-|150| 2,597.00 | 34.05    | 2.24     | 537.03      | 776.25        | NA        |
+|     | altitude | latitude | egg.size | clutch.size | clutch.volume | body.size |
+|-----|----------|----------|----------|-------------|---------------|-----------|
+| 1   | 3,462.00 | 34.82    | 1.95     | 181.97      | 177.83        | 3.63      |
+| 2   | 3,462.00 | 34.82    | 1.95     | 269.15      | 257.04        | 3.63      |
+| 3   | 3,462.00 | 34.82    | 1.95     | 158.49      | 151.36        | 3.72      |
+| 150 | 2,597.00 | 34.05    | 2.24     | 537.03      | 776.25        | NA        |
 
+## Four rows from frog data frame
 
-##  Frog study: Variables and their descriptions
+\captionsetup[table]{labelformat=empty}
 
-| **Variable**      | **Description**                                                                 |
-|-------------------|---------------------------------------------------------------------------------|
-| `altitude`        | Altitude of the study site in meters above sea level                             |
-| `latitude`        | Latitude of the study site measured in degrees                                   |
-| `egg.size`        | Average diameter of an individual egg to the 0.01 mm                             |
-| `clutch.size`     | Estimated number of eggs in clutch                                               |
-| `clutch.volume`   | Volume of egg clutch in mm³                                                      |
-| `body.size`       | Length of mother frog in cm  
-	
-## Types of Variables
+```{r echo=FALSE}
+data(frog) 
+```
+
+|     | altitude | latitude | egg.size | clutch.size | clutch.volume | body.size |
+|-----|----------|----------|----------|-------------|---------------|-----------|
+| 1   | 3,462.00 | 34.82    | 1.95     | 181.97      | 177.83        | 3.63      |
+| 2   | 3,462.00 | 34.82    | 1.95     | 269.15      | 257.04        | 3.63      |
+| 3   | 3,462.00 | 34.82    | 1.95     | 158.49      | 151.36        | 3.72      |
+| 150 | 2,597.00 | 34.05    | 2.24     | 537.03      | 776.25        | NA        |
+
+ 
+
+-   Each **row** is an [**observation**]{style="color:#BF396F;"}
+-   Each **column** is a [**variable**]{style="color:#459B99;"}
+-   All the [**observations**]{style="color:#BF396F;"} and [**variables**]{style="color:#459B99;"} together make a [**data frame**]{style="color:#8043F3;"} (sometimes called data matrix)
+
+ 
+
+-   **Missing values:** `NA` means the measured value for body size in clutch #150 is missing
+
+## Frog study: variables and their descriptions
+
+-   [**Variables**]{style="color:#459B99;"} are recorded characteristics for each [**observation**]{style="color:#BF396F;"}
+
+| **Variable**    | **Description**                                      |
+|-----------------|------------------------------------------------------|
+| `altitude`      | Altitude of the study site in meters above sea level |
+| `latitude`      | Latitude of the study site measured in degrees       |
+| `egg.size`      | Average diameter of an individual egg to the 0.01 mm |
+| `clutch.size`   | Estimated number of eggs in clutch                   |
+| `clutch.volume` | Volume of egg clutch in mm³                          |
+| `body.size`     | Length of egg-laying frog in cm                      |
+
+# Learning Objectives
+
+1.  Define observations and variables, and recognize them in a data frame.
+
+::: lob
+2.  Define four variable types in data.
+:::
+
+3.  Define and calculate measures of center (including mean and median).
+4.  Define and calculate measures of spread (including standard deviation and interquartile range).
+
+## Types of variables (1/2)
 
 ::: columns
 ::: column
@@ -103,420 +162,190 @@ data(frog)
 ::: orange-ttl
 Numerical variables
 :::
+
 ::: orange-cont
 **Numerical variables** take on numerical values, such that numerical operations (sums, differences, etc.) are reasonable.
-  
-  - Discrete: only take on integer values (e.g., \# of family members)
-  
-  - Continuous: can take on any value within a specified range (e.g., height)
-  
+
+-   Discrete: only take on integer values (e.g., \# of family members)
+
+-   Continuous: can take on any value within a specified range (e.g., height)
 :::
 :::
 :::
+
 ::: column
 ::: pink
 ::: pink-ttl
 Categorical variables
 :::
+
 ::: pink-cont
 **Categorical variables** take on values that are names or labels; the possible values are called the variable's *levels*.
 
-  - Ordinal: exists some natural ordering of levels (e.g., level of education)
-  - Nominal: no natural ordering of levels (e.g., gender identity)
-  
+-   Ordinal: exists some natural ordering of levels (e.g., level of education)
+-   Nominal: no natural ordering of levels (e.g., gender identity)
 :::
 :::
 :::
 :::
 
+## Types of variables (2/2)
 
-## Types of variables
+![](../img_slides/variableTypes.png)
 
-![](../img_slides/variableTypes.png)  
+## Poll Everywhere Question 2
+
+## Poll Everywhere Question 3
+
+## Variable (column) types in `R`
+
+-   We have not done much with `R` yet, but I want this to serve as a reference for you!
+-   Variable types (as we speak them) are translated by `R` a little differently
+-   Below is the mapping of `R` types to variable types
+
+| R type            | variable type | description                                       |
+|------------------------|------------------------|------------------------|
+| integer           | discrete      | integer-valued numbers                            |
+| double or numeric | continuous    | numbers that are decimals                         |
+| factor            | categorical   | categorical variables stored with levels (groups) |
+| character         | categorical   | text, "strings"                                   |
+| logical           | categorical   | boolean (TRUE, FALSE)                             |
 
 ## Exploring data with simple tools
 
-- Techniques for exploring and summarizing data **differ** for numerical versus categorical variables.
+-   Techniques for exploring and summarizing data **differ** for [**numerical**]{style="color:#E75B5C;"} versus [**categorical**]{style="color:#EF85B3;"} variables.
 
  
 
-- Numerical and graphical summaries are useful for examining variables one at a time
-  - Can also be used for exploring the relationships between variables
-  
+-   Numerical and graphical summaries are useful for examining variables one at a time
+    -   Can also be used for exploring the relationships between variables
+    -   *Numerical* summaries are not just for [**numerical**]{style="color:#E75B5C;"} variables (certain ones are used for [**categorical**]{style="color:#EF85B3;"} variables)
+
  
 
-- Let's start looking into ways to summarize and explore numerical data!
+-   Let's start looking into ways to summarize and explore [**numerical**]{style="color:#E75B5C;"} data!
 
+    -   We will come back to [**categorical**]{style="color:#EF85B3;"} variables another day
 
+# Learning Objectives
 
+1.  Define observations and variables, and recognize them in a data frame.
+2.  Define four variable types in data.
 
-
-
-
-
-
-## Data frame example
-
-::: columns
-::: {.column width="54%"}
-
-```{r}
-df <- data.frame(
-  IDs=1:3, 
-  gender=c("male", "female", "Male"), 
-  age=c(28, 35.5, 31),
-  trt = c("control", "1", "1"),
-  Veteran = c(FALSE, TRUE, TRUE)
-  )
-df
-```
-
-* __Vectors__ vs. __data frames__
-    * a data frame is a collection (or array or table) of vectors
-
+::: lob
+3.  Define and calculate measures of center (including mean and median).
 :::
 
-::: {.column width="2%"}
+4.  Define and calculate measures of spread (including standard deviation and interquartile range).
+
+## 
+
+::: blue
+::: blue-ttl
+Warning!
 :::
 
-::: {.column width="44%"}
-::: {style="font-size: 90%;"}
-* Different columns can be of different data types (i.e. numeric vs. text)
-* Both numeric and text can be stored within a column (stored together as *text*).
-
-* Vectors and data frames are examples of _**objects**_ in R. 
-  + There are other types of R objects to store data, such as matrices, lists.
-:::
+::: blue-cont
+I decided to keep some `R` code in these slides. It's going to be a little confusing now, but I thought it would be a worthwhile reference as soon as we get through R basics
 :::
 :::
 
+## Measures of center: [mean]{style="color:#5BAFF8;"}
 
-## Observations & variables
-
-::: columns
-::: {.column width="60%"}
-
-```{r}
-df
-```
-
-![[ISLBS](https://www.openintro.org/book/biostat/)](../img_slides/Fig1.8_variable_types.png){fig-align="center"}
-
-:::
-::: {.column width="40%"}
-::: {style="font-size: 90%;"}
-* Book refers to a dataset as a _data matrix_ 
-
-* Rows are usually __observations__
-* Columns are usually __variables__ 
-
-
-* __[How many observations are in this dataset?]{style="color:green"}__
-
-* __[What are the variable types in this dataset?]{style="color:green"}__
-::: 
-:::
+::: blue
+::: blue-ttl
+Sample mean
 :::
 
+::: blue-cont
+the average value of observations
 
-
-
-## Variable (column) types
-::: {style="font-size: 70%;"}
-R type | variable type| description
----|---|---
-integer | discrete | integer-valued numbers
-double or numeric | continuous| numbers that are decimals
-factor  | categorical | categorical variables stored with levels (groups)
-character | categorical | text, "strings"
-logical | categorical | boolean (TRUE, FALSE)
-
-<!-- Each variable (column) in a data frame can be of a different type. -->
-
-* View the __structure__ of our data frame to see what the variable types are:
-:::
-```{r}
-str(df)
-```
-
-<!-- * Note that the ID column is _integer_ type since the values are all whole numbers, although we likely would think of it as being a categorical variable and thus prefer it to be a factor. -->
-
-
-
-
-## Fisher's (or Anderson's) Iris data set 
-
-Data description: 
-
-* n = 150 
-* 3 species of Iris flowers (Setosa, Virginica, and Versicolour)
-  + 50 measurements of each type of Iris
-* __variables__:
-  + sepal length, sepal width, petal length, petal width, and species
-
-_[Can the iris species be determined by these variables?]{style="color:purple"}_
-
-<center><img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%"></center>
-[Gareth Duffy](https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project)
-
-
-
-## View the `iris` dataset
-
-::: {style="font-size: 80%;"}
-* The `iris` dataset is already pre-loaded in *base* R and ready to use.
-* Type the following command in the console window
-  - _Warning: this command cannot be rendered. It will give an error._
-:::
-
-\
-
-:::columns
-::: {.column width="30%"}
-```{r}
-#| eval: false
-
-View(iris)
-```
-::: {style="font-size: 80%;"}
-A new tab in the scripting window should appear with the `iris` dataset.
-:::
-:::
-
-::: {.column width="70%"}
-
-![](../img_slides/screenshot_iris_View.png){fig-align="center"}
-:::
-:::
-
-
-## Data structure
-
-* What are the different __variable types__ in this data set?
-
-\
-
-```{r}
-str(iris)   # structure of data
-```
-
-
-
-
-## Data set summary
-
-```{r}
-summary(iris)
-```
-
-
-
-## Data set info
-
-```{r}
-dim(iris)
-nrow(iris)
-ncol(iris)
-names(iris)
-```
-
-
-
-
-## View the beginning or end of a dataset
-
-```{r}
-head(iris)
-tail(iris)
-```
-
-
-
-## Specify how many rows to view at beginning or end of a dataset
-
-```{r}
-head(iris, 3)
-tail(iris, 2)
-```
-
-
-
-## Inline code
-
-::: {style="font-size: 90%;"}
-* With markdown you can also report __R code output inline__ with the text instead of using a chunk.
-
-::: columns
-::: {.column width="50%"}
-Text in editor:
-
-![](../img_slides/screenshot_code_inline_petalwidth.png){fig-align="center"}
-:::
-
-::: {.column width="50%"}
-
-Output: 
-
-The mean petal width for all 3 species combined is `r round(mean(iris$Petal.Width),1)` 
-(SD = `r round(sd(iris$Petal.Width),1)`) cm.
-
-:::
-:::
-
-- Reporting summary statistics this way in a report, makes the numbers computationally reproducible.
-- For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.
-:::
-
-
-# (1.4) Summarizing numerical data 
-
-::: columns
-::: {.column width="30%"}
-Measures of center &  spread
-
-:::
-
-::: {.column width="70%"}
-
-![[https://xkcd.com/937/](https://xkcd.com/937/)](../img_slides/xkcd_tornadoguard.png){fig-align="center"}
-
-:::
-:::
-
-
-
-## Table 1 example
-
-::: columns
-::: {.column width="60%"}
-![](../img_slides/Table1_Barton.png){fig-align="center"}
-:::
-
-::: {.column width="40%"}
-*Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis*  
-J Barton et al.  
-Arthritis Care & Research.  
-2021 Sep 27
-[https://pubmed.ncbi.nlm.nih.gov/34569172/](https://pubmed.ncbi.nlm.nih.gov/34569172/) 
-:::
-:::
-
-
-
-## Measures of center: mean
-
-::: {style="font-size: 80%;"}
-__[Sample mean]{style="color:darkorange"}__: the average value of observations
-
-$$\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}$$  
+$$\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}$$
 
 where $x_1, x_2, \ldots, x_n$ represent the $n$ observed values in a sample
-
-
-__Example__: What is the mean age in the toy dataset `df` defined earlier?
 :::
+:::
+
+**Example**: What is the mean clutch volume in the `frog` dataset?
+
+$$\overline{x} = \sum_{i=1}^{431}\frac{x_i}{431}$$
 
 ```{r}
-#| eval: false
-#| echo: false
-
-
-df <- data.frame(
-  IDs=1:3, 
-  gender=c("male", "female", "Male"), 
-  age=c(28, 35.5, 31),
-  trt = c("control", "1", "1"),
-  Veteran = c(FALSE, TRUE, TRUE)
-  )
-df
+mean(frog$clutch.volume)
 ```
 
+**Answer:** the mean clutch volume is `r round(mean(frog$clutch.volume), 1)` $\text{mm}^3$.
+
+## Measures of center: [median]{style="color:#EF85B3;"}
+
+::: pink
+::: pink-ttl
+Median
+:::
+
+::: pink-cont
+-   The middle value of the observations in a sample
+
+-   The median is the 50th percentile, meaning
+
+    -   50% of observations lie below the median
+    -   50% of observations lie above the median
+:::
+:::
+
+-   If the number of observations is
+    -   Odd: the median is the middle observed value
+    -   Even: the median is the average of the two middle observed values
+-   We can calculate the median clutch volume
 
 ```{r}
-df
-mean(df$age)
+median(frog$clutch.volume)
 ```
 
-
-
-## Measures of center: median
-
-::: {style="font-size: 90%;"}
-* The __[median]{style="color:darkorange"}__ is the middle value of the observations in a sample.  
-
-* The median is the 50th percentile, meaning
-  - 50% of observations lie below and
-  - 50% of observations lie above the median.
-:::
-
-::: columns
-::: {.column width="50%"}
-::: {style="font-size: 90%;"}
-* If the number of observations is 
-  - odd: the median is the middle observed value
-  - even: the median is the average of the two middle observed values
-:::
-:::
-
-::: {.column width="50%"}
-```{r}
-df$age
-median(df$age)
-median(c(df$age, 67))
-```
-
-:::
-:::
-
-
-## Measures of center: mean vs. median
+## Measures of center: [mean]{style="color:#5BAFF8;"} vs. [median]{style="color:#EF85B3;"}
 
 ```{r}
 #| echo: false
-#| fig.height: 4
+#| fig.height: 5
 #| fig.width: 14
 
-iris_long <- iris %>% pivot_longer(Sepal.Length:Petal.Width, names_to = "msr")
+frog_long <- frog %>% pivot_longer(clutch.size:egg.size, names_to = "msr")
 
-ggplot(iris_long, aes(x= value)) +
-  facet_grid(cols = vars(msr)) +
+ggplot(frog_long %>% filter(msr != "body.size"), aes(x= value)) +
+  facet_grid(cols = vars(msr), scales="free") +
   geom_histogram() +
-  labs(title = "Iris sepal and petal lengths & widths")
-
+  labs(title = "Histograms of four variables in frog dataset")
 ```
 
-```{r}
-summary(iris)
-```
+-   Mean values will be pulled towards extreme values
 
+# Learning Objectives
 
-## Measures of center: mode
+1.  Define observations and variables, and recognize them in a data frame.
+2.  Define four variable types in data.
+3.  Define and calculate measures of center (including mean and median).
 
-__[mode]{style="color:darkorange"}__: the most frequent value in a dataset
+::: lob
+4.  Define and calculate measures of spread (including standard deviation and interquartile range).
+:::
+
+## Measures of spread: [standard deviation (SD)]{style="color:#E75B5C;"} (1/3)
+
+::: orange
+::: orange-ttl
+Standard deviation (SD)
+:::
+
+::: orange-cont
+(Approximately) the average distance between a typical observation and the mean
+
+-   An observation's **deviation** is the distance between its value $x$ and the sample mean $\overline{x}$: deviation = $x - \overline{x}$
+:::
+:::
 
 ```{r}
 #| echo: false
-#| fig.height: 6
-#| fig.width: 14
-
-ggplot(iris_long, aes(x= value)) +
-  facet_grid(cols = vars(msr)) +
-  geom_histogram() +
-  labs(title = "Iris sepal and petal lengths & widths")
-
-```
-
-
-
-## Measures of spread: standard deviation (SD) (1/3) 
-
-__standard deviation__ is (approximately) the average distance between a typical observation and the mean 
-
-- An observation's **deviation** is the distance between its value $x$ and the sample mean $\overline{x}$: deviation = $x - \overline{x}$.
-
-```{r}
-#| echo: false
-#| fig.height: 4
+#| fig.height: 5
 #| fig.width: 14
 
 sim_diff_sd <- data.frame(
@@ -536,154 +365,126 @@ ggplot(sim_diff_sd_long, aes(x= value)) +
 
 ```
 
+## Measures of spread: [SD]{style="color:#E75B5C;"} (2/3)
 
+-   The **sample variance** $s^2$ is the sum of squared deviations divided by the number of observations minus 1. $$s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}$$ where $x_1, x_2, \dots, x_n$ represent the $n$ observed values.
 
-## Measures of spread: SD  (2/3) 
+ 
 
-- The **sample variance** $s^2$ is the sum of squared deviations divided by the number of observations minus 1.
-$$s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}$$
-    where $x_1, x_2, \dots, x_n$ represent the $n$ observed values.
+-   The [**standard deviation**]{style="color:#E75B5C;"} $s$ (or $sd$) is the square root of the variance. $$s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}$$
 
-- The **standard deviation** $s$ is the square root of the variance.
-$$s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}$$
+## Measures of spread: [SD]{style="color:#E75B5C;"} (3/3)
 
+Let's calculate the sample standard deviation for the clutch volume:
 
-
-
-## Measures of spread: SD  (3/3) 
-
-::: columns
-::: {.column width="40%"}
-
-::: {style="font-size: 80%;"}
-Let's calculate the sample standard deviation for our toy example
-:::
-
-```{r}
-df$age
-
-```
-
-:::
-
-::: {.column width="60%"}
-```{r}
-mean(df$age)
-sd(df$age)
-```
-
-:::
-:::
+ 
 
 $s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} =$
 
-<!-- \sqrt{\frac{({28 - 31.5)}^{2}+({35.5 - 31.5)}^{2}+({31 - 31.5)}^{2}}{3-1}} = 3.775 -->
+-   Doing this by hand would be really time consuming!
+-   `R` can easily do this for us!
 
+ 
 
+```{r}
+mean(frog$clutch.volume)
+sd(frog$clutch.volume)
+```
 
-## Empirical Rule: one way to think about the SD (1/2) 
+ 
 
-::: {style="font-size: 80%;"}
+**Answer:** The standard deviation of the clutch volume is 379.05 mm^3^
+
+## Empirical Rule: one way to think about the SD
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="45%"}
 For symmetric bell-shaped data, about
 
-* 68% of the data are within 1 SD of the mean
-* 95% of the data are within 2 SD's of the mean
-* 99.7% of the data are within 3 SD's of the mean
+-   68% of the data are within 1 SD of the mean
+-   95% of the data are within 2 SD's of the mean
+-   99.7% of the data are within 3 SD's of the mean
 
 These percentages are based off of percentages of a true normal distribution.
 :::
-::: {.column width="60%"}
 
-![[https://statistics-made-easy.com/empirical-rule/](https://statistics-made-easy.com/empirical-rule/)](../img_slides/empirical-rule.png){fig-align="center" width="660"}
-
-:::
-:::
-:::
-
-
-## Empirical Rule: one way to think about the SD (2/2)
-
-::: columns
-::: {.column width="50%"}
-```{r}
-#| fig.height: 8
-hist(iris$Sepal.Width)
-
-```
-
-:::
-
-::: {.column width="50%"}
-```{r}
-mean(iris$Sepal.Width)
-sd(iris$Sepal.Width)
-```
-
+::: {.column width="55%"}
+![<https://statistics-made-easy.com/empirical-rule/>](../img_slides/empirical-rule.png){fig-align="center" width="1000"}
 :::
 :::
 
-
-## Measures of spread: interquartile range (IQR) (1/2) 
+## Measures of spread: [interquartile range (IQR)]{style="color:#459B99;"} (1/2)
 
 The $p^{th}$ percentile is the observation such that $p\%$ of the remaining observations fall below this observation.
 
-  - The *first quartile* $Q_1$ is the $25^{th}$ percentile.
-  - The *second quartile* $Q_2$, i.e., the median, is the $50^{th}$ percentile.
-  - The *third quartile* $Q_3$ is the $75^{th}$ percentile.
-    
-The __[interquartile range (IQR)]{style="color:darkorange"}__ is the distance between the third and first quartiles.
-$$IQR = Q_3 - Q_1$$
+-   The *first quartile* $Q_1$ is the $25^{th}$ percentile.
+-   The *second quartile* $Q_2$, i.e., the median, is the $50^{th}$ percentile.
+-   The *third quartile* $Q_3$ is the $75^{th}$ percentile.
 
-* IQR is the width of the *middle half* of the data
-
-
-
-## Measures of spread: IQR (2/2)
-
-__[5 number summary]{style="color:darkorange"}__
-```{r}
-summary(iris$Sepal.Width)
-```
-
-::: columns
-::: {.column width="40%"}
-```{r}
-#| echo: false
-#| fig.height: 5
-#| fig.width: 5
-
-hist(iris$Sepal.Width)
-```
-
+::: green2
+::: green2-ttl
+Interquartile range (IQR)
 :::
 
-::: {.column width="60%"}
+::: green2-cont
+The distance between the third and first quartiles. $$IQR = Q_3 - Q_1$$
+
+-   IQR is the width of the *middle half* of the data
+:::
+:::
+
+## Measures of spread: [IQR]{style="color:#459B99;"} (2/2)
+
+[**5 number summary**]{style="color:#8043F3"}
+
+```{r}
+summary(frog$clutch.volume)
+```
+
+$$IQR = Q_3 - Q_1 = 1096.5 - 609.6 = 486.9$$
+
+ 
+
+::: columns
+::: {.column width="38%"}
+```{r}
+#| echo: false
+#| fig.height: 6
+#| fig.width: 6
+
+ggplot(frog, aes(x= clutch.volume)) +
+  geom_histogram() +
+  labs(title = "Histograms of clutch volume")
+```
+:::
+
+::: {.column width="62%"}
 What is the IQR of the sepal widths?
 
 ```{r}
-quantile(iris$Sepal.Width, c(.25, .75))
-diff(quantile(iris$Sepal.Width, c(.25, .75)))
-
-IQR(iris$Sepal.Width)
+quantile(frog$clutch.volume, c(.25, .75))
+diff(quantile(frog$clutch.volume, c(.25, .75)))
 ```
 
-:::
-:::
+ 
 
+```{r}
+IQR(frog$clutch.volume)
+```
+:::
+:::
 
 ## Robust estimates
 
-Summary statistics are called __[robust estimates]{style="color:darkorange"}__ if extreme observations have little effect on their values
+Summary statistics are called [**robust estimates**]{style="color:#C83532"} if extreme observations have little effect on their values
 
-estimate | robust? 
----| ---
-mean | 
-median |
-mode |
-standard deviaiton |
-IQR |
-range |
+| Estimate           | Robust? |
+|--------------------|---------|
+| Sample mean        | ❌      |
+| Median             | ✅      |
+| Standard deviation | ❌      |
+| IQR                | ✅      |
 
+-   For samples with many extreme values, the median and IQR might provide a more accurate sense of the center and spread
+
+## Poll Everywhere Question 4

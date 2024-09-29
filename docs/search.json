@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.1-1.2, 1.4\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics\n\n\n\n\n\n\n\n\n\n\n\n\nGetting help when coding (functions, AI, etc)\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.1-1.2, 1.4\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n\nGetting help when coding (functions, AI, etc)\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -4456,7 +4456,7 @@
     "href": "syllabus.html#course-policies-and-resources",
     "title": "EPI 525 Syllabus",
     "section": "Course Policies and Resources",
-    "text": "Course Policies and Resources\n\nLate Work Policy\nI encourage you to make your best effort to submit all assignments on time, but I understand circumstances arise that are beyond our control. Please see this Swansea University’s page on extenuating circumstances for some examples. Not all circumstances are covered here, so please reach out if you have questions. \n\nThe class will end on December 9, 2024. All coursework is expected to be completed by December 13, 2024 at 11pm. If you have extenuating circumstances, and need additional time to complete class assignments, please contact me. Together, we will come up with a plan for completion and to sort out registrar logistics.\nIf you have extenuating circumstances that may jeopardize your ability to do work for several weeks, please contact me. We will come up with a plan to keep you on track in the course and prevent any delay in your education.\nFor homework, I ask you to email me and the TAs directly about any late submissions. You can explain your circumstances and may ask us for an extension. I am very likely to grant an extension, but I want to emphasize how important it will be to stay on track with your homework! Your group is depending on you, and delaying homework may only add stress on the next homework!\nFor homework, you will have TWO no-questions-asked, 3-day extensions: one for the first assignment part and one for either the solutions or presentation. Please use this wisely! You just need to send me a quick email saying “I am using my no-questions-asked extension for Homework __ assignment/solutions/presentation.”\nIf you have a emergency involving your self, family, pet, friend, classmate, or anything/one deemed important to you, please do not worry about immediately contacting me. We can work something out after your emergency. If I contact you during an emergency, it is only because I am worried, and you do NOT need to respond until you are able. \n\n\n\nRegrade Policy\nIf you think a question was incorrectly graded, first compare your answer to the answer key. If you believe a re-grade would be appropriate, write an email to me containing the question and a short explanation as to why the question(s) was/were incorrectly graded. Deadline: One week after assignments were returned to class (late requests will not be considered).\n\n\nAttendance Policy\nYou are expected to attend class, participate in-class polls, and complete the exit ticket. For students who miss class or need a review, I will make video and audio recordings of lectures available. There are no guarantees against technical or other challenges for the recording availability or quality.\nYou will need to attend at least 12 classes in person. There are 19 classes total, so you are welcome to watch the recordings for up to 7 classes in lieu of in-person attendance. While I want attendance to be a flexible thing, I need to set certain requirements around in-person attendance to align with the school’s policy.\nThis is meant to keep you on track within the course and prevent a pile up of material. Make sure to complete the exit ticket at the end of class to demonstrate attendance.\n\n\nPlagiarism and Attribution\nPlease note that this section has been motivated by Dr. Steven Bedrick’s Course Policies and Grading site for BMI 525. (Note that this is a good example of informal attribution of someone else’s work.)\nIn this class, it is easy to use ChatGPT or other AI tools to solve your homework for you. Many problems follow a basic structure that is especially easy for ChatGPT to solve. In this class, you may use ChatGPT to help with your homework. You may even ask for direct answers. However, there are a few things I do not want you to do:\n\nDo not copy ChatGPT’s answer directly into your homework. Your homework is graded for full credit if you turn it in, in any state, so turning in ChatGPT’s answers is unacceptable. I rather see half-written answers that show what you’re thinking than see a correct answer from ChatGPT.\nDo not stop once ChatGPT answered a question. If it gives an explanation, interact with it! Make sure you understand the thought process of ChatGPT. Try writing out the process to help cement it in your head. Check the answer with what we learn in class.\nDo not use ChatGPT on our quizzes! Hence, you need to really understand how to solve these problems even if you use ChatGPT on the homework.\n\nAt the end of the day, ChatGPT is a resource that will be available to you in a job and outside of school. Thus, we should use it as a tool in school as well! Let me know if ChatGPT helped you understand something! I would love to incorporate it into future classes!\nIf I notice your work closely resembles ChatGPT, I will ask that you either redo your work or accept zero points on the assignment.\n\n\n\n\n\n\nImportant\n\n\n\nYou can think of this class as assembling a toolbox. When a handyperson starts working for the first time, they need to acquire new tools. For their first few jobs, they might need help finding their tools, or remembering which tool is best used for what action. Eventually, they get to know their tools well, and using them appropriately becomes second nature.\nFor now, ChatGPT can help us find and use our tools, but we need to work towards using them as second nature!"
+    "text": "Course Policies and Resources\n\nLate Work Policy\nI encourage you to make your best effort to submit all assignments on time, but I understand circumstances arise that are beyond our control. Please see this Swansea University’s page on extenuating circumstances for some examples. Not all circumstances are covered here, so please reach out if you have questions. \n\nThe class will end on December 9, 2024. All coursework is expected to be completed by December 13, 2024 at 11pm. If you have extenuating circumstances, and need additional time to complete class assignments, please contact me. Together, we will come up with a plan for completion and to sort out registrar logistics.\nIf you have extenuating circumstances that may jeopardize your ability to do work for several weeks, please contact me. We will come up with a plan to keep you on track in the course and prevent any delay in your education.\nFor homework, I ask you to email me and the TAs directly about any late submissions. You can explain your circumstances and may ask us for an extension. I am very likely to grant an extension, but I want to emphasize how important it will be to stay on track with your homework! Your group is depending on you, and delaying homework may only add stress on the next homework!\nFor homework, you will have TWO no-questions-asked, 3-day extensions: one for the first assignment part and one for either the solutions or presentation. Please use this wisely! You just need to send me a quick email saying “I am using my no-questions-asked extension for Homework __ assignment/solutions/presentation.”\nIf you have a emergency involving your self, family, pet, friend, classmate, or anything/one deemed important to you, please do not worry about immediately contacting me. We can work something out after your emergency. If I contact you during an emergency, it is only because I am worried, and you do NOT need to respond until you are able. \n\n\n\nRegrade Policy\nIf you think a question was incorrectly graded, first compare your answer to the answer key. If you believe a re-grade would be appropriate, write an email to me containing the question and a short explanation as to why the question(s) was/were incorrectly graded. Deadline: One week after assignments were returned to class (late requests will not be considered).\n\n\nAttendance Policy\nYou are expected to attend class, participate in-class polls, and complete the exit ticket. For students who miss class or need a review, I will make video and audio recordings of lectures available. There are no guarantees against technical or other challenges for the recording availability or quality.\nYou will need to attend at least 12 classes in person. There are 19 classes total, so you are welcome to watch the recordings for up to 7 classes in lieu of in-person attendance. While I want attendance to be a flexible thing, I need to set certain requirements around in-person attendance to align with the school’s policy.\nThis is meant to keep you on track within the course and prevent a pile up of material. Make sure to complete the exit ticket at the end of class to demonstrate attendance.\n\n\nPlagiarism and Attribution\nPlease note that this section has been motivated by Dr. Steven Bedrick’s Course Policies and Grading site for BMI 525. (Note that this is a good example of informal attribution of someone else’s work.)\nIn this class, it is easy to use ChatGPT or other AI tools to solve your homework for you. Many problems follow a basic structure that is especially easy for ChatGPT to solve. In this class, you may use ChatGPT to help with your homework. You may even ask for direct answers. However, there are a few things I do not want you to do:\n\nDo not copy ChatGPT’s answer directly into your homework. Your homework is graded for full credit if you turn it in, in any state, so turning in ChatGPT’s answers is unacceptable. I rather see half-written answers that show what you’re thinking than see a correct answer from ChatGPT.\nDo not stop once ChatGPT answered a question. If it gives an explanation, interact with it! Make sure you understand the thought process of ChatGPT. Try writing out the process to help cement it in your head. Check the answer with what we learn in class.\nDo not use ChatGPT on our quizzes! Hence, you need to really understand how to solve these problems even if you use ChatGPT on the homework.\n\nAt the end of the day, ChatGPT is a resource that will be available to you in a job and outside of school. Thus, we should use it as a tool in school as well! Let me know if ChatGPT helped you understand something! I would love to incorporate it into future classes!\n\n\n\n\n\n\nImportant\n\n\n\nIf I notice your work closely resembles ChatGPT (or another student’s work), I will ask that you: (1) redo your work, (2) set up a meeting to explain your work to me, or (3) accept zero points on the assignment.\n\n\nYou can think of this class as assembling a toolbox. When a handyperson starts working for the first time, they need to acquire new tools. For their first few jobs, they might need help finding their tools, or remembering which tool is best used for what action. Eventually, they get to know their tools well, and using them appropriately becomes second nature.\nFor now, ChatGPT can help us find and use our tools, but we need to work towards using them as second nature!"
   },
   {
     "objectID": "syllabus.html#course-expectations",
@@ -7382,7 +7382,7 @@
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#variable-column-types",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Variable (column) types",
-    "text": "Variable (column) types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)\n\n\n\n\n\nView the structure of our data frame to see what the variable types are:\n\n\n\nstr(df)\n\n'data.frame':   3 obs. of  5 variables:\n $ IDs    : int  1 2 3\n $ gender : chr  \"male\" \"female\" \"Male\"\n $ age    : num  28 35.5 31\n $ trt    : chr  \"control\" \"1\" \"1\"\n $ Veteran: logi  FALSE TRUE TRUE"
+    "text": "Variable (column) types\n\nWe have not done much with R yet, but I want this to serve as a reference for you!\nVariable types (as we speak them) are translated by R a little differently\nBelow is the mapping of R types to variable types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#fishers-or-andersons-iris-data-set",
@@ -7466,84 +7466,84 @@
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of center: mean",
-    "text": "Measures of center: mean\n\nSample mean: the average value of observations\n\\[\\overline{x} = \\frac{x_1+x_2+\\cdots+x_n}{n} = \\sum_{i=1}^{n}\\frac{x_i}{n}\\]\nwhere \\(x_1, x_2, \\ldots, x_n\\) represent the \\(n\\) observed values in a sample\nExample: What is the mean age in the toy dataset df defined earlier?\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\nmean(df$age)\n\n[1] 31.5"
+    "text": "Measures of center: mean\n\n\nSample mean\n\n\nthe average value of observations\n\\[\\overline{x} = \\frac{x_1+x_2+\\cdots+x_n}{n} = \\sum_{i=1}^{n}\\frac{x_i}{n}\\]\nwhere \\(x_1, x_2, \\ldots, x_n\\) represent the \\(n\\) observed values in a sample\n\n\nExample: What is the mean clutch volume in the frog dataset?\n\\[\\overline{x} = \\sum_{i=1}^{431}\\frac{x_i}{431}\\]\n\nmean(frog$clutch.volume)\n\n[1] 882.474\n\n\nAnswer: the mean clutch volume is 882.5 \\(\\text{mm}^3\\)."
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-median",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-median",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of center: median",
-    "text": "Measures of center: median\n\n\nThe median is the middle value of the observations in a sample.\nThe median is the 50th percentile, meaning\n\n50% of observations lie below and\n50% of observations lie above the median.\n\n\n\n\n\n\n\nIf the number of observations is\n\nodd: the median is the middle observed value\neven: the median is the average of the two middle observed values\n\n\n\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\nmedian(df$age)\n\n[1] 31\n\nmedian(c(df$age, 67))\n\n[1] 33.25"
+    "text": "Measures of center: median\n\n\nMedian\n\n\n\nThe middle value of the observations in a sample\nThe median is the 50th percentile, meaning\n\n50% of observations lie below the median\n50% of observations lie above the median\n\n\n\n\n\nIf the number of observations is\n\nOdd: the median is the middle observed value\nEven: the median is the average of the two middle observed values\n\nWe can calculate the median clutch volume\n\n\nmedian(frog$clutch.volume)\n\n[1] 831.7638"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean-vs.-median",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mean-vs.-median",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of center: mean vs. median",
-    "text": "Measures of center: mean vs. median\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+    "text": "Measures of center: mean vs. median\n\n\nMean values will be pulled towards extreme values"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mode",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-center-mode",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of center: mode",
-    "text": "Measures of center: mode\nmode: the most frequent value in a dataset"
+    "text": "Measures of center: mode\n\n\nMode\n\n\nThe most frequent value in a dataset"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-standard-deviation-sd-13",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-standard-deviation-sd-13",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of spread: standard deviation (SD) (1/3)",
-    "text": "Measures of spread: standard deviation (SD) (1/3)\nstandard deviation is (approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\)."
+    "text": "Measures of spread: standard deviation (SD) (1/3)\n\n\nStandard deviation (SD)\n\n\n(Approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\)"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-23",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-23",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of spread: SD (2/3)",
-    "text": "Measures of spread: SD (2/3)\n\nThe sample variance \\(s^2\\) is the sum of squared deviations divided by the number of observations minus 1. \\[s^2 = \\frac{(x_1 - \\overline{x})^2+(x_2 - \\overline{x})^2+\\cdots+(x_n - \\overline{x})^2}{n-1} = \\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}\\] where \\(x_1, x_2, \\dots, x_n\\) represent the \\(n\\) observed values.\nThe standard deviation \\(s\\) is the square root of the variance. \\[s = \\sqrt{\\frac{({x_1 - \\overline{x})}^{2}+({x_2 - \\overline{x})}^{2}+\\cdots+({x_n - \\overline{x})}^{2}}{n-1}} = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}}\\]"
+    "text": "Measures of spread: SD (2/3)\n\nThe sample variance \\(s^2\\) is the sum of squared deviations divided by the number of observations minus 1. \\[s^2 = \\frac{(x_1 - \\overline{x})^2+(x_2 - \\overline{x})^2+\\cdots+(x_n - \\overline{x})^2}{n-1} = \\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}\\] where \\(x_1, x_2, \\dots, x_n\\) represent the \\(n\\) observed values.\n\n \n\nThe standard deviation \\(s\\) (or \\(sd\\)) is the square root of the variance. \\[s = \\sqrt{\\frac{({x_1 - \\overline{x})}^{2}+({x_2 - \\overline{x})}^{2}+\\cdots+({x_n - \\overline{x})}^{2}}{n-1}} = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}}\\]"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-33",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-sd-33",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of spread: SD (3/3)",
-    "text": "Measures of spread: SD (3/3)\n\n\n\nLet’s calculate the sample standard deviation for our toy example\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\n\n\n\nmean(df$age)\n\n[1] 31.5\n\nsd(df$age)\n\n[1] 3.774917\n\n\n\n\n\\(s = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}} =\\)"
+    "text": "Measures of spread: SD (3/3)\nLet’s calculate the sample standard deviation for the clutch volume:\n \n\\(s = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}} =\\)\n\nDoing this by hand would be really time consuming!\nR can easily do this for us!\n\n \n\nmean(frog$clutch.volume)\n\n[1] 882.474\n\nsd(frog$clutch.volume)\n\n[1] 379.0527\n\n\n \nAnswer: The standard deviation of the clutch volume is 379.05 mm3"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-12",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-12",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Empirical Rule: one way to think about the SD (1/2)",
-    "text": "Empirical Rule: one way to think about the SD (1/2)\n\n\n\nFor symmetric bell-shaped data, about\n\n68% of the data are within 1 SD of the mean\n95% of the data are within 2 SD’s of the mean\n99.7% of the data are within 3 SD’s of the mean\n\nThese percentages are based off of percentages of a true normal distribution.\n\n\n\n\nhttps://statistics-made-easy.com/empirical-rule/"
+    "text": "Empirical Rule: one way to think about the SD (1/2)\n\n\nFor symmetric bell-shaped data, about\n\n68% of the data are within 1 SD of the mean\n95% of the data are within 2 SD’s of the mean\n99.7% of the data are within 3 SD’s of the mean\n\nThese percentages are based off of percentages of a true normal distribution.\n\n\n\n\nhttps://statistics-made-easy.com/empirical-rule/"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-22",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd-22",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Empirical Rule: one way to think about the SD (2/2)",
-    "text": "Empirical Rule: one way to think about the SD (2/2)\n\n\n\nhist(iris$Sepal.Width)\n\n\n\n\n\n\nmean(iris$Sepal.Width)\n\n[1] 3.057333\n\nsd(iris$Sepal.Width)\n\n[1] 0.4358663"
+    "text": "Empirical Rule: one way to think about the SD (2/2)\n\n\n\nhist(frog$clutch.volume)\n\n\n\n\n\n\nmean(frog$clutch.volume)\n\n[1] 882.474\n\nsd(frog$clutch.volume)\n\n[1] 379.0527"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-interquartile-range-iqr-12",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-interquartile-range-iqr-12",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of spread: interquartile range (IQR) (1/2)",
-    "text": "Measures of spread: interquartile range (IQR) (1/2)\nThe \\(p^{th}\\) percentile is the observation such that \\(p\\%\\) of the remaining observations fall below this observation.\n\nThe first quartile \\(Q_1\\) is the \\(25^{th}\\) percentile.\nThe second quartile \\(Q_2\\), i.e., the median, is the \\(50^{th}\\) percentile.\nThe third quartile \\(Q_3\\) is the \\(75^{th}\\) percentile.\n\nThe interquartile range (IQR) is the distance between the third and first quartiles. \\[IQR = Q_3 - Q_1\\]\n\nIQR is the width of the middle half of the data"
+    "text": "Measures of spread: interquartile range (IQR) (1/2)\nThe \\(p^{th}\\) percentile is the observation such that \\(p\\%\\) of the remaining observations fall below this observation.\n\nThe first quartile \\(Q_1\\) is the \\(25^{th}\\) percentile.\nThe second quartile \\(Q_2\\), i.e., the median, is the \\(50^{th}\\) percentile.\nThe third quartile \\(Q_3\\) is the \\(75^{th}\\) percentile.\n\n\n\nInterquartile range (IQR)\n\n\nThe distance between the third and first quartiles. \\[IQR = Q_3 - Q_1\\]\n\nIQR is the width of the middle half of the data"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-iqr-22",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#measures-of-spread-iqr-22",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Measures of spread: IQR (2/2)",
-    "text": "Measures of spread: IQR (2/2)\n5 number summary\n\nsummary(iris$Sepal.Width)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  2.000   2.800   3.000   3.057   3.300   4.400 \n\n\n\n\n\n\n\n\n\n\nWhat is the IQR of the sepal widths?\n\nquantile(iris$Sepal.Width, c(.25, .75))\n\n25% 75% \n2.8 3.3 \n\ndiff(quantile(iris$Sepal.Width, c(.25, .75)))\n\n75% \n0.5 \n\nIQR(iris$Sepal.Width)\n\n[1] 0.5"
+    "text": "Measures of spread: IQR (2/2)\n5 number summary\n\nsummary(frog$clutch.volume)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  151.4   609.6   831.8   882.5  1096.5  2630.3 \n\n\n\\[IQR = Q_3 - Q_1 = 1096.5 - 609.6 = 486.9\\]\n \n\n\n\n\n\n\n\n\nWhat is the IQR of the sepal widths?\n\nquantile(frog$clutch.volume, c(.25, .75))\n\n      25%       75% \n 609.5773 1096.4782 \n\ndiff(quantile(frog$clutch.volume, c(.25, .75)))\n\n     75% \n486.9009 \n\n\n\nIQR(frog$clutch.volume)\n\n[1] 486.9009"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#robust-estimates",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#robust-estimates",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Robust estimates",
-    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nestimate\nrobust?\n\n\n\n\nmean\n\n\n\nmedian\n\n\n\nmode\n\n\n\nstandard deviaiton\n\n\n\nIQR\n\n\n\nrange\n\n\n\n\n\n\nLesson 2 Slides"
+    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nEstimate\nRobust?\n\n\n\n\nSample mean\n❌\n\n\nMedian\n✅\n\n\nStandard deviation\n❌\n\n\nIQR\n✅\n\n\n\n\nFor samples with many extreme values, the median and IQR might provide a more accurate sense of the center and spread"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_key_info.html",
@@ -11491,7 +11491,7 @@
     "href": "lessons/R02_Basics/R02_Basics.html#coding-in-the-console",
     "title": "R02: R Basics",
     "section": "Coding in the console",
-    "text": "Coding in the console\n\n\nWhen you first open R, the console should be empty.\n\n\n\n\n\n\nTyping and executing code in the console \n\nType code in the console (blue text)\nPress return to execute the code\nOutput shown below in black"
+    "text": "Coding in the console\n\n\nWhen you first open R, the console should be empty.\n\n\n\n\n\n\nTyping and executing code in the console\n\nType code in the console (blue text)\nPress return to execute the code\nOutput shown below in black"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#math-calculations-using-r",
@@ -11540,7 +11540,7 @@
     "href": "lessons/R02_Basics/R02_Basics.html#common-console-errors-22",
     "title": "R02: R Basics",
     "section": "Common console errors (2/2)",
-    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")\n\n\n\nR02 Slides"
+    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")"
   },
   {
     "objectID": "lessons/R5_Quarto_02/R04_Quarto_pkgs_data_import.html",
@@ -11750,7 +11750,7 @@
     "href": "lessons/R02_Basics/R02_Basics.html#lets-try-it-out",
     "title": "R02: R Basics",
     "section": "Let’s try it out!",
-    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22."
+    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22.\n\n \n\nDid you notice anything in the Environment section of Rstudio?"
   },
   {
     "objectID": "lessons/R02_Basics/R02_Basics.html#lets-try-it-out-1",
@@ -11764,7 +11764,7 @@
     "href": "lessons/R02_Basics/R02_Basics.html#now-lets-look-back-at-our-slides-on-summarizing-numerical-data",
     "title": "R02: R Basics",
     "section": "Now let’s look back at our slides on summarizing numerical data",
-    "text": "Now let’s look back at our slides on summarizing numerical data\n\nWe will calculate the ___ for c"
+    "text": "Now let’s look back at our slides on summarizing numerical data\n\nWe will calculate the mean for c\nLet’s also calculate the standard deviation for c\n\nRecall, our function is sd()\nUse ?sd in the console to identify the arguments for c"
   },
   {
     "objectID": "lessons/00_Welcome/00_Welcome.html#let-me-know-if-you-have-questions",
@@ -11883,7 +11883,7 @@
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#exploring-data-with-simple-tools",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Exploring data with simple tools",
-    "text": "Exploring data with simple tools\n\nTechniques for exploring and summarizing data differ for numerical versus categorical variables.\n\n \n\nNumerical and graphical summaries are useful for examining variables one at a time\n\nCan also be used for exploring the relationships between variables\n\n\n \n\nLet’s start looking into ways to summarize and explore numerical data!"
+    "text": "Exploring data with simple tools\n\nTechniques for exploring and summarizing data differ for numerical versus categorical variables.\n\n \n\nNumerical and graphical summaries are useful for examining variables one at a time\n\nCan also be used for exploring the relationships between variables\nNumerical summaries are not just for numerical variables (certain ones are used for categorical variables)\n\n\n \n\nLet’s start looking into ways to summarize and explore numerical data!\n\nWe will come back to categorical variables another day"
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables-and-data-matrices",
@@ -11897,7 +11897,7 @@
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-frog-study",
     "title": "Lesson 2: Intro to data & numerical summaries",
     "section": "Example: the frog study",
-    "text": "Example: the frog study\nIn evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring. This section introduces the dataset, which originates from a 2013 study about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced. Researchers were interested in investigating how maternal investment varies with altitude and collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded."
+    "text": "Example: the frog study\nIn evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.\n \nWe will be working with the frog dataset, which originates from a 2013 study about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.\n \nResearchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.\n \n \nFrom Introductory Statistics for the Life and Biomedical Sciences\n2013 study: Chen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715."
   },
   {
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-matrix",
@@ -11910,7 +11910,588 @@
     "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#frog-study-variables-and-their-descriptions",
     "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#frog-study-variables-and-their-descriptions",
     "title": "Lesson 2: Intro to data & numerical summaries",
-    "section": "Frog study: Variables and their descriptions",
-    "text": "Frog study: Variables and their descriptions\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\naltitude\nAltitude of the study site in meters above sea level\n\n\nlatitude\nLatitude of the study site measured in degrees\n\n\negg.size\nAverage diameter of an individual egg to the 0.01 mm\n\n\nclutch.size\nEstimated number of eggs in clutch\n\n\nclutch.volume\nVolume of egg clutch in mm³\n\n\nbody.size\nLength of mother frog in cm"
+    "section": "Frog study: variables and their descriptions",
+    "text": "Frog study: variables and their descriptions\n\nVariables are recorded characteristics for each observation\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\naltitude\nAltitude of the study site in meters above sea level\n\n\nlatitude\nLatitude of the study site measured in degrees\n\n\negg.size\nAverage diameter of an individual egg to the 0.01 mm\n\n\nclutch.size\nEstimated number of eggs in clutch\n\n\nclutch.volume\nVolume of egg clutch in mm³\n\n\nbody.size\nLength of egg-laying frog in cm"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-frame",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-frame",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Four rows from frog data frame",
+    "text": "Four rows from frog data frame\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables-and-data-frames",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#observations-variables-and-data-frames",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Observations, variables, and data frames",
+    "text": "Observations, variables, and data frames"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-frame-1",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#four-rows-from-frog-data-frame-1",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Four rows from frog data frame",
+    "text": "Four rows from frog data frame\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA\n\n\n\n \n\nEach row is an observation\nEach column is a variable\nAll the observations and variables together make a data frame (sometimes called data matrix)\n\n \n\nMissing values: NA means the measured value for body size in clutch #150 is missing"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-1",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-1",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-2",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-2",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-3",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-3",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R02_Basics/R02_Basics.html#fishers-or-andersons-iris-data-set",
+    "title": "R02: R Basics",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nVariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#view-the-iris-dataset",
+    "href": "lessons/R02_Basics/R02_Basics.html#view-the-iris-dataset",
+    "title": "R02: R Basics",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n \n\n\n\nView(iris)\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#data-structure",
+    "href": "lessons/R02_Basics/R02_Basics.html#data-structure",
+    "title": "R02: R Basics",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#data-set-summary",
+    "href": "lessons/R02_Basics/R02_Basics.html#data-set-summary",
+    "title": "R02: R Basics",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nCan we quickly summarize all the data?\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#data-set-info",
+    "href": "lessons/R02_Basics/R02_Basics.html#data-set-info",
+    "title": "R02: R Basics",
+    "section": "Data set info",
+    "text": "Data set info\n\nYou can use different functions to find information on a data frame\n\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\"     \n\n\n\nWe can also look at the Environment section"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R02_Basics/R02_Basics.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R02: R Basics",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R02_Basics/R02_Basics.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R02: R Basics",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#inline-code",
+    "href": "lessons/R02_Basics/R02_Basics.html#inline-code",
+    "title": "R02: R Basics",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#table-1-example",
+    "href": "lessons/R02_Basics/R02_Basics.html#table-1-example",
+    "title": "R02: R Basics",
+    "section": "Table 1 example",
+    "text": "Table 1 example\n\n\n\n\n\n\n\n\nAre We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-center-mean",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-center-mean",
+    "title": "R02: R Basics",
+    "section": "Measures of center: mean",
+    "text": "Measures of center: mean\n\nSample mean: the average value of observations\n\\[\\overline{x} = \\frac{x_1+x_2+\\cdots+x_n}{n} = \\sum_{i=1}^{n}\\frac{x_i}{n}\\]\nwhere \\(x_1, x_2, \\ldots, x_n\\) represent the \\(n\\) observed values in a sample\nExample: What is the mean age in the toy dataset df defined earlier?\n\n\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\nmean(df$age)\n\n[1] 31.5"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-center-median",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-center-median",
+    "title": "R02: R Basics",
+    "section": "Measures of center: median",
+    "text": "Measures of center: median\n\n\nThe median is the middle value of the observations in a sample.\nThe median is the 50th percentile, meaning\n\n50% of observations lie below and\n50% of observations lie above the median.\n\n\n\n\n\n\n\nIf the number of observations is\n\nodd: the median is the middle observed value\neven: the median is the average of the two middle observed values\n\n\n\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\nmedian(df$age)\n\n[1] 31\n\nmedian(c(df$age, 67))\n\n[1] 33.25"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-center-mean-vs.-median",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-center-mean-vs.-median",
+    "title": "R02: R Basics",
+    "section": "Measures of center: mean vs. median",
+    "text": "Measures of center: mean vs. median\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-center-mode",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-center-mode",
+    "title": "R02: R Basics",
+    "section": "Measures of center: mode",
+    "text": "Measures of center: mode\nmode: the most frequent value in a dataset"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-standard-deviation-sd-13",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-standard-deviation-sd-13",
+    "title": "R02: R Basics",
+    "section": "Measures of spread: standard deviation (SD) (1/3)",
+    "text": "Measures of spread: standard deviation (SD) (1/3)\nstandard deviation is (approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\)."
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-sd-23",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-sd-23",
+    "title": "R02: R Basics",
+    "section": "Measures of spread: SD (2/3)",
+    "text": "Measures of spread: SD (2/3)\n\nThe sample variance \\(s^2\\) is the sum of squared deviations divided by the number of observations minus 1. \\[s^2 = \\frac{(x_1 - \\overline{x})^2+(x_2 - \\overline{x})^2+\\cdots+(x_n - \\overline{x})^2}{n-1} = \\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}\\] where \\(x_1, x_2, \\dots, x_n\\) represent the \\(n\\) observed values.\nThe standard deviation \\(s\\) is the square root of the variance. \\[s = \\sqrt{\\frac{({x_1 - \\overline{x})}^{2}+({x_2 - \\overline{x})}^{2}+\\cdots+({x_n - \\overline{x})}^{2}}{n-1}} = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}}\\]"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-sd-33",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-sd-33",
+    "title": "R02: R Basics",
+    "section": "Measures of spread: SD (3/3)",
+    "text": "Measures of spread: SD (3/3)\n\n\n\nLet’s calculate the sample standard deviation for our toy example\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\n\n\n\nmean(df$age)\n\n[1] 31.5\n\nsd(df$age)\n\n[1] 3.774917\n\n\n\n\n\\(s = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}} =\\)"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#empirical-rule-one-way-to-think-about-the-sd-12",
+    "href": "lessons/R02_Basics/R02_Basics.html#empirical-rule-one-way-to-think-about-the-sd-12",
+    "title": "R02: R Basics",
+    "section": "Empirical Rule: one way to think about the SD (1/2)",
+    "text": "Empirical Rule: one way to think about the SD (1/2)\n\n\n\nFor symmetric bell-shaped data, about\n\n68% of the data are within 1 SD of the mean\n95% of the data are within 2 SD’s of the mean\n99.7% of the data are within 3 SD’s of the mean\n\nThese percentages are based off of percentages of a true normal distribution.\n\n\n\n\nhttps://statistics-made-easy.com/empirical-rule/"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#empirical-rule-one-way-to-think-about-the-sd-22",
+    "href": "lessons/R02_Basics/R02_Basics.html#empirical-rule-one-way-to-think-about-the-sd-22",
+    "title": "R02: R Basics",
+    "section": "Empirical Rule: one way to think about the SD (2/2)",
+    "text": "Empirical Rule: one way to think about the SD (2/2)\n\n\n\nhist(iris$Sepal.Width)\n\n\n\n\n\n\nmean(iris$Sepal.Width)\n\n[1] 3.057333\n\nsd(iris$Sepal.Width)\n\n[1] 0.4358663"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-interquartile-range-iqr-12",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-interquartile-range-iqr-12",
+    "title": "R02: R Basics",
+    "section": "Measures of spread: interquartile range (IQR) (1/2)",
+    "text": "Measures of spread: interquartile range (IQR) (1/2)\nThe \\(p^{th}\\) percentile is the observation such that \\(p\\%\\) of the remaining observations fall below this observation.\n\nThe first quartile \\(Q_1\\) is the \\(25^{th}\\) percentile.\nThe second quartile \\(Q_2\\), i.e., the median, is the \\(50^{th}\\) percentile.\nThe third quartile \\(Q_3\\) is the \\(75^{th}\\) percentile.\n\nThe interquartile range (IQR) is the distance between the third and first quartiles. \\[IQR = Q_3 - Q_1\\]\n\nIQR is the width of the middle half of the data"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-iqr-22",
+    "href": "lessons/R02_Basics/R02_Basics.html#measures-of-spread-iqr-22",
+    "title": "R02: R Basics",
+    "section": "Measures of spread: IQR (2/2)",
+    "text": "Measures of spread: IQR (2/2)\n5 number summary\n\nsummary(iris$Sepal.Width)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  2.000   2.800   3.000   3.057   3.300   4.400 \n\n\n\n\n\n\n\n\n\n\nWhat is the IQR of the sepal widths?\n\nquantile(iris$Sepal.Width, c(.25, .75))\n\n25% 75% \n2.8 3.3 \n\ndiff(quantile(iris$Sepal.Width, c(.25, .75)))\n\n75% \n0.5 \n\nIQR(iris$Sepal.Width)\n\n[1] 0.5"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#robust-estimates",
+    "href": "lessons/R02_Basics/R02_Basics.html#robust-estimates",
+    "title": "R02: R Basics",
+    "section": "Robust estimates",
+    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nestimate\nrobust?\n\n\n\n\nmean\n\n\n\nmedian\n\n\n\nmode\n\n\n\nstandard deviaiton\n\n\n\nIQR\n\n\n\nrange\n\n\n\n\n\n\nR02 Slides"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#summarizing-numerical-data-1",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#summarizing-numerical-data-1",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "(1.4) Summarizing numerical data",
+    "text": "(1.4) Summarizing numerical data\nMeasures of center & spread\n\nhttps://xkcd.com/937/\n\nWarning!\n\n\nI decided to keep some R code in these slides. It’s going to be a little confusing now, but I thought it would be a worthwhile reference as soon as we get through R02: R Basics"
+  },
+  {
+    "objectID": "lessons/R13_Table_1/R13_Table_1.html#table-1-example",
+    "href": "lessons/R13_Table_1/R13_Table_1.html#table-1-example",
+    "title": "R13: Making Table 1",
+    "section": "Table 1 example",
+    "text": "Table 1 example\n\n\n\n\n\n\n\n\nAre We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/\n\n\n\n\nR13 Slides"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#summarizing-numerical-data",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#summarizing-numerical-data",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "(1.4) Summarizing numerical data",
+    "text": "(1.4) Summarizing numerical data\nMeasures of center & spread\n\nhttps://xkcd.com/937/\n\nWarning!\n\n\nI decided to keep some R code in these slides. It’s going to be a little confusing now, but I thought it would be a worthwhile reference as soon as we get through R basics"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#section",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#section",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "",
+    "text": "Warning!\n\n\nI decided to keep some R code in these slides. It’s going to be a little confusing now, but I thought it would be a worthwhile reference as soon as we get through R basics"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-frog-study1",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#example-the-frog-study1",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Example: the frog study1",
+    "text": "Example: the frog study1\nIn evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.\n \nWe will be working with the frog dataset, which originates from a 2013 study2 about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.\n \nResearchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.\n \n \nFrom Introductory Statistics for the Life and Biomedical SciencesChen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715."
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#section-1",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#section-1",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "",
+    "text": "Warning!\n\n\nI decided to keep some R code in these slides. It’s going to be a little confusing now, but I thought it would be a worthwhile reference as soon as we get through R basics"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables-12",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables-12",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Types of variables (1/2)",
+    "text": "Types of variables (1/2)\n\n\n\n\nNumerical variables\n\n\nNumerical variables take on numerical values, such that numerical operations (sums, differences, etc.) are reasonable.\n\nDiscrete: only take on integer values (e.g., # of family members)\nContinuous: can take on any value within a specified range (e.g., height)\n\n\n\n\n\n\nCategorical variables\n\n\nCategorical variables take on values that are names or labels; the possible values are called the variable’s levels.\n\nOrdinal: exists some natural ordering of levels (e.g., level of education)\nNominal: no natural ordering of levels (e.g., gender identity)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables-22",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#types-of-variables-22",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Types of variables (2/2)",
+    "text": "Types of variables (2/2)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#variable-column-types-in-r",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#variable-column-types-in-r",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Variable (column) types in R",
+    "text": "Variable (column) types in R\n\nWe have not done much with R yet, but I want this to serve as a reference for you!\nVariable types (as we speak them) are translated by R a little differently\nBelow is the mapping of R types to variable types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#empirical-rule-one-way-to-think-about-the-sd",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Empirical Rule: one way to think about the SD",
+    "text": "Empirical Rule: one way to think about the SD\n\n\nFor symmetric bell-shaped data, about\n\n68% of the data are within 1 SD of the mean\n95% of the data are within 2 SD’s of the mean\n99.7% of the data are within 3 SD’s of the mean\n\nThese percentages are based off of percentages of a true normal distribution.\n\n\n\n\nhttps://statistics-made-easy.com/empirical-rule/"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-4",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries.html#poll-everywhere-question-4",
+    "title": "Lesson 2: Intro to data & numerical summaries",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4\n\n\nLesson 2 Slides"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#now-lets-use-some-functions-for-summary-statistics",
+    "href": "lessons/R02_Basics/R02_Basics.html#now-lets-use-some-functions-for-summary-statistics",
+    "title": "R02: R Basics",
+    "section": "Now let’s use some functions for summary statistics",
+    "text": "Now let’s use some functions for summary statistics\n\nWe will calculate the mean for c\nLet’s also calculate the standard deviation for c\n\nRecall, our function is sd()\nUse ?sd in the console to identify the arguments for c\n\n\n \n\nIf you have more time, you can try to calculate the median and IQR for c"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "href": "lessons/R02_Basics/R02_Basics.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "title": "R02: R Basics",
+    "section": "Take a moment to find the information on the iris data frame",
+    "text": "Take a moment to find the information on the iris data frame"
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#some-sources-for-useful-base-r-commands",
+    "href": "lessons/R02_Basics/R02_Basics.html#some-sources-for-useful-base-r-commands",
+    "title": "R02: R Basics",
+    "section": "Some sources for useful base R commands",
+    "text": "Some sources for useful base R commands\n\nhttps://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf\nhttps://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm\n\n\n\nR02 Slides"
+  },
+  {
+    "objectID": "lessons/R5_Quarto_02/R4_Quarto_02.html#inline-code",
+    "href": "lessons/R5_Quarto_02/R4_Quarto_02.html#inline-code",
+    "title": "R4: Quarto Continued",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R02_Basics/R02_Basics.html#we-have-an-option-of-where-to-write-our-code",
+    "href": "lessons/R02_Basics/R02_Basics.html#we-have-an-option-of-where-to-write-our-code",
+    "title": "R02: R Basics",
+    "section": "We have an option of where to write our code",
+    "text": "We have an option of where to write our code\n\nWe can use the console directly\n\nBUT our work won’t be saved\n\n\n \n\nWe can also open up a file called a .R file\n\nHit the new document looking button, then click R script\nNow we can type in the R script\nIn the R script, we need to press cmd + return or ctrl + return to execute the code\nOutput will show up in the Console!\n\n\n \n\nExample by Nicky here!"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#we-will-open-rstudio-on-our-computer-not-r",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#we-will-open-rstudio-on-our-computer-not-r",
+    "title": "R03: R Basics, part 2",
+    "section": "We will open RStudio on our computer (not R!)",
+    "text": "We will open RStudio on our computer (not R!)\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#rstudio-anatomy",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#rstudio-anatomy",
+    "title": "R03: R Basics, part 2",
+    "section": "RStudio anatomy",
+    "text": "RStudio anatomy\n\nEmma Rand"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#common-console-errors-12",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#common-console-errors-12",
+    "title": "R03: R Basics, part 2",
+    "section": "Common console errors (1/2)",
+    "text": "Common console errors (1/2)\nIncomplete commands\n\n\n\nWhen the console is waiting for a new command, the prompt line begins with &gt;\n\nIf the console prompt is +, then a previous command is incomplete\nYou can finish typing the command in the console window\n\n\n\nExample:\n\n&gt; 3 + (2*6\n+ )\n\n[1] 15"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#common-console-errors-22",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#common-console-errors-22",
+    "title": "R03: R Basics, part 2",
+    "section": "Common console errors (2/2)",
+    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#fishers-or-andersons-iris-data-set",
+    "title": "R03: R Basics, part 2",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nVariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#view-the-iris-dataset",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#view-the-iris-dataset",
+    "title": "R03: R Basics, part 2",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n \n\n\n\nView(iris)\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#data-structure",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#data-structure",
+    "title": "R03: R Basics, part 2",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#data-set-summary",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#data-set-summary",
+    "title": "R03: R Basics, part 2",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nCan we quickly summarize all the data?\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#data-set-info",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#data-set-info",
+    "title": "R03: R Basics, part 2",
+    "section": "Data set info",
+    "text": "Data set info\n\nYou can use different functions to find information on a data frame\n\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\"     \n\n\n\nWe can also look at the Environment section"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "title": "R03: R Basics, part 2",
+    "section": "Take a moment to find the information on the iris data frame",
+    "text": "Take a moment to find the information on the iris data frame"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R03: R Basics, part 2",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R03: R Basics, part 2",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#some-sources-for-useful-base-r-commands",
+    "href": "lessons/R03_Basics_02/R02_Basics_02.html#some-sources-for-useful-base-r-commands",
+    "title": "R03: R Basics, part 2",
+    "section": "Some sources for useful base R commands",
+    "text": "Some sources for useful base R commands\n\nhttps://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf\nhttps://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm\n\n\n\nR03 Slides"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html",
+    "title": "R02: R Basics",
+    "section": "",
+    "text": "Modern Dive"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#we-will-open-rstudio-on-our-computer-not-r",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#we-will-open-rstudio-on-our-computer-not-r",
+    "title": "R02: R Basics",
+    "section": "We will open RStudio on our computer (not R!)",
+    "text": "We will open RStudio on our computer (not R!)\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#rstudio-anatomy",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#rstudio-anatomy",
+    "title": "R02: R Basics",
+    "section": "RStudio anatomy",
+    "text": "RStudio anatomy\n\nEmma Rand"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#lets-code-r-basics",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#lets-code-r-basics",
+    "title": "R02: R Basics",
+    "section": "Let’s code! R Basics",
+    "text": "Let’s code! R Basics\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#coding-in-the-console",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#coding-in-the-console",
+    "title": "R02: R Basics",
+    "section": "Coding in the console",
+    "text": "Coding in the console\n\n\nWhen you first open R, the console should be empty.\n\n\n\n\n\n\nTyping and executing code in the console\n\nType code in the console (blue text)\nPress return to execute the code\nOutput shown below in black"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#we-have-an-option-of-where-to-write-our-code",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#we-have-an-option-of-where-to-write-our-code",
+    "title": "R02: R Basics",
+    "section": "We have an option of where to write our code",
+    "text": "We have an option of where to write our code\n\nWe can use the console directly\n\nBUT our work won’t be saved\n\n\n \n\nWe can also open up a file called a .R file\n\nHit the new document looking button, then click R script\nNow we can type in the R script\nIn the R script, we need to press cmd + return or ctrl + return to execute the code\nOutput will show up in the Console!\n\n\n \n\nExample by Nicky here!"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#math-calculations-using-r",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#math-calculations-using-r",
+    "title": "R02: R Basics",
+    "section": "Math calculations using R",
+    "text": "Math calculations using R\n\nWe can use R as a calculator!!\nRules for order of operations are followed\nSpaces between numbers and characters are ignored\n\n \n\n\n\n10^2\n\n[1] 100\n\n3 ^ 7\n\n[1] 2187\n\n6/9\n\n[1] 0.6666667\n\n9-43\n\n[1] -34\n\n\n\n\n4^3-2* 7+9 /2\n\n[1] 54.5\n\n\nThe equation above is computed as \\[4^3 − (2 \\cdot 7) + \\frac{9}{2}\\]"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#variables-saved-r-objects",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#variables-saved-r-objects",
+    "title": "R02: R Basics",
+    "section": "Variables (saved R objects)",
+    "text": "Variables (saved R objects)\nVariables are used to store data, figures, model output, etc.\n\n\n\nCan assign a variable using either = or &lt;-\n\nUsing &lt;- is preferable for certain occasions\nI usually just use = because less typing hehe\n\n\nAssign just one value:\n\nx = 5\nx\n\n[1] 5\n\nx &lt;- 5\nx\n\n[1] 5\n\n\n\n\n\nAssign a vector of values\n\nConsecutive integers using :\n\n\na &lt;- 3:10\na\n\n[1]  3  4  5  6  7  8  9 10\n\n\n\nConcatenate a string of numbers\n\n\nb &lt;- c(5, 12, 2, 100, 8)\nb\n\n[1]   5  12   2 100   8"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#lets-try-it-out",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#lets-try-it-out",
+    "title": "R02: R Basics",
+    "section": "Let’s try it out!",
+    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22.\n\n \n\nDid you notice anything in the Environment section of Rstudio?"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#doing-math-with-variables",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#doing-math-with-variables",
+    "title": "R02: R Basics",
+    "section": "Doing math with variables",
+    "text": "Doing math with variables\n\n\nMath using variables with just one value\n\nx &lt;- 5\nx\n\n[1] 5\n\nx + 3\n\n[1] 8\n\ny &lt;- x^2\ny\n\n[1] 25\n\n\n\nMath on vectors of values:\nelement-wise computation\n\na &lt;- 3:6\na\n\n[1] 3 4 5 6\n\na+2; a*3\n\n[1] 5 6 7 8\n\n\n[1]  9 12 15 18\n\na*a\n\n[1]  9 16 25 36"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#lets-try-it-out-1",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#lets-try-it-out-1",
+    "title": "R02: R Basics",
+    "section": "Let’s try it out!",
+    "text": "Let’s try it out!\n\nUse the variable name y to find the addition of y and 5\nAdd 5 to the vector c"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#variables-can-include-text-characters",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#variables-can-include-text-characters",
+    "title": "R02: R Basics",
+    "section": "Variables can include text (characters)",
+    "text": "Variables can include text (characters)\n\nhi &lt;- \"hello\"\nhi\n\n[1] \"hello\"\n\ngreetings &lt;- c(\"Guten Tag\", \"Hola\", hi)\ngreetings\n\n[1] \"Guten Tag\" \"Hola\"      \"hello\""
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#using-functions",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#using-functions",
+    "title": "R02: R Basics",
+    "section": "Using functions",
+    "text": "Using functions\n\nmean() is an example of a function\nfunctions have “arguments” that can be specified within the ()\n?mean in console will show help file for mean()\n\n\n\nFunction arguments specified by name:\n\nmean(x = 1:4)\n\n[1] 2.5\n\n\n\nseq(from = 1, to = 12, by = 3)\n\n[1]  1  4  7 10\n\nseq(by = 3, to = 12, from = 1)\n\n[1]  1  4  7 10\n\n\n\nFunction arguments not specified, but listed in order:\n\nmean(1:4)\n\n[1] 2.5\n\n\n\nseq(1, 12, 3)\n\n[1]  1  4  7 10"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#now-lets-use-some-functions-for-summary-statistics",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#now-lets-use-some-functions-for-summary-statistics",
+    "title": "R02: R Basics",
+    "section": "Now let’s use some functions for summary statistics",
+    "text": "Now let’s use some functions for summary statistics\n\nWe will calculate the mean for c\nLet’s also calculate the standard deviation for c\n\nRecall, our function is sd()\nUse ?sd in the console to identify the arguments for c\n\n\n \n\nIf you have more time, you can try to calculate the median and IQR for c"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#common-console-errors-12",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#common-console-errors-12",
+    "title": "R02: R Basics",
+    "section": "Common console errors (1/2)",
+    "text": "Common console errors (1/2)\nIncomplete commands\n\n\n\nWhen the console is waiting for a new command, the prompt line begins with &gt;\n\nIf the console prompt is +, then a previous command is incomplete\nYou can finish typing the command in the console window\n\n\n\nExample:\n\n&gt; 3 + (2*6\n+ )\n\n[1] 15"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#common-console-errors-22",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#common-console-errors-22",
+    "title": "R02: R Basics",
+    "section": "Common console errors (2/2)",
+    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#fishers-or-andersons-iris-data-set",
+    "title": "R02: R Basics",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nVariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#view-the-iris-dataset",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#view-the-iris-dataset",
+    "title": "R02: R Basics",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n \n\n\n\nView(iris)\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#data-structure",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#data-structure",
+    "title": "R02: R Basics",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#data-set-summary",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#data-set-summary",
+    "title": "R02: R Basics",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nCan we quickly summarize all the data?\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#data-set-info",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#data-set-info",
+    "title": "R02: R Basics",
+    "section": "Data set info",
+    "text": "Data set info\n\nYou can use different functions to find information on a data frame\n\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\"     \n\n\n\nWe can also look at the Environment section"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "title": "R02: R Basics",
+    "section": "Take a moment to find the information on the iris data frame",
+    "text": "Take a moment to find the information on the iris data frame"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R02: R Basics",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R02: R Basics",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#some-sources-for-useful-base-r-commands",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#some-sources-for-useful-base-r-commands",
+    "title": "R02: R Basics",
+    "section": "Some sources for useful base R commands",
+    "text": "Some sources for useful base R commands\n\nhttps://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf\nhttps://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#there-are-many-ways-to-get-help-when-you-are-stuck",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#there-are-many-ways-to-get-help-when-you-are-stuck",
+    "title": "R02: R Basics",
+    "section": "There are many ways to get help when you are stuck",
+    "text": "There are many ways to get help when you are stuck\n\nUse the ? in front of the function name to get more information!\n\nUsually if I need help with the arguments for a function\n\n\n \n\nGoogle or go to stackoverflow.com\n\nOften when I Google, I get redirected to something like stackoverflow\nFor example, let’s say my mean function was outputting NA. I would Google something like “keep getting NA for mean in R” Then end up here\n\n\n \n\nI can also go to my favoriate AI tool to get help\n\nThis is most useful for getting code started if it’s complicated (we’re not really at that level yet)\nI asked ChatGPT “can you give me the code for calculating the mean in R”\n\nThis is what I got\n\nFor code generation, it gives you WAY too much\nI also asked ChatGPT “Why is the mean function in R giving me an NA?” (in above link)"
+  },
+  {
+    "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#more-on-ai-usage",
+    "href": "lessons/R02_Basics_01/R02_Basics_01.html#more-on-ai-usage",
+    "title": "R02: R Basics",
+    "section": "More on AI usage",
+    "text": "More on AI usage\n\nIn the syllabus\nIf you cannot trace code back to the class notes, then do NOT use it!\n\nThere’s different coding practices and functions out there\nI’m giving you a specific set of tools that will serve as a good introduction\nYou should be able to explain all your code and work\n\n\n\n\nR02 Slides"
   }
 ]

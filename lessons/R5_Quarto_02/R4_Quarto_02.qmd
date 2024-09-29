@@ -26,6 +26,30 @@ execute:
 
 ## Recall our Quarto document from last class
 
+## Inline code
+
+::: {style="font-size: 90%;"}
+-   With markdown you can also report **R code output inline** with the text instead of using a chunk.
+
+::: columns
+::: {.column width="50%"}
+Text in editor:
+
+![](../img_slides/screenshot_code_inline_petalwidth.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Output:
+
+The mean petal width for all 3 species combined is `r round(mean(iris$Petal.Width),1)` (SD = `r round(sd(iris$Petal.Width),1)`) cm.
+:::
+:::
+
+-   Reporting summary statistics this way in a report, makes the numbers computationally reproducible.
+-   For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.
+:::
+
+
 # 3 types of Quarto content
 
 1. [*Text*, lists, images, tables, links]{style="color:darkorange"}

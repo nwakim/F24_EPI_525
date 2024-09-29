@@ -408,7 +408,14 @@ Meike Niederhausen and Nicky Wakim
 <section id="we-will-open-rstudio-on-our-computer-not-r" class="slide level2">
 <h2>We will open RStudio on our computer (not R!)</h2>
 
-<img data-src="../img_slides/01_md_r.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://moderndive.com/1-getting-started.html#using-r-via-rstudio">Modern Dive</a></p></section>
+<img data-src="../img_slides/01_md_r.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://moderndive.com/1-getting-started.html#using-r-via-rstudio">Modern Dive</a></p><div class="cell">
+<style type="text/css">
+.reveal code {
+  max-height: 100% !important;
+}
+</style>
+</div>
+</section>
 <section id="rstudio-anatomy" class="slide level2">
 <h2>RStudio anatomy</h2>
 
@@ -416,7 +423,7 @@ Meike Niederhausen and Nicky Wakim
 <section id="lets-code-r-basics" class="slide level2">
 <h2>Let’s code! R Basics</h2>
 
-<img data-src="../img_slides/horst_timeline_Rlearning.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/everything-else">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
+<img data-src="../img_slides/horst_timeline_Rlearning.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/everything-else">Artwork by @allison_horst</a></p></section>
 <section id="coding-in-the-console" class="slide level2">
 <h2>Coding in the console</h2>
 <div class="columns">
@@ -428,7 +435,7 @@ Meike Niederhausen and Nicky Wakim
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
-<p><strong>Typing and executing code in the console </strong></p>
+<p><strong>Typing and executing code in the console</strong></p>
 <ul>
 <li>Type code in the console (blue text)</li>
 <li>Press <strong>return</strong> to execute the code</li>
@@ -441,6 +448,29 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </div>
+</section>
+<section id="we-have-an-option-of-where-to-write-our-code" class="slide level2">
+<h2>We have an option of where to write our code</h2>
+<ul>
+<li>We can use the console directly
+<ul>
+<li>BUT our work won’t be saved</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>We can also open up a file called a <code>.R</code> file
+<ul>
+<li>Hit the new document looking button, then click <code>R script</code></li>
+<li>Now we can type in the R script</li>
+<li>In the R script, we need to press <strong>cmd + return</strong> or <strong>ctrl + return</strong> to execute the code</li>
+<li>Output will show up in the Console!</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Example by Nicky here!</li>
+</ul>
 </section>
 <section id="math-calculations-using-r" class="slide level2">
 <h2>Math calculations using R</h2>
@@ -540,6 +570,10 @@ Meike Niederhausen and Nicky Wakim
 <li>Create a new variable <code>c</code> that is assigned the vector of values 15 through 20</li>
 <li>Create a new variable <code>d</code> that is assigned the vector of values 16 through 19 and 22.</li>
 </ul>
+<p>&nbsp;</p>
+<ul>
+<li>Did you notice anything in the <code>Environment</code> section of Rstudio?</li>
+</ul>
 </section>
 <section id="doing-math-with-variables" class="slide level2">
 <h2>Doing math with variables</h2>
@@ -617,7 +651,7 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Function <font color="darkorange">arguments specified</font> by name:</p>
+<p>Function <font color="#BF396F">arguments specified</font> by name:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">mean</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -635,7 +669,7 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<p>Function <font color="darkorange">arguments not specified</font>, but listed in order:</p>
+<p>Function <font color="#BF396F">arguments not specified</font>, but listed in order:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">mean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -651,11 +685,25 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="now-lets-look-back-at-our-slides-on-summarizing-numerical-data" class="slide level2">
-<h2>Now let’s look back at our slides on summarizing numerical data</h2>
+<section id="now-lets-use-some-functions-for-summary-statistics" class="slide level2">
+<h2>Now let’s use some functions for summary statistics</h2>
 <ul>
-<li>We will calculate the ___ for <code>c</code></li>
+<li>We will calculate the mean for <code>c</code></li>
+<li>Let’s also calculate the standard deviation for <code>c</code>
+<ul>
+<li>Recall, our function is <code>sd()</code></li>
+<li>Use <code>?sd</code> in the console to identify the arguments for <code>c</code></li>
+</ul></li>
 </ul>
+<p>&nbsp;</p>
+<ul>
+<li>If you have more time, you can try to calculate the median and IQR for <code>c</code></li>
+</ul>
+</section>
+<section>
+<section id="some-more-r-basics" class="title-slide slide level1 center">
+<h1>Some more R basics</h1>
+
 </section>
 <section id="common-console-errors-12" class="slide level2">
 <h2>Common console errors (1/2)</h2>
@@ -704,11 +752,184 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co"># correct code is: install.packages("dplyr")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section></section>
+<section>
+<section id="lets-try-with-an-example-dataset" class="title-slide slide level1 center">
+<h1>Let’s try with an example dataset</h1>
+
+</section>
+<section id="fishers-or-andersons-iris-data-set" class="slide level2">
+<h2>Fisher’s (or Anderson’s) Iris data set</h2>
+<p>Data description:</p>
+<ul>
+<li>n = 150</li>
+<li>3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+<ul>
+<li>50 measurements of each type of Iris</li>
+</ul></li>
+<li><strong>Variables</strong>:
+<ul>
+<li>sepal length, sepal width, petal length, petal width, and species</li>
+</ul></li>
+</ul>
+<center>
+<img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%">
+</center>
+<p><a href="https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project">Gareth Duffy</a></p>
+</section>
+<section id="view-the-iris-dataset" class="slide level2">
+<h2>View the <code>iris</code> dataset</h2>
+<ul>
+<li>The <code>iris</code> dataset is already pre-loaded in <em>base</em> R and ready to use.</li>
+<li>Type the following command in the console window
+<ul>
+<li><em>Warning: this command cannot be rendered. It will give an error.</em></li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<div class="columns">
+<div class="column" style="width:37%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">View</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A new tab in the scripting window should appear with the <code>iris</code> dataset.</p>
+</div><div class="column" style="width:63%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/screenshot_iris_View.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="data-structure" class="slide level2">
+<h2>Data structure</h2>
+<ul>
+<li>What are the different <strong>variable types</strong> in this data set?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">str</span>(iris)   <span class="co"># structure of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="data-set-summary" class="slide level2">
+<h2>Data set summary</h2>
+<ul>
+<li>Can we quickly summarize all the data?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+       Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+                
+                
+                </code></pre>
+</div>
+</div>
+</section>
+<section id="data-set-info" class="slide level2">
+<h2>Data set info</h2>
+<ul>
+<li>You can use different functions to find information on a data frame</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">dim</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150   5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">nrow</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="fu">ncol</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="fu">names</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"     </code></pre>
+</div>
+</div>
+<ul>
+<li>We can also look at the <code>Environment</code> section</li>
+</ul>
+</section>
+<section id="take-a-moment-to-find-the-information-on-the-iris-data-frame" class="slide level2">
+<h2>Take a moment to find the information on the iris data frame</h2>
+</section>
+<section id="view-the-beginning-or-end-of-a-dataset" class="slide level2">
+<h2>View the beginning or end of a dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="fu">tail</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+145          6.7         3.3          5.7         2.5 virginica
+146          6.7         3.0          5.2         2.3 virginica
+147          6.3         2.5          5.0         1.9 virginica
+148          6.5         3.0          5.2         2.0 virginica
+149          6.2         3.4          5.4         2.3 virginica
+150          5.9         3.0          5.1         1.8 virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" class="slide level2">
+<h2>Specify how many rows to view at beginning or end of a dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="fu">head</span>(iris, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="fu">tail</span>(iris, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+149          6.2         3.4          5.4         2.3 virginica
+150          5.9         3.0          5.1         1.8 virginica</code></pre>
+</div>
+</div>
+</section>
+<section id="some-sources-for-useful-base-r-commands" class="slide level2">
+<h2>Some sources for useful base R commands</h2>
+<ul>
+<li><a href="https://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf" class="uri">https://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf</a></li>
+<li><a href="https://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm" class="uri">https://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm</a></li>
+</ul>
 
 <div class="footer footer-default">
 <p>R02 Slides</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

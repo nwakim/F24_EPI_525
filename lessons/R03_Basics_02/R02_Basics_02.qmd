@@ -1,0 +1,188 @@
+---
+title: "R03: R Basics, part 2"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/7/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R03 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+```
+
+## We will open RStudio on our computer (not R!)
+
+![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
+
+## RStudio anatomy
+
+![[Emma Rand](https://buzzrbeeline.blog/2018/07/04/rstudio-anatomy/)](../img_slides/RStudio_Anatomy.svg){fig-align="center"}
+
+## Common console errors (1/2)
+
+**Incomplete commands**
+
+::: columns
+::: {.column width="50%"}
+-   When the console is waiting for a new command, the prompt line begins with `>`
+    -   If the console prompt is `+`, then a previous command is incomplete
+    -   You can finish typing the command in the console window
+:::
+
+::: {.column width="50%"}
+Example:
+
+```{r}
+#| error: true
+#| message: true
+#| warning: true
+#| prompt: true
+3 + (2*6
+)
+```
+:::
+:::
+
+## Common console errors (2/2)
+
+**Object is not found**
+
+-   This happens when text is entered for a non-existent variable (object)
+
+Example:
+
+```{r}
+#| error: true
+hello
+```
+
+-   Can be due to missing quotes
+
+```{r}
+#| error: true
+install.packages(dplyr) 
+# correct code is: install.packages("dplyr")
+```
+
+# Let's try with an example dataset
+
+## Fisher's (or Anderson's) Iris data set
+
+Data description:
+
+-   n = 150
+-   3 species of Iris flowers (Setosa, Virginica, and Versicolour)
+    -   50 measurements of each type of Iris
+-   **Variables**:
+    -   sepal length, sepal width, petal length, petal width, and species
+
+<center><img src="../img_slides/Iris_types.png" width="70%" height="50%"/><img src="../img_slides/Iris_parts.png" width="28%" height="50%"/></center>
+
+[Gareth Duffy](https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project)
+
+## View the `iris` dataset
+
+-   The `iris` dataset is already pre-loaded in *base* R and ready to use.
+-   Type the following command in the console window
+    -   *Warning: this command cannot be rendered. It will give an error.*
+
+ 
+
+::: columns
+::: {.column width="37%"}
+```{r}
+#| eval: false
+
+View(iris)
+```
+
+A new tab in the scripting window should appear with the `iris` dataset.
+:::
+
+::: {.column width="63%"}
+![](../img_slides/screenshot_iris_View.png){fig-align="center"}
+:::
+:::
+
+## Data structure
+
+-   What are the different **variable types** in this data set?
+
+\
+
+```{r}
+str(iris)   # structure of data
+```
+
+## Data set summary
+
+-   Can we quickly summarize all the data?
+
+```{r}
+summary(iris)
+```
+
+## Data set info
+
+-   You can use different functions to find information on a data frame
+
+```{r}
+dim(iris)
+nrow(iris)
+ncol(iris)
+names(iris)
+```
+
+-   We can also look at the `Environment` section
+
+## Take a moment to find the information on the iris data frame
+
+## View the beginning or end of a dataset
+
+```{r}
+head(iris)
+tail(iris)
+```
+
+## Specify how many rows to view at beginning or end of a dataset
+
+```{r}
+head(iris, 3)
+tail(iris, 2)
+```
+
+## Some sources for useful base R commands
+
+-   <https://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf>
+-   <https://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm>
