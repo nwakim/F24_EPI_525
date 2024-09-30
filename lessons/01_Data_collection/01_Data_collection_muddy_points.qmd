@@ -1,0 +1,46 @@
+---
+title: "Muddy Points"
+subtitle: "Lesson 1: Data collection"
+date: "09/30/2024"
+date-modified: "today"
+format: 
+  html:
+    link-external-newwindow: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Our long delayed example of cluster sampling, stratified sampling, and multistage
+
+This answer comes from our sweet, sweet friend, ChatGPT: 
+
+Here’s a set of examples focused on **studying patient satisfaction within a single hospital**:
+
+### 1. **Cluster Sampling:**
+   **Example**: A researcher wants to assess patient satisfaction within a large hospital but cannot survey every patient. The researcher could:
+   
+   - Divide the hospital into **floors** (clusters).
+   - Randomly select a few floors.
+   - Survey **all patients** on the selected floors.
+
+### 2. **Stratified Sampling:**
+   **Example**: The researcher wants to ensure representation of patients from different **types of care** (e.g., inpatient, outpatient, emergency). The researcher could:
+   
+   - Divide the patients into **strata based on the type of care** they received.
+   - Then, randomly select patients from each care category to ensure proportional representation in the sample.
+
+### 3. **Multistage Sampling:**
+   **Example**: To study patient satisfaction within the hospital, the researcher could use multistage sampling:
+   
+   - **First stage**: Randomly select **departments** (e.g., Oncology, Surgery, Cardiology).
+   - **Second stage**: Randomly select **wards** or **units** within each department (e.g., ICU, general ward).
+   - **Final stage**: Randomly select **patients** from each unit to survey about their satisfaction with the care received.
+
+This example is specific to a single hospital, using different sampling techniques to focus on patient satisfaction within various departments and care types.
+
+### Now back to Nicky
+
+One of the key pieces of info here is that we are sampling **patients**! In the cluster sampling, we survey all patients in our randomly chosen cluster. In stratified, we set the subgroups, but we only sample some of the patients in each subgroup!
+
+In multistage, there is a step where we randomly chose different clusters (like the department or wards) THEN we randomly select patients within those chosen clusters. Each stage can be identified with a different sampling technique (outside of multistage). Can you map each stage to their respective sampling method?
+
