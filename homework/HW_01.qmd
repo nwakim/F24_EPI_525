@@ -22,36 +22,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Due 10/10/24**
 
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_01.qmd).
-
 
 ## Directions
 
-* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
-* For each question, make sure to include all code and resulting output in the html file to support your answers. 
-* Use the assignment .qmd file as a template for your own assignment.
-
-:::{.callout-tip}
-It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
-:::
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/BSTA-550-1-14926-F24/tool/c8320b13-1b6d-42ed-9c19-134634cf25af) Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
 
 
 # Book exercises
 
 * Exercises are in the last section of the chapter. 
-* Exercises are numbered as chapter#.exercise#. For example, exercise 1.2 is Chapter 1 #2, which is on pg. 75. 
-
-## 1.2 Sinusitis and antibiotics, Part I.
-
-* Show the work of your calculations **using R code within a code chunk**. Make sure that both your code and output are visible in the rendered html file.
-* Write your answers in complete sentences as if communicating the results to a collaborator.
-* If you are having difficulty with exercise 1.2, take a look at exercise 1.1, whose answers are at the back of the book.
-
-
+* Exercises are numbered as chapter#.exercise#. For example, exercise 1.4 is Chapter 1 #4, which is on pg. 76. 
 
 ## 1.4 Buteyko method, study components
-
-
 
 
 ## 1.8 Smoking habits of UK residents
