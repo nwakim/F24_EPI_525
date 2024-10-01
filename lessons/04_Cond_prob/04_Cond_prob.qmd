@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5: Conditional Probability"
+title: "Lesson 4: Conditional Probability"
 subtitle: "TB sections 2.2"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
@@ -21,7 +21,19 @@ execute:
   freeze: auto
 ---
 
-## Eaxample
+https://github.com/OI-Biostat/oi_biostat_text/blob/master/ch_probability_oi_biostat/TeX/ch_probability_oi_biostat.tex
+
+## Marginal and joint probabilities
+
+## Defining conditional probability
+
+## General multiplication rule
+
+## Independence and conditional probability
+
+## Bayes’ Theorem
+
+## Example
 
 ::: example
 **Example 1**. ***How accurate is rapid testing for COVID-19?** *

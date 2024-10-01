@@ -1,7 +1,7 @@
 ---
 title: "Lesson 3: Defining Probability"
 subtitle: "TB sections 2.1"
-author: "Meike Niederhausen and Nicky Wakim"
+author: "Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
 date: "10/7/2024"
@@ -19,183 +19,265 @@ format:
 execute:
   echo: true
   freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
+## Let's start with an example!
+
+::: columns
+::: {.column width="35%"}
 ::: example
-**Example 1**. ***Rolling fair 6-sided dice***
+::: ex-ttl
+**Example: Rolling fair 6-sided dice**
+:::
 
-1.  *Suppose you roll a fair 6-sided die.*
+::: ex-cont
+1.  Suppose you roll a fair 6-sided die.
 
-    1.  *What are all the possible outcomes?*
+    a.  What is the probability that you roll a 4?
 
-    2.  *What is the probability that you roll a 4?*
+    b.  What is the probability that you roll an even number?
 
-    3.  *What is the probability that you roll an even number?*
+    c.  What is the probability that you did not roll a 3?
 
-    4.  *What is the probability that you roll an even number and a 2?*
+2.  Suppose you roll **two** fair 6-sided dice.
 
-    5.  *What is the probability that you roll a 2 and a 5?*
-
-    6.  *What is the probability that you did not roll a 3?*
-
-2.  *Suppose you roll **two** fair 6-sided dice.*
-
-    1.  *What is the probability that you roll a 2 with the first die
-        and a 5 with the second die?*
-
-    2.  *What is the probability that the sum of the two dice is 10?*
+    a.  What is the probability that you roll a 2 with the first die and
+        a 5 with the second die?
+:::
+:::
+:::
 :::
 
 ## What is a probability?
 
 ::: definition
-**Definition 2**. *The **probability** of an outcome is the proportion
-of times the outcome would occur if the random phenomenon could be
-observed an infinite number of times.*
+::: def-ttl
+Definition: Probability
 :::
 
-**Law of Large Numbers** As more observations are collected, the
-proportion of occurrences with a particular outcome converges to the
-probability $p$ of that outcome.
-
-## Probabilities of Equally Likely Outcomes
-
-## Probability Definitions and Rules
-
-1.  The **sample space** $S$ is the set of all possible outcomes.
-
-2.  **Events** are sets or collections of outcomes.
-
-3.  **Disjoint** or **mutually exclusive** events Events $A$ and $B$ are
-    disjoint (or, mutually exclusive) if
-
-4.  **Addition Rule for Disjoint Events** If $A$ and $B$ are disjoint
-    events, then the probability that at least one of them will occur is
-
-5.  **General Addition Rule** If $A$ and $B$ are any two events,
-    disjoint or not, then the probability that at least one of them will
-    occur is
-
-6.  **Complement** The complement of event $A$ is denoted $A^C$, and
-    $A^C$ represents all outcomes not in $A$.
-
-::: example
-**Example 3**. ***Diabetes and hypertension.** Diabetes and hypertension
-are two of the most common diseases in Western, industrialized nations.
-In the United States, approximately 9% of the population have diabetes,
-while about 30% of adults have high blood pressure. The two diseases
-frequently occur together: an estimated 6% of the population have both
-diabetes and hypertension. Let D represent the event of having diabetes,
-and H the event of having hypertension.*
-
-1.  *Are the events having hypertension and having diabetes mutually
-    exclusive?*
-
-2.  *Draw a Venn diagram summarizing the variables and their associated
-    probabilities.*
-
-3.  *Calculate the probability of having diabetes or hypertension.*
-
-4.  *What percent of Americans have neither hypertension nor diabetes?*
+::: def-cont
+How likely something will happen. On a more technical note, the
+probability of an outcome is the proportion of times the outcome would
+occur if the random phenomenon could be observed an infinite number of
+times.
+:::
 :::
 
-::: example
-**Example 4**. *Pulling cards from a standard deck of cards*
+-   We can think of flipping a coin. There are two possible outcomes
+    (heads or tails). The probability of getting heads is 0.5. If we
+    flip the coin 10 times, it is not certain that we will get 5 heads.
+    However, if we flip it infinite times, we will get heads 50% of the
+    flips. [Fun seeing theory
+    demonstration!](https://seeing-theory.brown.edu/basic-probability/index.html)
 
-1.  *Supposed you randomly pull 5 cards one after another from a
-    standard deck of cards,*
-
-    1.  ***replacing** a card before pulling another one. What is the
-        probability of pulling the sequence of
-        $\diamondsuit, \diamondsuit, \spadesuit, \heartsuit, \spadesuit$?*
-
-    2.  ***without replacing** any of the cards. What is the probability
-        of pulling the sequence of
-        $\diamondsuit, \diamondsuit, \spadesuit, \heartsuit, \spadesuit$?*
-
-2.  *Supposed you pull a red card from the deck. What is the probability
-    that it is a heart?*
+::: definition
+::: def-ttl
+Law of large numbers
 :::
 
-## More Probability Rules
-
-1.  **General Multiplication Rule** For events $A$ and $B$,
-    $$\mathbb{P}(A\ \mathrm{and}\  B)=$$
-
-2.  **Conditional Probability Definition** The conditional probability
-    of an event A given an event or condition B is
-
-    $$\mathbb{P}(A|B)=$$
-
-3.  If $A$ and $B$ are **independent** events, then
-
-    1.  $$\mathbb{P}(A|B) =$$
-
-    2.  $$\mathbb{P}(A\ \mathrm{and}\  B)=$$
-
-4.  **Sum of Conditional Probabilities** $\mathbb{P}(A|B)$ is a
-    probability, meaning that it satisfies the usual probability rules.
-    In particular, $$\mathbb{P}(A|B) + \mathbb{P}(A^C|B) =$$
-
-::: example
-**Example 5**. ***Diabetes and hypertension revisited.** Diabetes and
-hypertension are two of the most common diseases in Western,
-industrialized nations. In the United States, approximately 9% of the
-population have diabetes, while about 30% of adults have high blood
-pressure. The two diseases frequently occur together: an estimated 6% of
-the population have both diabetes and hypertension. Let D represent the
-event of having diabetes, and H the event of having hypertension. Is the
-event of someone being hypertensive independent of the event that
-someone has diabetes?*
+::: def-cont
+As more observations are collected, the proportion of occurrences,
+$\hat{p}$, with a particular outcome converges to the true probability
+$p$ of that outcome.
+:::
 :::
 
-::: example
-**Example 6**. ***Seat belts** Seat belt use is the most effective way
-to save lives and reduce injuries in motor vehicle crashes. In a 2014
-survey, respondents were asked, \"How often do you use seat belts when
-you drive or ride in a car?\". The following table shows the
-distribution of seat belt usage by sex.*
+## Some probability notation
 
-::: center
-                             **Seat Belt Usage**                                                      
-  ------------- ---------- --------------------- ----------------- ------------- ---------- --------- -----------
-          *3-7*                         *Always*   *Nearly always*   *Sometimes*   *Seldom*   *Never*     *Total*
-    *2-8 *Sex**     *Male*             *146,018*          *19,492*       *7,614*    *3,145*   *4,719*   *180,988*
-                  *Female*             *229,246*          *16,695*       *5,549*    *1,815*   *2,675*   *255,980*
-          *2-8*    *Total*             *375,264*          *36,187*      *13,163*    *4,960*   *7,394*   *436,968*
+-   Probability typically defined as a proportion
+    -   Takes values between 0 and 1
+-   Probability can also be expressed as a "percent chance," taking
+    values between 0% and 100%
+-   If we want to discuss the probability of an event, say A, we would
+    write $P(A)$
+    -   We can write: $A = \{\text{rolling a 1}\}$, with associated
+        probability $P(A)$
+    -   OR we can write $P(\text{rolling a 1})$
+
+## Disjoint / mutually exclusion events
+
+::: definition
+::: def-ttl
+Disjoint / mutually exclusion events
 :::
 
-1.  *Calculate the marginal probability that a randomly chosen
-    individual always wears seatbelts.*
-
-2.  *What is the probability that a randomly chosen female always wears
-    seatbelts?*
-
-3.  *What is the probability of a randomly chosen individual always
-    wearing seatbelts, given that they are female?*
-
-    *same as previous*
-
-4.  *What is the probability of a randomly chosen individual being
-    female and always wearing seatbelts?*
-
-    ***Seat belts cont'd***
-
-    ::: center
-                                 **Seat Belt Usage**                                                      
-      ------------- ---------- --------------------- ----------------- ------------- ---------- --------- -----------
-              *3-7*                         *Always*   *Nearly always*   *Sometimes*   *Seldom*   *Never*     *Total*
-        *2-8 *Sex**     *Male*             *146,018*          *19,492*       *7,614*    *3,145*   *4,719*   *180,988*
-                      *Female*             *229,246*          *16,695*       *5,549*    *1,815*   *2,675*   *255,980*
-              *2-8*    *Total*             *375,264*          *36,187*      *13,163*    *4,960*   *7,394*   *436,968*
-    :::
-
-5.  *What is the probability of a randomly chosen individual always
-    wearing seatbelts, given that they are male?*
-
-6.  *Calculate the probability that an individual who never wears
-    seatbelts is male.*
-
-7.  *Does gender seem independent of seat belt usage?*
+::: def-cont
+Two events or outcomes are called **disjoint** or **mutually exclusive**
+if they cannot both happen at the same time.
 :::
+:::
+
+## Poll Everywhere Question 1
+
+## Probability for disjoint events
+
+::: green
+::: green-ttl
+Probability rule for disjoint events
+:::
+
+::: green-cont
+If $A_1$ and $A_2$ represent two disjoint outcomes, then the probability
+that either one of them occurs is given by
+$$P(A_1\text{ or } A_2) = P(A_1) + P(A_2)$$
+
+If there are $k$ disjoint outcomes $A_1$, ..., $A_k$, then the
+probability that either one of these outcomes will occur is
+$$P(A_1) + P(A_2) + \cdots + P(A_k)$$
+:::
+:::
+
+::: columns
+::: column
+-   From the poll everywhere question with the die, what is the
+    probability of event A or B?
+:::
+
+::: column
+![](/lessons/img_slides/disjointEvents.png){fig-align="right"
+width="440"}
+:::
+:::
+
+## Probabilities when events are not disjoint
+
+-   When events are not disjoint, we cannot use the previous addition
+    rule for probabilities!!
+
+-   We must use a general rule that recognizes the potential overlap
+    between events
+
+::: green
+::: green-ttl
+General probability addition rule
+:::
+
+::: green-cont
+If $A$ and $B$ are any two events, disjoint or not, then the probability
+that at least one of them will occur is \begin{eqnarray}
+P(A\text{ or }B) = P(A) + P(B) - P(A\text{ and }B),
+\label{generalAdditionRule}
+\end{eqnarray} where $P(A$ and $B)$ is the probability that both events
+occur.
+:::
+:::
+
+## Think back to our die
+
+::: columns
+::: {.column width="55%"}
+-   Event A and D are not disjoint, they share an outcome of rolling a 2
+-   How do we find the probability of event A or event D?
+:::
+
+::: {.column width="45%"}
+![](/lessons/img_slides/disjointEvents.png){fig-align="right"}
+:::
+:::
+
+## Probability distributions
+
+::: columns
+::: {.column width="65%"}
+-   A **probability distribution** consists of all disjoint outcomes and
+    their associated probabilities
+-   We've already seen one [in our heads and tails
+    example](https://seeing-theory.brown.edu/basic-probability/index.html)
+
+::: green
+::: green-ttl
+Rules for a probability distribution
+:::
+
+::: green-cont
+A probability distribution is a list of all possible outcomes and their
+associated probabilities that satisfies three rules:
+
+1.  The outcomes listed must be disjoint
+2.  Each probability must be between 0 and 1
+3.  The probabilities must total to 1
+:::
+:::
+:::
+
+::: {.column width="35%"}
+![](/lessons/img_slides/prob_dist_HT.png){fig-align="right" width="498"}
+:::
+:::
+
+## Complement of an event
+
+::: columns
+::: {.column width="60%"}
+We need two math definitions for this:
+
+-   **Sample space:** denoted as $S$ is the set of all possible
+        outcomes
+
+-   **Complement:** complement of an event, say D, represents all
+        the outcomes in the sample space that are not in D
+
+    -   Complement is denoted as $D^c$ or $D'$
+    
+::: green
+::: green-ttl
+Complement
+:::
+::: green-cont
+The complement of event $A$ is denoted $A^c$, and $A^c$ represents all outcomes not in $A$. $A$ and $A^c$ are mathematically related: \vspace{-2mm}
+\begin{eqnarray}\label{complement}
+P(A) + P(A^c) = 1, \quad\text{i.e.}\quad P(A) = 1-P(A^c).
+\end{eqnarray}
+:::
+:::
+:::
+
+::: {.column width="40%"}
+![](/lessons/img_slides/complementOfD.png){fig-align="center"
+width="790"}
+:::
+:::
+
+## Independence
+
+- Two processes are **independent** if knowing the outcome of one provides no information
+about the outcome of the other
+
+- For example, if we flip two different coins and one lands on heads, what does that tell us about the other coin? 
+
+::: green
+::: green-ttl
+Multiplication Rule for independent processes
+:::
+::: green-cont
+If $A$ and $B$ represent events from two different and independent processes, then the probability that both $A$ and $B$ occur is given by: \vspace{-1.5mm}
+\begin{eqnarray}\label{eqForIndependentEvents}
+P(A \text{ and }B) = P(A)  P(B).
+\end{eqnarray}
+Similarly, if there are $k$ events $A_1$, ..., $A_k$ from $k$ independent processes, then the probability they all occur is\vspace{-1.5mm}
+\begin{eqnarray*}
+P(A_1) P(A_2) \cdots P(A_k).
+\end{eqnarray*}
+:::
+:::
+
+## Example rolling two dice
+
+::: columns
+::: {.column width="60%"}
+What is the probability that both dice will be 1? 
+:::
+
+::: {.column width="40%"}
+![](/lessons/img_slides/indep_2dice.png){fig-align="center" width="790"}
+:::
+:::
+
+## Let's go through a slightly more complicated example?
+
+Maybe venn diagram or some other TB example??
+
 

@@ -1964,7 +1964,7 @@
     "href": "homework/HW_02.html#directions",
     "title": "Homework 2",
     "section": "Directions",
-    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises (see sections Book exercises and Non-book exercise) may be completed not using Quarto. I especially recommend writing out by hand the chapter 2 probability questions, whether on paper or a tablet.\nIf you complete part of the assignment not using Quarto, you will be uploading 3 files on Sakai for HW 2: qmd & html files for your R work, and a pdf with your written work.\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework."
   },
   {
     "objectID": "homework/HW_02.html#income-and-education-in-us-counties",
@@ -1999,14 +1999,14 @@
     "href": "homework/HW_02.html#poverty-and-language",
     "title": "Homework 2",
     "section": "2.6 Poverty and language",
-    "text": "2.6 Poverty and language\nPart (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the VennDiagram or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples."
+    "text": "2.6 Poverty and language"
   },
   {
     "objectID": "homework/HW_02.html#school-absences",
     "href": "homework/HW_02.html#school-absences",
     "title": "Homework 2",
     "section": "2.8 School absences",
-    "text": "2.8 School absences\nPart (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the VennDiagram or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples."
+    "text": "2.8 School absences"
   },
   {
     "objectID": "homework/HW_02.html#health-coverage-frequencies",
@@ -2579,15 +2579,15 @@
     "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "title": "Homework 4",
-    "section": "1.1 Load all the packages you need below here.",
-    "text": "1.1 Load all the packages you need below here."
+    "section": "2.1 Load all the packages you need below here.",
+    "text": "2.1 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_04.html#r1-youth-weights",
     "href": "homework/HW_04.html#r1-youth-weights",
     "title": "Homework 4",
-    "section": "3.7 R1: Youth weights",
-    "text": "3.7 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n3.7.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n3.7.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n3.7.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n3.7.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n3.7.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n3.7.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
+    "section": "4.7 R1: Youth weights",
+    "text": "4.7 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n4.7.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n4.7.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n4.7.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n4.7.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n4.7.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n4.7.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
   },
   {
     "objectID": "homework/HW_07.html",
@@ -4868,85 +4868,85 @@
     "objectID": "homework/HW_04.html#what-are-the-dimensions-and-column-names-of-the-dataset",
     "href": "homework/HW_04.html#what-are-the-dimensions-and-column-names-of-the-dataset",
     "title": "Homework 4",
-    "section": "2.1 What are the dimensions and column names of the dataset?",
-    "text": "2.1 What are the dimensions and column names of the dataset?"
+    "section": "3.1 What are the dimensions and column names of the dataset?",
+    "text": "3.1 What are the dimensions and column names of the dataset?"
   },
   {
     "objectID": "homework/HW_04.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
     "href": "homework/HW_04.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
     "title": "Homework 4",
-    "section": "2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?",
-    "text": "2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?"
+    "section": "3.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?",
+    "text": "3.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?"
   },
   {
     "objectID": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
     "href": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
     "title": "Homework 4",
-    "section": "2.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.",
-    "text": "2.3 Using numerical and graphical summaries, describe the distribution of ages among study participants."
+    "section": "3.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.",
+    "text": "3.3 Using numerical and graphical summaries, describe the distribution of ages among study participants."
   },
   {
     "objectID": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
     "href": "homework/HW_04.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
     "title": "Homework 4",
-    "section": "2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.",
-    "text": "2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants."
+    "section": "3.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.",
+    "text": "3.4 Using numerical and graphical summaries, describe the distribution of heights among study participants."
   },
   {
     "objectID": "homework/HW_04.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
     "href": "homework/HW_04.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
     "title": "Homework 4",
-    "section": "2.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?",
-    "text": "2.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question."
+    "section": "3.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?",
+    "text": "3.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question."
   },
   {
     "objectID": "homework/HW_04.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
     "href": "homework/HW_04.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
     "title": "Homework 4",
-    "section": "2.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data.",
-    "text": "2.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
+    "section": "3.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data.",
+    "text": "3.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
   },
   {
     "objectID": "homework/HW_04.html#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
     "href": "homework/HW_04.html#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
     "title": "Homework 4",
-    "section": "3.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
-    "text": "3.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
+    "section": "4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
+    "text": "4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
   },
   {
     "objectID": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
     "href": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
     "title": "Homework 4",
-    "section": "3.2 What proportion of Americans at least 25 years of age are college graduates?",
-    "text": "3.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old."
+    "section": "4.2 What proportion of Americans at least 25 years of age are college graduates?",
+    "text": "4.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old."
   },
   {
     "objectID": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
     "href": "homework/HW_04.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
     "title": "Homework 4",
-    "section": "3.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?",
-    "text": "3.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
+    "section": "4.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?",
+    "text": "4.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
   },
   {
     "objectID": "homework/HW_04.html#two-way-table",
     "href": "homework/HW_04.html#two-way-table",
     "title": "Homework 4",
-    "section": "3.4 Two-way table",
-    "text": "3.4 Two-way table\nConstruct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?"
+    "section": "4.4 Two-way table",
+    "text": "4.4 Two-way table\nConstruct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?"
   },
   {
     "objectID": "homework/HW_04.html#relative-risk",
     "href": "homework/HW_04.html#relative-risk",
     "title": "Homework 4",
-    "section": "3.5 Relative Risk",
-    "text": "3.5 Relative Risk\nIn this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
+    "section": "4.5 Relative Risk",
+    "text": "4.5 Relative Risk\nIn this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
   },
   {
     "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here.-1",
     "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here.-1",
     "title": "Homework 4",
-    "section": "3.6 Load all the packages you need below here.",
-    "text": "3.6 Load all the packages you need below here."
+    "section": "4.6 Load all the packages you need below here.",
+    "text": "4.6 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_06.html#working-backwards-part-ii",
@@ -10938,7 +10938,7 @@
     "href": "lessons/03_Probability/03_Probability.html#what-is-a-probability",
     "title": "Lesson 3: Defining Probability",
     "section": "What is a probability?",
-    "text": "What is a probability?\n\nDefinition 2. The probability of an outcome is the proportion of times the outcome would occur if the random phenomenon could be observed an infinite number of times.\n\nLaw of Large Numbers As more observations are collected, the proportion of occurrences with a particular outcome converges to the probability \\(p\\) of that outcome."
+    "text": "What is a probability?\n\n\nDefinition: Probability\n\n\nHow likely something will happen. On a more technical note, the probability of an outcome is the proportion of times the outcome would occur if the random phenomenon could be observed an infinite number of times.\n\n\n\nWe can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5. If we flip the coin 10 times, it is not certain that we will get 5 heads. However, if we flip it infinite times, we will get heads 50% of the flips. Fun seeing theory demonstration!\n\n\n\nLaw of large numbers\n\n\nAs more observations are collected, the proportion of occurrences, \\(\\hat{p}\\), with a particular outcome converges to the true probability \\(p\\) of that outcome."
   },
   {
     "objectID": "lessons/03_Probability/03_Probability.html#probabilities-of-equally-likely-outcomes",
@@ -10952,14 +10952,14 @@
     "href": "lessons/03_Probability/03_Probability.html#probability-definitions-and-rules",
     "title": "Lesson 3: Defining Probability",
     "section": "Probability Definitions and Rules",
-    "text": "Probability Definitions and Rules\n\nThe sample space \\(S\\) is the set of all possible outcomes.\nEvents are sets or collections of outcomes.\nDisjoint or mutually exclusive events Events \\(A\\) and \\(B\\) are disjoint (or, mutually exclusive) if\nAddition Rule for Disjoint Events If \\(A\\) and \\(B\\) are disjoint events, then the probability that at least one of them will occur is\nGeneral Addition Rule If \\(A\\) and \\(B\\) are any two events, disjoint or not, then the probability that at least one of them will occur is\nComplement The complement of event \\(A\\) is denoted \\(A^C\\), and \\(A^C\\) represents all outcomes not in \\(A\\).\n\n\nExample 3. Diabetes and hypertension. Diabetes and hypertension are two of the most common diseases in Western, industrialized nations. In the United States, approximately 9% of the population have diabetes, while about 30% of adults have high blood pressure. The two diseases frequently occur together: an estimated 6% of the population have both diabetes and hypertension. Let D represent the event of having diabetes, and H the event of having hypertension.\n\nAre the events having hypertension and having diabetes mutually exclusive?\nDraw a Venn diagram summarizing the variables and their associated probabilities.\nCalculate the probability of having diabetes or hypertension.\nWhat percent of Americans have neither hypertension nor diabetes?\n\n\n\nExample 4. Pulling cards from a standard deck of cards\n\nSupposed you randomly pull 5 cards one after another from a standard deck of cards,\n\nreplacing a card before pulling another one. What is the probability of pulling the sequence of \\(\\diamondsuit, \\diamondsuit, \\spadesuit, \\heartsuit, \\spadesuit\\)?\nwithout replacing any of the cards. What is the probability of pulling the sequence of \\(\\diamondsuit, \\diamondsuit, \\spadesuit, \\heartsuit, \\spadesuit\\)?\n\nSupposed you pull a red card from the deck. What is the probability that it is a heart?"
+    "text": "Probability Definitions and Rules\n\nThe sample space \\(S\\) is the set of all possible outcomes.\nEvents are sets or collections of outcomes.\nDisjoint or mutually exclusive events Events \\(A\\) and \\(B\\) are disjoint (or, mutually exclusive) if\nAddition Rule for Disjoint Events If \\(A\\) and \\(B\\) are disjoint events, then the probability that at least one of them will occur is\nGeneral Addition Rule If \\(A\\) and \\(B\\) are any two events, disjoint or not, then the probability that at least one of them will occur is\nComplement The complement of event \\(A\\) is denoted \\(A^C\\), and \\(A^C\\) represents all outcomes not in \\(A\\)."
   },
   {
     "objectID": "lessons/03_Probability/03_Probability.html#more-probability-rules",
     "href": "lessons/03_Probability/03_Probability.html#more-probability-rules",
     "title": "Lesson 3: Defining Probability",
     "section": "More Probability Rules",
-    "text": "More Probability Rules\n\nGeneral Multiplication Rule For events \\(A\\) and \\(B\\), \\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\nConditional Probability Definition The conditional probability of an event A given an event or condition B is\n\\[\\mathbb{P}(A|B)=\\]\nIf \\(A\\) and \\(B\\) are independent events, then\n\n\\[\\mathbb{P}(A|B) =\\]\n\\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\n\nSum of Conditional Probabilities \\(\\mathbb{P}(A|B)\\) is a probability, meaning that it satisfies the usual probability rules. In particular, \\[\\mathbb{P}(A|B) + \\mathbb{P}(A^C|B) =\\]\n\n\nExample 5. Diabetes and hypertension revisited. Diabetes and hypertension are two of the most common diseases in Western, industrialized nations. In the United States, approximately 9% of the population have diabetes, while about 30% of adults have high blood pressure. The two diseases frequently occur together: an estimated 6% of the population have both diabetes and hypertension. Let D represent the event of having diabetes, and H the event of having hypertension. Is the event of someone being hypertensive independent of the event that someone has diabetes?\n\n\nExample 6. Seat belts Seat belt use is the most effective way to save lives and reduce injuries in motor vehicle crashes. In a 2014 survey, respondents were asked, \"How often do you use seat belts when you drive or ride in a car?\". The following table shows the distribution of seat belt usage by sex.\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\n\nCalculate the marginal probability that a randomly chosen individual always wears seatbelts.\nWhat is the probability that a randomly chosen female always wears seatbelts?\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are female?\nsame as previous\nWhat is the probability of a randomly chosen individual being female and always wearing seatbelts?\nSeat belts cont’d\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are male?\nCalculate the probability that an individual who never wears seatbelts is male.\nDoes gender seem independent of seat belt usage?\n\n\n\n\nLesson 3 Slides"
+    "text": "More Probability Rules\n\nGeneral Multiplication Rule For events \\(A\\) and \\(B\\), \\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\nConditional Probability Definition The conditional probability of an event A given an event or condition B is\n\\[\\mathbb{P}(A|B)=\\]\nIf \\(A\\) and \\(B\\) are independent events, then\n\n\\[\\mathbb{P}(A|B) =\\]\n\\[\\mathbb{P}(A\\ \\mathrm{and}\\  B)=\\]\n\nSum of Conditional Probabilities \\(\\mathbb{P}(A|B)\\) is a probability, meaning that it satisfies the usual probability rules. In particular, \\[\\mathbb{P}(A|B) + \\mathbb{P}(A^C|B) =\\]"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#where-are-we-continuous-outcome-zoomed-in",
@@ -12282,14 +12282,14 @@
     "href": "lessons/R03_Basics_02/R02_Basics_02.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
     "title": "R03: R Basics, part 2",
     "section": "Take a moment to find the information on the iris data frame",
-    "text": "Take a moment to find the information on the iris data frame"
+    "text": "Take a moment to find the information on the iris data frame\n\nGo to environment section to see the iris data frame"
   },
   {
     "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#view-the-beginning-or-end-of-a-dataset",
     "href": "lessons/R03_Basics_02/R02_Basics_02.html#view-the-beginning-or-end-of-a-dataset",
     "title": "R03: R Basics, part 2",
     "section": "View the beginning or end of a dataset",
-    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+    "text": "View the beginning or end of a dataset\n\nThese commands can be helpful if the data frame has a lot of rows\n\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
   },
   {
     "objectID": "lessons/R03_Basics_02/R02_Basics_02.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
@@ -12521,5 +12521,327 @@
     "title": "Muddy Points",
     "section": "",
     "text": "This answer comes from our sweet, sweet friend, ChatGPT:\nHere’s a set of examples focused on studying patient satisfaction within a single hospital:\n\n\nExample: A researcher wants to assess patient satisfaction within a large hospital but cannot survey every patient. The researcher could:\n\nDivide the hospital into floors (clusters).\nRandomly select a few floors.\nSurvey all patients on the selected floors.\n\n\n\n\nExample: The researcher wants to ensure representation of patients from different types of care (e.g., inpatient, outpatient, emergency). The researcher could:\n\nDivide the patients into strata based on the type of care they received.\nThen, randomly select patients from each care category to ensure proportional representation in the sample.\n\n\n\n\nExample: To study patient satisfaction within the hospital, the researcher could use multistage sampling:\n\nFirst stage: Randomly select departments (e.g., Oncology, Surgery, Cardiology).\nSecond stage: Randomly select wards or units within each department (e.g., ICU, general ward).\nFinal stage: Randomly select patients from each unit to survey about their satisfaction with the care received.\n\nThis example is specific to a single hospital, using different sampling techniques to focus on patient satisfaction within various departments and care types.\n\n\n\nOne of the key pieces of info here is that we are sampling patients! In the cluster sampling, we survey all patients in our randomly chosen cluster. In stratified, we set the subgroups, but we only sample some of the patients in each subgroup!\nIn multistage, there is a step where we randomly chose different clusters (like the department or wards) THEN we randomly select patients within those chosen clusters. Each stage can be identified with a different sampling technique (outside of multistage). Can you map each stage to their respective sampling method?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#section",
+    "href": "lessons/03_Probability/03_Probability.html#section",
+    "title": "Lesson 3: Defining Probability",
+    "section": "",
+    "text": "Example 3. Diabetes and hypertension. Diabetes and hypertension are two of the most common diseases in Western, industrialized nations. In the United States, approximately 9% of the population have diabetes, while about 30% of adults have high blood pressure. The two diseases frequently occur together: an estimated 6% of the population have both diabetes and hypertension. Let D represent the event of having diabetes, and H the event of having hypertension.\n\nAre the events having hypertension and having diabetes mutually exclusive?\nDraw a Venn diagram summarizing the variables and their associated probabilities.\nCalculate the probability of having diabetes or hypertension.\nWhat percent of Americans have neither hypertension nor diabetes?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#lets-start-with-an-example",
+    "href": "lessons/03_Probability/03_Probability.html#lets-start-with-an-example",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Let’s start with an example!",
+    "text": "Let’s start with an example!\n\n\n\n\nExample: Rolling fair 6-sided dice\n\n\n\nSuppose you roll a fair 6-sided die.\n\nWhat is the probability that you roll a 4?\nWhat is the probability that you roll an even number?\nWhat is the probability that you did not roll a 3?\n\nSuppose you roll two fair 6-sided dice.\n\nWhat is the probability that you roll a 2 with the first die and a 5 with the second die?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#some-probability-notation",
+    "href": "lessons/03_Probability/03_Probability.html#some-probability-notation",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Some probability notation",
+    "text": "Some probability notation\n\nProbability typically defined as a proportion\n\nTakes values between 0 and 1\n\nProbability can also be expressed as a “percent chance,” taking values between 0% and 100%\nIf we want to discuss the probability of an event, say A, we would write \\(P(A)\\)\n\nWe can write: \\(A = \\{\\text{rolling a 1}\\}\\), with associated probability \\(P(A)\\)\nOR we can write \\(P(\\text{rolling a 1})\\)"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#section-1",
+    "href": "lessons/03_Probability/03_Probability.html#section-1",
+    "title": "Lesson 3: Defining Probability",
+    "section": "",
+    "text": "Example 4. Pulling cards from a standard deck of cards\n\nSupposed you randomly pull 5 cards one after another from a standard deck of cards,\n\nreplacing a card before pulling another one. What is the probability of pulling the sequence of \\(\\diamondsuit, \\diamondsuit, \\spadesuit, \\heartsuit, \\spadesuit\\)?\nwithout replacing any of the cards. What is the probability of pulling the sequence of \\(\\diamondsuit, \\diamondsuit, \\spadesuit, \\heartsuit, \\spadesuit\\)?\n\nSupposed you pull a red card from the deck. What is the probability that it is a heart?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#section-2",
+    "href": "lessons/03_Probability/03_Probability.html#section-2",
+    "title": "Lesson 3: Defining Probability",
+    "section": "",
+    "text": "Example 5. Diabetes and hypertension revisited. Diabetes and hypertension are two of the most common diseases in Western, industrialized nations. In the United States, approximately 9% of the population have diabetes, while about 30% of adults have high blood pressure. The two diseases frequently occur together: an estimated 6% of the population have both diabetes and hypertension. Let D represent the event of having diabetes, and H the event of having hypertension. Is the event of someone being hypertensive independent of the event that someone has diabetes?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#section-3",
+    "href": "lessons/03_Probability/03_Probability.html#section-3",
+    "title": "Lesson 3: Defining Probability",
+    "section": "",
+    "text": "Example 6. Seat belts Seat belt use is the most effective way to save lives and reduce injuries in motor vehicle crashes. In a 2014 survey, respondents were asked, “How often do you use seat belts when you drive or ride in a car?”. The following table shows the distribution of seat belt usage by sex.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\n\nCalculate the marginal probability that a randomly chosen individual always wears seatbelts.\nWhat is the probability that a randomly chosen female always wears seatbelts?\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are female?\nsame as previous\nWhat is the probability of a randomly chosen individual being female and always wearing seatbelts?\nSeat belts cont’d\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeat Belt Usage\n\n\n\n\n\n\n\n\n\n3-7\n\nAlways\nNearly always\nSometimes\nSeldom\nNever\nTotal\n\n\n2-8 Sex**\nMale\n146,018\n19,492\n7,614\n3,145\n4,719\n180,988\n\n\n\nFemale\n229,246\n16,695\n5,549\n1,815\n2,675\n255,980\n\n\n2-8\nTotal\n375,264\n36,187\n13,163\n4,960\n7,394\n436,968\n\n\n\n\nWhat is the probability of a randomly chosen individual always wearing seatbelts, given that they are male?\nCalculate the probability that an individual who never wears seatbelts is male.\nDoes gender seem independent of seat belt usage?\n\n\n\n\nLesson 3 Slides"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#disjoint-mutually-exclusion-events",
+    "href": "lessons/03_Probability/03_Probability.html#disjoint-mutually-exclusion-events",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Disjoint / mutually exclusion events",
+    "text": "Disjoint / mutually exclusion events\n\n\nDisjoint / mutually exclusion events\n\n\nTwo events or outcomes are called disjoint or mutually exclusive if they cannot both happen at the same time."
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-1",
+    "href": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-1",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#probability-for-disjoint-events",
+    "href": "lessons/03_Probability/03_Probability.html#probability-for-disjoint-events",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Probability for disjoint events",
+    "text": "Probability for disjoint events\n\n\nProbability rule for disjoint events\n\n\nIf \\(A_1\\) and \\(A_2\\) represent two disjoint outcomes, then the probability that either one of them occurs is given by \\[P(A_1\\text{ or } A_2) = P(A_1) + P(A_2)\\]\nIf there are \\(k\\) disjoint outcomes \\(A_1\\), …, \\(A_k\\), then the probability that either one of these outcomes will occur is \\[P(A_1) + P(A_2) + \\cdots + P(A_k)\\]\n\n\n\n\n\nFrom the poll everywhere question with the die, what is the probability of event A or B?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#probabilities-when-events-are-not-disjoint",
+    "href": "lessons/03_Probability/03_Probability.html#probabilities-when-events-are-not-disjoint",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Probabilities when events are not disjoint",
+    "text": "Probabilities when events are not disjoint\n\nWhen events are not disjoint, we cannot use the previous addition rule for probabilities!!\nWe must use a general rule that recognizes the potential overlap between events\n\n\n\nGeneral probability addition rule\n\n\nIf \\(A\\) and \\(B\\) are any two events, disjoint or not, then the probability that at least one of them will occur is \\[\\begin{eqnarray}\nP(A\\text{ or }B) = P(A) + P(B) - P(A\\text{ and }B),\n\\label{generalAdditionRule}\n\\end{eqnarray}\\] where \\(P(A\\) and \\(B)\\) is the probability that both events occur."
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#probability-distributions",
+    "href": "lessons/03_Probability/03_Probability.html#probability-distributions",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Probability distributions",
+    "text": "Probability distributions\n\n\n\nA probability distribution consists of all disjoint outcomes and their associated probabilities\nWe’ve already seen one in our heads and tails example\n\n\n\nRules for a probability distribution\n\n\nA probability distribution is a list of all possible outcomes and their associated probabilities that satisfies three rules:\n\nThe outcomes listed must be disjoint\nEach probability must be between 0 and 1\nThe probabilities must total to 1"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#complement-of-an-event",
+    "href": "lessons/03_Probability/03_Probability.html#complement-of-an-event",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Complement of an event",
+    "text": "Complement of an event\n\n\nWe need two math definitions for this:\n\nSample space: denoted as \\(S\\) is the set of all possible outcomes\nComplement: complement of an event, say D, represents all the outcomes in the sample space that are not in D\n\nComplement is denoted as \\(D^c\\) or \\(D'\\)\n\n\n\n\nComplement\n\n\nThe complement of event \\(A\\) is denoted \\(A^c\\), and \\(A^c\\) represents all outcomes not in \\(A\\). \\(A\\) and \\(A^c\\) are mathematically related: \\[\\begin{eqnarray}\\label{complement}\nP(A) + P(A^c) = 1, \\quad\\text{i.e.}\\quad P(A) = 1-P(A^c).\n\\end{eqnarray}\\]"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#independence",
+    "href": "lessons/03_Probability/03_Probability.html#independence",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Independence",
+    "text": "Independence\n\nTwo processes are independent if knowing the outcome of one provides no information about the outcome of the other\nFor example, if we flip two different coins and one lands on heads, what does that tell us about the other coin?\n\n\n\nMultiplication Rule for independent processes\n\n\nIf \\(A\\) and \\(B\\) represent events from two different and independent processes, then the probability that both \\(A\\) and \\(B\\) occur is given by: \\[\\begin{eqnarray}\\label{eqForIndependentEvents}\nP(A \\text{ and }B) = P(A)  P(B).\n\\end{eqnarray}\\] Similarly, if there are \\(k\\) events \\(A_1\\), …, \\(A_k\\) from \\(k\\) independent processes, then the probability they all occur is \\[\\begin{eqnarray*}\nP(A_1) P(A_2) \\cdots P(A_k).\n\\end{eqnarray*}\\]"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#think-back-to-our-die",
+    "href": "lessons/03_Probability/03_Probability.html#think-back-to-our-die",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Think back to our die",
+    "text": "Think back to our die\n\n\n\nEvent A and D are not disjoint, they share an outcome of rolling a 2\nHow do we find the probability of event A or event D?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#example",
+    "href": "lessons/03_Probability/03_Probability.html#example",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Example",
+    "text": "Example\n\n\nLet’s say we roll two dice. What is the probability that both will be 1?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#example-rolling-two-dice",
+    "href": "lessons/03_Probability/03_Probability.html#example-rolling-two-dice",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Example rolling two dice",
+    "text": "Example rolling two dice\n\n\nWhat is the probability that both dice will be 1?"
+  },
+  {
+    "objectID": "homework/HW_04.html#income-and-education-in-us-counties",
+    "href": "homework/HW_04.html#income-and-education-in-us-counties",
+    "title": "Homework 4",
+    "section": "1.24 Income and education in US counties",
+    "text": "1.24 Income and education in US counties"
+  },
+  {
+    "objectID": "homework/HW_04.html#mix-and-match",
+    "href": "homework/HW_04.html#mix-and-match",
+    "title": "Homework 4",
+    "section": "1.28 Mix-and-match",
+    "text": "1.28 Mix-and-match"
+  },
+  {
+    "objectID": "homework/HW_04.html#associations",
+    "href": "homework/HW_04.html#associations",
+    "title": "Homework 4",
+    "section": "1.36 Associations",
+    "text": "1.36 Associations"
+  },
+  {
+    "objectID": "homework/HW_02.html#non-book-exercise",
+    "href": "homework/HW_02.html#non-book-exercise",
+    "title": "Homework 2",
+    "section": "Non-book exercise",
+    "text": "Non-book exercise\nSuppose a patient has abdominal pain and their clinician suspects that they either have disease 1, disease 2, or no disease, where the probability of having abdominal pain if they have disease 1 is 0.80, the probability of having abdominal pain if they have disease 2 is 0.90, and the probability of having abdominal pain if they have no disease is 0.01. Based on the patient’s medical history, the probability of having disease 1 is 0.009, having disease 2 is 0.001, and having no disease is 0.99. What is the probability the patient has disease 2 given that they have abdominal pain?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#lets-go-through-a-slightly-more-complicated-example",
+    "href": "lessons/03_Probability/03_Probability.html#lets-go-through-a-slightly-more-complicated-example",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Let’s go through a slightly more complicated example?",
+    "text": "Let’s go through a slightly more complicated example?\nMaybe venn diagram or some other TB example??\n\n\nLesson 3 Slides"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#we-will-open-rstudio-on-our-computer-not-r",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#we-will-open-rstudio-on-our-computer-not-r",
+    "title": "R03: R Basics, part 2",
+    "section": "We will open RStudio on our computer (not R!)",
+    "text": "We will open RStudio on our computer (not R!)\n\nModern Dive"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#rstudio-anatomy",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#rstudio-anatomy",
+    "title": "R03: R Basics, part 2",
+    "section": "RStudio anatomy",
+    "text": "RStudio anatomy\n\nEmma Rand"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#common-console-errors-12",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#common-console-errors-12",
+    "title": "R03: R Basics, part 2",
+    "section": "Common console errors (1/2)",
+    "text": "Common console errors (1/2)\nIncomplete commands\n\n\n\nWhen the console is waiting for a new command, the prompt line begins with &gt;\n\nIf the console prompt is +, then a previous command is incomplete\nYou can finish typing the command in the console window\n\n\n\nExample:\n\n&gt; 3 + (2*6\n+ )\n\n[1] 15"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#common-console-errors-22",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#common-console-errors-22",
+    "title": "R03: R Basics, part 2",
+    "section": "Common console errors (2/2)",
+    "text": "Common console errors (2/2)\nObject is not found\n\nThis happens when text is entered for a non-existent variable (object)\n\nExample:\n\nhello\n\nError in eval(expr, envir, enclos): object 'hello' not found\n\n\n\nCan be due to missing quotes\n\n\ninstall.packages(dplyr) \n\nError in eval(expr, envir, enclos): object 'dplyr' not found\n\n# correct code is: install.packages(\"dplyr\")"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#fishers-or-andersons-iris-data-set",
+    "title": "R03: R Basics, part 2",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nVariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#view-the-iris-dataset",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#view-the-iris-dataset",
+    "title": "R03: R Basics, part 2",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n \n\n\n\nView(iris)\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure",
+    "title": "R03: R Basics, part 2",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#data-set-summary",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#data-set-summary",
+    "title": "R03: R Basics, part 2",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nCan we quickly summarize all the data?\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#data-set-info",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#data-set-info",
+    "title": "R03: R Basics, part 2",
+    "section": "Data set info",
+    "text": "Data set info\n\nYou can use different functions to find information on a data frame\n\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\"     \n\n\n\nWe can also look at the Environment section"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#take-a-moment-to-find-the-information-on-the-iris-data-frame",
+    "title": "R03: R Basics, part 2",
+    "section": "Take a moment to find the information on the iris data frame",
+    "text": "Take a moment to find the information on the iris data frame\n\nGo to environment section to see the iris data frame"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R03: R Basics, part 2",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nThese commands can be helpful if the data frame has a lot of rows\n\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R03: R Basics, part 2",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#some-sources-for-useful-base-r-commands",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#some-sources-for-useful-base-r-commands",
+    "title": "R03: R Basics, part 2",
+    "section": "Some sources for useful base R commands",
+    "text": "Some sources for useful base R commands\n\nhttps://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf\nhttps://www2.kenyon.edu/Depts/Math/hartlaub/Math206%20Spring2011/R.htm\n\n\n\nR03 Slides"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html",
+    "title": "Lesson 5: Conditional Probability",
+    "section": "",
+    "text": "Example 1. How accurate is rapid testing for COVID-19? \nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n\"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.\"\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#eaxample",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#eaxample",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Eaxample",
+    "text": "Eaxample\n\nExample 1. How accurate is rapid testing for COVID-19? \nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n\"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.\"\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#bayes-theorem-section-2.2.5",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#bayes-theorem-section-2.2.5",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Bayes’ Theorem (Section 2.2.5)",
+    "text": "Bayes’ Theorem (Section 2.2.5)\nIn the previous examples we derived the formula for Bayes’ Theorem.\n\nTheorem 2 (Bayes’ Theorem). If the sample space \\(S\\) can be split into disjoint events \\(A_1, A_2, ..., A_k\\) that make up all possible outcomes in \\(S\\), and if \\(\\mathbb{P}(A_i)&gt;0\\) for \\(i=1,\\ldots, k\\) and \\(\\mathbb{P}(B)&gt;0\\), then\n\\[\\mathbb{P}(A_1 | B) =\n\\frac{\\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1)}\n{\\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1) + \\mathbb{P}(B|A_2) \\cdot \\mathbb{P}(A_2) + ... +\n\\mathbb{P}(B|A_k) \\cdot \\mathbb{P}(A_k)}\\]\n\nSpecial case of Bayes’ Theorem for sample space being split into \\(A\\) and \\(A^c\\):\n\\[\\mathbb{P}(A | B) =\n\\frac{\\mathbb{P}(B|A) \\cdot \\mathbb{P}(A)}\n{\\mathbb{P}(B|A) \\cdot \\mathbb{P}(A) + \\mathbb{P}(B|A^c) \\cdot \\mathbb{P}(A^c) }\\]"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#section",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "",
+    "text": "Theorem 3 (Law of Total Probability). (denominator of Bayes’ Theorem)\nIf the sample space \\(S\\) can be split into disjoint events \\(A_1, A_2, ..., A_k\\) that make up all possible outcomes in \\(S\\), and if \\(\\mathbb{P}(A_i)&gt;0\\) for \\(i=1,\\ldots, k\\) and \\(\\mathbb{P}(B)&gt;0\\), then\n\\[%\\left(\n\\begin{array}{ccl}\n\\mathbb{P}(B)&=& \\mathbb{P}(B\\ \\textrm{and}\\ A_1) + \\mathbb{P}(B\\ \\textrm{and}\\ A_2) + \\ldots + \\mathbb{P}(B\\ \\textrm{and}\\ A_k)\\\\\n           &=& \\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1) + \\mathbb{P}(B|A_2) \\cdot \\mathbb{P}(A_2) + \\ldots + \\mathbb{P}(B|A_k) \\cdot \\mathbb{P}(A_k)\n\\end{array}\n%\\right)\\]"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#section-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "",
+    "text": "Special case of Law of Total Probability for sample space being split into \\(A\\) and \\(A^c\\):\n\\[%\\left(\n\\begin{array}{ccl}\n\\mathbb{P}(B)&=&\\mathbb{P}(B\\ \\textrm{and}\\ A) + \\mathbb{P}(B\\ \\textrm{and}\\ A^C)\\\\\n           &=& \\mathbb{P}(B|A) \\cdot \\mathbb{P}(A)+ \\mathbb{P}(B | A^C)\\cdot \\mathbb{P}(A^C)\n\\end{array}\n%\\right)\\]"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section-2",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#section-2",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "",
+    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 5 Slides"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#marginal-and-joint-probabilities",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#marginal-and-joint-probabilities",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Marginal and joint probabilities",
+    "text": "Marginal and joint probabilities"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#defining-conditional-probability",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#defining-conditional-probability",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Defining conditional probability",
+    "text": "Defining conditional probability"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#general-multiplication-rule",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#general-multiplication-rule",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "General multiplication rule",
+    "text": "General multiplication rule"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#independence-and-conditional-probability",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#independence-and-conditional-probability",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Independence and conditional probability",
+    "text": "Independence and conditional probability"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#bayes-theorem",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#bayes-theorem",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example",
+    "text": "Example\n\nExample 1. How accurate is rapid testing for COVID-19? \nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n\"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.\"\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
   }
 ]

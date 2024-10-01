@@ -168,8 +168,11 @@ names(iris)
 
 ## Take a moment to find the information on the iris data frame
 
+- Go to environment section to see the `iris` data frame
+
 ## View the beginning or end of a dataset
 
+- These commands can be helpful if the data frame has a lot of rows
 ```{r}
 head(iris)
 tail(iris)
