@@ -73,6 +73,16 @@ library(here)
 
 ![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
 
+## If you have issues downloading on your laptop for in-class use
+
+- There is a really cool online interface that will be sufficient for our in-class use!
+
+- <https://posit.cloud/> 
+
+  - If you Google "Posit cloud" it should come up easily
+  
+- I don't recommend this for homework use (once we get to it)
+
 ## So let's take some time to download each!
 
 -   Use this link to start: <https://posit.co/download/rstudio-desktop/> 
