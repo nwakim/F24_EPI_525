@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting help when coding (functions, AI, etc)\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting help when coding (functions, AI, etc)\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -12850,5 +12850,68 @@
     "title": "R1: Download + Intro to R & Rstudio",
     "section": "If you have issues downloading on your laptop for in-class use",
     "text": "If you have issues downloading on your laptop for in-class use\n\nThere is a really cool online interface that will be sufficient for our in-class use!\nhttps://posit.cloud/\n\nIf you Google “Posit cloud” it should come up easily\n\nI don’t recommend this for homework use (once we get to it)"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#variables-saved-r-objects",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#variables-saved-r-objects",
+    "title": "R03: R Basics, part 2",
+    "section": "Variables (saved R objects)",
+    "text": "Variables (saved R objects)\nVariables are used to store data, figures, model output, etc.\n\n\n\nCan assign a variable using either = or &lt;-\n\nUsing &lt;- is preferable for certain occasions\nI usually just use = because less typing hehe\n\n\nAssign just one value:\n\nx = 5\nx\n\n[1] 5\n\nx &lt;- 5\nx\n\n[1] 5\n\n\n\n\n\nAssign a vector of values\n\nConsecutive integers using :\n\n\na &lt;- 3:10\na\n\n[1]  3  4  5  6  7  8  9 10\n\n\n\nConcatenate a string of numbers\n\n\nb &lt;- c(5, 12, 2, 100, 8)\nb\n\n[1]   5  12   2 100   8"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#lets-try-it-out",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#lets-try-it-out",
+    "title": "R03: R Basics, part 2",
+    "section": "Let’s try it out!",
+    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22.\n\n \n\nDid you notice anything in the Environment section of Rstudio?"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#doing-math-with-variables",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#doing-math-with-variables",
+    "title": "R03: R Basics, part 2",
+    "section": "Doing math with variables",
+    "text": "Doing math with variables\n\n\nMath using variables with just one value\n\nx &lt;- 5\nx\n\n[1] 5\n\nx + 3\n\n[1] 8\n\ny &lt;- x^2\ny\n\n[1] 25\n\n\n\nMath on vectors of values:\nelement-wise computation\n\na &lt;- 3:6\na\n\n[1] 3 4 5 6\n\na+2; a*3\n\n[1] 5 6 7 8\n\n\n[1]  9 12 15 18\n\na*a\n\n[1]  9 16 25 36"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#lets-try-it-out-1",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#lets-try-it-out-1",
+    "title": "R03: R Basics, part 2",
+    "section": "Let’s try it out!",
+    "text": "Let’s try it out!\n\nUse the variable name y to find the addition of y and 5\nAdd 5 to the vector c"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#variables-can-include-text-characters",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#variables-can-include-text-characters",
+    "title": "R03: R Basics, part 2",
+    "section": "Variables can include text (characters)",
+    "text": "Variables can include text (characters)\n\nhi &lt;- \"hello\"\nhi\n\n[1] \"hello\"\n\ngreetings &lt;- c(\"Guten Tag\", \"Hola\", hi)\ngreetings\n\n[1] \"Guten Tag\" \"Hola\"      \"hello\""
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#using-functions",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#using-functions",
+    "title": "R03: R Basics, part 2",
+    "section": "Using functions",
+    "text": "Using functions\n\nmean() is an example of a function\nfunctions have “arguments” that can be specified within the ()\n?mean in console will show help file for mean()\n\n\n\nFunction arguments specified by name:\n\nmean(x = 1:4)\n\n[1] 2.5\n\n\n\nseq(from = 1, to = 12, by = 3)\n\n[1]  1  4  7 10\n\nseq(by = 3, to = 12, from = 1)\n\n[1]  1  4  7 10\n\n\n\nFunction arguments not specified, but listed in order:\n\nmean(1:4)\n\n[1] 2.5\n\n\n\nseq(1, 12, 3)\n\n[1]  1  4  7 10"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#now-lets-use-some-functions-for-summary-statistics",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#now-lets-use-some-functions-for-summary-statistics",
+    "title": "R03: R Basics, part 2",
+    "section": "Now let’s use some functions for summary statistics",
+    "text": "Now let’s use some functions for summary statistics\n\nWe will calculate the mean for c\nLet’s also calculate the standard deviation for c\n\nRecall, our function is sd()\nUse ?sd in the console to identify the arguments for c\n\n\n \n\nIf you have more time, you can try to calculate the median and IQR for c"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#there-are-many-ways-to-get-help-when-you-are-stuck",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#there-are-many-ways-to-get-help-when-you-are-stuck",
+    "title": "R03: R Basics, part 2",
+    "section": "There are many ways to get help when you are stuck",
+    "text": "There are many ways to get help when you are stuck\n\nUse the ? in front of the function name to get more information!\n\nUsually if I need help with the arguments for a function\n\n\n \n\nGoogle or go to stackoverflow.com\n\nOften when I Google, I get redirected to something like stackoverflow\nFor example, let’s say my mean function was outputting NA. I would Google something like “keep getting NA for mean in R” Then end up here\n\n\n \n\nI can also go to my favoriate AI tool to get help\n\nThis is most useful for getting code started if it’s complicated (we’re not really at that level yet)\nI asked ChatGPT “can you give me the code for calculating the mean in R”\n\nThis is what I got\n\nFor code generation, it gives you WAY too much\nI also asked ChatGPT “Why is the mean function in R giving me an NA?” (in above link)"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#more-on-ai-usage",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#more-on-ai-usage",
+    "title": "R03: R Basics, part 2",
+    "section": "More on AI usage",
+    "text": "More on AI usage\n\nIn the syllabus\nIf you cannot trace code back to the class notes, then do NOT use it!\n\nThere’s different coding practices and functions out there\nI’m giving you a specific set of tools that will serve as a good introduction\nYou should be able to explain all your code and work"
   }
 ]
