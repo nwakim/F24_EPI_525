@@ -1,5 +1,5 @@
 ---
-title: "R3: File Organization"
+title: "R04: Reproducibility, File Organization, and Projects"
 author: "Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
@@ -15,7 +15,7 @@ format:
     show-slide-number: all
     width: 1600
     height: 1100
-    footer: R3 Slides
+    footer: R04 Slides
     html-math-method: mathjax
     highlight-style: arrow
 execute:
@@ -98,7 +98,7 @@ There are a few good practices for naming files and folders for easy tracking:
 
 ## Let's go into `R_activities`
 
-- Make a folder called something like `R3_work`
+- Make a folder called something like `R04_work`
 
 - We are going to stay in the `R_activities` folder
 
@@ -118,16 +118,26 @@ There are a few good practices for naming files and folders for easy tracking:
 
 -   Once we have projects, we can open one are R will automatically know that its location is the start of our working directory
 
+## The nice thing about R projects
+
+<https://rfortherestofus.com/2022/10/rstudio-projects>
+
+## Nicky's process for R projects
+
 -   Let me show you my process
 
     -   I will create one in my Sample_folder
 
     -   I will show you how I switch between classes
+    
+- Make a project file in your class folder!
 
 ```{r}
 #| echo: false
 countdown::countdown(5)
 ```
+
+# If we have time
 
 ## Creating a new `qmd` file
 
@@ -152,7 +162,7 @@ countdown::countdown(5)
 ::: column
 -   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 
--   Just substitute `.Rmd` with `.qmd`
+    -   Just substitute `.Rmd` with `.qmd`
 
 -   Basically, a `.qmd` file and `.R` file work differently
 

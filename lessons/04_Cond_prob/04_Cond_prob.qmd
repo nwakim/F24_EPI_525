@@ -21,166 +21,384 @@ execute:
   freeze: auto
 ---
 
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+library(knitr)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=20))  # set global text size for ggplots
+```
+
 https://github.com/OI-Biostat/oi_biostat_text/blob/master/ch_probability_oi_biostat/TeX/ch_probability_oi_biostat.tex
+
+# Learning Objectives
+
+1.  
+
+## Example: hypertension prevalence (1/2)
+
+-   US CDC estimated that between 2011 and 2014[^1], 29% of the population in America had hypertension
+-   A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
+    -   However, this is **only the case if nothing else is known about the patient**
+
+[^1]: <https://www.cdc.gov/nchs/products/databriefs/db220.htm>
+
+## Example: hypertension prevalence (2/2)
+
+- Prevalence of **hypertension varies significantly with age**
+    - Among adults aged 18-39, 7.3% have hypertension
+    - Adults aged 40-59, 32.2%
+    - Adults aged 60 or older, 64.9% have hypertension
+-   Knowing the age of a patient provides important information about the likelihood of hypertension
+    - Age and hypertension status are **not independent** (we will get into this)
+-   While the probability of hypertension in a randomly chosen adult is 0.29, the **conditional probability** of hypertension in a person known to be 60 or older is 0.649
+
+ 
+
+::: orange-ttl
+How can we use probabilities to show this?
+:::
 
 ## Marginal and joint probabilities
 
+- We can start looking at the contingency table for hypertension for different age groups
+  - Contingency table: type of data table that displays the frequency distribution of two or more categorical variables
+  
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_data <- data.frame(
+  Age_Group = c("18-39 years", "40 to 59 years", "Greater than 60 years", "Total"),
+  Hypertension = c(8836, 42109, 39917, 90862),
+  No_Hypertension = c(112206, 88663, 21589, 222458),
+  Total = c(121042, 130772, 61506, 313320)
+)
+
+# Generate table using kable
+kable(hyp_data, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Contingency table showing hypertension status and age group, in
+thousands.")
+```
+  
+## More on the table
+```{r}
+#| echo: false
+#| 
+# Generate table using kable
+kable(hyp_data, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Contingency table showing hypertension status and age group, in
+thousands.")
+```
+
+- In first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)
+- But we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)
+
+## Poll Everywhere Question 1
+
 ## Defining conditional probability
+
+- So far we have intuitively thought of conditional probability: 
+  - The first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)
+- We got this from: $$P(\text{hypertension} | \text{18-39 years old}) = \dfrac{8,836,000}{121,042,000} = 0.073$$
+  - "$\text{hypertension} | \text{18-39 years old}$" reads as "hypertension given 18-39 years old"
+
+## We can define conditional probability more mathematically
+
+- Let's define some events:
+  - $A$ = hypertension
+  - $B$ = 18-39 years old
+  
+$$P(\text{hypertension} | \text{18-39 years old}) = P(A | B) =  \dfrac{P(A \cap B)}{P(B)}$$
+
+::: definition
+::: def-ttl
+Conditional probability
+:::
+::: def-cont
+The conditional probability of an event A given an event or condition B is:
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+:::
+:::
+
+## So if we had a table of probabilities for our example...
+
+::: columns
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_prob <- data.frame(
+  Age_Group = c("18-39 years", "40 to 59 years", "Greater than 60 years", "Total"),
+  Hypertension = c(0.0282, 0.1344, 0.1274, 0.2900),
+  No_Hypertension = c(0.3581, 0.2830, 0.0689, 0.7100),
+  Total = c(0.3863, 0.4174, 0.1963, 1)
+)
+
+# Generate table using kable
+kable(hyp_prob, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Probability table summarizing hypertension status and age group.")
+```
+
+ 
+
+::: lob
+What is the probability of hypertension for someone aged 18-39 years old?
+:::
+
+:::
+
+::: {.column width="30%"}
+::: pink
+::: pink-ttl
+Recall
+:::
+::: pink-cont
+- $A$ = hypertension
+- $B$ = 18-39 years old
+- $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+:::
+:::
+
+:::
+:::
 
 ## General multiplication rule
 
+::: definition
+::: def-ttl
+General multiplication rule
+:::
+::: def-cont
+If $A$ and $B$ represent two outcomes or events, then $$P(A \cap B) = P(A|B)P(B)$$
+:::
+:::
+
+This follows from rearranging the definition of conditional probability: $$P(A|B) = \frac{P(A \cap B)}{P(B)} \rightarrow P(A|B)P(B) = P(A \cap B)$$
+
+
 ## Independence and conditional probability
 
-## Bayes’ Theorem
+- If two events, say A and B, are **independent**, then: $$P(A \cap B) = P(A)P(B)$$
 
-## Example
+- We can extend this to conditional probability: $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+  - For two independent events, say A and B, $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)} = P(A)$$
 
-::: example
-**Example 1**. ***How accurate is rapid testing for COVID-19?** *
-
-*From the iHealth® website
-<https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details>:*
-
-*\"Based on the results of a clinical study where the iHealth® COVID-19
-Antigen Rapid Test was compared to an FDA authorized molecular
-SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly
-identified 94.3% of positive specimens and 98.1% of negative
-specimens.\"*
-
-*Suppose you take the iHealth® rapid test.*
-
-1.  *What is the probability of a positive test result?*
-
-2.  *What is the probability of having COVID-19 if you get a positive
-    test result?*
-
-3.  *What is the probability of not having COVID-19 if you get a
-    negative test result?*
-
-***What information were we given?***
-
-*First, let's define our events of interest:*
-
--   *$D$ = event one has disease (COVID-19)*
-
--   *$D^c$ = event one does not have disease*
-
--   *$T^+$ = event one tests positive for disease*
-
--   *$T^-$ = event one tests negative for disease*
-
-*Translate given information into mathematical notation:*
-
--   *Test correctly gives a positive result 94.3% of the time:*
-
--   *Test correctly gives a negative result 98.1% of the time:*
-
--   *What are all the possible scenarios of test results?*
-
-*Given: $\mathbb{P}(T^+|D) = 0.943$, $\ \ \mathbb{P}(T^-|D^c) = 0.981$*
-
-***Solutions to questions***
-
-1.  *What is the probability of a positive test result?*
-
-    *Given: $\mathbb{P}(T^+|D) = 0.943$,
-    $\ \ \mathbb{P}(T^-|D^c) = 0.981$*
-
-2.  *What is the probability of having COVID-19 if you get a positive
-    test result?*
-
-    *Given: $\mathbb{P}(T^+|D) = 0.943$,
-    $\ \ \mathbb{P}(T^-|D^c) = 0.981$*
-
-3.  *What is the probability of not having COVID-19 if you get a
-    negative test result?*
+::: green
+::: green-ttl
+Conditional probability of independent events
+:::
+::: green-cont
+If events A and B are independent, then 
+$$P(A|B) =P(A) \text{ and } P(B|A) = P(B)$$
+:::
 :::
 
 
 ## Bayes' Theorem (Section 2.2.5)
 
-In the previous examples we derived the formula for Bayes' Theorem.
-
-::: theorem
-**Theorem 2** (Bayes' Theorem). *If the sample space $S$ can be split
-into disjoint events $A_1, A_2, ..., A_k$ that make up all possible
-outcomes in $S$, and if $\mathbb{P}(A_i)>0$ for $i=1,\ldots, k$ and
-$\mathbb{P}(B)>0$, then*
-
-*$$\mathbb{P}(A_1 | B) = 
-\frac{\mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1)}
-{\mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1) + \mathbb{P}(B|A_2) \cdot \mathbb{P}(A_2) + ... + 
-\mathbb{P}(B|A_k) \cdot \mathbb{P}(A_k)}$$*
+::::: red
+::: red-ttl
+Bayes' Theorem
 :::
 
-Special case of Bayes' Theorem for sample space being split into $A$ and
-$A^c$:
-
-$$\mathbb{P}(A | B) = 
-\frac{\mathbb{P}(B|A) \cdot \mathbb{P}(A)}
-{\mathbb{P}(B|A) \cdot \mathbb{P}(A) + \mathbb{P}(B|A^c) \cdot \mathbb{P}(A^c) }$$
-
-##
-
-::: theorem
-**Theorem 3** (Law of Total Probability). *(denominator of Bayes'
-Theorem)*
-
-*If the sample space $S$ can be split into disjoint events
-$A_1, A_2, ..., A_k$ that make up all possible outcomes in $S$, and if
-$\mathbb{P}(A_i)>0$ for $i=1,\ldots, k$ and $\mathbb{P}(B)>0$, then*
-
-*$$%\left(
-\begin{array}{ccl}
-\mathbb{P}(B)&=& \mathbb{P}(B\ \textrm{and}\ A_1) + \mathbb{P}(B\ \textrm{and}\ A_2) + \ldots + \mathbb{P}(B\ \textrm{and}\ A_k)\\
-           &=& \mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1) + \mathbb{P}(B|A_2) \cdot \mathbb{P}(A_2) + \ldots + \mathbb{P}(B|A_k) \cdot \mathbb{P}(A_k)
-\end{array}
-%\right)$$*
+::: red-cont
+In its simplest form: $$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 :::
+:::::
 
-##
+This also translates to: $$P(A | B) = 
+\frac{P(B|A) \cdot P(A)}
+{P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c) }$$ 
+because of the **Law of Total Probability**: $$\begin{aligned}P(B) = & P(B \cap A) + P(B \cap A^C) \\ = &P(B | A)P(A)+ P(B|A^C)P(A^C) \end{aligned}$$
 
-Special case of Law of Total Probability for sample space being split
-into $A$ and $A^c$:
+# Learning Objective
 
-$$%\left(
-\begin{array}{ccl}
-\mathbb{P}(B)&=&\mathbb{P}(B\ \textrm{and}\ A) + \mathbb{P}(B\ \textrm{and}\ A^C)\\
-           &=& \mathbb{P}(B|A) \cdot \mathbb{P}(A)+ \mathbb{P}(B | A^C)\cdot \mathbb{P}(A^C)
-\end{array}
-%\right)$$
+## Example: How accurate is rapid testing for COVID-19? (1/n)
 
-## 
 ::: example
-**Example 4**. ***Antibody test for COVID-19***
-
-*According to the [FDA's EUA Authorized Serology Test Performance
-website](https://www.fda.gov/medical-devices/coronavirus-disease-2019-covid-19-emergency-use-authorizations-medical-devices/eua-authorized-serology-test-performance),
-the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for
-COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is
-20%.*
-
-*Question: What is the specificity of the antibody test?*
-
-***What information were we given?***
-
-*First, let's define our events of interest:*
-
--   *$A$ = event one has antibodies for COVID-19*
-
--   *$A^c$ = event one does not have antibodies*
-
--   *$T^+$ = event one tests positive for antibodies*
-
--   *$T^-$ = event one tests negative for antibodies*
-
-*Translate given information into mathematical notation:*
-
--   *Sensitivity is 98.1%:*
-
--   *PPV is 98.4%:*
-
--   *Prevalence is 20%:*
-
-***Solution:***
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
 :::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+
+Suppose you take the iHealth® rapid test.
+
+1.  What is the probability of a positive test result?
+
+2.  What is the probability of having COVID-19 if you get a positive test result?
+
+3.  What is the probability of not having COVID-19 if you get a negative test result?
+
+:::
+:::
+
+From the iHealth® website <https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details>:
+
+## General steps for probability word problems
+
+1. Define the events in the problem
+
+2. Translate the words and numbers into probability statements
+
+3. Translate the question into a probability statement
+
+4. Think about the various definitions and rules of probabilities. Is there a way to define our question's probability statement (in step 3) using the probability statements with assigned values (in step 2)?
+
+5. Plug in the given numbers to calculate the answer!
+
+
+## Let's apply the steps to our example (1/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 1:** Let's define our events of interest
+
+-   $D$ = event one has disease (COVID-19)
+
+-   $D^c$ = event one does not have disease
+
+-   $T^+$ = event one tests positive for disease
+
+-   $T^-$ = event one tests negative for disease
+
+
+## Let's apply the steps to our example (2/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 2:** Translate given information into mathematical notation
+
+-   Test correctly gives a positive result 94.3% of the time:
+
+ 
+
+-   Test correctly gives a negative result 98.1% of the time:
+
+ 
+
+- 83.8 people per 100k in Multnomah County with Covid-19: 
+
+## Let's apply the steps to our example (3/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 3:** Translate the question into a probability statement
+
+1.  What is the probability of a positive test result?
+
+ 
+
+2.  What is the probability of having COVID-19 if you get a positive test result?
+
+ 
+
+3.  What is the probability of not having COVID-19 if you get a negative test result?
+
+## Let's apply the steps to our example (4/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 4:** Define our question's probability statement using the probability statements with assigned values
+
+1.  $P(T^{+}) =$
+
+## Let's apply the steps to our example (5/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 4:** Define our question's probability statement using the probability statements with assigned values
+
+2.  $P(D|T^{+}) =$
+
+
+
+## Let's apply the steps to our example (6/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 4:** Define our question's probability statement using the probability statements with assigned values
+
+3.  $P(D^{\text{c}}|T^{-}) =$
+
+## Let's apply the steps to our example (7/7)
+
+::: example
+::: ex-ttl
+How accurate is rapid testing for COVID-19?
+:::
+::: ex-cont
+"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens." In October 2022, 83.8 people per 100k in Multnomah County with Covid-19. 
+:::
+:::
+
+**Step 5:** Calculate answer
+
+## Some specialized terminology in diagnostic tests
+
+Calculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology
+
+- The **sensitivity** of a test is the probability of a positive test result
+when disease is present, such as a positive mammogram when a patient has breast cancer.
+- The **specificity** of a test is the probability of a negative test result when disease is absent
+- The probability of disease in a population is referred to as the **prevalence**. 
+- With specificity and sensitivity information for a particular test, along with disease prevalence, the **positive predictive value (PPV)** can be calculated: the probability that disease is present when a test result is positive.
+- Similarly, the **negative predictive value** is the probability that disease is absent when test results are negative
+
+## Poll Everywhere Question

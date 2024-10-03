@@ -16,7 +16,7 @@ format:
     show-slide-number: all
     width: 1600
     height: 1100
-    footer: R3 Slides
+    footer: R05 Slides
     html-math-method: mathjax
     highlight-style: arrow
 execute:
@@ -25,8 +25,6 @@ execute:
 ---
 
 # Saving your work with Quarto
-
-or, creating reproducible reports
 
 ![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_rmarkdown_wizards_quarto.png){fig-align="center"}
 
@@ -145,5 +143,76 @@ html output
 
 :::
 :::
+
+# Importing data
+
+# Packages
+
+## Installing packages
+
+## `here` package
+
+::: columns
+::: column
+-   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+
+    -   Just substitute `.Rmd` with `.qmd`
+
+-   Basically, a `.qmd` file and `.R` file work differently
+
+    -   We haven't worked much with `.R` files
+
+-   For `.qmd` files, the automatic directory is the folder it is in
+
+    -   But we want it to be the main project folder
+
+-   `here` can help with that
+:::
+
+::: column
+![](images/paths.png){fig-align="center"}
+:::
+:::
+
+## Install `here` package
+
+-   Install `here` package: you can do this in your console (not inside `.qmd` file)
+
+```{r}
+#| eval: false
+install.packages("here")
+```
+
+-   Within your console, type `here()` and enter
+
+    -   Try this with `getwd()` as well
+
+## Using `here()` to load data
+
+-   There `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
+
+-   To load the dataset in our `.qmd` file, we will use:
+
+```{r}
+#| eval: false
+data = read_excel(here("./Data/CH05Q01.xls"))
+data = read_excel(here("Data", "CH05Q01.xls"))
+```
+
+::: red
+::: red-ttl
+Watch out when using lubridate package simultaneously
+:::
+
+::: red-cont
+Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will tell R to use the function `here()` within the `here` package instead of `lubridate`'s `here()` function. To call lubridate's function, we'd use `lubridate::here()`
+:::
+:::
+
+```{r}
+#| echo: false
+countdown::countdown(5)
+```
+
 
 

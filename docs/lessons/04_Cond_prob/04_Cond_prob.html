@@ -345,123 +345,458 @@ Meike Niederhausen and Nicky Wakim
 
 <p>https://github.com/OI-Biostat/oi_biostat_text/blob/master/ch_probability_oi_biostat/TeX/ch_probability_oi_biostat.tex</p>
 </section>
+<section>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li></li>
+</ol>
+</section>
+<section id="example-hypertension-prevalence-12" class="slide level2">
+<h2>Example: hypertension prevalence (1/2)</h2>
+<ul>
+<li>US CDC estimated that between 2011 and 2014<sup>1</sup>, 29% of the population in America had hypertension</li>
+<li>A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
+<ul>
+<li>However, this is <strong>only the case if nothing else is known about the patient</strong></li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li></ol></aside></section>
+<section id="example-hypertension-prevalence-22" class="slide level2">
+<h2>Example: hypertension prevalence (2/2)</h2>
+<ul>
+<li>Prevalence of <strong>hypertension varies significantly with age</strong>
+<ul>
+<li>Among adults aged 18-39, 7.3% have hypertension</li>
+<li>Adults aged 40-59, 32.2%</li>
+<li>Adults aged 60 or older, 64.9% have hypertension</li>
+</ul></li>
+<li>Knowing the age of a patient provides important information about the likelihood of hypertension
+<ul>
+<li>Age and hypertension status are <strong>not independent</strong> (we will get into this)</li>
+</ul></li>
+<li>While the probability of hypertension in a randomly chosen adult is 0.29, the <strong>conditional probability</strong> of hypertension in a person known to be 60 or older is 0.649</li>
+</ul>
+<p>&nbsp;</p>
+<div class="orange-ttl">
+<p>How can we use probabilities to show this?</p>
+</div>
+</section>
 <section id="marginal-and-joint-probabilities" class="slide level2">
 <h2>Marginal and joint probabilities</h2>
+<ul>
+<li>We can start looking at the contingency table for hypertension for different age groups
+<ul>
+<li>Contingency table: type of data table that displays the frequency distribution of two or more categorical variables</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Table: Contingency table showing hypertension status and age group, in thousands.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Hypertension</th>
+<th style="text-align: right;">No Hypertension</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">90862</td>
+<td style="text-align: right;">222458</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="more-on-the-table" class="slide level2">
+<h2>More on the table</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Table: Contingency table showing hypertension status and age group, in thousands.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Hypertension</th>
+<th style="text-align: right;">No Hypertension</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">90862</td>
+<td style="text-align: right;">222458</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>In first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)</li>
+<li>But we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)</li>
+</ul>
+</section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
 </section>
 <section id="defining-conditional-probability" class="slide level2">
 <h2>Defining conditional probability</h2>
+<ul>
+<li>So far we have intuitively thought of conditional probability:
+<ul>
+<li>The first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)</li>
+</ul></li>
+<li>We got this from: <span class="math display">\[P(\text{hypertension} | \text{18-39 years old}) = \dfrac{8,836,000}{121,042,000} = 0.073\]</span>
+<ul>
+<li>“<span class="math inline">\(\text{hypertension} | \text{18-39 years old}\)</span>” reads as “hypertension given 18-39 years old”</li>
+</ul></li>
+</ul>
+</section>
+<section id="we-can-define-conditional-probability-more-mathematically" class="slide level2">
+<h2>We can define conditional probability more mathematically</h2>
+<ul>
+<li>Let’s define some events:
+<ul>
+<li><span class="math inline">\(A\)</span> = hypertension</li>
+<li><span class="math inline">\(B\)</span> = 18-39 years old</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[P(\text{hypertension} | \text{18-39 years old}) = P(A | B) =  \dfrac{P(A \cap B)}{P(B)}\]</span></p>
+<div class="definition">
+<div class="def-ttl">
+<p>Conditional probability</p>
+</div>
+<div class="def-cont">
+<p>The conditional probability of an event A given an event or condition B is: <span class="math display">\[P(A|B) = \frac{P(A \cap B)}{P(B)}\]</span></p>
+</div>
+</div>
+</section>
+<section id="so-if-we-had-a-table-of-probabilities-for-our-example" class="slide level2">
+<h2>So if we had a table of probabilities for our example…</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Table: Probability table summarizing hypertension status and age group.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Hypertension</th>
+<th style="text-align: right;">No Hypertension</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">0.0282</td>
+<td style="text-align: right;">0.3581</td>
+<td style="text-align: right;">0.3863</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">0.1344</td>
+<td style="text-align: right;">0.2830</td>
+<td style="text-align: right;">0.4174</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">0.1274</td>
+<td style="text-align: right;">0.0689</td>
+<td style="text-align: right;">0.1963</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">0.2900</td>
+<td style="text-align: right;">0.7100</td>
+<td style="text-align: right;">1.0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="lob">
+<p>What is the probability of hypertension for someone aged 18-39 years old?</p>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="pink">
+<div class="pink-ttl">
+<p>Recall</p>
+</div>
+<div class="pink-cont">
+<ul>
+<li><span class="math inline">\(A\)</span> = hypertension</li>
+<li><span class="math inline">\(B\)</span> = 18-39 years old</li>
+<li><span class="math display">\[P(A|B) = \frac{P(A \cap B)}{P(B)}\]</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="general-multiplication-rule" class="slide level2">
 <h2>General multiplication rule</h2>
+<div class="definition">
+<div class="def-ttl">
+<p>General multiplication rule</p>
+</div>
+<div class="def-cont">
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> represent two outcomes or events, then <span class="math display">\[P(A \cap B) = P(A|B)P(B)\]</span></p>
+</div>
+</div>
+<p>This follows from rearranging the definition of conditional probability: <span class="math display">\[P(A|B) = \frac{P(A \cap B)}{P(B)} \rightarrow P(A|B)P(B) = P(A \cap B)\]</span></p>
 </section>
 <section id="independence-and-conditional-probability" class="slide level2">
 <h2>Independence and conditional probability</h2>
-</section>
-<section id="bayes-theorem" class="slide level2">
-<h2>Bayes’ Theorem</h2>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<div class="example">
-<p><strong>Example 1</strong>. <em><strong>How accurate is rapid testing for COVID-19?</strong> </em></p>
-<p><em>From the iHealth® website <a href="https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details" class="uri">https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details</a>:</em></p>
-<p><em>"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens."</em></p>
-<p><em>Suppose you take the iHealth® rapid test.</em></p>
-<ol type="1">
-<li><p><em>What is the probability of a positive test result?</em></p></li>
-<li><p><em>What is the probability of having COVID-19 if you get a positive test result?</em></p></li>
-<li><p><em>What is the probability of not having COVID-19 if you get a negative test result?</em></p></li>
-</ol>
-<p><strong><em>What information were we given?</em></strong></p>
-<p><em>First, let’s define our events of interest:</em></p>
 <ul>
-<li><p><em><span class="math inline">\(D\)</span> = event one has disease (COVID-19)</em></p></li>
-<li><p><em><span class="math inline">\(D^c\)</span> = event one does not have disease</em></p></li>
-<li><p><em><span class="math inline">\(T^+\)</span> = event one tests positive for disease</em></p></li>
-<li><p><em><span class="math inline">\(T^-\)</span> = event one tests negative for disease</em></p></li>
-</ul>
-<p><em>Translate given information into mathematical notation:</em></p>
+<li><p>If two events, say A and B, are <strong>independent</strong>, then: <span class="math display">\[P(A \cap B) = P(A)P(B)\]</span></p></li>
+<li><p>We can extend this to conditional probability: <span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)</span></p>
 <ul>
-<li><p><em>Test correctly gives a positive result 94.3% of the time:</em></p></li>
-<li><p><em>Test correctly gives a negative result 98.1% of the time:</em></p></li>
-<li><p><em>What are all the possible scenarios of test results?</em></p></li>
+<li>For two independent events, say A and B, <span class="math display">\[P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)} = P(A)\]</span></li>
+</ul></li>
 </ul>
-<p><em>Given: <span class="math inline">\(\mathbb{P}(T^+|D) = 0.943\)</span>, <span class="math inline">\(\ \ \mathbb{P}(T^-|D^c) = 0.981\)</span></em></p>
-<p><strong><em>Solutions to questions</em></strong></p>
-<ol type="1">
-<li><p><em>What is the probability of a positive test result?</em></p>
-<p><em>Given: <span class="math inline">\(\mathbb{P}(T^+|D) = 0.943\)</span>, <span class="math inline">\(\ \ \mathbb{P}(T^-|D^c) = 0.981\)</span></em></p></li>
-<li><p><em>What is the probability of having COVID-19 if you get a positive test result?</em></p>
-<p><em>Given: <span class="math inline">\(\mathbb{P}(T^+|D) = 0.943\)</span>, <span class="math inline">\(\ \ \mathbb{P}(T^-|D^c) = 0.981\)</span></em></p></li>
-<li><p><em>What is the probability of not having COVID-19 if you get a negative test result?</em></p></li>
-</ol>
+<div class="green">
+<div class="green-ttl">
+<p>Conditional probability of independent events</p>
+</div>
+<div class="green-cont">
+<p>If events A and B are independent, then <span class="math display">\[P(A|B) =P(A) \text{ and } P(B|A) = P(B)\]</span></p>
+</div>
 </div>
 </section>
 <section id="bayes-theorem-section-2.2.5" class="slide level2">
 <h2>Bayes’ Theorem (Section 2.2.5)</h2>
-<p>In the previous examples we derived the formula for Bayes’ Theorem.</p>
-<div class="theorem">
-<p><strong>Theorem 2</strong> (Bayes’ Theorem). <em>If the sample space <span class="math inline">\(S\)</span> can be split into disjoint events <span class="math inline">\(A_1, A_2, ..., A_k\)</span> that make up all possible outcomes in <span class="math inline">\(S\)</span>, and if <span class="math inline">\(\mathbb{P}(A_i)&gt;0\)</span> for <span class="math inline">\(i=1,\ldots, k\)</span> and <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>, then</em></p>
-<p><em><span class="math display">\[\mathbb{P}(A_1 | B) =
-\frac{\mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1)}
-{\mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1) + \mathbb{P}(B|A_2) \cdot \mathbb{P}(A_2) + ... +
-\mathbb{P}(B|A_k) \cdot \mathbb{P}(A_k)}\]</span></em></p>
+<div class="red">
+<div class="red-ttl">
+<p>Bayes’ Theorem</p>
 </div>
-<p>Special case of Bayes’ Theorem for sample space being split into <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span>:</p>
-<p><span class="math display">\[\mathbb{P}(A | B) =
-\frac{\mathbb{P}(B|A) \cdot \mathbb{P}(A)}
-{\mathbb{P}(B|A) \cdot \mathbb{P}(A) + \mathbb{P}(B|A^c) \cdot \mathbb{P}(A^c) }\]</span></p>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="theorem">
-<p><strong>Theorem 3</strong> (Law of Total Probability). <em>(denominator of Bayes’ Theorem)</em></p>
-<p><em>If the sample space <span class="math inline">\(S\)</span> can be split into disjoint events <span class="math inline">\(A_1, A_2, ..., A_k\)</span> that make up all possible outcomes in <span class="math inline">\(S\)</span>, and if <span class="math inline">\(\mathbb{P}(A_i)&gt;0\)</span> for <span class="math inline">\(i=1,\ldots, k\)</span> and <span class="math inline">\(\mathbb{P}(B)&gt;0\)</span>, then</em></p>
-<p><em><span class="math display">\[%\left(
-\begin{array}{ccl}
-\mathbb{P}(B)&amp;=&amp; \mathbb{P}(B\ \textrm{and}\ A_1) + \mathbb{P}(B\ \textrm{and}\ A_2) + \ldots + \mathbb{P}(B\ \textrm{and}\ A_k)\\
-           &amp;=&amp; \mathbb{P}(B|A_1) \cdot \mathbb{P}(A_1) + \mathbb{P}(B|A_2) \cdot \mathbb{P}(A_2) + \ldots + \mathbb{P}(B|A_k) \cdot \mathbb{P}(A_k)
-\end{array}
-%\right)\]</span></em></p>
+<div class="red-cont">
+<p>In its simplest form: <span class="math display">\[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]</span></p>
 </div>
+</div>
+<p>This also translates to: <span class="math display">\[P(A | B) =
+\frac{P(B|A) \cdot P(A)}
+{P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c) }\]</span> because of the <strong>Law of Total Probability</strong>: <span class="math display">\[\begin{aligned}P(B) = &amp; P(B \cap A) + P(B \cap A^C) \\ = &amp;P(B | A)P(A)+ P(B|A^C)P(A^C) \end{aligned}\]</span></p>
+</section></section>
+<section>
+<section id="learning-objective" class="title-slide slide level1 center">
+<h1>Learning Objective</h1>
+
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>Special case of Law of Total Probability for sample space being split into <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span>:</p>
-<p><span class="math display">\[%\left(
-\begin{array}{ccl}
-\mathbb{P}(B)&amp;=&amp;\mathbb{P}(B\ \textrm{and}\ A) + \mathbb{P}(B\ \textrm{and}\ A^C)\\
-           &amp;=&amp; \mathbb{P}(B|A) \cdot \mathbb{P}(A)+ \mathbb{P}(B | A^C)\cdot \mathbb{P}(A^C)
-\end{array}
-%\right)\]</span></p>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="example-how-accurate-is-rapid-testing-for-covid-19-1n" class="slide level2">
+<h2>Example: How accurate is rapid testing for COVID-19? (1/n)</h2>
 <div class="example">
-<p><strong>Example 4</strong>. <strong><em>Antibody test for COVID-19</em></strong></p>
-<p><em>According to the <a href="https://www.fda.gov/medical-devices/coronavirus-disease-2019-covid-19-emergency-use-authorizations-medical-devices/eua-authorized-serology-test-performance">FDA’s EUA Authorized Serology Test Performance website</a>, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.</em></p>
-<p><em>Question: What is the specificity of the antibody test?</em></p>
-<p><strong><em>What information were we given?</em></strong></p>
-<p><em>First, let’s define our events of interest:</em></p>
-<ul>
-<li><p><em><span class="math inline">\(A\)</span> = event one has antibodies for COVID-19</em></p></li>
-<li><p><em><span class="math inline">\(A^c\)</span> = event one does not have antibodies</em></p></li>
-<li><p><em><span class="math inline">\(T^+\)</span> = event one tests positive for antibodies</em></p></li>
-<li><p><em><span class="math inline">\(T^-\)</span> = event one tests negative for antibodies</em></p></li>
-</ul>
-<p><em>Translate given information into mathematical notation:</em></p>
-<ul>
-<li><p><em>Sensitivity is 98.1%:</em></p></li>
-<li><p><em>PPV is 98.4%:</em></p></li>
-<li><p><em>Prevalence is 20%:</em></p></li>
-</ul>
-<p><strong><em>Solution:</em></strong></p>
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
 </div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+<p>Suppose you take the iHealth® rapid test.</p>
+<ol type="1">
+<li><p>What is the probability of a positive test result?</p></li>
+<li><p>What is the probability of having COVID-19 if you get a positive test result?</p></li>
+<li><p>What is the probability of not having COVID-19 if you get a negative test result?</p></li>
+</ol>
+</div>
+</div>
+<p>From the iHealth® website <a href="https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details" class="uri">https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details</a>:</p>
+</section>
+<section id="general-steps-for-probability-word-problems" class="slide level2">
+<h2>General steps for probability word problems</h2>
+<ol type="1">
+<li><p>Define the events in the problem</p></li>
+<li><p>Translate the words and numbers into probability statements</p></li>
+<li><p>Translate the question into a probability statement</p></li>
+<li><p>Think about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?</p></li>
+<li><p>Plug in the given numbers to calculate the answer!</p></li>
+</ol>
+</section>
+<section id="lets-apply-the-steps-to-our-example-17" class="slide level2">
+<h2>Let’s apply the steps to our example (1/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 1:</strong> Let’s define our events of interest</p>
+<ul>
+<li><p><span class="math inline">\(D\)</span> = event one has disease (COVID-19)</p></li>
+<li><p><span class="math inline">\(D^c\)</span> = event one does not have disease</p></li>
+<li><p><span class="math inline">\(T^+\)</span> = event one tests positive for disease</p></li>
+<li><p><span class="math inline">\(T^-\)</span> = event one tests negative for disease</p></li>
+</ul>
+</section>
+<section id="lets-apply-the-steps-to-our-example-27" class="slide level2">
+<h2>Let’s apply the steps to our example (2/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 2:</strong> Translate given information into mathematical notation</p>
+<ul>
+<li>Test correctly gives a positive result 94.3% of the time:</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Test correctly gives a negative result 98.1% of the time:</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>83.8 people per 100k in Multnomah County with Covid-19:</li>
+</ul>
+</section>
+<section id="lets-apply-the-steps-to-our-example-37" class="slide level2">
+<h2>Let’s apply the steps to our example (3/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 3:</strong> Translate the question into a probability statement</p>
+<ol type="1">
+<li>What is the probability of a positive test result?</li>
+</ol>
+<p>&nbsp;</p>
+<ol start="2" type="1">
+<li>What is the probability of having COVID-19 if you get a positive test result?</li>
+</ol>
+<p>&nbsp;</p>
+<ol start="3" type="1">
+<li>What is the probability of not having COVID-19 if you get a negative test result?</li>
+</ol>
+</section>
+<section id="lets-apply-the-steps-to-our-example-47" class="slide level2">
+<h2>Let’s apply the steps to our example (4/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 4:</strong> Define our question’s probability statement using the probability statements with assigned values</p>
+<ol type="1">
+<li><span class="math inline">\(P(T^{+}) =\)</span></li>
+</ol>
+</section>
+<section id="lets-apply-the-steps-to-our-example-57" class="slide level2">
+<h2>Let’s apply the steps to our example (5/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 4:</strong> Define our question’s probability statement using the probability statements with assigned values</p>
+<ol start="2" type="1">
+<li><span class="math inline">\(P(D|T^{+}) =\)</span></li>
+</ol>
+</section>
+<section id="lets-apply-the-steps-to-our-example-67" class="slide level2">
+<h2>Let’s apply the steps to our example (6/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 4:</strong> Define our question’s probability statement using the probability statements with assigned values</p>
+<ol start="3" type="1">
+<li><span class="math inline">\(P(D^{\text{c}}|T^{-}) =\)</span></li>
+</ol>
+</section>
+<section id="lets-apply-the-steps-to-our-example-77" class="slide level2">
+<h2>Let’s apply the steps to our example (7/7)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>How accurate is rapid testing for COVID-19?</p>
+</div>
+<div class="ex-cont">
+<p>“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.</p>
+</div>
+</div>
+<p><strong>Step 5:</strong> Calculate answer</p>
+</section>
+<section id="some-specialized-terminology-in-diagnostic-tests" class="slide level2">
+<h2>Some specialized terminology in diagnostic tests</h2>
+<p>Calculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology</p>
+<ul>
+<li>The <strong>sensitivity</strong> of a test is the probability of a positive test result when disease is present, such as a positive mammogram when a patient has breast cancer.</li>
+<li>The <strong>specificity</strong> of a test is the probability of a negative test result when disease is absent</li>
+<li>The probability of disease in a population is referred to as the <strong>prevalence</strong>.</li>
+<li>With specificity and sensitivity information for a particular test, along with disease prevalence, the <strong>positive predictive value (PPV)</strong> can be calculated: the probability that disease is present when a test result is positive.</li>
+<li>Similarly, the <strong>negative predictive value</strong> is the probability that disease is absent when test results are negative</li>
+</ul>
+</section>
+<section id="poll-everywhere-question" class="slide level2">
+<h2>Poll Everywhere Question</h2>
 
 <div class="footer footer-default">
 <p>Lesson 5 Slides</p>
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 
@@ -675,6 +1010,44 @@ Meike Niederhausen and Nicky Wakim
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

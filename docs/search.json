@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting help when coding (functions, AI, etc)\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR09\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -11183,7 +11183,7 @@
     "href": "lessons/03_Probability/03_Probability_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "The lovely EPI/BSTA tutors are visiting us!\n\nMickey and Sofia\n\nAnd maybe our TAs??\n\nLiv and Miyuki\n\nR for the Rest of Us\n\nA fellow student reminded me of this great resource!\nIf you want to get refreshers on R, please use this!\nIt’s free, but I think you need to sign up\n\nUsing OneDrive for other class materials\nWhen we get to HW where we work with R will you indicate that we should use R for that question?\n\nYes! Homework 1 should not need any R, but in later homeworks I will tell you!"
+    "text": "The lovely EPI/BSTA tutors are visiting us!\n\nMickey and Sofia\n\nAnd maybe our TAs??\n\nLiv and Miyuki\n\nR for the Rest of Us\n\nA fellow student reminded me of this great resource!\nIf you want to get refreshers on R, please use this!\nIt’s free, but I think you need to sign up\n\nWhen we get to HW where we work with R will you indicate that we should use R for that question?\n\nYes! Homework 1 should not need any R, but in later homeworks I will tell you!\n\nFor homework 1, you will need to the textbook! There is a link in the Syllabus and a pdf in our shared OneDrive folder.\n\nWhat’s out shared OneDrive folder?? OHSU uses OneDrive as cloud storage. Everyone should be able to access OneDrive with their OHSU email, in addition to many other Microsoft apps.  \nIn our shared folder, I put files that I cannot share publicly. You’ll see homework solutions, recordings, and textbooks in there. For the most part, I will place links on our website directly to the files. I don’t always do the best job of this, so please take a look at those files as well. \n\nDue days\n\nI don’t want anyone to feel anxious about when exactly HW 1 is due. Almost everyone has voted, and it looks like Fridays will be the best day for homework assignments. Consequently, I want to give you more than a week after assignments are due to turn in the solutions, so solutions will be due two Sundays after the assignment is due (9 days after).\nFor example, the assignment for HW 1 is due 10/11 at 11pm and the solutions for HW 1 will be due 10/20 at 11pm.\n\nHomework solution groups!!\n\nI added a link to a Microsoft form in Homework 1\nPlease specify who you would like to partner with"
   },
   {
     "objectID": "lessons/03_Probability/03_Probability_key_info.html#to-nicky",
@@ -11197,7 +11197,7 @@
     "href": "lessons/03_Probability/03_Probability_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "The lovely EPI/BSTA tutors are visiting us!\n\nMickey and Sofia\n\nAnd maybe our TAs??\n\nLiv and Miyuki\n\nR for the Rest of Us\n\nA fellow student reminded me of this great resource!\nIf you want to get refreshers on R, please use this!\nIt’s free, but I think you need to sign up\n\nUsing OneDrive for other class materials\nWhen we get to HW where we work with R will you indicate that we should use R for that question?\n\nYes! Homework 1 should not need any R, but in later homeworks I will tell you!"
+    "text": "The lovely EPI/BSTA tutors are visiting us!\n\nMickey and Sofia\n\nAnd maybe our TAs??\n\nLiv and Miyuki\n\nR for the Rest of Us\n\nA fellow student reminded me of this great resource!\nIf you want to get refreshers on R, please use this!\nIt’s free, but I think you need to sign up\n\nWhen we get to HW where we work with R will you indicate that we should use R for that question?\n\nYes! Homework 1 should not need any R, but in later homeworks I will tell you!\n\nFor homework 1, you will need to the textbook! There is a link in the Syllabus and a pdf in our shared OneDrive folder.\n\nWhat’s out shared OneDrive folder?? OHSU uses OneDrive as cloud storage. Everyone should be able to access OneDrive with their OHSU email, in addition to many other Microsoft apps.  \nIn our shared folder, I put files that I cannot share publicly. You’ll see homework solutions, recordings, and textbooks in there. For the most part, I will place links on our website directly to the files. I don’t always do the best job of this, so please take a look at those files as well. \n\nDue days\n\nI don’t want anyone to feel anxious about when exactly HW 1 is due. Almost everyone has voted, and it looks like Fridays will be the best day for homework assignments. Consequently, I want to give you more than a week after assignments are due to turn in the solutions, so solutions will be due two Sundays after the assignment is due (9 days after).\nFor example, the assignment for HW 1 is due 10/11 at 11pm and the solutions for HW 1 will be due 10/20 at 11pm.\n\nHomework solution groups!!\n\nI added a link to a Microsoft form in Homework 1\nPlease specify who you would like to partner with"
   },
   {
     "objectID": "lessons/03_Probability/03_Probability_key_info.html#key-dates",
@@ -11658,15 +11658,15 @@
     "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#example-creating-an-html-file",
     "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#example-creating-an-html-file",
     "title": "R3: Quarto in R",
-    "section": "",
-    "text": ".qmd file \n\nhtml output"
+    "section": "Example: creating an html file",
+    "text": "Example: creating an html file\n\n\n.qmd file \n\nhtml output"
   },
   {
     "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#quarto-.qmd-file-code-text",
     "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#quarto-.qmd-file-code-text",
     "title": "R3: Quarto in R",
-    "section": "",
-    "text": "knitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+    "section": "Quarto = .qmd file = Code + text",
+    "text": "Quarto = .qmd file = Code + text\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
   },
   {
     "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-a-quarto-file-.qmd",
@@ -11694,7 +11694,7 @@
     "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#create-html-file",
     "title": "R3: Quarto in R",
     "section": "4. Create html file",
-    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
+    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
   },
   {
     "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#qmd-file-vs.-its-html-output",
@@ -12352,7 +12352,7 @@
     "href": "lessons/R02_Basics_01/R02_Basics_01.html#math-calculations-using-r",
     "title": "R02: R Basics",
     "section": "Math calculations using R",
-    "text": "Math calculations using R\n\nWe can use R as a calculator!!\nRules for order of operations are followed\nSpaces between numbers and characters are ignored\n\n \n\n\n\n10^2\n\n[1] 100\n\n3 ^ 7\n\n[1] 2187\n\n6/9\n\n[1] 0.6666667\n\n9-43\n\n[1] -34\n\n\n\n\n4^3-2* 7+9 /2\n\n[1] 54.5\n\n\nThe equation above is computed as \\[4^3 − (2 \\cdot 7) + \\frac{9}{2}\\]"
+    "text": "Math calculations using R\n\nWe can use R as a calculator!!\nRules for order of operations are followed\nSpaces between numbers and characters are ignored\n\n \n\n\n\n10^2\n\n[1] 100\n\n3 ^ 7\n\n[1] 2187\n\n6/9\n\n[1] 0.6666667\n\n9-43\n\n[1] -34\n\n\n\n\n4^3-2* 7+9 /2\n\n[1] 54.5\n\n\nThe equation above is computed as \\[4^3 − (2 \\cdot 7) + \\frac{9}{2}\\]\n\n\n\n\nR02 Slides"
   },
   {
     "objectID": "lessons/R02_Basics_01/R02_Basics_01.html#variables-saved-r-objects",
@@ -12779,56 +12779,56 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#bayes-theorem-section-2.2.5",
     "title": "Lesson 4: Conditional Probability",
     "section": "Bayes’ Theorem (Section 2.2.5)",
-    "text": "Bayes’ Theorem (Section 2.2.5)\nIn the previous examples we derived the formula for Bayes’ Theorem.\n\nTheorem 2 (Bayes’ Theorem). If the sample space \\(S\\) can be split into disjoint events \\(A_1, A_2, ..., A_k\\) that make up all possible outcomes in \\(S\\), and if \\(\\mathbb{P}(A_i)&gt;0\\) for \\(i=1,\\ldots, k\\) and \\(\\mathbb{P}(B)&gt;0\\), then\n\\[\\mathbb{P}(A_1 | B) =\n\\frac{\\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1)}\n{\\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1) + \\mathbb{P}(B|A_2) \\cdot \\mathbb{P}(A_2) + ... +\n\\mathbb{P}(B|A_k) \\cdot \\mathbb{P}(A_k)}\\]\n\nSpecial case of Bayes’ Theorem for sample space being split into \\(A\\) and \\(A^c\\):\n\\[\\mathbb{P}(A | B) =\n\\frac{\\mathbb{P}(B|A) \\cdot \\mathbb{P}(A)}\n{\\mathbb{P}(B|A) \\cdot \\mathbb{P}(A) + \\mathbb{P}(B|A^c) \\cdot \\mathbb{P}(A^c) }\\]"
+    "text": "Bayes’ Theorem (Section 2.2.5)\n\n\nBayes’ Theorem\n\n\nIn its simplest form: \\[P(A|B) = \\frac{P(B|A)P(A)}{P(B)}\\]\n\n\nThis also translates to: \\[P(A | B) =\n\\frac{P(B|A) \\cdot P(A)}\n{P(B|A) \\cdot P(A) + P(B|A^c) \\cdot P(A^c) }\\] because of the Law of Total Probability: \\[\\begin{aligned}P(B) = & P(B \\cap A) + P(B \\cap A^C) \\\\ = &P(B | A)P(A)+ P(B|A^C)P(A^C) \\end{aligned}\\]"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#section",
     "title": "Lesson 4: Conditional Probability",
     "section": "",
-    "text": "Theorem 3 (Law of Total Probability). (denominator of Bayes’ Theorem)\nIf the sample space \\(S\\) can be split into disjoint events \\(A_1, A_2, ..., A_k\\) that make up all possible outcomes in \\(S\\), and if \\(\\mathbb{P}(A_i)&gt;0\\) for \\(i=1,\\ldots, k\\) and \\(\\mathbb{P}(B)&gt;0\\), then\n\\[%\\left(\n\\begin{array}{ccl}\n\\mathbb{P}(B)&=& \\mathbb{P}(B\\ \\textrm{and}\\ A_1) + \\mathbb{P}(B\\ \\textrm{and}\\ A_2) + \\ldots + \\mathbb{P}(B\\ \\textrm{and}\\ A_k)\\\\\n           &=& \\mathbb{P}(B|A_1) \\cdot \\mathbb{P}(A_1) + \\mathbb{P}(B|A_2) \\cdot \\mathbb{P}(A_2) + \\ldots + \\mathbb{P}(B|A_k) \\cdot \\mathbb{P}(A_k)\n\\end{array}\n%\\right)\\]"
+    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 5 Slides"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section-1",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#section-1",
     "title": "Lesson 4: Conditional Probability",
     "section": "",
-    "text": "Special case of Law of Total Probability for sample space being split into \\(A\\) and \\(A^c\\):\n\\[%\\left(\n\\begin{array}{ccl}\n\\mathbb{P}(B)&=&\\mathbb{P}(B\\ \\textrm{and}\\ A) + \\mathbb{P}(B\\ \\textrm{and}\\ A^C)\\\\\n           &=& \\mathbb{P}(B|A) \\cdot \\mathbb{P}(A)+ \\mathbb{P}(B | A^C)\\cdot \\mathbb{P}(A^C)\n\\end{array}\n%\\right)\\]"
+    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 5 Slides"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section-2",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#section-2",
     "title": "Lesson 4: Conditional Probability",
     "section": "",
-    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 5 Slides"
+    "text": "Special case of Law of Total Probability for sample space being split into \\(A\\) and \\(A^c\\):\n\\[%\\left(\n\\begin{array}{ccl}\nP(B)&=&P(B\\ \\textrm{and}\\ A) + P(B\\ \\textrm{and}\\ A^C)\\\\\n           &=& P(B|A) \\cdot P(A)+ P(B | A^C)\\cdot P(A^C)\n\\end{array}\n%\\right)\\]"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#marginal-and-joint-probabilities",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#marginal-and-joint-probabilities",
     "title": "Lesson 4: Conditional Probability",
     "section": "Marginal and joint probabilities",
-    "text": "Marginal and joint probabilities"
+    "text": "Marginal and joint probabilities\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#defining-conditional-probability",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#defining-conditional-probability",
     "title": "Lesson 4: Conditional Probability",
     "section": "Defining conditional probability",
-    "text": "Defining conditional probability"
+    "text": "Defining conditional probability\n\nSo far we have intuitively thought of conditional probability:\n\nThe first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)\n\nWe got this from: \\[P(\\text{hypertension} | \\text{18-39 years old}) = \\dfrac{8,836,000}{121,042,000} = 0.073\\]\n\n“\\(\\text{hypertension} | \\text{18-39 years old}\\)” reads as “hypertension given 18-39 years old”"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#general-multiplication-rule",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#general-multiplication-rule",
     "title": "Lesson 4: Conditional Probability",
     "section": "General multiplication rule",
-    "text": "General multiplication rule"
+    "text": "General multiplication rule\n\n\nGeneral multiplication rule\n\n\nIf \\(A\\) and \\(B\\) represent two outcomes or events, then \\[P(A \\cap B) = P(A|B)P(B)\\]\n\n\nThis follows from rearranging the definition of conditional probability: \\[P(A|B) = \\frac{P(A \\cap B)}{P(B)} \\rightarrow P(A|B)P(B) = P(A \\cap B)\\]"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#independence-and-conditional-probability",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#independence-and-conditional-probability",
     "title": "Lesson 4: Conditional Probability",
     "section": "Independence and conditional probability",
-    "text": "Independence and conditional probability"
+    "text": "Independence and conditional probability\n\nIf two events, say A and B, are independent, then: \\[P(A \\cap B) = P(A)P(B)\\]\nWe can extend this to conditional probability: \\(P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\)\n\nFor two independent events, say A and B, \\[P(A|B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{P(A)P(B)}{P(B)} = P(A)\\]\n\n\n\n\nConditional probability of independent events\n\n\nIf events A and B are independent, then \\[P(A|B) =P(A) \\text{ and } P(B|A) = P(B)\\]"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#bayes-theorem",
@@ -12841,8 +12841,8 @@
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#example",
     "title": "Lesson 4: Conditional Probability",
-    "section": "Example",
-    "text": "Example\n\nExample 1. How accurate is rapid testing for COVID-19? \nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n\"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.\"\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+    "section": "Example:",
+    "text": "Example:\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.”\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\n\n\nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:"
   },
   {
     "objectID": "lessons/R01_Download_R/R01_Download_R.html#if-you-have-issues-downloading-on-your-laptop-for-in-class-use",
@@ -12948,5 +12948,740 @@
     "title": "Muddy Points",
     "section": "3 What benefit would the median provide, especially if the mean would be more representative of the entire dataset including any outliers? Is this relating directly to how you mentioned that some people choose to not include outliers (also I thought that was being selective to data to leave out data points)?",
     "text": "3 What benefit would the median provide, especially if the mean would be more representative of the entire dataset including any outliers? Is this relating directly to how you mentioned that some people choose to not include outliers (also I thought that was being selective to data to leave out data points)?\nOkay, good question! First, the mean would not really be “more representative” of the data. It just represents something different than the median. Both are aiming to summarize the center of the data. So if we have one observation that is an outlier, but the rest of the group is pretty condensed, then which measure best represents the center of the data? The mean does not do a very good job of identifying where most observations are, but the median captures the center much better.\nHonestly, I would not dwell on removing outliers. Many statisticians would agree that we do not remove outliers to make our mean a better representation. And in general, it’s not a good idea to use math as the evidence to make the math better. Ya know?"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#using-onedrive",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#using-onedrive",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Using OneDrive",
+    "text": "Using OneDrive\n\nWe all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#folder-organization",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#folder-organization",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Folder organization",
+    "text": "Folder organization\n\nMake a folder for our class!\n\nI suggest naming it something like EPI_525_F24 to indicate the class and the term\n\nMake these folders in your computer\n\nOnly make them in OneDrive if you have a desktop connection\n\n\n\n\n\nFor a project, I have the following folders\n\nBackground\nCode\nData_Raw\nData_Processed\nDissemination\nReports\nMeetings\n\n\n\n\nFor our class, I suggest making one folder for the course with the following folders in it:\n\nData\nHomework\nLessons\nR_activities\nAnd other folders if you want\n\n\n\n\n\nTake a few minutes to create these folders\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#aside-folder-and-file-naming",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#aside-folder-and-file-naming",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Aside: folder and file naming",
+    "text": "Aside: folder and file naming\nThere are a few good practices for naming files and folders for easy tracking:\n\nKeep the name short and relevant\nUse leading numbers to help organize sequential items\nUse dates in the format “YYYY-MM-DD” so that files are in chronological order\nYou can label different versions if you would like to\nUse “_” to separate sections of the name\n\nI also use this to separate words, but some people say you should use “-” to separate words"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#lets-go-into-r_activities",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#lets-go-into-r_activities",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Let’s go into R_activities",
+    "text": "Let’s go into R_activities\n\nMake a folder called something like R04_work\nWe are going to stay in the R_activities folder"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-project-in-rstudio",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-project-in-rstudio",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Creating project in RStudio",
+    "text": "Creating project in RStudio\n\nWay to designate a working directory: basically your home base when working in R\n\nWe have to tell R exactly where we are in our folders and where to find other things\nA project makes it easier to tell R where we are\n\nBasic steps to create a project\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nOnce we have projects, we can open one are R will automatically know that its location is the start of our working directory"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-a-new-qmd-file",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-a-new-qmd-file",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Creating a new qmd file",
+    "text": "Creating a new qmd file\n\nBasic steps\n\nCreate new .qmd (under File or top left corner)\nDecide on document types/options\n\nLet me show you my process\nCreate a .qmd in your Sample_folder under any folder (maybe Notes is good)\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#here-package",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#here-package",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "here package",
+    "text": "here package\n\n\n\nGood source for the here package\n\nJust substitute .Rmd with .qmd\n\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#install-here-package",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#install-here-package",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Install here package",
+    "text": "Install here package\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#using-here-to-load-data",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#using-here-to-load-data",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Using here() to load data",
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR04 Slides"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#positive-predictive-value-ppv-of-a-diagnostic-test",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#positive-predictive-value-ppv-of-a-diagnostic-test",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Positive Predictive Value (PPV) of a diagnostic test",
+    "text": "Positive Predictive Value (PPV) of a diagnostic test"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example",
+    "text": "Example\n\nExample 1. How accurate is rapid testing for COVID-19?\nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.”\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section-3",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#section-3",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "",
+    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 5 Slides"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: hypertension prevalence",
+    "text": "Example: hypertension prevalence\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension in a randomly chosen adult is 0.29, the conditional probability of hypertension in a person known to be 60 or older is 0.745\n\n \n\nHow can we use probabilities to show this?\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: hypertension prevalence (1/2)",
+    "text": "Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: hypertension prevalence (1/2)",
+    "text": "Example: hypertension prevalence (1/2)\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension in a randomly chosen adult is 0.29, the conditional probability of hypertension in a person known to be 60 or older is 0.649\n\n \n\nHow can we use probabilities to show this?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-22",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-22",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: hypertension prevalence (2/2)",
+    "text": "Example: hypertension prevalence (2/2)\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension in a randomly chosen adult is 0.29, the conditional probability of hypertension in a person known to be 60 or older is 0.649\n\n \n\nHow can we use probabilities to show this?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#more-on-the-table",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#more-on-the-table",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "More on the table",
+    "text": "More on the table\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\nIn first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)\nBut we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "",
+    "text": "We all have free access to OneDrive to store files\nLet’s login into our online accounts\nYou can also download OneDrive for your desktop\n\nAllows you to access the OneDrive from your computer’s interface instead of the browser\nCreates a link between your computer and the cloud!\n\nLet me show you mine\n\nI can access all the files through RStudio as well!\n\nLet’s take a couple minutes to log into OneDrive\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#we-can-define-conditional-probability-more-mathematically",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#we-can-define-conditional-probability-more-mathematically",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "We can define conditional probability more mathematically",
+    "text": "We can define conditional probability more mathematically\n\nLet’s define some events:\n\n\\(A\\) = hypertension\n\\(B\\) = 18-39 years old\n\n\n\\[P(\\text{hypertension} | \\text{18-39 years old}) = P(A | B) =  \\dfrac{P(A \\cap B)}{P(B)}\\]\n\n\nConditional probability\n\n\nThe conditional probability of an event A given an event or condition B is: \\[P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\]"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#so-if-we-had-a-table-of-probabilities-for-our-example",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#so-if-we-had-a-table-of-probabilities-for-our-example",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "So if we had a table of probabilities for our example…",
+    "text": "So if we had a table of probabilities for our example…\n\n\n\n\n\nTable: Probability table summarizing hypertension status and age group.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n0.0282\n0.3581\n0.3863\n\n\n40 to 59 years\n0.1344\n0.2830\n0.4174\n\n\nGreater than 60 years\n0.1274\n0.0689\n0.1963\n\n\nTotal\n0.2900\n0.7100\n1.0000\n\n\n\n\n\n \n\nWhat is the probability of hypertension for someone aged 18-39 years old?\n\n\n\n\nRecall\n\n\n\n\\(A\\) = hypertension\n\\(B\\) = 18-39 years old\n\\[P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\]"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-how-accurate-is-rapid-testing-for-covid-19",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-how-accurate-is-rapid-testing-for-covid-19",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: How accurate is rapid testing for COVID-19?",
+    "text": "Example: How accurate is rapid testing for COVID-19?\nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.”\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result? :::"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#section-4",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#section-4",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "",
+    "text": "Example 4. Antibody test for COVID-19\nAccording to the FDA’s EUA Authorized Serology Test Performance website, the Abbott AdviseDx SARS-CoV-2 IgG II (Alinity) antibody test for COVID-19 has sensitivity 98.1% and PPV 98.4% when the prevalence is 20%.\nQuestion: What is the specificity of the antibody test?\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(A\\) = event one has antibodies for COVID-19\n\\(A^c\\) = event one does not have antibodies\n\\(T^+\\) = event one tests positive for antibodies\n\\(T^-\\) = event one tests negative for antibodies\n\nTranslate given information into mathematical notation:\n\nSensitivity is 98.1%:\nPPV is 98.4%:\nPrevalence is 20%:\n\nSolution:\n\n\n\nLesson 5 Slides"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#some-specialized-terminology-in-diagnostic-tests",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#some-specialized-terminology-in-diagnostic-tests",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Some specialized terminology in diagnostic tests",
+    "text": "Some specialized terminology in diagnostic tests\nCalculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology\n\nThe sensitivity of a test is the probability of a positive test result when disease is present, such as a positive mammogram when a patient has breast cancer.\nThe specificity of a test is the probability of a negative test result when disease is absent\nThe probability of disease in a population is referred to as the prevalence.\nWith specificity and sensitivity information for a particular test, along with disease prevalence, the positive predictive value (PPV) can be calculated: the probability that disease is present when a test result is positive.\nSimilarly, the negative predictive value is the probability that disease is absent when test results are negative"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-how-accurate-is-rapid-testing-for-covid-19-1n",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-how-accurate-is-rapid-testing-for-covid-19-1n",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: How accurate is rapid testing for COVID-19? (1/n)",
+    "text": "Example: How accurate is rapid testing for COVID-19? (1/n)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\n\n\nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-how-accurate-is-rapid-testing-for-covid-19-2n",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-how-accurate-is-rapid-testing-for-covid-19-2n",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Example: How accurate is rapid testing for COVID-19? (2/n)",
+    "text": "Example: How accurate is rapid testing for COVID-19? (2/n)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.”\n\n\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#general-steps-for-probability-word-problems",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#general-steps-for-probability-word-problems",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "General steps for probability word problems",
+    "text": "General steps for probability word problems\n\nDefine the events in the problem\nTranslate the words and numbers into probability statements\nTranslate the question into a probability statement\nThink about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?\nPlug in the given numbers to calculate the answer!"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example",
+    "text": "Let’s apply the steps to our example\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.”\n\n\nStep 1: Let’s define our events of interest\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(P(T^+|D) = 0.943\\), \\(\\ \\ P(T^-|D^c) = 0.981\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-14",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-14",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (1/4)",
+    "text": "Let’s apply the steps to our example (1/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 1: Let’s define our events of interest\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-14-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-14-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (1/4)",
+    "text": "Let’s apply the steps to our example (1/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.”\n\n\nStep 2: Translate given information into mathematical notation\n\nTest correctly gives a positive result 94.3% of the time:\n\n \n\nTest correctly gives a negative result 98.1% of the time:"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (3/4)",
+    "text": "Let’s apply the steps to our example (3/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 3: Translate the question into a probability statement\n\nWhat is the probability of a positive test result?\n\n \n\nWhat is the probability of having COVID-19 if you get a positive test result?\n\n \n\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-24",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-24",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (2/4)",
+    "text": "Let’s apply the steps to our example (2/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 2: Translate given information into mathematical notation\n\nTest correctly gives a positive result 94.3% of the time:\n\n \n\nTest correctly gives a negative result 98.1% of the time:\n\n \n\n83.8 people per 100k in Multnomah County with Covid-19:"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Poll Everywhere Question",
+    "text": "Poll Everywhere Question\n\n\nLesson 5 Slides"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (3/4)",
+    "text": "Let’s apply the steps to our example (3/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 4: Define our question’s probability statement using the probability statements with assigned values\n\n\\(P(T^{+}) =\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-2",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-2",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (3/4)",
+    "text": "Let’s apply the steps to our example (3/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 4: Define our question’s probability statement using the probability statements with assigned values\n\n\\(P(D|T^{+}) =\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-3",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-3",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (3/4)",
+    "text": "Let’s apply the steps to our example (3/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 4: Define our question’s probability statement using the probability statements with assigned values\n\n\\(P(D^{\\text{c}}|T^{-}) =\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-4",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-4",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (3/4)",
+    "text": "Let’s apply the steps to our example (3/4)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 5: Calculate answer"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-17",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-17",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (1/7)",
+    "text": "Let’s apply the steps to our example (1/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 1: Let’s define our events of interest\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-27",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-27",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (2/7)",
+    "text": "Let’s apply the steps to our example (2/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 2: Translate given information into mathematical notation\n\nTest correctly gives a positive result 94.3% of the time:\n\n \n\nTest correctly gives a negative result 98.1% of the time:\n\n \n\n83.8 people per 100k in Multnomah County with Covid-19:"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-37",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-37",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (3/7)",
+    "text": "Let’s apply the steps to our example (3/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 3: Translate the question into a probability statement\n\nWhat is the probability of a positive test result?\n\n \n\nWhat is the probability of having COVID-19 if you get a positive test result?\n\n \n\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-47",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-47",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (4/7)",
+    "text": "Let’s apply the steps to our example (4/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 4: Define our question’s probability statement using the probability statements with assigned values\n\n\\(P(T^{+}) =\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-57",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-57",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (5/7)",
+    "text": "Let’s apply the steps to our example (5/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 4: Define our question’s probability statement using the probability statements with assigned values\n\n\\(P(D|T^{+}) =\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-67",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-67",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (6/7)",
+    "text": "Let’s apply the steps to our example (6/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 4: Define our question’s probability statement using the probability statements with assigned values\n\n\\(P(D^{\\text{c}}|T^{-}) =\\)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-77",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-77",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s apply the steps to our example (7/7)",
+    "text": "Let’s apply the steps to our example (7/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 5: Calculate answer"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#the-nice-thing-about-r-projects",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#the-nice-thing-about-r-projects",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "The nice thing about R projects",
+    "text": "The nice thing about R projects\nhttps://rfortherestofus.com/2022/10/rstudio-projects"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#nickys-process-for-r-projects",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#nickys-process-for-r-projects",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Nicky’s process for R projects",
+    "text": "Nicky’s process for R projects\n\nLet me show you my process\n\nI will create one in my Sample_folder\nI will show you how I switch between classes\n\nMake a project file in your class folder!\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#installing-packages",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#installing-packages",
+    "title": "R3: Quarto in R",
+    "section": "Installing packages",
+    "text": "Installing packages"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#here-package",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#here-package",
+    "title": "R3: Quarto in R",
+    "section": "here package",
+    "text": "here package\n\n\n\nGood source for the here package\n\nJust substitute .Rmd with .qmd\n\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#install-here-package",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#install-here-package",
+    "title": "R3: Quarto in R",
+    "section": "Install here package",
+    "text": "Install here package\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well"
+  },
+  {
+    "objectID": "lessons/R04_Quarto_01/R3_Quarto_01.html#using-here-to-load-data",
+    "href": "lessons/R04_Quarto_01/R3_Quarto_01.html#using-here-to-load-data",
+    "title": "R3: Quarto in R",
+    "section": "Using here() to load data",
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR05 Slides"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html",
+    "title": "R3: Quarto in R",
+    "section": "",
+    "text": "Artwork by @allison_horst\n\n\n\n\n\n\n.qmd file \n\nhtml output\n\n\n\n\n\n\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#example-creating-an-html-file",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#example-creating-an-html-file",
+    "title": "R3: Quarto in R",
+    "section": "",
+    "text": ".qmd file \n\nhtml output"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#quarto-.qmd-file-code-text",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#quarto-.qmd-file-code-text",
+    "title": "R3: Quarto in R",
+    "section": "",
+    "text": "knitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd",
+    "title": "R3: Quarto in R",
+    "section": "1. Create a Quarto file (.qmd)",
+    "text": "1. Create a Quarto file (.qmd)\nTwo options:\n\nclick on File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Quarto Document…\\(\\rightarrow\\) OK,\nor in upper left corner of RStudio click on  \\(\\rightarrow\\) \n\n\n\nPop-up window selections:\n\nEnter a title and your name\nSelect HTML output format (default)\nEngine: select Knitr\nEditor: Select Use visual markdown editor\nClick Create"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd-1",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd-1",
+    "title": "R3: Quarto in R",
+    "section": "2. Create a Quarto file (.qmd)",
+    "text": "2. Create a Quarto file (.qmd)\n\nAfter clicking on Create, you should then see the following in your editor window:"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#save-the-quarto-file-.qmd",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#save-the-quarto-file-.qmd",
+    "title": "R3: Quarto in R",
+    "section": "3. Save the Quarto file (.qmd)",
+    "text": "3. Save the Quarto file (.qmd)\n\nSave the file by\n\nselecting File -&gt; Save,\nor clicking on  (towards the left above the scripting window),\nor keyboard shortcut\n\nPC: Ctrl + s\nMac: Command + s\n\n\nYou will need to specify\n\na filename to save the file as\n\nALWAYS use .qmd as the filename extension for Quarto files\n\nthe folder to save the file in"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-html-file",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-html-file",
+    "title": "R3: Quarto in R",
+    "section": "4. Create html file",
+    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-file-vs.-its-html-output",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-file-vs.-its-html-output",
+    "title": "R3: Quarto in R",
+    "section": ".qmd file vs. its html output",
+    "text": ".qmd file vs. its html output\n\n\n.qmd file \n\nhtml output"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#installing-packages",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#installing-packages",
+    "title": "R3: Quarto in R",
+    "section": "Installing packages",
+    "text": "Installing packages"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#here-package",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#here-package",
+    "title": "R3: Quarto in R",
+    "section": "here package",
+    "text": "here package\n\n\n\nGood source for the here package\n\nJust substitute .Rmd with .qmd\n\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-here-package",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-here-package",
+    "title": "R3: Quarto in R",
+    "section": "Install here package",
+    "text": "Install here package\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-data",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-data",
+    "title": "R3: Quarto in R",
+    "section": "Using here() to load data",
+    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#inline-code",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#inline-code",
+    "title": "R4: Quarto Continued",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#formatting-text",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#formatting-text",
+    "title": "R4: Quarto Continued",
+    "section": "Formatting text",
+    "text": "Formatting text\n\nbold, italics, superscripts & subscripts, strikethrough, verbatim, etc.\n\n\nText is formatted through a markup language called Markdown (Wikipedia)\n\nOther markup languages include html (webapges) and LaTeX (math)\nAll text formatting is specified via code\n“Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read” 1\n\nNewer versions of RStudio include a Visual editor as well that makes formatting text similar to using a word processor."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#formatting-text-visual-editor",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#formatting-text-visual-editor",
+    "title": "R4: Quarto Continued",
+    "section": "Formatting text: Visual editor",
+    "text": "Formatting text: Visual editor\n\nUsing the Visual editor is similar to using a wordprocessor, such as Word\nKeyboard shortcuts usually work as well (shown for Mac below)"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#practice",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#practice",
+    "title": "R4: Quarto Continued",
+    "section": "Practice",
+    "text": "Practice\n\nPart 1\n\nUsing the visual editor, practice formatting text in your qmd file, such as making text bold, italicized, and in code format.\nAdd 1st, 2nd, and 3rd level headers\nAdd a list with a\n\nsub-list (bullet and/or numbered)\n\nAdd a table\nAdd whatever else you are interested in!\n\nPart 2\n\nSwitch back to the Source editor and examine the markdown code that was used for the formatting.\n\n\nQuestions:\n\nWhat went smoothly?\nWhat hurdles did you encounter?"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#formatting-text-markdown",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#formatting-text-markdown",
+    "title": "R4: Quarto Continued",
+    "section": "Formatting text: Markdown",
+    "text": "Formatting text: Markdown\n\n\n\n\n\n\n\nMarkdown:\nOutput:\n\n\n\n\n*This text is in italics*, but _so is this text_.\nThis text is in italics, but so is this text.\n\n\n**Bold** also has __2 options__\nBold also has 2 options\n\n\n~~Should this be deleted?~~\nShould this be deleted?\n\n\nNeed^super^ or~sub~ scripts?\nNeedsuper orsub scripts?\n\n\n`Code is often formatted as verbatim`\nCode is often formatted as verbatim\n\n\n&gt;This is a block quote.\n\nThis is a block quote."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#headers",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#headers",
+    "title": "R4: Quarto Continued",
+    "section": "Headers",
+    "text": "Headers\n\nOrganize your documents using headers to create sections and subsections\nUse # at the beginning of the line to create headers\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure there is no space before the #, and there IS a space after the # in order for the header to work properly."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#rstudio-tip",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#rstudio-tip",
+    "title": "R4: Quarto Continued",
+    "section": "RStudio tip",
+    "text": "RStudio tip\nYou can easily navigate through your .qmd file if you use headers to outline your text"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#code-chunks",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#code-chunks",
+    "title": "R4: Quarto Continued",
+    "section": "Code chunks",
+    "text": "Code chunks\n\n\n.qmd file \n\nhtml output"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#create-a-code-chunk",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#create-a-code-chunk",
+    "title": "R4: Quarto Continued",
+    "section": "Create a code chunk",
+    "text": "Create a code chunk\n3 options to create a code chunk\n\nClick on  at top right of the editor window, or\nKeyboard shortcut\n\n\n\n\nMac\nCommand + Option + I\n\n\nPC\nCtrl + Alt + I\n\n\n\n\nVisual editor: Select Insert -&gt; Executable Cell -&gt; R"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#what-does-a-code-chunk-look-like",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#what-does-a-code-chunk-look-like",
+    "title": "R4: Quarto Continued",
+    "section": "What does a code chunk look like?",
+    "text": "What does a code chunk look like?\nAn empty code chunk looks like this:\nVisual editor\n\nSource editor\n\n\n\n\n\n\n\nImportant\n\n\n\nNote that a code chunks start with ```{r} and ends with ```. Make sure there is no space before ```."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#enter-and-run-code-1n",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#enter-and-run-code-1n",
+    "title": "R4: Quarto Continued",
+    "section": "Enter and run code (1/n)",
+    "text": "Enter and run code (1/n)\n\nType R code inside code chunks\nSelect code you want to run, by\n\nplacing the cursor in the line of code you want to run,\nor highlighting the code you want to run\n\n\n\n\n\nRun selected code by\n\nclicking on the  button in the top right corner of the scripting window and choosing Run Selected Line(s),\nor typing one of the following key combinations:\n\n\n\n\n\nMac\nctrl + return\n\n\nPC\ncommand + return\n\n\n\n\nWhere does the output appear?"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#enter-and-run-code-2n",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#enter-and-run-code-2n",
+    "title": "R4: Quarto Continued",
+    "section": "Enter and run code (2/n)",
+    "text": "Enter and run code (2/n)\n\n\nRun all code in a chunk by\n\nby clicking the play button in the top right corner of the chunk\n\nThe code output appears below the code chunk\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe output should also appear in the Console.\nSettings can be changed so that the output appears only in the Console and not below the code chunk:\n\nSelect  (to right of Render button) and then Chunk Output in Console."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts",
+    "title": "R4: Quarto Continued",
+    "section": "Useful keyboard shortcuts",
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#yaml-metadata",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#yaml-metadata",
+    "title": "R4: Quarto Continued",
+    "section": "YAML metadata",
+    "text": "YAML metadata\nMany output options can be set in the YAML metadata, which is the first set of code in the file starting and ending with ---.\n\nIt sets the configuration specifications for the output file\nYAML is an acronym for\n\nyet another markup language, or\nYAML ain’t markup language"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#simple-yaml-example",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#simple-yaml-example",
+    "title": "R4: Quarto Continued",
+    "section": "Simple YAML example",
+    "text": "Simple YAML example\n\n\nThe default YAML includes a title and author that appear at the top of the output file. In the example below, I also added in a date option\n\n\n\n\nYAML:\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nThe YAML must start and end with 3 dashes ---.\nThe first set of --- must be on the very first line."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#change-the-output-file-type",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#change-the-output-file-type",
+    "title": "R4: Quarto Continued",
+    "section": "Change the output file type",
+    "text": "Change the output file type\n\n\n\nThe YAML specifies the format of the output file:\n\nhtml, Word, pdf, slides, website, book, etc.\n\nThis is done by changing the format: option\n\n\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio.\n\n\n\n\n\n\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\n\n\n\n\n\n\n\nOutput format\nYAML\n\n\n\n\nhtml\nformat: html\n\n\nWord\nformat: docx\n\n\npdf2\nformat: pdf\n\n\nhtml slides\nformat: revealjs\n\n\nPPT slides\nformat: pptx"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#section",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#section",
+    "title": "R4: Quarto Continued",
+    "section": "",
+    "text": "Artwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#you-will-get-frustrated-while-learning-r",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#you-will-get-frustrated-while-learning-r",
+    "title": "R4: Quarto Continued",
+    "section": "You WILL get frustrated while learning R!",
+    "text": "You WILL get frustrated while learning R!\nFrom Garrett Grolemund’s Prologue of his book Hands-On Programming with R3:\n\nAs you learn to program, you are going to get frustrated. You are learning a new language, and it will take time to become fluent. But frustration is not just natural, it’s actually a positive sign that you should watch for. Frustration is your brain’s way of being lazy; it’s trying to get you to quit and go do something easy or fun. If you want to get physically fitter, you need to push your body even though it complains. If you want to get better at programming, you’ll need to push your brain. Recognize when you get frustrated and see it as a good thing: you’re now stretching yourself. Push yourself a little further every day, and you’ll soon be a confident programmer."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#resources",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#resources",
+    "title": "R4: Quarto Continued",
+    "section": "Resources",
+    "text": "Resources\n\nOfficial Quarto guide: https://quarto.org/docs/guide/\n\nMarkdown basics: https://quarto.org/docs/authoring/markdown-basics.html\n\nText formatting, headings, linnks, images, lists, tables, equations, diagrams, page breaks, keyboard shortcuts, and more!\n\nCode blocks: https://quarto.org/docs/computations/r.html#code-blocks\n\nChunk options: https://quarto.org/docs/computations/r.html#chunk-options\n\n\nMine Çetinkaya-Rundel’s Quarto tip a day: https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/\n\nHadley Wickham’s R for Data Science: https://r4ds.hadley.nz/ _ See Chapter 29 for Quarto"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#r-packages-1",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#r-packages-1",
+    "title": "R4: Quarto Continued",
+    "section": "R Packages",
+    "text": "R Packages\nA good analogy for R packages is that they\nare like apps you can download onto a mobile phone:\n\n\n\nModernDive Figure 1.4"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#installing-packages",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#installing-packages",
+    "title": "R4: Quarto Continued",
+    "section": "Installing packages",
+    "text": "Installing packages\n\n\nPackages contain additional functions and data\n\nTwo options to install packages:\n\ninstall.packages() or\nThe “Packages” tab in Files/Plots/Packages/Help/Viewer window\n\n\n\ninstall.packages(\"dplyr\")   # only do this ONCE, use quotes\n\n\n\n\n\nOnly install packages once (unless you want to update them)\nInstalled from Comprehensive R Archive Network (CRAN) = package mothership"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#video-on-installing-packages",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#video-on-installing-packages",
+    "title": "R4: Quarto Continued",
+    "section": "Video on installing packages",
+    "text": "Video on installing packages\n\nDanielle Navarro’s YouTube video on Installing and loading R packages: https://www.youtube.com/watch?v=kpHZVyDvEhQ"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#load-packages-with-library-command",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#load-packages-with-library-command",
+    "title": "R4: Quarto Continued",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\n\nTip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\nPackages need to be reloaded every time you open Rstudio.\n\n\n\nlibrary(dplyr)    # run this every time you open Rstudio\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nYou can use a function without loading the package with PackageName::CommandName\n\n\n\ndplyr::arrange(iris, Petal.Width)   # what does arrange do?\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species\n1            4.9         3.1          1.5         0.1     setosa\n2            4.8         3.0          1.4         0.1     setosa\n3            4.3         3.0          1.1         0.1     setosa\n4            5.2         4.1          1.5         0.1     setosa\n5            4.9         3.6          1.4         0.1     setosa\n6            5.1         3.5          1.4         0.2     setosa\n7            4.9         3.0          1.4         0.2     setosa\n8            4.7         3.2          1.3         0.2     setosa\n9            4.6         3.1          1.5         0.2     setosa\n10           5.0         3.6          1.4         0.2     setosa\n11           5.0         3.4          1.5         0.2     setosa\n12           4.4         2.9          1.4         0.2     setosa\n13           5.4         3.7          1.5         0.2     setosa\n14           4.8         3.4          1.6         0.2     setosa\n15           5.8         4.0          1.2         0.2     setosa\n16           5.4         3.4          1.7         0.2     setosa\n17           4.6         3.6          1.0         0.2     setosa\n18           4.8         3.4          1.9         0.2     setosa\n19           5.0         3.0          1.6         0.2     setosa\n20           5.2         3.5          1.5         0.2     setosa\n21           5.2         3.4          1.4         0.2     setosa\n22           4.7         3.2          1.6         0.2     setosa\n23           4.8         3.1          1.6         0.2     setosa\n24           5.5         4.2          1.4         0.2     setosa\n25           4.9         3.1          1.5         0.2     setosa\n26           5.0         3.2          1.2         0.2     setosa\n27           5.5         3.5          1.3         0.2     setosa\n28           4.4         3.0          1.3         0.2     setosa\n29           5.1         3.4          1.5         0.2     setosa\n30           4.4         3.2          1.3         0.2     setosa\n31           5.1         3.8          1.6         0.2     setosa\n32           4.6         3.2          1.4         0.2     setosa\n33           5.3         3.7          1.5         0.2     setosa\n34           5.0         3.3          1.4         0.2     setosa\n35           4.6         3.4          1.4         0.3     setosa\n36           5.1         3.5          1.4         0.3     setosa\n37           5.7         3.8          1.7         0.3     setosa\n38           5.1         3.8          1.5         0.3     setosa\n39           5.0         3.5          1.3         0.3     setosa\n40           4.5         2.3          1.3         0.3     setosa\n41           4.8         3.0          1.4         0.3     setosa\n42           5.4         3.9          1.7         0.4     setosa\n43           5.7         4.4          1.5         0.4     setosa\n44           5.4         3.9          1.3         0.4     setosa\n45           5.1         3.7          1.5         0.4     setosa\n46           5.0         3.4          1.6         0.4     setosa\n47           5.4         3.4          1.5         0.4     setosa\n48           5.1         3.8          1.9         0.4     setosa\n49           5.1         3.3          1.7         0.5     setosa\n50           5.0         3.5          1.6         0.6     setosa\n51           4.9         2.4          3.3         1.0 versicolor\n52           5.0         2.0          3.5         1.0 versicolor\n53           6.0         2.2          4.0         1.0 versicolor\n54           5.8         2.7          4.1         1.0 versicolor\n55           5.7         2.6          3.5         1.0 versicolor\n56           5.5         2.4          3.7         1.0 versicolor\n57           5.0         2.3          3.3         1.0 versicolor\n58           5.6         2.5          3.9         1.1 versicolor\n59           5.5         2.4          3.8         1.1 versicolor\n60           5.1         2.5          3.0         1.1 versicolor\n61           6.1         2.8          4.7         1.2 versicolor\n62           5.8         2.7          3.9         1.2 versicolor\n63           5.5         2.6          4.4         1.2 versicolor\n64           5.8         2.6          4.0         1.2 versicolor\n65           5.7         3.0          4.2         1.2 versicolor\n66           5.5         2.3          4.0         1.3 versicolor\n67           5.7         2.8          4.5         1.3 versicolor\n68           6.6         2.9          4.6         1.3 versicolor\n69           5.6         2.9          3.6         1.3 versicolor\n70           6.1         2.8          4.0         1.3 versicolor\n71           6.4         2.9          4.3         1.3 versicolor\n72           6.3         2.3          4.4         1.3 versicolor\n73           5.6         3.0          4.1         1.3 versicolor\n74           5.5         2.5          4.0         1.3 versicolor\n75           5.6         2.7          4.2         1.3 versicolor\n76           5.7         2.9          4.2         1.3 versicolor\n77           6.2         2.9          4.3         1.3 versicolor\n78           5.7         2.8          4.1         1.3 versicolor\n79           7.0         3.2          4.7         1.4 versicolor\n80           5.2         2.7          3.9         1.4 versicolor\n81           6.1         2.9          4.7         1.4 versicolor\n82           6.7         3.1          4.4         1.4 versicolor\n83           6.6         3.0          4.4         1.4 versicolor\n84           6.8         2.8          4.8         1.4 versicolor\n85           6.1         3.0          4.6         1.4 versicolor\n86           6.1         2.6          5.6         1.4  virginica\n87           6.4         3.2          4.5         1.5 versicolor\n88           6.9         3.1          4.9         1.5 versicolor\n89           6.5         2.8          4.6         1.5 versicolor\n90           5.9         3.0          4.2         1.5 versicolor\n91           5.6         3.0          4.5         1.5 versicolor\n92           6.2         2.2          4.5         1.5 versicolor\n93           6.3         2.5          4.9         1.5 versicolor\n94           6.0         2.9          4.5         1.5 versicolor\n95           5.4         3.0          4.5         1.5 versicolor\n96           6.7         3.1          4.7         1.5 versicolor\n97           6.0         2.2          5.0         1.5  virginica\n98           6.3         2.8          5.1         1.5  virginica\n99           6.3         3.3          4.7         1.6 versicolor\n100          6.0         2.7          5.1         1.6 versicolor\n101          6.0         3.4          4.5         1.6 versicolor\n102          7.2         3.0          5.8         1.6  virginica\n103          6.7         3.0          5.0         1.7 versicolor\n104          4.9         2.5          4.5         1.7  virginica\n105          5.9         3.2          4.8         1.8 versicolor\n106          6.3         2.9          5.6         1.8  virginica\n107          7.3         2.9          6.3         1.8  virginica\n108          6.7         2.5          5.8         1.8  virginica\n109          6.5         3.0          5.5         1.8  virginica\n110          6.3         2.7          4.9         1.8  virginica\n111          7.2         3.2          6.0         1.8  virginica\n112          6.2         2.8          4.8         1.8  virginica\n113          6.1         3.0          4.9         1.8  virginica\n114          6.4         3.1          5.5         1.8  virginica\n115          6.0         3.0          4.8         1.8  virginica\n116          5.9         3.0          5.1         1.8  virginica\n117          5.8         2.7          5.1         1.9  virginica\n118          6.4         2.7          5.3         1.9  virginica\n119          7.4         2.8          6.1         1.9  virginica\n120          5.8         2.7          5.1         1.9  virginica\n121          6.3         2.5          5.0         1.9  virginica\n122          6.5         3.2          5.1         2.0  virginica\n123          5.7         2.5          5.0         2.0  virginica\n124          5.6         2.8          4.9         2.0  virginica\n125          7.7         2.8          6.7         2.0  virginica\n126          7.9         3.8          6.4         2.0  virginica\n127          6.5         3.0          5.2         2.0  virginica\n128          7.1         3.0          5.9         2.1  virginica\n129          7.6         3.0          6.6         2.1  virginica\n130          6.8         3.0          5.5         2.1  virginica\n131          6.7         3.3          5.7         2.1  virginica\n132          6.4         2.8          5.6         2.1  virginica\n133          6.9         3.1          5.4         2.1  virginica\n134          6.5         3.0          5.8         2.2  virginica\n135          7.7         3.8          6.7         2.2  virginica\n136          6.4         2.8          5.6         2.2  virginica\n137          6.4         3.2          5.3         2.3  virginica\n138          7.7         2.6          6.9         2.3  virginica\n139          6.9         3.2          5.7         2.3  virginica\n140          7.7         3.0          6.1         2.3  virginica\n141          6.9         3.1          5.1         2.3  virginica\n142          6.8         3.2          5.9         2.3  virginica\n143          6.7         3.0          5.2         2.3  virginica\n144          6.2         3.4          5.4         2.3  virginica\n145          5.8         2.8          5.1         2.4  virginica\n146          6.3         3.4          5.6         2.4  virginica\n147          6.7         3.1          5.6         2.4  virginica\n148          6.3         3.3          6.0         2.5  virginica\n149          7.2         3.6          6.1         2.5  virginica\n150          6.7         3.3          5.7         2.5  virginica"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#install-the-packages-listed-below-before-day-3",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#install-the-packages-listed-below-before-day-3",
+    "title": "R4: Quarto Continued",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#directions-for-installing-package-oibiostat",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#directions-for-installing-package-oibiostat",
+    "title": "R4: Quarto Continued",
+    "section": "Directions for installing package oibiostat",
+    "text": "Directions for installing package oibiostat\n\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts-1",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts-1",
+    "title": "R4: Quarto Continued",
+    "section": "Useful keyboard shortcuts",
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#another-resource-for-an-introduction-to-r",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#another-resource-for-an-introduction-to-r",
+    "title": "R4: Quarto Continued",
+    "section": "Another resource for an introduction to R",
+    "text": "Another resource for an introduction to R\n\nIf you would like another perspective on what we covered the first week, you might find Danielle Navarro’s online book Learning Statistics with R to be helpful.\nDownload free pdf: https://learningstatisticswithr.com/\nSee Sections 3.1-3.7.1 for some of the topics we covered on first day"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#footnotes",
+    "href": "lessons/R09_Quarto_02/R4_Quarto_02.html#footnotes",
+    "title": "R4: Quarto Continued",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFrom Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html↩︎\nrequires LaTeX installation↩︎\nGrolemund, Garrett. 2014. Hands-on Programming with R. O’Reilly. https://rstudio-education.github.io/hopr/↩︎"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "",
+    "text": "Often, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\n\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "",
+    "text": "Often, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\n\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data frame example",
+    "text": "Data frame example\n\n\n\ndf &lt;- data.frame(\n  IDs=1:3, \n  gender=c(\"male\", \"female\", \"Male\"), \n  age=c(28, 35.5, 31),\n  trt = c(\"control\", \"1\", \"1\"),\n  Veteran = c(FALSE, TRUE, TRUE)\n  )\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\nVectors vs. data frames\n\na data frame is a collection (or array or table) of vectors\n\n\n\n\n\n\n\nDifferent columns can be of different data types (i.e. numeric vs. text)\nBoth numeric and text can be stored within a column (stored together as text).\nVectors and data frames are examples of objects in R.\n\nThere are other types of R objects to store data, such as matrices, lists."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Observations & variables",
+    "text": "Observations & variables\n\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\n\n\nISLBS\n\n\n\n\n\nBook refers to a dataset as a data matrix\nRows are usually observations\nColumns are usually variables\nHow many observations are in this dataset?\nWhat are the variable types in this dataset?"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Variable (column) types",
+    "text": "Variable (column) types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)\n\n\n\n\n\nView the structure of our data frame to see what the variable types are:\n\n\n\nstr(df)\n\n'data.frame':   3 obs. of  5 variables:\n $ IDs    : int  1 2 3\n $ gender : chr  \"male\" \"female\" \"Male\"\n $ age    : num  28 35.5 31\n $ trt    : chr  \"control\" \"1\" \"1\"\n $ Veteran: logi  FALSE TRUE TRUE"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nvariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\nCan the iris species be determined by these variables?\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n\n\n\n\n\n\nView(iris)\n\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-structure",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-structure",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set info",
+    "text": "Data set info\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\""
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#the",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "The $",
+    "text": "The $\n\nSuppose we want to single out the column of petal width values.\nOne way to do this is to use the $\n\nDatSetName$VariableName\n\n\n\niris$Petal.Width\n\n  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3\n [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2\n [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3\n [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3\n [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3\n [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8\n[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8\n[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3\n[145] 2.5 2.3 1.9 2.0 2.3 1.8"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Example using the $",
+    "text": "Example using the $\nThe $ is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.\n\n\n\nmean(iris$Petal.Width)\n\n[1] 1.199333\n\nsd(iris$Petal.Width)\n\n[1] 0.7622377\n\nmedian(iris$Petal.Width)\n\n[1] 1.3"
+  },
+  {
+    "objectID": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#inline-code",
+    "href": "lessons/R09_Quarto_02/R04_Quarto_pkgs_data_import.html#inline-code",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
   }
 ]

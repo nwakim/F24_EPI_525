@@ -10,9 +10,9 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Meike Niederhausen and Nicky Wakim">
+  <meta name="author" content="Nicky Wakim">
   <meta name="dcterms.date" content="2024-10-09">
-  <title>Biostatistics 1 - R3: Quarto in R</title>
+  <title>Biostatistics 1 - R04: Reproducibility, File Organization, and Projects</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -395,12 +395,12 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#3070BF" class="quarto-title-block center">
-  <h1 class="title">R3: Quarto in R</h1>
+  <h1 class="title">R04: Reproducibility, File Organization, and Projects</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Meike Niederhausen and Nicky Wakim 
+Nicky Wakim 
 </div>
 </div>
 </div>
@@ -410,147 +410,170 @@ Meike Niederhausen and Nicky Wakim
 <nav role="doc-toc"> 
 <h2 id="toc-title">Class Overview</h2>
 <ul>
-<li><a href="#/saving-your-work-with-quarto" id="/toc-saving-your-work-with-quarto">Saving your work with Quarto</a></li>
-<li><a href="#/basic-quarto-example" id="/toc-basic-quarto-example">Basic Quarto example</a></li>
-<li><a href="#/importing-data" id="/toc-importing-data">Importing data</a></li>
-<li><a href="#/packages" id="/toc-packages">Packages</a></li>
+<li><a href="#/if-we-have-time" id="/toc-if-we-have-time">If we have time</a></li>
 </ul>
 </nav>
 </section>
-<section>
-<section id="saving-your-work-with-quarto" class="title-slide slide level1 center">
-<h1>Saving your work with Quarto</h1>
-
-<img data-src="../img_slides/horst_rmarkdown_wizards_quarto.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
-<section id="example-creating-an-html-file" class="slide level2">
-<h2>Example: creating an html file</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>.qmd file <img data-src="../img_slides/01_qmd_screenshot.png" data-fig-align="center"></p>
-</div><div class="column" style="width:50%;">
-<p>html output<br>
-<img data-src="../img_slides/default_quarto_html.png" data-fig-align="center"></p>
+<section id="using-onedrive" class="slide level2">
+<h2>Using OneDrive</h2>
+<ul>
+<li><p>We all have free access to OneDrive to store files</p></li>
+<li><p><a href="https://login.microsoftonline.com/">Let’s login</a> into our online accounts</p></li>
+<li><p><a href="https://www.microsoft.com/en-us/microsoft-365/onedrive/download">You can also download OneDrive for your desktop</a></p>
+<ul>
+<li><p>Allows you to access the OneDrive from your computer’s interface instead of the browser</p></li>
+<li><p>Creates a link between your computer and the cloud!</p></li>
+</ul></li>
+<li><p>Let me show you mine</p>
+<ul>
+<li>I can access all the files through RStudio as well!</li>
+</ul></li>
+<li><p>Let’s take a couple minutes to log into OneDrive</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_22921a16" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 </div>
 </div>
 </section>
-<section id="quarto-.qmd-file-code-text" class="slide level2">
-<h2>Quarto = <code>.qmd</code> file = Code + text</h2>
-<p><code>knitr</code> is a package that converts <code>.qmd</code> files containing code + markdown syntax to a plain text <code>.md</code> markdown file, and then to other formats (html, pdf, Word, etc)</p>
-
-<img data-src="../img_slides/horst_quarto_schematic2.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</a></p></section></section>
-<section>
-<section id="basic-quarto-example" class="title-slide slide level1 center">
-<h1>Basic Quarto example</h1>
-
-<img data-src="../img_slides/horst_quarto_moon_penguins.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</a></p></section>
-<section id="create-a-quarto-file-.qmd" class="slide level2">
-<h2>1. Create a Quarto file (<code>.qmd</code>)</h2>
-<p><strong>Two options:</strong></p>
+<section id="folder-organization" class="slide level2">
+<h2>Folder organization</h2>
+<ul>
+<li><p>Make a folder for our class!</p>
+<ul>
+<li>I suggest naming it something like <code>EPI_525_F24</code> to indicate the class and the term</li>
+</ul></li>
+<li><p>Make these folders in your computer</p>
+<ul>
+<li>Only make them in OneDrive <strong>if</strong> you have a desktop connection</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>For a project, I have the following folders</p>
+<ul>
+<li>Background</li>
+<li>Code</li>
+<li>Data_Raw</li>
+<li>Data_Processed</li>
+<li>Dissemination</li>
+<li>Reports</li>
+<li>Meetings</li>
+</ul></li>
+</ul>
+</div><div class="column">
+<ul>
+<li><p>For our class, I suggest making one folder for the course with the following folders in it:</p>
+<ul>
+<li>Data</li>
+<li>Homework</li>
+<li>Lessons</li>
+<li>R_activities</li>
+<li>And other folders if you want</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Take a few minutes to create these folders</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_1a74d484" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="aside-folder-and-file-naming" class="slide level2">
+<h2>Aside: folder and file naming</h2>
+<p>There are a few good practices for naming files and folders for easy tracking:</p>
 <ol type="1">
-<li>click on File <span class="math inline">\(\rightarrow\)</span> New File <span class="math inline">\(\rightarrow\)</span> Quarto Document…<span class="math inline">\(\rightarrow\)</span> OK,</li>
-<li>or in upper left corner of RStudio click on <img data-src="../img_slides/green_plus_create_file.png" width="70"> <span class="math inline">\(\rightarrow\)</span> <img data-src="../img_slides/select_quarto_option.png" width="250"></li>
-</ol>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Pop-up window selections:</strong></p>
+<li>Keep the name short and relevant</li>
+<li>Use leading numbers to help organize sequential items</li>
+<li>Use dates in the format “YYYY-MM-DD” so that files are in chronological order</li>
+<li>You can label different versions if you would like to</li>
+<li>Use “_” to separate sections of the name
 <ul>
-<li>Enter a title and your name</li>
-<li>Select <code>HTML</code> output format (default)</li>
-<li>Engine: select <code>Knitr</code></li>
-<li>Editor: Select <code>Use visual markdown editor</code></li>
-<li>Click <code>Create</code></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="../img_slides/01_qmd_screenshot_popup.png"></p>
-</div>
-</div>
-</section>
-<section id="create-a-quarto-file-.qmd-1" class="slide level2">
-<h2>2. Create a Quarto file (<code>.qmd</code>)</h2>
-<ul>
-<li>After clicking on <code>Create</code>, you should then see the following in your editor window:</li>
-</ul>
-
-<img data-src="../img_slides/01_qmd_screenshot.png" class="r-stretch quarto-figure-center"></section>
-<section id="save-the-quarto-file-.qmd" class="slide level2">
-<h2>3. Save the Quarto file (<code>.qmd</code>)</h2>
-<ul>
-<li><strong>Save the file</strong> by
-<ul>
-<li>selecting <code>File -&gt; Save</code>,</li>
-<li>or clicking on <img data-src="../img_slides/01_Script_Save.png" width="33" height="24"> (towards the left above the scripting window),</li>
-<li>or keyboard shortcut
-<ul>
-<li>PC: <em>Ctrl + s</em></li>
-<li>Mac: <em>Command + s</em></li>
-</ul></li>
-</ul></li>
-<li>You will need to specify
-<ul>
-<li>a <strong>filename</strong> to save the file as
-<ul>
-<li>ALWAYS use <strong>.qmd</strong> as the filename extension for Quarto files</li>
-</ul></li>
-<li>the <strong>folder</strong> to save the file in</li>
-</ul></li>
-</ul>
-</section>
-<section id="create-html-file" class="slide level2">
-<h2>4. Create html file</h2>
-<p>We create the html file by <strong>rendering</strong> the .qmd file.</p>
-<p>Two options:</p>
-<ol type="1">
-<li>click on the Render icon <img data-src="../img_slides/render_icon.png"> at the top of the editor window,</li>
-<li>or use keyboard shortcuts
-<ul>
-<li>Mac: <em>Command+Shift+K</em></li>
-<li>PC: <em>Ctrl+Shift+K</em></li>
+<li>I also use this to separate words, but some people say you should use “-” to separate words</li>
 </ul></li>
 </ol>
+</section>
+<section id="lets-go-into-r_activities" class="slide level2">
+<h2>Let’s go into <code>R_activities</code></h2>
 <ul>
-<li>A new window will open with the html output.</li>
-<li>You will now see both .qmd and .html files in the folder where you saved the .qmd file.</li>
+<li><p>Make a folder called something like <code>R04_work</code></p></li>
+<li><p>We are going to stay in the <code>R_activities</code> folder</p></li>
 </ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
+</section>
+<section id="creating-project-in-rstudio" class="slide level2">
+<h2>Creating project in RStudio</h2>
 <ul>
-<li>The template .qmd file that RStudio creates will render to an html file by default.</li>
-<li>The output format can be changed to create a Word doc, pdf, slides, etc.</li>
+<li><p>Way to designate a working directory: basically your home base when working in R</p>
+<ul>
+<li><p>We have to tell R exactly where we are in our folders and where to find other things</p></li>
+<li><p>A project makes it easier to tell R where we are</p></li>
+</ul></li>
+<li><p>Basic steps to create a project</p>
+<ul>
+<li><p>Go into RStudio</p></li>
+<li><p>Create new project for this class (under <code>File</code> or top right corner)</p></li>
+</ul></li>
+<li><p>Once we have projects, we can open one are R will automatically know that its location is the start of our working directory</p></li>
 </ul>
+</section>
+<section id="the-nice-thing-about-r-projects" class="slide level2">
+<h2>The nice thing about R projects</h2>
+<p><a href="https://rfortherestofus.com/2022/10/rstudio-projects" class="uri">https://rfortherestofus.com/2022/10/rstudio-projects</a></p>
+</section>
+<section id="nickys-process-for-r-projects" class="slide level2">
+<h2>Nicky’s process for R projects</h2>
+<ul>
+<li><p>Let me show you my process</p>
+<ul>
+<li><p>I will create one in my Sample_folder</p></li>
+<li><p>I will show you how I switch between classes</p></li>
+</ul></li>
+<li><p>Make a project file in your class folder!</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_312fa104" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="qmd-file-vs.-its-html-output" class="slide level2">
-<h2>.qmd file vs.&nbsp;its html output</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>.qmd file <img data-src="../img_slides/01_qmd_screenshot.png" data-fig-align="center"></p>
-</div><div class="column" style="width:50%;">
-<p>html output<br>
-<img data-src="../img_slides/default_quarto_html.png" data-fig-align="center"></p>
-</div>
-</div>
-</section></section>
-<section id="importing-data" class="title-slide slide level1 center">
-<h1>Importing data</h1>
-
-</section>
-
 <section>
-<section id="packages" class="title-slide slide level1 center">
-<h1>Packages</h1>
+<section id="if-we-have-time" class="title-slide slide level1 center">
+<h1>If we have time</h1>
 
 </section>
-<section id="installing-packages" class="slide level2">
-<h2>Installing packages</h2>
+<section id="creating-a-new-qmd-file" class="slide level2">
+<h2>Creating a new <code>qmd</code> file</h2>
+<ul>
+<li><p>Basic steps</p>
+<ul>
+<li><p>Create new <code>.qmd</code> (under <code>File</code> or top left corner)</p></li>
+<li><p>Decide on document types/options</p></li>
+</ul></li>
+<li><p>Let me show you my process</p></li>
+<li><p>Create a <code>.qmd</code> in your Sample_folder under any folder (maybe Notes is good)</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_4e5a5764" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="here-package" class="slide level2">
 <h2><code>here</code> package</h2>
@@ -615,7 +638,7 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6e41ccf3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_772a3367" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -623,7 +646,7 @@ Meike Niederhausen and Nicky Wakim
 </div>
 
 <div class="footer footer-default">
-<p>R05 Slides</p>
+<p>R04 Slides</p>
 </div>
 </section></section>
     </div>
