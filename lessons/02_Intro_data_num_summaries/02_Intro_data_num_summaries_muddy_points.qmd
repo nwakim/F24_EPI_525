@@ -1,12 +1,41 @@
 ---
 title: "Muddy Points"
-subtitle: "Lesson 1: Introduction to R"
-date: "09/30/2024"
+subtitle: "Lesson 2: Intro to data & numerical summaries"
+date: "10/2/2024"
 date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
+    number-sections: true
 editor_options: 
   chunk_output_type: console
 ---
+
+## Coming back to mathematical notation
+
+Thank you for reminding me of this!! I will be more explicit with defining all the components of equations. (In one of the below links, they do a pretty good job explaining the math components.)
+
+## Standard deviation
+
+Okay, so I could try to explain this a little more, but honestly there are some pretty good videos out there. Here are a few! 
+
+- [StatQuest](https://www.youtube.com/watch?v=SzZ6GpcfoQY&ab_channel=StatQuestwithJoshStarmer)
+  - The first 5 minutes will cover the intuition behind standard deviation, but the whole video is pretty great!
+  - At about 4:30, they explain the equation for population variance
+    - Might be helpful in the $\Sum$ in our standard deviation equation was confusing!
+- [DATAtab](https://www.youtube.com/watch?v=5wJUUgnMGWA&ab_channel=DATAtab)
+  - I like how they step through the example in this one!
+- [Another one](https://www.youtube.com/watch?v=MRqtXL2WX2M&ab_channel=JeremyBlitz-Jones)
+  - Not my favorite, but the shortest!
+  - Gives pretty good incentive for why we use the standard deviation!
+
+### I think conceptualizing the standard deviation on an image of the graphs. This was confusing as some of the standard deviation's went from the middle bar to last bar (sd1 and sd2) whereas one graph show the sd going from the middle bar to not quite the last bar (sd 3) on slide "Measures of spread: standard deviation (SD) (1/3)"
+
+This wasn't clear in the lesson, but I was taking example observations, then just showing you the deviation for each of those example observations. It does not matter which ones I showed, but the average of all the observations' deviances that matters! 
+
+## What benefit would the median provide, especially if the mean would be more representative of the entire dataset including any outliers? Is this relating directly to how you mentioned that some people choose to not include outliers (also I thought that was being selective to data to leave out data points)?
+
+Okay, good question! First, the mean would not really be "more representative" of the data. It just represents something different than the median. Both are aiming to summarize the center of the data. So if we have one observation that is an outlier, but the rest of the group is pretty condensed, then which measure best represents the center of the data? The mean does not do a very good job of identifying where most observations are, but the median captures the center much better.
+
+Honestly, I would not dwell on removing outliers. Many statisticians would agree that we do not remove outliers to make our mean a better representation. And in general, it's not a good idea to use math as the evidence to make the math better. Ya know?
 

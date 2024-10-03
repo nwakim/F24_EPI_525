@@ -11183,7 +11183,7 @@
     "href": "lessons/03_Probability/03_Probability_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "R for the Rest of Us\nUsing OneDrive for other class materials"
+    "text": "R for the Rest of Us\nUsing OneDrive for other class materials\nWhen we get to HW where we work with R will you indicate that we should use R for that question?\n\nYes! Homework 1 should not need any R, but in later homeworks I will tell you!"
   },
   {
     "objectID": "lessons/03_Probability/03_Probability_key_info.html#to-nicky",
@@ -11197,7 +11197,7 @@
     "href": "lessons/03_Probability/03_Probability_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "R for the Rest of Us\nUsing OneDrive for other class materials"
+    "text": "R for the Rest of Us\nUsing OneDrive for other class materials\nWhen we get to HW where we work with R will you indicate that we should use R for that question?\n\nYes! Homework 1 should not need any R, but in later homeworks I will tell you!"
   },
   {
     "objectID": "lessons/03_Probability/03_Probability_key_info.html#key-dates",
@@ -12913,5 +12913,40 @@
     "title": "R03: R Basics, part 2",
     "section": "More on AI usage",
     "text": "More on AI usage\n\nIn the syllabus\nIf you cannot trace code back to the class notes, then do NOT use it!\n\nThere’s different coding practices and functions out there\nI’m giving you a specific set of tools that will serve as a good introduction\nYou should be able to explain all your code and work"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Thank you for reminding me of this!! I will be more explicit with defining all the components of equations. (In one of the below links, they do a pretty good job explaining the math components.)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#coming-back-to-mathematical-notation",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#coming-back-to-mathematical-notation",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Thank you for reminding me of this!! I will be more explicit with defining all the components of equations. (In one of the below links, they do a pretty good job explaining the math components.)"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#standard-deviation",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#standard-deviation",
+    "title": "Muddy Points",
+    "section": "2 Standard deviation",
+    "text": "2 Standard deviation\nOkay, so I could try to explain this a little more, but honestly there are some pretty good videos out there. Here are a few!\n\nStatQuest\n\nThe first 5 minutes will cover the intuition behind standard deviation, but the whole video is pretty great!\nAt about 4:30, they explain the equation for population variance\n\nMight be helpful in the \\(\\Sum\\) in our standard deviation equation was confusing!\n\n\nDATAtab\n\nI like how they step through the example in this one!\n\nAnother one\n\nNot my favorite, but the shortest!\nGives pretty good incentive for why we use the standard deviation!\n\n\n\n2.1 I think conceptualizing the standard deviation on an image of the graphs. This was confusing as some of the standard deviation’s went from the middle bar to last bar (sd1 and sd2) whereas one graph show the sd going from the middle bar to not quite the last bar (sd 3) on slide “Measures of spread: standard deviation (SD) (1/3)”\nThis wasn’t clear in the lesson, but I was taking example observations, then just showing you the deviation for each of those example observations. It does not matter which ones I showed, but the average of all the observations’ deviances that matters!"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#i-think-conceptualizing-the-standard-deviation-on-an-image-of-the-graphs.-this-was-confusing-as-some-of-the-standard-deviations-went-from-the-middle-bar-to-last-bar-sd1-and-sd2-whereas-one-graph-show-the-sd-going-from-the-middle-bar-to-not-quite-the-last-bar-sd-3-on-slide-measures-of-spread-standard-deviation-sd-13",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#i-think-conceptualizing-the-standard-deviation-on-an-image-of-the-graphs.-this-was-confusing-as-some-of-the-standard-deviations-went-from-the-middle-bar-to-last-bar-sd1-and-sd2-whereas-one-graph-show-the-sd-going-from-the-middle-bar-to-not-quite-the-last-bar-sd-3-on-slide-measures-of-spread-standard-deviation-sd-13",
+    "title": "Muddy Points",
+    "section": "3 I think conceptualizing the standard deviation on an image of the graphs. This was confusing as some of the standard deviation’s went from the middle bar to last bar (sd1 and sd2) whereas one graph show the sd going from the middle bar to not quite the last bar (sd 3) on slide “Measures of spread: standard deviation (SD) (1/3)”",
+    "text": "3 I think conceptualizing the standard deviation on an image of the graphs. This was confusing as some of the standard deviation’s went from the middle bar to last bar (sd1 and sd2) whereas one graph show the sd going from the middle bar to not quite the last bar (sd 3) on slide “Measures of spread: standard deviation (SD) (1/3)”"
+  },
+  {
+    "objectID": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#what-benefit-would-the-median-provide-especially-if-the-mean-would-be-more-representative-of-the-entire-dataset-including-any-outliers-is-this-relating-directly-to-how-you-mentioned-that-some-people-choose-to-not-include-outliers-also-i-thought-that-was-being-selective-to-data-to-leave-out-data-points",
+    "href": "lessons/02_Intro_data_num_summaries/02_Intro_data_num_summaries_muddy_points.html#what-benefit-would-the-median-provide-especially-if-the-mean-would-be-more-representative-of-the-entire-dataset-including-any-outliers-is-this-relating-directly-to-how-you-mentioned-that-some-people-choose-to-not-include-outliers-also-i-thought-that-was-being-selective-to-data-to-leave-out-data-points",
+    "title": "Muddy Points",
+    "section": "3 What benefit would the median provide, especially if the mean would be more representative of the entire dataset including any outliers? Is this relating directly to how you mentioned that some people choose to not include outliers (also I thought that was being selective to data to leave out data points)?",
+    "text": "3 What benefit would the median provide, especially if the mean would be more representative of the entire dataset including any outliers? Is this relating directly to how you mentioned that some people choose to not include outliers (also I thought that was being selective to data to leave out data points)?\nOkay, good question! First, the mean would not really be “more representative” of the data. It just represents something different than the median. Both are aiming to summarize the center of the data. So if we have one observation that is an outlier, but the rest of the group is pretty condensed, then which measure best represents the center of the data? The mean does not do a very good job of identifying where most observations are, but the median captures the center much better.\nHonestly, I would not dwell on removing outliers. Many statisticians would agree that we do not remove outliers to make our mean a better representation. And in general, it’s not a good idea to use math as the evidence to make the math better. Ya know?"
   }
 ]
