@@ -2,7 +2,7 @@
 title: "Homework 1"
 subtitle: "Lessons 1-2"
 author: "Your name here - update this!!!!"
-date: "Due 10/10/24"
+date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
@@ -20,13 +20,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-**Due 10/10/24**
+**Due 10/11/24**
 
 
-## Directions
+# Directions
 
 [Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
 
+
+# Group assignments
+
+[Please fill out this form to help me configure groups.](https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURUFTM0ZJNkRXR0ZCR1NHUFYzTVNMVUxTSS4u) I will first pair you based on people on your preferred list, then I will group pairs to balance working styles, R skills, and statistics exposure.
 
 # Book exercises
 

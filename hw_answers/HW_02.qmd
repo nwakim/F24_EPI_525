@@ -13,40 +13,307 @@ editor_options:
 
 These are the **some** numeric/short answers to the homework. Often, these answers are insufficient for your own work or solutions. I just wanted to give you a part of the answer to help guide you in the right direction.
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(gtsummary)
+library(gt)
+```
 
 # Book exercises {.unnumbered}
 
-## 1.24 Income and education in US counties {.unnumbered}
+## 2.6 Poverty and language {.unnumbered}  
+  
+The American Community Survey is an ongoing survey that provides data every year to give communities the current information they need to plan investments and services. The 2010 American Community Survey estimates that 14.6% of Americans live below the poverty line, 20.7% speak a language other than English (foreign language) at home, and 4.2% fall into both categories.
+
+### a   {.unnumbered}
+
+Not disjoint
+
+### b     {.unnumbered}
+
+```{r}
+#| echo: false
+#| output: false
+
+.146-.042  # below poverty but don't speak foreign language
+.207-.042 # speak foreign language at home but don't live below poverty
+
+#first install venndiagram package.
+#install.packages("VennDiagram") 
+library(VennDiagram)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#drawing diagram: 
+grid.newpage()                                        
+draw.pairwise.venn(
+  area1 = .146,  # below poverty line
+  area2 = .207, # speak foreign language at home
+  cross.area = .042, # both
+  category = c("below poverty line", "speak foreign language"),
+  fill = c("red", "blue")
+  )
+
+```
 
 
-## 1.28 Mix-and-match {.unnumbered}
+### c     {.unnumbered}
+
+```{r}
+#| echo: false
+
+diff <- (.146-0.042)*100
+```
 
 
+`r diff`% 
 
-## 1.36 Associations {.unnumbered}
+### d    {.unnumbered}
 
+```{r}
+#| echo: false
 
-## 1.38 Smoking and stenosis {.unnumbered}
-See Section1.6.2 for more on how the relative risk is calculated.
+aorb <- ((.146+.207)-0.042)*100
+```
 
-## 2.6 Poverty and language {.unnumbered}
+`r aorb`%
 
-Part (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See [https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/](https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/) for some examples.
+### e     {.unnumbered}
+
+```{r}
+#| echo: false
+
+neitherab <- 100 - aorb
+```
+
+`r neitherab`% 
+
+### f     {.unnumbered}
+
+Not independent
 
 ## 2.8 School absences {.unnumbered}
 
-Part (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See [https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/](https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/) for some examples. 
+### a   {.unnumbered}
 
-## 2.10 Health coverage, frequencies {.unnumbered}
+```{r}
+#| echo: false
+
+#define vars
+d1 <- .25
+d2 <- .15
+d3 <- .28
+d0 <- 1-d1-d2-d3
+```
+
+`r d0`
+
+### b     {.unnumbered}
+
+```{r}
+#| echo: false
+
+no_more_1 <- d0+d1
+```
+
+`r no_more_1`
+
+### c     {.unnumbered}
+
+```{r}
+#| echo: false
+
+at_least_one <- (1-d0)
+```
+
+`r at_least_one`
+
+### d     {.unnumbered}
+
+```{r}
+#| echo: false
+
+neither_sick <- (d0*d0)
+```
+
+`r neither_sick`
+
+### e     {.unnumbered}
+
+```{r}
+#| echo: false
+
+both_miss <- (1-d0)^2
+```
+
+`r both_miss`
+
+## 2.10 Health coverage, frequencies {.unnumbered}  
+
+```{r}
+#| echo: false
+
+#table. not required
+(covg.tab <- data.frame(
+  health_status = c("No","Yes","total"),
+  Excellent = c(459,4198,4657),
+  Very_good = c(727,6245,6972),
+  Good = c(854,4821,5675),
+  Fair = c(385,1634,2019),
+  Poor = c(99,578,677),
+  Total = c(2524,17476,20000)
+)) %>% gt()
+```
+
+### a     {.unnumbered}
+
+```{r}
+#| echo: false
+
+eh.no_covg <- (459/20000)
+```
+
+`r eh.no_covg`
+
+### b     {.unnumbered}
+
+```{r}
+#| echo: false
+a <- 4657/20000; b <- 2524/20000; c <- 459/20000
+eh_or_no.hc <- a+b-c
+```
+`r eh_or_no.hc`
 
 
-## 2.14 Health coverage, relative frequencies {.unnumbered}
+## 2.14 Health coverage, relative frequencies {.unnumbered}  
 
-## 2.18 Predisposition for thrombosis {.unnumbered}
+*The Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey designed to identify risk factors in the adult population and report emerging health trends. The following table displays the distribution of health status of respondents to this survey (excellent, very good, good, fair, poor) conditional on whether or not they have health insurance.*
+
+```{r}
+(covg.tab <- data.frame(
+  health_status = c("No","Yes","total"),
+  Excellent = c(0.0230, 0.2099,0.2329),
+  Very_good = c(0.0364, 0.3123,0.3486),
+  Good = c(0.0427,0.2410,0.2838),
+  Fair = c(0.0192,0.0817,0.1009),
+  Poor = c(0.0050,0.0289,0.0338),
+  Total = c(0.1262,0.8738,1.0000)
+)) %>% gt()
+```
+       
+### a  
+
+No
+
+### b     {.unnumbered}
+
+0.2329
+
+### c    {.unnumbered}
+
+```{r}
+#| echo: false
+eh <- 0.2329; hc <- 0.8738; eh_and_hc <- 0.2099
+eh_give_hc <- eh_and_hc/hc
+```
+
+`r eh_give_hc`
+
+### d    {.unnumbered}
+
+```{r}
+#| echo: false
+no_hc <- 0.1262; eh_and_no_hc <- 0.0230
+eh_give_no_hc <- eh_and_no_hc/no_hc
+```
+
+`r eh_give_no_hc`
+
+### e     {.unnumbered}
+
+No
 
 
-## 2.24 Breast cancer and age {.unnumbered}
+## 2.18 Predisposition for thrombosis {.unnumbered}  
 
-# Non-book exercise
+### a   {.unnumbered}
 
-Suppose a patient has abdominal pain and their clinician suspects that they either have disease 1, disease 2, or no disease, where the probability of having abdominal pain if they have disease 1 is 0.80, the probability of having abdominal pain if they have disease 2 is 0.90, and the probability of having abdominal pain if they have no disease is 0.01. Based on the patient’s medical history, the probability of having disease 1 is 0.009, having disease 2 is 0.001, and having no disease is 0.99. What is the probability the patient has disease 2 given that they have abdominal pain? 
+0.605
+
+### b     {.unnumbered}
+
+0.9997
+
+## 2.24 Breast cancer and age {.unnumbered}  
+
+### a  {.unnumbered}
+
+```{r}
+#| echo: false
+#define variables
+d30 <- 0.0044 #30-40
+d40 <- 0.0147 #40-50
+d50 <- 0.0238 #50-60
+d60 <- 0.0356 #60-70
+d70 <- 0.0382 #70-80
+pos.g.d <- 0.85 #prob of positive test given disease
+neg.g.dc <- 0.95 #prob of negative test given not having disease
+pos.g.dc <- 1-neg.g.dc #prob of positive test given not having disease.
+neg.g.d <- 1-pos.g.d
+```
+
+
+```{r}
+#| echo: false
+
+# Below we take advantage of R's capability of doing vector-wise calculations
+
+# Create a vector of the prevalences
+prevalence <- c(d30, d40, d50, d60, d70)
+
+# Compute the PPV's using the vector of prevalences
+PPV <- round((pos.g.d*prevalence) / (prevalence*pos.g.d + (1-prevalence)*pos.g.dc), digits = 3)
+```
+  
+```{r}
+#| echo: false
+
+age_group <- c("30 - 40", "40 - 50", "50 - 60", "60 - 70", "70 - 80")
+
+data.frame(age_group, prevalence, PPV) %>% 
+  gt()
+```
+
+### b   {.unnumbered}
+
+The PPV increased more with the higher specificity vs. the higher sensitivity.
+
+## Non-book exercise
+
+```{r}
+#| echo: false
+#name variables: 
+a.g.d1 <- 0.80 # a given d1
+a.g.d2 <- 0.90 # a given d2
+a.g.d0 <- 0.01 # a given d0
+d1 <- 0.009
+d2 <- 0.001
+d0 <- 0.99
+```
+
+```{r}
+#| echo: false
+#find the probability the patient has disease 2 given the have abdominal pain: 
+PDA <- (a.g.d2*d2) / (a.g.d2*d2 + a.g.d1*d1 + a.g.d0*d0)
+```
+
+`r PDA`
+
+
