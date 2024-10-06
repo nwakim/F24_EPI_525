@@ -346,11 +346,14 @@ Nicky Wakim
 <h1>Learning Objectives</h1>
 <ol type="1">
 <li><p>Define probability and explain the Law of Large Numbers within examples</p></li>
-<li><p>Calculate the probability of disjoint (mutually exclusive) events</p></li>
-<li><p>Calculate Probabilities for independent events and their joint outcomes</p></li>
-<li><p>Use sample space and event complements to calculate probabilities.</p></li>
+<li><p>Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)</p></li>
+<li><p>Calculate an unknown probability in a word problem using the probability properties</p></li>
 </ol>
 </section>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
+
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
 <section id="lets-start-with-an-example" class="slide level2">
 <h2>Let’s start with an example!</h2>
 <div class="columns">
@@ -360,22 +363,29 @@ Nicky Wakim
 <p><strong>Example: Rolling fair 6-sided dice</strong></p>
 </div>
 <div class="ex-cont">
+<p>Suppose you roll a fair 6-sided die.</p>
 <ol type="1">
-<li><p>Suppose you roll a fair 6-sided die.</p>
-<ol type="a">
 <li><p>What is the probability that you roll a 4?</p></li>
 <li><p>What is the probability that you roll an even number?</p></li>
 <li><p>What is the probability that you did not roll a 3?</p></li>
-</ol></li>
-<li><p>Suppose you roll <strong>two</strong> fair 6-sided dice.</p>
-<ol type="a">
-<li>What is the probability that you roll a 2 with the first die and a 5 with the second die?</li>
-</ol></li>
 </ol>
 </div>
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Define probability and explain the Law of Large Numbers within examples</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)</p></li>
+<li><p>Calculate an unknown probability in a word problem using the probability properties</p></li>
+</ol>
 </section>
 <section id="what-is-a-probability" class="slide level2">
 <h2>What is a probability?</h2>
@@ -384,11 +394,27 @@ Nicky Wakim
 <p>Definition: Probability</p>
 </div>
 <div class="def-cont">
-<p>How likely something will happen. On a more technical note, the probability of an outcome is the proportion of times the outcome would occur if the random phenomenon could be observed an infinite number of times.</p>
+<p>How likely something will happen.</p>
+<ul>
+<li>On a more technical note, the probability of an outcome is the proportion of times the outcome would occur if the random phenomenon could be observed an infinite number of times.</li>
+</ul>
 </div>
 </div>
 <ul>
-<li>We can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5. If we flip the coin 10 times, it is not certain that we will get 5 heads. However, if we flip it infinite times, we will get heads 50% of the flips. <a href="https://seeing-theory.brown.edu/basic-probability/index.html">Fun seeing theory demonstration!</a></li>
+<li>We can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5.</li>
+</ul>
+</section>
+<section id="what-is-a-probability-with-the-law-of-large-numbers" class="slide level2">
+<h2>What is a probability? with the Law of Large Numbers</h2>
+<ul>
+<li><p>We can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5.</p>
+<ul>
+<li>If we flip the coin 10 times, it is not certain that we will get 5 heads. However, if we flip it infinite times, we will get heads 50% of the flips.</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><a href="https://seeing-theory.brown.edu/basic-probability/index.html">Fun “Seeing Theory” demonstration!</a></li>
 </ul>
 <div class="definition">
 <div class="def-ttl">
@@ -399,6 +425,9 @@ Nicky Wakim
 </div>
 </div>
 </section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
+</section>
 <section id="some-probability-notation" class="slide level2">
 <h2>Some probability notation</h2>
 <ul>
@@ -406,27 +435,48 @@ Nicky Wakim
 <ul>
 <li>Takes values between 0 and 1</li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>Probability can also be expressed as a “percent chance,” taking values between 0% and 100%</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>If we want to discuss the probability of an event, say A, we would write <span class="math inline">\(P(A)\)</span>
 <ul>
 <li>We can write: <span class="math inline">\(A = \{\text{rolling a 1}\}\)</span>, with associated probability <span class="math inline">\(P(A)\)</span></li>
 <li>OR we can write <span class="math inline">\(P(\text{rolling a 1})\)</span></li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define probability and explain the Law of Large Numbers within examples</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Calculate an unknown probability in a word problem using the probability properties</li>
+</ol>
 </section>
-<section id="disjoint-mutually-exclusion-events" class="slide level2">
-<h2>Disjoint / mutually exclusion events</h2>
+<section id="disjoint-mutually-exclusive-events" class="slide level2">
+<h2>Disjoint / mutually exclusive events</h2>
 <div class="definition">
 <div class="def-ttl">
-<p>Disjoint / mutually exclusion events</p>
+<p>Disjoint / mutually exclusive events</p>
 </div>
 <div class="def-cont">
 <p>Two events or outcomes are called <strong>disjoint</strong> or <strong>mutually exclusive</strong> if they cannot both happen at the same time.</p>
 </div>
 </div>
 </section>
-<section id="poll-everywhere-question-1" class="slide level2">
-<h2>Poll Everywhere Question 1</h2>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
 </section>
 <section id="probability-for-disjoint-events" class="slide level2">
 <h2>Probability for disjoint events</h2>
@@ -568,6 +618,22 @@ P(A_1) P(A_2) \cdots P(A_k).
 </div>
 </div>
 </section>
+<section id="poll-everywhere-question-3" class="slide level2">
+<h2>Poll Everywhere Question 3</h2>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Define probability and explain the Law of Large Numbers within examples</p></li>
+<li><p>Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Calculate an unknown probability in a word problem using the probability properties</li>
+</ol>
+</div>
+</section>
 <section id="example-rolling-two-dice" class="slide level2">
 <h2>Example rolling two dice</h2>
 <div class="columns">
@@ -582,9 +648,38 @@ P(A_1) P(A_2) \cdots P(A_k).
 </div>
 </div>
 </section>
-<section id="lets-go-through-a-slightly-more-complicated-example" class="slide level2">
-<h2>Let’s go through a slightly more complicated example?</h2>
-<p>Maybe venn diagram or some other TB example??</p>
+<section id="general-steps-for-probability-word-problems" class="slide level2">
+<h2>General steps for probability word problems</h2>
+<ol type="1">
+<li><p>Define the events in the problem and make a Venn Diagram</p></li>
+<li><p>Translate the words and numbers into probability statements</p></li>
+<li><p>Translate the question into a probability statement</p></li>
+<li><p>Think about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?</p></li>
+<li><p>Plug in the given numbers to calculate the answer!</p></li>
+</ol>
+</section>
+<section id="weekly-medications" class="slide level2">
+<h2>Weekly medications</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="example">
+<div class="ex-ttl">
+<p>Example 3</p>
+</div>
+<div class="ex-cont">
+<p>If a subject has an</p>
+<ul>
+<li><p>80% chance of taking their medication <em>this</em> week,</p></li>
+<li><p>70% chance of taking their medication <em>next</em> week, and</p></li>
+<li><p>10% chance of <em>not</em> taking their medication <em>either</em> week,</p></li>
+</ul>
+<p>then find the probability of them taking their medication exactly one of the two weeks.</p>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<p><em>Hint: Draw a Venn diagram labelling each of the parts to find the probability.</em></p>
+</div>
+</div>
 
 <div class="footer footer-default">
 <p>Lesson 3 Slides</p>

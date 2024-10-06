@@ -35,6 +35,28 @@ library(here)
 # quarto install extension quarto-ext/fontawesome
 ```
 
+## Last time
+
+- Downloaded R and Rstudio
+- If you are still having issues downloading, please come to my office hours!
+- Became familiar with the console and a script file
+- Did some math calculations in R!
+
+ 
+
+
+### Today, we're going to work on...
+
+- Assigning things in R
+- Using functions to calculate 
+- Familiarizing ourselves with common issues
+- Troubleshooting with different tools
+- Go over an example dataset
+
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
+
 ## We will open RStudio on our computer (not R!)
 
 ![[Modern Dive](https://moderndive.com/1-getting-started.html#using-r-via-rstudio)](../img_slides/01_md_r.png){fig-align="center"}
@@ -101,6 +123,11 @@ b
 
 -   Did you notice anything in the `Environment` section of Rstudio?
 
+```{r}
+#| echo: false
+countdown::countdown(3)
+```
+
 ## Doing math with variables
 
 ::: columns
@@ -137,6 +164,11 @@ a*a
 
 -   Use the variable name `y` to find the addition of `y` and 5
 -   Add 5 to the vector `c`
+
+```{r}
+#| echo: false
+countdown::countdown(2)
+```
 
 ## Variables can include text (characters)
 
@@ -192,36 +224,10 @@ seq(1, 12, 3)
 
 -   If you have more time, you can try to calculate the median and IQR for `c`
 
-# Getting help with R
-
-## There are many ways to get help when you are stuck
-
-- Use the `?` in front of the function name to get more information!
-  - Usually if I need help with the arguments for a function
-  
- 
-
-- Google or go to stackoverflow.com
-  - Often when I Google, I get redirected to something like stackoverflow
-  - For example, let's say my `mean` function was outputting `NA`. I would Google something like "keep getting NA for mean in R" Then end up [here](https://stackoverflow.com/questions/25297705/mean-na-rm-true-still-returns-na)
-
- 
-
-- I can also go to my favoriate AI tool to get help
-  - This is most useful for getting code started if it's complicated (we're not really at that level yet)
-  - I asked ChatGPT "can you give me the code for calculating the mean in R"
-    - [This is what I got](https://chatgpt.com/share/66f8a2b9-9918-8006-88af-0dc7b64bb86a)
-  - For code generation, it gives you WAY too much
-  - I also asked ChatGPT "Why is the mean function in R giving me an NA?" (in above link)
-    
-## More on AI usage
-
-- [In the syllabus](https://nwakim.github.io/F24_EPI_525/syllabus.html#plagiarism-and-attribution)
-- If you cannot trace code back to the class notes, then do NOT use it!
-  - There's different coding practices and functions out there
-  - I'm giving you a specific set of tools that will serve as a good introduction
-  - You should be able to explain all your code and work 
-  
+```{r}
+#| echo: false
+countdown::countdown(3)
+```
 
 ## Common console errors (1/2)
 
@@ -269,6 +275,36 @@ install.packages(dplyr)
 # correct code is: install.packages("dplyr")
 ```
 
+# Getting help with R
+
+## There are many ways to get help when you are stuck
+
+1. [Use the `?` in front of the function name to get more information!]{style="color:#BF396F;"}
+  
+    -   Usually if I need help with the arguments for a function
+
+2. [Google or go to stackoverflow.com]{style="color:#3070BF;"}
+  
+    - Often when I Google, I get redirected to something like stackoverflow
+    - For example, let's say my `mean` function was outputting `NA`. I would Google something like "keep getting NA for mean in R" Then end up [here](https://stackoverflow.com/questions/25297705/mean-na-rm-true-still-returns-na)
+
+3. [I can also go to my favorite AI tool to get help]{style="color:#459B99;"}
+  
+    - This is most useful for getting code started if it's complicated (we're not really at that level yet)
+    - I asked ChatGPT "can you give me the code for calculating the mean in R"
+        - [This is what I got](https://chatgpt.com/share/66f8a2b9-9918-8006-88af-0dc7b64bb86a)
+    - For code generation, it gives you WAY too much
+    - I also asked ChatGPT "Why is the mean function in R giving me an NA?" (in above link)
+    
+## More on AI usage
+
+- [In the syllabus](https://nwakim.github.io/F24_EPI_525/syllabus.html#plagiarism-and-attribution)
+- If you cannot trace code back to the class notes, then do NOT use it!
+  - There's different coding practices and functions out there
+  - I'm giving you a specific set of tools that will serve as a good introduction
+  - You should be able to explain all your code and work 
+
+
 # Let's try with an example dataset
 
 ## Fisher's (or Anderson's) Iris data set
@@ -309,9 +345,22 @@ A new tab in the scripting window should appear with the `iris` dataset.
 :::
 :::
 
-## Data structure
+## Data structure (1/2)
 
 -   What are the different **variable types** in this data set?
+
+- We are going to use the `str` function
+
+  - Can you use the console to tell me what we can input into `str`?
+
+
+## Data structure (2/2)
+
+-   What are the different **variable types** in this data set?
+
+- We are going to use the `str` function
+
+  - Can you use the console to tell me what we can input into `str`?
 
 \
 

@@ -7,13 +7,10 @@ date: "10/9/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
-    toc: true
-    toc-depth: 1
-    toc-title: Class Overview
     chalkboard: true
     slide-number: true
     show-slide-number: all
-    width: 1600
+    width: 1955
     height: 1100
     footer: R04 Slides
     html-math-method: mathjax
@@ -22,6 +19,10 @@ execute:
   echo: true
   freeze: auto
 ---
+
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
 
 ## Using OneDrive
 

@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -10938,7 +10938,7 @@
     "href": "lessons/03_Probability/03_Probability.html#what-is-a-probability",
     "title": "Lesson 3: Defining Probability",
     "section": "What is a probability?",
-    "text": "What is a probability?\n\n\nDefinition: Probability\n\n\nHow likely something will happen. On a more technical note, the probability of an outcome is the proportion of times the outcome would occur if the random phenomenon could be observed an infinite number of times.\n\n\n\nWe can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5. If we flip the coin 10 times, it is not certain that we will get 5 heads. However, if we flip it infinite times, we will get heads 50% of the flips. Fun seeing theory demonstration!\n\n\n\nLaw of large numbers\n\n\nAs more observations are collected, the proportion of occurrences, \\(\\hat{p}\\), with a particular outcome converges to the true probability \\(p\\) of that outcome."
+    "text": "What is a probability?\n\n\nDefinition: Probability\n\n\nHow likely something will happen.\n\nOn a more technical note, the probability of an outcome is the proportion of times the outcome would occur if the random phenomenon could be observed an infinite number of times.\n\n\n\n\nWe can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5."
   },
   {
     "objectID": "lessons/03_Probability/03_Probability.html#probabilities-of-equally-likely-outcomes",
@@ -12534,14 +12534,14 @@
     "href": "lessons/03_Probability/03_Probability.html#lets-start-with-an-example",
     "title": "Lesson 3: Defining Probability",
     "section": "Let’s start with an example!",
-    "text": "Let’s start with an example!\n\n\n\n\nExample: Rolling fair 6-sided dice\n\n\n\nSuppose you roll a fair 6-sided die.\n\nWhat is the probability that you roll a 4?\nWhat is the probability that you roll an even number?\nWhat is the probability that you did not roll a 3?\n\nSuppose you roll two fair 6-sided dice.\n\nWhat is the probability that you roll a 2 with the first die and a 5 with the second die?"
+    "text": "Let’s start with an example!\n\n\n\n\nExample: Rolling fair 6-sided dice\n\n\nSuppose you roll a fair 6-sided die.\n\nWhat is the probability that you roll a 4?\nWhat is the probability that you roll an even number?\nWhat is the probability that you did not roll a 3?"
   },
   {
     "objectID": "lessons/03_Probability/03_Probability.html#some-probability-notation",
     "href": "lessons/03_Probability/03_Probability.html#some-probability-notation",
     "title": "Lesson 3: Defining Probability",
     "section": "Some probability notation",
-    "text": "Some probability notation\n\nProbability typically defined as a proportion\n\nTakes values between 0 and 1\n\nProbability can also be expressed as a “percent chance,” taking values between 0% and 100%\nIf we want to discuss the probability of an event, say A, we would write \\(P(A)\\)\n\nWe can write: \\(A = \\{\\text{rolling a 1}\\}\\), with associated probability \\(P(A)\\)\nOR we can write \\(P(\\text{rolling a 1})\\)"
+    "text": "Some probability notation\n\nProbability typically defined as a proportion\n\nTakes values between 0 and 1\n\n\n \n\nProbability can also be expressed as a “percent chance,” taking values between 0% and 100%\n\n \n\nIf we want to discuss the probability of an event, say A, we would write \\(P(A)\\)\n\nWe can write: \\(A = \\{\\text{rolling a 1}\\}\\), with associated probability \\(P(A)\\)\nOR we can write \\(P(\\text{rolling a 1})\\)"
   },
   {
     "objectID": "lessons/03_Probability/03_Probability.html#section-1",
@@ -12863,7 +12863,7 @@
     "href": "lessons/R03_Basics_02/R03_Basics_02.html#lets-try-it-out",
     "title": "R03: R Basics, part 2",
     "section": "Let’s try it out!",
-    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22.\n\n \n\nDid you notice anything in the Environment section of Rstudio?"
+    "text": "Let’s try it out!\n\nCreate a new variable y that is assigned the value of 8\nCreate a new variable c that is assigned the vector of values 15 through 20\nCreate a new variable d that is assigned the vector of values 16 through 19 and 22.\n\n \n\nDid you notice anything in the Environment section of Rstudio?\n\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#doing-math-with-variables",
@@ -12877,7 +12877,7 @@
     "href": "lessons/R03_Basics_02/R03_Basics_02.html#lets-try-it-out-1",
     "title": "R03: R Basics, part 2",
     "section": "Let’s try it out!",
-    "text": "Let’s try it out!\n\nUse the variable name y to find the addition of y and 5\nAdd 5 to the vector c"
+    "text": "Let’s try it out!\n\nUse the variable name y to find the addition of y and 5\nAdd 5 to the vector c\n\n\n\n\n−+\n02:00"
   },
   {
     "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#variables-can-include-text-characters",
@@ -12898,14 +12898,14 @@
     "href": "lessons/R03_Basics_02/R03_Basics_02.html#now-lets-use-some-functions-for-summary-statistics",
     "title": "R03: R Basics, part 2",
     "section": "Now let’s use some functions for summary statistics",
-    "text": "Now let’s use some functions for summary statistics\n\nWe will calculate the mean for c\nLet’s also calculate the standard deviation for c\n\nRecall, our function is sd()\nUse ?sd in the console to identify the arguments for c\n\n\n \n\nIf you have more time, you can try to calculate the median and IQR for c"
+    "text": "Now let’s use some functions for summary statistics\n\nWe will calculate the mean for c\nLet’s also calculate the standard deviation for c\n\nRecall, our function is sd()\nUse ?sd in the console to identify the arguments for c\n\n\n \n\nIf you have more time, you can try to calculate the median and IQR for c\n\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#there-are-many-ways-to-get-help-when-you-are-stuck",
     "href": "lessons/R03_Basics_02/R03_Basics_02.html#there-are-many-ways-to-get-help-when-you-are-stuck",
     "title": "R03: R Basics, part 2",
     "section": "There are many ways to get help when you are stuck",
-    "text": "There are many ways to get help when you are stuck\n\nUse the ? in front of the function name to get more information!\n\nUsually if I need help with the arguments for a function\n\n\n \n\nGoogle or go to stackoverflow.com\n\nOften when I Google, I get redirected to something like stackoverflow\nFor example, let’s say my mean function was outputting NA. I would Google something like “keep getting NA for mean in R” Then end up here\n\n\n \n\nI can also go to my favoriate AI tool to get help\n\nThis is most useful for getting code started if it’s complicated (we’re not really at that level yet)\nI asked ChatGPT “can you give me the code for calculating the mean in R”\n\nThis is what I got\n\nFor code generation, it gives you WAY too much\nI also asked ChatGPT “Why is the mean function in R giving me an NA?” (in above link)"
+    "text": "There are many ways to get help when you are stuck\n\nUse the ? in front of the function name to get more information!\n\nUsually if I need help with the arguments for a function\n\nGoogle or go to stackoverflow.com\n\nOften when I Google, I get redirected to something like stackoverflow\nFor example, let’s say my mean function was outputting NA. I would Google something like “keep getting NA for mean in R” Then end up here\n\nI can also go to my favorite AI tool to get help\n\nThis is most useful for getting code started if it’s complicated (we’re not really at that level yet)\nI asked ChatGPT “can you give me the code for calculating the mean in R”\n\nThis is what I got\n\nFor code generation, it gives you WAY too much\nI also asked ChatGPT “Why is the mean function in R giving me an NA?” (in above link)"
   },
   {
     "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#more-on-ai-usage",
@@ -13963,5 +13963,110 @@
     "title": "Homework 2 Answers",
     "section": "Non-book exercise",
     "text": "Non-book exercise\n0.05"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#weekly-medications",
+    "href": "lessons/03_Probability/03_Probability.html#weekly-medications",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Weekly medications",
+    "text": "Weekly medications\n\n\n\n\nExample 3\n\n\nIf a subject has an\n\n80% chance of taking their medication this week,\n70% chance of taking their medication next week, and\n10% chance of not taking their medication either week,\n\nthen find the probability of them taking their medication exactly one of the two weeks.\n\n\n\nHint: Draw a Venn diagram labelling each of the parts to find the probability.\n\n\n\n\nLesson 3 Slides"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#general-steps-for-probability-word-problems",
+    "href": "lessons/03_Probability/03_Probability.html#general-steps-for-probability-word-problems",
+    "title": "Lesson 3: Defining Probability",
+    "section": "General steps for probability word problems",
+    "text": "General steps for probability word problems\n\nDefine the events in the problem and make a Venn Diagram\nTranslate the words and numbers into probability statements\nTranslate the question into a probability statement\nThink about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?\nPlug in the given numbers to calculate the answer!"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#disjoint-mutually-exclusive-events",
+    "href": "lessons/03_Probability/03_Probability.html#disjoint-mutually-exclusive-events",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Disjoint / mutually exclusive events",
+    "text": "Disjoint / mutually exclusive events\n\n\nDisjoint / mutually exclusive events\n\n\nTwo events or outcomes are called disjoint or mutually exclusive if they cannot both happen at the same time."
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#what-is-a-probability-with-the-law-of-large-numbers",
+    "href": "lessons/03_Probability/03_Probability.html#what-is-a-probability-with-the-law-of-large-numbers",
+    "title": "Lesson 3: Defining Probability",
+    "section": "What is a probability? with the Law of Large Numbers",
+    "text": "What is a probability? with the Law of Large Numbers\n\nWe can think of flipping a coin. There are two possible outcomes (heads or tails). The probability of getting heads is 0.5.\n\nIf we flip the coin 10 times, it is not certain that we will get 5 heads. However, if we flip it infinite times, we will get heads 50% of the flips.\n\n\n \n\nFun “Seeing Theory” demonstration!\n\n\n\nLaw of large numbers\n\n\nAs more observations are collected, the proportion of occurrences, \\(\\hat{p}\\), with a particular outcome converges to the true probability \\(p\\) of that outcome."
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#where-are-we",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#where-are-we",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#where-are-we",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#where-are-we",
+    "title": "R03: R Basics, part 2",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#where-are-we",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#where-are-we",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#where-are-we",
+    "href": "lessons/03_Probability/03_Probability.html#where-are-we",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-1-1",
+    "href": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-1-1",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-2",
+    "href": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-2",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-3",
+    "href": "lessons/03_Probability/03_Probability.html#poll-everywhere-question-3",
+    "title": "Lesson 3: Defining Probability",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#last-time",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#last-time",
+    "title": "R03: R Basics, part 2",
+    "section": "Last time",
+    "text": "Last time\n\nDownloaded R and Rstudio\nIf you are still having issues downloading, please come to my office hours!\nBecame familiar with the console and a script file\nDid some math calculations in R!\n\n \nToday, we’re going to work on…\n\nAssigning things in R\nUsing functions to calculate\nFamiliarizing ourselves with common issues\nTroubleshooting with different tools\nGo over an example dataset"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure-12",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure-12",
+    "title": "R03: R Basics, part 2",
+    "section": "Data structure (1/2)",
+    "text": "Data structure (1/2)\n\nWhat are the different variable types in this data set?\nWe are going to use the str function\n\nCan you use the console to tell me what we can input into str?"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure-12-1",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure-12-1",
+    "title": "R03: R Basics, part 2",
+    "section": "Data structure (1/2)",
+    "text": "Data structure (1/2)\n\nWhat are the different variable types in this data set?\nWe are going to use the str function\n\nCan you use the console to tell me what we can input into str?\n\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure-22",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#data-structure-22",
+    "title": "R03: R Basics, part 2",
+    "section": "Data structure (2/2)",
+    "text": "Data structure (2/2)\n\nWhat are the different variable types in this data set?\nWe are going to use the str function\n\nCan you use the console to tell me what we can input into str?\n\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
   }
 ]

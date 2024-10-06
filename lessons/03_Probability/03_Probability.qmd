@@ -28,11 +28,13 @@ editor:
 
 1. Define probability and explain the Law of Large Numbers within examples
 
-2. Calculate the probability of disjoint (mutually exclusive) events
+2. Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)
 
-3. Calculate Probabilities for independent events and their joint outcomes
+3. Calculate an unknown probability in a word problem using the probability properties
 
-4. Use sample space and event complements to calculate probabilities.
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
 
 ## Let's start with an example!
 
@@ -44,22 +46,27 @@ editor:
 :::
 
 ::: ex-cont
-1.  Suppose you roll a fair 6-sided die.
+Suppose you roll a fair 6-sided die.
 
-    a.  What is the probability that you roll a 4?
+1.  What is the probability that you roll a 4?
 
-    b.  What is the probability that you roll an even number?
+2.  What is the probability that you roll an even number?
 
-    c.  What is the probability that you did not roll a 3?
-
-2.  Suppose you roll **two** fair 6-sided dice.
-
-    a.  What is the probability that you roll a 2 with the first die and
-        a 5 with the second die?
+3.  What is the probability that you did not roll a 3?
 :::
 :::
 :::
 :::
+
+# Learning Objectives
+
+::: lob
+1. Define probability and explain the Law of Large Numbers within examples
+:::
+
+2. Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)
+
+3. Calculate an unknown probability in a word problem using the probability properties
 
 ## What is a probability?
 
@@ -69,7 +76,9 @@ Definition: Probability
 :::
 
 ::: def-cont
-How likely something will happen. On a more technical note, the
+How likely something will happen. 
+
+- On a more technical note, the
 probability of an outcome is the proportion of times the outcome would
 occur if the random phenomenon could be observed an infinite number of
 times.
@@ -77,10 +86,20 @@ times.
 :::
 
 -   We can think of flipping a coin. There are two possible outcomes
-    (heads or tails). The probability of getting heads is 0.5. If we
-    flip the coin 10 times, it is not certain that we will get 5 heads.
+    (heads or tails). The probability of getting heads is 0.5. 
+
+## What is a probability? with the Law of Large Numbers
+
+-   We can think of flipping a coin. There are two possible outcomes
+    (heads or tails). The probability of getting heads is 0.5. 
+
+    - If we flip the coin 10 times, it is not certain that we will get 5 heads.
     However, if we flip it infinite times, we will get heads 50% of the
-    flips. [Fun seeing theory
+    flips. 
+
+ 
+  
+- [Fun "Seeing Theory"
     demonstration!](https://seeing-theory.brown.edu/basic-probability/index.html)
 
 ::: definition
@@ -95,23 +114,41 @@ $p$ of that outcome.
 :::
 :::
 
+## Poll Everywhere Question 1
+
 ## Some probability notation
 
 -   Probability typically defined as a proportion
     -   Takes values between 0 and 1
+    
+ 
+    
 -   Probability can also be expressed as a "percent chance," taking
     values between 0% and 100%
+
+     
+
 -   If we want to discuss the probability of an event, say A, we would
     write $P(A)$
     -   We can write: $A = \{\text{rolling a 1}\}$, with associated
         probability $P(A)$
     -   OR we can write $P(\text{rolling a 1})$
 
-## Disjoint / mutually exclusion events
+# Learning Objectives
+
+1. Define probability and explain the Law of Large Numbers within examples
+
+::: lob
+2. Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)
+:::
+
+3. Calculate an unknown probability in a word problem using the probability properties
+
+## Disjoint / mutually exclusive events
 
 ::: definition
 ::: def-ttl
-Disjoint / mutually exclusion events
+Disjoint / mutually exclusive events
 :::
 
 ::: def-cont
@@ -120,7 +157,7 @@ if they cannot both happen at the same time.
 :::
 :::
 
-## Poll Everywhere Question 1
+## Poll Everywhere Question 2
 
 ## Probability for disjoint events
 
@@ -274,6 +311,18 @@ P(A_1) P(A_2) \cdots P(A_k).
 :::
 :::
 
+## Poll Everywhere Question 3
+
+# Learning Objectives
+
+1. Define probability and explain the Law of Large Numbers within examples
+
+2. Define relationships between events and their probability properties (including disjoint events, non-disjoint events, complements, and independent events)
+
+::: lob
+3. Calculate an unknown probability in a word problem using the probability properties
+:::
+
 ## Example rolling two dice
 
 ::: columns
@@ -286,8 +335,47 @@ What is the probability that both dice will be 1?
 :::
 :::
 
-## Let's go through a slightly more complicated example?
+## General steps for probability word problems
 
-Maybe venn diagram or some other TB example??
+1. Define the events in the problem and make a Venn Diagram
+
+2. Translate the words and numbers into probability statements
+
+3. Translate the question into a probability statement
+
+4. Think about the various definitions and rules of probabilities. Is there a way to define our question's probability statement (in step 3) using the probability statements with assigned values (in step 2)?
+
+5. Plug in the given numbers to calculate the answer!
+
+## Weekly medications
+
+::: columns
+::: {.column width="40%"}
+
+::: example
+::: ex-ttl
+Example 3
+:::
+
+::: ex-cont
+If a subject has an
+
+-   80% chance of taking their medication *this* week,
+
+-   70% chance of taking their medication *next* week, and
+
+-   10% chance of *not* taking their medication *either* week,
+
+then find the probability of them taking their medication exactly one of the two weeks.
+:::
+:::
+:::
+
+::: {.column width="60%"}
+*Hint: Draw a Venn diagram labelling each of the parts to find the probability.*
+:::
+:::
+
+
 
 
