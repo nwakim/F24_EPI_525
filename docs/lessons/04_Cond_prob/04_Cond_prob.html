@@ -341,25 +341,39 @@ Meike Niederhausen and Nicky Wakim
 
   <p class="date">2024-10-09</p>
 </section>
-<section class="slide level2">
-
-<p>https://github.com/OI-Biostat/oi_biostat_text/blob/master/ch_probability_oi_biostat/TeX/ch_probability_oi_biostat.tex</p>
-</section>
 <section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li></li>
+<li><p>Recognize joint, marginal, and conditional probabilities in contingency and probability tables</p></li>
+<li><p>Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes’ theorem)</p></li>
+<li><p>Apply probability properties to solve a world problem on positive predictive value (PPV)</p></li>
 </ol>
 </section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
 
-<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Recognize joint, marginal, and conditional probabilities in contingency and probability tables</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes’ theorem)</p></li>
+<li><p>Apply probability properties to solve a world problem on positive predictive value (PPV)</p></li>
+</ol>
+</section>
 <section id="example-hypertension-prevalence-12" class="slide level2">
 <h2>Example: hypertension prevalence (1/2)</h2>
 <ul>
 <li>US CDC estimated that between 2011 and 2014<sup>1</sup>, 29% of the population in America had hypertension</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
 <ul>
 <li>However, this is <strong>only the case if nothing else is known about the patient</strong></li>
@@ -375,23 +389,29 @@ Meike Niederhausen and Nicky Wakim
 <li>Adults aged 40-59, 32.2%</li>
 <li>Adults aged 60 or older, 64.9% have hypertension</li>
 </ul></li>
-<li>Knowing the age of a patient provides important information about the likelihood of hypertension
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>Knowing the age of a patient provides important information about the likelihood of hypertension</p>
 <ul>
 <li>Age and hypertension status are <strong>not independent</strong> (we will get into this)</li>
 </ul></li>
-<li>While the probability of hypertension in a randomly chosen adult is 0.29, the <strong>conditional probability</strong> of hypertension in a person known to be 60 or older is 0.649</li>
+<li><p>While the probability of hypertension of a randomly chosen adult is 0.29…</p>
+<ul>
+<li>The <strong>conditional probability</strong> of hypertension in a person known to be 60 or older is 0.649</li>
+</ul></li>
 </ul>
 <p>&nbsp;</p>
 <div class="orange-ttl">
-<p>How can we use probabilities to show this?</p>
+<p>How can we assemble the full picture of hypertension and age with probabilities?</p>
 </div>
 </section>
-<section id="marginal-and-joint-probabilities" class="slide level2">
-<h2>Marginal and joint probabilities</h2>
+<section id="contingency-tables" class="slide level2">
+<h2>Contingency tables</h2>
 <ul>
-<li>We can start looking at the contingency table for hypertension for different age groups
+<li>We can start looking at the <strong>contingency table</strong> for hypertension for different age groups
 <ul>
-<li>Contingency table: type of data table that displays the frequency distribution of two or more categorical variables</li>
+<li><strong>Contingency table:</strong> type of data table that displays the frequency distribution of two or more categorical variables</li>
 </ul></li>
 </ul>
 <div class="cell">
@@ -436,8 +456,10 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="more-on-the-table" class="slide level2">
-<h2>More on the table</h2>
+<section id="types-of-probabilities-from-contingency-tables" class="slide level2">
+<h2>Types of probabilities from contingency tables</h2>
+<div class="columns">
+<div class="column" style="width:53%;">
 <div class="cell">
 <div class="cell-output-display">
 <table>
@@ -479,18 +501,85 @@ Meike Niederhausen and Nicky Wakim
 </table>
 </div>
 </div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li><p><span style="color:#E75B5C;"><strong>Joint probability</strong></span></p>
 <ul>
 <li>In first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)</li>
+</ul></li>
+<li><p><span style="color:#BF396F;"><strong>Marginal probability</strong></span></p>
+<ul>
+<li>We can say that in the entire population of 313,320,000, approximately 121,042,000 people are 18-39 years (~38.6%)</li>
+</ul></li>
+<li><p><span style="color:#367B79;"><strong>Conditional probability</strong></span></p>
+<ul>
 <li>But we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)</li>
+</ul></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="poll-everywhere-question-1" class="slide level2">
 <h2>Poll Everywhere Question 1</h2>
 </section>
-<section id="defining-conditional-probability" class="slide level2">
-<h2>Defining conditional probability</h2>
+<section id="probability-tables" class="slide level2">
+<h2>Probability tables</h2>
+<div class="lob">
+<p><strong>We typically display joint and marginal probabilities in probability table</strong></p>
+</div>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Table: Probability table summarizing hypertension status and age group.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Hypertension</th>
+<th style="text-align: right;">No Hypertension</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">0.0282</td>
+<td style="text-align: right;">0.3581</td>
+<td style="text-align: right;">0.3863</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">0.1344</td>
+<td style="text-align: right;">0.2830</td>
+<td style="text-align: right;">0.4174</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">0.1274</td>
+<td style="text-align: right;">0.0689</td>
+<td style="text-align: right;">0.1963</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">0.2900</td>
+<td style="text-align: right;">0.7100</td>
+<td style="text-align: right;">1.0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <ul>
-<li>So far we have intuitively thought of conditional probability:
+<li><p><span style="color:#E75B5C;"><strong>Joint probability</strong></span>: intersection of row and column</p></li>
+<li><p><span style="color:#BF396F;"><strong>Marginal probability</strong></span>: row or column total</p></li>
+</ul>
+</section>
+<section id="lets-go-back-to-conditional-probability" class="slide level2">
+<h2>Let’s go back to conditional probability</h2>
+<ul>
+<li>So far we have intuitively thought of conditional probability and used the <strong>contingency table</strong>:
 <ul>
 <li>The first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)</li>
 </ul></li>
@@ -499,6 +588,25 @@ Meike Niederhausen and Nicky Wakim
 <li>“<span class="math inline">\(\text{hypertension} | \text{18-39 years old}\)</span>” reads as “hypertension given 18-39 years old”</li>
 </ul></li>
 </ul>
+<p>&nbsp;</p>
+<div class="lob">
+<p>Can we calculate the conditional probability from the <strong>probability table</strong>?</p>
+</div>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Recognize joint, marginal, and conditional probabilities in contingency and probability tables</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes’ theorem)</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Apply probability properties to solve a world problem on positive predictive value (PPV)</li>
+</ol>
 </section>
 <section id="we-can-define-conditional-probability-more-mathematically" class="slide level2">
 <h2>We can define conditional probability more mathematically</h2>
@@ -614,6 +722,9 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
+</section>
 <section id="bayes-theorem-section-2.2.5" class="slide level2">
 <h2>Bayes’ Theorem (Section 2.2.5)</h2>
 <div class="red">
@@ -629,9 +740,17 @@ Meike Niederhausen and Nicky Wakim
 {P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c) }\]</span> because of the <strong>Law of Total Probability</strong>: <span class="math display">\[\begin{aligned}P(B) = &amp; P(B \cap A) + P(B \cap A^C) \\ = &amp;P(B | A)P(A)+ P(B|A^C)P(A^C) \end{aligned}\]</span></p>
 </section></section>
 <section>
-<section id="learning-objective" class="title-slide slide level1 center">
-<h1>Learning Objective</h1>
-
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Recognize joint, marginal, and conditional probabilities in contingency and probability tables</p></li>
+<li><p>Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes’ theorem)</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Apply probability properties to solve a world problem on positive predictive value (PPV)</li>
+</ol>
+</div>
 </section>
 <section id="example-how-accurate-is-rapid-testing-for-covid-19-1n" class="slide level2">
 <h2>Example: How accurate is rapid testing for COVID-19? (1/n)</h2>
@@ -651,10 +770,24 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <p>From the iHealth® website <a href="https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details" class="uri">https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details</a>:</p>
 </section>
+<section id="some-specialized-terminology-in-diagnostic-tests" class="slide level2">
+<h2>Some specialized terminology in diagnostic tests</h2>
+<p>Calculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology</p>
+<ul>
+<li>The <strong>sensitivity</strong> of a test is the probability of a positive test result when disease is present, such as a positive mammogram when a patient has breast cancer.</li>
+<li>The <strong>specificity</strong> of a test is the probability of a negative test result when disease is absent</li>
+<li>The probability of disease in a population is referred to as the <strong>prevalence</strong>.</li>
+<li>With specificity and sensitivity information for a particular test, along with disease prevalence, the <strong>positive predictive value (PPV)</strong> can be calculated: the probability that disease is present when a test result is positive.</li>
+<li>Similarly, the <strong>negative predictive value</strong> is the probability that disease is absent when test results are negative</li>
+</ul>
+</section>
+<section id="poll-everywhere-question-3" class="slide level2">
+<h2>Poll Everywhere Question 3</h2>
+</section>
 <section id="general-steps-for-probability-word-problems" class="slide level2">
 <h2>General steps for probability word problems</h2>
 <ol type="1">
-<li><p>Define the events in the problem</p></li>
+<li><p>Define the events in the problem and draw a Venn Diagram</p></li>
 <li><p>Translate the words and numbers into probability statements</p></li>
 <li><p>Translate the question into a probability statement</p></li>
 <li><p>Think about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?</p></li>
@@ -781,23 +914,9 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 <p><strong>Step 5:</strong> Calculate answer</p>
-</section>
-<section id="some-specialized-terminology-in-diagnostic-tests" class="slide level2">
-<h2>Some specialized terminology in diagnostic tests</h2>
-<p>Calculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology</p>
-<ul>
-<li>The <strong>sensitivity</strong> of a test is the probability of a positive test result when disease is present, such as a positive mammogram when a patient has breast cancer.</li>
-<li>The <strong>specificity</strong> of a test is the probability of a negative test result when disease is absent</li>
-<li>The probability of disease in a population is referred to as the <strong>prevalence</strong>.</li>
-<li>With specificity and sensitivity information for a particular test, along with disease prevalence, the <strong>positive predictive value (PPV)</strong> can be calculated: the probability that disease is present when a test result is positive.</li>
-<li>Similarly, the <strong>negative predictive value</strong> is the probability that disease is absent when test results are negative</li>
-</ul>
-</section>
-<section id="poll-everywhere-question" class="slide level2">
-<h2>Poll Everywhere Question</h2>
 
 <div class="footer footer-default">
-<p>Lesson 5 Slides</p>
+<p>Lesson 4 Slides</p>
 </div>
 </section></section>
 

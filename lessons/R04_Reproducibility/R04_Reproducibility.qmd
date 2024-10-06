@@ -92,6 +92,7 @@ There are a few good practices for naming files and folders for easy tracking:
 
 1. Keep the name short and relevant
 2. Use leading numbers to help organize sequential items
+    - I can show you my lessons folders as an example 
 3. Use dates in the format "YYYY-MM-DD" so that files are in chronological order
 4. You can label different versions if you would like to 
 5. Use "_" to separate sections of the name
@@ -102,6 +103,8 @@ There are a few good practices for naming files and folders for easy tracking:
 - Make a folder called something like `R04_work`
 
 - We are going to stay in the `R_activities` folder
+
+- Now that we have some folders in order, we can start creating a project
 
 ## Creating project in RStudio
 
@@ -116,12 +119,26 @@ There are a few good practices for naming files and folders for easy tracking:
     -   Go into RStudio
 
     -   Create new project for this class (under `File` or top right corner)
+        
+        - I would chose "Existing Directory" since we have already set up our folders
+        - Make the new project in the `EPI_525_F24` folder
 
--   Once we have projects, we can open one are R will automatically know that its location is the start of our working directory
+-   Once we have projects, we can open one and R will automatically know that its location is the start of our working directory
 
 ## The nice thing about R projects
 
+- 5 minute video explaining some of the nice features of R projects
+
 <https://rfortherestofus.com/2022/10/rstudio-projects>
+
+
+## Reproducibility
+
+- Research data and code can reach the same results regardless of who is running the code
+
+  - This can also refer to future or past you!
+  
+- We want to set up our work so the entire folder can be moved around and work in its new location
 
 ## Nicky's process for R projects
 
@@ -138,85 +155,4 @@ There are a few good practices for naming files and folders for easy tracking:
 countdown::countdown(5)
 ```
 
-# If we have time
-
-## Creating a new `qmd` file
-
--   Basic steps
-
-    -   Create new `.qmd` (under `File` or top left corner)
-
-    -   Decide on document types/options
-
--   Let me show you my process
-
--   Create a `.qmd` in your Sample_folder under any folder (maybe Notes is good)
-
-```{r}
-#| echo: false
-countdown::countdown(5)
-```
-
-## `here` package
-
-::: columns
-::: column
--   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
-
-    -   Just substitute `.Rmd` with `.qmd`
-
--   Basically, a `.qmd` file and `.R` file work differently
-
-    -   We haven't worked much with `.R` files
-
--   For `.qmd` files, the automatic directory is the folder it is in
-
-    -   But we want it to be the main project folder
-
--   `here` can help with that
-:::
-
-::: column
-![](images/paths.png){fig-align="center"}
-:::
-:::
-
-## Install `here` package
-
--   Install `here` package: you can do this in your console (not inside `.qmd` file)
-
-```{r}
-#| eval: false
-install.packages("here")
-```
-
--   Within your console, type `here()` and enter
-
-    -   Try this with `getwd()` as well
-
-## Using `here()` to load data
-
--   There `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
-
--   To load the dataset in our `.qmd` file, we will use:
-
-```{r}
-#| eval: false
-data = read_excel(here("./Data/CH05Q01.xls"))
-data = read_excel(here("Data", "CH05Q01.xls"))
-```
-
-::: red
-::: red-ttl
-Watch out when using lubridate package simultaneously
-:::
-
-::: red-cont
-Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will tell R to use the function `here()` within the `here` package instead of `lubridate`'s `here()` function. To call lubridate's function, we'd use `lubridate::here()`
-:::
-:::
-
-```{r}
-#| echo: false
-countdown::countdown(5)
-```
+## If time, we will move to R05: Intro to Quarto!

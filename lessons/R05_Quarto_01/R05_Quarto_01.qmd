@@ -8,13 +8,10 @@ categories: ["Week 1"]
 format: 
   revealjs:
     theme: "../simple_NW.scss"
-    toc: true
-    toc-depth: 1
-    toc-title: Class Overview
     chalkboard: true
     slide-number: true
     show-slide-number: all
-    width: 1600
+    width: 1955
     height: 1100
     footer: R05 Slides
     html-math-method: mathjax
@@ -189,7 +186,7 @@ install.packages("here")
 
 ## Using `here()` to load data
 
--   There `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
+-   The `here()` function will start at the working directory (where your `.Rproj` file is) and let you write out a file path for anything
 
 -   To load the dataset in our `.qmd` file, we will use:
 

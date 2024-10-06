@@ -12968,21 +12968,21 @@
     "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#aside-folder-and-file-naming",
     "title": "R04: Reproducibility, File Organization, and Projects",
     "section": "Aside: folder and file naming",
-    "text": "Aside: folder and file naming\nThere are a few good practices for naming files and folders for easy tracking:\n\nKeep the name short and relevant\nUse leading numbers to help organize sequential items\nUse dates in the format “YYYY-MM-DD” so that files are in chronological order\nYou can label different versions if you would like to\nUse “_” to separate sections of the name\n\nI also use this to separate words, but some people say you should use “-” to separate words"
+    "text": "Aside: folder and file naming\nThere are a few good practices for naming files and folders for easy tracking:\n\nKeep the name short and relevant\nUse leading numbers to help organize sequential items\n\nI can show you my lessons folders as an example\n\nUse dates in the format “YYYY-MM-DD” so that files are in chronological order\nYou can label different versions if you would like to\nUse “_” to separate sections of the name\n\nI also use this to separate words, but some people say you should use “-” to separate words"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#lets-go-into-r_activities",
     "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#lets-go-into-r_activities",
     "title": "R04: Reproducibility, File Organization, and Projects",
     "section": "Let’s go into R_activities",
-    "text": "Let’s go into R_activities\n\nMake a folder called something like R04_work\nWe are going to stay in the R_activities folder"
+    "text": "Let’s go into R_activities\n\nMake a folder called something like R04_work\nWe are going to stay in the R_activities folder\nNow that we have some folders in order, we can start creating a project"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-project-in-rstudio",
     "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-project-in-rstudio",
     "title": "R04: Reproducibility, File Organization, and Projects",
     "section": "Creating project in RStudio",
-    "text": "Creating project in RStudio\n\nWay to designate a working directory: basically your home base when working in R\n\nWe have to tell R exactly where we are in our folders and where to find other things\nA project makes it easier to tell R where we are\n\nBasic steps to create a project\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nOnce we have projects, we can open one are R will automatically know that its location is the start of our working directory"
+    "text": "Creating project in RStudio\n\nWay to designate a working directory: basically your home base when working in R\n\nWe have to tell R exactly where we are in our folders and where to find other things\nA project makes it easier to tell R where we are\n\nBasic steps to create a project\n\nGo into RStudio\nCreate new project for this class (under File or top right corner)\n\nI would chose “Existing Directory” since we have already set up our folders\nMake the new project in the EPI_525_F24 folder\n\n\nOnce we have projects, we can open one and R will automatically know that its location is the start of our working directory"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#creating-a-new-qmd-file",
@@ -13010,7 +13010,7 @@
     "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#using-here-to-load-data",
     "title": "R04: Reproducibility, File Organization, and Projects",
     "section": "Using here() to load data",
-    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR04 Slides"
+    "text": "Using here() to load data\n\nThe here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR04 Slides"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#positive-predictive-value-ppv-of-a-diagnostic-test",
@@ -13045,7 +13045,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12",
     "title": "Lesson 4: Conditional Probability",
     "section": "Example: hypertension prevalence (1/2)",
-    "text": "Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+    "text": "Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12-1",
@@ -13059,7 +13059,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-22",
     "title": "Lesson 4: Conditional Probability",
     "section": "Example: hypertension prevalence (2/2)",
-    "text": "Example: hypertension prevalence (2/2)\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension in a randomly chosen adult is 0.29, the conditional probability of hypertension in a person known to be 60 or older is 0.649\n\n \n\nHow can we use probabilities to show this?"
+    "text": "Example: hypertension prevalence (2/2)\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\n\n \n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension of a randomly chosen adult is 0.29…\n\nThe conditional probability of hypertension in a person known to be 60 or older is 0.649\n\n\n \n\nHow can we assemble the full picture of hypertension and age with probabilities?"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-1",
@@ -13073,7 +13073,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#more-on-the-table",
     "title": "Lesson 4: Conditional Probability",
     "section": "More on the table",
-    "text": "More on the table\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\nIn first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)\nBut we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)"
+    "text": "More on the table\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\n\nJoint probability\n\nIn first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)\n\nMarginal probability\n\nWe can say that in the entire population of 313,320,000, approximately 121,042,000 people are 18-39 years (~38.6%)\n\nConditional probability\n\nBut we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html",
@@ -13136,7 +13136,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#general-steps-for-probability-word-problems",
     "title": "Lesson 4: Conditional Probability",
     "section": "General steps for probability word problems",
-    "text": "General steps for probability word problems\n\nDefine the events in the problem\nTranslate the words and numbers into probability statements\nTranslate the question into a probability statement\nThink about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?\nPlug in the given numbers to calculate the answer!"
+    "text": "General steps for probability word problems\n\nDefine the events in the problem and draw a Venn Diagram\nTranslate the words and numbers into probability statements\nTranslate the question into a probability statement\nThink about the various definitions and rules of probabilities. Is there a way to define our question’s probability statement (in step 3) using the probability statements with assigned values (in step 2)?\nPlug in the given numbers to calculate the answer!"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example",
@@ -13178,7 +13178,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question",
     "title": "Lesson 4: Conditional Probability",
     "section": "Poll Everywhere Question",
-    "text": "Poll Everywhere Question\n\n\nLesson 5 Slides"
+    "text": "Poll Everywhere Question"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-34-1",
@@ -13255,14 +13255,14 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-77",
     "title": "Lesson 4: Conditional Probability",
     "section": "Let’s apply the steps to our example (7/7)",
-    "text": "Let’s apply the steps to our example (7/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 5: Calculate answer"
+    "text": "Let’s apply the steps to our example (7/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 5: Calculate answer\n\n\nLesson 4 Slides"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#the-nice-thing-about-r-projects",
     "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#the-nice-thing-about-r-projects",
     "title": "R04: Reproducibility, File Organization, and Projects",
     "section": "The nice thing about R projects",
-    "text": "The nice thing about R projects\nhttps://rfortherestofus.com/2022/10/rstudio-projects"
+    "text": "The nice thing about R projects\n\n5 minute video explaining some of the nice features of R projects\n\nhttps://rfortherestofus.com/2022/10/rstudio-projects"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#nickys-process-for-r-projects",
@@ -13310,15 +13310,15 @@
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#example-creating-an-html-file",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#example-creating-an-html-file",
     "title": "R3: Quarto in R",
-    "section": "",
-    "text": ".qmd file \n\nhtml output"
+    "section": "Example: creating an html file",
+    "text": "Example: creating an html file\n\n\n.qmd file \n\nhtml output"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#quarto-.qmd-file-code-text",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#quarto-.qmd-file-code-text",
     "title": "R3: Quarto in R",
-    "section": "",
-    "text": "knitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+    "section": "Quarto = .qmd file = Code + text",
+    "text": "Quarto = .qmd file = Code + text\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd",
@@ -13346,7 +13346,7 @@
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-html-file",
     "title": "R3: Quarto in R",
     "section": "4. Create html file",
-    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
+    "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-file-vs.-its-html-output",
@@ -13381,7 +13381,7 @@
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-data",
     "title": "R3: Quarto in R",
     "section": "Using here() to load data",
-    "text": "Using here() to load data\n\nThere here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00"
+    "text": "Using here() to load data\n\nThe here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR05 Slides"
   },
   {
     "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#inline-code",
@@ -14068,5 +14068,89 @@
     "title": "R03: R Basics, part 2",
     "section": "Data structure (2/2)",
     "text": "Data structure (2/2)\n\nWhat are the different variable types in this data set?\nWe are going to use the str function\n\nCan you use the console to tell me what we can input into str?\n\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#contigency-tables",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#contigency-tables",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Contigency tables",
+    "text": "Contigency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#contingency-tables",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#contingency-tables",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Contingency tables",
+    "text": "Contingency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#types-of-probabilities-in-contingency-tables",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#types-of-probabilities-in-contingency-tables",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Types of probabilities in contingency tables",
+    "text": "Types of probabilities in contingency tables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\n\n\n\nJoint probability\n\nIn first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)\n\nMarginal probability\n\nWe can say that in the entire population of 313,320,000, approximately 121,042,000 people are 18-39 years (~38.6%)\n\nConditional probability\n\nBut we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#types-of-probabilities-in-contingency-tables-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#types-of-probabilities-in-contingency-tables-1",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Types of probabilities in contingency tables",
+    "text": "Types of probabilities in contingency tables\n\n\n\n\n\nTable: Probability table summarizing hypertension status and age group.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n0.0282\n0.3581\n0.3863\n\n\n40 to 59 years\n0.1344\n0.2830\n0.4174\n\n\nGreater than 60 years\n0.1274\n0.0689\n0.1963\n\n\nTotal\n0.2900\n0.7100\n1.0000\n\n\n\n\n\n\n\n\n\nJoint probability\n\nIn first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)\n\nMarginal probability\n\nWe can say that in the entire population of 313,320,000, approximately 121,042,000 people are 18-39 years (~38.6%)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#types-of-probabilities-from-contingency-tables",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#types-of-probabilities-from-contingency-tables",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Types of probabilities from contingency tables",
+    "text": "Types of probabilities from contingency tables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\n\n\n\nJoint probability\n\nIn first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)\n\nMarginal probability\n\nWe can say that in the entire population of 313,320,000, approximately 121,042,000 people are 18-39 years (~38.6%)\n\nConditional probability\n\nBut we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#probability-tables-joint-and-marginal",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#probability-tables-joint-and-marginal",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Probability tables: joint and marginal",
+    "text": "Probability tables: joint and marginal\n\nWe typically display joint and marginal probabilities in probability table\n\n \n\n\n\nTable: Probability table summarizing hypertension status and age group.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n0.0282\n0.3581\n0.3863\n\n\n40 to 59 years\n0.1344\n0.2830\n0.4174\n\n\nGreater than 60 years\n0.1274\n0.0689\n0.1963\n\n\nTotal\n0.2900\n0.7100\n1.0000\n\n\n\n\n\n\nJoint probability: intersection of row and column\nMarginal probability: row or column total"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#probability-tables",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#probability-tables",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Probability tables",
+    "text": "Probability tables\n\nWe typically display joint and marginal probabilities in probability table\n\n \n\n\n\nTable: Probability table summarizing hypertension status and age group.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n0.0282\n0.3581\n0.3863\n\n\n40 to 59 years\n0.1344\n0.2830\n0.4174\n\n\nGreater than 60 years\n0.1274\n0.0689\n0.1963\n\n\nTotal\n0.2900\n0.7100\n1.0000\n\n\n\n\n\n\nJoint probability: intersection of row and column\nMarginal probability: row or column total"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#lets-go-back-to-conditional-probability",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-go-back-to-conditional-probability",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Let’s go back to conditional probability",
+    "text": "Let’s go back to conditional probability\n\nSo far we have intuitively thought of conditional probability and used the contingency table:\n\nThe first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)\n\nWe got this from: \\[P(\\text{hypertension} | \\text{18-39 years old}) = \\dfrac{8,836,000}{121,042,000} = 0.073\\]\n\n“\\(\\text{hypertension} | \\text{18-39 years old}\\)” reads as “hypertension given 18-39 years old”\n\n\n \n\nCan we calculate the conditional probability from the probability table?"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-2",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-2",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-3",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#poll-everywhere-question-3",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#if-time-we-will-move-to-r05-intro-to-quarto",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#if-time-we-will-move-to-r05-intro-to-quarto",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "If time, we will move to R05: Intro to Quarto!",
+    "text": "If time, we will move to R05: Intro to Quarto!\n\n\nR04 Slides"
+  },
+  {
+    "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#reproducibility",
+    "href": "lessons/R04_Reproducibility/R04_Reproducibility.html#reproducibility",
+    "title": "R04: Reproducibility, File Organization, and Projects",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n\nResearch data and code can reach the same results regardless of who is running the code\n\nThis can also refer to future or past you!\n\nWe want to set up our work so the entire folder can be moved around and work in its new location"
   }
 ]

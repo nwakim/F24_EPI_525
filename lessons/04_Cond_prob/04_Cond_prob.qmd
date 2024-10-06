@@ -13,7 +13,7 @@ format:
     show-slide-number: all
     width: 1955
     height: 1100
-    footer: Lesson 5 Slides
+    footer: Lesson 4 Slides
     html-math-method: mathjax
     highlight-style: arrow
 execute:
@@ -41,19 +41,34 @@ theme_set(theme_bw(base_size = 22))
 # theme_update(text = element_text(size=20))  # set global text size for ggplots
 ```
 
-https://github.com/OI-Biostat/oi_biostat_text/blob/master/ch_probability_oi_biostat/TeX/ch_probability_oi_biostat.tex
-
 # Learning Objectives
 
-1.  
+1.  Recognize joint, marginal, and conditional probabilities in contingency and probability tables
+
+2. Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes' theorem)
+
+3. Apply probability properties to solve a world problem on positive predictive value (PPV)
 
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
+# Learning Objectives
+
+::: lob
+1.  Recognize joint, marginal, and conditional probabilities in contingency and probability tables
+:::
+
+2. Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes' theorem)
+
+3. Apply probability properties to solve a world problem on positive predictive value (PPV)
+
 ## Example: hypertension prevalence (1/2)
 
 -   US CDC estimated that between 2011 and 2014[^1], 29% of the population in America had hypertension
+
+ 
+
 -   A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
     -   However, this is **only the case if nothing else is known about the patient**
 
@@ -65,20 +80,26 @@ https://github.com/OI-Biostat/oi_biostat_text/blob/master/ch_probability_oi_bios
     - Among adults aged 18-39, 7.3% have hypertension
     - Adults aged 40-59, 32.2%
     - Adults aged 60 or older, 64.9% have hypertension
+
+ 
+
 -   Knowing the age of a patient provides important information about the likelihood of hypertension
     - Age and hypertension status are **not independent** (we will get into this)
--   While the probability of hypertension in a randomly chosen adult is 0.29, the **conditional probability** of hypertension in a person known to be 60 or older is 0.649
+    
+-   While the probability of hypertension of a randomly chosen adult is 0.29...
+    
+    -   The **conditional probability** of hypertension in a person known to be 60 or older is 0.649
 
  
 
 ::: orange-ttl
-How can we use probabilities to show this?
+How can we assemble the full picture of hypertension and age with probabilities?
 :::
 
-## Marginal and joint probabilities
+## Contingency tables 
 
-- We can start looking at the contingency table for hypertension for different age groups
-  - Contingency table: type of data table that displays the frequency distribution of two or more categorical variables
+- We can start looking at the **contingency table** for hypertension for different age groups
+  - **Contingency table:** type of data table that displays the frequency distribution of two or more categorical variables
   
 ```{r}
 #| echo: false
@@ -97,7 +118,10 @@ kable(hyp_data, col.names = c("Age Group", "Hypertension", "No Hypertension", "T
 thousands.")
 ```
   
-## More on the table
+## Types of probabilities from contingency tables
+
+::: columns
+::: {.column width="53%"}
 ```{r}
 #| echo: false
 #| 
@@ -106,18 +130,81 @@ kable(hyp_data, col.names = c("Age Group", "Hypertension", "No Hypertension", "T
       caption = "Table: Contingency table showing hypertension status and age group, in
 thousands.")
 ```
+:::
 
-- In first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)
-- But we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)
+::: {.column width="2%"}
+:::
+
+::: {.column width="45%"}
+-   [**Joint probability**]{style="color:#E75B5C;"}
+    
+    -   In first row, shows that in the entire population of 313,320,000, approximately 8,836,000 people were aged 18-39 years and had hypertension (~2.8%)
+
+- [**Marginal probability**]{style="color:#BF396F;"}
+    
+    - We can say that in the entire population of 313,320,000, approximately 121,042,000 people are 18-39 years (~38.6%)
+
+- [**Conditional probability**]{style="color:#367B79;"} 
+    
+    - But we can also say the first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)
+
+:::
+
+:::
+
 
 ## Poll Everywhere Question 1
 
-## Defining conditional probability
+## Probability tables
 
-- So far we have intuitively thought of conditional probability: 
+::: lob
+**We typically display joint and marginal probabilities in probability table**
+:::
+
+ 
+
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_prob <- data.frame(
+  Age_Group = c("18-39 years", "40 to 59 years", "Greater than 60 years", "Total"),
+  Hypertension = c(0.0282, 0.1344, 0.1274, 0.2900),
+  No_Hypertension = c(0.3581, 0.2830, 0.0689, 0.7100),
+  Total = c(0.3863, 0.4174, 0.1963, 1)
+)
+
+# Generate table using kable
+kable(hyp_prob, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Probability table summarizing hypertension status and age group.")
+```
+
+- [**Joint probability**]{style="color:#E75B5C;"}: intersection of row and column
+    
+- [**Marginal probability**]{style="color:#BF396F;"}: row or column total
+
+## Let's go back to conditional probability
+
+- So far we have intuitively thought of conditional probability and used the **contingency table**: 
   - The first row shows that of 121,042,000 people who are 18-39 years, 8,836,000 people had hypertension (~7.3%)
 - We got this from: $$P(\text{hypertension} | \text{18-39 years old}) = \dfrac{8,836,000}{121,042,000} = 0.073$$
   - "$\text{hypertension} | \text{18-39 years old}$" reads as "hypertension given 18-39 years old"
+  
+ 
+
+::: lob
+Can we calculate the conditional probability from the **probability table**?
+:::
+
+# Learning Objectives
+
+1.  Recognize joint, marginal, and conditional probabilities in contingency and probability tables
+
+::: lob
+2. Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes' theorem)
+:::
+
+3. Apply probability properties to solve a world problem on positive predictive value (PPV)
 
 ## We can define conditional probability more mathematically
 
@@ -211,6 +298,7 @@ $$P(A|B) =P(A) \text{ and } P(B|A) = P(B)$$
 :::
 :::
 
+## Poll Everywhere Question 2
 
 ## Bayes' Theorem (Section 2.2.5)
 
@@ -229,7 +317,15 @@ This also translates to: $$P(A | B) =
 {P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c) }$$ 
 because of the **Law of Total Probability**: $$\begin{aligned}P(B) = & P(B \cap A) + P(B \cap A^C) \\ = &P(B | A)P(A)+ P(B|A^C)P(A^C) \end{aligned}$$
 
-# Learning Objective
+# Learning Objectives
+
+1.  Recognize joint, marginal, and conditional probabilities in contingency and probability tables
+
+2. Mathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes' theorem)
+
+::: lob
+3. Apply probability properties to solve a world problem on positive predictive value (PPV)
+:::
 
 ## Example: How accurate is rapid testing for COVID-19? (1/n)
 
@@ -253,9 +349,22 @@ Suppose you take the iHealth® rapid test.
 
 From the iHealth® website <https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details>:
 
+## Some specialized terminology in diagnostic tests
+
+Calculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology
+
+- The **sensitivity** of a test is the probability of a positive test result
+when disease is present, such as a positive mammogram when a patient has breast cancer.
+- The **specificity** of a test is the probability of a negative test result when disease is absent
+- The probability of disease in a population is referred to as the **prevalence**. 
+- With specificity and sensitivity information for a particular test, along with disease prevalence, the **positive predictive value (PPV)** can be calculated: the probability that disease is present when a test result is positive.
+- Similarly, the **negative predictive value** is the probability that disease is absent when test results are negative
+
+## Poll Everywhere Question 3
+
 ## General steps for probability word problems
 
-1. Define the events in the problem
+1. Define the events in the problem and draw a Venn Diagram
 
 2. Translate the words and numbers into probability statements
 
@@ -394,15 +503,3 @@ How accurate is rapid testing for COVID-19?
 
 **Step 5:** Calculate answer
 
-## Some specialized terminology in diagnostic tests
-
-Calculating probabilities for diagnostic tests is done so often in medicine that the topic has some specialized terminology
-
-- The **sensitivity** of a test is the probability of a positive test result
-when disease is present, such as a positive mammogram when a patient has breast cancer.
-- The **specificity** of a test is the probability of a negative test result when disease is absent
-- The probability of disease in a population is referred to as the **prevalence**. 
-- With specificity and sensitivity information for a particular test, along with disease prevalence, the **positive predictive value (PPV)** can be calculated: the probability that disease is present when a test result is positive.
-- Similarly, the **negative predictive value** is the probability that disease is absent when test results are negative
-
-## Poll Everywhere Question
