@@ -1,7 +1,6 @@
 ---
 title: "Muddy Points"
-subtitle: "Lesson 1: Introduction to R"
-date: "09/30/2024"
+date: "10/7/2024"
 date-modified: "today"
 format: 
   html:
@@ -10,3 +9,14 @@ editor_options:
   chunk_output_type: console
 ---
 
+### 1. Disjoint vs. Independent Events
+
+[Here is a pretty good video](https://www.youtube.com/watch?v=aVqmWW3xmdU&ab_channel=AceTutors) breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.
+
+- [And here's a another good video!](https://www.youtube.com/watch?v=L5tLN1PP9OI&ab_channel=zedstatistics)
+
+### 2. How do I know if two events are independent?
+
+My main piece of advice for independence is to rely on the math to show it, not logic! Don't go into a problem thinking "Logically, these two events are independent." If the problem does not say "Assume independence," then we need to show it mathematically. 
+
+Same goes with the definition of independence. When we say "knowing the outcome of one provides no information about the outcome of the other," we once again need to show this mathematically, not just using logic. We will discuss this in Lesson 4: Conditional Probability, where we translate the previous statement to $$P(A) = P(A|B)$$ And we need to show this mathematically!

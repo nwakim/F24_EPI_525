@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-09-30">
+<meta name="dcterms.date" content="2024-10-07">
 
 <title>Biostatistics 1 - Muddy Points</title>
 <style>
@@ -61,6 +61,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -112,7 +114,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#disjoint-vs.-independent-events" id="toc-disjoint-vs.-independent-events" class="nav-link active" data-scroll-target="#disjoint-vs.-independent-events">1. Disjoint vs.&nbsp;Independent Events</a></li>
+  <li><a href="#how-do-i-know-if-two-events-are-independent" id="toc-how-do-i-know-if-two-events-are-independent" class="nav-link" data-scroll-target="#how-do-i-know-if-two-events-are-independent">2. How do I know if two events are independent?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -120,7 +129,6 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Muddy Points</h1>
-<p class="subtitle lead">Lesson 1: Introduction to R</p>
 </div>
 
 
@@ -131,14 +139,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 30, 2024</p>
+      <p class="date">October 7, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 20, 2024</p>
+      <p class="date-modified">October 7, 2024</p>
     </div>
   </div>
     
@@ -147,8 +155,20 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="disjoint-vs.-independent-events" class="level3">
+<h3 class="anchored" data-anchor-id="disjoint-vs.-independent-events">1. Disjoint vs.&nbsp;Independent Events</h3>
+<p><a href="https://www.youtube.com/watch?v=aVqmWW3xmdU&amp;ab_channel=AceTutors">Here is a pretty good video</a> breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=L5tLN1PP9OI&amp;ab_channel=zedstatistics">And here’s a another good video!</a></li>
+</ul>
+</section>
+<section id="how-do-i-know-if-two-events-are-independent" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-know-if-two-events-are-independent">2. How do I know if two events are independent?</h3>
+<p>My main piece of advice for independence is to rely on the math to show it, not logic! Don’t go into a problem thinking “Logically, these two events are independent.” If the problem does not say “Assume independence,” then we need to show it mathematically.</p>
+<p>Same goes with the definition of independence. When we say “knowing the outcome of one provides no information about the outcome of the other,” we once again need to show this mathematically, not just using logic. We will discuss this in Lesson 4: Conditional Probability, where we translate the previous statement to <span class="math display">\[P(A) = P(A|B)\]</span> And we need to show this mathematically!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

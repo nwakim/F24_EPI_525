@@ -14152,5 +14152,12 @@
     "title": "R04: Reproducibility, File Organization, and Projects",
     "section": "Reproducibility",
     "text": "Reproducibility\n\nResearch data and code can reach the same results regardless of who is running the code\n\nThis can also refer to future or past you!\n\nWe want to set up our work so the entire folder can be moved around and work in its new location"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability_muddy_points.html",
+    "href": "lessons/03_Probability/03_Probability_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "1. Disjoint vs. Independent Events\nHere is a pretty good video breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.\n\nAnd here’s a another good video!\n\n\n\n2. How do I know if two events are independent?\nMy main piece of advice for independence is to rely on the math to show it, not logic! Don’t go into a problem thinking “Logically, these two events are independent.” If the problem does not say “Assume independence,” then we need to show it mathematically.\nSame goes with the definition of independence. When we say “knowing the outcome of one provides no information about the outcome of the other,” we once again need to show this mathematically, not just using logic. We will discuss this in Lesson 4: Conditional Probability, where we translate the previous statement to \\[P(A) = P(A|B)\\] And we need to show this mathematically!"
   }
 ]
