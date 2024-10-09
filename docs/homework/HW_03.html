@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Your name here - update this!!!!">
-<meta name="dcterms.date" content="2024-10-25">
 
 <title>Biostatistics 1 - Homework 3</title>
 <style>
@@ -4499,20 +4498,13 @@ vertical-align: -.125em;
   <li><a href="#directions" id="toc-directions" class="nav-link active" data-scroll-target="#directions">Directions</a></li>
   <li><a href="#book-exercises" id="toc-book-exercises" class="nav-link" data-scroll-target="#book-exercises">Book exercises</a>
   <ul class="collapse">
-  <li><a href="#baggage-fees" id="toc-baggage-fees" class="nav-link" data-scroll-target="#baggage-fees">3.4 Baggage fees</a></li>
-  <li><a href="#gull-clutch-size" id="toc-gull-clutch-size" class="nav-link" data-scroll-target="#gull-clutch-size">3.5 Gull clutch size</a>
-  <ul class="collapse">
-  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
-  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
-  </ul></li>
+  <li><a href="#gull-clutch-size" id="toc-gull-clutch-size" class="nav-link" data-scroll-target="#gull-clutch-size">3.5 Gull clutch size</a></li>
   <li><a href="#scooping-ice-cream" id="toc-scooping-ice-cream" class="nav-link" data-scroll-target="#scooping-ice-cream">3.6 Scooping ice cream</a></li>
   <li><a href="#chickenpox-part-i." id="toc-chickenpox-part-i." class="nav-link" data-scroll-target="#chickenpox-part-i.">3.8 Chickenpox, Part I.</a></li>
   <li><a href="#chickenpox-part-ii." id="toc-chickenpox-part-ii." class="nav-link" data-scroll-target="#chickenpox-part-ii.">3.10 Chickenpox, Part II.</a></li>
-  <li><a href="#instructions-for-normal-probability-exercises" id="toc-instructions-for-normal-probability-exercises" class="nav-link" data-scroll-target="#instructions-for-normal-probability-exercises">!!! Instructions for Normal probability exercises !!!</a></li>
   <li><a href="#area-under-the-curve-part-ii" id="toc-area-under-the-curve-part-ii" class="nav-link" data-scroll-target="#area-under-the-curve-part-ii">3.20 Area under the curve, Part II</a></li>
   <li><a href="#triathlon-times" id="toc-triathlon-times" class="nav-link" data-scroll-target="#triathlon-times">3.22 Triathlon times</a></li>
   <li><a href="#arsenic-poisoning" id="toc-arsenic-poisoning" class="nav-link" data-scroll-target="#arsenic-poisoning">3.28 Arsenic poisoning</a></li>
-  <li><a href="#find-the-sd" id="toc-find-the-sd" class="nav-link" data-scroll-target="#find-the-sd">3.30 Find the SD</a></li>
   <li><a href="#chickenpox-part-iii" id="toc-chickenpox-part-iii" class="nav-link" data-scroll-target="#chickenpox-part-iii">3.32 Chickenpox, Part III</a></li>
   <li><a href="#stenographers-typos" id="toc-stenographers-typos" class="nav-link" data-scroll-target="#stenographers-typos">3.38 Stenographer’s typos</a></li>
   <li><a href="#osteosarcoma-in-nyc" id="toc-osteosarcoma-in-nyc" class="nav-link" data-scroll-target="#osteosarcoma-in-nyc">3.40 Osteosarcoma in NYC</a></li>
@@ -4540,12 +4532,6 @@ vertical-align: -.125em;
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 25, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -4554,9 +4540,10 @@ vertical-align: -.125em;
 </header>
 
 <p><strong>Due 10/25/24</strong></p>
-<p>Download the .qmd file for this assignment from <a href="https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd">Github</a>.</p>
 <section id="directions" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="directions">Directions</h2>
+<p><a href="https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508">Please turn in this homework on Sakai.</a> Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.</p>
+<p>You can download the .qmd file for this assignment from <a href="https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd">Github</a> if you want to work in a Quarto doc.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -4568,48 +4555,33 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>The non-R exercises (see sections <code>Book exercises</code> and <code>Non-book exercise</code>) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
+<li>The non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
 <ul>
 <li><em>Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.</em></li>
+<li>You can also have all your R code together at the end of your homework file</li>
 </ul></li>
 <li>If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.</li>
 </ul>
 </div>
 </div>
-<ul>
-<li>Please upload your homework to Sakai. <strong>Upload both your .qmd code file and the rendered .html file</strong>.</li>
-<li>For each question, make sure to include all code and resulting output in the html file to support your answers.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+</section>
+<section id="book-exercises" class="level1 unnumbered">
+<h1 class="unnumbered">Book exercises</h1>
+<section id="gull-clutch-size" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="gull-clutch-size">3.5 Gull clutch size</h2>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>It is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.</p>
+<p>Note that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is <em>not</em> correct, as a result of the error in the work for part (a).</p>
 </div>
 </div>
-</section>
-<section id="book-exercises" class="level1 unnumbered">
-<h1 class="unnumbered">Book exercises</h1>
-<section id="baggage-fees" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="baggage-fees">3.4 Baggage fees</h2>
-</section>
-<section id="gull-clutch-size" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="gull-clutch-size">3.5 Gull clutch size</h2>
-<p>Review the solution in the back of the book for exercise 3.5.</p>
-<section id="a" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="a">(a)</h3>
-<p>For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.</p>
-</section>
-<section id="b" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="b">(b)</h3>
-<p>For part (b), the answer is <em>not</em> correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation.</p>
-</section>
 </section>
 <section id="scooping-ice-cream" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="scooping-ice-cream">3.6 Scooping ice cream</h2>
@@ -4624,8 +4596,8 @@ Tip
 <h2 class="unnumbered anchored" data-anchor-id="chickenpox-part-ii.">3.10 Chickenpox, Part II.</h2>
 <p>For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.</p>
 </section>
-<section id="instructions-for-normal-probability-exercises" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="instructions-for-normal-probability-exercises">!!! Instructions for Normal probability exercises !!!</h2>
+<section id="area-under-the-curve-part-ii" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="area-under-the-curve-part-ii">3.20 Area under the curve, Part II</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -4636,32 +4608,19 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Additional Instructions - IMPORTANT!!!</p>
+<p>For this problem:</p>
 <ul>
-<li>For <strong>ALL</strong> normal distribution exercises:
-<ul>
-<li>make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.</li>
-<li>calculate probabilities using <strong>both</strong>
-<ul>
-<li>z-table</li>
-<li>R</li>
-</ul></li>
-</ul></li>
+<li>Make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.</li>
+<li>Calculate probabilities using R</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="area-under-the-curve-part-ii" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="area-under-the-curve-part-ii">3.20 Area under the curve, Part II</h2>
 </section>
 <section id="triathlon-times" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="triathlon-times">3.22 Triathlon times</h2>
 </section>
 <section id="arsenic-poisoning" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="arsenic-poisoning">3.28 Arsenic poisoning</h2>
-</section>
-<section id="find-the-sd" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="find-the-sd">3.30 Find the SD</h2>
 </section>
 <section id="chickenpox-part-iii" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="chickenpox-part-iii">3.32 Chickenpox, Part III</h2>

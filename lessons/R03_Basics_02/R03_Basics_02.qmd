@@ -408,6 +408,58 @@ head(iris, 3)
 tail(iris, 2)
 ```
 
+## The `$`
+
+- Suppose we want to single out the column of petal width values.
+- One way to do this is to use the `$`
+    * `DatSetName$VariableName`
+
+```{r}
+iris$Petal.Width
+```
+
+
+
+## Example using the `$`
+
+The `$` is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.
+
+\
+
+```{r}
+mean(iris$Petal.Width)
+sd(iris$Petal.Width)
+median(iris$Petal.Width)
+```
+
+
+
+## Inline code
+
+* With markdown you can also report __R code output inline__ with the text instead of using a chunk.
+
+::: columns
+::: {.column width="50%"}
+**Text in editor:**
+
+![](../img_slides/screenshot_code_inline_petalwidth.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+**Output:** 
+
+The mean petal width for all 3 species combined is `r round(mean(iris$Petal.Width),1)` 
+(SD = `r round(sd(iris$Petal.Width),1)`) cm.
+
+:::
+:::
+
+- Reporting summary statistics this way in a report, makes the numbers computationally reproducible.
+- For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.
+
+
+
 ## Some sources for useful base R commands
 
 -   <https://sites.calvin.edu/scofield/courses/m143/materials/RcmdsFromClass.pdf>

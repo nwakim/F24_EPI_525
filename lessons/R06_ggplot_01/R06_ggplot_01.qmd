@@ -1,0 +1,583 @@
+---
+title: "R06: `ggplot2`, Part 1"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/16/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R06 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=20))  # set global text size for ggplots
+```
+
+## From last time: R Packages
+
+A good analogy for R packages is that they are like apps you can download onto a mobile phone:
+
+![[ModernDive Figure 1.4](https://moderndive.netlify.com/1-getting-started.html#packages)](../img_slides/R_vs_R_packages.png){fig-align="center"}
+
+## From last time: Install the packages listed below
+
+::::: columns
+::: column
+-   `knitr`
+    -   this might actually already be installed
+    -   check your packages list
+-   `tidyverse`
+    -   this is actually a bundle of packages
+    -   *Warning: it will take a while to install!!!*
+    -   see more info at <https://tidyverse.tidyverse.org/>
+-   `rstatix`
+    -   for summary statistics of a dataset
+-   `janitor`
+    -   for cleaning and exploring data
+:::
+
+::: column
+-   `ggridges`
+    -   for creating ridgeline plots
+-   `devtools`
+    -   used to create R packages
+    -   for our purposes, needed to install some packages
+-   `oi_biostat_data`
+    -   this package is on github
+    -   **see the next slide for directions on how to install `oi_biostat_data`**
+-   `here`
+    -   More info in slides ahead
+:::
+:::::
+
+## From last time: Load packages with `library()` command
+
+-   Tip: **at the top of your Qmd file,** create a chunk that loads all of the R packages you want to use in that file.
+
+-   Use the `library()` command to load each required package.
+
+    -   Packages need to be reloaded *every* time you open Rstudio.
+    -   `library()` commands to load needed packages *must* be in the Qmd file
+
+```{r}
+# run these every time you open Rstudio
+library(tidyverse) # contains ggplot2    
+library(oibiostat)
+library(ggridges)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary) # NEW!!
+```
+
+-   You can check whether a package has been loaded or not
+    -   by looking at the Packages tab and
+    -   seeing whether it has been checked off or not
+
+## Introduction to `ggplot2`
+
+![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/horst_ggplot2_exploratory.png){fig-align="center"}
+
+## `ggplot2` in tidyverse
+
+::: columns
+::: {.column width="40%"}
+![](../img_slides/ggplot2-part-of-tidyverse.png)
+:::
+
+::: {.column width="60%"}
+-   We talked about this in our review notes
+
+    -   I want to revisit it: always helps to have more examples!
+    -   This example is closer to the multivariable work we'll do in this class!
+
+ 
+
+-   **ggplot2** is tidyverse's data visualization package
+
+ 
+
+-   The `gg` in "ggplot2" stands for Grammar of Graphics
+
+ 
+
+-   It is inspired by the book **Grammar of Graphics** by Leland Wilkinson
+:::
+:::
+
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
+
+## Case Study Description
+
+-   In the US, individuals with developmental disabilities typically receive services and support from state governments.
+
+    -   California allocates funds to developmentally disabled residents through the *Department of Developmental Services (DDS)*
+    -   Recipients of DDS funds are referred to as "consumers."
+
+-   Dataset `dds.discr`
+
+    -   sample of 1,000 DDS consumers (out of a total of \~ 250,000)
+    -   data include [**age, gender, race/ethnicity, and annual DDS financial support per consumer**]{style="color:green"}
+
+-   **Previous research**
+
+    -   Researchers examined expenditures on consumers by ethnicity
+    -   Found that the mean annual expenditure on Hispanics was less than that on White non-Hispanics.
+
+-   Result: an allegation of ethnic discrimination was brought against the California DDS.
+
+-   **Question: Are the data sufficient evidence of ethnic discrimination?**
+
+-   See Section 1.7.1 in the textbook for more details
+
+## Load `dds.discr` dataset from `oibiostat` package
+
+-   The textbook's datasets are in the R package `oibiostat`
+
+-   Make sure the `oibiostat` package is installed before running the code below.
+
+-   Load the `oibiostat` package and the dataset `dds.discr`
+
+[**the code below needs to be run *every time* you restart R or render a Qmd file**]{style="color:darkorange"}
+
+```{r}
+library(oibiostat)
+data("dds.discr")
+```
+
+-   After loading the dataset `dds.discr` using `data("dds.discr")`, you will see `dds.discr` in the Data list of the Environment window.
+
+## `glimpse()`
+
+-   We previously used the base R structure command `str()` to get information about variable types in a dataset (in R03: R basics part 2)
+-   Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types.
+-   `glimpse()` tends to have nicer output for `tibbles` than `str()`
+
+```{r}
+library(tidyverse)
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+## Some things to note on this dataset
+
+```{r}
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+- This happens in older datasets (and honestly some newer ones): gender and sex get conflated
+  - I try to catch these issues before sharing datasets with you, but when we load datasets directly from the `oibiostat` package, I can't make these changes
+  - If you are unfamiliar with the differences, please see [this NIH site on sex and gender](https://orwh.od.nih.gov/sex-gender)
+- Also, race and ethnicity can be mislabeled
+  - "White not hispanic" combines race and ethnicity
+  - If you are unfamiliar with the differences, please see [this APA site on race and ethnicity](https://www.apa.org/topics/race-ethnicity)
+
+## `rename()`: one of the first things I usually do
+
+- I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)
+
+ 
+
+```{r}
+dds.discr1 = dds.discr %>% 
+  rename(sex_MF = gender, 
+         r_e = ethnicity)
+
+glimpse(dds.discr1)
+```
+
+# Visualize numerical variables with `ggplot2`
+
+::::: columns
+::: {.column width="40%"}
+![[ggplot](https://ggplot2.tidyverse.org/index.html)](../img_slides/ggplotlogo.png){fig-align="center" height="400"}
+:::
+
+::: {.column width="60%"}
+![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/ggplot2_masterpiece.png){fig-align="center" height="400"}
+:::
+:::::
+
+## Basics of a ggplot
+
+![](../img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
+
+## Grammar of ggplot2
+
+![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](../img_slides/khealy_ggplot1.png){fig-align="center"}
+
+## Histograms
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr1, 
+       aes(x = expenditures)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Histograms showing proportions
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4" 
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density)))  
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4-6"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density))) +  
+  scale_y_continuous(labels =   
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Density plots
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_density() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Boxplots
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) + 
+  geom_boxplot() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr1, 
+       aes(y = age)) + 
+  geom_boxplot() 
+```
+:::
+:::::
+
+## Boxplots: 5 number summary visualization
+
+<!-- ![](../img_slides/boxplot_no_outliers.png) -->
+
+No outliers:
+
+![https://www.simplypsychology.org/boxplots.html](../img_slides/boxplot_no_outliers.png){fig-align="center" width="821"}
+
+With outliers:
+
+![https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51](../img_slides/boxplot_w_outliers.png){fig-align="center" width="796"}
+
+# Categorical data
+
+## Barplots
+
+::::: columns
+::: {.column width="50%"}
+Counts (below) vs.\
+percentages (right)
+
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = r_e)) +
+  geom_bar() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "3-6"
+ggplot(data = dds.discr1, 
+       aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop),  
+               group = 1)) + 
+  scale_y_continuous(labels =  
+      scales::percent_format())  
+```
+:::
+:::::
+
+# Summarizing categorical data and some data wrangling
+
+<!-- ::: {layout-ncol=3} -->
+
+:::::: columns
+::: {.column width="33%"}
+![[dplyr](https://dplyr.tidyverse.org/)](../img_slides/hex-dplyr.png){fig-align="center" height="300"}
+:::
+
+::: {.column width="33%"}
+![[magrittr](https://magrittr.tidyverse.org/)](../img_slides/magrittr.png){fig-align="center" height="300"}
+:::
+
+::: {.column width="33%"}
+![[janitor](https://cran.r-project.org/web/packages/janitor/readme/README.html)](../img_slides/janitor_logo_small.png){fig-align="center" height="300"}
+:::
+::::::
+
+## Frequency tables: `count()`
+
+::::: columns
+::: {.column width="50%"}
+-   `count` is from the `dplyr` package
+-   the output is a long tibble, and not a "nice" table
+
+```{r}
+dds.discr1 %>% count(r_e)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+dds.discr1 %>% 
+  count(r_e, age.cohort)
+```
+:::
+:::::
+
+## How to use the pipe `%>%`
+
+The pipe operator `%>%` strings together commands to be performed sequentially
+
+```{r}
+dds.discr1 %>% head(n=3)      # pronounce %>% as "then"
+```
+
+-   Always *first list the tibble* that the commands are being applied to
+-   Can use **multiple pipes** to run multiple commands in sequence
+    -   What does the following code do?
+
+```{r}
+#| eval: false
+dds.discr1 %>% head(n=3) %>% summary()
+```
+
+## Frequency tables: `janitor` package's `tabyl` function
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| code-line-numbers: "3"
+# default table
+dds.discr1 %>% 
+  tabyl(r_e)  
+```
+:::
+
+::: {.column width="50%"}
+`adorn_` your table!
+
+```{r}
+#| code-line-numbers: "3-4"
+dds.discr1 %>% 
+  tabyl(r_e) %>%
+  adorn_totals("row") %>% 
+  adorn_pct_formatting(digits=2)  
+```
+:::
+:::::
+
+## Relative frequency table
+
+::::: columns
+::: {.column width="40%"}
+-   A **relative frequency** table shows **proportions (or percentages)** instead of counts
+
+-   To the right I removed (deselected) the counts column (`n`) to create a relative frequency table
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "4-5"
+dds.discr1 %>% 
+  tabyl(r_e) %>%
+  adorn_totals("row") %>% 
+  adorn_pct_formatting(digits=2) %>%   
+  select(-n) 
+```
+:::
+:::::
+
+## Contingency tables (two-way tables)
+
+::::: columns
+::: {.column width="40%"}
+-   **Contingency tables** summarize data for two categorical variables
+    -   with each value in the table representing the number of times\
+        a particular combination of outcomes occurs
+-   **Row & column totals**\
+    are sometimes called **marginal totals**
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "2-3"
+dds.discr1 %>% 
+  tabyl(r_e, sex_MF) %>%    
+  adorn_totals(c("row", "col"))    
+```
+:::
+:::::
+
+## Contingency tables with percentages
+
+```{r}
+#| code-line-numbers: "4-6"
+dds.discr1 %>% 
+  tabyl(r_e, age.cohort) %>%
+  adorn_totals(c("row")) %>%
+  adorn_percentages("row") %>%   
+  adorn_pct_formatting(digits=0) %>%    
+  adorn_ns()    
+```
+
+# Summarizing numeric data
+
+## Mean annual DDS expenditures by race/ethnicity
+
+::::: columns
+::: {.column width="45%"}
+```{r}
+mean(dds.discr1$expenditures)
+
+dds.discr1 %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+
+::: {.column width="55%"}
+```{r}
+#| code-line-numbers: "2"
+dds.discr1 %>% 
+  group_by(r_e) %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+:::::
+
+## `get_summary_stats()` from `rstatix` package
+
+```{r}
+dds.discr1 %>% get_summary_stats()
+
+dds.discr1 %>% 
+  group_by(r_e) %>%
+  get_summary_stats(expenditures, type = "common")
+```
+
+## How to force all output to be shown? (1/2)
+
+Use `kable()` from the `knitr` package.
+
+```{r}
+dds.discr1 %>% get_summary_stats() %>% kable()
+```
+
+## How to force all output to be shown? `knitr` (2/2)
+
+Use `kable()` from the `knitr` package.
+
+```{r}
+dds.discr1 %>% 
+  group_by(r_e) %>%
+  get_summary_stats(expenditures, type = "common") %>% 
+  kable()
+```

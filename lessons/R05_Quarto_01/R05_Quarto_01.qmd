@@ -1,10 +1,9 @@
 ---
-title: "R3: Quarto in R"
+title: "R05: Quarto in R"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
-date: "10/9/2024"
-categories: ["Week 1"]
+date: "10/14/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -19,137 +18,291 @@ format:
 execute:
   echo: true
   freeze: auto
+editor_options: 
+  chunk_output_type: console
 ---
+
+```{r}
+#| echo: false
+
+library(here)
+```
 
 # Saving your work with Quarto
 
-![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_rmarkdown_wizards_quarto.png){fig-align="center"}
+![[Artwork by \@allison_horst](https://allisonhorst.com/r-packages-functions)](../img_slides/horst_rmarkdown_wizards_quarto.png){fig-align="center"}
 
 ## Example: creating an html file
 
-::: columns
-::: {.column width="50%"}
-.qmd file
-![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+:::::: columns
+::: {.column width="48%"}
+### `.qmd` file
+
+![](../img_slides/01_qmd_screenshot.png){fig-align="center" width="696"}
 :::
 
-::: {.column width="50%"}
-html output  
-![](../img_slides/default_quarto_html.png){fig-align="center"}
-:::
+::: {.column width="4%"}
 :::
 
+::: {.column width="48%"}
+### `.html` output
+
+![](../img_slides/default_quarto_html.png){fig-align="center" width="718"}
+:::
+::::::
 
 ## Quarto = `.qmd` file = Code + text
 
-`knitr` is a package that converts `.qmd` files containing code + markdown syntax to a plain text `.md` markdown file, and then to other formats (html, pdf, Word, etc)
+[We can take `.qmd` files containing code (R and other types) + plain text (like we might make in Word)]{style="color:#BF396F"}, and then to it [other formats (html, pdf, Word, etc) that nicely display the code and text!]{style="color:#367B79"}
 
 ![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../img_slides/horst_quarto_schematic2.png){fig-align="center"}
-
-
-
-
-
-
 
 # Basic Quarto example
 
 ![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](../img_slides/horst_quarto_moon_penguins.png){fig-align="center"}
 
+## Before we get further in `.qmd` files
 
-##  1. Create a Quarto file (`.qmd`) 
+-   Let's make sure we all have Rstudio open
+-   And then open your `EPI_525_F24` project!
 
+ 
+
+### Steps for making a Quarto file
+
+1.  Create a Quarto file (`.qmd`)
+2.  Edit a Quarto file (`.qmd`)
+3.  Save the Quarto file (`.qmd`)
+4.  Create html file
+
+## 1. Create a Quarto file (`.qmd`)
+
+::::: columns
+::: {.column width="50%"}
 **Two options:**
 
-1. click on File $\rightarrow$ New File $\rightarrow$ Quarto Document...$\rightarrow$ OK, 
-1. or in upper left corner of RStudio click on ![](../img_slides/green_plus_create_file.png){width="70"}
-$\rightarrow$ 
-![](../img_slides/select_quarto_option.png){width="250"}
+1.  click on File $\rightarrow$ New File $\rightarrow$ Quarto Document...$\rightarrow$ OK,
+2.  or in upper left corner of RStudio click on ![](../img_slides/green_plus_create_file.png){width="92"} $\rightarrow$ ![](../img_slides/select_quarto_option.png){width="333"}
 
-
-::: columns
-::: {.column width="50%"}
 **Pop-up window selections:**
 
-* Enter a title and your name
-* Select `HTML` output format (default)
-* Engine: select `Knitr`
-* Editor: Select `Use visual markdown editor`
-* Click `Create`
+-   Enter a title and your name
+-   Select `HTML` output format (default)
+-   Engine: select `Knitr`
+-   Editor: Select `Use visual markdown editor`
+-   Click `Create`
 :::
 
 ::: {.column width="50%"}
-
 ![](../img_slides/01_qmd_screenshot_popup.png)
 :::
+:::::
+
+## 2. Edit a Quarto file (`.qmd`)
+
+::::: columns
+::: {.column width="50%"}
+-   After clicking on `Create`, you should then see the following in your editor window:
+
+ 
+
+-   You can try editing the text or changing the code!
+    -   Make sure you are only editing at the "Quarto" header and below
 :::
 
-##  2. Create a Quarto file (`.qmd`) 
-   
-* After clicking on `Create`, you should then see the following in your editor window:
-
+::: {.column width="50%"}
 ![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+:::
+:::::
 
-## 3. Save the Quarto file (`.qmd`) 
+## 3. Save the Quarto file (`.qmd`)
 
-* __Save the file__ by 
-    + selecting `File -> Save`, 
-    + or clicking on ![](../img_slides/01_Script_Save.png){width="33" height="24"} (towards the left above the scripting window),
-    + or keyboard shortcut
-        * PC:   _Ctrl + s_
-        * Mac:   _Command + s_
-        
+-   **Save the file** by
+    -   selecting `File -> Save`,
+    -   or clicking on ![](../img_slides/01_Script_Save.png){width="51" height="43"} (towards the left above the scripting window),
+    -   or keyboard shortcut
+        -   PC: *Ctrl + s*
+        -   Mac: *Command + s*
+-   You will need to specify (Use what we learned in last lesson!!)
+    -   a **filename** to save the file as
+        -   ALWAYS use **.qmd** as the filename extension for Quarto files
+    -   the **folder** to save the file in
+    -   Hint: this will probability go under "R_activities" and with a name like "R05_Quarto-work.qmd"
 
-* You will need to specify
-    + a __filename__ to save the file as
-        - ALWAYS use __.qmd__ as the filename extension for Quarto files
-    + the __folder__ to save the file in
+## 4. Create html file
 
-
-## 4. Create html file 
-
-We create the html file by **rendering** the .qmd file.  
+We create the html file by **rendering** the .qmd file.
 
 Two options:
 
-1. click on the Render icon ![](../img_slides/render_icon.png) at the top of the editor window, 
-1. or use keyboard shortcuts
-    * Mac: *Command+Shift+K* 
-    * PC:  *Ctrl+Shift+K*
+1.  click on the Render icon ![](../img_slides/render_icon.png) at the top of the editor window,
+2.  or use keyboard shortcuts
+    -   Mac: *Command+Shift+K*
+    -   PC: *Ctrl+Shift+K*
 
-* A new window will open with the html output.
-* You will now see both .qmd and .html files in the folder where you saved the .qmd file.
+-   A new window will open with the html output.
+-   You will now see both .qmd and .html files in the folder where you saved the .qmd file.
 
-
-:::{.callout-note}
-* The template .qmd file that RStudio creates will render to an html file by default.
-* The output format can be changed to create a Word doc, pdf, slides, etc.
+::: callout-note
+-   The template .qmd file that RStudio creates will render to an html file by default.
+-   The output format can be changed to create a Word doc, pdf, slides, etc.
 :::
 
-## .qmd file vs. its html output 
+## Tip: changing the render view
 
-::: columns
-::: {.column width="50%"}
-.qmd file
-![](../img_slides/01_qmd_screenshot.png){fig-align="center"}
+- You can change where your `.html` file pops up
+- I have it set to open in the "Viewer Pane" in the bottom right
+
+ 
+
+![](../img_slides/R05_render_view.png)
+
+## `.qmd` vs. its `.html` output
+
+:::::: columns
+::: {.column width="48%"}
+### `.qmd` file
+
+![](../img_slides/01_qmd_screenshot.png){fig-align="center" width="696"}
 :::
 
-::: {.column width="50%"}
-html output  
-![](../img_slides/default_quarto_html.png){fig-align="center"}
-
-:::
+::: {.column width="4%"}
 :::
 
-# Importing data
+::: {.column width="48%"}
+### `.html` output
 
-# Packages
+![](../img_slides/default_quarto_html.png){fig-align="center" width="718"}
+:::
+::::::
+
+# R Packages
+
+<!-- background-image: url(img/tidyverse_celestial.jpg) -->
+<!-- background-size: cover -->
+
+![](../img_slides/tidyverse_celestial.jpg){fig-align="center"}
+
+## R Packages
+
+A good analogy for R packages is that they are like apps you can download onto a mobile phone:
+
+![[ModernDive Figure 1.4](https://moderndive.netlify.com/1-getting-started.html#packages)](../img_slides/R_vs_R_packages.png){fig-align="center"}
+
+- Packages contain additional functions and data
+
 
 ## Installing packages
 
-## `here` package
+Two options to install packages:
+
+1. `install.packages()` _or_
+2. The "Packages" tab in Files/Plots/Packages/Help/Viewer window
+
+
+```{r}
+#| eval: false
+
+install.packages("dplyr")   # only do this ONCE, use quotes
+```
+
+:::columns
+::: {.column width="50%"}
++ **Only install packages once** *(unless you want to update them)*
++ Installed from [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) = package mothership
+
+:::
+
+::: {.column width="50%"}
+![](../img_slides/screenshot_packages_window.png){fig-align="center"}
+:::
+:::
+
+
+## Video on installing packages
+
+* Danielle Navarro’s YouTube video on __*Installing and loading R packages*__: [https://www.youtube.com/watch?v=kpHZVyDvEhQ](https://www.youtube.com/watch?v=kpHZVyDvEhQ)
+  - If you want to get more information on packages
+
+
+## Load packages with `library()` command
+
+- Tip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file. 
+- Use the `library()` command to load each required package.
+- Packages need to be reloaded *every* time you open Rstudio. 
+
+```{r}
+library(dplyr)    # run this every time you open Rstudio
+```
+
+- You can use a function without loading the package with `PackageName::CommandName`
+
+```{r}
+dplyr::arrange(iris, Petal.Width)   # what does arrange do?
+```
+
+
+
+
+## Install the packages listed below
 
 ::: columns
+::: column
+* `knitr` 
+  - this might actually already be installed
+  - check your packages list
+* `tidyverse` 
+  - this is actually a bundle of packages
+  - *Warning: it will take a while to install!!!*
+  - see more info at [https://tidyverse.tidyverse.org/](https://tidyverse.tidyverse.org/) 
+* `rstatix`
+  - for summary statistics of a dataset
+* `janitor`
+  - for cleaning and exploring data
+:::
+::: column
+* `ggridges`
+  - for creating ridgeline plots
+* `devtools` 
+  - used to create R packages
+  - for our purposes, needed to install some packages
+* `oi_biostat_data` 
+  - this package is on github 
+  - __see the next slide for directions on how to install `oi_biostat_data`__
+* `here`
+  - More info in slides ahead
+:::
+:::
+
+## Directions for installing package `oibiostat` 
+
+* The textbook's datasets are in the R package `oibiostat`
+* Explanation of code below
+  * Installation of `oibiostat` package requires first installing `devtools` package
+  * The code `devtools::install_github()` tells R to use the command `install_github()` from the `devtools` package without loading the entire package and all of its commands (which `library(devtools)` would do).
+  
+```{r}
+#| eval: false
+
+install.packages("devtools")
+devtools::install_github("OI-Biostat/oi_biostat_data", force = TRUE)
+```
+
+* After running the code above, put `#` in front of the commands so that RStudio doesn't evaluate them when rendering.
+* Now load the `oibiostat` package
+  * [the code below needs to be run _every time_ you restart R or knit an Rmd file]{style="color:darkorange"}
+
+```{r}
+library(oibiostat)
+```
+
+## `here` package
+
+![Illustration by [Allison Horst](https://github.com/allisonhorst)](../img_slides/here_pkg.png)
+
+## `here` package
+
+::::: columns
 ::: column
 -   [Good source for the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 
@@ -164,25 +317,37 @@ html output
     -   But we want it to be the main project folder
 
 -   `here` can help with that
+
+ 
+
+-   **Very important for reproducibility!!**
 :::
 
 ::: column
-![](images/paths.png){fig-align="center"}
+![](../img_slides/paths.png){fig-align="center"}
 :::
-:::
+:::::
 
-## Install `here` package
-
--   Install `here` package: you can do this in your console (not inside `.qmd` file)
-
-```{r}
-#| eval: false
-install.packages("here")
-```
+## Using `here` package
 
 -   Within your console, type `here()` and enter
 
     -   Try this with `getwd()` as well
+    
+```{r}
+library(here)
+here()
+getwd()
+```
+
+ 
+
+- `here` can be used whenever we need to access a file path in **R code**
+  - Importing data
+  - Saving output
+  - Accessing files
+
+# Importing data
 
 ## Using `here()` to load data
 
@@ -192,11 +357,12 @@ install.packages("here")
 
 ```{r}
 #| eval: false
-data = read_excel(here("./Data/CH05Q01.xls"))
-data = read_excel(here("Data", "CH05Q01.xls"))
+library(readxl)
+data = read_excel(here("./data/BodyTemperatures.xlsx"))
+data = read_excel(here("data", "BodyTemperatures.xlsx"))
 ```
 
-::: red
+::::: red
 ::: red-ttl
 Watch out when using lubridate package simultaneously
 :::
@@ -204,12 +370,16 @@ Watch out when using lubridate package simultaneously
 ::: red-cont
 Use `here::here()` if you have `lubridate` loaded within same `.qmd`. This will tell R to use the function `here()` within the `here` package instead of `lubridate`'s `here()` function. To call lubridate's function, we'd use `lubridate::here()`
 :::
-:::
+:::::
+
+## Using `here()` to load the data!
+
+- I put the dataset "BodyTemperatures.xlsx" in your student files (under Data then Lessons)
+- Go into those files and download the dataset into your personal class folder 
+  - Probably good to put it under "data"
+- Within your Quarto file, in an R code chunk, load the data!
 
 ```{r}
 #| echo: false
 countdown::countdown(5)
 ```
-
-
-

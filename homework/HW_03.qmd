@@ -2,7 +2,6 @@
 title: "Homework 3"
 subtitle: "Lessons 5-6"
 author: "Your name here - update this!!!!"
-date: "Due 10/25/24"
 format: 
   html:
     link-external-newwindow: true
@@ -24,45 +23,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Due 10/25/24**
 
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd).
-
-
 ## Directions {.unnumbered}
 
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
+
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd) if you want to work in a Quarto doc.
+
+
 :::{.callout-important}
-* The non-R exercises (see sections `Book exercises` and `Non-book exercise`) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
+* The non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
     * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand._
+    * You can also have all your R code together at the end of your homework file
 * If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
 :::
 
-* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
-* For each question, make sure to include all code and resulting output in the html file to support your answers. 
-
-:::{.callout-tip}
-It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
-:::
-
-
-
 # Book exercises {.unnumbered}
-
-## 3.4 Baggage fees {.unnumbered}
-
-
 
 ## 3.5 Gull clutch size {.unnumbered}
 
-Review the solution in the back of the book for exercise 3.5.
-
-### (a) {.unnumbered}
-
-For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.
-
-### (b) {.unnumbered}
-
-For part (b), the answer is _not_ correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation.
-
-
+::: callout-important
+Note that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is _not_ correct, as a result of the error in the work for part (a).
+:::
 
 ## 3.6 Scooping ice cream  {.unnumbered}
 
@@ -78,22 +59,14 @@ For #3.8, calculate the binomial probabilities two ways:
 
 For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
 
-
-## !!! Instructions for Normal probability exercises !!! {.unnumbered}
-
-:::{.callout-important}
-
-Additional Instructions - IMPORTANT!!!
-
-* For __ALL__ normal distribution exercises: 
-  * make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
-  * calculate probabilities using **both**
-      * z-table
-      * R
-:::
-
 ## 3.20 Area under the curve, Part II {.unnumbered}
 
+:::{.callout-important}
+For this problem:
+
+- Make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
+- Calculate probabilities using R 
+:::
 
 
 ## 3.22 Triathlon times {.unnumbered}
@@ -101,11 +74,6 @@ Additional Instructions - IMPORTANT!!!
 
 
 ## 3.28 Arsenic poisoning {.unnumbered}
-
-
-
-## 3.30 Find the SD {.unnumbered}
-
 
 
 ## 3.32 Chickenpox, Part III  {.unnumbered}

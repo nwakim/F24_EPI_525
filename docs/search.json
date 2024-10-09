@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/10\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/17\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/24\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/31\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/7\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/14\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/21\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/27\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/5\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/12\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -1957,7 +1957,7 @@
     "href": "homework/HW_02.html",
     "title": "Homework 2",
     "section": "",
-    "text": "Download the .qmd file for this assignment from Github."
+    "text": "Please turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework."
   },
   {
     "objectID": "homework/HW_02.html#directions",
@@ -2202,7 +2202,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nDue date (@11pm)\nAssignment\nAnswers\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n10/3\n\n\n\n\n\n\n1\n10/10\n\n\n\n\n\n\n2\n10/17\n\n\n\n\n\n\n3\n10/25\n\n\n\n\n\n\n4\n10/31\n\n\n\n\n\n\n5\n11/7\n\n\n\n\n\n\n6\n11/16\n\n\n\n\n\n\n7\n11/21\n\n\n\n\n\n\n8\n11/26\n\n\n\n\n\n\n9\n12/5\n\n\n\n\n\n\n10 (optional)\n12/12\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n1\n\n10/11\n\n10/20\n\n\n\n\n2\n\n10/18\n\n10/27\n\n\n\n\n3\n\n10/26\n\n11/3\n\n\n\n\n4\n\n11/1\n\n11/10\n\n\n\n\n5\n\n11/8\n\n11/17\n\n\n\n\n6\n\n11/17\n\n11/24\n\n\n\n\n7\n\n11/22\n\n12/1\n\n\n\n\n8\n\n11/29\n\n12/8\n\n\n\n\n9\n\n12/6\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#assignments",
@@ -2335,14 +2335,14 @@
     "href": "homework/HW_03.html",
     "title": "Homework 3",
     "section": "",
-    "text": "Due 10/25/24\nDownload the .qmd file for this assignment from Github."
+    "text": "Due 10/25/24"
   },
   {
     "objectID": "homework/HW_03.html#directions",
     "href": "homework/HW_03.html#directions",
     "title": "Homework 3",
     "section": "Directions",
-    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises (see sections Book exercises and Non-book exercise) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.\n\nSome problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.\n\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc.\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.\n\nSome problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.\nYou can also have all your R code together at the end of your homework file\n\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment."
   },
   {
     "objectID": "homework/HW_03.html#baggage-fees",
@@ -2356,7 +2356,7 @@
     "href": "homework/HW_03.html#gull-clutch-size",
     "title": "Homework 3",
     "section": "3.5 Gull clutch size",
-    "text": "3.5 Gull clutch size\nReview the solution in the back of the book for exercise 3.5.\n\n(a)\nFor part (a), the answer is correct, but there is an error in the work and the notation is sloppy. Correct the error and rewrite the solution with proper notation.\n\n\n(b)\nFor part (b), the answer is not correct, as a result of the error in the work with sloppy notation. Give a correct solution with proper notation."
+    "text": "3.5 Gull clutch size\n\n\n\n\n\n\nImportant\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a)."
   },
   {
     "objectID": "homework/HW_03.html#scooping-ice-cream",
@@ -4792,7 +4792,7 @@
     "href": "homework/HW_03.html#area-under-the-curve-part-ii",
     "title": "Homework 3",
     "section": "3.20 Area under the curve, Part II",
-    "text": "3.20 Area under the curve, Part II"
+    "text": "3.20 Area under the curve, Part II\n\n\n\n\n\n\nImportant\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R"
   },
   {
     "objectID": "homework/HW_03.html#triathlon-times",
@@ -7116,7 +7116,7 @@
     "href": "homework.html#homeworks",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nDue date (@11pm)\nAssignment\nAnswers\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n10/3\n\n\n\n\n\n\n1\n10/10\n\n\n\n\n\n\n2\n10/17\n\n\n\n\n\n\n3\n10/25\n\n\n\n\n\n\n4\n10/31\n\n\n\n\n\n\n5\n11/7\n\n\n\n\n\n\n6\n11/16\n\n\n\n\n\n\n7\n11/21\n\n\n\n\n\n\n8\n11/26\n\n\n\n\n\n\n9\n12/5\n\n\n\n\n\n\n10 (optional)\n12/12\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n1\n\n10/11\n\n10/20\n\n\n\n\n2\n\n10/18\n\n10/27\n\n\n\n\n3\n\n10/26\n\n11/3\n\n\n\n\n4\n\n11/1\n\n11/10\n\n\n\n\n5\n\n11/8\n\n11/17\n\n\n\n\n6\n\n11/17\n\n11/24\n\n\n\n\n7\n\n11/22\n\n12/1\n\n\n\n\n8\n\n11/29\n\n12/8\n\n\n\n\n9\n\n12/6\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#structure",
@@ -13309,79 +13309,79 @@
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#example-creating-an-html-file",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#example-creating-an-html-file",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "Example: creating an html file",
-    "text": "Example: creating an html file\n\n\n.qmd file \n\nhtml output"
+    "text": "Example: creating an html file\n\n\n.qmd file\n\n\n\n\n\n\n\n\n.html output"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#quarto-.qmd-file-code-text",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#quarto-.qmd-file-code-text",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "Quarto = .qmd file = Code + text",
-    "text": "Quarto = .qmd file = Code + text\nknitr is a package that converts .qmd files containing code + markdown syntax to a plain text .md markdown file, and then to other formats (html, pdf, Word, etc)\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+    "text": "Quarto = .qmd file = Code + text\nWe can take .qmd files containing code (R and other types) + plain text (like we might make in Word), and then to it other formats (html, pdf, Word, etc) that nicely display the code and text!\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "1. Create a Quarto file (.qmd)",
-    "text": "1. Create a Quarto file (.qmd)\nTwo options:\n\nclick on File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Quarto Document…\\(\\rightarrow\\) OK,\nor in upper left corner of RStudio click on  \\(\\rightarrow\\) \n\n\n\nPop-up window selections:\n\nEnter a title and your name\nSelect HTML output format (default)\nEngine: select Knitr\nEditor: Select Use visual markdown editor\nClick Create"
+    "text": "1. Create a Quarto file (.qmd)\n\n\nTwo options:\n\nclick on File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Quarto Document…\\(\\rightarrow\\) OK,\nor in upper left corner of RStudio click on  \\(\\rightarrow\\) \n\nPop-up window selections:\n\nEnter a title and your name\nSelect HTML output format (default)\nEngine: select Knitr\nEditor: Select Use visual markdown editor\nClick Create"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd-1",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-a-quarto-file-.qmd-1",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "2. Create a Quarto file (.qmd)",
     "text": "2. Create a Quarto file (.qmd)\n\nAfter clicking on Create, you should then see the following in your editor window:"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#save-the-quarto-file-.qmd",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#save-the-quarto-file-.qmd",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "3. Save the Quarto file (.qmd)",
-    "text": "3. Save the Quarto file (.qmd)\n\nSave the file by\n\nselecting File -&gt; Save,\nor clicking on  (towards the left above the scripting window),\nor keyboard shortcut\n\nPC: Ctrl + s\nMac: Command + s\n\n\nYou will need to specify\n\na filename to save the file as\n\nALWAYS use .qmd as the filename extension for Quarto files\n\nthe folder to save the file in"
+    "text": "3. Save the Quarto file (.qmd)\n\nSave the file by\n\nselecting File -&gt; Save,\nor clicking on  (towards the left above the scripting window),\nor keyboard shortcut\n\nPC: Ctrl + s\nMac: Command + s\n\n\nYou will need to specify (Use what we learned in last lesson!!)\n\na filename to save the file as\n\nALWAYS use .qmd as the filename extension for Quarto files\n\nthe folder to save the file in\nHint: this will probability go under “R_activities” and with a name like “R05_Quarto-work.qmd”"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-html-file",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#create-html-file",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "4. Create html file",
     "text": "4. Create html file\nWe create the html file by rendering the .qmd file.\nTwo options:\n\nclick on the Render icon  at the top of the editor window,\nor use keyboard shortcuts\n\nMac: Command+Shift+K\nPC: Ctrl+Shift+K\n\n\n\nA new window will open with the html output.\nYou will now see both .qmd and .html files in the folder where you saved the .qmd file.\n\n\n\n\n\n\n\nNote\n\n\n\nThe template .qmd file that RStudio creates will render to an html file by default.\nThe output format can be changed to create a Word doc, pdf, slides, etc."
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-file-vs.-its-html-output",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-file-vs.-its-html-output",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": ".qmd file vs. its html output",
     "text": ".qmd file vs. its html output\n\n\n.qmd file \n\nhtml output"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#installing-packages",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#installing-packages",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "Installing packages",
-    "text": "Installing packages"
+    "text": "Installing packages\nTwo options to install packages:\n\ninstall.packages() or\nThe “Packages” tab in Files/Plots/Packages/Help/Viewer window\n\n\ninstall.packages(\"dplyr\")   # only do this ONCE, use quotes\n\n\n\n\nOnly install packages once (unless you want to update them)\nInstalled from Comprehensive R Archive Network (CRAN) = package mothership"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#here-package",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#here-package",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "here package",
-    "text": "here package\n\n\n\nGood source for the here package\n\nJust substitute .Rmd with .qmd\n\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that"
+    "text": "here package\n\nIllustration by Allison Horst"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-here-package",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-here-package",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "Install here package",
-    "text": "Install here package\n\nInstall here package: you can do this in your console (not inside .qmd file)\n\n\ninstall.packages(\"here\")\n\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well"
+    "text": "Install here package\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well\n\n\n\nlibrary(here)\nhere()\n\n[1] \"/Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/F24_EPI_525/F24_EPI_525_site\"\n\ngetwd()\n\n[1] \"/Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/F24_EPI_525/F24_EPI_525_site\"\n\n\n \n\nhere can be used whenever we need to access a file path in R code\n\nImporting data"
   },
   {
     "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-data",
     "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-data",
-    "title": "R3: Quarto in R",
+    "title": "R05: Quarto in R",
     "section": "Using here() to load data",
-    "text": "Using here() to load data\n\nThe here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\ndata = read_excel(here(\"./Data/CH05Q01.xls\"))\ndata = read_excel(here(\"Data\", \"CH05Q01.xls\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR05 Slides"
+    "text": "Using here() to load data\n\nThe here() function will start at the working directory (where your .Rproj file is) and let you write out a file path for anything\nTo load the dataset in our .qmd file, we will use:\n\n\nlibrary(readxl)\ndata = read_excel(here(\"./data/BodyTemperatures.xlsx\"))\ndata = read_excel(here(\"data\", \"BodyTemperatures.xlsx\"))\n\n\n\nWatch out when using lubridate package simultaneously\n\n\nUse here::here() if you have lubridate loaded within same .qmd. This will tell R to use the function here() within the here package instead of lubridate’s here() function. To call lubridate’s function, we’d use lubridate::here()"
   },
   {
     "objectID": "lessons/R09_Quarto_02/R4_Quarto_02.html#inline-code",
@@ -13710,7 +13710,7 @@
     "href": "lessons/R09_Data_management/R6_Data_Management.html#tidy-data1",
     "title": "R6: Data Management with tidyverse",
     "section": "Tidy data1",
-    "text": "Tidy data1\n\n\n\n\n\n\nEach variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell."
+    "text": "Tidy data1\n\n\n\n\n\n\nEach variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell.\n\nSource: R for Data Science. Grolemund and Wickham."
   },
   {
     "objectID": "lessons/R09_Data_management/R6_Data_Management.html#pipe-operator-magrittr",
@@ -13920,7 +13920,7 @@
     "href": "lessons/R09_Data_management/R6_Data_Management.html#across-apply-a-function-across-multiple-columns",
     "title": "R6: Data Management with tidyverse",
     "section": "across(): apply a function across multiple columns",
-    "text": "across(): apply a function across multiple columns\n\nLike group_by(), this function is often paired with another transformation function\n\n\nI want all my integer values to have two significant figures.\n\n \n\ndds.discr6 = dds.discr2 %&gt;%\n  mutate(across(where(is.integer), signif, digits = 2))\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `across(where(is.integer), signif, digits = 2)`.\nCaused by warning:\n! The `...` argument of `across()` is deprecated as of dplyr 1.1.0.\nSupply arguments directly to `.fns` through an anonymous function instead.\n\n  # Previously\n  across(a:b, mean, na.rm = TRUE)\n\n  # Now\n  across(a:b, \\(x) mean(x, na.rm = TRUE))\n\nglimpse(dds.discr6)\n\nRows: 1,000\nColumns: 7\n$ id           &lt;dbl&gt; 10000, 10000, 10000, 11000, 11000, 11000, 11000, 11000, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;dbl&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;dbl&gt; 2100, 42000, 1500, 6400, 4400, 4600, 3900, 3900, 5000, 29…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…"
+    "text": "across(): apply a function across multiple columns\n\nLike group_by(), this function is often paired with another transformation function\n\n\nI want all my integer values to have two significant figures.\n\n \n\ndds.discr6 = dds.discr2 %&gt;%\n  mutate(across(where(is.integer), signif, digits = 2))\n\nglimpse(dds.discr6)\n\nRows: 1,000\nColumns: 7\n$ id           &lt;dbl&gt; 10000, 10000, 10000, 11000, 11000, 11000, 11000, 11000, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;dbl&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;dbl&gt; 2100, 42000, 1500, 6400, 4400, 4600, 3900, 3900, 5000, 29…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…"
   },
   {
     "objectID": "lessons/R09_Data_management/R6_Data_Management.html#dplyr-resources",
@@ -13948,7 +13948,7 @@
     "href": "lessons/R09_Data_management/R6_Data_Management.html#credit-to-mine-çetinkaya-rundel",
     "title": "R6: Data Management with tidyverse",
     "section": "Credit to Mine Çetinkaya-Rundel",
-    "text": "Credit to Mine Çetinkaya-Rundel\n\nThese notes were built from Mine’s notes\n\nMost pages and code were left as she made them\nI changed a few things to match our class\n\nPlease see her Github repository for the original notes"
+    "text": "Credit to Mine Çetinkaya-Rundel\n\nThese notes were built from Mine’s notes\n\nMost pages and code were left as she made them\nI changed a few things to match our class\n\nPlease see her Github repository for the original notes\n\n\n\nR6 Slides"
   },
   {
     "objectID": "lessons/R09_Data_management/R6_Data_Management.html#footnotes",
@@ -14159,5 +14159,1034 @@
     "title": "Muddy Points",
     "section": "",
     "text": "1. Disjoint vs. Independent Events\nHere is a pretty good video breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.\n\nAnd here’s a another good video!\n\n\n\n2. How do I know if two events are independent?\nMy main piece of advice for independence is to rely on the math to show it, not logic! Don’t go into a problem thinking “Logically, these two events are independent.” If the problem does not say “Assume independence,” then we need to show it mathematically.\nSame goes with the definition of independence. When we say “knowing the outcome of one provides no information about the outcome of the other,” we once again need to show this mathematically, not just using logic. We will discuss this in Lesson 4: Conditional Probability, where we translate the previous statement to \\[P(A) = P(A|B)\\] And we need to show this mathematically!"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_key_info.html",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Flyer on the EPI/BSTA tutors:\n\nMake an appointment\n\nOffice hours after class with Miyuki in 620M!\nQuestion from student: Confused about the phrasing of the variables in question 1.4 of our homework. \n\n“Patients were scored on quality of life, activity, asthma symptoms, and medication reduction on a scale from 0 to 10.”\nAre all variables to be assumed to be on a scale from 0 to 10? \n\nAnswer: Yes!\n\nIs activity supposed to be read as type of activity or activity level?\n\nBased on the scale from 1 to 10, I’d say activity level"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_key_info.html#announcements",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Flyer on the EPI/BSTA tutors:\n\nMake an appointment\n\nOffice hours after class with Miyuki in 620M!\nQuestion from student: Confused about the phrasing of the variables in question 1.4 of our homework. \n\n“Patients were scored on quality of life, activity, asthma symptoms, and medication reduction on a scale from 0 to 10.”\nAre all variables to be assumed to be on a scale from 0 to 10? \n\nAnswer: Yes!\n\nIs activity supposed to be read as type of activity or activity level?\n\nBased on the scale from 1 to 10, I’d say activity level"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_key_info.html#key-dates",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nHomework 1 Assignment due this Friday at 11pm!\nI will post the questions for the solutions by end of week!"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#before-we-get-further-in-.qmd-files",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#before-we-get-further-in-.qmd-files",
+    "title": "R05: Quarto in R",
+    "section": "Before we get further in .qmd files",
+    "text": "Before we get further in .qmd files\n\nLet’s make sure we all have Rstudio open\nAnd then open your EPI_525_F24 project!\n\n \nSteps for making a Quarto file\n\nCreate a Quarto file (.qmd)\nEdit a Quarto file (.qmd)\nSave the Quarto file (.qmd)\nCreate html file"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#edit-a-quarto-file-.qmd",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#edit-a-quarto-file-.qmd",
+    "title": "R05: Quarto in R",
+    "section": "2. Edit a Quarto file (.qmd)",
+    "text": "2. Edit a Quarto file (.qmd)\n\n\n\nAfter clicking on Create, you should then see the following in your editor window:\n\n \n\nYou can try editing the text or changing the code!\n\nMake sure you are only editing at the “Quarto” header and below"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#tip-changing-the-render-view",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#tip-changing-the-render-view",
+    "title": "R05: Quarto in R",
+    "section": "Tip: changing the render view",
+    "text": "Tip: changing the render view\n\nYou can change where your .html file pops up\nI have it set to open in the “Viewer Pane” in the bottom right"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-vs.-its-.html-output",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#qmd-vs.-its-.html-output",
+    "title": "R05: Quarto in R",
+    "section": ".qmd vs. its .html output",
+    "text": ".qmd vs. its .html output\n\n\n.qmd file\n\n\n\n\n\n\n\n\n.html output"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#the",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#the",
+    "title": "R03: R Basics, part 2",
+    "section": "The $",
+    "text": "The $\n\nSuppose we want to single out the column of petal width values.\nOne way to do this is to use the $\n\nDatSetName$VariableName\n\n\n\niris$Petal.Width\n\n  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3\n [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2\n [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3\n [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3\n [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3\n [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8\n[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8\n[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3\n[145] 2.5 2.3 1.9 2.0 2.3 1.8"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#example-using-the",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#example-using-the",
+    "title": "R03: R Basics, part 2",
+    "section": "Example using the $",
+    "text": "Example using the $\nThe $ is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.\n\n\n\nmean(iris$Petal.Width)\n\n[1] 1.199333\n\nsd(iris$Petal.Width)\n\n[1] 0.7622377\n\nmedian(iris$Petal.Width)\n\n[1] 1.3"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#inline-code",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#inline-code",
+    "title": "R03: R Basics, part 2",
+    "section": "Inline code",
+    "text": "Inline code\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#table-1-example",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#table-1-example",
+    "title": "R03: R Basics, part 2",
+    "section": "Table 1 example",
+    "text": "Table 1 example\n\n\n\n\n\n\n\n\nAre We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-mean",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-mean",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of center: mean",
+    "text": "Measures of center: mean\n\nSample mean: the average value of observations\n\\[\\overline{x} = \\frac{x_1+x_2+\\cdots+x_n}{n} = \\sum_{i=1}^{n}\\frac{x_i}{n}\\]\nwhere \\(x_1, x_2, \\ldots, x_n\\) represent the \\(n\\) observed values in a sample\nExample: What is the mean age in the toy dataset df defined earlier?\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\nmean(df$age)\n\n[1] 31.5"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-median",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-median",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of center: median",
+    "text": "Measures of center: median\n\n\nThe median is the middle value of the observations in a sample.\nThe median is the 50th percentile, meaning\n\n50% of observations lie below and\n50% of observations lie above the median.\n\n\n\n\n\n\n\nIf the number of observations is\n\nodd: the median is the middle observed value\neven: the median is the average of the two middle observed values\n\n\n\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\nmedian(df$age)\n\n[1] 31\n\nmedian(c(df$age, 67))\n\n[1] 33.25"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-mean-vs.-median",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-mean-vs.-median",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of center: mean vs. median",
+    "text": "Measures of center: mean vs. median\n\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-mode",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-center-mode",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of center: mode",
+    "text": "Measures of center: mode\nmode: the most frequent value in a dataset"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-standard-deviation-sd-13",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-standard-deviation-sd-13",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of spread: standard deviation (SD) (1/3)",
+    "text": "Measures of spread: standard deviation (SD) (1/3)\nstandard deviation is (approximately) the average distance between a typical observation and the mean\n\nAn observation’s deviation is the distance between its value \\(x\\) and the sample mean \\(\\overline{x}\\): deviation = \\(x - \\overline{x}\\)."
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-sd-23",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-sd-23",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of spread: SD (2/3)",
+    "text": "Measures of spread: SD (2/3)\n\nThe sample variance \\(s^2\\) is the sum of squared deviations divided by the number of observations minus 1. \\[s^2 = \\frac{(x_1 - \\overline{x})^2+(x_2 - \\overline{x})^2+\\cdots+(x_n - \\overline{x})^2}{n-1} = \\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}\\] where \\(x_1, x_2, \\dots, x_n\\) represent the \\(n\\) observed values.\nThe standard deviation \\(s\\) is the square root of the variance. \\[s = \\sqrt{\\frac{({x_1 - \\overline{x})}^{2}+({x_2 - \\overline{x})}^{2}+\\cdots+({x_n - \\overline{x})}^{2}}{n-1}} = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}}\\]"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-sd-33",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-sd-33",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of spread: SD (3/3)",
+    "text": "Measures of spread: SD (3/3)\n\n\n\nLet’s calculate the sample standard deviation for our toy example\n\n\ndf$age\n\n[1] 28.0 35.5 31.0\n\n\n\n\nmean(df$age)\n\n[1] 31.5\n\nsd(df$age)\n\n[1] 3.774917\n\n\n\n\n\\(s = \\sqrt{\\sum_{i=1}^{n}\\frac{(x_i - \\overline{x})^2}{n-1}} =\\)"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#empirical-rule-one-way-to-think-about-the-sd-12",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#empirical-rule-one-way-to-think-about-the-sd-12",
+    "title": "R03: R Basics, part 2",
+    "section": "Empirical Rule: one way to think about the SD (1/2)",
+    "text": "Empirical Rule: one way to think about the SD (1/2)\n\n\n\nFor symmetric bell-shaped data, about\n\n68% of the data are within 1 SD of the mean\n95% of the data are within 2 SD’s of the mean\n99.7% of the data are within 3 SD’s of the mean\n\nThese percentages are based off of percentages of a true normal distribution.\n\n\n\n\nhttps://statistics-made-easy.com/empirical-rule/"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#empirical-rule-one-way-to-think-about-the-sd-22",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#empirical-rule-one-way-to-think-about-the-sd-22",
+    "title": "R03: R Basics, part 2",
+    "section": "Empirical Rule: one way to think about the SD (2/2)",
+    "text": "Empirical Rule: one way to think about the SD (2/2)\n\n\n\nhist(iris$Sepal.Width)\n\n\n\n\n\n\nmean(iris$Sepal.Width)\n\n[1] 3.057333\n\nsd(iris$Sepal.Width)\n\n[1] 0.4358663"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-interquartile-range-iqr-12",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-interquartile-range-iqr-12",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of spread: interquartile range (IQR) (1/2)",
+    "text": "Measures of spread: interquartile range (IQR) (1/2)\nThe \\(p^{th}\\) percentile is the observation such that \\(p\\%\\) of the remaining observations fall below this observation.\n\nThe first quartile \\(Q_1\\) is the \\(25^{th}\\) percentile.\nThe second quartile \\(Q_2\\), i.e., the median, is the \\(50^{th}\\) percentile.\nThe third quartile \\(Q_3\\) is the \\(75^{th}\\) percentile.\n\nThe interquartile range (IQR) is the distance between the third and first quartiles. \\[IQR = Q_3 - Q_1\\]\n\nIQR is the width of the middle half of the data"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-iqr-22",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#measures-of-spread-iqr-22",
+    "title": "R03: R Basics, part 2",
+    "section": "Measures of spread: IQR (2/2)",
+    "text": "Measures of spread: IQR (2/2)\n5 number summary\n\nsummary(iris$Sepal.Width)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  2.000   2.800   3.000   3.057   3.300   4.400 \n\n\n\n\n\n\n\n\n\n\nWhat is the IQR of the sepal widths?\n\nquantile(iris$Sepal.Width, c(.25, .75))\n\n25% 75% \n2.8 3.3 \n\ndiff(quantile(iris$Sepal.Width, c(.25, .75)))\n\n75% \n0.5 \n\nIQR(iris$Sepal.Width)\n\n[1] 0.5"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#robust-estimates",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#robust-estimates",
+    "title": "R03: R Basics, part 2",
+    "section": "Robust estimates",
+    "text": "Robust estimates\nSummary statistics are called robust estimates if extreme observations have little effect on their values\n\n\n\nestimate\nrobust?\n\n\n\n\nmean\n\n\n\nmedian\n\n\n\nmode\n\n\n\nstandard deviaiton\n\n\n\nIQR\n\n\n\nrange"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#r-packages-1",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#r-packages-1",
+    "title": "R03: R Basics, part 2",
+    "section": "R Packages",
+    "text": "R Packages\nA good analogy for R packages is that they\nare like apps you can download onto a mobile phone:\n\nModernDive Figure 1.4"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#installing-packages",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#installing-packages",
+    "title": "R03: R Basics, part 2",
+    "section": "Installing packages",
+    "text": "Installing packages\n\n\nPackages contain additional functions and data\n\nTwo options to install packages:\n\ninstall.packages() or\nThe “Packages” tab in Files/Plots/Packages/Help/Viewer window\n\n\n\ninstall.packages(\"dplyr\")   # only do this ONCE, use quotes\n\n\n\n\n\nOnly install packages once (unless you want to update them)\nInstalled from Comprehensive R Archive Network (CRAN) = package mothership"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#video-on-installing-packages",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#video-on-installing-packages",
+    "title": "R03: R Basics, part 2",
+    "section": "Video on installing packages",
+    "text": "Video on installing packages\n\nDanielle Navarro’s YouTube video on Installing and loading R packages: https://www.youtube.com/watch?v=kpHZVyDvEhQ"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#load-packages-with-library-command",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#load-packages-with-library-command",
+    "title": "R03: R Basics, part 2",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\n\nTip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\nPackages need to be reloaded every time you open Rstudio.\n\n\n\nlibrary(dplyr)    # run this every time you open Rstudio\n\n\n\nYou can use a function without loading the package with PackageName::CommandName\n\n\n\ndplyr::arrange(iris, Petal.Width)   # what does arrange do?\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species\n1            4.9         3.1          1.5         0.1     setosa\n2            4.8         3.0          1.4         0.1     setosa\n3            4.3         3.0          1.1         0.1     setosa\n4            5.2         4.1          1.5         0.1     setosa\n5            4.9         3.6          1.4         0.1     setosa\n6            5.1         3.5          1.4         0.2     setosa\n7            4.9         3.0          1.4         0.2     setosa\n8            4.7         3.2          1.3         0.2     setosa\n9            4.6         3.1          1.5         0.2     setosa\n10           5.0         3.6          1.4         0.2     setosa\n11           5.0         3.4          1.5         0.2     setosa\n12           4.4         2.9          1.4         0.2     setosa\n13           5.4         3.7          1.5         0.2     setosa\n14           4.8         3.4          1.6         0.2     setosa\n15           5.8         4.0          1.2         0.2     setosa\n16           5.4         3.4          1.7         0.2     setosa\n17           4.6         3.6          1.0         0.2     setosa\n18           4.8         3.4          1.9         0.2     setosa\n19           5.0         3.0          1.6         0.2     setosa\n20           5.2         3.5          1.5         0.2     setosa\n21           5.2         3.4          1.4         0.2     setosa\n22           4.7         3.2          1.6         0.2     setosa\n23           4.8         3.1          1.6         0.2     setosa\n24           5.5         4.2          1.4         0.2     setosa\n25           4.9         3.1          1.5         0.2     setosa\n26           5.0         3.2          1.2         0.2     setosa\n27           5.5         3.5          1.3         0.2     setosa\n28           4.4         3.0          1.3         0.2     setosa\n29           5.1         3.4          1.5         0.2     setosa\n30           4.4         3.2          1.3         0.2     setosa\n31           5.1         3.8          1.6         0.2     setosa\n32           4.6         3.2          1.4         0.2     setosa\n33           5.3         3.7          1.5         0.2     setosa\n34           5.0         3.3          1.4         0.2     setosa\n35           4.6         3.4          1.4         0.3     setosa\n36           5.1         3.5          1.4         0.3     setosa\n37           5.7         3.8          1.7         0.3     setosa\n38           5.1         3.8          1.5         0.3     setosa\n39           5.0         3.5          1.3         0.3     setosa\n40           4.5         2.3          1.3         0.3     setosa\n41           4.8         3.0          1.4         0.3     setosa\n42           5.4         3.9          1.7         0.4     setosa\n43           5.7         4.4          1.5         0.4     setosa\n44           5.4         3.9          1.3         0.4     setosa\n45           5.1         3.7          1.5         0.4     setosa\n46           5.0         3.4          1.6         0.4     setosa\n47           5.4         3.4          1.5         0.4     setosa\n48           5.1         3.8          1.9         0.4     setosa\n49           5.1         3.3          1.7         0.5     setosa\n50           5.0         3.5          1.6         0.6     setosa\n51           4.9         2.4          3.3         1.0 versicolor\n52           5.0         2.0          3.5         1.0 versicolor\n53           6.0         2.2          4.0         1.0 versicolor\n54           5.8         2.7          4.1         1.0 versicolor\n55           5.7         2.6          3.5         1.0 versicolor\n56           5.5         2.4          3.7         1.0 versicolor\n57           5.0         2.3          3.3         1.0 versicolor\n58           5.6         2.5          3.9         1.1 versicolor\n59           5.5         2.4          3.8         1.1 versicolor\n60           5.1         2.5          3.0         1.1 versicolor\n61           6.1         2.8          4.7         1.2 versicolor\n62           5.8         2.7          3.9         1.2 versicolor\n63           5.5         2.6          4.4         1.2 versicolor\n64           5.8         2.6          4.0         1.2 versicolor\n65           5.7         3.0          4.2         1.2 versicolor\n66           5.5         2.3          4.0         1.3 versicolor\n67           5.7         2.8          4.5         1.3 versicolor\n68           6.6         2.9          4.6         1.3 versicolor\n69           5.6         2.9          3.6         1.3 versicolor\n70           6.1         2.8          4.0         1.3 versicolor\n71           6.4         2.9          4.3         1.3 versicolor\n72           6.3         2.3          4.4         1.3 versicolor\n73           5.6         3.0          4.1         1.3 versicolor\n74           5.5         2.5          4.0         1.3 versicolor\n75           5.6         2.7          4.2         1.3 versicolor\n76           5.7         2.9          4.2         1.3 versicolor\n77           6.2         2.9          4.3         1.3 versicolor\n78           5.7         2.8          4.1         1.3 versicolor\n79           7.0         3.2          4.7         1.4 versicolor\n80           5.2         2.7          3.9         1.4 versicolor\n81           6.1         2.9          4.7         1.4 versicolor\n82           6.7         3.1          4.4         1.4 versicolor\n83           6.6         3.0          4.4         1.4 versicolor\n84           6.8         2.8          4.8         1.4 versicolor\n85           6.1         3.0          4.6         1.4 versicolor\n86           6.1         2.6          5.6         1.4  virginica\n87           6.4         3.2          4.5         1.5 versicolor\n88           6.9         3.1          4.9         1.5 versicolor\n89           6.5         2.8          4.6         1.5 versicolor\n90           5.9         3.0          4.2         1.5 versicolor\n91           5.6         3.0          4.5         1.5 versicolor\n92           6.2         2.2          4.5         1.5 versicolor\n93           6.3         2.5          4.9         1.5 versicolor\n94           6.0         2.9          4.5         1.5 versicolor\n95           5.4         3.0          4.5         1.5 versicolor\n96           6.7         3.1          4.7         1.5 versicolor\n97           6.0         2.2          5.0         1.5  virginica\n98           6.3         2.8          5.1         1.5  virginica\n99           6.3         3.3          4.7         1.6 versicolor\n100          6.0         2.7          5.1         1.6 versicolor\n101          6.0         3.4          4.5         1.6 versicolor\n102          7.2         3.0          5.8         1.6  virginica\n103          6.7         3.0          5.0         1.7 versicolor\n104          4.9         2.5          4.5         1.7  virginica\n105          5.9         3.2          4.8         1.8 versicolor\n106          6.3         2.9          5.6         1.8  virginica\n107          7.3         2.9          6.3         1.8  virginica\n108          6.7         2.5          5.8         1.8  virginica\n109          6.5         3.0          5.5         1.8  virginica\n110          6.3         2.7          4.9         1.8  virginica\n111          7.2         3.2          6.0         1.8  virginica\n112          6.2         2.8          4.8         1.8  virginica\n113          6.1         3.0          4.9         1.8  virginica\n114          6.4         3.1          5.5         1.8  virginica\n115          6.0         3.0          4.8         1.8  virginica\n116          5.9         3.0          5.1         1.8  virginica\n117          5.8         2.7          5.1         1.9  virginica\n118          6.4         2.7          5.3         1.9  virginica\n119          7.4         2.8          6.1         1.9  virginica\n120          5.8         2.7          5.1         1.9  virginica\n121          6.3         2.5          5.0         1.9  virginica\n122          6.5         3.2          5.1         2.0  virginica\n123          5.7         2.5          5.0         2.0  virginica\n124          5.6         2.8          4.9         2.0  virginica\n125          7.7         2.8          6.7         2.0  virginica\n126          7.9         3.8          6.4         2.0  virginica\n127          6.5         3.0          5.2         2.0  virginica\n128          7.1         3.0          5.9         2.1  virginica\n129          7.6         3.0          6.6         2.1  virginica\n130          6.8         3.0          5.5         2.1  virginica\n131          6.7         3.3          5.7         2.1  virginica\n132          6.4         2.8          5.6         2.1  virginica\n133          6.9         3.1          5.4         2.1  virginica\n134          6.5         3.0          5.8         2.2  virginica\n135          7.7         3.8          6.7         2.2  virginica\n136          6.4         2.8          5.6         2.2  virginica\n137          6.4         3.2          5.3         2.3  virginica\n138          7.7         2.6          6.9         2.3  virginica\n139          6.9         3.2          5.7         2.3  virginica\n140          7.7         3.0          6.1         2.3  virginica\n141          6.9         3.1          5.1         2.3  virginica\n142          6.8         3.2          5.9         2.3  virginica\n143          6.7         3.0          5.2         2.3  virginica\n144          6.2         3.4          5.4         2.3  virginica\n145          5.8         2.8          5.1         2.4  virginica\n146          6.3         3.4          5.6         2.4  virginica\n147          6.7         3.1          5.6         2.4  virginica\n148          6.3         3.3          6.0         2.5  virginica\n149          7.2         3.6          6.1         2.5  virginica\n150          6.7         3.3          5.7         2.5  virginica"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#install-the-packages-listed-below-before-day-3",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#install-the-packages-listed-below-before-day-3",
+    "title": "R03: R Basics, part 2",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "lessons/R03_Basics_02/R03_Basics_02.html#directions-for-installing-package-oibiostat",
+    "href": "lessons/R03_Basics_02/R03_Basics_02.html#directions-for-installing-package-oibiostat",
+    "title": "R03: R Basics, part 2",
+    "section": "Directions for installing package oibiostat",
+    "text": "Directions for installing package oibiostat\n\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#r-packages-1",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#r-packages-1",
+    "title": "R05: Quarto in R",
+    "section": "R Packages",
+    "text": "R Packages\nA good analogy for R packages is that they are like apps you can download onto a mobile phone:\n\nModernDive Figure 1.4\nPackages contain additional functions and data"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#video-on-installing-packages",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#video-on-installing-packages",
+    "title": "R05: Quarto in R",
+    "section": "Video on installing packages",
+    "text": "Video on installing packages\n\nDanielle Navarro’s YouTube video on Installing and loading R packages: https://www.youtube.com/watch?v=kpHZVyDvEhQ\n\nIf you want to get more information on packages"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#load-packages-with-library-command",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#load-packages-with-library-command",
+    "title": "R05: Quarto in R",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\nTip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\nPackages need to be reloaded every time you open Rstudio.\n\n\nlibrary(dplyr)    # run this every time you open Rstudio\n\n\nYou can use a function without loading the package with PackageName::CommandName\n\n\ndplyr::arrange(iris, Petal.Width)   # what does arrange do?\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species\n1            4.9         3.1          1.5         0.1     setosa\n2            4.8         3.0          1.4         0.1     setosa\n3            4.3         3.0          1.1         0.1     setosa\n4            5.2         4.1          1.5         0.1     setosa\n5            4.9         3.6          1.4         0.1     setosa\n6            5.1         3.5          1.4         0.2     setosa\n7            4.9         3.0          1.4         0.2     setosa\n8            4.7         3.2          1.3         0.2     setosa\n9            4.6         3.1          1.5         0.2     setosa\n10           5.0         3.6          1.4         0.2     setosa\n11           5.0         3.4          1.5         0.2     setosa\n12           4.4         2.9          1.4         0.2     setosa\n13           5.4         3.7          1.5         0.2     setosa\n14           4.8         3.4          1.6         0.2     setosa\n15           5.8         4.0          1.2         0.2     setosa\n16           5.4         3.4          1.7         0.2     setosa\n17           4.6         3.6          1.0         0.2     setosa\n18           4.8         3.4          1.9         0.2     setosa\n19           5.0         3.0          1.6         0.2     setosa\n20           5.2         3.5          1.5         0.2     setosa\n21           5.2         3.4          1.4         0.2     setosa\n22           4.7         3.2          1.6         0.2     setosa\n23           4.8         3.1          1.6         0.2     setosa\n24           5.5         4.2          1.4         0.2     setosa\n25           4.9         3.1          1.5         0.2     setosa\n26           5.0         3.2          1.2         0.2     setosa\n27           5.5         3.5          1.3         0.2     setosa\n28           4.4         3.0          1.3         0.2     setosa\n29           5.1         3.4          1.5         0.2     setosa\n30           4.4         3.2          1.3         0.2     setosa\n31           5.1         3.8          1.6         0.2     setosa\n32           4.6         3.2          1.4         0.2     setosa\n33           5.3         3.7          1.5         0.2     setosa\n34           5.0         3.3          1.4         0.2     setosa\n35           4.6         3.4          1.4         0.3     setosa\n36           5.1         3.5          1.4         0.3     setosa\n37           5.7         3.8          1.7         0.3     setosa\n38           5.1         3.8          1.5         0.3     setosa\n39           5.0         3.5          1.3         0.3     setosa\n40           4.5         2.3          1.3         0.3     setosa\n41           4.8         3.0          1.4         0.3     setosa\n42           5.4         3.9          1.7         0.4     setosa\n43           5.7         4.4          1.5         0.4     setosa\n44           5.4         3.9          1.3         0.4     setosa\n45           5.1         3.7          1.5         0.4     setosa\n46           5.0         3.4          1.6         0.4     setosa\n47           5.4         3.4          1.5         0.4     setosa\n48           5.1         3.8          1.9         0.4     setosa\n49           5.1         3.3          1.7         0.5     setosa\n50           5.0         3.5          1.6         0.6     setosa\n51           4.9         2.4          3.3         1.0 versicolor\n52           5.0         2.0          3.5         1.0 versicolor\n53           6.0         2.2          4.0         1.0 versicolor\n54           5.8         2.7          4.1         1.0 versicolor\n55           5.7         2.6          3.5         1.0 versicolor\n56           5.5         2.4          3.7         1.0 versicolor\n57           5.0         2.3          3.3         1.0 versicolor\n58           5.6         2.5          3.9         1.1 versicolor\n59           5.5         2.4          3.8         1.1 versicolor\n60           5.1         2.5          3.0         1.1 versicolor\n61           6.1         2.8          4.7         1.2 versicolor\n62           5.8         2.7          3.9         1.2 versicolor\n63           5.5         2.6          4.4         1.2 versicolor\n64           5.8         2.6          4.0         1.2 versicolor\n65           5.7         3.0          4.2         1.2 versicolor\n66           5.5         2.3          4.0         1.3 versicolor\n67           5.7         2.8          4.5         1.3 versicolor\n68           6.6         2.9          4.6         1.3 versicolor\n69           5.6         2.9          3.6         1.3 versicolor\n70           6.1         2.8          4.0         1.3 versicolor\n71           6.4         2.9          4.3         1.3 versicolor\n72           6.3         2.3          4.4         1.3 versicolor\n73           5.6         3.0          4.1         1.3 versicolor\n74           5.5         2.5          4.0         1.3 versicolor\n75           5.6         2.7          4.2         1.3 versicolor\n76           5.7         2.9          4.2         1.3 versicolor\n77           6.2         2.9          4.3         1.3 versicolor\n78           5.7         2.8          4.1         1.3 versicolor\n79           7.0         3.2          4.7         1.4 versicolor\n80           5.2         2.7          3.9         1.4 versicolor\n81           6.1         2.9          4.7         1.4 versicolor\n82           6.7         3.1          4.4         1.4 versicolor\n83           6.6         3.0          4.4         1.4 versicolor\n84           6.8         2.8          4.8         1.4 versicolor\n85           6.1         3.0          4.6         1.4 versicolor\n86           6.1         2.6          5.6         1.4  virginica\n87           6.4         3.2          4.5         1.5 versicolor\n88           6.9         3.1          4.9         1.5 versicolor\n89           6.5         2.8          4.6         1.5 versicolor\n90           5.9         3.0          4.2         1.5 versicolor\n91           5.6         3.0          4.5         1.5 versicolor\n92           6.2         2.2          4.5         1.5 versicolor\n93           6.3         2.5          4.9         1.5 versicolor\n94           6.0         2.9          4.5         1.5 versicolor\n95           5.4         3.0          4.5         1.5 versicolor\n96           6.7         3.1          4.7         1.5 versicolor\n97           6.0         2.2          5.0         1.5  virginica\n98           6.3         2.8          5.1         1.5  virginica\n99           6.3         3.3          4.7         1.6 versicolor\n100          6.0         2.7          5.1         1.6 versicolor\n101          6.0         3.4          4.5         1.6 versicolor\n102          7.2         3.0          5.8         1.6  virginica\n103          6.7         3.0          5.0         1.7 versicolor\n104          4.9         2.5          4.5         1.7  virginica\n105          5.9         3.2          4.8         1.8 versicolor\n106          6.3         2.9          5.6         1.8  virginica\n107          7.3         2.9          6.3         1.8  virginica\n108          6.7         2.5          5.8         1.8  virginica\n109          6.5         3.0          5.5         1.8  virginica\n110          6.3         2.7          4.9         1.8  virginica\n111          7.2         3.2          6.0         1.8  virginica\n112          6.2         2.8          4.8         1.8  virginica\n113          6.1         3.0          4.9         1.8  virginica\n114          6.4         3.1          5.5         1.8  virginica\n115          6.0         3.0          4.8         1.8  virginica\n116          5.9         3.0          5.1         1.8  virginica\n117          5.8         2.7          5.1         1.9  virginica\n118          6.4         2.7          5.3         1.9  virginica\n119          7.4         2.8          6.1         1.9  virginica\n120          5.8         2.7          5.1         1.9  virginica\n121          6.3         2.5          5.0         1.9  virginica\n122          6.5         3.2          5.1         2.0  virginica\n123          5.7         2.5          5.0         2.0  virginica\n124          5.6         2.8          4.9         2.0  virginica\n125          7.7         2.8          6.7         2.0  virginica\n126          7.9         3.8          6.4         2.0  virginica\n127          6.5         3.0          5.2         2.0  virginica\n128          7.1         3.0          5.9         2.1  virginica\n129          7.6         3.0          6.6         2.1  virginica\n130          6.8         3.0          5.5         2.1  virginica\n131          6.7         3.3          5.7         2.1  virginica\n132          6.4         2.8          5.6         2.1  virginica\n133          6.9         3.1          5.4         2.1  virginica\n134          6.5         3.0          5.8         2.2  virginica\n135          7.7         3.8          6.7         2.2  virginica\n136          6.4         2.8          5.6         2.2  virginica\n137          6.4         3.2          5.3         2.3  virginica\n138          7.7         2.6          6.9         2.3  virginica\n139          6.9         3.2          5.7         2.3  virginica\n140          7.7         3.0          6.1         2.3  virginica\n141          6.9         3.1          5.1         2.3  virginica\n142          6.8         3.2          5.9         2.3  virginica\n143          6.7         3.0          5.2         2.3  virginica\n144          6.2         3.4          5.4         2.3  virginica\n145          5.8         2.8          5.1         2.4  virginica\n146          6.3         3.4          5.6         2.4  virginica\n147          6.7         3.1          5.6         2.4  virginica\n148          6.3         3.3          6.0         2.5  virginica\n149          7.2         3.6          6.1         2.5  virginica\n150          6.7         3.3          5.7         2.5  virginica"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-the-packages-listed-below-before-day-3",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-the-packages-listed-below-before-day-3",
+    "title": "R05: Quarto in R",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#directions-for-installing-package-oibiostat",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#directions-for-installing-package-oibiostat",
+    "title": "R05: Quarto in R",
+    "section": "Directions for installing package oibiostat",
+    "text": "Directions for installing package oibiostat\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#installing-packages-1",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#installing-packages-1",
+    "title": "R05: Quarto in R",
+    "section": "Installing packages",
+    "text": "Installing packages"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-the-packages-listed-below",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#install-the-packages-listed-below",
+    "title": "R05: Quarto in R",
+    "section": "Install the packages listed below",
+    "text": "Install the packages listed below\n\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\n\n\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data\n\nhere\n\nMore info in slides ahead"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#here-package-1",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#here-package-1",
+    "title": "R05: Quarto in R",
+    "section": "here package",
+    "text": "here package\n\n\n\nGood source for the here package\n\nJust substitute .Rmd with .qmd\n\nBasically, a .qmd file and .R file work differently\n\nWe haven’t worked much with .R files\n\nFor .qmd files, the automatic directory is the folder it is in\n\nBut we want it to be the main project folder\n\nhere can help with that\n\n \n\nVery important for reproducibility!!"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-package",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-package",
+    "title": "R05: Quarto in R",
+    "section": "Using here package",
+    "text": "Using here package\n\nWithin your console, type here() and enter\n\nTry this with getwd() as well\n\n\n\nlibrary(here)\nhere()\n\n[1] \"/Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/F24_EPI_525/F24_EPI_525_site\"\n\ngetwd()\n\n[1] \"/Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/F24_EPI_525/F24_EPI_525_site\"\n\n\n \n\nhere can be used whenever we need to access a file path in R code\n\nImporting data\nSaving output\nAccessing files"
+  },
+  {
+    "objectID": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-the-data",
+    "href": "lessons/R05_Quarto_01/R05_Quarto_01.html#using-here-to-load-the-data",
+    "title": "R05: Quarto in R",
+    "section": "Using here() to load the data!",
+    "text": "Using here() to load the data!\n\nI put the dataset “BodyTemperatures.xlsx” in your student files (under Data then Lessons)\nGo into those files and download the dataset into your personal class folder\n\nProbably good to put it under “data”\n\nWithin your Quarto file, in an R code chunk, load the data!\n\n\n\n\n−+\n05:00\n\n\n\n\n\nR05 Slides"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#goals-for-today",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#goals-for-today",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Goals for today",
+    "text": "Goals for today\n\n\n\nExploratory Data Analysis (EDA) (Sections 1.4, 1.5, 1.6, 1.7.1)\n\nData visualization with ggplot\n\nnumerical & categorical variables, and relationships between variables\n\nSummarizing numerical data\nFrequency (two-way) tables\n\nSome data wrangling techniques along the way\n\n\n\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#international-day-of-women-in-statistics-and-data-science",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#international-day-of-women-in-statistics-and-data-science",
+    "title": "R06: ggplot2 part 1",
+    "section": "International Day of Women in Statistics and Data Science",
+    "text": "International Day of Women in Statistics and Data Science\nTuesday, October 10, 2022\n12 am - 11:59 pm UTC (5pm 10/9 to 4:59 pm 10/10 here)\n\nInternational Day of Women in Statistics and Data Science"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#mimis-tip-of-the-day-sending-messages-in-slack",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#mimis-tip-of-the-day-sending-messages-in-slack",
+    "title": "R06: ggplot2 part 1",
+    "section": "Mimi’s tip of the day: sending messages in Slack",
+    "text": "Mimi’s tip of the day: sending messages in Slack\n\n\nAre you frustrated that Slack sends a message when you press Enter? You can change that!"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#recap-of-last-time",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#recap-of-last-time",
+    "title": "R06: ggplot2 part 1",
+    "section": "Recap of last time",
+    "text": "Recap of last time\n\n(1.3) Data collection principles\n\nPopulation vs. sample\nSampling methods\nExperiments vs. Observational studies\n\n(1.2) Intro to Data\n\nData types\n\nNumerical: discrete (integer in R), continuous (double or numeric in R)\nCategorical: ordinal, nominal\n\ncharacter or factor in R\n\n\nHow are data stored in R? data frames, tibbles\nWorking with data in R: dim(), nrow(), ncol(), names(), str(), summary(), head(), tail(), $\n\n(1.4) Summarizing numerical data\n\nmean(), median(), sd(), quantile()"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-install-the-pacakges-listed-below",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-install-the-pacakges-listed-below",
+    "title": "R06: ggplot2, Part 1",
+    "section": "From last time: Install the pacakges listed below",
+    "text": "From last time: Install the pacakges listed below\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#directions-for-installing-package-oibiostat",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#directions-for-installing-package-oibiostat",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Directions for installing package oibiostat",
+    "text": "Directions for installing package oibiostat\n\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#load-packages-with-library-command",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#load-packages-with-library-command",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\nTip: at the top of your Qmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\n\nPackages need to be reloaded every time you open Rstudio.\nlibrary() commands to load needed packages must be in the Qmd file\n\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse) # contains ggplot2    \nlibrary(oibiostat)\nlibrary(ggridges)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#case-study-description",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#case-study-description",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Case Study Description",
+    "text": "Case Study Description\n\nIn the US, individuals with developmental disabilities typically receive services and support from state governments.\n\nCalifornia allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)\nRecipients of DDS funds are referred to as “consumers.”\n\nDataset dds.discr\n\nsample of 1,000 DDS consumers (out of a total of ~ 250,000)\ndata include age, gender, race/ethnicity, and annual DDS financial support per consumer\n\nPrevious research\n\nResearchers examined expenditures on consumers by ethnicity\nFound that the mean annual expenditure on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\nSee Section 1.7.1 in the textbook for more details"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#load-dds.discr-dataset-from-oibiostat-package",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#load-dds.discr-dataset-from-oibiostat-package",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Load dds.discr dataset from oibiostat package",
+    "text": "Load dds.discr dataset from oibiostat package\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#getting-to-know-the-dataset",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#getting-to-know-the-dataset",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Getting to know the dataset",
+    "text": "Getting to know the dataset\n\ndim(dds.discr)\n\n[1] 1000    6\n\nnames(dds.discr)\n\n[1] \"id\"           \"age.cohort\"   \"age\"          \"gender\"       \"expenditures\"\n[6] \"ethnicity\"   \n\nlength(unique(dds.discr$id)) # How many unique id's are there?\n\n[1] 1000"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#str-structure",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#str-structure",
+    "title": "R06: ggplot2, Part 1",
+    "section": "str() structure",
+    "text": "str() structure\n\nWe previously used the base R structure command str() to get information about variable types in a dataset.\nNote this dataset is a tibble instead of a data.frame\n\n\nstr(dds.discr)      # base R\n\ntibble [1,000 × 6] (S3: tbl_df/tbl/data.frame)\n $ id          : int [1:1000] 10210 10409 10486 10538 10568 10690 10711 10778 10820 10823 ...\n $ age.cohort  : Factor w/ 6 levels \"0-5\",\"6-12\",\"13-17\",..: 3 5 1 4 3 3 3 3 3 3 ...\n $ age         : int [1:1000] 17 37 3 19 13 15 13 17 14 13 ...\n $ gender      : Factor w/ 2 levels \"Female\",\"Male\": 1 2 2 1 2 1 1 2 1 2 ...\n $ expenditures: int [1:1000] 2113 41924 1454 6400 4412 4566 3915 3873 5021 2887 ...\n $ ethnicity   : Factor w/ 8 levels \"American Indian\",..: 8 8 4 4 8 4 8 3 8 4 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   ID = col_integer(),\n  ..   `Age Cohort` = col_character(),\n  ..   Age = col_integer(),\n  ..   Gender = col_character(),\n  ..   Expenditures = col_integer(),\n  ..   Ethnicity = col_character()\n  .. )"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#glimpse",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#glimpse",
+    "title": "R06: ggplot2, Part 1",
+    "section": "glimpse()",
+    "text": "glimpse()\n\nWe previously used the base R structure command str() to get information about variable types in a dataset (in R03: R basics part 2)\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#summary",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#summary",
+    "title": "R06: ggplot2, Part 1",
+    "section": "summary()",
+    "text": "summary()\n\nWe previously used the base R structure command summary() to get summary information about variables\n\n\nsummary(dds.discr)      # base R\n\n       id        age.cohort       age          gender     expenditures  \n Min.   :10210   0-5  : 82   Min.   : 0.0   Female:503   Min.   :  222  \n 1st Qu.:31809   6-12 :175   1st Qu.:12.0   Male  :497   1st Qu.: 2899  \n Median :55384   13-17:212   Median :18.0                Median : 7026  \n Mean   :54663   18-21:199   Mean   :22.8                Mean   :18066  \n 3rd Qu.:76135   22-50:226   3rd Qu.:26.0                3rd Qu.:37713  \n Max.   :99898   51+  :106   Max.   :95.0                Max.   :75098  \n                                                                        \n              ethnicity  \n White not Hispanic:401  \n Hispanic          :376  \n Asian             :129  \n Black             : 59  \n Multi Race        : 26  \n American Indian   :  4  \n (Other)           :  5"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#tbl_summary-summary-table",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#tbl_summary-summary-table",
+    "title": "R06: ggplot2, Part 1",
+    "section": "tbl_summary(): summary table",
+    "text": "tbl_summary(): summary table\n\n\n\nNew: Use tbl_summary() from the gtsummary package to get summary information\n\n\n# library(gtsummary)\ntbl_summary(dds.discr)"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#what-data-variables-are-included-in-the-plot-below",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#what-data-variables-are-included-in-the-plot-below",
+    "title": "R06: ggplot2, Part 1",
+    "section": "What data (variables) are included in the plot below?",
+    "text": "What data (variables) are included in the plot below?"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#basics-of-a-ggplot",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#basics-of-a-ggplot",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Basics of a ggplot",
+    "text": "Basics of a ggplot"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#grammar-of-ggplot2",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#grammar-of-ggplot2",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Grammar of ggplot2",
+    "text": "Grammar of ggplot2\n\nKieran Healy"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#histograms",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#histograms",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Histograms",
+    "text": "Histograms\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = expenditures)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#histograms-showing-proportions",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#histograms-showing-proportions",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Histograms showing proportions",
+    "text": "Histograms showing proportions\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density)))  \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density))) +  \n  scale_y_continuous(labels =   \n      scales::percent_format())"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#distribution-shapes",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#distribution-shapes",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Distribution shapes",
+    "text": "Distribution shapes"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#density-plots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#density-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Density plots",
+    "text": "Density plots\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_density() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#dot-plots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#dot-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Dot plots",
+    "text": "Dot plots\n\nBetter for smaller samples\nWhat is being measured on the vertical axes?\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_dotplot(binwidth =1) \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(binwidth =1)"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#boxplots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#boxplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Boxplots",
+    "text": "Boxplots\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) + \n  geom_boxplot() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(y = age)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#boxplots-5-number-summary-visualization",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#boxplots-5-number-summary-visualization",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Boxplots: 5 number summary visualization",
+    "text": "Boxplots: 5 number summary visualization\n\nNo outliers:\n\n\n\nhttps://www.simplypsychology.org/boxplots.html\n\n\nWith outliers:\n\n\n\nhttps://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#side-by-side-boxplots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#side-by-side-boxplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Side-by-side boxplots",
+    "text": "Side-by-side boxplots\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           y = ethnicity)) + \n  geom_boxplot() + \n  labs(x = \"Annual Expenditures ($)\", \n       y = \"Race and ethnicity\")  \n\nCan you determine the following using boxplots?\n\ndistribution shape\nsample size"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#side-by-side-boxplots-with-data-points",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#side-by-side-boxplots-with-data-points",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Side-by-side boxplots with data points",
+    "text": "Side-by-side boxplots with data points\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           y = ethnicity)) + \n  geom_boxplot(color=\"darkgrey\") + \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))      \n\nCan you determine the following using boxplots?\n\ndistribution shape\nsample size"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#density-plots-by-group",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#density-plots-by-group",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Density plots by group",
+    "text": "Density plots by group\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           color = ethnicity)) + \n  geom_density() + \n  labs(x = \"Annual Expenditures ($)\")"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#ridgeline-plot",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#ridgeline-plot",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Ridgeline plot",
+    "text": "Ridgeline plot\n\n\n\n# library(ggridges)\nggplot(data = dds.discr,\n       aes(x = expenditures,\n           y = ethnicity,      \n           fill = ethnicity)      \n       ) + \n  geom_density_ridges(      \n    alpha = 0.3,      \n    show.legend = FALSE) +      \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\",\n       title =        \n\"Expenditures by race and \n       \\nethnicity\")"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#transforming-data-1.4.5",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#transforming-data-1.4.5",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Transforming data (1.4.5)",
+    "text": "Transforming data (1.4.5)\n\nWe sometimes apply a transformation to highly skewed data to make it more symmetric\nLog transformations are often used for skewed right data\n\n\n\nx = expenditures\n\nggplot(data = dds.discr, \n       aes(x = expenditures)) +  \n  geom_density() \n\n\n\n\n\nx = log(expenditures)\n\nggplot(data = dds.discr, \n       aes(x = log(expenditures))) +  \n  geom_density()"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#scatterplots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#scatterplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\n\n\nggplot(data = dds.discr, \n       aes(x = age,\n           y = expenditures)) + \n  geom_point() +       \n  labs(x = \"Age\",\n       y = \"Annual Expenditures ($)\") \n\nResponse vs. explanatory variables (Section 1.2.3)\n\nA response variable measures the outcome of interest in a study\nA study will typically examine whether the values of a response variable differ as values of an explanatory variable change\n\n\n\n\n\n\n\n\n\nDescribe the association between the variables"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#describing-associations-between-2-numerical-variables",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#describing-associations-between-2-numerical-variables",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Describing associations between 2 numerical variables",
+    "text": "Describing associations between 2 numerical variables\n\n\nTwo variables \\(x\\) and \\(y\\) are\n\npositively associated if \\(y\\) increases as \\(x\\) increases.\nnegatively associated if \\(y\\) decreases as \\(x\\) increases.\nIf there is no association between the variables, then we say they are uncorrelated or independent.\n\n\n\n\n\n\n\n\n\n\nThe term “association” is a very general term.\n\nCan be used for numerical or categorical variables\nNot specifically referring to linear associations"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#pearson-correlation-coefficient-r",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#pearson-correlation-coefficient-r",
+    "title": "R06: ggplot2, Part 1",
+    "section": "(Pearson) Correlation coefficient \\(r\\)",
+    "text": "(Pearson) Correlation coefficient \\(r\\)\n\n\\(r = -1\\) indicates a perfect negative linear relationship: As one variable increases, the value of the other variable tends to go down, following a straight line.\n\\(r = 0\\) indicates no linear relationship: The values of both variables go up/down independently of each other.\n\\(r = 1\\) indicates a perfect positive linear relationship: As the value of one variable goes up, the value of the other variable tends to go up as well in a linear fashion.\nThe closer \\(r\\) is to ±1, the stronger the linear association."
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#pearson-correlation-coefficient-r-formula",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#pearson-correlation-coefficient-r-formula",
+    "title": "R06: ggplot2, Part 1",
+    "section": "(Pearson) Correlation coefficient (r): formula",
+    "text": "(Pearson) Correlation coefficient (r): formula\nThe (Peasron) correlation coefficient of variables \\(x\\) and \\(y\\) can be computed using the formula \\[r = \\frac{1}{n-1}\\sum_{i=1}^{n}\\Big(\\frac{x_i - \\bar{x}}{s_x}\\Big)\\Big(\\frac{y_i - \\bar{y}}{s_y}\\Big)\\] where\n\n\\((x_1,y_1),(x_2,y_2),...,(x_n,y_n)\\) are the \\(n\\) paired values of the variables \\(x\\) and \\(y\\)\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the variables \\(x\\) and \\(y\\), respectively\n\n\ncor(dds.discr$age, dds.discr$expenditures)\n\n[1] 0.8432422"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#guess-the-correlation-game",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#guess-the-correlation-game",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Guess the correlation game!",
+    "text": "Guess the correlation game!\n\n\nRossman & Chance’s applet\n\n\n\n\n\nTracks performance of guess vs. actual, error vs. actual, and error vs. trial\nhttp://www.rossmanchance.com/applets/GuessCorrelation.html\n\nOr, for the Atari-like experience\n\n\n\nhttp://guessthecorrelation.com/"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#scatterplots-with-color-coded-dots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#scatterplots-with-color-coded-dots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Scatterplots with color-coded dots",
+    "text": "Scatterplots with color-coded dots\nDescribe the association between the variables\n\nggplot(data = dds.discr, \n       aes(x = age, y = expenditures,\n           color = ethnicity)) +   \n  geom_point(alpha = .5) +       \n  labs(x = \"Age\", y = \"Annual Expenditures ($)\") +\n  theme(legend.position = \"bottom\")"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#barplots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#barplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Barplots",
+    "text": "Barplots\n\n\nCounts (below) vs.\npercentages (right)\n\nggplot(data = dds.discr1, \n       aes(x = r_e)) +\n  geom_bar() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop),  \n               group = 1)) + \n  scale_y_continuous(labels =  \n      scales::percent_format())"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#barplots-with-2-variables-segmented-bar-plots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#barplots-with-2-variables-segmented-bar-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Barplots with 2 variables: segmented bar plots",
+    "text": "Barplots with 2 variables: segmented bar plots\n\n\n\nggplot(data = dds.discr, \n       aes(x = ethnicity,\n           fill = age.cohort)) + \n  geom_bar() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = ethnicity,\n           fill = age.cohort)) + \n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#barplots-with-2-variables-side-by-side-bar-plots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#barplots-with-2-variables-side-by-side-bar-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Barplots with 2 variables: side-by-side bar plots",
+    "text": "Barplots with 2 variables: side-by-side bar plots\n\nggplot(data = dds.discr, \n       aes(x = ethnicity,\n           fill = age.cohort)) + \n  geom_bar(position = \"dodge\")"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#frequency-tables-count",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#frequency-tables-count",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Frequency tables: count()",
+    "text": "Frequency tables: count()\n\n\n\ncount is from the dplyr package\nthe output is a long tibble, and not a “nice” table\n\n\ndds.discr1 %&gt;% count(r_e)\n\n# A tibble: 8 × 2\n  r_e                    n\n  &lt;fct&gt;              &lt;int&gt;\n1 American Indian        4\n2 Asian                129\n3 Black                 59\n4 Hispanic             376\n5 Multi Race            26\n6 Native Hawaiian        3\n7 Other                  2\n8 White not Hispanic   401\n\n\n\n\ndds.discr1 %&gt;% \n  count(r_e, age.cohort)\n\n# A tibble: 35 × 3\n   r_e             age.cohort     n\n   &lt;fct&gt;           &lt;fct&gt;      &lt;int&gt;\n 1 American Indian 13-17          1\n 2 American Indian 22-50          1\n 3 American Indian 51+            2\n 4 Asian           0-5            8\n 5 Asian           6-12          18\n 6 Asian           13-17         20\n 7 Asian           18-21         41\n 8 Asian           22-50         29\n 9 Asian           51+           13\n10 Black           0-5            3\n# ℹ 25 more rows"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#how-to-use-the-pipe",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#how-to-use-the-pipe",
+    "title": "R06: ggplot2, Part 1",
+    "section": "How to use the pipe %>%",
+    "text": "How to use the pipe %&gt;%\nThe pipe operator %&gt;% strings together commands to be performed sequentially\n\ndds.discr1 %&gt;% head(n=3)      # pronounce %&gt;% as \"then\"\n\n# A tibble: 3 × 6\n     id age.cohort   age sex_MF expenditures r_e               \n  &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;             \n1 10210 13-17         17 Female         2113 White not Hispanic\n2 10409 22-50         37 Male          41924 White not Hispanic\n3 10486 0-5            3 Male           1454 Hispanic          \n\n\n\nAlways first list the tibble that the commands are being applied to\nCan use multiple pipes to run multiple commands in sequence\n\nWhat does the following code do?\n\n\n\ndds.discr1 %&gt;% head(n=3) %&gt;% summary()"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#frequency-tables-janitor-packages-tabyl-function",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#frequency-tables-janitor-packages-tabyl-function",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Frequency tables: janitor package’s tabyl function",
+    "text": "Frequency tables: janitor package’s tabyl function\n\n\n\n# default table\ndds.discr1 %&gt;% \n  tabyl(r_e)  \n\n                r_e   n percent\n    American Indian   4   0.004\n              Asian 129   0.129\n              Black  59   0.059\n           Hispanic 376   0.376\n         Multi Race  26   0.026\n    Native Hawaiian   3   0.003\n              Other   2   0.002\n White not Hispanic 401   0.401\n\n\n\nadorn_ your table!\n\ndds.discr1 %&gt;% \n  tabyl(r_e) %&gt;%\n  adorn_totals(\"row\") %&gt;% \n  adorn_pct_formatting(digits=2)  \n\n                r_e    n percent\n    American Indian    4   0.40%\n              Asian  129  12.90%\n              Black   59   5.90%\n           Hispanic  376  37.60%\n         Multi Race   26   2.60%\n    Native Hawaiian    3   0.30%\n              Other    2   0.20%\n White not Hispanic  401  40.10%\n              Total 1000 100.00%"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#relative-frequency-table",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#relative-frequency-table",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Relative frequency table",
+    "text": "Relative frequency table\n\n\n\nA relative frequency table shows proportions (or percentages) instead of counts\nTo the right I removed (deselected) the counts column (n) to create a relative frequency table\n\n\n\ndds.discr1 %&gt;% \n  tabyl(r_e) %&gt;%\n  adorn_totals(\"row\") %&gt;% \n  adorn_pct_formatting(digits=2) %&gt;%   \n  select(-n) \n\n                r_e percent\n    American Indian   0.40%\n              Asian  12.90%\n              Black   5.90%\n           Hispanic  37.60%\n         Multi Race   2.60%\n    Native Hawaiian   0.30%\n              Other   0.20%\n White not Hispanic  40.10%\n              Total 100.00%"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#contingency-tables-two-way-tables",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#contingency-tables-two-way-tables",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Contingency tables (two-way tables)",
+    "text": "Contingency tables (two-way tables)\n\n\n\nContingency tables summarize data for two categorical variables\n\nwith each value in the table representing the number of times\na particular combination of outcomes occurs\n\nRow & column totals\nare sometimes called marginal totals\n\n\n\ndds.discr1 %&gt;% \n  tabyl(r_e, sex_MF) %&gt;%    \n  adorn_totals(c(\"row\", \"col\"))    \n\n                r_e Female Male Total\n    American Indian      3    1     4\n              Asian     61   68   129\n              Black     26   33    59\n           Hispanic    192  184   376\n         Multi Race     13   13    26\n    Native Hawaiian      2    1     3\n              Other      1    1     2\n White not Hispanic    205  196   401\n              Total    503  497  1000"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#contingency-tables-with-percentages",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#contingency-tables-with-percentages",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Contingency tables with percentages",
+    "text": "Contingency tables with percentages\n\ndds.discr1 %&gt;% \n  tabyl(r_e, age.cohort) %&gt;%\n  adorn_totals(c(\"row\")) %&gt;%\n  adorn_percentages(\"row\") %&gt;%   \n  adorn_pct_formatting(digits=0) %&gt;%    \n  adorn_ns()    \n\n                r_e      0-5      6-12      13-17     18-21     22-50       51+\n    American Indian  0%  (0)  0%   (0)  25%   (1)  0%   (0) 25%   (1) 50%   (2)\n              Asian  6%  (8) 14%  (18)  16%  (20) 32%  (41) 22%  (29) 10%  (13)\n              Black  5%  (3) 19%  (11)  20%  (12) 15%   (9) 29%  (17) 12%   (7)\n           Hispanic 12% (44) 24%  (91)  27% (103) 21%  (78) 11%  (43)  5%  (17)\n         Multi Race 27%  (7) 35%   (9)  27%   (7)  8%   (2)  4%   (1)  0%   (0)\n    Native Hawaiian  0%  (0)  0%   (0)   0%   (0)  0%   (0) 67%   (2) 33%   (1)\n              Other  0%  (0)  0%   (0) 100%   (2)  0%   (0)  0%   (0)  0%   (0)\n White not Hispanic  5% (20) 11%  (46)  17%  (67) 17%  (69) 33% (133) 16%  (66)\n              Total  8% (82) 18% (175)  21% (212) 20% (199) 23% (226) 11% (106)"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Mean annual DDS expenditures by race/ethnicity",
+    "text": "Mean annual DDS expenditures by race/ethnicity\n\n\n\nmean(dds.discr1$expenditures)\n\n[1] 18065.79\n\ndds.discr1 %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 1 × 3\n     ave     SD   med\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 18066. 19543.  7026\n\n\n\n\ndds.discr1 %&gt;% \n  group_by(r_e) %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 8 × 4\n  r_e                   ave     SD    med\n  &lt;fct&gt;               &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American Indian    36438. 25694. 41818.\n2 Asian              18392. 19209.  9369 \n3 Black              20885. 20549.  8687 \n4 Hispanic           11066. 15630.  3952 \n5 Multi Race          4457.  7332.  2622 \n6 Native Hawaiian    42782.  6576. 40727 \n7 Other               3316.  1836.  3316.\n8 White not Hispanic 24698. 20604. 15718"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#get_summary_stats-from-rstatix-package",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#get_summary_stats-from-rstatix-package",
+    "title": "R06: ggplot2, Part 1",
+    "section": "get_summary_stats() from rstatix package",
+    "text": "get_summary_stats() from rstatix package\n\ndds.discr1 %&gt;% get_summary_stats()\n\n# A tibble: 3 × 13\n  variable         n   min   max median     q1     q3   iqr    mad   mean     sd\n  &lt;fct&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 id            1000 10210 99898 55384. 31809. 76135. 44326 3.27e4 5.47e4 2.56e4\n2 age           1000     0    95    18     12     26     14 1.04e1 2.28e1 1.85e1\n3 expenditures  1000   222 75098  7026   2899. 37713. 34814 7.76e3 1.81e4 1.95e4\n# ℹ 2 more variables: se &lt;dbl&gt;, ci &lt;dbl&gt;\n\ndds.discr1 %&gt;% \n  group_by(r_e) %&gt;%\n  get_summary_stats(expenditures, type = \"common\")\n\n# A tibble: 8 × 11\n  r_e       variable     n   min   max median    iqr   mean     sd     se     ci\n  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American… expendi…     4  3726 58392 41818. 34085. 36438. 25694. 12847. 40885.\n2 Asian     expendi…   129   374 75098  9369  30892  18392. 19209.  1691.  3346.\n3 Black     expendi…    59   240 60808  8687  37987  20885. 20549.  2675.  5355.\n4 Hispanic  expendi…   376   222 65581  3952   7961. 11066. 15630.   806.  1585.\n5 Multi Ra… expendi…    26   669 38619  2622   2060.  4457.  7332.  1438.  2962.\n6 Native H… expendi…     3 37479 50141 40727   6331  42782.  6576.  3797. 16337.\n7 Other     expendi…     2  2018  4615  3316.  1298.  3316.  1836.  1298. 16499.\n8 White no… expendi…   401   340 68890 15718  39157  24698. 20604.  1029.  2023."
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#how-to-force-all-output-to-be-shown-12",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#how-to-force-all-output-to-be-shown-12",
+    "title": "R06: ggplot2, Part 1",
+    "section": "How to force all output to be shown? (1/2)",
+    "text": "How to force all output to be shown? (1/2)\nUse kable() from the knitr package.\n\ndds.discr1 %&gt;% get_summary_stats() %&gt;% kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvariable\nn\nmin\nmax\nmedian\nq1\nq3\niqr\nmad\nmean\nsd\nse\nci\n\n\n\n\nid\n1000\n10210\n99898\n55384.5\n31808.75\n76134.75\n44326\n32734.325\n54662.85\n25643.673\n810.924\n1591.310\n\n\nage\n1000\n0\n95\n18.0\n12.00\n26.00\n14\n10.378\n22.80\n18.462\n0.584\n1.146\n\n\nexpenditures\n1000\n222\n75098\n7026.0\n2898.75\n37712.75\n34814\n7760.670\n18065.79\n19542.831\n617.999\n1212.724"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "title": "R06: ggplot2, Part 1",
+    "section": "How to force all output to be shown? knitr (2/2)",
+    "text": "How to force all output to be shown? knitr (2/2)\nUse kable() from the knitr package.\n\ndds.discr1 %&gt;% \n  group_by(r_e) %&gt;%\n  get_summary_stats(expenditures, type = \"common\") %&gt;% \n  kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nr_e\nvariable\nn\nmin\nmax\nmedian\niqr\nmean\nsd\nse\nci\n\n\n\n\nAmerican Indian\nexpenditures\n4\n3726\n58392\n41817.5\n34085.25\n36438.250\n25693.912\n12846.956\n40884.748\n\n\nAsian\nexpenditures\n129\n374\n75098\n9369.0\n30892.00\n18392.372\n19209.225\n1691.278\n3346.482\n\n\nBlack\nexpenditures\n59\n240\n60808\n8687.0\n37987.00\n20884.593\n20549.274\n2675.288\n5355.170\n\n\nHispanic\nexpenditures\n376\n222\n65581\n3952.0\n7961.25\n11065.569\n15629.847\n806.048\n1584.940\n\n\nMulti Race\nexpenditures\n26\n669\n38619\n2622.0\n2059.75\n4456.731\n7332.135\n1437.950\n2961.514\n\n\nNative Hawaiian\nexpenditures\n3\n37479\n50141\n40727.0\n6331.00\n42782.333\n6576.462\n3796.922\n16336.838\n\n\nOther\nexpenditures\n2\n2018\n4615\n3316.5\n1298.50\n3316.500\n1836.356\n1298.500\n16499.007\n\n\nWhite not Hispanic\nexpenditures\n401\n340\n68890\n15718.0\n39157.00\n24697.549\n20604.376\n1028.933\n2022.793\n\n\n\n\n\n\n\nR06 Slides"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Case study: discrimination in developmental disability support (1.7.1)",
+    "text": "Case study: discrimination in developmental disability support (1.7.1)\n\nPrevious research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\n\n\n\nR06 Slides"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-install-the-packages-listed-below",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-install-the-packages-listed-below",
+    "title": "R06: ggplot2, Part 1",
+    "section": "From last time: Install the packages listed below",
+    "text": "From last time: Install the packages listed below\n\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\n\n\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data\n\nhere\n\nMore info in slides ahead"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#goals-for-today",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#goals-for-today",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Goals for today",
+    "text": "Goals for today\n\n\n\nExploratory Data Analysis (EDA) (Sections 1.4, 1.5, 1.6, 1.7.1)\n\nData visualization with ggplot\n\nnumerical & categorical variables, and relationships between variables\n\nSummarizing numerical data\nFrequency (two-way) tables\n\nSome data wrangling techniques along the way\n\n\n\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#from-last-time-install-the-packages-listed-below",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#from-last-time-install-the-packages-listed-below",
+    "title": "R06: ggplot2, Part 1",
+    "section": "From last time: Install the packages listed below",
+    "text": "From last time: Install the packages listed below\n\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\n\n\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data\n\nhere\n\nMore info in slides ahead"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#load-packages-with-library-command",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#load-packages-with-library-command",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\nTip: at the top of your Qmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\n\nPackages need to be reloaded every time you open Rstudio.\nlibrary() commands to load needed packages must be in the Qmd file\n\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse) # contains ggplot2    \nlibrary(oibiostat)\nlibrary(ggridges)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#case-study-description",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#case-study-description",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Case Study Description",
+    "text": "Case Study Description\n\nIn the US, individuals with developmental disabilities typically receive services and support from state governments.\n\nCalifornia allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)\nRecipients of DDS funds are referred to as “consumers.”\n\nDataset dds.discr\n\nsample of 1,000 DDS consumers (out of a total of ~ 250,000)\ndata include age, gender, race/ethnicity, and annual DDS financial support per consumer\n\nPrevious research\n\nResearchers examined expenditures on consumers by ethnicity\nFound that the mean annual expenditure on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\nSee Section 1.7.1 in the textbook for more details"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#load-dds.discr-dataset-from-oibiostat-package",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#load-dds.discr-dataset-from-oibiostat-package",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Load dds.discr dataset from oibiostat package",
+    "text": "Load dds.discr dataset from oibiostat package\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#side-by-side-boxplots",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#side-by-side-boxplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Side-by-side boxplots",
+    "text": "Side-by-side boxplots\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           y = ethnicity)) + \n  geom_boxplot() + \n  labs(x = \"Annual Expenditures ($)\", \n       y = \"Race and ethnicity\")  \n\nCan you determine the following using boxplots?\n\ndistribution shape\nsample size"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#side-by-side-boxplots-with-data-points",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#side-by-side-boxplots-with-data-points",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Side-by-side boxplots with data points",
+    "text": "Side-by-side boxplots with data points\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           y = ethnicity)) + \n  geom_boxplot(color=\"darkgrey\") + \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))      \n\nCan you determine the following using boxplots?\n\ndistribution shape\nsample size"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#density-plots-by-group",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#density-plots-by-group",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Density plots by group",
+    "text": "Density plots by group\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           color = ethnicity)) + \n  geom_density() + \n  labs(x = \"Annual Expenditures ($)\")"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#ridgeline-plot",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#ridgeline-plot",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Ridgeline plot",
+    "text": "Ridgeline plot\n\n\n\n# library(ggridges)\nggplot(data = dds.discr,\n       aes(x = expenditures,\n           y = ethnicity,      \n           fill = ethnicity)      \n       ) + \n  geom_density_ridges(      \n    alpha = 0.3,      \n    show.legend = FALSE) +      \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\",\n       title =        \n\"Expenditures by race and \n       \\nethnicity\")"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#transforming-data-1.4.5",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#transforming-data-1.4.5",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Transforming data (1.4.5)",
+    "text": "Transforming data (1.4.5)\n\nWe sometimes apply a transformation to highly skewed data to make it more symmetric\nLog transformations are often used for skewed right data\n\n\n\nx = expenditures\n\nggplot(data = dds.discr, \n       aes(x = expenditures)) +  \n  geom_density() \n\n\n\n\n\nx = log(expenditures)\n\nggplot(data = dds.discr, \n       aes(x = log(expenditures))) +  \n  geom_density()"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#scatterplots",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#scatterplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\n\n\nggplot(data = dds.discr, \n       aes(x = age,\n           y = expenditures)) + \n  geom_point() +       \n  labs(x = \"Age\",\n       y = \"Annual Expenditures ($)\") \n\nResponse vs. explanatory variables (Section 1.2.3)\n\nA response variable measures the outcome of interest in a study\nA study will typically examine whether the values of a response variable differ as values of an explanatory variable change\n\n\n\n\n\n\n\n\n\nDescribe the association between the variables"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#describing-associations-between-2-numerical-variables",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#describing-associations-between-2-numerical-variables",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Describing associations between 2 numerical variables",
+    "text": "Describing associations between 2 numerical variables\n\n\nTwo variables \\(x\\) and \\(y\\) are\n\npositively associated if \\(y\\) increases as \\(x\\) increases.\nnegatively associated if \\(y\\) decreases as \\(x\\) increases.\nIf there is no association between the variables, then we say they are uncorrelated or independent.\n\n\n\n\n\n\n\n\n\n\nThe term “association” is a very general term.\n\nCan be used for numerical or categorical variables\nNot specifically referring to linear associations"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#pearson-correlation-coefficient-r",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#pearson-correlation-coefficient-r",
+    "title": "R06: ggplot2, Part 1",
+    "section": "(Pearson) Correlation coefficient \\(r\\)",
+    "text": "(Pearson) Correlation coefficient \\(r\\)\n\n\\(r = -1\\) indicates a perfect negative linear relationship: As one variable increases, the value of the other variable tends to go down, following a straight line.\n\\(r = 0\\) indicates no linear relationship: The values of both variables go up/down independently of each other.\n\\(r = 1\\) indicates a perfect positive linear relationship: As the value of one variable goes up, the value of the other variable tends to go up as well in a linear fashion.\nThe closer \\(r\\) is to ±1, the stronger the linear association."
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#pearson-correlation-coefficient-r-formula",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#pearson-correlation-coefficient-r-formula",
+    "title": "R06: ggplot2, Part 1",
+    "section": "(Pearson) Correlation coefficient (r): formula",
+    "text": "(Pearson) Correlation coefficient (r): formula\nThe (Peasron) correlation coefficient of variables \\(x\\) and \\(y\\) can be computed using the formula \\[r = \\frac{1}{n-1}\\sum_{i=1}^{n}\\Big(\\frac{x_i - \\bar{x}}{s_x}\\Big)\\Big(\\frac{y_i - \\bar{y}}{s_y}\\Big)\\] where\n\n\\((x_1,y_1),(x_2,y_2),...,(x_n,y_n)\\) are the \\(n\\) paired values of the variables \\(x\\) and \\(y\\)\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the variables \\(x\\) and \\(y\\), respectively\n\n\ncor(dds.discr$age, dds.discr$expenditures)\n\n[1] 0.8432422"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#guess-the-correlation-game",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#guess-the-correlation-game",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Guess the correlation game!",
+    "text": "Guess the correlation game!\n\n\nRossman & Chance’s applet\n\n\n\n\n\nTracks performance of guess vs. actual, error vs. actual, and error vs. trial\nhttp://www.rossmanchance.com/applets/GuessCorrelation.html\n\nOr, for the Atari-like experience\n\n\n\nhttp://guessthecorrelation.com/"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#scatterplots-with-color-coded-dots",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#scatterplots-with-color-coded-dots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Scatterplots with color-coded dots",
+    "text": "Scatterplots with color-coded dots\nDescribe the association between the variables\n\nggplot(data = dds.discr, \n       aes(x = age, y = expenditures,\n           color = ethnicity)) +   \n  geom_point(alpha = .5) +       \n  labs(x = \"Age\", y = \"Annual Expenditures ($)\") +\n  theme(legend.position = \"bottom\")"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#barplots",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#barplots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Barplots",
+    "text": "Barplots\n\n\nCounts (below) vs.\npercentages (right)\n\nggplot(data = dds.discr, \n       aes(x = ethnicity)) +\n  geom_bar() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = ethnicity)) +\n  geom_bar(aes(y = stat(prop),  \n               group = 1)) + \n  scale_y_continuous(labels =  \n      scales::percent_format())"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#barplots-with-2-variables-segmented-bar-plots",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#barplots-with-2-variables-segmented-bar-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Barplots with 2 variables: segmented bar plots",
+    "text": "Barplots with 2 variables: segmented bar plots\n\n\n\nggplot(data = dds.discr, \n       aes(x = ethnicity,\n           fill = age.cohort)) + \n  geom_bar() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = ethnicity,\n           fill = age.cohort)) + \n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#barplots-with-2-variables-side-by-side-bar-plots",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#barplots-with-2-variables-side-by-side-bar-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Barplots with 2 variables: side-by-side bar plots",
+    "text": "Barplots with 2 variables: side-by-side bar plots\n\nggplot(data = dds.discr, \n       aes(x = ethnicity,\n           fill = age.cohort)) + \n  geom_bar(position = \"dodge\")"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#frequency-tables-count",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#frequency-tables-count",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Frequency tables: count()",
+    "text": "Frequency tables: count()\n\n\n\ncount is from the dplyr package\nthe output is a long tibble, and not a “nice” table\n\n\ndds.discr %&gt;% count(ethnicity)\n\n# A tibble: 8 × 2\n  ethnicity              n\n  &lt;fct&gt;              &lt;int&gt;\n1 American Indian        4\n2 Asian                129\n3 Black                 59\n4 Hispanic             376\n5 Multi Race            26\n6 Native Hawaiian        3\n7 Other                  2\n8 White not Hispanic   401\n\n\n\n\ndds.discr %&gt;% \n  count(ethnicity, age.cohort)\n\n# A tibble: 35 × 3\n   ethnicity       age.cohort     n\n   &lt;fct&gt;           &lt;fct&gt;      &lt;int&gt;\n 1 American Indian 13-17          1\n 2 American Indian 22-50          1\n 3 American Indian 51+            2\n 4 Asian           0-5            8\n 5 Asian           6-12          18\n 6 Asian           13-17         20\n 7 Asian           18-21         41\n 8 Asian           22-50         29\n 9 Asian           51+           13\n10 Black           0-5            3\n# ℹ 25 more rows"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#how-to-use-the-pipe",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#how-to-use-the-pipe",
+    "title": "R06: ggplot2, Part 1",
+    "section": "How to use the pipe %>%",
+    "text": "How to use the pipe %&gt;%\nThe pipe operator %&gt;% strings together commands to be performed sequentially\n\ndds.discr %&gt;% head(n=3)      # pronounce %&gt;% as \"then\"\n\n# A tibble: 3 × 6\n     id age.cohort   age gender expenditures ethnicity         \n  &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;             \n1 10210 13-17         17 Female         2113 White not Hispanic\n2 10409 22-50         37 Male          41924 White not Hispanic\n3 10486 0-5            3 Male           1454 Hispanic          \n\n\n\nAlways first list the tibble that the commands are being applied to\nCan use multiple pipes to run multiple commands in sequence\n\nWhat does the following code do?\n\n\n\ndds.discr %&gt;% head(n=3) %&gt;% summary()"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#frequency-tables-janitor-packages-tabyl-function",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#frequency-tables-janitor-packages-tabyl-function",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Frequency tables: janitor package’s tabyl function",
+    "text": "Frequency tables: janitor package’s tabyl function\n\n\n\n# default table\ndds.discr %&gt;% \n  tabyl(ethnicity)  \n\n          ethnicity   n percent\n    American Indian   4   0.004\n              Asian 129   0.129\n              Black  59   0.059\n           Hispanic 376   0.376\n         Multi Race  26   0.026\n    Native Hawaiian   3   0.003\n              Other   2   0.002\n White not Hispanic 401   0.401\n\n\n\nadorn_ your table!\n\ndds.discr %&gt;% \n  tabyl(ethnicity) %&gt;%\n  adorn_totals(\"row\") %&gt;% \n  adorn_pct_formatting(digits=2)  \n\n          ethnicity    n percent\n    American Indian    4   0.40%\n              Asian  129  12.90%\n              Black   59   5.90%\n           Hispanic  376  37.60%\n         Multi Race   26   2.60%\n    Native Hawaiian    3   0.30%\n              Other    2   0.20%\n White not Hispanic  401  40.10%\n              Total 1000 100.00%"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#relative-frequency-table",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#relative-frequency-table",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Relative frequency table",
+    "text": "Relative frequency table\n\n\n\nA relative frequency table shows proportions (or percentages) instead of counts\nTo the right I removed (deselected) the counts column (n) to create a relative frequency table\n\n\n\ndds.discr %&gt;% \n  tabyl(ethnicity) %&gt;%\n  adorn_totals(\"row\") %&gt;% \n  adorn_pct_formatting(digits=2) %&gt;%   \n  select(-n) \n\n          ethnicity percent\n    American Indian   0.40%\n              Asian  12.90%\n              Black   5.90%\n           Hispanic  37.60%\n         Multi Race   2.60%\n    Native Hawaiian   0.30%\n              Other   0.20%\n White not Hispanic  40.10%\n              Total 100.00%"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#contingency-tables-two-way-tables",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#contingency-tables-two-way-tables",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Contingency tables (two-way tables)",
+    "text": "Contingency tables (two-way tables)\n\n\n\nContingency tables summarize data for two categorical variables\n\nwith each value in the table representing the number of times\na particular combination of outcomes occurs\n\nRow & column totals\nare sometimes called marginal totals\n\n\n\ndds.discr %&gt;% \n  tabyl(ethnicity, gender) %&gt;%    \n  adorn_totals(c(\"row\", \"col\"))    \n\n          ethnicity Female Male Total\n    American Indian      3    1     4\n              Asian     61   68   129\n              Black     26   33    59\n           Hispanic    192  184   376\n         Multi Race     13   13    26\n    Native Hawaiian      2    1     3\n              Other      1    1     2\n White not Hispanic    205  196   401\n              Total    503  497  1000"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#contingency-tables-with-percentages",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#contingency-tables-with-percentages",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Contingency tables with percentages",
+    "text": "Contingency tables with percentages\n\ndds.discr %&gt;% \n  tabyl(ethnicity, age.cohort) %&gt;%\n  adorn_totals(c(\"row\")) %&gt;%\n  adorn_percentages(\"row\") %&gt;%   \n  adorn_pct_formatting(digits=0) %&gt;%    \n  adorn_ns()    \n\n          ethnicity      0-5      6-12      13-17     18-21     22-50       51+\n    American Indian  0%  (0)  0%   (0)  25%   (1)  0%   (0) 25%   (1) 50%   (2)\n              Asian  6%  (8) 14%  (18)  16%  (20) 32%  (41) 22%  (29) 10%  (13)\n              Black  5%  (3) 19%  (11)  20%  (12) 15%   (9) 29%  (17) 12%   (7)\n           Hispanic 12% (44) 24%  (91)  27% (103) 21%  (78) 11%  (43)  5%  (17)\n         Multi Race 27%  (7) 35%   (9)  27%   (7)  8%   (2)  4%   (1)  0%   (0)\n    Native Hawaiian  0%  (0)  0%   (0)   0%   (0)  0%   (0) 67%   (2) 33%   (1)\n              Other  0%  (0)  0%   (0) 100%   (2)  0%   (0)  0%   (0)  0%   (0)\n White not Hispanic  5% (20) 11%  (46)  17%  (67) 17%  (69) 33% (133) 16%  (66)\n              Total  8% (82) 18% (175)  21% (212) 20% (199) 23% (226) 11% (106)"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Mean annual DDS expenditures by race/ethnicity",
+    "text": "Mean annual DDS expenditures by race/ethnicity\n\n\n\nmean(dds.discr$expenditures)\n\n[1] 18065.79\n\ndds.discr %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 1 × 3\n     ave     SD   med\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 18066. 19543.  7026\n\n\n\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 8 × 4\n  ethnicity             ave     SD    med\n  &lt;fct&gt;               &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American Indian    36438. 25694. 41818.\n2 Asian              18392. 19209.  9369 \n3 Black              20885. 20549.  8687 \n4 Hispanic           11066. 15630.  3952 \n5 Multi Race          4457.  7332.  2622 \n6 Native Hawaiian    42782.  6576. 40727 \n7 Other               3316.  1836.  3316.\n8 White not Hispanic 24698. 20604. 15718"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#get_summary_stats-from-rstatix-package",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#get_summary_stats-from-rstatix-package",
+    "title": "R06: ggplot2, Part 1",
+    "section": "get_summary_stats() from rstatix package",
+    "text": "get_summary_stats() from rstatix package\n\ndds.discr %&gt;% get_summary_stats()\n\n# A tibble: 3 × 13\n  variable         n   min   max median     q1     q3   iqr    mad   mean     sd\n  &lt;fct&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 id            1000 10210 99898 55384. 31809. 76135. 44326 3.27e4 5.47e4 2.56e4\n2 age           1000     0    95    18     12     26     14 1.04e1 2.28e1 1.85e1\n3 expenditures  1000   222 75098  7026   2899. 37713. 34814 7.76e3 1.81e4 1.95e4\n# ℹ 2 more variables: se &lt;dbl&gt;, ci &lt;dbl&gt;\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;%\n  get_summary_stats(expenditures, type = \"common\")\n\n# A tibble: 8 × 11\n  ethnicity variable     n   min   max median    iqr   mean     sd     se     ci\n  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American… expendi…     4  3726 58392 41818. 34085. 36438. 25694. 12847. 40885.\n2 Asian     expendi…   129   374 75098  9369  30892  18392. 19209.  1691.  3346.\n3 Black     expendi…    59   240 60808  8687  37987  20885. 20549.  2675.  5355.\n4 Hispanic  expendi…   376   222 65581  3952   7961. 11066. 15630.   806.  1585.\n5 Multi Ra… expendi…    26   669 38619  2622   2060.  4457.  7332.  1438.  2962.\n6 Native H… expendi…     3 37479 50141 40727   6331  42782.  6576.  3797. 16337.\n7 Other     expendi…     2  2018  4615  3316.  1298.  3316.  1836.  1298. 16499.\n8 White no… expendi…   401   340 68890 15718  39157  24698. 20604.  1029.  2023."
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#how-to-force-all-output-to-be-shown-12",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#how-to-force-all-output-to-be-shown-12",
+    "title": "R06: ggplot2, Part 1",
+    "section": "How to force all output to be shown? (1/2)",
+    "text": "How to force all output to be shown? (1/2)\nUse kable() from the knitr package.\n\ndds.discr %&gt;% get_summary_stats() %&gt;% kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvariable\nn\nmin\nmax\nmedian\nq1\nq3\niqr\nmad\nmean\nsd\nse\nci\n\n\n\n\nid\n1000\n10210\n99898\n55384.5\n31808.75\n76134.75\n44326\n32734.325\n54662.85\n25643.673\n810.924\n1591.310\n\n\nage\n1000\n0\n95\n18.0\n12.00\n26.00\n14\n10.378\n22.80\n18.462\n0.584\n1.146\n\n\nexpenditures\n1000\n222\n75098\n7026.0\n2898.75\n37712.75\n34814\n7760.670\n18065.79\n19542.831\n617.999\n1212.724"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "title": "R06: ggplot2, Part 1",
+    "section": "How to force all output to be shown? knitr (2/2)",
+    "text": "How to force all output to be shown? knitr (2/2)\nUse kable() from the knitr package.\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;%\n  get_summary_stats(expenditures, type = \"common\") %&gt;% \n  kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nethnicity\nvariable\nn\nmin\nmax\nmedian\niqr\nmean\nsd\nse\nci\n\n\n\n\nAmerican Indian\nexpenditures\n4\n3726\n58392\n41817.5\n34085.25\n36438.250\n25693.912\n12846.956\n40884.748\n\n\nAsian\nexpenditures\n129\n374\n75098\n9369.0\n30892.00\n18392.372\n19209.225\n1691.278\n3346.482\n\n\nBlack\nexpenditures\n59\n240\n60808\n8687.0\n37987.00\n20884.593\n20549.274\n2675.288\n5355.170\n\n\nHispanic\nexpenditures\n376\n222\n65581\n3952.0\n7961.25\n11065.569\n15629.847\n806.048\n1584.940\n\n\nMulti Race\nexpenditures\n26\n669\n38619\n2622.0\n2059.75\n4456.731\n7332.135\n1437.950\n2961.514\n\n\nNative Hawaiian\nexpenditures\n3\n37479\n50141\n40727.0\n6331.00\n42782.333\n6576.462\n3796.922\n16336.838\n\n\nOther\nexpenditures\n2\n2018\n4615\n3316.5\n1298.50\n3316.500\n1836.356\n1298.500\n16499.007\n\n\nWhite not Hispanic\nexpenditures\n401\n340\n68890\n15718.0\n39157.00\n24697.549\n20604.376\n1028.933\n2022.793"
+  },
+  {
+    "objectID": "lessons/R07_ggplot_02/R07_ggplot_02.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "href": "lessons/R07_ggplot_02/R07_ggplot_02.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Case study: discrimination in developmental disability support (1.7.1)",
+    "text": "Case study: discrimination in developmental disability support (1.7.1)\n\nPrevious research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\n\n\n\nR06 Slides"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html",
+    "href": "hw_answers/HW_03_ans.html",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "Review the solution in the back of the book for exercise 3.5.\n\n\n215 eggs\n\n\n\n8.53 eggs\n\n\n\n\n\n\n\nFor #3.8, calculate the binomial probabilities two ways:\n(1) using the formula (can use R to calculate factorials or the choose function) and\n(2) using R functions for binomial distribution probabilities.\n\n\n\nFor #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAdditional Instructions - IMPORTANT!!!\n\nFor ALL normal distribution exercises:\n\nmake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\ncalculate probabilities using both\n\nz-table\nR"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#gull-clutch-size",
+    "href": "hw_answers/HW_03_ans.html#gull-clutch-size",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "Review the solution in the back of the book for exercise 3.5.\n\n\n215 eggs\n\n\n\n8.53 eggs"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-i.",
+    "href": "hw_answers/HW_03_ans.html#chickenpox-part-i.",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "For #3.8, calculate the binomial probabilities two ways:\n(1) using the formula (can use R to calculate factorials or the choose function) and\n(2) using R functions for binomial distribution probabilities."
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-ii.",
+    "href": "hw_answers/HW_03_ans.html#chickenpox-part-ii.",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities."
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#instructions-for-normal-probability-exercises",
+    "href": "hw_answers/HW_03_ans.html#instructions-for-normal-probability-exercises",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "Important\n\n\n\nAdditional Instructions - IMPORTANT!!!\n\nFor ALL normal distribution exercises:\n\nmake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\ncalculate probabilities using both\n\nz-table\nR"
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html",
+    "href": "hw_answers/HW_02_ans.html",
+    "title": "Homework 2 Answers",
+    "section": "",
+    "text": "These are the some numeric/short answers to the homework. Often, these answers are insufficient for your own work or solutions. I just wanted to give you a part of the answer to help guide you in the right direction."
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#poverty-and-language",
+    "href": "hw_answers/HW_02_ans.html#poverty-and-language",
+    "title": "Homework 2 Answers",
+    "section": "2.6 Poverty and language",
+    "text": "2.6 Poverty and language\nThe American Community Survey is an ongoing survey that provides data every year to give communities the current information they need to plan investments and services. The 2010 American Community Survey estimates that 14.6% of Americans live below the poverty line, 20.7% speak a language other than English (foreign language) at home, and 4.2% fall into both categories.\n\na\nNot disjoint\n\n\nb\n\n\n\n\n\n(polygon[GRID.polygon.1], polygon[GRID.polygon.2], polygon[GRID.polygon.3], polygon[GRID.polygon.4], text[GRID.text.5], text[GRID.text.6], text[GRID.text.7], text[GRID.text.8], text[GRID.text.9]) \n\n\n\n\nc\n10.4%\n\n\nd\n31.1%\n\n\ne\n68.9%\n\n\nf\nNot independent"
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#school-absences",
+    "href": "hw_answers/HW_02_ans.html#school-absences",
+    "title": "Homework 2 Answers",
+    "section": "2.8 School absences",
+    "text": "2.8 School absences\n\na\n0.32\n\n\nb\n0.57\n\n\nc\n0.68\n\n\nd\n0.1024\n\n\ne\n0.4624"
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#health-coverage-frequencies",
+    "href": "hw_answers/HW_02_ans.html#health-coverage-frequencies",
+    "title": "Homework 2 Answers",
+    "section": "2.10 Health coverage, frequencies",
+    "text": "2.10 Health coverage, frequencies\n\n\n\n\n\n\n  \n    \n      health_status\n      Excellent\n      Very_good\n      Good\n      Fair\n      Poor\n      Total\n    \n  \n  \n    No\n459\n727\n854\n385\n99\n2524\n    Yes\n4198\n6245\n4821\n1634\n578\n17476\n    total\n4657\n6972\n5675\n2019\n677\n20000\n  \n  \n  \n\n\n\n\n\na\n0.02295\n\n\nb\n0.3361"
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#health-coverage-relative-frequencies",
+    "href": "hw_answers/HW_02_ans.html#health-coverage-relative-frequencies",
+    "title": "Homework 2 Answers",
+    "section": "2.14 Health coverage, relative frequencies",
+    "text": "2.14 Health coverage, relative frequencies\nThe Behavioral Risk Factor Surveillance System (BRFSS) is an annual telephone survey designed to identify risk factors in the adult population and report emerging health trends. The following table displays the distribution of health status of respondents to this survey (excellent, very good, good, fair, poor) conditional on whether or not they have health insurance.\n\n(covg.tab &lt;- data.frame(\n  health_status = c(\"No\",\"Yes\",\"total\"),\n  Excellent = c(0.0230, 0.2099,0.2329),\n  Very_good = c(0.0364, 0.3123,0.3486),\n  Good = c(0.0427,0.2410,0.2838),\n  Fair = c(0.0192,0.0817,0.1009),\n  Poor = c(0.0050,0.0289,0.0338),\n  Total = c(0.1262,0.8738,1.0000)\n)) %&gt;% gt()\n\n\n\n\n\n  \n    \n      health_status\n      Excellent\n      Very_good\n      Good\n      Fair\n      Poor\n      Total\n    \n  \n  \n    No\n0.0230\n0.0364\n0.0427\n0.0192\n0.0050\n0.1262\n    Yes\n0.2099\n0.3123\n0.2410\n0.0817\n0.0289\n0.8738\n    total\n0.2329\n0.3486\n0.2838\n0.1009\n0.0338\n1.0000\n  \n  \n  \n\n\n\n\n\na\nNo\n\n\nb\n0.2329\n\n\nc\n0.2402152\n\n\nd\n0.1822504\n\n\ne\nNo"
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#predisposition-for-thrombosis",
+    "href": "hw_answers/HW_02_ans.html#predisposition-for-thrombosis",
+    "title": "Homework 2 Answers",
+    "section": "2.18 Predisposition for thrombosis",
+    "text": "2.18 Predisposition for thrombosis\n\na\n0.605\n\n\nb\n0.9997"
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#breast-cancer-and-age",
+    "href": "hw_answers/HW_02_ans.html#breast-cancer-and-age",
+    "title": "Homework 2 Answers",
+    "section": "2.24 Breast cancer and age",
+    "text": "2.24 Breast cancer and age\n\na\n\n\n\n\n\n\n  \n    \n      age_group\n      prevalence\n      PPV\n    \n  \n  \n    30 - 40\n0.0044\n0.070\n    40 - 50\n0.0147\n0.202\n    50 - 60\n0.0238\n0.293\n    60 - 70\n0.0356\n0.386\n    70 - 80\n0.0382\n0.403\n  \n  \n  \n\n\n\n\n\n\nb\nThe PPV increased more with the higher specificity vs. the higher sensitivity."
+  },
+  {
+    "objectID": "hw_answers/HW_02_ans.html#non-book-exercise",
+    "href": "hw_answers/HW_02_ans.html#non-book-exercise",
+    "title": "Homework 2 Answers",
+    "section": "Non-book exercise",
+    "text": "Non-book exercise\n0.05"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html",
+    "href": "hw_answers/HW_01_ans.html",
+    "title": "Homework 1 Answers",
+    "section": "",
+    "text": "These are the some numeric/short answers to the homework. Often, these answers are insufficient for your own work or solutions. I just wanted to give you a part of the answer to help guide you in the right direction."
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#sinusitis-and-antibiotics-part-i.",
+    "href": "hw_answers/HW_01_ans.html#sinusitis-and-antibiotics-part-i.",
+    "title": "Homework 1 Answers",
+    "section": "1.2 Sinusitis and antibiotics, Part I.",
+    "text": "1.2 Sinusitis and antibiotics, Part I.\n\na\n78%\n\n\nb\n80%\n\n\nc\nControl\n\n\nd"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#buteyko-method-study-components",
+    "href": "hw_answers/HW_01_ans.html#buteyko-method-study-components",
+    "title": "Homework 1 Answers",
+    "section": "1.4 Buteyko method, study components",
+    "text": "1.4 Buteyko method, study components\n\na\n\n\nb\n600\n\n\nc"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#smoking-habits-of-uk-residents",
+    "href": "hw_answers/HW_01_ans.html#smoking-habits-of-uk-residents",
+    "title": "Homework 1 Answers",
+    "section": "1.8 Smoking habits of UK residents",
+    "text": "1.8 Smoking habits of UK residents\n\na\n\n\nb\n1691\n\n\nc"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#herbal-remedies",
+    "href": "hw_answers/HW_01_ans.html#herbal-remedies",
+    "title": "Homework 1 Answers",
+    "section": "1.12 Herbal remedies",
+    "text": "1.12 Herbal remedies\n\na\nTarget population: Healthy young adults\n\n\nb\nNo\n\n\nc\nYes"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#city-council-survey",
+    "href": "hw_answers/HW_01_ans.html#city-council-survey",
+    "title": "Homework 1 Answers",
+    "section": "1.20 City council survey",
+    "text": "1.20 City council survey\n\na\nSimple random sampling\n\n\nb\nStratified sampling\n\n\nc\nCluster sampling\n\n\nd\nMultistage cluster sampling\n\n\ne\nConvenience sampling"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#income-at-the-coffee-shop",
+    "href": "hw_answers/HW_01_ans.html#income-at-the-coffee-shop",
+    "title": "Homework 1 Answers",
+    "section": "1.31 Income at the coffee shop",
+    "text": "1.31 Income at the coffee shop\n\na\nMedian\n\n\nb\nIQR"
+  },
+  {
+    "objectID": "hw_answers/HW_01_ans.html#midrange",
+    "href": "hw_answers/HW_01_ans.html#midrange",
+    "title": "Homework 1 Answers",
+    "section": "1.32 Midrange",
+    "text": "1.32 Midrange\nNot robust"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#introduction-to-ggplot2",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#introduction-to-ggplot2",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Introduction to ggplot2",
+    "text": "Introduction to ggplot2\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-r-packages",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-r-packages",
+    "title": "R06: ggplot2, Part 1",
+    "section": "From last time: R Packages",
+    "text": "From last time: R Packages\nA good analogy for R packages is that they are like apps you can download onto a mobile phone:\n\nModernDive Figure 1.4"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-load-packages-with-library-command",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-load-packages-with-library-command",
+    "title": "R06: ggplot2, Part 1",
+    "section": "From last time: Load packages with library() command",
+    "text": "From last time: Load packages with library() command\n\nTip: at the top of your Qmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\n\nPackages need to be reloaded every time you open Rstudio.\nlibrary() commands to load needed packages must be in the Qmd file\n\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse) # contains ggplot2    \nlibrary(oibiostat)\nlibrary(ggridges)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#some-things-to-note-on-this-dataset",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#some-things-to-note-on-this-dataset",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Some things to note on this dataset",
+    "text": "Some things to note on this dataset\n\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n\n\n\nThis happens in older datasets (and honestly some newer ones): gender and sex get conflated\n\nI try to catch these issues before sharing datasets with you, but when we load datasets directly from the oibiostat package, I can’t make these changes\nIf you are unfamiliar with the differences, please see this NIH site on sex and gender\n\nAlso, race and ethnicity can be mislabeled\n\n“White not hispanic” combines race and ethnicity\nIf you are unfamiliar with the differences, please see this APA site on race and ethnicity"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#ggplot2-in-tidyverse",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#ggplot2-in-tidyverse",
+    "title": "R06: ggplot2, Part 1",
+    "section": "ggplot2 in tidyverse",
+    "text": "ggplot2 in tidyverse\n\n\n\n\n\nWe talked about this in our review notes\n\nI want to revisit it: always helps to have more examples!\nThis example is closer to the multivariable work we’ll do in this class!\n\n\n \n\nggplot2 is tidyverse’s data visualization package\n\n \n\nThe gg in “ggplot2” stands for Grammar of Graphics\n\n \n\nIt is inspired by the book Grammar of Graphics by Leland Wilkinson"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#rename-one-of-the-first-things-i-usually-do",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#rename-one-of-the-first-things-i-usually-do",
+    "title": "R06: ggplot2, Part 1",
+    "section": "rename(): one of the first things I usually do",
+    "text": "rename(): one of the first things I usually do\n\nI want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)\n\n \n\ndds.discr1 = dds.discr %&gt;% \n  rename(sex_MF = gender, \n         r_e = ethnicity)\n\nglimpse(dds.discr1)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ sex_MF       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#ggplot2-in-tidyverse-1",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#ggplot2-in-tidyverse-1",
+    "title": "R06: ggplot2, Part 1",
+    "section": "ggplot2 in tidyverse",
+    "text": "ggplot2 in tidyverse\n\n\n\n\n\nWe talked about this in our review notes\n\nI want to revisit it: always helps to have more examples!\nThis example is closer to the multivariable work we’ll do in this class!\n\n\n \n\nggplot2 is tidyverse’s data visualization package\n\n \n\nThe gg in “ggplot2” stands for Grammar of Graphics\n\n \n\nIt is inspired by the book Grammar of Graphics by Leland Wilkinson"
   }
 ]

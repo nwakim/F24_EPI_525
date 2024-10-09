@@ -1,0 +1,86 @@
+---
+title: "Homework 3 Answers"
+subtitle: "EPI 525"
+date-modified: "today"
+format: 
+  html: 
+    link-external-newwindow: true
+    toc: true
+  pdf: default 
+editor_options: 
+  chunk_output_type: console
+---
+
+# Book exercises {.unnumbered}
+
+## 3.4 Baggage fees {.unnumbered}
+
+
+
+## 3.5 Gull clutch size {.unnumbered}
+
+Review the solution in the back of the book for exercise 3.5.
+
+### a {.unnumbered}
+
+215 eggs
+
+### b {.unnumbered}
+
+8.53 eggs
+
+## 3.6 Scooping ice cream  {.unnumbered}
+
+
+## 3.8 Chickenpox, Part I.  {.unnumbered}
+
+For #3.8, calculate the binomial probabilities two ways:  
+(1) using the formula (can use R to calculate factorials or the choose function) and  
+(2) using R functions for binomial distribution probabilities. 
+
+
+## 3.10 Chickenpox, Part II.  {.unnumbered}
+
+For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
+
+
+## !!! Instructions for Normal probability exercises !!! {.unnumbered}
+
+:::{.callout-important}
+
+Additional Instructions - IMPORTANT!!!
+
+* For __ALL__ normal distribution exercises: 
+  * make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
+  * calculate probabilities using **both**
+      * z-table
+      * R
+:::
+
+## 3.20 Area under the curve, Part II {.unnumbered}
+
+
+
+## 3.22 Triathlon times {.unnumbered}
+
+
+
+## 3.28 Arsenic poisoning {.unnumbered}
+
+
+
+## 3.30 Find the SD {.unnumbered}
+
+
+
+## 3.32 Chickenpox, Part III  {.unnumbered}
+
+
+
+## 3.38 Stenographer’s typos {.unnumbered}
+
+
+
+## 3.40 Osteosarcoma in NYC {.unnumbered}
+
+
