@@ -341,169 +341,358 @@ Meike Niederhausen and Nicky Wakim
 
   <p class="date">2024-10-14</p>
 </section>
-<section id="day-6-topics" class="slide level2">
-<h2>Day 6 topics</h2>
-<p>Section 3.1: Random variables Section 3.2: Binomial distribution</p>
+<section>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define random variables and how they map to probability distributions</li>
+<li>Calculate the expected value and variance of random variables (and combinations of random variables)</li>
+<li>BInomial distribution</li>
+</ol>
 </section>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
+
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
 <section id="random-variables" class="slide level2">
 <h2>Random variables</h2>
 <div class="definition">
-<p><strong>Definition 1</strong>. <em>A <strong>random variable (r.v.)</strong> assigns numerical values to the outcome of a random phenomenon.</em></p>
+<div class="def-ttl">
+<p>Random variable (RV)</p>
+</div>
+<div class="def-cont">
+<p>A <strong>random variable (r.v.)</strong> assigns numerical values (probability) to the outcome of a random phenomenon</p>
+</div>
 </div>
 <p>Notation: A random variable is usually denoted with a capital letter such as <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, or <span class="math inline">\(Z\)</span>.</p>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<div class="example">
-<p><strong>Example 2</strong>. <em><strong>Data points</strong> Suppose you have a dataset of size 3 (<span class="math inline">\(n=3\)</span>) with <span class="math inline">\(x_1 = 5, x_2 = 3,\)</span> and <span class="math inline">\(x_3 = 6\)</span>.</em></p>
+<section id="probability-distributions" class="slide level2">
+<h2>Probability distributions</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="definition">
+<div class="def-ttl">
+<p>Probability distribution</p>
+</div>
+<div class="def-cont">
+<p>A <strong>probability distribution</strong> consists of all disjoint outcomes and their associated probabilities.</p>
+</div>
+</div>
 <ul>
-<li><p><em>Each data point is the outcome of a random phenomenon</em></p></li>
-<li><p><em>Each data point is a numerical value</em></p></li>
-<li><p><em>The data points are examples of values of a sequence of random variables <span class="math inline">\(X_1, X_2,\)</span> and <span class="math inline">\(X_3\)</span></em></p></li>
-<li><p><em>For datasets, we almost always assume the data points came from random variables that are independent and have the same <strong>distribution</strong>.</em></p></li>
-<li><p><em>To calculate the likelihood of data, we need to know the distribution of the random variable that models the data.</em></p></li>
-<li><p><em>First, let’s remind ourselves how to calculate them mean and variance of a dataset:</em></p>
+<li>We’ve already seen one <a href="https://seeing-theory.brown.edu/basic-probability/index.html">in our heads and tails example</a></li>
+</ul>
+<div class="green">
+<div class="green-ttl">
+<p>Rules for a probability distribution</p>
+</div>
+<div class="green-cont">
+<p>A probability distribution is a list of all possible outcomes and their associated probabilities that satisfies three rules:</p>
+<ol type="1">
+<li>The outcomes listed must be disjoint</li>
+<li>Each probability must be between 0 and 1</li>
+<li>The probabilities must total to 1</li>
+</ol>
+</div>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="../../lessons/img_slides/prob_dist_HT.png" width="498"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="in-the-coin-toss-example" class="slide level2">
+<h2>In the coin toss example…</h2>
 <ul>
-<li><p><em>What is the mean of the data points?</em></p></li>
-<li><p><em>What are the variance and standard deviation of the data points?</em></p></li>
+<li><p>We can start to define the probability distribution</p></li>
+<li><p>Let’s define the coin flip with the random variable <span class="math inline">\(X\)</span></p>
+<ul>
+<li>Where <span class="math inline">\(X=1\)</span> if we get a heads and <span class="math inline">\(X=0\)</span> if we get a tails</li>
 </ul></li>
+<li><p>We can create a table for the random variable and probabilities of each outcome:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Coin flip (<span class="math inline">\(x\)</span>)</th>
+<th><span class="math inline">\(x=1\)</span></th>
+<th><span class="math inline">\(x=0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability (<span class="math inline">\(P(X=x)\)</span>)</td>
+<td>0.5</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Note: I use <span class="math inline">\(X\)</span> to refer to the random variable and <span class="math inline">\(x\)</span> to refer to the realized value it takes</p>
+<ul>
+<li>Then we can write <span class="math inline">\(P(X=x)\)</span> to discuss the probability for each realized value (<span class="math inline">\(x\)</span>) of the random variable (<span class="math inline">\(X\)</span>)</li>
+</ul></li>
+<li><p>Also note that the sum of the probabilities equal 1 <span class="math display">\[\sum_{x=0}^1 P(X=x) = 1\]</span></p></li>
+</ul>
+</section>
+<section id="lets-extend-this-to-rolling-a-die" class="slide level2">
+<h2>Let’s extend this to rolling a die</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example 1: Rolling a die</p>
+</div>
+<div class="ex-cont">
+<p>Suppose you roll a fair die. Let the random variable (r.v.) <span class="math inline">\(X\)</span> be the outcome of the roll, i.e.&nbsp;the value of the face showing on the die.</p>
+<ol type="1">
+<li>What is the probability distribution of the r.v. <span class="math inline">\(X\)</span>?</li>
+</ol>
+</div>
+</div>
+<p>&nbsp;</p>
+
+<img data-src="../../lessons/img_slides/die_prob_dist.png" class="r-stretch"></section>
+<section id="discrete-vs.-continuous-random-variables" class="slide level2">
+<h2>Discrete vs.&nbsp;continuous random variables</h2>
+<ul>
+<li>Probability distributions are usually either <strong>discrete</strong> or <strong>continuous</strong>, depending on whether the random variable is discrete or continuous.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="red">
+<div class="red-ttl">
+<p>Discrete random variable</p>
+</div>
+<div class="red-cont">
+<p>A <strong>discrete</strong> r.v. <span class="math inline">\(X\)</span> takes on a finite number of values or countably infinite number of possible values.</p>
+</div>
+</div>
+<p>Think:</p>
+<ul>
+<li>Number of heads in a set of coin tosses</li>
+<li>Number of people who have had chicken pox in a random sample</li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:49%;">
+<div class="pink2">
+<div class="pink2-ttl">
+<p>Continuous random variable</p>
+</div>
+<div class="pink2-cont">
+<p>A <strong>continuous</strong> r.v. <span class="math inline">\(X\)</span> can take on any real value in an interval of values or unions of intervals.</p>
+</div>
+</div>
+<p>Think:</p>
+<ul>
+<li>Height in a population</li>
+<li>Blood pressure in a population</li>
 </ul>
 </div>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<div class="example">
-<p><strong>Example 3</strong>. <em><strong>Rolling a die</strong> Suppose you roll a fair die. Let the random variable (r.v.) <span class="math inline">\(X\)</span> be the outcome of the roll, i.e.&nbsp;the value of the face showing on the die.</em></p>
-<ol type="1">
-<li><p><em>What is the probability distribution of the r.v. <span class="math inline">\(X\)</span>?</em></p></li>
-<li><p><em>What is the expected outcome of the r.v. <span class="math inline">\(X\)</span>?</em></p></li>
-<li><p><em>Now suppose the 6-sided die is not fair. How would we calculate the expected outcome?</em></p>
-<p><em>x</em> <em><span class="math inline">\(\mathbb{P}(X=x)\)</span></em> —– ——————— <em>1</em> <em>0.10</em> <em>2</em> <em>0.20</em> <em>3</em> <em>0.05</em> <em>4</em> <em>0.05</em> <em>5</em> <em>0.25</em> <em>6</em> <em>0.35</em></p></li>
-</ol>
-</div>
-<p>(From Textbook <span class="math inline">\(\S\)</span> 2.1.5)</p>
-</section>
-<section id="definition" class="slide level2">
-<h2>Definition</h2>
-<div class="definition">
-<p><strong>Definition 4</strong>. <em>A <strong>probability distribution</strong> consists of all disjoint outcomes and their associated probabilities.</em></p>
-</div>
-<p><strong>Rules for a probability distribution</strong> A probability distribution is a list of all possible outcomes and their associated probabilities that satisfies three rules:</p>
-<ol type="1">
-<li><p>The outcomes listed must be disjoint.</p></li>
-<li><p>Each probability must be between 0 and 1.</p></li>
-<li><p>The probabilities must total to 1.</p></li>
-</ol>
-<p>Probability distributions are usually either <strong>discrete</strong> or <strong>continuous</strong>, depending on whether the random variable is discrete or continuous.</p>
-<p>(Back to Textbook <span class="math inline">\(\S\)</span> 3.1.1)</p>
-</section>
-<section id="definition-1" class="slide level2">
-<h2>Definition</h2>
-<div class="definition">
-<p><strong>Definition 5</strong>. <em>A <strong>discrete</strong> r.v. <span class="math inline">\(X\)</span> takes on a finite number of values or countably infinite number of possible values.</em></p>
-</div>
-<div class="definition">
-<p><strong>Definition 6</strong>. <em>A <strong>continuous</strong> r.v. <span class="math inline">\(X\)</span> can take on any real value in an interval of values or unions of intervals.</em></p>
-</div>
-<p><span class="math inline">\(\S\)</span> <strong>3.1.2 Expectation</strong></p>
+<section id="expectation" class="slide level2">
+<h2>Expectation</h2>
 <ul>
 <li><p>We call the mean of a random variable its <strong>expected value</strong></p></li>
-<li><p>The expected value is calculated as a weighted average</p></li>
-</ul>
-</section>
-<section id="definition-2" class="slide level2">
-<h2>Definition</h2>
-<div class="definition">
-<p><strong>Definition 7</strong>. <em><strong>Expected value</strong> of a discrete random variable If <span class="math inline">\(X\)</span> takes on outcomes <span class="math inline">\(x_1\)</span>, ..., <span class="math inline">\(x_k\)</span> with probabilities <span class="math inline">\(P(X=x_1)\)</span>, ..., <span class="math inline">\(P(X=x_k)\)</span>, the expected value of <span class="math inline">\(X\)</span> is the sum of each outcome multiplied by its corresponding probability:</em></p>
-</div>
-<p><span class="math inline">\(\S\)</span> <strong>3.1.3 Variability of random variables</strong></p>
-<ul>
-<li><p>Just like with data, the variability of a r.v. is described with its variance or standard deviation.</p></li>
-<li><p>Squared deviations from the mean are weighted by their respective probabilities</p></li>
+<li><p>The expected value is calculated as a <strong>weighted average</strong></p></li>
 </ul>
 <div class="definition">
-<p><strong>Definition 8</strong>. <em><strong>Variance</strong> of a discrete random variable If <span class="math inline">\(X\)</span> takes on outcomes <span class="math inline">\(x_1\)</span>, ..., <span class="math inline">\(x_k\)</span> with probabilities <span class="math inline">\(P(X=x_1)\)</span>, …, <span class="math inline">\(P(X=x_k)\)</span> and expected value <span class="math inline">\(\mu=E(X)\)</span>, then the variance of <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(\text{Var}(X)\)</span> or <span class="math inline">\(\sigma^2\)</span>, is</em></p>
+<div class="def-ttl">
+<p>Expected value of a <em>discrete</em> random variable</p>
 </div>
-<div class="definition">
-<p><strong>Definition 9</strong>. <em><strong>Standard deviation</strong> of a discrete random variable The standard deviation of <span class="math inline">\(X\)</span>, labeled <span class="math inline">\(SD(X)\)</span> or <span class="math inline">\(\sigma\)</span>, is</em></p>
+<div class="def-cont">
+<p>If <span class="math inline">\(X\)</span> takes on outcomes <span class="math inline">\(x_1\)</span>, …, <span class="math inline">\(x_k\)</span> with probabilities <span class="math inline">\(P(X=x_1)\)</span>, …, <span class="math inline">\(P(X=x_k)\)</span>, the expected value of <span class="math inline">\(X\)</span> is the sum of each outcome multiplied by its corresponding probability: <span class="math display">\[\begin{aligned}\mu = E[X] = &amp; x_1 P(X=x_1) + x_2 P(X=x_2) + \ldots + x_k P(X=x_k) \\ = &amp; \sum_{i=1}^k x_iP(X=x_i) \end{aligned}\]</span></p>
 </div>
-</section>
-<section id="example-2" class="slide level2">
-<h2>Example</h2>
-<div class="example">
-<p><strong>Example 10</strong>. <em><strong>Rolling a fair die: variance</strong> Suppose you roll a fair 6-sided die. Let the random variable (r.v.) <span class="math inline">\(X\)</span> be the outcome of the roll, i.e.&nbsp;the value of the face showing on the die. Find the variance and standard deviation of <span class="math inline">\(X\)</span>.</em></p>
-<p><em>x</em> <em><span class="math inline">\(\mathbb{P}(X=x)\)</span></em> —– ———————</p>
-<p><em>1</em> <em>1/6</em></p>
-<p><em>2</em> <em>1/6</em></p>
-<p><em>3</em> <em>1/6</em></p>
-<p><em>4</em> <em>1/6</em></p>
-<p><em>5</em> <em>1/6</em></p>
-<p><em>6</em> <em>1/6</em></p>
 </div>
 </section>
-<section id="example-3" class="slide level2">
-<h2>Example</h2>
+<section id="back-to-rolling-a-die" class="slide level2">
+<h2>Back to rolling a die</h2>
+<div class="column" style="width:44%;">
 <div class="example">
-<p><strong>Example 11</strong>. <em><strong>Vaccinated people testing positive for Covid-19</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. <span class="math inline">\(X\)</span> to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.</em></p>
-<ol type="1">
-<li><p><em>Make a table for the probability distribution for the r.v. <span class="math inline">\(X\)</span></em></p></li>
-<li><p><em>What is the expected value of <span class="math inline">\(X\)</span>?</em></p></li>
-<li><p><em>What is the variance of <span class="math inline">\(X\)</span>?</em></p></li>
+<div class="ex-ttl">
+<p>Example 1: Rolling a die</p>
+</div>
+<div class="ex-cont">
+<p>Let’s go back to our fair fie with RV <span class="math inline">\(X\)</span> as the value of the face showing on the die.</p>
+<ol start="2" type="1">
+<li><p>What is the expected outcome of the RV <span class="math inline">\(X\)</span>?</p></li>
+<li><p>Now suppose the 6-sided die is not fair. How would we calculate the expected outcome?</p></li>
 </ol>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(\mathbb{P}(X=x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0.10</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0.20</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0.05</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0.05</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0.25</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>0.35</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </section>
+<section id="variability-of-random-variables" class="slide level2">
+<h2>Variability of random variables</h2>
+<p>Just like with data, the variability of a r.v. is described with its variance or standard deviation</p>
+<div class="definition">
+<div class="def-ttl">
+<p>Variance of a discrete random variable</p>
+</div>
+<div class="def-cont">
+<p>If <span class="math inline">\(X\)</span> takes on outcomes <span class="math inline">\(x_1\)</span>, …, <span class="math inline">\(x_k\)</span> with probabilities <span class="math inline">\(P(X=x_1)\)</span>, …, <span class="math inline">\(P(X=x_k)\)</span> and expected value &nbsp;<span class="math inline">\(\mu=E(X)\)</span>, then the variance of <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(\text{Var}(X)\)</span> or <span class="math inline">\(\sigma^2\)</span>, is</p>
+<p><span class="math display">\[\begin{align*}
+\text{Var}(X) &amp;= (x_1-\mu)^2 P(X=x_1) + \cdots+ (x_k-\mu)^2 P(X=x_k) \\
+    &amp;= \sum_{i=1}^{k} (x_i - \mu)^2 P(X=x_i)
+\end{align*}\]</span></p>
+</div>
+</div>
+<div class="definition">
+<div class="def-ttl">
+<p>Standard deviation of a discrete random variable</p>
+</div>
+<div class="def-cont">
+<p>The standard deviation of <span class="math inline">\(X\)</span>, labeled <span class="math inline">\(SD(X)\)</span> or <span class="math inline">\(\sigma\)</span>, is <span class="math display">\[\sigma = SD(X) = \sqrt{\text{Var}(X)} \]</span></p>
+</div>
+</div>
+</section>
+<section id="back-to-rolling-a-die-1" class="slide level2">
+<h2>Back to rolling a die</h2>
+<div class="column" style="width:44%;">
+<div class="example">
+<div class="ex-ttl">
+<p>Example 1: Rolling a die</p>
+</div>
+<div class="ex-cont">
+<p>Suppose you roll a fair 6-sided die. Let the random variable (r.v.)* <span class="math inline">\(X\)</span> be the outcome of the roll, i.e.&nbsp;the value of the face showing on the die.</p>
+<ol start="4" type="1">
+<li>Find the variance and standard deviation of <span class="math inline">\(X\)</span>.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(\mathbb{P}(X=x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1/6</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1/6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>1/6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-combinations-of-random-variables" class="slide level2">
+<h2>Linear combinations of random variables</h2>
+<div class="definition">
+<div class="def-ttl">
+<p>Linear combinations of random variables</p>
+</div>
+<div class="def-cont">
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then <span class="math display">\[aX + bY\]</span> is a linear combination of the random variables.</p>
+</div>
+</div>
+<div class="orange">
+<div class="orange-ttl">
+<p>Theorem: Expected value of a linear combination of random variables</p>
+</div>
+<div class="orange-cont">
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then <span class="math display">\[E(aX + bY) = aE(X) + bE(Y)\]</span> and <span class="math display">\[E(aX + b) = aE(X) + b\]</span></p>
+</div>
+</div>
+</section>
+<section id="keep-rolling-dice" class="slide level2">
+<h2>Keep rolling dice!</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Expected money for rolling 3 dice</p>
+</div>
+<div class="ex-cont">
+<p>Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?</p>
+</div>
+</div>
+</section>
+<section id="variance-of-a-linear-combination" class="slide level2">
+<h2>Variance of a linear combination</h2>
+<div class="orange">
+<div class="orange-ttl">
+<p>Theorem: Variance of a linear combination of random variables</p>
+</div>
+<div class="orange-cont">
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are <strong>independent</strong> random variables and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then <span class="math display">\[\text{Var}(aX +bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)\]</span></p>
+</div>
+</div>
+</section>
+<section id="keep-keep-rolling-dice" class="slide level2">
+<h2>Keep keep rolling dice!</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Expected money for rolling 3 dice</p>
+</div>
+<div class="ex-cont">
+<p>Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?</p>
+</div>
+</div>
+</section></section>
 <section>
-<section id="linear-combinations-of-random-variables" class="title-slide slide level1 center">
-<h1>Linear combinations of random variables</h1>
-<div class="definition">
-<p><strong>Definition 12</strong>. <em><strong>Linear combinations</strong> of random variables. If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then</em></p>
-<p><em>is a linear combination of the random variables.</em></p>
-</div>
-<div class="theorem">
-<p><strong>Theorem 13</strong>. <em><strong>Expected value of a linear combination</strong> of random variables. If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then</em></p>
-</div>
-</section>
-<section id="example-4" class="slide level2">
-<h2>Example</h2>
-<div class="example">
-<p><strong>Example 14</strong>. <em><strong>Expected money for rolling 3 dice</strong> Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?</em></p>
-</div>
-<p>Make sure to correct typo in textbook!!!</p>
-<figure id="fig:BookError">
-<p>
-<embed src="../img_slides/VH_LinearCombo_E[5X]_error.pdf" style="width:7in">
-<span id="fig:BookError" label="fig:BookError"></span>
-</p>
-</figure>
-<div class="theorem">
-<p><strong>Theorem 15</strong>. <em><strong>Variance of a linear combination</strong> of random variables. If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are INDEPENDENT random variables and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants, then</em></p>
-</div>
-</section>
-<section id="example-5" class="slide level2">
-<h2>Example</h2>
-<div class="example">
-<p><strong>Example 16</strong>. <em><strong>Variance of money for rolling 3 dice</strong> Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?</em></p>
-</div>
-</section>
-<section id="example-6" class="slide level2">
-<h2>Example</h2>
-<div id="VaccBinom" class="example">
-<p><strong>Example 17</strong>. <em><strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. <span class="math inline">\(X_i\)</span> to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(T\)</span> denote the number of people that are vaccinated amongst the 3 that tested positive.</em></p>
-<ol type="1">
-<li><p><em>Using the r.v.’s <span class="math inline">\(X_i\)</span>, write a mathematical equation for calculating <span class="math inline">\(T\)</span>.</em></p></li>
-<li><p><em>What is the expected value of <span class="math inline">\(T\)</span>?</em></p></li>
-<li><p><em>What is the variance of <span class="math inline">\(T\)</span>?</em></p></li>
-<li><p><em>What is the probability distribution of <span class="math inline">\(T\)</span>?</em></p></li>
-</ol>
-</div>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning objectives</h1>
+
 </section>
 <section id="binomial-distribution" class="slide level2">
 <h2>Binomial distribution</h2>
 <ul>
 <li><p>Many situations involve modeling independent random events that have 2 possible outcomes (binary), such as</p>
 <ul>
-<li><p>Repeatedly flipping a coin</p></li>
-<li><p>Whether a person that tested positive with Covid-19 is vaccinated or not</p></li>
+<li>Repeatedly flipping a coin</li>
 </ul></li>
 <li><p>Repeated events are referred to as <strong>trials</strong></p></li>
 <li><p>The 2 possible outcomes are referred to as <strong>successes</strong> and <strong>failures</strong>.</p></li>
@@ -514,7 +703,12 @@ Meike Niederhausen and Nicky Wakim
 <section id="bernoulli-distribution" class="slide level2">
 <h2>Bernoulli distribution</h2>
 <div class="definition">
-<p><strong>Definition 18</strong>. <em><strong>Bernoulli</strong> random variable. If <span class="math inline">\(X\)</span> is a random variable that takes value 1 with probability of success <span class="math inline">\(p\)</span> and 0 with probability <span class="math inline">\(1-p\)</span>, then <span class="math inline">\(X\)</span> is a Bernoulli random variable.</em></p>
+<div class="def-ttl">
+<p>Bernoulli random variable</p>
+</div>
+<div class="def-cont">
+<p><strong>Bernoulli</strong> random variable. If <span class="math inline">\(X\)</span> is a random variable that takes value 1 with probability of success <span class="math inline">\(p\)</span> and 0 with probability <span class="math inline">\(1-p\)</span>, then <span class="math inline">\(X\)</span> is a Bernoulli random variable.</p>
+</div>
 </div>
 <ul>
 <li><p>We call the probability of success <span class="math inline">\(p\)</span> the <strong>parameter</strong> of the Bernoulli distribution.</p></li>
@@ -522,12 +716,12 @@ Meike Niederhausen and Nicky Wakim
 <li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a Bernoulli distribution, then we write in shorthand</p></li>
 </ul>
 <div class="theorem">
-<p><strong>Theorem 19</strong>. <em>Mean and SD of a Bernoulli r.v. If <span class="math inline">\(X\)</span> is a Bernoulli r.v. with probability of success <span class="math inline">\(p\)</span>, then</em></p>
+<p><strong>Theorem 19</strong>. <em>Mean and SD of a Bernoulli r.v. If</em> <span class="math inline">\(X\)</span> is a Bernoulli r.v. with probability of success <span class="math inline">\(p\)</span>, then</p>
 </div>
 </section>
 <section id="binomial-distribution-1" class="slide level2">
 <h2>Binomial distribution</h2>
-<p><span class="math inline">\(\ \)</span></p>
+<p>$$</p>
 <p>Recall Example 3.17:</p>
 <ul>
 <li><p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19.</p></li>
@@ -536,8 +730,8 @@ Meike Niederhausen and Nicky Wakim
 <li><p>Let <span class="math inline">\(T\)</span> denote the number of people that are vaccinated amongst the 3 that tested positive.</p></li>
 </ul>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="binomial-distribution-2" class="slide level2">
+<h2>Binomial distribution</h2>
 <p>The random variable <span class="math inline">\(T\)</span> above is an example of a Binomial random variable.</p>
 <p>In general, a random variable <span class="math inline">\(X\)</span> is <strong>Binomial</strong> if the following hold:</p>
 <ol type="1">
@@ -548,31 +742,45 @@ Meike Niederhausen and Nicky Wakim
 <li><p>The r.v. <span class="math inline">\(X\)</span> is the total number of successes in the <span class="math inline">\(n\)</span> trials.</p></li>
 </ol>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="binomial-distribution-3" class="slide level2">
+<h2>Binomial distribution</h2>
 <div class="definition">
-<p><strong>Definition 20</strong>. <em>Distribution of a <strong>Binomial</strong> random variable. Let <span class="math inline">\(X\)</span> be the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in <span class="math inline">\(n\)</span> independent trials is</em></p>
+<div class="def-ttl">
+<p>Binomial distribution</p>
+</div>
+<div class="def-cont">
+<p>Distribution of a <strong>Binomial</strong> random variable. Let <span class="math inline">\(X\)</span> be the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in <span class="math inline">\(n\)</span> independent trials is</p>
+</div>
 </div>
 <ul>
 <li><p>The parameters of a binomial distribution are <span class="math inline">\(p\)</span> and <span class="math inline">\(n\)</span>.</p></li>
 <li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a binomial distribution, then we write in shorthand</p></li>
 </ul>
 <div class="theorem">
-<p><strong>Theorem 21</strong>. <em>Mean and SD of a Binomial r.v. If <span class="math inline">\(X\)</span> is a binomial r.v. with probability of success <span class="math inline">\(p\)</span>, then</em></p>
+<p><strong>Theorem 21</strong>. <em>Mean and SD of a Binomial r.v. If</em> <span class="math inline">\(X\)</span> is a binomial r.v. with probability of success <span class="math inline">\(p\)</span>, then</p>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="binomial-distribution-example" class="slide level2">
+<h2>Binomial distribution example</h2>
 <div id="VaccBinom10" class="example">
-<p><strong>Example 22</strong>. <em><strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 10 that tested positive.</em></p>
+<p><strong>Example 22</strong>. <em><strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let</em> <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 10 that tested positive.</p>
 <ol type="1">
-<li><p><em>What is the expected value of <span class="math inline">\(X\)</span>?</em></p></li>
-<li><p><em>What is the SD of <span class="math inline">\(X\)</span>?</em></p></li>
+<li><p><em>What is the expected value of</em> <span class="math inline">\(X\)</span>?</p></li>
+<li><p><em>What is the SD of</em> <span class="math inline">\(X\)</span>?</p></li>
 <li><p><em>What is the probability that exactly 4 of the 10 people that tested positive are vaccinated?</em></p></li>
 <li><p><em>What is the probability that at most 3 of the 10 people that tested positive are vaccinated?</em></p></li>
 <li><p><em>What is the probability that at least 5 of the 10 people that tested positive are vaccinated?</em></p></li>
 </ol>
 </div>
+</section>
+<section id="bernoulli-in-r" class="slide level2">
+<h2>Bernoulli in R</h2>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources!</h2>
+<ul>
+<li><a href="https://seeing-theory.brown.edu/probability-distributions/index.html#section1">Seeing theory: random variables</a></li>
+</ul>
 
 <div class="footer footer-default">
 <p>Lesson 5 Slides</p>

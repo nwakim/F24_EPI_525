@@ -2202,7 +2202,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n1\n\n10/11\n\n10/20\n\n\n\n\n2\n\n10/18\n\n10/27\n\n\n\n\n3\n\n10/26\n\n11/3\n\n\n\n\n4\n\n11/1\n\n11/10\n\n\n\n\n5\n\n11/8\n\n11/17\n\n\n\n\n6\n\n11/17\n\n11/24\n\n\n\n\n7\n\n11/22\n\n12/1\n\n\n\n\n8\n\n11/29\n\n12/8\n\n\n\n\n9\n\n12/6\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n1.8, 1.12, 1.20, 1.32\n\n\n\n\n\n1\n\n10/11\n\n\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#assignments",
@@ -7116,7 +7116,7 @@
     "href": "homework.html#homeworks",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n1\n\n10/11\n\n10/20\n\n\n\n\n2\n\n10/18\n\n10/27\n\n\n\n\n3\n\n10/26\n\n11/3\n\n\n\n\n4\n\n11/1\n\n11/10\n\n\n\n\n5\n\n11/8\n\n11/17\n\n\n\n\n6\n\n11/17\n\n11/24\n\n\n\n\n7\n\n11/22\n\n12/1\n\n\n\n\n8\n\n11/29\n\n12/8\n\n\n\n\n9\n\n12/6\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n1.8, 1.12, 1.20, 1.32\n\n\n\n\n\n1\n\n10/11\n\n\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#structure",
@@ -10777,14 +10777,14 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#random-variables",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Random variables",
-    "text": "Random variables\n\nDefinition 1. A random variable (r.v.) assigns numerical values to the outcome of a random phenomenon.\n\nNotation: A random variable is usually denoted with a capital letter such as \\(X\\), \\(Y\\), or \\(Z\\)."
+    "text": "Random variables\n\n\nRandom variable (RV)\n\n\nA random variable (r.v.) assigns numerical values (probability) to the outcome of a random phenomenon\n\n\nNotation: A random variable is usually denoted with a capital letter such as \\(X\\), \\(Y\\), or \\(Z\\)."
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Binomial distribution",
-    "text": "Binomial distribution\n\nMany situations involve modeling independent random events that have 2 possible outcomes (binary), such as\n\nRepeatedly flipping a coin\nWhether a person that tested positive with Covid-19 is vaccinated or not\n\nRepeated events are referred to as trials\nThe 2 possible outcomes are referred to as successes and failures.\nWe denote the probability of a success as \\(p\\).\nWe denote the probability of a failure as \\(q = 1-p\\)."
+    "text": "Binomial distribution\n\nMany situations involve modeling independent random events that have 2 possible outcomes (binary), such as\n\nRepeatedly flipping a coin\n\nRepeated events are referred to as trials\nThe 2 possible outcomes are referred to as successes and failures.\nWe denote the probability of a success as \\(p\\).\nWe denote the probability of a failure as \\(q = 1-p\\)."
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#day-6-topics",
@@ -10798,28 +10798,28 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Example",
-    "text": "Example\n\nExample 2. Data points Suppose you have a dataset of size 3 (\\(n=3\\)) with \\(x_1 = 5, x_2 = 3,\\) and \\(x_3 = 6\\).\n\nEach data point is the outcome of a random phenomenon\nEach data point is a numerical value\nThe data points are examples of values of a sequence of random variables \\(X_1, X_2,\\) and \\(X_3\\)\nFor datasets, we almost always assume the data points came from random variables that are independent and have the same distribution.\nTo calculate the likelihood of data, we need to know the distribution of the random variable that models the data.\nFirst, let’s remind ourselves how to calculate them mean and variance of a dataset:\n\nWhat is the mean of the data points?\nWhat are the variance and standard deviation of the data points?"
+    "text": "Example\n\nExample 17. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive.\n\nUsing the r.v.’s \\(X_i\\), write a mathematical equation for calculating \\(T\\).\nWhat is the expected value of \\(T\\)?\nWhat is the variance of \\(T\\)?\nWhat is the probability distribution of \\(T\\)?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-1",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-1",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Example",
-    "text": "Example\n\nExample 3. Rolling a die Suppose you roll a fair die. Let the random variable (r.v.) \\(X\\) be the outcome of the roll, i.e. the value of the face showing on the die.\n\nWhat is the probability distribution of the r.v. \\(X\\)?\nWhat is the expected outcome of the r.v. \\(X\\)?\nNow suppose the 6-sided die is not fair. How would we calculate the expected outcome?\nx \\(\\mathbb{P}(X=x)\\) —– ——————— 1 0.10 2 0.20 3 0.05 4 0.05 5 0.25 6 0.35\n\n\n(From Textbook \\(\\S\\) 2.1.5)"
+    "text": "Example\n\nExample 17. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive.\n\nUsing the r.v.’s \\(X_i\\), write a mathematical equation for calculating \\(T\\).\nWhat is the expected value of \\(T\\)?\nWhat is the variance of \\(T\\)?\nWhat is the probability distribution of \\(T\\)?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#definition",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#definition",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Definition",
-    "text": "Definition\n\nDefinition 4. A probability distribution consists of all disjoint outcomes and their associated probabilities.\n\nRules for a probability distribution A probability distribution is a list of all possible outcomes and their associated probabilities that satisfies three rules:\n\nThe outcomes listed must be disjoint.\nEach probability must be between 0 and 1.\nThe probabilities must total to 1.\n\nProbability distributions are usually either discrete or continuous, depending on whether the random variable is discrete or continuous.\n(Back to Textbook \\(\\S\\) 3.1.1)"
+    "text": "Definition\n3.1.2 Expectation\n\nWe call the mean of a random variable its expected value\nThe expected value is calculated as a weighted average\n\n\n\nExpected value\n\n\nExpected value of a discrete random variable If \\(X\\) takes on outcomes \\(x_1\\), …, \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\), the expected value of \\(X\\) is the sum of each outcome multiplied by its corresponding probability:\n\n\n\\(\\S\\) 3.1.3 Variability of random variables\n\nJust like with data, the variability of a r.v. is described with its variance or standard deviation.\nSquared deviations from the mean are weighted by their respective probabilities\n\n\n\nVariance\n\n\nVariance of a discrete random variable If \\(X\\) takes on outcomes \\(x_1\\), …, \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\) and expected value \\(\\mu=E(X)\\), then the variance of \\(X\\), denoted by \\(\\text{Var}(X)\\) or \\(\\sigma^2\\), is\n\n\n\n\nStandard deviation\n\n\nStandard deviation of a discrete random variable The standard deviation of \\(X\\), labeled \\(SD(X)\\) or \\(\\sigma\\), is"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#definition-1",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#definition-1",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Definition",
-    "text": "Definition\n\nDefinition 5. A discrete r.v. \\(X\\) takes on a finite number of values or countably infinite number of possible values.\n\n\nDefinition 6. A continuous r.v. \\(X\\) can take on any real value in an interval of values or unions of intervals.\n\n\\(\\S\\) 3.1.2 Expectation\n\nWe call the mean of a random variable its expected value\nThe expected value is calculated as a weighted average"
+    "text": "Definition\n\n\nExpected value\n\n\nExpected value of a discrete random variable If \\(X\\) takes on outcomes \\(x_1\\), ..., \\(x_k\\) with probabilities \\(P(X=x_1)\\), ..., \\(P(X=x_k)\\), the expected value of \\(X\\) is the sum of each outcome multiplied by its corresponding probability:\n\n\n\\(\\S\\) 3.1.3 Variability of random variables\n\nJust like with data, the variability of a r.v. is described with its variance or standard deviation.\nSquared deviations from the mean are weighted by their respective probabilities\n\n\n\nVariance\n\n\nVariance of a discrete random variable If \\(X\\) takes on outcomes \\(x_1\\), ..., \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\) and expected value \\(\\mu=E(X)\\), then the variance of \\(X\\), denoted by \\(\\text{Var}(X)\\) or \\(\\sigma^2\\), is\n\n\n\n\nStandard deviation\n\n\nStandard deviation of a discrete random variable The standard deviation of \\(X\\), labeled \\(SD(X)\\) or \\(\\sigma\\), is"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#definition-2",
@@ -10833,63 +10833,63 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-2",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Example",
-    "text": "Example\n\nExample 10. Rolling a fair die: variance Suppose you roll a fair 6-sided die. Let the random variable (r.v.) \\(X\\) be the outcome of the roll, i.e. the value of the face showing on the die. Find the variance and standard deviation of \\(X\\).\nx \\(\\mathbb{P}(X=x)\\) —– ———————\n1 1/6\n2 1/6\n3 1/6\n4 1/6\n5 1/6\n6 1/6"
+    "text": "Example\n\nExample 17. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive.\n\nUsing the r.v.’s \\(X_i\\), write a mathematical equation for calculating \\(T\\).\nWhat is the expected value of \\(T\\)?\nWhat is the variance of \\(T\\)?\nWhat is the probability distribution of \\(T\\)?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-3",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-3",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Example",
-    "text": "Example\n\nExample 11. Vaccinated people testing positive for Covid-19 About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.\n\nMake a table for the probability distribution for the r.v. \\(X\\)\nWhat is the expected value of \\(X\\)?\nWhat is the variance of \\(X\\)?"
+    "text": "Example\n\nExample 17. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive.\n\nUsing the r.v.’s \\(X_i\\), write a mathematical equation for calculating \\(T\\).\nWhat is the expected value of \\(T\\)?\nWhat is the variance of \\(T\\)?\nWhat is the probability distribution of \\(T\\)?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-4",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-4",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Example",
-    "text": "Example\n\nExample 14. Expected money for rolling 3 dice Let the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?\n\nMake sure to correct typo in textbook!!!\n\n\n\n\n\n\n\nTheorem 15. Variance of a linear combination of random variables. If \\(X\\) and \\(Y\\) are INDEPENDENT random variables and \\(a\\) and \\(b\\) are constants, then"
+    "text": "Example\n\nExample 17. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive.\n\nUsing the r.v.’s \\(X_i\\), write a mathematical equation for calculating \\(T\\).\nWhat is the expected value of \\(T\\)?\nWhat is the variance of \\(T\\)?\nWhat is the probability distribution of \\(T\\)?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#bernoulli-distribution",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#bernoulli-distribution",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Bernoulli distribution",
-    "text": "Bernoulli distribution\n\nDefinition 18. Bernoulli random variable. If \\(X\\) is a random variable that takes value 1 with probability of success \\(p\\) and 0 with probability \\(1-p\\), then \\(X\\) is a Bernoulli random variable.\n\n\nWe call the probability of success \\(p\\) the parameter of the Bernoulli distribution.\nEach value of \\(p\\) identifies a specific Bernoulli distribution out of the family of Bernoulli r.v.’s where \\(p\\) is any value between 0 and 1 (inclusive).\nIf a r.v. \\(X\\) is modeled by a Bernoulli distribution, then we write in shorthand\n\n\nTheorem 19. Mean and SD of a Bernoulli r.v. If \\(X\\) is a Bernoulli r.v. with probability of success \\(p\\), then"
+    "text": "Bernoulli distribution\n\n\nBernoulli random variable\n\n\nBernoulli random variable. If \\(X\\) is a random variable that takes value 1 with probability of success \\(p\\) and 0 with probability \\(1-p\\), then \\(X\\) is a Bernoulli random variable.\n\n\n\nWe call the probability of success \\(p\\) the parameter of the Bernoulli distribution.\nEach value of \\(p\\) identifies a specific Bernoulli distribution out of the family of Bernoulli r.v.’s where \\(p\\) is any value between 0 and 1 (inclusive).\nIf a r.v. \\(X\\) is modeled by a Bernoulli distribution, then we write in shorthand\n\n\nTheorem 19. Mean and SD of a Bernoulli r.v. If \\(X\\) is a Bernoulli r.v. with probability of success \\(p\\), then"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-1",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-1",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Binomial distribution",
-    "text": "Binomial distribution\n\\(\\ \\)\nRecall Example 3.17:\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19.\nDefine the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.\nSuppose 3 people have tested positive for Covid-19 (independently of each other).\nLet \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive."
+    "text": "Binomial distribution\n$$\nRecall Example 3.17:\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19.\nDefine the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.\nSuppose 3 people have tested positive for Covid-19 (independently of each other).\nLet \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive."
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "",
-    "text": "The random variable \\(T\\) above is an example of a Binomial random variable.\nIn general, a random variable \\(X\\) is Binomial if the following hold:\n\nThe trials are independent.\nThe number of trials, \\(n\\), is fixed.\nEach trial outcome can be classified as a success or failure.\nThe probability of a success, \\(p\\), is the same for each trial.\nThe r.v. \\(X\\) is the total number of successes in the \\(n\\) trials."
+    "text": "Make sure to correct typo in textbook!!!\n\n\n\n\n\n\nTheorem 15. Variance of a linear combination of random variables. If \\(X\\) and \\(Y\\) are INDEPENDENT random variables and \\(a\\) and \\(b\\) are constants, then"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section-1",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section-1",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "",
-    "text": "Definition 20. Distribution of a Binomial random variable. Let \\(X\\) be the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success. Then probability of observing exactly \\(k\\) successes in \\(n\\) independent trials is\n\n\nThe parameters of a binomial distribution are \\(p\\) and \\(n\\).\nIf a r.v. \\(X\\) is modeled by a binomial distribution, then we write in shorthand\n\n\nTheorem 21. Mean and SD of a Binomial r.v. If \\(X\\) is a binomial r.v. with probability of success \\(p\\), then"
+    "text": "Binomial distribution\n\n\nDistribution of a Binomial random variable. Let \\(X\\) be the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success. Then probability of observing exactly \\(k\\) successes in \\(n\\) independent trials is\n\n\n\nThe parameters of a binomial distribution are \\(p\\) and \\(n\\).\nIf a r.v. \\(X\\) is modeled by a binomial distribution, then we write in shorthand\n\n\nTheorem 21. Mean and SD of a Binomial r.v. If \\(X\\) is a binomial r.v. with probability of success \\(p\\), then"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section-2",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section-2",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "",
-    "text": "Example 22. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?\n\n\n\n\nLesson 5 Slides"
+    "text": "Example 22. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-5",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-5",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Example",
-    "text": "Example\n\nExample 16. Variance of money for rolling 3 dice Let the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?"
+    "text": "Example\n\nExample 17. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Define the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated. Suppose 3 people have tested positive for Covid-19 (independently of each other). Let \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive.\n\nUsing the r.v.’s \\(X_i\\), write a mathematical equation for calculating \\(T\\).\nWhat is the expected value of \\(T\\)?\nWhat is the variance of \\(T\\)?\nWhat is the probability distribution of \\(T\\)?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#example-6",
@@ -12763,9 +12763,9 @@
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html",
     "href": "lessons/04_Cond_prob/04_Cond_prob.html",
-    "title": "Lesson 5: Conditional Probability",
+    "title": "Lesson 4: Conditional Probability",
     "section": "",
-    "text": "Example 1. How accurate is rapid testing for COVID-19? \nFrom the iHealth® website https://ihealthlabs.com/pages/ihealth-covid-19-antigen-rapid-test-details:\n\"Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.\"\nSuppose you take the iHealth® rapid test.\n\nWhat is the probability of a positive test result?\nWhat is the probability of having COVID-19 if you get a positive test result?\nWhat is the probability of not having COVID-19 if you get a negative test result?\n\nWhat information were we given?\nFirst, let’s define our events of interest:\n\n\\(D\\) = event one has disease (COVID-19)\n\\(D^c\\) = event one does not have disease\n\\(T^+\\) = event one tests positive for disease\n\\(T^-\\) = event one tests negative for disease\n\nTranslate given information into mathematical notation:\n\nTest correctly gives a positive result 94.3% of the time:\nTest correctly gives a negative result 98.1% of the time:\nWhat are all the possible scenarios of test results?\n\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nSolutions to questions\n\nWhat is the probability of a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of having COVID-19 if you get a positive test result?\nGiven: \\(\\mathbb{P}(T^+|D) = 0.943\\), \\(\\ \\ \\mathbb{P}(T^-|D^c) = 0.981\\)\nWhat is the probability of not having COVID-19 if you get a negative test result?"
+    "text": "Recognize joint, marginal, and conditional probabilities in contingency and probability tables\nMathematically define probability properties that relate to conditional probability (general multiplication rule, independence and conditional probability, and Bayes’ theorem)\nApply probability properties to solve a world problem on positive predictive value (PPV)"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#eaxample",
@@ -13045,7 +13045,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12",
     "title": "Lesson 4: Conditional Probability",
     "section": "Example: hypertension prevalence (1/2)",
-    "text": "Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+    "text": "Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#example-hypertension-prevalence-12-1",
@@ -13255,7 +13255,7 @@
     "href": "lessons/04_Cond_prob/04_Cond_prob.html#lets-apply-the-steps-to-our-example-77",
     "title": "Lesson 4: Conditional Probability",
     "section": "Let’s apply the steps to our example (7/7)",
-    "text": "Let’s apply the steps to our example (7/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 5: Calculate answer\n\n\nLesson 4 Slides"
+    "text": "Let’s apply the steps to our example (7/7)\n\n\nHow accurate is rapid testing for COVID-19?\n\n\n“Based on the results of a clinical study where the iHealth® COVID-19 Antigen Rapid Test was compared to an FDA authorized molecular SARS-CoV-2 test, iHealth® COVID-19 Antigen Rapid Test correctly identified 94.3% of positive specimens and 98.1% of negative specimens.” In October 2022, 83.8 people per 100k in Multnomah County with Covid-19.\n\n\nStep 5: Calculate answer"
   },
   {
     "objectID": "lessons/R04_Reproducibility/R04_Reproducibility.html#the-nice-thing-about-r-projects",
@@ -15188,5 +15188,180 @@
     "title": "R06: ggplot2, Part 1",
     "section": "ggplot2 in tidyverse",
     "text": "ggplot2 in tidyverse\n\n\n\n\n\nWe talked about this in our review notes\n\nI want to revisit it: always helps to have more examples!\nThis example is closer to the multivariable work we’ll do in this class!\n\n\n \n\nggplot2 is tidyverse’s data visualization package\n\n \n\nThe gg in “ggplot2” stands for Grammar of Graphics\n\n \n\nIt is inspired by the book Grammar of Graphics by Leland Wilkinson"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#where-are-we",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#where-are-we",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#bernoulli-in-r",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#bernoulli-in-r",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Bernoulli in R",
+    "text": "Bernoulli in R"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#discrete-vs.-continuous-random-variables",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#discrete-vs.-continuous-random-variables",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Discrete vs. continuous random variables",
+    "text": "Discrete vs. continuous random variables\n\nProbability distributions are usually either discrete or continuous, depending on whether the random variable is discrete or continuous.\n\n\n\n\n\nDiscrete random variable\n\n\nA discrete r.v. \\(X\\) takes on a finite number of values or countably infinite number of possible values.\n\n\nThink:\n\nNumber of heads in a set of coin tosses\nNumber of people who have had chicken pox in a random sample\n\n\n\n\n\n\nContinuous random variable\n\n\nA continuous r.v. \\(X\\) can take on any real value in an interval of values or unions of intervals.\n\n\nThink:\n\nHeight in a population\nBlood pressure in a population"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-2",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-2",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution",
+    "text": "Binomial distribution\nThe random variable \\(T\\) above is an example of a Binomial random variable.\nIn general, a random variable \\(X\\) is Binomial if the following hold:\n\nThe trials are independent.\nThe number of trials, \\(n\\), is fixed.\nEach trial outcome can be classified as a success or failure.\nThe probability of a success, \\(p\\), is the same for each trial.\nThe r.v. \\(X\\) is the total number of successes in the \\(n\\) trials."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-3",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-3",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution",
+    "text": "Binomial distribution\n\n\nBinomial distribution\n\n\nDistribution of a Binomial random variable. Let \\(X\\) be the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success. Then probability of observing exactly \\(k\\) successes in \\(n\\) independent trials is\n\n\n\nThe parameters of a binomial distribution are \\(p\\) and \\(n\\).\nIf a r.v. \\(X\\) is modeled by a binomial distribution, then we write in shorthand\n\n\nTheorem 21. Mean and SD of a Binomial r.v. If \\(X\\) is a binomial r.v. with probability of success \\(p\\), then"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example",
+    "text": "Binomial distribution example\n\nExample 22. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#linear-combinations-of-random-variables",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#linear-combinations-of-random-variables",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Linear combinations of random variables",
+    "text": "Linear combinations of random variables\n\n\nLinear combinations of random variables\n\n\nIf \\(X\\) and \\(Y\\) are random variables and \\(a\\) and \\(b\\) are constants, then \\[aX + bY\\] is a linear combination of the random variables.\n\n\n\n\nTheorem: Expected value of a linear combination of random variables\n\n\nIf \\(X\\) and \\(Y\\) are random variables and \\(a\\) and \\(b\\) are constants, then \\[E(aX + bY) = aE(X) + bE(Y)\\] and \\[E(aX + b) = aE(X) + b\\]"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#resources",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#resources",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Resources!",
+    "text": "Resources!\n\nSeeing theory: random variables\n\n\n\nLesson 5 Slides"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#probability-distributions",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#probability-distributions",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Probability distributions",
+    "text": "Probability distributions\n\n\n\n\nProbability distribution\n\n\nA probability distribution consists of all disjoint outcomes and their associated probabilities.\n\n\n\nWe’ve already seen one in our heads and tails example\n\n\n\nRules for a probability distribution\n\n\nA probability distribution is a list of all possible outcomes and their associated probabilities that satisfies three rules:\n\nThe outcomes listed must be disjoint\nEach probability must be between 0 and 1\nThe probabilities must total to 1"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#in-the-coin-toss-example",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#in-the-coin-toss-example",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "In the coin toss example…",
+    "text": "In the coin toss example…\n\nWe can start to define the probability distribution\nLet’s define the coin flip with the random variable \\(X\\)\n\nWhere \\(X=1\\) if we get a heads and \\(X=0\\) if we get a tails\n\nWe can create a table for the random variable and probabilities of each outcome:\n\n\n\nCoin flip (\\(x\\))\n\\(x=1\\)\n\\(x=0\\)\n\n\n\n\nProbability (\\(P(X=x)\\))\n0.5\n0.5\n\n\n\nNote: I use \\(X\\) to refer to the random variable and \\(x\\) to refer to the realized value it takes\n\nThen we can write \\(P(X=x)\\) to discuss the probability for each realized value (\\(x\\)) of the random variable (\\(X\\))\n\nAlso note that the sum of the probabilities equal 1 \\[\\sum_{x=0}^1 P(X=x) = 1\\]"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#lets-extend-this-to-rolling-a-die",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#lets-extend-this-to-rolling-a-die",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Let’s extend this to rolling a die",
+    "text": "Let’s extend this to rolling a die\n\n\nExample 1: Rolling a die\n\n\nSuppose you roll a fair die. Let the random variable (r.v.) \\(X\\) be the outcome of the roll, i.e. the value of the face showing on the die.\n\nWhat is the probability distribution of the r.v. \\(X\\)?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#lets-extend-this-to-rolling-a-die-1",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#lets-extend-this-to-rolling-a-die-1",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Let’s extend this to rolling a die",
+    "text": "Let’s extend this to rolling a die\n\n\nExample 1: Rolling a die\n\n\nSuppose you roll a fair die. Let the random variable (r.v.) \\(X\\) be the outcome of the roll, i.e. the value of the face showing on the die.\n\nWhat is the expected outcome of the r.v. \\(X\\)?\nNow suppose the 6-sided die is not fair. How would we calculate the expected outcome?\n\n\n\n\nx\n\\(\\mathbb{P}(X=x)\\)\n\n\n\n\n1\n0.10\n\n\n2\n0.20\n\n\n3\n0.05\n\n\n4\n0.05\n\n\n5\n0.25\n\n\n6\n0.35"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!\n\n\n\nPreparing for Your Public Health Career: Are you ready to lay the foundation for a great career in public health?  Join us on Wednesday, Oct. 16th from Noon-1:30pm for a webinar all about finding, applying for and landing your first job. The Oregon Coalition of Local Health Officials (CLHO) will share recommendations for career pathways and building your experience in the public health sector. Please RSVP and a Zoom link will be emailed to you: https://forms.gle/peviPWF6SmKCCRsSA\nSPH Graduate Scholarship Information Session: Please join us on Thursday, Oct. 17th from Noon-1pm to learn about SPH scholarships for graduate students. Hybrid workshop. Join us in person in Vanport #620C or virtually https://pdx.zoom.us/j/87038918922\nFlyer on the EPI/BSTA tutors:\n\nMake an appointment"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#announcements",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!\n\n\n\nPreparing for Your Public Health Career: Are you ready to lay the foundation for a great career in public health?  Join us on Wednesday, Oct. 16th from Noon-1:30pm for a webinar all about finding, applying for and landing your first job. The Oregon Coalition of Local Health Officials (CLHO) will share recommendations for career pathways and building your experience in the public health sector. Please RSVP and a Zoom link will be emailed to you: https://forms.gle/peviPWF6SmKCCRsSA\nSPH Graduate Scholarship Information Session: Please join us on Thursday, Oct. 17th from Noon-1pm to learn about SPH scholarships for graduate students. Hybrid workshop. Join us in person in Vanport #620C or virtually https://pdx.zoom.us/j/87038918922\nFlyer on the EPI/BSTA tutors:\n\nMake an appointment"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#key-dates",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nHomework 1 Assignment due this Friday at 11pm!\nI will post the questions for the solutions by end of week!"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob.html#footnotes",
+    "href": "lessons/04_Cond_prob/04_Cond_prob.html#footnotes",
+    "title": "Lesson 4: Conditional Probability",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm↩︎"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#expectation",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#expectation",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Expectation",
+    "text": "Expectation\n\nWe call the mean of a random variable its expected value\nThe expected value is calculated as a weighted average\n\n\n\nExpected value of a discrete random variable\n\n\nIf \\(X\\) takes on outcomes \\(x_1\\), …, \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\), the expected value of \\(X\\) is the sum of each outcome multiplied by its corresponding probability: \\[\\begin{aligned}\\mu = E[X] = & x_1 P(X=x_1) + x_2 P(X=x_2) + \\ldots + x_k P(X=x_k) \\\\ = & \\sum_{i=1}^k x_iP(X=x_i) \\end{aligned}\\]"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#variability-of-random-variables",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#variability-of-random-variables",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Variability of random variables",
+    "text": "Variability of random variables\nJust like with data, the variability of a r.v. is described with its variance or standard deviation\n\n\nVariance of a discrete random variable\n\n\nIf \\(X\\) takes on outcomes \\(x_1\\), …, \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\) and expected value  \\(\\mu=E(X)\\), then the variance of \\(X\\), denoted by \\(\\text{Var}(X)\\) or \\(\\sigma^2\\), is\n\\[\\begin{align*}\n\\text{Var}(X) &= (x_1-\\mu)^2 P(X=x_1) + \\cdots+ (x_k-\\mu)^2 P(X=x_k) \\\\\n    &= \\sum_{i=1}^{k} (x_i - \\mu)^2 P(X=x_i)\n\\end{align*}\\]\n\n\n\n\nStandard deviation of a discrete random variable\n\n\nThe standard deviation of \\(X\\), labeled \\(SD(X)\\) or \\(\\sigma\\), is \\[\\sigma = SD(X) = \\sqrt{\\text{Var}(X)} \\]"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#back-to-rolling-a-die",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#back-to-rolling-a-die",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Back to rolling a die",
+    "text": "Back to rolling a die\n\n\n\nExample 1: Rolling a die\n\n\nLet’s go back to our fair fie with RV \\(X\\) as the value of the face showing on the die.\n\nWhat is the expected outcome of the RV \\(X\\)?\nNow suppose the 6-sided die is not fair. How would we calculate the expected outcome?\n\n\n\n\n\\(x\\)\n\\(\\mathbb{P}(X=x)\\)\n\n\n\n\n1\n0.10\n\n\n2\n0.20\n\n\n3\n0.05\n\n\n4\n0.05\n\n\n5\n0.25\n\n\n6\n0.35"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#back-to-rolling-a-die-1",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#back-to-rolling-a-die-1",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Back to rolling a die",
+    "text": "Back to rolling a die\n\n\n\nExample 1: Rolling a die\n\n\nSuppose you roll a fair 6-sided die. Let the random variable (r.v.)* \\(X\\) be the outcome of the roll, i.e. the value of the face showing on the die.\n\nFind the variance and standard deviation of \\(X\\).\n\n\n\n\n\\(x\\)\n\\(\\mathbb{P}(X=x)\\)\n\n\n\n\n1\n1/6\n\n\n2\n1/6\n\n\n3\n1/6\n\n\n4\n1/6\n\n\n5\n1/6\n\n\n6\n1/6"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-rolling-that-die",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-rolling-that-die",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Keep rolling that die!",
+    "text": "Keep rolling that die!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#variance-of-a-linear-combination",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#variance-of-a-linear-combination",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Variance of a linear combination",
+    "text": "Variance of a linear combination\n\n\nTheorem: Variance of a linear combination of random variables\n\n\nIf \\(X\\) and \\(Y\\) are independent random variables and \\(a\\) and \\(b\\) are constants, then \\[\\text{Var}(aX +bY) = a^2\\text{Var}(X) + b^2\\text{Var}(Y)\\]"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-rolling-dice",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-rolling-dice",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Keep rolling dice!",
+    "text": "Keep rolling dice!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-keep-rolling-dice",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-keep-rolling-dice",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Keep keep rolling dice!",
+    "text": "Keep keep rolling dice!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?"
+  },
+  {
+    "objectID": "homework.html#file-naming",
+    "href": "homework.html#file-naming",
+    "title": "Homework",
+    "section": "File Naming",
+    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!"
   }
 ]

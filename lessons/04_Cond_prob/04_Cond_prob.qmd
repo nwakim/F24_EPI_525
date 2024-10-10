@@ -19,6 +19,8 @@ format:
 execute:
   echo: true
   freeze: auto
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
