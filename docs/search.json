@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "EPI 525: Biostatistics 1",
     "section": "",
-    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nNicky  M 4-5pm VPT 627\nMiyuki  W 3-4pm VPT 620M\nLiv  Th 3:30-4:30pm virtual\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nNicky  M 4-5pm VPT 627\nMiyuki  W 3-4pm VPT 515\nLiv  Th 3:30-4:30pm virtual\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "schedule.html",
@@ -2244,7 +2244,7 @@
     "href": "instructors.html#teaching-assistants",
     "title": "Instructors",
     "section": "Teaching Assistants",
-    "text": "Teaching Assistants\nLiv Ainsworth and Miyuki Sun will serve as our TAs for the quarrter!! They will have the following office hours and will help answer questions on Slack.\n\nLiv Ainsworth\nLink to Webex!!\n\nThursday’s 3:30-4:30pm\n\n\n\nMiyuki Sun\n\nWednesday’s 3-4pm in VPT 620M"
+    "text": "Teaching Assistants\nLiv Ainsworth and Miyuki Sun will serve as our TAs for the quarter!! They will have the following office hours and will help answer questions on Slack.\n\nLiv Ainsworth\nLink to Webex!!\n\nThursday’s 3:30-4:30pm\n\n\n\nMiyuki Sun\n\nWednesday’s 3-4pm in VPT 515"
   },
   {
     "objectID": "homework/HW_09.html",
@@ -14158,7 +14158,7 @@
     "href": "lessons/03_Probability/03_Probability_muddy_points.html",
     "title": "Muddy Points",
     "section": "",
-    "text": "1. Disjoint vs. Independent Events\nHere is a pretty good video breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.\n\nAnd here’s a another good video!\n\n\n\n2. How do I know if two events are independent?\nMy main piece of advice for independence is to rely on the math to show it, not logic! Don’t go into a problem thinking “Logically, these two events are independent.” If the problem does not say “Assume independence,” then we need to show it mathematically.\nSame goes with the definition of independence. When we say “knowing the outcome of one provides no information about the outcome of the other,” we once again need to show this mathematically, not just using logic. We will discuss this in Lesson 4: Conditional Probability, where we translate the previous statement to \\[P(A) = P(A|B)\\] And we need to show this mathematically!"
+    "text": "Here is a pretty good video breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.\n\nAnd here’s a another good video!\n\nBasically, mutually exclusive events do not share any probability space! Aka the probability of both events is 0. Both cannot happen at the same time. Independent events can happen at the same time!"
   },
   {
     "objectID": "lessons/04_Cond_prob/04_Cond_prob_key_info.html",
@@ -15278,14 +15278,14 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!\n\n\n\nPreparing for Your Public Health Career: Are you ready to lay the foundation for a great career in public health?  Join us on Wednesday, Oct. 16th from Noon-1:30pm for a webinar all about finding, applying for and landing your first job. The Oregon Coalition of Local Health Officials (CLHO) will share recommendations for career pathways and building your experience in the public health sector. Please RSVP and a Zoom link will be emailed to you: https://forms.gle/peviPWF6SmKCCRsSA\nSPH Graduate Scholarship Information Session: Please join us on Thursday, Oct. 17th from Noon-1pm to learn about SPH scholarships for graduate students. Hybrid workshop. Join us in person in Vanport #620C or virtually https://pdx.zoom.us/j/87038918922\nFlyer on the EPI/BSTA tutors:\n\nMake an appointment"
+    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!\n\n\n\nMiyuki’s office hours are moved to 515!!\nPreparing for Your Public Health Career: Are you ready to lay the foundation for a great career in public health?  Join us on Wednesday, Oct. 16th from Noon-1:30pm for a webinar all about finding, applying for and landing your first job. The Oregon Coalition of Local Health Officials (CLHO) will share recommendations for career pathways and building your experience in the public health sector. Please RSVP and a Zoom link will be emailed to you: https://forms.gle/peviPWF6SmKCCRsSA\nSPH Graduate Scholarship Information Session: Please join us on Thursday, Oct. 17th from Noon-1pm to learn about SPH scholarships for graduate students. Hybrid workshop. Join us in person in Vanport #620C or virtually https://pdx.zoom.us/j/87038918922\nFlyer on the EPI/BSTA tutors:\n\nMake an appointment"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#announcements",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!\n\n\n\nPreparing for Your Public Health Career: Are you ready to lay the foundation for a great career in public health?  Join us on Wednesday, Oct. 16th from Noon-1:30pm for a webinar all about finding, applying for and landing your first job. The Oregon Coalition of Local Health Officials (CLHO) will share recommendations for career pathways and building your experience in the public health sector. Please RSVP and a Zoom link will be emailed to you: https://forms.gle/peviPWF6SmKCCRsSA\nSPH Graduate Scholarship Information Session: Please join us on Thursday, Oct. 17th from Noon-1pm to learn about SPH scholarships for graduate students. Hybrid workshop. Join us in person in Vanport #620C or virtually https://pdx.zoom.us/j/87038918922\nFlyer on the EPI/BSTA tutors:\n\nMake an appointment"
+    "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!\n\n\n\nMiyuki’s office hours are moved to 515!!\nPreparing for Your Public Health Career: Are you ready to lay the foundation for a great career in public health?  Join us on Wednesday, Oct. 16th from Noon-1:30pm for a webinar all about finding, applying for and landing your first job. The Oregon Coalition of Local Health Officials (CLHO) will share recommendations for career pathways and building your experience in the public health sector. Please RSVP and a Zoom link will be emailed to you: https://forms.gle/peviPWF6SmKCCRsSA\nSPH Graduate Scholarship Information Session: Please join us on Thursday, Oct. 17th from Noon-1pm to learn about SPH scholarships for graduate students. Hybrid workshop. Join us in person in Vanport #620C or virtually https://pdx.zoom.us/j/87038918922\nFlyer on the EPI/BSTA tutors:\n\nMake an appointment"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_key_info.html#key-dates",
@@ -15685,5 +15685,89 @@
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Some resources for the normal distribution",
     "text": "Some resources for the normal distribution\n\nPage on R commands"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability_muddy_points.html#medication-example-and-venn-diagram",
+    "href": "lessons/03_Probability/03_Probability_muddy_points.html#medication-example-and-venn-diagram",
+    "title": "Muddy Points",
+    "section": "3. Medication example (and Venn Diagram)",
+    "text": "3. Medication example (and Venn Diagram)\nPlease follow this link for my work through of the example. And here is the PDF with my work.\n\nNote that I make some references that are specific to a different class that I teach\n\nI reference chapter 3, which is just a chapter on independent events\nI also reference certain “axioms.” I think I explain most of the actual rules of the axioms.\n\n\nSub-question: why don’t we just multiply the probability of A and B to get the intersection? This is a specific property of probability when A and B are independent. Only when A and B are independent can we conclude that \\(P(A \\cap B) = P(A)P(B)\\)."
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability_muddy_points.html#disjoint-vs.-independent-events",
+    "href": "lessons/03_Probability/03_Probability_muddy_points.html#disjoint-vs.-independent-events",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Here is a pretty good video breaking down disjoint (mutually exclusive) events and independent events. It includes examples as well.\n\nAnd here’s a another good video!\n\nBasically, mutually exclusive events do not share any probability space! Aka the probability of both events is 0. Both cannot happen at the same time. Independent events can happen at the same time!"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability_muddy_points.html#how-do-i-know-if-two-events-are-independent",
+    "href": "lessons/03_Probability/03_Probability_muddy_points.html#how-do-i-know-if-two-events-are-independent",
+    "title": "Muddy Points",
+    "section": "2. How do I know if two events are independent?",
+    "text": "2. How do I know if two events are independent?\nMy main piece of advice for independence is to rely on the math to show it, not logic! Don’t go into a problem thinking “Logically, these two events are independent.” If the problem does not say “Assume independence,” then we need to show it mathematically. (For example, the math holds for the two dice even though I don’t explicitly write it down.)\nSame goes with the definition of independence. When we say “knowing the outcome of one provides no information about the outcome of the other,” we once again need to show this mathematically, not just using logic. We will discuss this in Lesson 4: Conditional Probability, where we translate the previous statement to \\[P(A) = P(A|B)\\] And we need to show this mathematically!"
+  },
+  {
+    "objectID": "lessons/03_Probability/03_Probability_muddy_points.html#for-r-if-we-dont-y6-anymore-how-do-we-remove-that",
+    "href": "lessons/03_Probability/03_Probability_muddy_points.html#for-r-if-we-dont-y6-anymore-how-do-we-remove-that",
+    "title": "Muddy Points",
+    "section": "4. For R, if we don’t “y=6” anymore, how do we remove that?",
+    "text": "4. For R, if we don’t “y=6” anymore, how do we remove that?\nThere are a couple ways to remove y=6 from your saved R objects.\n\nYou can use the command rm(y). If you check the Envioronment, it should be gone!\nYou can also use the little broom/sweeping icon  in the Environment to clear out ALL your saved objects. Just note, that everything will be erased with this option.\nYou can also reassign y to anything else and it will overwrite your previous assignment"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#bayes-theorem-applications",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#bayes-theorem-applications",
+    "title": "Muddy Points",
+    "section": "2. Bayes’ theorem: applications",
+    "text": "2. Bayes’ theorem: applications\nSee the last two questions in the above example for the application of Bayes’ Theorem!!"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#x-2-table-for-diagnostic-problems",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#x-2-table-for-diagnostic-problems",
+    "title": "Muddy Points",
+    "section": "3. 2 x 2 table for diagnostic problems",
+    "text": "3. 2 x 2 table for diagnostic problems\nSee above link to video and pdf where I use the 2 x 2 table. It’s not necessary for this type of problem, but you can use it! I also like tree diagrams, which I included in the example above.\n\nCan we use a 2x2 in homework solutions?\nYes, definitely!!"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#will-probability-language-be-necessary-to-remember-for-assignments-in-the-future",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#will-probability-language-be-necessary-to-remember-for-assignments-in-the-future",
+    "title": "Muddy Points",
+    "section": "4. Will probability language be necessary to remember for assignments in the future?",
+    "text": "4. Will probability language be necessary to remember for assignments in the future?\nNot in such a precise way like we use them in this week’s word problems. Understanding joint, marginal, and conditional probabilities are important. And knowing the mathematical implications of independent and not independent events. Honestly, it’s more important for you to have a sense of what someone means when they (most likely me hehe) use those words in passing to define something else. There are a lot of statistics methods that hinge on independence, joint, marginal, and conditional."
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#does-the-upside-down-u-mean-intersection-union-as-well-as-and",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#does-the-upside-down-u-mean-intersection-union-as-well-as-and",
+    "title": "Muddy Points",
+    "section": "5. Does the upside down U mean “intersection”, “union”, as well as “and”?",
+    "text": "5. Does the upside down U mean “intersection”, “union”, as well as “and”?\n\n\\(\\cup\\) means “union” and “or.” You can think of \\(A \\cup B\\) as: event A on its own OR event B on its own OR both events\n\\(\\cap\\) means “intersection” and “and.” You can think of \\(A \\cap B\\) as: event A and B happening (cannot be each on their own)\nHere’s me posing a similar question to ChatGPT"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#why-does-pba-pbca-1",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#why-does-pba-pbca-1",
+    "title": "Muddy Points",
+    "section": "6. Why does \\(P(B|A) + P(B^c|A) = 1\\)?",
+    "text": "6. Why does \\(P(B|A) + P(B^c|A) = 1\\)?\nA few facts will help us here:\n\n\\(B\\) and \\(B^c\\) are disjoint events (this is by nature of complements)\nFor disjoint events, the probability of the union is the addition of each probability: \\[P(B \\cup B^c) = P(B) + P(B^c)\\]\n\\(P(B|A) = \\dfrac{P(B\\cap A)}{P(A)}\\) and we can even extend this to something like \\(P(D \\cup C|A) = \\dfrac{P([D \\cup C]\\cap A)}{P(A)}\\)\n\nNo matter what is on the left or right side of the “|” (given) statement, we can apply the same conditional probability\n\n\nWe can start with the fact that\n\\[P(B \\cup B^c | A) = 1\\]\nWhy is that?\n\\[\\begin{aligned}\nP(B \\cup B^c | A) = \\dfrac{P([B \\cup B^c]\\cap A)}{P(A)}\n\\end{aligned}\\]\nThe union (\\(\\cup\\)) of \\(B\\) and \\(B^c\\) is the sample space, so when we talk about \\([B \\cup B^c]\\cap A\\), we are asking about the shared space between the sample space and \\(A\\), which is just \\(A\\)\nSo….\n\\[\\begin{aligned}\nP(B \\cup B^c | A) = & \\dfrac{P([B \\cup B^c]\\cap A)}{P(A)} \\\\\n= & \\dfrac{P(S\\cap A)}{P(A)} \\\\\n= & \\dfrac{P(A)}{P(A)} \\\\\n= & 1 \\\\\n\\end{aligned}\\]\nSo we have shown \\[P(B \\cup B^c | A) = 1\\]\nNow we can split \\(P(B \\cup B^c | A)\\) into a different form since \\(B\\) and \\(B^c\\) are disjoint:\n\\[\\begin{aligned}\nP(B \\cup B^c | A) = & 1 \\\\\n\\dfrac{P([B \\cup B^c]\\cap A)}{P(A)} = & 1 \\\\\n\\dfrac{P(B\\cap A) + P(B^c \\cap A)}{P(A)}= & 1 \\\\\n\\dfrac{P(B\\cap A)}{P(A)} + \\dfrac{P(B^c \\cap A)}{P(A)}= & 1 \\\\\nP(B|A) + P(B^c|A)= & 1\\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Here’s another video and PDF with a better explanation of what we did in class!\nPlease follow this link for my work through of the example.\nAnd here is the PDF with my work."
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#covid-19-rapid-testing-example",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#covid-19-rapid-testing-example",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Here’s another video and PDF with a better explanation of what we did in class!\nPlease follow this link for my work through of the example.\nAnd here is the PDF with my work."
+  },
+  {
+    "objectID": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#x-2-diagnostic-table-for-diagnostic-problems",
+    "href": "lessons/04_Cond_prob/04_Cond_prob_muddy_points.html#x-2-diagnostic-table-for-diagnostic-problems",
+    "title": "Muddy Points",
+    "section": "3. 2 x 2 diagnostic table for diagnostic problems",
+    "text": "3. 2 x 2 diagnostic table for diagnostic problems\nSee above link to video and pdf where I use the 2 x 2 table. It’s not necessary for this type of problem, but you can use it! I also like tree diagrams, which I included in the example above.\n\nCan we use a 2x2 in homework solutions?\nYes, definitely!! But do not confuse a 2x2 diagnostic table with the probability or contingency tables. The diagnostic table puts conditional probabilities in the cells instead of joint probabilities!!"
   }
 ]
