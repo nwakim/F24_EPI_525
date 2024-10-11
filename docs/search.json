@@ -2202,7 +2202,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n1.8, 1.12, 1.20, 1.32\n\n\n\n\n\n1\n\n10/11\n\n\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#assignments",
@@ -7116,7 +7116,7 @@
     "href": "homework.html#homeworks",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n1.8, 1.12, 1.20, 1.32\n\n\n\n\n\n1\n\n10/11\n\n\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#structure",
@@ -10672,28 +10672,28 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal distribution",
-    "text": "Normal distribution\n\\(\\ \\)\nA random variable \\(X\\) is modeled with a normal distribution if:\n\nshape: symmetric, unimodal bell curve\ncenter: mean \\(\\mu\\)\nspread (variability): standard deviation \\(\\sigma\\)"
+    "text": "Normal distribution\n\nShorthand"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
-    "section": "Poisson distribution",
-    "text": "Poisson distribution\n\nDiscrete distribution\nUsed to model count data (# of successes), especially for rare events\nUsed to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small"
+    "section": "Poisson Distribution",
+    "text": "Poisson Distribution\nSuppose events occur over time in such a way that\n\nThe probability an event occurs in an interval is proportional to the length of the interval.\nEvents occur independently at a rate \\(\\lambda\\) per unit of time.\n\nThen the probability of exactly \\(x\\) events in one unit of time is \\[\nP(X = x) = \\frac{e^{-\\lambda}\\lambda^{x}}{x!}, \\,\\, x = 0, 1, 2,\n\\ldots\n\\]\nThe probability of exactly \\(x\\) events \\(t\\) units of time is \\[\nP(X = x) = \\frac{e^{-\\lambda t}(\\lambda t)^{x}}{x!}, \\,\\, x = 0, 1,\n2, \\ldots\n\\]\nFor the Poisson distribution modeling the number of events in one unit of time:\n\nThe mean is \\(\\lambda\\).\nThe standard deviation is \\(\\sqrt{\\lambda}\\).\n\nIn \\(t\\) units of time, the mean and standard deviation are, respectively, \\(\\lambda t\\) and \\(\\sqrt{\\lambda t}\\)."
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "",
-    "text": "Curve is determined by the formula \\(f(x) = \\frac{e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}}{\\sigma\\sqrt{2\\pi}}\\), for \\(-\\infty &lt; x&lt; \\infty\\).\n\n\n\n\nNormal (Gaussian) distribution\n\n\n\n\n\n\n\n\n\n\nWhat are the means and standard deviations?"
+    "text": "Definition 6. Distribution of a Poisson random variable. Let \\(X\\) be the total number of successes in an interval (such as time) with an average success rate \\(\\lambda\\). Then probability of observing exactly \\(k\\) successes in a unit interval is\n\n\nThe parameter of a Poisson distribution is \\(\\lambda\\).\nIf a r.v. \\(X\\) is modeled by a Poisson distribution, then we write in shorthand"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-1",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "",
-    "text": "The Empirical Rule (a.k.a. the 68-95-99.7 rule)\nFor a normal distribution:\n\n68% of observations are within one standard deviation (SD) of the mean\n95% are within two SD’s\n99.7% are within three SD’s\n\n\n\n\nEmpirical Rule (a.k.a. the 68-95-99.7 rule)\n\n\nThe empirical rule is useful for estimating probabilities."
+    "text": "Theorem 7. Mean and SD of a Poisson r.v. If \\(X\\) is a Poisson r.v. with parameter \\(\\lambda\\), then"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-2",
@@ -10728,21 +10728,21 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#z-scores",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Z-scores",
-    "text": "Z-scores\n\nThe \\(Z\\)-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).\nFor example, if an observation has \\(Z\\)-score \\(z = 3.4\\), then the observation is 3.4 standard deviations above the mean.\n\n\nExample 3. DBP Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nMild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?\nWhat is the \\(10^{th}\\) percentile of the DBP distribution?\nWhat is the \\(95^{th}\\) percentile of the DBP distribution?"
+    "text": "Z-scores\n\nThe \\(Z\\)-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).\nFor example, if an observation has \\(Z\\)-score \\(z = 3.4\\), then the observation is 3.4 standard deviations above the mean."
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal approximation of the binomial distribution",
-    "text": "Normal approximation of the binomial distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R.\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution.\n\n\n\n\nBinomial distribution histograms for varying \\(n\\) when \\(p=0.10\\)"
+    "text": "Normal approximation of the binomial distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution.\n\n\n\n\nBinomial distribution histograms for varying \\(n\\) when \\(p=0.10\\)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-6",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-6",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "",
-    "text": "Example 5.  Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\n\n\nimage\n\n\n\nCalculate exact probability.\nCalculate approximate probability."
+    "text": "Example 5. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\n\n\nimage\n\n\n\nCalculate exact probability.\nCalculate approximate probability."
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-7",
@@ -10769,22 +10769,22 @@
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-1",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-1",
     "title": "Lesson 6: Normal and Poisson distributions",
-    "section": "Example",
-    "text": "Example\n\nExample 9. Cleft palate About 1 in every 1,700 babies is born with cleft palate in the United States. Find the probability that there are 2 babies born with cleft palates amongst the next 3000 births at OHSU.\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\nLesson 6 Slides"
+    "section": "example 1",
+    "text": "example 1\n\nExample 3. DBP Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nMild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?\nWhat is the \\(10^{th}\\) percentile of the DBP distribution?\nWhat is the \\(95^{th}\\) percentile of the DBP distribution?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#random-variables",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#random-variables",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Random variables",
-    "text": "Random variables\n\n\nRandom variable (RV)\n\n\nA random variable (r.v.) assigns numerical values (probability) to the outcome of a random phenomenon\n\n\nNotation: A random variable is usually denoted with a capital letter such as \\(X\\), \\(Y\\), or \\(Z\\)."
+    "text": "Random variables\n\n\nRandom variable (RV or r.v.)\n\n\nA random variable (r.v.) assigns numerical values (probability) to the outcome of a random phenomenon\n\n\nNotation: A random variable is usually denoted with a capital letter such as \\(X\\), \\(Y\\), or \\(Z\\)."
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Binomial distribution",
-    "text": "Binomial distribution\n\nMany situations involve modeling independent random events that have 2 possible outcomes (binary), such as\n\nRepeatedly flipping a coin\n\nRepeated events are referred to as trials\nThe 2 possible outcomes are referred to as successes and failures.\nWe denote the probability of a success as \\(p\\).\nWe denote the probability of a failure as \\(q = 1-p\\)."
+    "text": "Binomial distribution\n\n\nDistribution of a Binomial random variable\n\n\nLet \\(X\\) be the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success. Then probability of observing exactly \\(k\\) successes in \\(n\\) independent trials is\n\\[P(X = x) = \\binom{n}{x} p^x (1-p)^{n-x},  x= 0, 1, 2, \\dots, n \\]\n\n\n\nThe parameters of a binomial distribution are \\(p\\) and \\(n\\).\nIf a r.v. \\(X\\) is modeled by a binomial distribution, then we write in shorthand\n\n\n\nMean and variance of a Binomial r.v\n\n\nIf \\(X\\) is a binomial r.v. with probability of success \\(p\\), then \\(E(X) = np\\) and \\(\\text{Var}(X)=np(1-p)\\)"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#day-6-topics",
@@ -10854,14 +10854,14 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#bernoulli-distribution",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Bernoulli distribution",
-    "text": "Bernoulli distribution\n\n\nBernoulli random variable\n\n\nBernoulli random variable. If \\(X\\) is a random variable that takes value 1 with probability of success \\(p\\) and 0 with probability \\(1-p\\), then \\(X\\) is a Bernoulli random variable.\n\n\n\nWe call the probability of success \\(p\\) the parameter of the Bernoulli distribution.\nEach value of \\(p\\) identifies a specific Bernoulli distribution out of the family of Bernoulli r.v.’s where \\(p\\) is any value between 0 and 1 (inclusive).\nIf a r.v. \\(X\\) is modeled by a Bernoulli distribution, then we write in shorthand\n\n\nTheorem 19. Mean and SD of a Bernoulli r.v. If \\(X\\) is a Bernoulli r.v. with probability of success \\(p\\), then"
+    "text": "Bernoulli distribution\n\nWhen \\(n=1\\), aka we have a single trial, we give a different name to the random variable: Bernoulli\n\n\n\nBernoulli random variable\n\n\nBernoulli random variable. If \\(X\\) is a random variable that takes value 1 with probability of success \\(p\\) and 0 with probability \\(1-p\\) (or \\(q\\)), then \\(X\\) is a Bernoulli random variable.\n\n\n\nWe call the probability of success \\(p\\) the parameter of the Bernoulli distribution.\nIf a r.v. \\(X\\) is modeled by a Bernoulli distribution, then we write in shorthand \\(X \\sim \\text{Bernoulli}(p)\\) or \\(X \\sim \\text{Bern}(p)\\)\n\n\n\nMean and SD of a Bernoulli r.v.\n\n\nIf* \\(X\\) is a Bernoulli r.v. with probability of success \\(p\\), then \\(E(X) = p\\) and \\(\\text{Var}(X) = p(1-p)\\)"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-1",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-1",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Binomial distribution",
-    "text": "Binomial distribution\n$$\nRecall Example 3.17:\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19.\nDefine the r.v. \\(X_i\\) to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.\nSuppose 3 people have tested positive for Covid-19 (independently of each other).\nLet \\(T\\) denote the number of people that are vaccinated amongst the 3 that tested positive."
+    "text": "Binomial distribution\n\n\nDistribution of a Binomial random variable\n\n\nLet \\(X\\) be the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success. Then probability of observing exactly \\(k\\) successes in \\(n\\) independent trials is\n\n\n\nThe parameters of a binomial distribution are \\(p\\) and \\(n\\).\nIf a r.v. \\(X\\) is modeled by a binomial distribution, then we write in shorthand\n\n\nTheorem 21. Mean and SD of a Binomial r.v. If \\(X\\) is a binomial r.v. with probability of success \\(p\\), then"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#section",
@@ -15215,7 +15215,7 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-2",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Binomial distribution",
-    "text": "Binomial distribution\nThe random variable \\(T\\) above is an example of a Binomial random variable.\nIn general, a random variable \\(X\\) is Binomial if the following hold:\n\nThe trials are independent.\nThe number of trials, \\(n\\), is fixed.\nEach trial outcome can be classified as a success or failure.\nThe probability of a success, \\(p\\), is the same for each trial.\nThe r.v. \\(X\\) is the total number of successes in the \\(n\\) trials."
+    "text": "Binomial distribution\n\n\nBinomial distribution\n\n\nDistribution of a Binomial random variable. Let \\(X\\) be the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success. Then probability of observing exactly \\(k\\) successes in \\(n\\) independent trials is\n\n\n\nThe parameters of a binomial distribution are \\(p\\) and \\(n\\).\nIf a r.v. \\(X\\) is modeled by a binomial distribution, then we write in shorthand\n\n\nTheorem 21. Mean and SD of a Binomial r.v. If \\(X\\) is a binomial r.v. with probability of success \\(p\\), then"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-3",
@@ -15229,7 +15229,7 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Binomial distribution example",
-    "text": "Binomial distribution example\n\nExample 22. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?"
+    "text": "Binomial distribution example\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#linear-combinations-of-random-variables",
@@ -15348,14 +15348,14 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-rolling-dice",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Keep rolling dice!",
-    "text": "Keep rolling dice!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?"
+    "text": "Keep rolling dice!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on rolls for 2 fair 6-sided dice and 1 unfair die (as described in our previous example). Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the unfair die roll. How much money do you expect to get?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-keep-rolling-dice",
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#keep-keep-rolling-dice",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Keep keep rolling dice!",
-    "text": "Keep keep rolling dice!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?"
+    "text": "Keep keep rolling dice!\n\n\nExample: Expected money for rolling 3 dice\n\n\nLet the random variables \\(X_1, X_2, X_3\\) be the values shown on rolls for 2 fair 6-sided dice and 1 unfair die (as described in our previous example). Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the unfair die roll. What are the variance and standard deviation of the amount you get from the 3 rolls?"
   },
   {
     "objectID": "homework.html#file-naming",
@@ -15363,5 +15363,327 @@
     "title": "Homework",
     "section": "File Naming",
     "text": "File Naming\n\nFor HW Assignments, please use the following file naming: “HW01_LastName_FirstInitial”\n\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Solutions, please use the following file naming: “HW01_G03_Q1.32_LastName_FirstInitial”\n\nFor this naming, “G##” will represent your group number and “Q#.##” will represent the question that you are submitting\nFor homeworks without R, this should be a pdf file\nFor homeworks with R, this may be a pdf file (with the code in the pdf) or an html file\n\nFor HW Presentations, please use the following file naming: “HW01_LastName_FirstInitial”\n\nThis should be a video! You can send me a link to a Zoom or Webex recording\n\nYou can share a file via OneDrive!"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-random-variable",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-random-variable",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial random variable",
+    "text": "Binomial random variable\n\nOne specific type of discrete random variable is a binomial random variable\n\n\n\nBinomial random variable\n\n\n\n\\(X\\) is a binomial random variable if it represents the number of successes in \\(n\\) independent replications (or trials) of an experiment where\n\nEach replicate has two possible outcomes: either success or failure\nThe probability of success is \\(p\\)\nThe probability of failure is \\(q=1-p\\)\n\n\n\n\n\nA binomial random variable takes on values \\(0, 1, 2, \\dots, n\\).\nIf a r.v. \\(X\\) is modeled by a Binomial distribution, then we write in shorthand \\(X \\sim \\text{Binom}(n,p)\\)\nQuick example: The number of heads in 3 tosses of a fair coin is a binomial random variable with parameters \\(n = 3\\) and \\(p = 0.5\\)."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#from-bernoulli-to-binomial",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#from-bernoulli-to-binomial",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "From Bernoulli to Binomial",
+    "text": "From Bernoulli to Binomial\n\nThe Bernoulli distribution is a special case of the Binomial distribution where n=1n = 1n=1. In other words, if you have only one trial (n=1n = 1n=1), the number of successes follows a Bernoulli distribution.\nSpecifically: \\[\\text{Binomial}(1, p) = \\text{Bernoulli}(p) \\]\nTo get a Binomial distribution, we simply extend the scenario from a single trial to multiple independent trials. For example, if we conduct nnn independent Bernoulli trials with the same success probability ppp, the total number of successes across these nnn trials will follow a Binomial distribution.\nExample:\n\nBernoulli: If you flip a coin once, with probability \\(p=0.5\\) of landing heads, that is a Bernoulli trial.\nBinomial: If you flip the coin 5 times, and you want to know how many times it will land heads, the number of heads will follow a Binomial distribution with parameters \\(n=5\\) and \\(p=0.5\\)"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#relationship-between-bernoulli-and-binomial1",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#relationship-between-bernoulli-and-binomial1",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Relationship between Bernoulli and Binomial1",
+    "text": "Relationship between Bernoulli and Binomial1\n\nThe Bernoulli distribution is a special case of the Binomial distribution where \\(n=1\\)\n\nSpecifically: \\[\\text{Binomial}(1, p) = \\text{Bernoulli}(p) \\]\n\nTo get a Binomial distribution, we simply extend the scenario from a single trial to multiple independent trials.\n\nIf we conduct \\(n\\) independent Bernoulli trials with the same success probability \\(p\\), the total number of successes across these \\(n\\) trials will follow a Binomial distribution\n\n\n \n\nQuick example:\n\nBernoulli: If you flip a coin once, with probability \\(p=0.5\\) of landing heads, that is a Bernoulli trial.\nBinomial: If you flip the coin 5 times, and you want to know how many times it will land heads, the number of heads will follow a Binomial distribution with parameters \\(n=5\\) and \\(p=0.5\\)\n\n\nInformation on slide heavily borrowed from ChatGPT with prompt: “can you explain how we go from a bernoulli distribution to a binomial”"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-1",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-1",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example",
+    "text": "Binomial distribution example\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-2",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-2",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example",
+    "text": "Binomial distribution example\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\n\n\n\n\\[P(X=4) = {10 \\choose 4} 0.25^2 (1-0.25)^{10-4}  = 0.146\\]\n\ndbinom(x = 4, size = 10, prob = 0.25) # d for distribution\n\n[1] 0.145998\n\n\n\nIn general, for \\(P(X=k)\\) we code: dbinom(x = k, size = n, prob = p)"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-r-commands",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-r-commands",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution: R commands",
+    "text": "Binomial distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrbinom()\nreturns sample of random variables with specified binomial distribution\n\n\ndbinom()\nreturns probability of getting certain number of successes\n\n\npbinom()\nreturns cumulative probability of getting certain number or less successes\n\n\nqbinom()\nreturns number of successes corresponding to desired quantile"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-3",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-3",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example",
+    "text": "Binomial distribution example\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\n\n\n\n\\[\\begin{aligned}\nP(X \\leq 3) = & P(X =0) + P(X = 1) + P(X =2) + P(X = 3) \\\\ = &{10 \\choose 0} 0.25^0 (0.75)^{10} + {10 \\choose 1} 0.25^1 (0.75)^{9} + {10 \\choose 2} 0.25^2 (0.75)^{8}+ {10 \\choose 3} 0.25^3 (0.75)^{7} \\\\\n= & 0.7758\n\\end{aligned}\\]\n\npbinom(q = 3, size = 10, prob = 0.25, lower.tail = T)\n\n[1] 0.7758751\n\n\n\nIn general, for \\(P(X \\leq k)\\) we code: pbinom(q = k, size = n, prob = p) with lower.tail = T as a default option"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-4",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-4",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example",
+    "text": "Binomial distribution example\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?\n\n\n\n\\[\\begin{aligned}\nP(X \\geq 5) = & P(X =5) + P(X = 6) + P(X =7) + P(X = 8) + P(X = 9)+ P(X = 10) \\\\ = &{10 \\choose 5} 0.25^5 (0.75)^{5} + {10 \\choose 6} 0.25^6 (0.75)^{4} + \\ldots + {10 \\choose 10} 0.25^10 (0.75)^{0}\\\\\n= & 0.7758\n\\end{aligned}\\]\n\npbinom(q = 3, size = 10, prob = 0.25, lower.tail = T)\n\n[1] 0.7758751\n\n\n\nIn general, for \\(P(X \\leq k)\\) we code: pbinom(q = k, size = n, prob = p) with lower.tail = T as a default option"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-15",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-15",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example (1/5)",
+    "text": "Binomial distribution example (1/5)\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-25",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-25",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example (2/5)",
+    "text": "Binomial distribution example (2/5)\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the expected value of \\(X\\)?\nWhat is the SD of \\(X\\)?"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-35",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-35",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example (3/5)",
+    "text": "Binomial distribution example (3/5)\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the probability that exactly 4 of the 10 people that tested positive are vaccinated?\n\n\n\n\\[P(X=4) = {10 \\choose 4} 0.25^2 (1-0.25)^{10-4}  = 0.146\\]\n\ndbinom(x = 4, size = 10, prob = 0.25) # d for distribution\n\n[1] 0.145998\n\n\n\nIn general, for \\(P(X=k)\\) we code: dbinom(x = k, size = n, prob = p)"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-45",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-45",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example (4/5)",
+    "text": "Binomial distribution example (4/5)\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the probability that at most 3 of the 10 people that tested positive are vaccinated?\n\n\n\n\\[\\begin{aligned}\nP(X \\leq 3) = & P(X =0) + P(X = 1) + P(X =2) + P(X = 3) \\\\ = &{10 \\choose 0} 0.25^0 (0.75)^{10} + {10 \\choose 1} 0.25^1 (0.75)^{9} + {10 \\choose 2} 0.25^2 (0.75)^{8}+ {10 \\choose 3} 0.25^3 (0.75)^{7} \\\\\n= & 0.7758\n\\end{aligned}\\]\n\npbinom(q = 3, size = 10, prob = 0.25, lower.tail = T)\n\n[1] 0.7758751\n\n\n\nIn general, for \\(P(X \\leq k)\\) we code: pbinom(q = k, size = n, prob = p) with lower.tail = T as a default option"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-55",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#binomial-distribution-example-55",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Binomial distribution example (5/5)",
+    "text": "Binomial distribution example (5/5)\n\n\nVaccinated people testing positive for Covid-19\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 10 that tested positive.\n\nWhat is the probability that at least 5 of the 10 people that tested positive are vaccinated?\n\n\n\n\\[\\begin{aligned}\nP(X \\geq 5) = & P(X =5) + P(X = 6) + P(X =7) + P(X = 8) + P(X = 9)+ P(X = 10) \\\\ = &{10 \\choose 5} 0.25^5 (0.75)^{5} + {10 \\choose 6} 0.25^6 (0.75)^{4} + \\ldots + {10 \\choose 10} 0.25^10 (0.75)^{0}\\\\\n= & 0.7758\n\\end{aligned}\\]\n\npbinom(q = 4, size = 10, prob = 0.25, lower.tail = F) # switch to greater than!\n\n[1] 0.07812691\n\n1 - pbinom(q = 4, size = 10, prob = 0.25, lower.tail = T)\n\n[1] 0.07812691\n\n\n\nIn general, for \\(P(X &gt; k)\\) we code: pbinom(q = k, size = n, prob = p, lower.tail = F)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#where-are-we",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#where-are-we",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#last-time-discrete-vs.-continuous-random-variables",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#last-time-discrete-vs.-continuous-random-variables",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Last time: Discrete vs. continuous random variables",
+    "text": "Last time: Discrete vs. continuous random variables\n\nProbability distributions are usually either discrete or continuous, depending on whether the random variable is discrete or continuous.\n\n\n\n\n\nDiscrete random variable\n\n\nA discrete r.v. \\(X\\) takes on a finite number of values or countably infinite number of possible values.\n\n\nThink:\n\nNumber of heads in a set of coin tosses\nNumber of people who have had chicken pox in a random sample\n\n\n\n\n\n\nContinuous random variable\n\n\nA continuous r.v. \\(X\\) can take on any real value in an interval of values or unions of intervals.\n\n\nThink:\n\nHeight in a population\nBlood pressure in a population"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Poisson distribution",
+    "text": "Poisson distribution\n\nDiscrete distribution\nUsed to model count data (# of successes), especially for rare events\nUsed to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#continuous-random-variables",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#continuous-random-variables",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Continuous random variables",
+    "text": "Continuous random variables\nA discrete random variable takes on a finite number of values.\n\nNumber of heads in a set of coin tosses\nNumber of people who have had chicken pox in a random sample\n\nA continuous random variable can take on any real value in an interval.\n\nHeight in a population\nBlood pressure in a population\n\nA general distinction to keep in mind: discrete random variables are counted, but continuous random variables are measured."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Probabilities for continuous distributions",
+    "text": "Probabilities for continuous distributions\nTwo important features of continuous distributions:\n\nThe total area under the density curve is 1.\nThe probability that a variable has a value within a specified interval is the area under the curve over that interval."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Probabilities for continuous distributions…",
+    "text": "Probabilities for continuous distributions…\nWhen working with continuous random variables, probability is found for intervals of values rather than individual values.\n\nThe probability that a continuous r.v. \\(X\\) takes on any single individual value is 0. That is, \\(P(X = x) = 0\\).\nThus, \\(P(a &lt; X &lt; b)\\) is equivalent to \\(P(a \\leq X \\leq b)\\)."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#the-normal-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#the-normal-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "The normal distribution",
+    "text": "The normal distribution\nAccording to the Empirical Rule, for any normal distribution,\n\napproximately 68% of the data are within 1 SD of the mean \napproximately 95% of the data are within 2 SDs of the mean \napproximately 99.7% of the data are within 3 SDs of the mean\n\n\n\n\n68-95-99.7"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#a-normal-example",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#a-normal-example",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "A Normal Example…",
+    "text": "A Normal Example…\n\nSAT scores are \\(N(1500, 300)\\). ACT scores are \\(N(21,5)\\).\n\\(x_A\\) represents the score of Student A; \\(x_B\\) represents the score of Student B.\n\n[Z_{A} = = = 1 ]\n[Z_{B} = = = 0.6]"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Standard Normal Distribution",
+    "text": "Standard Normal Distribution\n\nTransformation from general normal \\(X\\) to standard normal \\(Z\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#a-normal-example-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#a-normal-example-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "A Normal Example…",
+    "text": "A Normal Example…\n\nSAT scores are \\(N(1500, 300)\\). ACT scores are \\(N(21,5)\\).\n\\(x_A\\) represents the score of Student A; \\(x_B\\) represents the score of Student B.\n\n[Z_{A} = = = 1 ]\n[Z_{B} = = = 0.6]"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-normal-probabilities-i",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-normal-probabilities-i",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating Normal Probabilities (I)",
+    "text": "Calculating Normal Probabilities (I)\nWhat is the percentile rank for a student who scores an 1800 on the SAT for a year in which the scores are \\(N(1500, 300)\\)?\n\nCalculate a \\(Z\\)-score. If \\(X\\) is a normal random variable with mean \\(\\mu\\) and standard deviation \\(\\sigma\\), [Z = , ] is a standard normal random variable (\\(\\mu = 0\\), \\(\\sigma =1\\)).\nCalculate the normal probability.\n\n calculates the area (i.e., probability) to the left of \\(z\\)\n\n\n\npnorm(1)\n\n[1] 0.8413447\n\n\n\nAlternatively, let do the work …\n\n\npnorm(1800, 1500, 300)\n\n[1] 0.8413447"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-normal-probabilities-ii",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-normal-probabilities-ii",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating Normal Probabilities (II)",
+    "text": "Calculating Normal Probabilities (II)\nWhat score on the SAT would put a student in the 99\\(^{th}\\) percentile?\n\nIdentify the \\(Z\\)-value. calculates the value \\(z\\) such that for a standard normal variable \\(Z\\), \\(p = P(Z \\leq z)\\).\n\n\nqnorm(0.99)\n\n[1] 2.326348\n\n\n\nCalculate the score, \\(X\\). If \\(Z\\) is distributed standard Normal, then [X = Z + ,] is Normal with mean \\(\\mu\\) and standard deviation \\(\\sigma\\).\n\n[X = Z + = 300(2.33) + 1500 = 2199]\n\nAlternatively, let do the work …\n\n\nqnorm(0.99, 1500, 300)\n\n[1] 2197.904"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#introduction-to-the-poisson-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#introduction-to-the-poisson-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Introduction to the Poisson distribution",
+    "text": "Introduction to the Poisson distribution\n\nThe Poisson distribution is often used to calculate probabilities for rare events that accumulate over time.\n\nIt is a discrete distribution!\n\nIt used most often in settings where events happen at a rate \\(\\lambda\\) per unit of population and per unit time, such as the annual incidence of a disease in a population.\nTypical example: for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.\nAlways take care to note and understand the units.\nUsed to model count data (# of successes), especially for rare events\nUsed to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-outbreaks-of-childhood-leukemia",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-outbreaks-of-childhood-leukemia",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Outbreaks of childhood leukemia",
+    "text": "Example: Outbreaks of childhood leukemia\nFortunately, childhood cancers are rare.\nFor children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in the decade from 2000 - 2010. Approximately 20% of the US population are in this age range.\n\nWhat is the incidence rate over a 5 year period?\nIn a small city of 75,000 people, what is the probability of observing exactly 8 cases of ALL over a 5 year period?\nIn the small city, what is the probability of observing 8 or more cases over a 5 year period?"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-with-lambda-2.25",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-with-lambda-2.25",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Poisson distribution with \\(\\lambda = 2.25\\)",
+    "text": "Poisson distribution with \\(\\lambda = 2.25\\)\n\n\n\npoisson rate 2.25"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-mean-and-standard-deviation",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-mean-and-standard-deviation",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Poisson mean and standard deviation",
+    "text": "Poisson mean and standard deviation\nFor the Poisson distribution modeling the number of events in one unit of time:\n\nThe mean is \\(\\lambda\\).\nThe standard deviation is \\(\\sqrt{\\lambda}\\).\n\nIn \\(t\\) units of time, the mean and standard deviation are, respectively, \\(\\lambda t\\) and \\(\\sqrt{\\lambda t}\\)."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#childhood-leukemia-cases-oi-biostat-example-3.37",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#childhood-leukemia-cases-oi-biostat-example-3.37",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Childhood leukemia cases (OI Biostat, Example 3.37)",
+    "text": "Childhood leukemia cases (OI Biostat, Example 3.37)\nThe incidence rate of ALL in a year is 30 per 1,000,000 children:\n\n\\(\\dfrac{30}{1,000,000}= 0.00003 = 3\\times 10^{-5}\\).\n\nThe incidence rate over a 5-year period is (5)(30) per 1,000,000 children:\n\n\\(\\dfrac{150}{1,000,000} = 0.00015 = 1.5 \\times 10^{-4}\\)."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#what-about-a-city-of-size-75000",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#what-about-a-city-of-size-75000",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "What about a city of size 75,000?",
+    "text": "What about a city of size 75,000?\nIn a city of 75,000 people, approximately \\((75,000)(0.20) = 15,000\\) children will be age 0 - 14 (from slide 31).\nThe five-year rate of new cases for the city would be:\n[(1.5 ^{-4})(15,000) = 2.25]"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#what-is-the-probability-of-8-cases-over-5-years",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#what-is-the-probability-of-8-cases-over-5-years",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "What is the probability of 8 cases over 5 years?",
+    "text": "What is the probability of 8 cases over 5 years?\n[P(X=8) = = ]\nEasiest to calculate this in …\nSuppose \\(X\\) has a Poisson distribution with parameter \\(\\lambda\\).\n\n: \\(P(X = k)\\)\n\n\ndpois(8, lambda = 2.25)\n\n[1] 0.001717027"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#what-is-the-probability-of-8-or-more-cases",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#what-is-the-probability-of-8-or-more-cases",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "What is the probability of 8 or more cases?",
+    "text": "What is the probability of 8 or more cases?\nWould 8 or more cases be a rare event?\n\nCalculate \\(P(X \\geq 8) = 1 - P(X \\leq 7)\\).\n\nSuppose \\(X\\) has a Poisson distribution with parameter \\(\\lambda\\).\n\n: \\(P(X \\leq k)\\)\n\n\n1 - ppois(7, lambda = 2.25)\n\n[1] 0.002267088\n\n\n\n: \\(P(X &gt; k)\\)\n\n\nppois(7, lambda = 2.25, lower.tail = FALSE)\n\n[1] 0.002267088"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution-r-commands",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution-r-commands",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Normal distribution: R commands",
+    "text": "Normal distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrnorm()\nreturns sample of random variables with specified normal distribution\n\n\ndnorm()\nreturns value of probability density at certain point of the normal distribution\n\nNot typically used\n\n\n\npnorm()\nreturns cumulative probability of getting certain point (or less) of the normal distribution\n\n\nqnorm()\nreturns z-score | corresponding to desired quantile"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example calculating",
+    "text": "Example calculating\n\nExample 1. Calculating standard normal probabilities practice Let \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#examples",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#examples",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "examples",
+    "text": "examples\nCalculating Probabilities for a General Normal Distribution\n\nExample 2. Let \\(X\\) be a normal r.v. with mean 8 and standard deviation 2. Calculate \\(\\mathbb{P}(X&gt;10)\\).\n\n\nTransformation from general normal \\(X\\) to standard normal \\(Z\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approx",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approx",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Normal approx",
+    "text": "Normal approx\n\nTheorem 4. Normal approximation of the binomial distribution The binomial distribution with probability of success \\(p\\) is nearly normal when the sample size \\(n\\) is sufficiently large such that \\(np \\geq 10\\) and \\(n(1-p)\\geq 10\\). The approximate normal distribution has parameters corresponding to the mean and standard deviation of the binomial distribution: \\[\\begin{aligned}\n\\mu &= np\n&&\\sigma= \\sqrt{np(1-p)}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-2",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-2",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example",
+    "text": "Example\n\nExample 9. Cleft palate About 1 in every 1,700 babies is born with cleft palate in the United States. Find the probability that there are 2 babies born with cleft palates amongst the next 3000 births at OHSU.\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\nLesson 6 Slides"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-3",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-3",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example",
+    "text": "Example\n\nExample 9. Cleft palate About 1 in every 1,700 babies is born with cleft palate in the United States. Find the probability that there are 2 babies born with cleft palates amongst the next 3000 births at OHSU.\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\nLesson 6 Slides"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Standard Normal Distribution",
+    "text": "Standard Normal Distribution\n\nA standard normal distribution is defined as a normal distribution with mean 0 and variance 1. It is often denoted as \\(Z \\sim N(0, 1)\\).\nAny normal random variable \\(X\\) can be transformed into a standard normal random variable \\(Z\\).\n\n\\[Z = \\dfrac{X - \\mu}{\\sigma} \\qquad X = \\mu + Z\\sigma\\]\n\nThe \\(Z\\)-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).\nFor example, if an observation has \\(Z\\)-score \\(z = 3.4\\), then the observation is 3.4 standard deviations above the mean."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Normal Approximation of the Binomial Distribution",
+    "text": "Normal Approximation of the Binomial Distribution\n\nAlso known as: Sampling distribution of \\(\\widehat{p}\\)\nIF \\(X\\sim \\text{Binomial}(n,p)\\) and \\(np&gt;10\\) and \\(nq = n(1-p) &gt; 10\\)\n\nEnsures sample size (\\(n\\)) is moderately large and the \\(p\\) is not too close to 0 or 1\nOther resources use other criteria (like \\(npq&gt;5\\) or \\(np&gt;5\\))\nWhen looking at a sample, we use \\(\\widehat{p}\\) instead of \\(p\\) to check this!!\n\n\n \n\nTHEN approximately \\(𝑋\\sim \\text{Normal}\\big(\\mu_X = np, \\sigma_X = \\sqrt{np(1-p)} \\big)\\)\n\nOr we often write this as the sampling distribution of \\(\\widehat{p}\\): \\[\\widehat{p} \\sim \\text{Normal}\\bigg(\\mu_{\\widehat{p}} = p, \\sigma_{\\widehat{p}} = \\sqrt{\\dfrac{p(1-p)}{n}}\\bigg)\\]\n\nPretty good video behind the intuition of this (Watch 00:00 - 05:40)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-2",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-2",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Normal approximation of the binomial distribution",
+    "text": "Normal approximation of the binomial distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution.\n\n\n\n\nBinomial distribution histograms for varying \\(n\\) when \\(p=0.10\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-using-normal-approximation",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-using-normal-approximation",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example using Normal approximation",
+    "text": "Example using Normal approximation\n\nExample 5. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\n\n\nimage\n\n\n\nCalculate exact probability.\nCalculate approximate probability."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#mean-and-sd",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#mean-and-sd",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Mean and SD",
+    "text": "Mean and SD\n\nTheorem 7. Mean and SD of a Poisson r.v. If \\(X\\) is a Poisson r.v. with parameter \\(\\lambda\\), then"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-poisson-approximation-of-binomial-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-poisson-approximation-of-binomial-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Poisson approximation of binomial distribution",
+    "text": "Example: Poisson approximation of binomial distribution\n\nExample 9. Cleft palate About 1 in every 1,700 babies is born with cleft palate in the United States. Find the probability that there are 2 babies born with cleft palates amongst the next 3000 births at OHSU.\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\nLesson 6 Slides"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#some-resources-for-the-normal-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#some-resources-for-the-normal-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Some resources for the normal distribution",
+    "text": "Some resources for the normal distribution\n\nPage on R commands"
   }
 ]

@@ -19,127 +19,160 @@ format:
 execute:
   echo: true
   freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
+# Learning Objectives
 
-# Chapter 3: Distributions of Random Variables (Part 2) {#chapter-3-distributions-of-random-variables-part-2 .unnumbered}
+## Where are we?
 
-*Day 7 topics*:
+![](../img_slides/course_map.png){fig-align="center"}
 
-Section 3.3: Normal distribution Section 3.4: Poisson distribution
+# Learning Objectives
 
-## Normal distribution
+## Last time: Discrete vs. continuous random variables
 
-$\ $
+-   Probability distributions are usually either **discrete** or
+    **continuous**, depending on whether the random variable is discrete
+    or continuous.
 
-A random variable $X$ is modeled with a normal distribution if:
-
--   shape: symmetric, unimodal bell curve
-
--   center: mean $\mu$
-
--   spread (variability): standard deviation $\sigma$
-
-##
-
--   Curve is determined by the formula
-    $f(x) = \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma\sqrt{2\pi}}$,
-    for $-\infty < x< \infty$.
-
-![Normal (Gaussian)
-distribution](../img_slides/normal_curve_Brase.png){#fig:normal width="3.8in"}
-
-<figure>
-<figure>
-<img src="../img_slides/normal_curves_compare_v1.png" />
-</figure>
-<figure>
-<img src="../img_slides/normal_curves_compare_v2.png" />
-</figure>
-<figcaption>What are the means and standard deviations?</figcaption>
-</figure>
-
-##
-
-**The Empirical Rule** (a.k.a. the 68-95-99.7 rule)
-
-For a normal distribution:
-
--   68% of observations are within one standard deviation (SD) of the
-    mean
-
--   95% are within two SD's
-
--   99.7% are within three SD's
-
-![Empirical Rule (a.k.a. the 68-95-99.7
-rule)](../img_slides/6895997.pdf){#fig:normal width="5in"}
-
-The empirical rule is useful for *estimating* probabilities.
-
-## 
-
-**Standard Normal Distribution**
-
--   A **standard** normal r.v. has mean 0 and standard deviation 1.
-
--   We denote standard normal r.v.'s with the letter $Z$.
-
-**Calculating Probabilities for a Standard Normal Distribution**
-
-Three ways to calculate probabilities from a normal distribution:
-
-1.  ~~Calculus~~
-
-2.  Normal probability table
-
-    -   The textbook has a normal probability table in Appendix B.1,
-        which is included as the next two pages.
-
-3.  R
-
-    -   $\mathbb{P}(Z\leq q)$ =
-
-            pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)
-            
-##
-
-::: example
-**Example 1**. ***Calculating standard normal probabilities practice**
-Let $Z$ be a standard normal random variable, $Z\sim N(\mu=0,\sigma=1)$.
-Calculate the following probabilities. Include sketches of the normal
-curves with the probability areas shaded in.*
-
-1.  *$\mathbb{P}( Z < 2.67 )$*
-
-2.  *$\mathbb{P}( Z > -0.37 )$*
-
-3.  *$\mathbb{P}( -2.18 < Z < 2.46 )$*
-
-4.  *$\mathbb{P}(Z = 1.53 )$*
+:::::::::::: columns
+:::::: {.column width="47%"}
+::::: red
+::: red-ttl
+Discrete random variable
 :::
 
-##
-
-**Calculating Probabilities for a General Normal Distribution**
-
-::: example
-**Example 2**. *Let $X$ be a normal r.v. with mean 8 and standard
-deviation 2. Calculate $\mathbb{P}(X>10)$.*
+::: red-cont
+A **discrete** r.v. $X$ takes on a finite number of values or countably
+infinite number of possible values.
 :::
+:::::
+
+Think:
+
+-   Number of heads in a set of coin tosses
+-   Number of people who have had chicken pox in a random sample
+::::::
+
+::: {.column width="2%"}
+:::
+
+:::::: {.column width="49%"}
+::::: pink2
+::: pink2-ttl
+Continuous random variable
+:::
+
+::: pink2-cont
+A **continuous** r.v. $X$ can take on any real value in an interval of
+values or unions of intervals.
+:::
+:::::
+
+Think:
+
+-   Height in a population
+-   Blood pressure in a population
+::::::
+::::::::::::
+
+## Probabilities for continuous distributions
+
+Two important features of continuous distributions:
+
+-   The total area under the density curve is 1.
+
+-   The probability that a variable has a value within a specified
+    interval is the area under the curve over that interval.
+
+![](../img_slides/fdicHeightContDistFilled.png){fig-align="center"}
+
+## Probabilities for continuous distributions...
+
+When working with continuous random variables, probability is found for
+intervals of values rather than individual values.
+
+-   The probability that a continuous r.v. $X$ takes on any single
+    individual value is 0. That is, $P(X = x) = 0$.
+
+-   Thus, $P(a < X < b)$ is equivalent to $P(a \leq X \leq b)$.
+
+## Standard Normal Distribution
 
 ![Transformation from general normal $X$ to standard normal
 $Z$](../img_slides/X_to_Z_transformation_Brase.png){width="5in"}
 
+## Standard Normal Distribution
+
+-   A *standard normal* distribution is defined as a normal distribution
+    with mean 0 and variance 1. It is often denoted as $Z \sim N(0, 1)$.
+
+-   Any normal random variable $X$ can be transformed into a standard
+    normal random variable $Z$.
+
+$$Z = \dfrac{X - \mu}{\sigma} \qquad X = \mu + Z\sigma$$
+
+-   The $Z$-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).
+
+-   For example, if an observation has $Z$-score $z = 3.4$, then the observation is 3.4 standard deviations above the mean.
+
+## Normal distribution
+
+- Shorthand
 
 
-## Z-scores
+## Normal distribution: R commands
 
--   The $Z$-score of an observation quantifies how far the observation
-    is from the mean, in units of standard deviation(s).
+R commands with their [input]{style="color:#BF396F"} and
+[output]{style="color:#367B79"}:
 
--   For example, if an observation has $Z$-score $z = 3.4$, then the
-    observation is 3.4 standard deviations above the mean.
++------------------+--------------------------------------------------+
+| R code           | What does it return?                             |
++==================+==================================================+
+| `rnorm()`        | returns [sample of random                        |
+|                  | variables]{style="color:#367B79"} with           |
+|                  | [specified normal                                |
+|                  | distribution]{style="color:#BF396F"}             |
++------------------+--------------------------------------------------+
+| `dnorm()`        | returns [value of probability                    |
+|                  | density]{style="color:#367B79"} at [certain      |
+|                  | point of the normal                              |
+|                  | distribution]{style="color:#BF396F"}             |
+|                  |                                                  |
+|                  | -   Not typically used                           |
++------------------+--------------------------------------------------+
+| `pnorm()`        | returns [cumulative                              |
+|                  | probability]{style="color:#367B79"} of getting   |
+|                  | [certain point (or less) of the normal           |
+|                  | distribution]{style="color:#BF396F"}             |
++------------------+--------------------------------------------------+
+| `qnorm()`        | returns [z-score]{style="color:#367B79"}        |
+|                  | corresponding to [desired                        |
+|                  | quantile]{style="color:#BF396F"}                 |
++------------------+--------------------------------------------------+
+
+## Example calculating 
+
+::: example
+**Example 1**. ***Calculating standard normal probabilities practice**
+Let* $Z$ be a standard normal random variable,
+$Z\sim N(\mu=0,\sigma=1)$. Calculate the following probabilities.
+Include sketches of the normal curves with the probability areas shaded
+in.
+
+1.  $\mathbb{P}( Z < 2.67 )$
+
+2.  $\mathbb{P}( Z > -0.37 )$
+
+3.  $\mathbb{P}( -2.18 < Z < 2.46 )$
+
+4.  $\mathbb{P}(Z = 1.53 )$
+:::
+
+## example 1
 
 ::: example
 **Example 3**. ***DBP** Suppose the distribution of diastolic blood
@@ -149,9 +182,9 @@ mean 80 mm Hg and variance 144 mm Hg.*
 1.  *Mild hypertension is when the DBP is between 90 and 99 mm Hg. What
     proportion of this population has mild hypertension?*
 
-2.  *What is the $10^{th}$ percentile of the DBP distribution?*
+2.  *What is the* $10^{th}$ percentile of the DBP distribution?
 
-3.  *What is the $95^{th}$ percentile of the DBP distribution?*
+3.  *What is the* $95^{th}$ percentile of the DBP distribution?
 :::
 
 ## Normal approximation of the binomial distribution
@@ -164,7 +197,7 @@ mean 80 mm Hg and variance 144 mm Hg.*
     $$P(X = k) = {n\choose k}p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}$$
 
 -   Tedious to compute for large number of trails ($n$), although doable
-    with software like R.
+    with software like R
 
 -   As $n$ gets big though, the distribution shape of a binomial r.v.
     gets more and more symmetric, and can be *approximated by a normal
@@ -173,30 +206,34 @@ mean 80 mm Hg and variance 144 mm Hg.*
 ![Binomial distribution histograms for varying $n$ when
 $p=0.10$](../img_slides/fourBinomialModelsShowingApproxToNormal.pdf){width="5in"}
 
-## 
+## Normal Approximation of the Binomial Distribution
 
-::: theorem
-**Theorem 4**. ***Normal approximation of the binomial distribution**
-The binomial distribution with probability of success $p$ is nearly
-normal when the sample size $n$ is sufficiently large such that
-$np \geq 10$ and $n(1-p)\geq 10$. The approximate normal distribution
-has parameters corresponding to the mean and standard deviation of the
-binomial distribution: $$\begin{aligned}
-\mu &= np
-&&\sigma= \sqrt{np(1-p)}
-\end{aligned}$$*
-:::
+-   Also known as: **Sampling distribution of** $\widehat{p}$
 
-##
+-   IF $X\sim \text{Binomial}(n,p)$ and $np>10$ and $nq = n(1-p) > 10$
+
+    -   Ensures sample size ($n$) is moderately large and the $p$ is not too close to 0 or 1
+    -   Other resources use other criteria (like $npq>5$ or $np>5$)
+    -   When looking at a sample, we use $\widehat{p}$ instead of $p$ to check this!!
+
+ 
+
+-   THEN approximately $𝑋\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)$
+
+    -   Or we often write this as the sampling distribution of $\widehat{p}$: $$\widehat{p} \sim \text{Normal}\bigg(\mu_{\widehat{p}} = p, \sigma_{\widehat{p}} = \sqrt{\dfrac{p(1-p)}{n}}\bigg)$$
+
+-   [Pretty good video behind the intuition of this](https://www.youtube.com/watch?v=CCqWkJ_pqNU&ab_channel=jbstatistics) (Watch 00:00 - 05:40)
+
+## Example using Normal approximation
 
 ::: example
-**Example 5**. *[]{#VaccBinom10 label="VaccBinom10"} **Vaccinated people
-testing positive for Covid-19 (revisited)** About 25% of people that
-test positive for Covid-19 are vaccinated for Covid-19. Suppose 100
-people have tested positive for Covid-19 (independently of each other).
-Let $X$ denote the number of people that are vaccinated amongst the 100
-that tested positive. What is the probability that fewer than 20 of the
-people that tested positive are vaccinated?*
+**Example 5**. ***Vaccinated people testing positive for Covid-19
+(revisited)** About 25% of people that test positive for Covid-19 are
+vaccinated for Covid-19. Suppose 100 people have tested positive for
+Covid-19 (independently of each other). Let* $X$ denote the number of
+people that are vaccinated amongst the 100 that tested positive. What is
+the probability that fewer than 20 of the people that tested positive
+are vaccinated?
 
 ![image](../img_slides/binom_n100_p25_crop.png){width="4in"}
 
@@ -204,6 +241,64 @@ people that tested positive are vaccinated?*
 
 2.  *Calculate approximate probability.*
 :::
+
+## Some resources for the normal distribution
+
+- [Page on R commands](https://seankross.com/notes/dpqr/)
+
+# Learning objectives
+
+## Introduction to the Poisson distribution
+
+- The Poisson distribution is often used to calculate probabilities for rare
+events that accumulate over time.
+
+  - It is a discrete distribution!
+
+- It used most often in settings where events happen at a rate $\lambda$
+per unit of population and per unit time, such as the annual incidence
+of a disease in a population.
+
+-   **Typical example:** for children ages 0 - 14, the incidence rate of
+    acute lymphocytic leukemia (ALL) was approximately 30 diagnosed
+    cases per million children per year in 2010.
+
+-   Always take care to note and understand the units.
+
+-   Used to model count data (# of successes), especially for rare
+    events
+
+-   Used to approximate binomial distribution when $n$ is large and $p$
+    is small
+
+## Poisson Distribution
+
+Suppose events occur over time in such a way that
+
+1.  The probability an event occurs in an interval is proportional to
+    the length of the interval.
+
+2.  Events occur independently at a rate $\lambda$ per unit of time.
+
+Then the probability of exactly $x$ events in one unit of time is $$
+P(X = x) = \frac{e^{-\lambda}\lambda^{x}}{x!}, \,\, x = 0, 1, 2,
+\ldots
+$$
+
+The probability of exactly $x$ events $t$ units of time is $$
+P(X = x) = \frac{e^{-\lambda t}(\lambda t)^{x}}{x!}, \,\, x = 0, 1,
+2, \ldots
+$$
+
+For the Poisson distribution modeling the number of events in one unit
+of time:
+
+-   The mean is $\lambda$.
+
+-   The standard deviation is $\sqrt{\lambda}$.
+
+In $t$ units of time, the mean and standard deviation are, respectively,
+$\lambda t$ and $\sqrt{\lambda t}$.
 
 ## Poisson distribution
 
@@ -215,13 +310,13 @@ people that tested positive are vaccinated?*
 -   Used to approximate binomial distribution when $n$ is large and $p$
     is small
 
-##
+## 
 
 ::: definition
-**Definition 6**. *Distribution of a **Poisson** random variable. Let
+**Definition 6**. *Distribution of a **Poisson** random variable. Let*
 $X$ be the total number of successes in an interval (such as time) with
 an average success rate $\lambda$. Then probability of observing exactly
-$k$ successes in a unit interval is*
+$k$ successes in a unit interval is
 :::
 
 -   The parameter of a Poisson distribution is $\lambda$.
@@ -229,11 +324,11 @@ $k$ successes in a unit interval is*
 -   If a r.v. $X$ is modeled by a Poisson distribution, then we write in
     shorthand
 
-## 
+## Mean and SD
 
 ::: theorem
-**Theorem 7**. *Mean and SD of a Poisson r.v. If $X$ is a Poisson r.v.
-with parameter $\lambda$, then*
+**Theorem 7**. *Mean and SD of a Poisson r.v. If* $X$ is a Poisson r.v.
+with parameter $\lambda$, then
 :::
 
 ## Example
@@ -251,7 +346,7 @@ per year from typhoid fever over a 1-year period.*
 3.  *What is the probability of more than 12 deaths in 2 years?*
 :::
 
-## Example
+## Example: Poisson approximation of binomial distribution
 
 ::: example
 **Example 9**. ***Cleft palate** About 1 in every 1,700 babies is born

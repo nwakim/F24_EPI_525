@@ -342,115 +342,154 @@ Meike Niederhausen and Nicky Wakim
   <p class="date">2024-10-16</p>
 </section>
 <section>
-<section id="chapter-3-distributions-of-random-variables-part-2" class="title-slide slide level1 unnumbered center">
-<h1>Chapter 3: Distributions of Random Variables (Part 2)</h1>
-<p><em>Day 7 topics</em>:</p>
-<p>Section 3.3: Normal distribution Section 3.4: Poisson distribution</p>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+
 </section>
-<section id="normal-distribution" class="slide level2">
-<h2>Normal distribution</h2>
-<p><span class="math inline">\(\ \)</span></p>
-<p>A random variable <span class="math inline">\(X\)</span> is modeled with a normal distribution if:</p>
-<ul>
-<li><p>shape: symmetric, unimodal bell curve</p></li>
-<li><p>center: mean <span class="math inline">\(\mu\)</span></p></li>
-<li><p>spread (variability): standard deviation <span class="math inline">\(\sigma\)</span></p></li>
-</ul>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
+
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="last-time-discrete-vs.-continuous-random-variables" class="slide level2">
+<h2>Last time: Discrete vs.&nbsp;continuous random variables</h2>
 <ul>
-<li>Curve is determined by the formula <span class="math inline">\(f(x) = \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma\sqrt{2\pi}}\)</span>, for <span class="math inline">\(-\infty &lt; x&lt; \infty\)</span>.</li>
+<li>Probability distributions are usually either <strong>discrete</strong> or <strong>continuous</strong>, depending on whether the random variable is discrete or continuous.</li>
 </ul>
-<div id="fig:normal" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/normal_curve_Brase.png" style="width:3.8in"></p>
-<figcaption>Normal (Gaussian) distribution</figcaption>
-</figure>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="red">
+<div class="red-ttl">
+<p>Discrete random variable</p>
 </div>
-<figure>
-<figure>
-<img src="../img_slides/normal_curves_compare_v1.png">
-</figure>
-<figure>
-<img src="../img_slides/normal_curves_compare_v2.png">
-</figure>
-<figcaption>
-What are the means and standard deviations?
-</figcaption>
-</figure>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p><strong>The Empirical Rule</strong> (a.k.a. the 68-95-99.7 rule)</p>
-<p>For a normal distribution:</p>
-<ul>
-<li><p>68% of observations are within one standard deviation (SD) of the mean</p></li>
-<li><p>95% are within two SD’s</p></li>
-<li><p>99.7% are within three SD’s</p></li>
-</ul>
-<div id="fig:normal" class="quarto-figure quarto-figure-center">
-<figure>
-<p><embed data-src="../img_slides/6895997.pdf" style="width:5in"></p>
-<figcaption>Empirical Rule (a.k.a. the 68-95-99.7 rule)</figcaption>
-</figure>
+<div class="red-cont">
+<p>A <strong>discrete</strong> r.v. <span class="math inline">\(X\)</span> takes on a finite number of values or countably infinite number of possible values.</p>
 </div>
-<p>The empirical rule is useful for <em>estimating</em> probabilities.</p>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<p><strong>Standard Normal Distribution</strong></p>
+</div>
+<p>Think:</p>
 <ul>
-<li><p>A <strong>standard</strong> normal r.v. has mean 0 and standard deviation 1.</p></li>
-<li><p>We denote standard normal r.v.’s with the letter <span class="math inline">\(Z\)</span>.</p></li>
+<li>Number of heads in a set of coin tosses</li>
+<li>Number of people who have had chicken pox in a random sample</li>
 </ul>
-<p><strong>Calculating Probabilities for a Standard Normal Distribution</strong></p>
-<p>Three ways to calculate probabilities from a normal distribution:</p>
-<ol type="1">
-<li><p><del>Calculus</del></p></li>
-<li><p>Normal probability table</p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:49%;">
+<div class="pink2">
+<div class="pink2-ttl">
+<p>Continuous random variable</p>
+</div>
+<div class="pink2-cont">
+<p>A <strong>continuous</strong> r.v. <span class="math inline">\(X\)</span> can take on any real value in an interval of values or unions of intervals.</p>
+</div>
+</div>
+<p>Think:</p>
 <ul>
-<li>The textbook has a normal probability table in Appendix B.1, which is included as the next two pages.</li>
-</ul></li>
-<li><p>R</p>
-<ul>
-<li><p><span class="math inline">\(\mathbb{P}(Z\leq q)\)</span> =</p>
-<pre><code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)</code></pre></li>
-</ul></li>
-</ol>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="example">
-<p><strong>Example 1</strong>. <em><strong>Calculating standard normal probabilities practice</strong> Let <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</em></p>
-<ol type="1">
-<li><p><em><span class="math inline">\(\mathbb{P}( Z &lt; 2.67 )\)</span></em></p></li>
-<li><p><em><span class="math inline">\(\mathbb{P}( Z &gt; -0.37 )\)</span></em></p></li>
-<li><p><em><span class="math inline">\(\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\)</span></em></p></li>
-<li><p><em><span class="math inline">\(\mathbb{P}(Z = 1.53 )\)</span></em></p></li>
-</ol>
+<li>Height in a population</li>
+<li>Blood pressure in a population</li>
+</ul>
+</div>
 </div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<p><strong>Calculating Probabilities for a General Normal Distribution</strong></p>
-<div class="example">
-<p><strong>Example 2</strong>. <em>Let <span class="math inline">\(X\)</span> be a normal r.v. with mean 8 and standard deviation 2. Calculate <span class="math inline">\(\mathbb{P}(X&gt;10)\)</span>.</em></p>
-</div>
+<section id="probabilities-for-continuous-distributions" class="slide level2">
+<h2>Probabilities for continuous distributions</h2>
+<p>Two important features of continuous distributions:</p>
+<ul>
+<li><p>The total area under the density curve is 1.</p></li>
+<li><p>The probability that a variable has a value within a specified interval is the area under the curve over that interval.</p></li>
+</ul>
+
+<img data-src="../img_slides/fdicHeightContDistFilled.png" class="r-stretch quarto-figure-center"></section>
+<section id="probabilities-for-continuous-distributions-1" class="slide level2">
+<h2>Probabilities for continuous distributions…</h2>
+<p>When working with continuous random variables, probability is found for intervals of values rather than individual values.</p>
+<ul>
+<li><p>The probability that a continuous r.v. <span class="math inline">\(X\)</span> takes on any single individual value is 0. That is, <span class="math inline">\(P(X = x) = 0\)</span>.</p></li>
+<li><p>Thus, <span class="math inline">\(P(a &lt; X &lt; b)\)</span> is equivalent to <span class="math inline">\(P(a \leq X \leq b)\)</span>.</p></li>
+</ul>
+</section>
+<section id="standard-normal-distribution" class="slide level2">
+<h2>Standard Normal Distribution</h2>
 
 <img data-src="../img_slides/X_to_Z_transformation_Brase.png" style="width:5in" class="r-stretch quarto-figure-center"><p class="caption">Transformation from general normal <span class="math inline">\(X\)</span> to standard normal <span class="math inline">\(Z\)</span></p></section>
-<section id="z-scores" class="slide level2">
-<h2>Z-scores</h2>
+<section id="standard-normal-distribution-1" class="slide level2">
+<h2>Standard Normal Distribution</h2>
+<ul>
+<li><p>A <em>standard normal</em> distribution is defined as a normal distribution with mean 0 and variance 1. It is often denoted as <span class="math inline">\(Z \sim N(0, 1)\)</span>.</p></li>
+<li><p>Any normal random variable <span class="math inline">\(X\)</span> can be transformed into a standard normal random variable <span class="math inline">\(Z\)</span>.</p></li>
+</ul>
+<p><span class="math display">\[Z = \dfrac{X - \mu}{\sigma} \qquad X = \mu + Z\sigma\]</span></p>
 <ul>
 <li><p>The <span class="math inline">\(Z\)</span>-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).</p></li>
 <li><p>For example, if an observation has <span class="math inline">\(Z\)</span>-score <span class="math inline">\(z = 3.4\)</span>, then the observation is 3.4 standard deviations above the mean.</p></li>
 </ul>
+</section>
+<section id="normal-distribution" class="slide level2">
+<h2>Normal distribution</h2>
+<ul>
+<li>Shorthand</li>
+</ul>
+</section>
+<section id="normal-distribution-r-commands" class="slide level2">
+<h2>Normal distribution: R commands</h2>
+<p>R commands with their <span style="color:#BF396F">input</span> and <span style="color:#367B79">output</span>:</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>R code</th>
+<th>What does it return?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>rnorm()</code></td>
+<td>returns <span style="color:#367B79">sample of random variables</span> with <span style="color:#BF396F">specified normal distribution</span></td>
+</tr>
+<tr class="even">
+<td><code>dnorm()</code></td>
+<td><p>returns <span style="color:#367B79">value of probability density</span> at <span style="color:#BF396F">certain point of the normal distribution</span></p>
+<ul>
+<li>Not typically used</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><code>pnorm()</code></td>
+<td>returns <span style="color:#367B79">cumulative probability</span> of getting <span style="color:#BF396F">certain point (or less) of the normal distribution</span></td>
+</tr>
+<tr class="even">
+<td><code>qnorm()</code></td>
+<td>returns <span style="color:#367B79">z-score</span> | corresponding to <span style="color:#BF396F">desired quantile</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-calculating" class="slide level2">
+<h2>Example calculating</h2>
+<div class="example">
+<p><strong>Example 1</strong>. <em><strong>Calculating standard normal probabilities practice</strong> Let</em> <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathbb{P}( Z &lt; 2.67 )\)</span></p></li>
+<li><p><span class="math inline">\(\mathbb{P}( Z &gt; -0.37 )\)</span></p></li>
+<li><p><span class="math inline">\(\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\)</span></p></li>
+<li><p><span class="math inline">\(\mathbb{P}(Z = 1.53 )\)</span></p></li>
+</ol>
+</div>
+</section>
+<section id="example-1" class="slide level2">
+<h2>example 1</h2>
 <div class="example">
 <p><strong>Example 3</strong>. <em><strong>DBP</strong> Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.</em></p>
 <ol type="1">
 <li><p><em>Mild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?</em></p></li>
-<li><p><em>What is the <span class="math inline">\(10^{th}\)</span> percentile of the DBP distribution?</em></p></li>
-<li><p><em>What is the <span class="math inline">\(95^{th}\)</span> percentile of the DBP distribution?</em></p></li>
+<li><p><em>What is the</em> <span class="math inline">\(10^{th}\)</span> percentile of the DBP distribution?</p></li>
+<li><p><em>What is the</em> <span class="math inline">\(95^{th}\)</span> percentile of the DBP distribution?</p></li>
 </ol>
 </div>
 </section>
@@ -459,7 +498,7 @@ What are the means and standard deviations?
 <ul>
 <li><p>Recall that a binomial random variable <span class="math inline">\(X\)</span> counts the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success.</p></li>
 <li><p>Probability function for <span class="math inline">\(x = 0, 1, ..., n\)</span> : <span class="math display">\[P(X = k) = {n\choose k}p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\]</span></p></li>
-<li><p>Tedious to compute for large number of trails (<span class="math inline">\(n\)</span>), although doable with software like R.</p></li>
+<li><p>Tedious to compute for large number of trails (<span class="math inline">\(n\)</span>), although doable with software like R</p></li>
 <li><p>As <span class="math inline">\(n\)</span> gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be <em>approximated by a normal distribution</em>.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -469,19 +508,30 @@ What are the means and standard deviations?
 </figure>
 </div>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="theorem">
-<p><strong>Theorem 4</strong>. <em><strong>Normal approximation of the binomial distribution</strong> The binomial distribution with probability of success <span class="math inline">\(p\)</span> is nearly normal when the sample size <span class="math inline">\(n\)</span> is sufficiently large such that <span class="math inline">\(np \geq 10\)</span> and <span class="math inline">\(n(1-p)\geq 10\)</span>. The approximate normal distribution has parameters corresponding to the mean and standard deviation of the binomial distribution: <span class="math display">\[\begin{aligned}
-\mu &amp;= np
-&amp;&amp;\sigma= \sqrt{np(1-p)}
-\end{aligned}\]</span></em></p>
-</div>
+<section id="normal-approximation-of-the-binomial-distribution-1" class="slide level2">
+<h2>Normal Approximation of the Binomial Distribution</h2>
+<ul>
+<li><p>Also known as: <strong>Sampling distribution of</strong> <span class="math inline">\(\widehat{p}\)</span></p></li>
+<li><p>IF <span class="math inline">\(X\sim \text{Binomial}(n,p)\)</span> and <span class="math inline">\(np&gt;10\)</span> and <span class="math inline">\(nq = n(1-p) &gt; 10\)</span></p>
+<ul>
+<li>Ensures sample size (<span class="math inline">\(n\)</span>) is moderately large and the <span class="math inline">\(p\)</span> is not too close to 0 or 1</li>
+<li>Other resources use other criteria (like <span class="math inline">\(npq&gt;5\)</span> or <span class="math inline">\(np&gt;5\)</span>)</li>
+<li>When looking at a sample, we use <span class="math inline">\(\widehat{p}\)</span> instead of <span class="math inline">\(p\)</span> to check this!!</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>THEN approximately <span class="math inline">\(𝑋\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)\)</span></p>
+<ul>
+<li>Or we often write this as the sampling distribution of <span class="math inline">\(\widehat{p}\)</span>: <span class="math display">\[\widehat{p} \sim \text{Normal}\bigg(\mu_{\widehat{p}} = p, \sigma_{\widehat{p}} = \sqrt{\dfrac{p(1-p)}{n}}\bigg)\]</span></li>
+</ul></li>
+<li><p><a href="https://www.youtube.com/watch?v=CCqWkJ_pqNU&amp;ab_channel=jbstatistics">Pretty good video behind the intuition of this</a> (Watch 00:00 - 05:40)</p></li>
+</ul>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
+<section id="example-using-normal-approximation" class="slide level2">
+<h2>Example using Normal approximation</h2>
 <div class="example">
-<p><strong>Example 5</strong>. <em><span id="VaccBinom10" label="VaccBinom10"></span> <strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</em></p>
+<p><strong>Example 5</strong>. <em><strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let</em> <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../img_slides/binom_n100_p25_crop.png" style="width:4in"></p>
@@ -494,7 +544,54 @@ What are the means and standard deviations?
 </ol>
 </div>
 </section>
+<section id="some-resources-for-the-normal-distribution" class="slide level2">
+<h2>Some resources for the normal distribution</h2>
+<ul>
+<li><a href="https://seankross.com/notes/dpqr/">Page on R commands</a></li>
+</ul>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning objectives</h1>
+
+</section>
+<section id="introduction-to-the-poisson-distribution" class="slide level2">
+<h2>Introduction to the Poisson distribution</h2>
+<ul>
+<li><p>The Poisson distribution is often used to calculate probabilities for rare events that accumulate over time.</p>
+<ul>
+<li>It is a discrete distribution!</li>
+</ul></li>
+<li><p>It used most often in settings where events happen at a rate <span class="math inline">\(\lambda\)</span> per unit of population and per unit time, such as the annual incidence of a disease in a population.</p></li>
+<li><p><strong>Typical example:</strong> for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.</p></li>
+<li><p>Always take care to note and understand the units.</p></li>
+<li><p>Used to model count data (# of successes), especially for rare events</p></li>
+<li><p>Used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small</p></li>
+</ul>
+</section>
 <section id="poisson-distribution" class="slide level2">
+<h2>Poisson Distribution</h2>
+<p>Suppose events occur over time in such a way that</p>
+<ol type="1">
+<li><p>The probability an event occurs in an interval is proportional to the length of the interval.</p></li>
+<li><p>Events occur independently at a rate <span class="math inline">\(\lambda\)</span> per unit of time.</p></li>
+</ol>
+<p>Then the probability of exactly <span class="math inline">\(x\)</span> events in one unit of time is <span class="math display">\[
+P(X = x) = \frac{e^{-\lambda}\lambda^{x}}{x!}, \,\, x = 0, 1, 2,
+\ldots
+\]</span></p>
+<p>The probability of exactly <span class="math inline">\(x\)</span> events <span class="math inline">\(t\)</span> units of time is <span class="math display">\[
+P(X = x) = \frac{e^{-\lambda t}(\lambda t)^{x}}{x!}, \,\, x = 0, 1,
+2, \ldots
+\]</span></p>
+<p>For the Poisson distribution modeling the number of events in one unit of time:</p>
+<ul>
+<li><p>The mean is <span class="math inline">\(\lambda\)</span>.</p></li>
+<li><p>The standard deviation is <span class="math inline">\(\sqrt{\lambda}\)</span>.</p></li>
+</ul>
+<p>In <span class="math inline">\(t\)</span> units of time, the mean and standard deviation are, respectively, <span class="math inline">\(\lambda t\)</span> and <span class="math inline">\(\sqrt{\lambda t}\)</span>.</p>
+</section>
+<section id="poisson-distribution-1" class="slide level2">
 <h2>Poisson distribution</h2>
 <ul>
 <li><p>Discrete distribution</p></li>
@@ -502,20 +599,20 @@ What are the means and standard deviations?
 <li><p>Used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small</p></li>
 </ul>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section" class="slide level2">
 <h2></h2>
 <div class="definition">
-<p><strong>Definition 6</strong>. <em>Distribution of a <strong>Poisson</strong> random variable. Let <span class="math inline">\(X\)</span> be the total number of successes in an interval (such as time) with an average success rate <span class="math inline">\(\lambda\)</span>. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in a unit interval is</em></p>
+<p><strong>Definition 6</strong>. <em>Distribution of a <strong>Poisson</strong> random variable. Let</em> <span class="math inline">\(X\)</span> be the total number of successes in an interval (such as time) with an average success rate <span class="math inline">\(\lambda\)</span>. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in a unit interval is</p>
 </div>
 <ul>
 <li><p>The parameter of a Poisson distribution is <span class="math inline">\(\lambda\)</span>.</p></li>
 <li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a Poisson distribution, then we write in shorthand</p></li>
 </ul>
 </section>
-<section id="section-8" class="slide level2">
-<h2></h2>
+<section id="mean-and-sd" class="slide level2">
+<h2>Mean and SD</h2>
 <div class="theorem">
-<p><strong>Theorem 7</strong>. <em>Mean and SD of a Poisson r.v. If <span class="math inline">\(X\)</span> is a Poisson r.v. with parameter <span class="math inline">\(\lambda\)</span>, then</em></p>
+<p><strong>Theorem 7</strong>. <em>Mean and SD of a Poisson r.v. If</em> <span class="math inline">\(X\)</span> is a Poisson r.v. with parameter <span class="math inline">\(\lambda\)</span>, then</p>
 </div>
 </section>
 <section id="example" class="slide level2">
@@ -535,8 +632,8 @@ What are the means and standard deviations?
 </ol>
 </div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
+<section id="example-poisson-approximation-of-binomial-distribution" class="slide level2">
+<h2>Example: Poisson approximation of binomial distribution</h2>
 <div class="example">
 <p><strong>Example 9</strong>. <em><strong>Cleft palate</strong> About 1 in every 1,700 babies is born with cleft palate in the United States. Find the probability that there are 2 babies born with cleft palates amongst the next 3000 births at OHSU.</em></p>
 <ol type="1">

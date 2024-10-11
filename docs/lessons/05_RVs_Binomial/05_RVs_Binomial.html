@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -346,19 +411,34 @@ Meike Niederhausen and Nicky Wakim
 <h1>Learning Objectives</h1>
 <ol type="1">
 <li>Define random variables and how they map to probability distributions</li>
-<li>Calculate the expected value and variance of random variables (and combinations of random variables)</li>
-<li>BInomial distribution</li>
+<li>Calculate the expected value and variance of discrete random variables</li>
+<li>Calculate the expected value and variance of linear combinations of discrete random variables</li>
+<li>Calculate probabilities for different events using a Binomial distribution</li>
 </ol>
 </section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
 
-<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Define random variables and how they map to probability distributions</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Calculate the expected value and variance of discrete random variables</li>
+<li>Calculate the expected value and variance of linear combinations of discrete random variables</li>
+<li>Calculate probabilities for different events using a Binomial distribution</li>
+</ol>
+</section>
 <section id="random-variables" class="slide level2">
 <h2>Random variables</h2>
 <div class="definition">
 <div class="def-ttl">
-<p>Random variable (RV)</p>
+<p>Random variable (RV or r.v.)</p>
 </div>
 <div class="def-cont">
 <p>A <strong>random variable (r.v.)</strong> assigns numerical values (probability) to the outcome of a random phenomenon</p>
@@ -450,7 +530,23 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <p>&nbsp;</p>
 
-<img data-src="../../lessons/img_slides/die_prob_dist.png" class="r-stretch"></section>
+<img data-src="../../lessons/img_slides/die_prob_dist.png" class="r-stretch"></section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define random variables and how they map to probability distributions</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Calculate the expected value and variance of discrete random variables</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Calculate the expected value and variance of linear combinations of discrete random variables</li>
+<li>Calculate probabilities for different events using a Binomial distribution</li>
+</ol>
+</section>
 <section id="discrete-vs.-continuous-random-variables" class="slide level2">
 <h2>Discrete vs.&nbsp;continuous random variables</h2>
 <ul>
@@ -629,6 +725,22 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define random variables and how they map to probability distributions</li>
+<li>Calculate the expected value and variance of discrete random variables</li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Calculate the expected value and variance of linear combinations of discrete random variables</li>
+</ol>
+</div>
+<ol start="4" type="1">
+<li>Calculate probabilities for different events using a Binomial distribution</li>
+</ol>
 </section>
 <section id="linear-combinations-of-random-variables" class="slide level2">
 <h2>Linear combinations of random variables</h2>
@@ -656,7 +768,7 @@ Meike Niederhausen and Nicky Wakim
 <p>Example: Expected money for rolling 3 dice</p>
 </div>
 <div class="ex-cont">
-<p>Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?</p>
+<p>Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on rolls for 2 fair 6-sided dice and 1 unfair die (as described in our previous example). Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the unfair die roll. How much money do you expect to get?</p>
 </div>
 </div>
 </section>
@@ -678,103 +790,269 @@ Meike Niederhausen and Nicky Wakim
 <p>Example: Expected money for rolling 3 dice</p>
 </div>
 <div class="ex-cont">
-<p>Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?</p>
+<p>Let the random variables <span class="math inline">\(X_1, X_2, X_3\)</span> be the values shown on rolls for 2 fair 6-sided dice and 1 unfair die (as described in our previous example). Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the unfair die roll. What are the variance and standard deviation of the amount you get from the 3 rolls?</p>
 </div>
 </div>
 </section></section>
 <section>
-<section id="learning-objectives-1" class="title-slide slide level1 center">
-<h1>Learning objectives</h1>
-
+<section id="learning-objectives-4" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define random variables and how they map to probability distributions</li>
+<li>Calculate the expected value and variance of discrete random variables</li>
+<li>Calculate the expected value and variance of linear combinations of discrete random variables</li>
+</ol>
+<div class="lob">
+<ol start="4" type="1">
+<li>Calculate probabilities for different events using a Binomial distribution</li>
+</ol>
+</div>
 </section>
-<section id="binomial-distribution" class="slide level2">
-<h2>Binomial distribution</h2>
+<section id="binomial-random-variable" class="slide level2">
+<h2>Binomial random variable</h2>
 <ul>
-<li><p>Many situations involve modeling independent random events that have 2 possible outcomes (binary), such as</p>
+<li><strong>One specific type of discrete random variable</strong> is a binomial random variable</li>
+</ul>
+<div class="definition">
+<div class="def-ttl">
+<p>Binomial random variable</p>
+</div>
+<div class="def-cont">
 <ul>
-<li>Repeatedly flipping a coin</li>
+<li><p><span class="math inline">\(X\)</span> is a binomial random variable if it represents the number of successes in <span class="math inline">\(n\)</span> independent replications (or trials) of an experiment where</p>
+<ul>
+<li>Each replicate has two possible outcomes: either <strong>success</strong> or <strong>failure</strong></li>
+<li>The probability of success is <span class="math inline">\(p\)</span></li>
+<li>The probability of failure is <span class="math inline">\(q=1-p\)</span></li>
 </ul></li>
-<li><p>Repeated events are referred to as <strong>trials</strong></p></li>
-<li><p>The 2 possible outcomes are referred to as <strong>successes</strong> and <strong>failures</strong>.</p></li>
-<li><p>We denote the probability of a success as <span class="math inline">\(p\)</span>.</p></li>
-<li><p>We denote the probability of a failure as <span class="math inline">\(q = 1-p\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<ul>
+<li><p>A binomial random variable takes on values <span class="math inline">\(0, 1, 2, \dots, n\)</span>.</p></li>
+<li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a Binomial distribution, then we write in shorthand <span class="math inline">\(X \sim \text{Binom}(n,p)\)</span></p></li>
+<li><p>Quick example: The number of heads in 3 tosses of a fair coin is a binomial random variable with parameters <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(p = 0.5\)</span>.</p></li>
 </ul>
 </section>
 <section id="bernoulli-distribution" class="slide level2">
 <h2>Bernoulli distribution</h2>
+<ul>
+<li>When <span class="math inline">\(n=1\)</span>, aka we have a single trial, we give a different name to the random variable: Bernoulli</li>
+</ul>
 <div class="definition">
 <div class="def-ttl">
 <p>Bernoulli random variable</p>
 </div>
 <div class="def-cont">
-<p><strong>Bernoulli</strong> random variable. If <span class="math inline">\(X\)</span> is a random variable that takes value 1 with probability of success <span class="math inline">\(p\)</span> and 0 with probability <span class="math inline">\(1-p\)</span>, then <span class="math inline">\(X\)</span> is a Bernoulli random variable.</p>
+<p><strong>Bernoulli</strong> random variable. If <span class="math inline">\(X\)</span> is a random variable that takes value 1 with probability of success <span class="math inline">\(p\)</span> and 0 with probability <span class="math inline">\(1-p\)</span> (or <span class="math inline">\(q\)</span>), then <span class="math inline">\(X\)</span> is a Bernoulli random variable.</p>
 </div>
 </div>
 <ul>
 <li><p>We call the probability of success <span class="math inline">\(p\)</span> the <strong>parameter</strong> of the Bernoulli distribution.</p></li>
-<li><p>Each value of <span class="math inline">\(p\)</span> identifies a specific Bernoulli distribution out of the <strong>family</strong> of Bernoulli r.v.’s where <span class="math inline">\(p\)</span> is any value between 0 and 1 (inclusive).</p></li>
-<li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a Bernoulli distribution, then we write in shorthand</p></li>
+<li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a Bernoulli distribution, then we write in shorthand <span class="math inline">\(X \sim \text{Bernoulli}(p)\)</span> or <span class="math inline">\(X \sim \text{Bern}(p)\)</span></p></li>
 </ul>
-<div class="theorem">
-<p><strong>Theorem 19</strong>. <em>Mean and SD of a Bernoulli r.v. If</em> <span class="math inline">\(X\)</span> is a Bernoulli r.v. with probability of success <span class="math inline">\(p\)</span>, then</p>
+<div class="orange">
+<div class="orange-ttl">
+<p>Mean and SD of a Bernoulli r.v.</p>
+</div>
+<div class="orange-cont">
+<p>If* <span class="math inline">\(X\)</span> is a Bernoulli r.v. with probability of success <span class="math inline">\(p\)</span>, then <span class="math inline">\(E(X) = p\)</span> and <span class="math inline">\(\text{Var}(X) = p(1-p)\)</span></p>
+</div>
 </div>
 </section>
-<section id="binomial-distribution-1" class="slide level2">
-<h2>Binomial distribution</h2>
-<p>$$</p>
-<p>Recall Example 3.17:</p>
+<section id="relationship-between-bernoulli-and-binomial1" class="slide level2">
+<h2>Relationship between Bernoulli and Binomial<sup>1</sup></h2>
 <ul>
-<li><p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19.</p></li>
-<li><p>Define the r.v. <span class="math inline">\(X_i\)</span> to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.</p></li>
-<li><p>Suppose 3 people have tested positive for Covid-19 (independently of each other).</p></li>
-<li><p>Let <span class="math inline">\(T\)</span> denote the number of people that are vaccinated amongst the 3 that tested positive.</p></li>
+<li><p>The <strong>Bernoulli distribution</strong> is a special case of the Binomial distribution where <span class="math inline">\(n=1\)</span></p>
+<ul>
+<li>Specifically: <span class="math display">\[\text{Binomial}(1, p) = \text{Bernoulli}(p) \]</span></li>
+</ul></li>
+<li><p>To get a <strong>Binomial distribution</strong>, we simply extend the scenario from a <strong>single</strong> trial to <strong>multiple</strong> independent trials.</p>
+<ul>
+<li>If we conduct <span class="math inline">\(n\)</span> independent Bernoulli trials with the same success probability <span class="math inline">\(p\)</span>, the total number of successes across these <span class="math inline">\(n\)</span> trials will follow a Binomial distribution</li>
+</ul></li>
 </ul>
-</section>
-<section id="binomial-distribution-2" class="slide level2">
-<h2>Binomial distribution</h2>
-<p>The random variable <span class="math inline">\(T\)</span> above is an example of a Binomial random variable.</p>
-<p>In general, a random variable <span class="math inline">\(X\)</span> is <strong>Binomial</strong> if the following hold:</p>
-<ol type="1">
-<li><p>The trials are independent.</p></li>
-<li><p>The number of trials, <span class="math inline">\(n\)</span>, is fixed.</p></li>
-<li><p>Each trial outcome can be classified as a <em>success</em> or <em>failure</em>.</p></li>
-<li><p>The probability of a success, <span class="math inline">\(p\)</span>, is the same for each trial.</p></li>
-<li><p>The r.v. <span class="math inline">\(X\)</span> is the total number of successes in the <span class="math inline">\(n\)</span> trials.</p></li>
-</ol>
-</section>
-<section id="binomial-distribution-3" class="slide level2">
+<p>&nbsp;</p>
+<ul>
+<li><p>Quick example:</p>
+<ul>
+<li><strong>Bernoulli</strong>: If you flip a coin once, with probability <span class="math inline">\(p=0.5\)</span> of landing heads, that is a Bernoulli trial.</li>
+<li><strong>Binomial</strong>: If you flip the coin 5 times, and you want to know how many times it will land heads, the number of heads will follow a Binomial distribution with parameters <span class="math inline">\(n=5\)</span> and <span class="math inline">\(p=0.5\)</span></li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Information on slide heavily borrowed from ChatGPT with prompt: “can you explain how we go from a bernoulli distribution to a binomial”</p></li></ol></aside></section>
+<section id="binomial-distribution" class="slide level2">
 <h2>Binomial distribution</h2>
 <div class="definition">
 <div class="def-ttl">
-<p>Binomial distribution</p>
+<p>Distribution of a <strong>Binomial</strong> random variable</p>
 </div>
 <div class="def-cont">
-<p>Distribution of a <strong>Binomial</strong> random variable. Let <span class="math inline">\(X\)</span> be the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in <span class="math inline">\(n\)</span> independent trials is</p>
+<p>Let <span class="math inline">\(X\)</span> be the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in <span class="math inline">\(n\)</span> independent trials is</p>
+<p><span class="math display">\[P(X = x) = \binom{n}{x} p^x (1-p)^{n-x},  x= 0, 1, 2, \dots, n \]</span></p>
 </div>
 </div>
 <ul>
 <li><p>The parameters of a binomial distribution are <span class="math inline">\(p\)</span> and <span class="math inline">\(n\)</span>.</p></li>
 <li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a binomial distribution, then we write in shorthand</p></li>
 </ul>
-<div class="theorem">
-<p><strong>Theorem 21</strong>. <em>Mean and SD of a Binomial r.v. If</em> <span class="math inline">\(X\)</span> is a binomial r.v. with probability of success <span class="math inline">\(p\)</span>, then</p>
+<div class="orange">
+<div class="orange-ttl">
+<p>Mean and variance of a Binomial r.v</p>
+</div>
+<div class="orange-cont">
+<p>If <span class="math inline">\(X\)</span> is a binomial r.v. with probability of success <span class="math inline">\(p\)</span>, then <span class="math inline">\(E(X) = np\)</span> and <span class="math inline">\(\text{Var}(X)=np(1-p)\)</span></p>
+</div>
 </div>
 </section>
-<section id="binomial-distribution-example" class="slide level2">
-<h2>Binomial distribution example</h2>
-<div id="VaccBinom10" class="example">
-<p><strong>Example 22</strong>. <em><strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let</em> <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 10 that tested positive.</p>
+<section id="binomial-distribution-r-commands" class="slide level2">
+<h2>Binomial distribution: R commands</h2>
+<p>R commands with their <span style="color:#BF396F">input</span> and <span style="color:#367B79">output</span>:</p>
+<table>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>R code</th>
+<th>What does it return?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>rbinom()</code></td>
+<td>returns <span style="color:#367B79">sample of random variables</span> with <span style="color:#BF396F">specified binomial distribution</span></td>
+</tr>
+<tr class="even">
+<td><code>dbinom()</code></td>
+<td>returns <span style="color:#367B79">probability</span> of getting <span style="color:#BF396F">certain number of successes</span></td>
+</tr>
+<tr class="odd">
+<td><code>pbinom()</code></td>
+<td>returns <span style="color:#367B79">cumulative probability</span> of getting <span style="color:#BF396F">certain number or less</span> successes</td>
+</tr>
+<tr class="even">
+<td><code>qbinom()</code></td>
+<td>returns <span style="color:#367B79">number of successes</span> corresponding to <span style="color:#BF396F">desired quantile</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="binomial-distribution-example-15" class="slide level2">
+<h2>Binomial distribution example (1/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Vaccinated people testing positive for Covid-19</p>
+</div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 10 that tested positive.</p>
 <ol type="1">
-<li><p><em>What is the expected value of</em> <span class="math inline">\(X\)</span>?</p></li>
-<li><p><em>What is the SD of</em> <span class="math inline">\(X\)</span>?</p></li>
-<li><p><em>What is the probability that exactly 4 of the 10 people that tested positive are vaccinated?</em></p></li>
-<li><p><em>What is the probability that at most 3 of the 10 people that tested positive are vaccinated?</em></p></li>
-<li><p><em>What is the probability that at least 5 of the 10 people that tested positive are vaccinated?</em></p></li>
+<li><p>What is the expected value of <span class="math inline">\(X\)</span>?</p></li>
+<li><p>What is the SD of <span class="math inline">\(X\)</span>?</p></li>
+<li><p>What is the probability that exactly 4 of the 10 people that tested positive are vaccinated?</p></li>
+<li><p>What is the probability that at most 3 of the 10 people that tested positive are vaccinated?</p></li>
+<li><p>What is the probability that at least 5 of the 10 people that tested positive are vaccinated?</p></li>
 </ol>
 </div>
+</div>
 </section>
-<section id="bernoulli-in-r" class="slide level2">
-<h2>Bernoulli in R</h2>
+<section id="binomial-distribution-example-25" class="slide level2">
+<h2>Binomial distribution example (2/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Vaccinated people testing positive for Covid-19</p>
+</div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 10 that tested positive.</p>
+<ol type="1">
+<li><p>What is the expected value of <span class="math inline">\(X\)</span>?</p></li>
+<li><p>What is the SD of <span class="math inline">\(X\)</span>?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="binomial-distribution-example-35" class="slide level2">
+<h2>Binomial distribution example (3/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Vaccinated people testing positive for Covid-19</p>
+</div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 10 that tested positive.</p>
+<ol start="3" type="1">
+<li>What is the probability that <em>exactly 4</em> of the 10 people that tested positive are vaccinated?</li>
+</ol>
+</div>
+</div>
+<p><span class="math display">\[P(X=4) = {10 \choose 4} 0.25^2 (1-0.25)^{10-4}  = 0.146\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.25</span>) <span class="co"># d for distribution</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.145998</code></pre>
+</div>
+</div>
+<ul>
+<li>In general, for <span class="math inline">\(P(X=k)\)</span> we code: <code>dbinom(x = k, size = n, prob = p)</code></li>
+</ul>
+</section>
+<section id="binomial-distribution-example-45" class="slide level2">
+<h2>Binomial distribution example (4/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Vaccinated people testing positive for Covid-19</p>
+</div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 10 that tested positive.</p>
+<ol start="4" type="1">
+<li>What is the probability that <em>at most 3</em> of the 10 people that tested positive are vaccinated?</li>
+</ol>
+</div>
+</div>
+<p><span class="math display">\[\begin{aligned}
+P(X \leq 3) = &amp; P(X =0) + P(X = 1) + P(X =2) + P(X = 3) \\ = &amp;{10 \choose 0} 0.25^0 (0.75)^{10} + {10 \choose 1} 0.25^1 (0.75)^{9} + {10 \choose 2} 0.25^2 (0.75)^{8}+ {10 \choose 3} 0.25^3 (0.75)^{7} \\
+= &amp; 0.7758
+\end{aligned}\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">3</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.25</span>, <span class="at">lower.tail =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7758751</code></pre>
+</div>
+</div>
+<ul>
+<li>In general, for <span class="math inline">\(P(X \leq k)\)</span> we code: <code>pbinom(q = k, size = n, prob = p)</code> with <code>lower.tail = T</code> as a default option</li>
+</ul>
+</section>
+<section id="binomial-distribution-example-55" class="slide level2">
+<h2>Binomial distribution example (5/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Vaccinated people testing positive for Covid-19</p>
+</div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 10 that tested positive.</p>
+<ol start="5" type="1">
+<li>What is the probability that <em>at least 5</em> of the 10 people that tested positive are vaccinated?</li>
+</ol>
+</div>
+</div>
+<p><span class="math display">\[\begin{aligned}
+P(X \geq 5) = &amp; P(X =5) + P(X = 6) + P(X =7) + P(X = 8) + P(X = 9)+ P(X = 10) \\ = &amp;{10 \choose 5} 0.25^5 (0.75)^{5} + {10 \choose 6} 0.25^6 (0.75)^{4} + \ldots + {10 \choose 10} 0.25^10 (0.75)^{0}\\
+= &amp; 0.7758
+\end{aligned}\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.25</span>, <span class="at">lower.tail =</span> F) <span class="co"># switch to greater than!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.07812691</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">4</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.25</span>, <span class="at">lower.tail =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.07812691</code></pre>
+</div>
+</div>
+<ul>
+<li>In general, for <span class="math inline">\(P(X &gt; k)\)</span> we code: <code>pbinom(q = k, size = n, prob = p, lower.tail = F)</code></li>
+</ul>
 </section>
 <section id="resources" class="slide level2">
 <h2>Resources!</h2>
@@ -786,6 +1064,7 @@ Meike Niederhausen and Nicky Wakim
 <p>Lesson 5 Slides</p>
 </div>
 </section></section>
+
     </div>
   </div>
 
@@ -999,6 +1278,44 @@ Meike Niederhausen and Nicky Wakim
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

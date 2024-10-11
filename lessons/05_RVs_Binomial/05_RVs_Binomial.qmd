@@ -26,18 +26,29 @@ editor_options:
 # Learning Objectives
 
 1.  Define random variables and how they map to probability distributions
-2.  Calculate the expected value and variance of random variables (and combinations of random variables)
-3.  BInomial distribution
+2.  Calculate the expected value and variance of discrete random variables
+3.  Calculate the expected value and variance of linear combinations of discrete random variables
+4.  Calculate probabilities for different events using a Binomial distribution
 
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
+# Learning Objectives
+
+::: lob
+1.  Define random variables and how they map to probability distributions
+:::
+
+2.  Calculate the expected value and variance of discrete random variables
+3.  Calculate the expected value and variance of linear combinations of discrete random variables
+4.  Calculate probabilities for different events using a Binomial distribution
+
 ## Random variables
 
 ::::: definition
 ::: def-ttl
-Random variable (RV)
+Random variable (RV or r.v.)
 :::
 
 ::: def-cont
@@ -121,12 +132,23 @@ Suppose you roll a fair die. Let the random variable (r.v.) $X$ be the outcome o
 
 ![](/lessons/img_slides/die_prob_dist.png)
 
+# Learning Objectives
+
+1.  Define random variables and how they map to probability distributions
+
+::: lob
+2.  Calculate the expected value and variance of discrete random variables
+:::
+
+3.  Calculate the expected value and variance of linear combinations of discrete random variables
+4.  Calculate probabilities for different events using a Binomial distribution
+
 ## Discrete vs. continuous random variables
 
-- Probability distributions are usually either **discrete** or **continuous**, depending on whether the random variable is discrete or continuous.
+-   Probability distributions are usually either **discrete** or **continuous**, depending on whether the random variable is discrete or continuous.
 
-::: columns
-::: {.column width="47%"}
+:::::::::::: columns
+:::::: {.column width="47%"}
 ::::: red
 ::: red-ttl
 Discrete random variable
@@ -137,17 +159,17 @@ A **discrete** r.v. $X$ takes on a finite number of values or countably infinite
 :::
 :::::
 
-Think: 
+Think:
 
-- Number of heads in a set of coin tosses
-- Number of people who have had chicken pox in a random sample
-:::
+-   Number of heads in a set of coin tosses
+-   Number of people who have had chicken pox in a random sample
+::::::
 
 ::: {.column width="2%"}
 :::
 
-::: {.column width="49%"}
-::: pink2
+:::::: {.column width="49%"}
+::::: pink2
 ::: pink2-ttl
 Continuous random variable
 :::
@@ -155,15 +177,14 @@ Continuous random variable
 ::: pink2-cont
 A **continuous** r.v. $X$ can take on any real value in an interval of values or unions of intervals.
 :::
-:::
+:::::
 
-Think: 
+Think:
 
-- Height in a population
-- Blood pressure in a population
-:::
-
-:::
+-   Height in a population
+-   Blood pressure in a population
+::::::
+::::::::::::
 
 ## Expectation
 
@@ -177,14 +198,13 @@ Expected value of a *discrete* random variable
 :::
 
 ::: def-cont
-If $X$ takes on outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$, the expected value of $X$ is the sum of each outcome multiplied by its corresponding probability: 
-$$\begin{aligned}\mu = E[X] = & x_1 P(X=x_1) + x_2 P(X=x_2) + \ldots + x_k P(X=x_k) \\ = & \sum_{i=1}^k x_iP(X=x_i) \end{aligned}$$
+If $X$ takes on outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$, the expected value of $X$ is the sum of each outcome multiplied by its corresponding probability: $$\begin{aligned}\mu = E[X] = & x_1 P(X=x_1) + x_2 P(X=x_2) + \ldots + x_k P(X=x_k) \\ = & \sum_{i=1}^k x_iP(X=x_i) \end{aligned}$$
 :::
 :::::
 
 ## Back to rolling a die
 
-::: {.column width="44%"}
+:::::: {.column width="44%"}
 ::::: example
 ::: ex-ttl
 Example 1: Rolling a die
@@ -197,7 +217,7 @@ Let's go back to our fair fie with RV $X$ as the value of the face showing on th
 
 3.  Now suppose the 6-sided die is not fair. How would we calculate the expected outcome?
 
-| $x$   | $\mathbb{P}(X=x)$ |
+| $x$ | $\mathbb{P}(X=x)$ |
 |-----|-------------------|
 | 1   | 0.10              |
 | 2   | 0.20              |
@@ -207,8 +227,7 @@ Let's go back to our fair fie with RV $X$ as the value of the face showing on th
 | 6   | 0.35              |
 :::
 :::::
-:::
-
+::::::
 
 ## Variability of random variables
 
@@ -220,11 +239,11 @@ Variance of a discrete random variable
 :::
 
 ::: def-cont
-If $X$ takes on outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$ and expected value \ $\mu=E(X)$, then the variance of $X$, denoted by $\text{Var}(X)$ or $\sigma^2$, is
+If $X$ takes on outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$ and expected value  $\mu=E(X)$, then the variance of $X$, denoted by $\text{Var}(X)$ or $\sigma^2$, is
 
 $$\begin{align*}
 \text{Var}(X) &= (x_1-\mu)^2 P(X=x_1) + \cdots+ (x_k-\mu)^2 P(X=x_k) \\
-	&= \sum_{i=1}^{k} (x_i - \mu)^2 P(X=x_i)
+    &= \sum_{i=1}^{k} (x_i - \mu)^2 P(X=x_i)
 \end{align*}$$
 :::
 :::::
@@ -241,29 +260,39 @@ The standard deviation of $X$, labeled $SD(X)$ or $\sigma$, is $$\sigma = SD(X) 
 
 ## Back to rolling a die
 
-
-::: {.column width="44%"}
+:::::: {.column width="44%"}
 ::::: example
 ::: ex-ttl
 Example 1: Rolling a die
 :::
 
 ::: ex-cont
-Suppose you roll a fair 6-sided die. Let the random variable (r.v.)* $X$ be the outcome of the roll, i.e. the value of the face showing on the die. 
+Suppose you roll a fair 6-sided die. Let the random variable (r.v.)\* $X$ be the outcome of the roll, i.e. the value of the face showing on the die.
 
-4. Find the variance and standard deviation of $X$.
+4.  Find the variance and standard deviation of $X$.
 
-| $x$   | $\mathbb{P}(X=x)$ |
+| $x$ | $\mathbb{P}(X=x)$ |
 |-----|-------------------|
-| 1   | 1/6              |
-| 2   | 1/6              |
-| 3   | 1/6              |
-| 4   | 1/6              |
-| 5   | 1/6              |
-| 6   | 1/6              |
+| 1   | 1/6               |
+| 2   | 1/6               |
+| 3   | 1/6               |
+| 4   | 1/6               |
+| 5   | 1/6               |
+| 6   | 1/6               |
 :::
 :::::
+::::::
+
+# Learning Objectives
+
+1.  Define random variables and how they map to probability distributions
+2.  Calculate the expected value and variance of discrete random variables
+
+::: lob
+3.  Calculate the expected value and variance of linear combinations of discrete random variables
 :::
+
+4.  Calculate probabilities for different events using a Binomial distribution
 
 ## Linear combinations of random variables
 
@@ -277,65 +306,89 @@ If $X$ and $Y$ are random variables and $a$ and $b$ are constants, then $$aX + b
 :::
 :::::
 
-::: orange
+::::: orange
 ::: orange-ttl
 Theorem: Expected value of a linear combination of random variables
 :::
+
 ::: orange-cont
 If $X$ and $Y$ are random variables and $a$ and $b$ are constants, then $$E(aX + bY) = aE(X) + bE(Y)$$ and $$E(aX + b) = aE(X) + b$$
 :::
-:::
+:::::
 
 ## Keep rolling dice!
 
-::: example
+::::: example
 ::: ex-ttl
 Example: Expected money for rolling 3 dice
 :::
+
 ::: ex-cont
-Let the random variables $X_1, X_2, X_3$ be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. How much money do you expect to get?
+Let the random variables $X_1, X_2, X_3$ be the values shown on rolls for 2 fair 6-sided dice and 1 unfair die (as described in our previous example). Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the unfair die roll. How much money do you expect to get?
 :::
-:::
+:::::
 
 ## Variance of a linear combination
 
-::: orange
+::::: orange
 ::: orange-ttl
 Theorem: Variance of a linear combination of random variables
 :::
+
 ::: orange-cont
 If $X$ and $Y$ are **independent** random variables and $a$ and $b$ are constants, then $$\text{Var}(aX +bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$$
 :::
-:::
+:::::
 
 ## Keep keep rolling dice!
 
-::: example
+::::: example
 ::: ex-ttl
 Example: Expected money for rolling 3 dice
 :::
+
 ::: ex-cont
-Let the random variables $X_1, X_2, X_3$ be the values shown on 3 fair 6-sided dice rolls. Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the third roll. What are the variance and standard deviation of the amount you get from the 3 rolls?
+Let the random variables $X_1, X_2, X_3$ be the values shown on rolls for 2 fair 6-sided dice and 1 unfair die (as described in our previous example). Suppose you are given in dollars the amount of the first roll, plus twice the value of the second roll, plus 4 times the value of the unfair die roll. What are the variance and standard deviation of the amount you get from the 3 rolls?
 :::
+:::::
+
+# Learning Objectives
+
+1.  Define random variables and how they map to probability distributions
+2.  Calculate the expected value and variance of discrete random variables
+3.  Calculate the expected value and variance of linear combinations of discrete random variables
+
+::: lob
+4.  Calculate probabilities for different events using a Binomial distribution
 :::
 
-# Learning objectives
+## Binomial random variable
 
-## Binomial distribution
+-   **One specific type of discrete random variable** is a binomial random variable
 
--   Many situations involve modeling independent random events that have 2 possible outcomes (binary), such as
+::::: definition
+::: def-ttl
+Binomial random variable
+:::
 
-    -   Repeatedly flipping a coin
+::: def-cont
+-   $X$ is a binomial random variable if it represents the number of successes in $n$ independent replications (or trials) of an experiment where
 
--   Repeated events are referred to as **trials**
+    -   Each replicate has two possible outcomes: either **success** or **failure**
+    -   The probability of success is $p$
+    -   The probability of failure is $q=1-p$
+:::
+:::::
 
--   The 2 possible outcomes are referred to as **successes** and **failures**.
+-   A binomial random variable takes on values $0, 1, 2, \dots, n$.
 
--   We denote the probability of a success as $p$.
+-   If a r.v. $X$ is modeled by a Binomial distribution, then we write in shorthand $X \sim \text{Binom}(n,p)$
 
--   We denote the probability of a failure as $q = 1-p$.
+-   Quick example: The number of heads in 3 tosses of a fair coin is a binomial random variable with parameters $n = 3$ and $p = 0.5$.
 
 ## Bernoulli distribution
+
+-   When $n=1$, aka we have a single trial, we give a different name to the random variable: Bernoulli
 
 ::::: definition
 ::: def-ttl
@@ -343,59 +396,55 @@ Bernoulli random variable
 :::
 
 ::: def-cont
-**Bernoulli** random variable. If $X$ is a random variable that takes value 1 with probability of success $p$ and 0 with probability $1-p$, then $X$ is a Bernoulli random variable.
+**Bernoulli** random variable. If $X$ is a random variable that takes value 1 with probability of success $p$ and 0 with probability $1-p$ (or $q$), then $X$ is a Bernoulli random variable.
 :::
 :::::
 
 -   We call the probability of success $p$ the **parameter** of the Bernoulli distribution.
 
--   Each value of $p$ identifies a specific Bernoulli distribution out of the **family** of Bernoulli r.v.'s where $p$ is any value between 0 and 1 (inclusive).
+-   If a r.v. $X$ is modeled by a Bernoulli distribution, then we write in shorthand $X \sim \text{Bernoulli}(p)$ or $X \sim \text{Bern}(p)$
 
--   If a r.v. $X$ is modeled by a Bernoulli distribution, then we write in shorthand
-
-::: theorem
-**Theorem 19**. *Mean and SD of a Bernoulli r.v. If* $X$ is a Bernoulli r.v. with probability of success $p$, then
+::::: orange
+::: orange-ttl
+Mean and SD of a Bernoulli r.v.
 :::
 
-## Binomial distribution
+::: orange-cont
+If\* $X$ is a Bernoulli r.v. with probability of success $p$, then $E(X) = p$ and $\text{Var}(X) = p(1-p)$
+:::
+:::::
 
-\$\$
+## Relationship between Bernoulli and Binomial[^1]
 
-Recall Example 3.17:
+[^1]: Information on slide heavily borrowed from ChatGPT with prompt: "can you explain how we go from a bernoulli distribution to a binomial"
 
--   About 25% of people that test positive for Covid-19 are vaccinated for Covid-19.
+-   The **Bernoulli distribution** is a special case of the Binomial distribution where $n=1$
 
--   Define the r.v. $X_i$ to be 1 if someone that tests positive is vaccinated and 0 if they are not vaccinated.
+    -   Specifically: $$\text{Binomial}(1, p) = \text{Bernoulli}(p) $$
 
--   Suppose 3 people have tested positive for Covid-19 (independently of each other).
+-   To get a **Binomial distribution**, we simply extend the scenario from a **single** trial to **multiple** independent trials. 
+    - If we conduct $n$ independent Bernoulli trials with the same success probability $p$, the total number of successes across these $n$ trials will follow a Binomial distribution
 
--   Let $T$ denote the number of people that are vaccinated amongst the 3 that tested positive.
+ 
 
-## Binomial distribution
+-   Quick example:
 
-The random variable $T$ above is an example of a Binomial random variable.
+    -   **Bernoulli**: If you flip a coin once, with probability $p=0.5$ of landing heads, that is a Bernoulli trial.
+    -   **Binomial**: If you flip the coin 5 times, and you want to know how many times it will land heads, the number of heads will follow a Binomial distribution with parameters $n=5$ and $p=0.5$
 
-In general, a random variable $X$ is **Binomial** if the following hold:
-
-1.  The trials are independent.
-
-2.  The number of trials, $n$, is fixed.
-
-3.  Each trial outcome can be classified as a *success* or *failure*.
-
-4.  The probability of a success, $p$, is the same for each trial.
-
-5.  The r.v. $X$ is the total number of successes in the $n$ trials.
 
 ## Binomial distribution
 
 ::::: definition
 ::: def-ttl
-Binomial distribution
+Distribution of a **Binomial** random variable
 :::
 
 ::: def-cont
-Distribution of a **Binomial** random variable. Let $X$ be the total number of successes in $n$ independent trials, each with probability $p$ of a success. Then probability of observing exactly $k$ successes in $n$ independent trials is
+Let $X$ be the total number of successes in $n$ independent trials, each with probability $p$ of a success. Then probability of observing exactly $k$ successes in $n$ independent trials is 
+
+$$P(X = x) = \binom{n}{x} p^x (1-p)^{n-x},  x= 0, 1, 2, \dots, n $$
+
 :::
 :::::
 
@@ -403,27 +452,132 @@ Distribution of a **Binomial** random variable. Let $X$ be the total number of s
 
 -   If a r.v. $X$ is modeled by a binomial distribution, then we write in shorthand
 
-::: theorem
-**Theorem 21**. *Mean and SD of a Binomial r.v. If* $X$ is a binomial r.v. with probability of success $p$, then
+::: orange
+::: orange-ttl
+Mean and variance of a Binomial r.v
+:::
+::: orange-cont
+If $X$ is a binomial r.v. with probability of success $p$, then $E(X) = np$ and $\text{Var}(X)=np(1-p)$
+:::
 :::
 
-## Binomial distribution example
+## Binomial distribution: R commands
 
-::: {#VaccBinom10 .example}
-**Example 22**. ***Vaccinated people testing positive for Covid-19 (revisited)** About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let* $X$ denote the number of people that are vaccinated amongst the 10 that tested positive.
+R commands with their [input]{style="color:#BF396F"} and [output]{style="color:#367B79"}:
 
-1.  *What is the expected value of* $X$?
+| R code     | What does it return?                                                                                                         |
+|--------------------|----------------------------------------------------|
+| `rbinom()` | returns [sample of random variables]{style="color:#367B79"} with [specified binomial distribution]{style="color:#BF396F"}    |
+| `dbinom()` | returns [probability]{style="color:#367B79"} of getting [certain number of successes]{style="color:#BF396F"}                 |
+| `pbinom()` | returns [cumulative probability]{style="color:#367B79"} of getting [certain number or less]{style="color:#BF396F"} successes |
+| `qbinom()` | returns [number of successes]{style="color:#367B79"} corresponding to [desired quantile]{style="color:#BF396F"}              |
 
-2.  *What is the SD of* $X$?
+## Binomial distribution example (1/5)
 
-3.  *What is the probability that exactly 4 of the 10 people that tested positive are vaccinated?*
+::: example
+::: ex-ttl
+Vaccinated people testing positive for Covid-19
+:::
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 10 that tested positive.
 
-4.  *What is the probability that at most 3 of the 10 people that tested positive are vaccinated?*
+1.  What is the expected value of $X$?
 
-5.  *What is the probability that at least 5 of the 10 people that tested positive are vaccinated?*
+2.  What is the SD of $X$?
+
+3.  What is the probability that exactly 4 of the 10 people that tested positive are vaccinated?
+
+4.  What is the probability that at most 3 of the 10 people that tested positive are vaccinated?
+
+5.  What is the probability that at least 5 of the 10 people that tested positive are vaccinated?
+:::
 :::
 
-## Bernoulli in R
+## Binomial distribution example (2/5)
+
+::: example
+::: ex-ttl
+Vaccinated people testing positive for Covid-19
+:::
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 10 that tested positive.
+
+1.  What is the expected value of $X$?
+
+2.  What is the SD of $X$?
+:::
+:::
+
+## Binomial distribution example (3/5)
+
+::: example
+::: ex-ttl
+Vaccinated people testing positive for Covid-19
+:::
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 10 that tested positive.
+
+3.  What is the probability that *exactly 4* of the 10 people that tested positive are vaccinated?
+:::
+:::
+
+$$P(X=4) = {10 \choose 4} 0.25^2 (1-0.25)^{10-4}  = 0.146$$
+
+```{r}
+dbinom(x = 4, size = 10, prob = 0.25) # d for distribution
+```
+
+- In general, for $P(X=k)$ we code: `dbinom(x = k, size = n, prob = p)`
+
+## Binomial distribution example (4/5)
+
+::: example
+::: ex-ttl
+Vaccinated people testing positive for Covid-19
+:::
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 10 that tested positive.
+
+4.  What is the probability that *at most 3* of the 10 people that tested positive are vaccinated?
+:::
+:::
+
+$$\begin{aligned}
+P(X \leq 3) = & P(X =0) + P(X = 1) + P(X =2) + P(X = 3) \\ = &{10 \choose 0} 0.25^0 (0.75)^{10} + {10 \choose 1} 0.25^1 (0.75)^{9} + {10 \choose 2} 0.25^2 (0.75)^{8}+ {10 \choose 3} 0.25^3 (0.75)^{7} \\
+= & 0.7758
+\end{aligned}$$
+
+```{r}
+pbinom(q = 3, size = 10, prob = 0.25, lower.tail = T)
+```
+
+- In general, for $P(X \leq k)$ we code: `pbinom(q = k, size = n, prob = p)` with `lower.tail = T` as a default option
+
+## Binomial distribution example (5/5)
+
+::: example
+::: ex-ttl
+Vaccinated people testing positive for Covid-19
+:::
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 10 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 10 that tested positive.
+
+5.  What is the probability that *at least 5* of the 10 people that tested positive are vaccinated?
+:::
+:::
+
+$$\begin{aligned}
+P(X \geq 5) = & P(X =5) + P(X = 6) + P(X =7) + P(X = 8) + P(X = 9)+ P(X = 10) \\ = &{10 \choose 5} 0.25^5 (0.75)^{5} + {10 \choose 6} 0.25^6 (0.75)^{4} + \ldots + {10 \choose 10} 0.25^10 (0.75)^{0}\\
+= & 0.7758
+\end{aligned}$$
+
+```{r}
+pbinom(q = 4, size = 10, prob = 0.25, lower.tail = F) # switch to greater than!
+1 - pbinom(q = 4, size = 10, prob = 0.25, lower.tail = T)
+```
+
+- In general, for $P(X > k)$ we code: `pbinom(q = k, size = n, prob = p, lower.tail = F)` 
+
 
 ## Resources!
 
