@@ -408,7 +408,13 @@ Meike Niederhausen and Nicky Wakim
 <p>When working with continuous random variables, probability is found for intervals of values rather than individual values.</p>
 <ul>
 <li><p>The probability that a continuous r.v. <span class="math inline">\(X\)</span> takes on any single individual value is 0. That is, <span class="math inline">\(P(X = x) = 0\)</span>.</p></li>
-<li><p>Thus, <span class="math inline">\(P(a &lt; X &lt; b)\)</span> is equivalent to <span class="math inline">\(P(a \leq X \leq b)\)</span>.</p></li>
+<li><p>Thus, <span class="math inline">\(P(a &lt; X &lt; b)\)</span> is equivalent to <span class="math inline">\(P(a \leq X \leq b)\)</span></p></li>
+</ul>
+</section>
+<section id="normal-distribution" class="slide level2">
+<h2>Normal distribution</h2>
+<ul>
+<li>Shorthand</li>
 </ul>
 </section>
 <section id="standard-normal-distribution" class="slide level2">
@@ -425,12 +431,6 @@ Meike Niederhausen and Nicky Wakim
 <ul>
 <li><p>The <span class="math inline">\(Z\)</span>-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).</p></li>
 <li><p>For example, if an observation has <span class="math inline">\(Z\)</span>-score <span class="math inline">\(z = 3.4\)</span>, then the observation is 3.4 standard deviations above the mean.</p></li>
-</ul>
-</section>
-<section id="normal-distribution" class="slide level2">
-<h2>Normal distribution</h2>
-<ul>
-<li>Shorthand</li>
 </ul>
 </section>
 <section id="normal-distribution-r-commands" class="slide level2">
@@ -473,7 +473,11 @@ Meike Niederhausen and Nicky Wakim
 <section id="example-calculating" class="slide level2">
 <h2>Example calculating</h2>
 <div class="example">
-<p><strong>Example 1</strong>. <em><strong>Calculating standard normal probabilities practice</strong> Let</em> <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
+<div class="ex-ttl">
+<p>Example: Calculating standard normal probabilities practice</p>
+</div>
+<div class="ex-cont">
+<p>Let <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
 <ol type="1">
 <li><p><span class="math inline">\(\mathbb{P}( Z &lt; 2.67 )\)</span></p></li>
 <li><p><span class="math inline">\(\mathbb{P}( Z &gt; -0.37 )\)</span></p></li>
@@ -481,16 +485,22 @@ Meike Niederhausen and Nicky Wakim
 <li><p><span class="math inline">\(\mathbb{P}(Z = 1.53 )\)</span></p></li>
 </ol>
 </div>
+</div>
 </section>
 <section id="example-1" class="slide level2">
 <h2>example 1</h2>
 <div class="example">
-<p><strong>Example 3</strong>. <em><strong>DBP</strong> Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.</em></p>
+<div class="ex-ttl">
+<p>Example: Diastolic blood pressure (DBP)</p>
+</div>
+<div class="ex-cont">
+<p>Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.</p>
 <ol type="1">
-<li><p><em>Mild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?</em></p></li>
-<li><p><em>What is the</em> <span class="math inline">\(10^{th}\)</span> percentile of the DBP distribution?</p></li>
-<li><p><em>What is the</em> <span class="math inline">\(95^{th}\)</span> percentile of the DBP distribution?</p></li>
+<li><p>Mild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?</p></li>
+<li><p>What is the <span class="math inline">\(10^{th}\)</span> percentile of the DBP distribution?</p></li>
+<li><p>What is the <span class="math inline">\(95^{th}\)</span> percentile of the DBP distribution?</p></li>
 </ol>
+</div>
 </div>
 </section>
 <section id="normal-approximation-of-the-binomial-distribution" class="slide level2">
@@ -531,17 +541,17 @@ Meike Niederhausen and Nicky Wakim
 <section id="example-using-normal-approximation" class="slide level2">
 <h2>Example using Normal approximation</h2>
 <div class="example">
-<p><strong>Example 5</strong>. <em><strong>Vaccinated people testing positive for Covid-19 (revisited)</strong> About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let</em> <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/binom_n100_p25_crop.png" style="width:4in"></p>
-<figcaption>image</figcaption>
-</figure>
+<div class="ex-ttl">
+<p>Example: Vaccinated people testing positive for Covid-19 (revisited)</p>
 </div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let* <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</p>
+<p><img data-src="../img_slides/binom_n100_p25_crop.png" style="width:5in"></p>
 <ol type="1">
-<li><p><em>Calculate exact probability.</em></p></li>
-<li><p><em>Calculate approximate probability.</em></p></li>
+<li><p>Calculate exact probability.</p></li>
+<li><p>Calculate approximate probability.</p></li>
 </ol>
+</div>
 </div>
 </section>
 <section id="some-resources-for-the-normal-distribution" class="slide level2">
@@ -558,15 +568,22 @@ Meike Niederhausen and Nicky Wakim
 <section id="introduction-to-the-poisson-distribution" class="slide level2">
 <h2>Introduction to the Poisson distribution</h2>
 <ul>
-<li><p>The Poisson distribution is often used to calculate probabilities for rare events that accumulate over time.</p>
+<li><p>The Poisson distribution is often used to model <strong>count data (# of successes)</strong>, especially for <strong>rare events</strong></p>
 <ul>
-<li>It is a discrete distribution!</li>
+<li>It is a <strong>discrete distribution!</strong></li>
 </ul></li>
 <li><p>It used most often in settings where events happen at a rate <span class="math inline">\(\lambda\)</span> per unit of population and per unit time, such as the annual incidence of a disease in a population.</p></li>
-<li><p><strong>Typical example:</strong> for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.</p></li>
-<li><p>Always take care to note and understand the units.</p></li>
-<li><p>Used to model count data (# of successes), especially for rare events</p></li>
-<li><p>Used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Quick example:</strong> for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Also used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small
+<ul>
+<li>When Normal approximation does not work</li>
+</ul></li>
 </ul>
 </section>
 <section id="poisson-distribution" class="slide level2">

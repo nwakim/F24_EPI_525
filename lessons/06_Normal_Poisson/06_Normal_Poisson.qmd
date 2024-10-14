@@ -98,7 +98,12 @@ intervals of values rather than individual values.
 -   The probability that a continuous r.v. $X$ takes on any single
     individual value is 0. That is, $P(X = x) = 0$.
 
--   Thus, $P(a < X < b)$ is equivalent to $P(a \leq X \leq b)$.
+-   Thus, $P(a < X < b)$ is equivalent to $P(a \leq X \leq b)$
+
+
+## Normal distribution
+
+- Shorthand
 
 ## Standard Normal Distribution
 
@@ -118,10 +123,6 @@ $$Z = \dfrac{X - \mu}{\sigma} \qquad X = \mu + Z\sigma$$
 -   The $Z$-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).
 
 -   For example, if an observation has $Z$-score $z = 3.4$, then the observation is 3.4 standard deviations above the mean.
-
-## Normal distribution
-
-- Shorthand
 
 
 ## Normal distribution: R commands
@@ -157,8 +158,11 @@ R commands with their [input]{style="color:#BF396F"} and
 ## Example calculating 
 
 ::: example
-**Example 1**. ***Calculating standard normal probabilities practice**
-Let* $Z$ be a standard normal random variable,
+::: ex-ttl
+Example: Calculating standard normal probabilities practice
+:::
+::: ex-cont
+Let $Z$ be a standard normal random variable,
 $Z\sim N(\mu=0,\sigma=1)$. Calculate the following probabilities.
 Include sketches of the normal curves with the probability areas shaded
 in.
@@ -171,20 +175,26 @@ in.
 
 4.  $\mathbb{P}(Z = 1.53 )$
 :::
+:::
 
 ## example 1
 
 ::: example
-**Example 3**. ***DBP** Suppose the distribution of diastolic blood
+::: ex-ttl
+Example: Diastolic blood pressure (DBP)
+:::
+::: ex-cont
+Suppose the distribution of diastolic blood
 pressure (DBP) in 35- to 44-year old men is normally distributed with
-mean 80 mm Hg and variance 144 mm Hg.*
+mean 80 mm Hg and variance 144 mm Hg.
 
-1.  *Mild hypertension is when the DBP is between 90 and 99 mm Hg. What
-    proportion of this population has mild hypertension?*
+1.  Mild hypertension is when the DBP is between 90 and 99 mm Hg. What
+    proportion of this population has mild hypertension?
 
-2.  *What is the* $10^{th}$ percentile of the DBP distribution?
+2.  What is the $10^{th}$ percentile of the DBP distribution?
 
-3.  *What is the* $95^{th}$ percentile of the DBP distribution?
+3.  What is the $95^{th}$ percentile of the DBP distribution?
+:::
 :::
 
 ## Normal approximation of the binomial distribution
@@ -227,19 +237,23 @@ $p=0.10$](../img_slides/fourBinomialModelsShowingApproxToNormal.pdf){width="5in"
 ## Example using Normal approximation
 
 ::: example
-**Example 5**. ***Vaccinated people testing positive for Covid-19
-(revisited)** About 25% of people that test positive for Covid-19 are
+::: ex-ttl
+Example: Vaccinated people testing positive for Covid-19 (revisited)
+:::
+::: ex-cont
+About 25% of people that test positive for Covid-19 are
 vaccinated for Covid-19. Suppose 100 people have tested positive for
 Covid-19 (independently of each other). Let* $X$ denote the number of
 people that are vaccinated amongst the 100 that tested positive. What is
 the probability that fewer than 20 of the people that tested positive
 are vaccinated?
 
-![image](../img_slides/binom_n100_p25_crop.png){width="4in"}
+![](../img_slides/binom_n100_p25_crop.png){width="5in"}
 
-1.  *Calculate exact probability.*
+1.  Calculate exact probability.
 
-2.  *Calculate approximate probability.*
+2.  Calculate approximate probability.
+:::
 :::
 
 ## Some resources for the normal distribution
@@ -250,26 +264,25 @@ are vaccinated?
 
 ## Introduction to the Poisson distribution
 
-- The Poisson distribution is often used to calculate probabilities for rare
-events that accumulate over time.
+- The Poisson distribution is often used to model **count data (# of successes)**, especially for **rare
+    events**
 
-  - It is a discrete distribution!
+  - It is a **discrete distribution!**
 
 - It used most often in settings where events happen at a rate $\lambda$
 per unit of population and per unit time, such as the annual incidence
 of a disease in a population.
 
--   **Typical example:** for children ages 0 - 14, the incidence rate of
+ 
+
+-   **Quick example:** for children ages 0 - 14, the incidence rate of
     acute lymphocytic leukemia (ALL) was approximately 30 diagnosed
     cases per million children per year in 2010.
 
--   Always take care to note and understand the units.
+ 
 
--   Used to model count data (# of successes), especially for rare
-    events
-
--   Used to approximate binomial distribution when $n$ is large and $p$
-    is small
+-   Also used to approximate binomial distribution when $n$ is large and $p$ is small
+    - When Normal approximation does not work
 
 ## Poisson Distribution
 

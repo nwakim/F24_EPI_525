@@ -10770,7 +10770,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "example 1",
-    "text": "example 1\n\nExample 3. DBP Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nMild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?\nWhat is the \\(10^{th}\\) percentile of the DBP distribution?\nWhat is the \\(95^{th}\\) percentile of the DBP distribution?"
+    "text": "example 1\n\n\nExample: Diastolic blood pressure (DBP)\n\n\nSuppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nMild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?\nWhat is the \\(10^{th}\\) percentile of the DBP distribution?\nWhat is the \\(95^{th}\\) percentile of the DBP distribution?"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#random-variables",
@@ -15257,7 +15257,7 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#in-the-coin-toss-example",
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "In the coin toss example…",
-    "text": "In the coin toss example…\n\nWe can start to define the probability distribution\nLet’s define the coin flip with the random variable \\(X\\)\n\nWhere \\(X=1\\) if we get a heads and \\(X=0\\) if we get a tails\n\nWe can create a table for the random variable and probabilities of each outcome:\n\n\n\nCoin flip (\\(x\\))\n\\(x=1\\)\n\\(x=0\\)\n\n\n\n\nProbability (\\(P(X=x)\\))\n0.5\n0.5\n\n\n\nNote: I use \\(X\\) to refer to the random variable and \\(x\\) to refer to the realized value it takes\n\nThen we can write \\(P(X=x)\\) to discuss the probability for each realized value (\\(x\\)) of the random variable (\\(X\\))\n\nAlso note that the sum of the probabilities equal 1 \\[\\sum_{x=0}^1 P(X=x) = 1\\]"
+    "text": "In the coin toss example…\n\nWe can start to define the probability distribution\nLet’s define the coin flip with the random variable \\(X\\)\n\nWhere \\(X=1\\) if we get a heads and \\(X=0\\) if we get a tails\n\n\n \n\nWe can create a table for the random variable and probabilities of each outcome:\n\n\n\nCoin flip (\\(x\\))\n\\(x=1\\)\n\\(x=0\\)\n\n\n\n\nProbability (\\(P(X=x)\\))\n0.5\n0.5\n\n\n\n\nNote: I use \\(X\\) to refer to the random variable and \\(x\\) to refer to the realized value it takes\nThen we write \\(P(X=x)\\) to discuss the probability for each realized value (\\(x\\)) of the random variable (\\(X\\))\n\n\n \n\nAlso note that the sum of the probabilities equal 1: \\(\\sum_{x=0}^1 P(X=x) = 1\\)"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#lets-extend-this-to-rolling-a-die",
@@ -15495,7 +15495,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Probabilities for continuous distributions…",
-    "text": "Probabilities for continuous distributions…\nWhen working with continuous random variables, probability is found for intervals of values rather than individual values.\n\nThe probability that a continuous r.v. \\(X\\) takes on any single individual value is 0. That is, \\(P(X = x) = 0\\).\nThus, \\(P(a &lt; X &lt; b)\\) is equivalent to \\(P(a \\leq X \\leq b)\\)."
+    "text": "Probabilities for continuous distributions…\nWhen working with continuous random variables, probability is found for intervals of values rather than individual values.\n\nThe probability that a continuous r.v. \\(X\\) takes on any single individual value is 0. That is, \\(P(X = x) = 0\\).\nThus, \\(P(a &lt; X &lt; b)\\) is equivalent to \\(P(a \\leq X \\leq b)\\)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#the-normal-distribution",
@@ -15544,7 +15544,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#introduction-to-the-poisson-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Introduction to the Poisson distribution",
-    "text": "Introduction to the Poisson distribution\n\nThe Poisson distribution is often used to calculate probabilities for rare events that accumulate over time.\n\nIt is a discrete distribution!\n\nIt used most often in settings where events happen at a rate \\(\\lambda\\) per unit of population and per unit time, such as the annual incidence of a disease in a population.\nTypical example: for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.\nAlways take care to note and understand the units.\nUsed to model count data (# of successes), especially for rare events\nUsed to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small"
+    "text": "Introduction to the Poisson distribution\n\nThe Poisson distribution is often used to model count data (# of successes), especially for rare events\n\nIt is a discrete distribution!\n\nIt used most often in settings where events happen at a rate \\(\\lambda\\) per unit of population and per unit time, such as the annual incidence of a disease in a population.\n\n \n\nQuick example: for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.\n\n \n\nAlso used to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small\n\nWhen Normal approximation does not work"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-outbreaks-of-childhood-leukemia",
@@ -15607,7 +15607,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example calculating",
-    "text": "Example calculating\n\nExample 1. Calculating standard normal probabilities practice Let \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+    "text": "Example calculating\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\\(\\mathbb{P}(Z = 1.53 )\\)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#examples",
@@ -15663,7 +15663,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-using-normal-approximation",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example using Normal approximation",
-    "text": "Example using Normal approximation\n\nExample 5. Vaccinated people testing positive for Covid-19 (revisited) About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\n\n\nimage\n\n\n\nCalculate exact probability.\nCalculate approximate probability."
+    "text": "Example using Normal approximation\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let* \\(X\\) denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\n\nCalculate exact probability.\nCalculate approximate probability."
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#mean-and-sd",
@@ -15769,5 +15769,40 @@
     "title": "Muddy Points",
     "section": "3. 2 x 2 diagnostic table for diagnostic problems",
     "text": "3. 2 x 2 diagnostic table for diagnostic problems\nSee above link to video and pdf where I use the 2 x 2 table. It’s not necessary for this type of problem, but you can use it! I also like tree diagrams, which I included in the example above.\n\nCan we use a 2x2 in homework solutions?\nYes, definitely!! But do not confuse a 2x2 diagnostic table with the probability or contingency tables. The diagnostic table puts conditional probabilities in the cells instead of joint probabilities!!"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#from-lesson-3-probability-distributions",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#from-lesson-3-probability-distributions",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "From Lesson 3: Probability distributions",
+    "text": "From Lesson 3: Probability distributions\n\n\n\n\nProbability distribution\n\n\nA probability distribution consists of all disjoint outcomes and their associated probabilities.\n\n\n\nWe’ve already seen one in our heads and tails example\n\n\n\nRules for a probability distribution\n\n\nA probability distribution is a list of all possible outcomes and their associated probabilities that satisfies three rules:\n\nThe outcomes listed must be disjoint\nEach probability must be between 0 and 1\nThe probabilities must total to 1"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#poll-everywhere-question-1",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#poll-everywhere-question-1",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#poll-everywhere-question2",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#poll-everywhere-question2",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Poll Everywhere Question2",
+    "text": "Poll Everywhere Question2"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#poll-everywhere-question-3",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#poll-everywhere-question-3",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#expectation-of-random-variables",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial.html#expectation-of-random-variables",
+    "title": "Lesson 5: Random variables and Binomial distribution",
+    "section": "Expectation of random variables",
+    "text": "Expectation of random variables\n\nWe call the mean of a random variable its expected value\nThe expected value is calculated as a weighted average\n\n\n\nExpected value of a discrete random variable\n\n\nIf \\(X\\) takes on outcomes \\(x_1\\), …, \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\), the expected value of \\(X\\) is the sum of each outcome multiplied by its corresponding probability: \\[\\begin{aligned}\\mu = E[X] = & x_1 P(X=x_1) + x_2 P(X=x_2) + \\ldots + x_k P(X=x_k) \\\\ = & \\sum_{i=1}^k x_iP(X=x_i) \\end{aligned}\\]"
   }
 ]
