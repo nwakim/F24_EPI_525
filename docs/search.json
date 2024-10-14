@@ -10672,7 +10672,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal distribution",
-    "text": "Normal distribution\n\nShorthand"
+    "text": "Normal distribution\n\n\n\nA random variable X is modeled with a normal distribution if:\n\nShape: symmetric, unimodal bell curve\nCenter: mean \\(\\mu\\)\nSpread (variability): standard deviation \\(\\sigma\\)\n\n\n \n\nShorthand for a random variable, \\(X\\), that has a Normal distribution: \\[X \\sim \\text{Normal}(\\mu, \\sigma)\\]"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution",
@@ -10734,8 +10734,8 @@
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
-    "section": "Normal approximation of the binomial distribution",
-    "text": "Normal approximation of the binomial distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution.\n\n\n\n\nBinomial distribution histograms for varying \\(n\\) when \\(p=0.10\\)"
+    "section": "Normal Approximation of the Binomial Distribution",
+    "text": "Normal Approximation of the Binomial Distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\n\n \n\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\n\n \n\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R\n\n \n\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-6",
@@ -15467,7 +15467,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#last-time-discrete-vs.-continuous-random-variables",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Last time: Discrete vs. continuous random variables",
-    "text": "Last time: Discrete vs. continuous random variables\n\nProbability distributions are usually either discrete or continuous, depending on whether the random variable is discrete or continuous.\n\n\n\n\n\nDiscrete random variable\n\n\nA discrete r.v. \\(X\\) takes on a finite number of values or countably infinite number of possible values.\n\n\nThink:\n\nNumber of heads in a set of coin tosses\nNumber of people who have had chicken pox in a random sample\n\n\n\n\n\n\nContinuous random variable\n\n\nA continuous r.v. \\(X\\) can take on any real value in an interval of values or unions of intervals.\n\n\nThink:\n\nHeight in a population\nBlood pressure in a population"
+    "text": "Last time: Discrete vs. continuous random variables\n\nProbability distributions are usually either discrete or continuous, depending on whether the random variable is discrete or continuous.\n\n\n\n\n\nDiscrete random variable\n\n\nA discrete r.v. \\(X\\) takes on a finite number of values or countably infinite number of possible values.\n\n\nThink:\n\nNumber of heads in a set of coin tosses\nNumber of people who have had chicken pox in a random sample\n\n \n\nBinomial and Bernoulli distributions are discrete\n\n\n\n\n\n\nContinuous random variable\n\n\nA continuous r.v. \\(X\\) can take on any real value in an interval of values or unions of intervals.\n\n\nThink:\n\nHeight in a population\nBlood pressure in a population"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-1",
@@ -15600,7 +15600,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution-r-commands",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal distribution: R commands",
-    "text": "Normal distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrnorm()\nreturns sample of random variables with specified normal distribution\n\n\ndnorm()\nreturns value of probability density at certain point of the normal distribution\n\nNot typically used\n\n\n\npnorm()\nreturns cumulative probability of getting certain point (or less) of the normal distribution\n\n\nqnorm()\nreturns z-score | corresponding to desired quantile"
+    "text": "Normal distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrnorm()\nreturns sample of random variables with specified normal distribution\n\n\ndnorm()\nreturns value of probability density at certain point of the normal distribution\n\nNot typically used\n\n\n\npnorm()\nreturns cumulative probability of getting certain point (or less) of the normal distribution\n\n\nqnorm()\nreturns z-score corresponding to desired quantile"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating",
@@ -15804,5 +15804,159 @@
     "title": "Lesson 5: Random variables and Binomial distribution",
     "section": "Expectation of random variables",
     "text": "Expectation of random variables\n\nWe call the mean of a random variable its expected value\nThe expected value is calculated as a weighted average\n\n\n\nExpected value of a discrete random variable\n\n\nIf \\(X\\) takes on outcomes \\(x_1\\), …, \\(x_k\\) with probabilities \\(P(X=x_1)\\), …, \\(P(X=x_k)\\), the expected value of \\(X\\) is the sum of each outcome multiplied by its corresponding probability: \\[\\begin{aligned}\\mu = E[X] = & x_1 P(X=x_1) + x_2 P(X=x_2) + \\ldots + x_k P(X=x_k) \\\\ = & \\sum_{i=1}^k x_iP(X=x_i) \\end{aligned}\\]"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-12",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-12",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Probabilities for continuous distributions (1/2)",
+    "text": "Probabilities for continuous distributions (1/2)\nTwo important features of continuous distributions:\n\nThe total area under the density curve is 1.\nThe probability that a variable has a value within a specified interval is the area under the curve over that interval."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-22",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#probabilities-for-continuous-distributions-22",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Probabilities for continuous distributions (2/2)",
+    "text": "Probabilities for continuous distributions (2/2)\nWhen working with continuous random variables, probability is found for intervals of values rather than individual values.\n\nThe probability that a continuous r.v. \\(X\\) takes on any single individual value is 0\n\nThat is, \\(P(X = x) = 0\\).\n\nThus, \\(P(a &lt; X &lt; b)\\) is equivalent to \\(P(a \\leq X \\leq b)\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poll-everywhere-question-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poll-everywhere-question-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example calculating probabilities from a Normal distribution",
+    "text": "Example calculating probabilities from a Normal distribution\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution",
+    "text": "Calculating probabilities from a Normal distribution\nThree ways to calculate probabilities from a normal distribution:\n\nCalculus (not for us!)\n\n \n\nNormal probability table\n\nThe textbook has a normal probability table in Appendix B.1, which is included as the next two pages\nNot required for this class\n\n\n \n\nR commands\n\n\\(P(Z \\leq q) =\\) pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)\n\n\n \n\nRandom online calculators\n\nLike this one: https://onlinestatbook.com/2/calculators/normal_dist.html"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-15",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-15",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution (1/5)",
+    "text": "Calculating probabilities from a Normal distribution (1/5)\nThree ways to calculate probabilities from a normal distribution:\n\nCalculus (not for us!)\n\n \n\nNormal probability table\n\nThe textbook has a normal probability table in Appendix B.1, which is included as the next two pages.\n\n\n \n\nR commands\n\n\\(P(Z \\leq q) =\\) pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-15-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-15-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution (1/5)",
+    "text": "Calculating probabilities from a Normal distribution (1/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-25",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-25",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution (2/5)",
+    "text": "Calculating probabilities from a Normal distribution (2/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-35",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-35",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution (3/5)",
+    "text": "Calculating probabilities from a Normal distribution (3/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-45",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-45",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution (4/5)",
+    "text": "Calculating probabilities from a Normal distribution (4/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-55",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#calculating-probabilities-from-a-normal-distribution-55",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Calculating probabilities from a Normal distribution (5/5)",
+    "text": "Calculating probabilities from a Normal distribution (5/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-15",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-15",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Calculating probabilities from a Normal distribution (1/5)",
+    "text": "Example: Calculating probabilities from a Normal distribution (1/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-25",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-25",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Calculating probabilities from a Normal distribution (2/5)",
+    "text": "Example: Calculating probabilities from a Normal distribution (2/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\n\n\n\n\n\n\n\npnorm(q = 2.67, mean = 0, sd = 1)\n\n[1] 0.9962074\n\n\n\npnorm(q = 2.67)\n\n[1] 0.9962074"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-35",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-35",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Calculating probabilities from a Normal distribution (3/5)",
+    "text": "Example: Calculating probabilities from a Normal distribution (3/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\n\n\n\n\n\n\n\n1 - pnorm(q = -0.37, \n          mean = 0, \n          sd = 1)\n\n[1] 0.6443088\n\n\n\npnorm(q = -0.37, mean = 0, sd = 1, \n      lower.tail = FALSE)\n\n[1] 0.6443088"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-45",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-45",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Calculating probabilities from a Normal distribution (4/5)",
+    "text": "Example: Calculating probabilities from a Normal distribution (4/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\n\n\n\n\n\n\n\npnorm(q = 2.46, mean = 0, sd = 1) - \n  pnorm(q = -2.18, mean = 0, sd = 1)\n\n[1] 0.9784244"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-55",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-55",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Calculating probabilities from a Normal distribution (5/5)",
+    "text": "Example: Calculating probabilities from a Normal distribution (5/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Using Normal distribution in word problems",
+    "text": "Using Normal distribution in word problems\n\n\nExample: Diastolic blood pressure (DBP)\n\n\nSuppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nMild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?\nWhat is the \\(10^{th}\\) percentile of the DBP distribution?\nWhat is the \\(95^{th}\\) percentile of the DBP distribution?"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Using Normal distribution in word problems",
+    "text": "Using Normal distribution in word problems\n\n\nExample: Diastolic blood pressure (DBP)\n\n\nSuppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nMild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?\n\n\n\n\n\n\nDraw on a normal curve:\n\n\n\nCompute in R:\n\n\npnorm(q = 99, mean = 80, \n      sd = sqrt(144)) - \n  pnorm(q = 90, mean = 80, \n        sd = sqrt(144))\n\n[1] 0.1456556"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems-2",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems-2",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Using Normal distribution in word problems",
+    "text": "Using Normal distribution in word problems\n\n\nExample: Diastolic blood pressure (DBP)\n\n\nSuppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nWhat is the \\(10^{th}\\) percentile of the DBP distribution?\n\n\n\n\n\n\nDraw on a normal curve:\n\n\n\nCompute in R:\n\n\nqnorm(p = 0.10, \n      mean = 80, \n      sd = sqrt(144))\n\n[1] 64.62138"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems-3",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems-3",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Using Normal distribution in word problems",
+    "text": "Using Normal distribution in word problems\n\n\nExample: Diastolic blood pressure (DBP)\n\n\nSuppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.\n\nWhat is the \\(95^{th}\\) percentile of the DBP distribution?\n\n\n\n\n\n\nDraw on a normal curve:\n\n\n\nCompute in R:\n\n\nqnorm(p = 0.95, \n      mean = 80, \n      sd = sqrt(144))\n\n[1] 99.73824"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Normal approximation or Binomial distribution",
+    "text": "Example: Normal approximation or Binomial distribution\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n \n\nExact probability = Binomial distribution\n\n\\[X \\sim \\text{Binomial}(n=100, p=0.25)\\]\n\\[P(X &lt; 20) = P(X \\leq 19) = \\sum_{j=0}^{19}P(X = j)\\]\n \n\npbinom(q = 19, size = 100, prob = 0.25)\n\n[1] 0.09953041"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Normal approximation or Binomial distribution",
+    "text": "Example: Normal approximation or Binomial distribution\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n\nApproximate probability = Normal distribution\n\nMean = \\(\\mu = np = 0.25\\cdot 100 = 25\\)\nSD = \\(\\sigma = \\sqrt{np(1-p)}=\\sqrt{100\\cdot 0.25 \\cdot (1-0.25)}\\)\n\n\n\\[X \\sim \\text{Normal}\\bigg(\\mu=25, \\sigma = \\sqrt{100\\cdot 0.25 \\cdot (1-0.25)}\\bigg)\\]\n\nFor these probabilities, we use something called a continuity correction. Instead of calculating \\(P(X &lt; 20)\\), we calculate \\(P(X \\leq 19.5)\\)\n\n\npnorm(q = 19.5, mean = 25, \n      sd = sqrt( 100*0.25*0.75 ))\n\n[1] 0.1020119"
   }
 ]

@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -344,7 +409,12 @@ Meike Niederhausen and Nicky Wakim
 <section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-
+<ol type="1">
+<li>Understand how probabilities can extend to continuous distributions</li>
+<li>Calculate probabilities for different events using a Normal distribution</li>
+<li>Normal apprximation of the binomial distribution</li>
+<li>Calculate probabilities for different events using a Poisson distribution</li>
+</ol>
 </section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
@@ -375,6 +445,10 @@ Meike Niederhausen and Nicky Wakim
 <li>Number of heads in a set of coin tosses</li>
 <li>Number of people who have had chicken pox in a random sample</li>
 </ul>
+<p>&nbsp;</p>
+<ul>
+<li>Binomial and Bernoulli distributions are discrete</li>
+</ul>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:49%;">
@@ -394,8 +468,8 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="probabilities-for-continuous-distributions" class="slide level2">
-<h2>Probabilities for continuous distributions</h2>
+<section id="probabilities-for-continuous-distributions-12" class="slide level2">
+<h2>Probabilities for continuous distributions (1/2)</h2>
 <p>Two important features of continuous distributions:</p>
 <ul>
 <li><p>The total area under the density curve is 1.</p></li>
@@ -403,19 +477,45 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 
 <img data-src="../img_slides/fdicHeightContDistFilled.png" class="r-stretch quarto-figure-center"></section>
-<section id="probabilities-for-continuous-distributions-1" class="slide level2">
-<h2>Probabilities for continuous distributions…</h2>
-<p>When working with continuous random variables, probability is found for intervals of values rather than individual values.</p>
+<section id="probabilities-for-continuous-distributions-22" class="slide level2">
+<h2>Probabilities for continuous distributions (2/2)</h2>
+<p>When working with continuous random variables, probability is found for <strong>intervals of values</strong> rather than <strong>individual values</strong>.</p>
 <ul>
-<li><p>The probability that a continuous r.v. <span class="math inline">\(X\)</span> takes on any single individual value is 0. That is, <span class="math inline">\(P(X = x) = 0\)</span>.</p></li>
+<li><p>The probability that a continuous r.v. <span class="math inline">\(X\)</span> takes on any single individual value is 0</p>
+<ul>
+<li>That is, <span class="math inline">\(P(X = x) = 0\)</span>.</li>
+</ul></li>
 <li><p>Thus, <span class="math inline">\(P(a &lt; X &lt; b)\)</span> is equivalent to <span class="math inline">\(P(a \leq X \leq b)\)</span></p></li>
 </ul>
 </section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+
+</section>
 <section id="normal-distribution" class="slide level2">
 <h2>Normal distribution</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>Shorthand</li>
+<li><p>A random variable X is modeled with a normal distribution if:</p>
+<ul>
+<li><strong>Shape:</strong> symmetric, unimodal bell curve</li>
+<li><strong>Center:</strong> mean <span class="math inline">\(\mu\)</span></li>
+<li><strong>Spread (variability):</strong> standard deviation <span class="math inline">\(\sigma\)</span></li>
+</ul></li>
 </ul>
+<p>&nbsp;</p>
+<ul>
+<li>Shorthand for a random variable, <span class="math inline">\(X\)</span>, that has a Normal distribution: <span class="math display">\[X \sim \text{Normal}(\mu, \sigma)\]</span></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="../img_slides/Normal_examples.png"></p>
+</div>
+</div>
 </section>
 <section id="standard-normal-distribution" class="slide level2">
 <h2>Standard Normal Distribution</h2>
@@ -436,10 +536,10 @@ Meike Niederhausen and Nicky Wakim
 <section id="normal-distribution-r-commands" class="slide level2">
 <h2>Normal distribution: R commands</h2>
 <p>R commands with their <span style="color:#BF396F">input</span> and <span style="color:#367B79">output</span>:</p>
-<table style="width:97%;">
+<table style="width:92%;">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 70%">
+<col style="width: 23%">
+<col style="width: 68%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -465,13 +565,42 @@ Meike Niederhausen and Nicky Wakim
 </tr>
 <tr class="even">
 <td><code>qnorm()</code></td>
-<td>returns <span style="color:#367B79">z-score</span> | corresponding to <span style="color:#BF396F">desired quantile</span></td>
+<td>returns <span style="color:#367B79">z-score</span> corresponding to <span style="color:#BF396F">desired quantile</span></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="example-calculating" class="slide level2">
-<h2>Example calculating</h2>
+<section id="calculating-probabilities-from-a-normal-distribution" class="slide level2">
+<h2>Calculating probabilities from a Normal distribution</h2>
+<p>Three ways to calculate probabilities from a normal distribution:</p>
+<ol type="1">
+<li>Calculus <strong>(not for us!)</strong></li>
+</ol>
+<p>&nbsp;</p>
+<ol start="2" type="1">
+<li><p>Normal probability table</p>
+<ul>
+<li>The textbook has a normal probability table in Appendix B.1, which is included as the next two pages</li>
+<li>Not required for this class</li>
+</ul></li>
+</ol>
+<p>&nbsp;</p>
+<ol start="3" type="1">
+<li><p>R commands</p>
+<ul>
+<li><span class="math inline">\(P(Z \leq q) =\)</span> <code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)</code></li>
+</ul></li>
+</ol>
+<p>&nbsp;</p>
+<ol start="4" type="1">
+<li><p>Random online calculators</p>
+<ul>
+<li>Like this one: <a href="https://onlinestatbook.com/2/calculators/normal_dist.html" class="uri">https://onlinestatbook.com/2/calculators/normal_dist.html</a></li>
+</ul></li>
+</ol>
+</section>
+<section id="example-calculating-probabilities-from-a-normal-distribution-15" class="slide level2">
+<h2>Example: Calculating probabilities from a Normal distribution (1/5)</h2>
 <div class="example">
 <div class="ex-ttl">
 <p>Example: Calculating standard normal probabilities practice</p>
@@ -487,8 +616,123 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>example 1</h2>
+<section id="example-calculating-probabilities-from-a-normal-distribution-25" class="slide level2">
+<h2>Example: Calculating probabilities from a Normal distribution (2/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Calculating standard normal probabilities practice</p>
+</div>
+<div class="ex-cont">
+<p>Let <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{P}( Z &lt; 2.67 )\)</span></li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<p><img data-src="../img_slides/standard_normal.png" width="800"></p>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">2.67</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9962074</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">2.67</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9962074</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-calculating-probabilities-from-a-normal-distribution-35" class="slide level2">
+<h2>Example: Calculating probabilities from a Normal distribution (3/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Calculating standard normal probabilities practice</p>
+</div>
+<div class="ex-cont">
+<p>Let <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
+<ol start="2" type="1">
+<li><span class="math inline">\(\mathbb{P}( Z &gt; -0.37 )\)</span></li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<p><img data-src="../img_slides/standard_normal.png" width="800"></p>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="fl">0.37</span>, </span>
+<span id="cb5-2"><a href="#cb5-2"></a>          <span class="at">mean =</span> <span class="dv">0</span>, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>          <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6443088</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="fl">0.37</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>, </span>
+<span id="cb7-2"><a href="#cb7-2"></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6443088</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-calculating-probabilities-from-a-normal-distribution-45" class="slide level2">
+<h2>Example: Calculating probabilities from a Normal distribution (4/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Calculating standard normal probabilities practice</p>
+</div>
+<div class="ex-cont">
+<p>Let <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
+<ol start="3" type="1">
+<li><span class="math inline">\(\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\)</span></li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<p><img data-src="../img_slides/standard_normal.png" width="800"></p>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">2.46</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>) <span class="sc">-</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="fl">2.18</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9784244</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-calculating-probabilities-from-a-normal-distribution-55" class="slide level2">
+<h2>Example: Calculating probabilities from a Normal distribution (5/5)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Calculating standard normal probabilities practice</p>
+</div>
+<div class="ex-cont">
+<p>Let <span class="math inline">\(Z\)</span> be a standard normal random variable, <span class="math inline">\(Z\sim N(\mu=0,\sigma=1)\)</span>. Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.</p>
+<ol start="4" type="1">
+<li><span class="math inline">\(\mathbb{P}(Z = 1.53 )\)</span></li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<p><img data-src="../img_slides/standard_normal.png" width="800"></p>
+</div><div class="column">
+
+</div>
+</div>
+</section>
+<section id="using-normal-distribution-in-word-problems" class="slide level2">
+<h2>Using Normal distribution in word problems</h2>
 <div class="example">
 <div class="ex-ttl">
 <p>Example: Diastolic blood pressure (DBP)</p>
@@ -503,20 +747,128 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="normal-approximation-of-the-binomial-distribution" class="slide level2">
-<h2>Normal approximation of the binomial distribution</h2>
-<ul>
-<li><p>Recall that a binomial random variable <span class="math inline">\(X\)</span> counts the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success.</p></li>
-<li><p>Probability function for <span class="math inline">\(x = 0, 1, ..., n\)</span> : <span class="math display">\[P(X = k) = {n\choose k}p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\]</span></p></li>
-<li><p>Tedious to compute for large number of trails (<span class="math inline">\(n\)</span>), although doable with software like R</p></li>
-<li><p>As <span class="math inline">\(n\)</span> gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be <em>approximated by a normal distribution</em>.</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><embed data-src="../img_slides/fourBinomialModelsShowingApproxToNormal.pdf" style="width:5in"></p>
-<figcaption>Binomial distribution histograms for varying <span class="math inline">\(n\)</span> when <span class="math inline">\(p=0.10\)</span></figcaption>
-</figure>
+<section id="using-normal-distribution-in-word-problems-1" class="slide level2">
+<h2>Using Normal distribution in word problems</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Diastolic blood pressure (DBP)</p>
 </div>
+<div class="ex-cont">
+<p>Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.</p>
+<ol type="1">
+<li>Mild hypertension is when the DBP is between 90 and 99 mm Hg. What proportion of this population has mild hypertension?</li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Draw on a normal curve:</li>
+</ul>
+</div><div class="column">
+<ul>
+<li>Compute in R:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">99</span>, <span class="at">mean =</span> <span class="dv">80</span>, </span>
+<span id="cb11-2"><a href="#cb11-2"></a>      <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">144</span>)) <span class="sc">-</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">90</span>, <span class="at">mean =</span> <span class="dv">80</span>, </span>
+<span id="cb11-4"><a href="#cb11-4"></a>        <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">144</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1456556</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-normal-distribution-in-word-problems-2" class="slide level2">
+<h2>Using Normal distribution in word problems</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Diastolic blood pressure (DBP)</p>
+</div>
+<div class="ex-cont">
+<p>Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.</p>
+<ol start="2" type="1">
+<li>What is the <span class="math inline">\(10^{th}\)</span> percentile of the DBP distribution?</li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Draw on a normal curve:</li>
+</ul>
+</div><div class="column">
+<ul>
+<li>Compute in R:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">qnorm</span>(<span class="at">p =</span> <span class="fl">0.10</span>, </span>
+<span id="cb13-2"><a href="#cb13-2"></a>      <span class="at">mean =</span> <span class="dv">80</span>, </span>
+<span id="cb13-3"><a href="#cb13-3"></a>      <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">144</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 64.62138</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-normal-distribution-in-word-problems-3" class="slide level2">
+<h2>Using Normal distribution in word problems</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Diastolic blood pressure (DBP)</p>
+</div>
+<div class="ex-cont">
+<p>Suppose the distribution of diastolic blood pressure (DBP) in 35- to 44-year old men is normally distributed with mean 80 mm Hg and variance 144 mm Hg.</p>
+<ol start="3" type="1">
+<li>What is the <span class="math inline">\(95^{th}\)</span> percentile of the DBP distribution?</li>
+</ol>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Draw on a normal curve:</li>
+</ul>
+</div><div class="column">
+<ul>
+<li>Compute in R:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">qnorm</span>(<span class="at">p =</span> <span class="fl">0.95</span>, </span>
+<span id="cb15-2"><a href="#cb15-2"></a>      <span class="at">mean =</span> <span class="dv">80</span>, </span>
+<span id="cb15-3"><a href="#cb15-3"></a>      <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">144</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 99.73824</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+
+</section>
+<section id="normal-approximation-of-the-binomial-distribution" class="slide level2">
+<h2>Normal Approximation of the Binomial Distribution</h2>
+<ul>
+<li>Recall that a binomial random variable <span class="math inline">\(X\)</span> counts the total number of successes in <span class="math inline">\(n\)</span> independent trials, each with probability <span class="math inline">\(p\)</span> of a success.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Probability function for <span class="math inline">\(x = 0, 1, ..., n\)</span> : <span class="math display">\[P(X = k) = {n\choose k}p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\]</span></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Tedious to compute for large number of trails (<span class="math inline">\(n\)</span>), although doable with software like R</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>As <span class="math inline">\(n\)</span> gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution</li>
+</ul>
 </section>
 <section id="normal-approximation-of-the-binomial-distribution-1" class="slide level2">
 <h2>Normal Approximation of the Binomial Distribution</h2>
@@ -538,19 +890,76 @@ Meike Niederhausen and Nicky Wakim
 <li><p><a href="https://www.youtube.com/watch?v=CCqWkJ_pqNU&amp;ab_channel=jbstatistics">Pretty good video behind the intuition of this</a> (Watch 00:00 - 05:40)</p></li>
 </ul>
 </section>
-<section id="example-using-normal-approximation" class="slide level2">
-<h2>Example using Normal approximation</h2>
+<section id="example-normal-approximation-or-binomial-distribution" class="slide level2">
+<h2>Example: Normal approximation or Binomial distribution</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="example">
 <div class="ex-ttl">
 <p>Example: Vaccinated people testing positive for Covid-19 (revisited)</p>
 </div>
 <div class="ex-cont">
-<p>About 25% of people that test positive for Covid-19 are vaccinated for Covid-19. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let* <span class="math inline">\(X\)</span> denote the number of people that are vaccinated amongst the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</p>
-<p><img data-src="../img_slides/binom_n100_p25_crop.png" style="width:5in"></p>
+<p>About 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</p>
 <ol type="1">
 <li><p>Calculate exact probability.</p></li>
 <li><p>Calculate approximate probability.</p></li>
 </ol>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<p><span class="math inline">\(p=0.25\)</span>, <span class="math inline">\(n=100\)</span>, we want <span class="math inline">\(P(X &lt; 20)\)</span></p>
+<p>&nbsp;</p>
+<ol type="1">
+<li>Exact probability = Binomial distribution</li>
+</ol>
+<p><span class="math display">\[X \sim \text{Binomial}(n=100, p=0.25)\]</span></p>
+<p><span class="math display">\[P(X &lt; 20) = P(X \leq 19) = \sum_{j=0}^{19}P(X = j)\]</span></p>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">pbinom</span>(<span class="at">q =</span> <span class="dv">19</span>, <span class="at">size =</span> <span class="dv">100</span>, <span class="at">prob =</span> <span class="fl">0.25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.09953041</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-normal-approximation-or-binomial-distribution-1" class="slide level2">
+<h2>Example: Normal approximation or Binomial distribution</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="example">
+<div class="ex-ttl">
+<p>Example: Vaccinated people testing positive for Covid-19 (revisited)</p>
+</div>
+<div class="ex-cont">
+<p>About 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let <span class="math inline">\(X\)</span> denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?</p>
+<ol type="1">
+<li><p>Calculate exact probability.</p></li>
+<li><p>Calculate approximate probability.</p></li>
+</ol>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<p><span class="math inline">\(p=0.25\)</span>, <span class="math inline">\(n=100\)</span>, we want <span class="math inline">\(P(X &lt; 20)\)</span></p>
+<ol start="2" type="1">
+<li><p>Approximate probability = Normal distribution</p>
+<ul>
+<li>Mean = <span class="math inline">\(\mu = np = 0.25\cdot 100 = 25\)</span></li>
+<li>SD = <span class="math inline">\(\sigma = \sqrt{np(1-p)}=\sqrt{100\cdot 0.25 \cdot (1-0.25)}\)</span></li>
+</ul></li>
+</ol>
+<p><span class="math display">\[X \sim \text{Normal}\bigg(\mu=25, \sigma = \sqrt{100\cdot 0.25 \cdot (1-0.25)}\bigg)\]</span></p>
+<ul>
+<li>For these probabilities, we use something called a <strong>continuity correction</strong>. Instead of calculating <span class="math inline">\(P(X &lt; 20)\)</span>, we calculate <span class="math inline">\(P(X \leq 19.5)\)</span></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">19.5</span>, <span class="at">mean =</span> <span class="dv">25</span>, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>      <span class="at">sd =</span> <span class="fu">sqrt</span>( <span class="dv">100</span><span class="sc">*</span><span class="fl">0.25</span><span class="sc">*</span><span class="fl">0.75</span> ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1020119</code></pre>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -561,7 +970,7 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 </section></section>
 <section>
-<section id="learning-objectives-2" class="title-slide slide level1 center">
+<section id="learning-objectives-4" class="title-slide slide level1 center">
 <h1>Learning objectives</h1>
 
 </section>
@@ -648,6 +1057,11 @@ P(X = x) = \frac{e^{-\lambda t}(\lambda t)^{x}}{x!}, \,\, x = 0, 1,
 <li><p><em>What is the probability of more than 12 deaths in 2 years?</em></p></li>
 </ol>
 </div>
+</section></section>
+<section>
+<section id="learning-objective" class="title-slide slide level1 center">
+<h1>Learning Objective?</h1>
+
 </section>
 <section id="example-poisson-approximation-of-binomial-distribution" class="slide level2">
 <h2>Example: Poisson approximation of binomial distribution</h2>
@@ -876,6 +1290,44 @@ P(X = x) = \frac{e^{-\lambda t}(\lambda t)^{x}}{x!}, \,\, x = 0, 1,
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

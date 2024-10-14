@@ -26,6 +26,13 @@ editor:
 
 # Learning Objectives
 
+1.  Understand how probabilities can extend to continuous distributions
+2.  Calculate probabilities for different events using a Normal
+    distribution
+3.  Normal apprximation of the binomial distribution
+4.  Calculate probabilities for different events using a Poisson
+    distribution
+
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
@@ -55,6 +62,10 @@ Think:
 
 -   Number of heads in a set of coin tosses
 -   Number of people who have had chicken pox in a random sample
+
+ 
+
+-   Binomial and Bernoulli distributions are discrete
 ::::::
 
 ::: {.column width="2%"}
@@ -79,7 +90,7 @@ Think:
 ::::::
 ::::::::::::
 
-## Probabilities for continuous distributions
+## Probabilities for continuous distributions (1/2)
 
 Two important features of continuous distributions:
 
@@ -90,20 +101,42 @@ Two important features of continuous distributions:
 
 ![](../img_slides/fdicHeightContDistFilled.png){fig-align="center"}
 
-## Probabilities for continuous distributions...
+## Probabilities for continuous distributions (2/2)
 
 When working with continuous random variables, probability is found for
-intervals of values rather than individual values.
+**intervals of values** rather than **individual values**.
 
 -   The probability that a continuous r.v. $X$ takes on any single
-    individual value is 0. That is, $P(X = x) = 0$.
+    individual value is 0
+
+    -   That is, $P(X = x) = 0$.
 
 -   Thus, $P(a < X < b)$ is equivalent to $P(a \leq X \leq b)$
 
+## Poll Everywhere Question 1
+
+# Learning Objectives
 
 ## Normal distribution
 
-- Shorthand
+::::: columns
+::: {.column width="40%"}
+-   A random variable X is modeled with a normal distribution if:
+
+    -   **Shape:** symmetric, unimodal bell curve
+    -   **Center:** mean $\mu$
+    -   **Spread (variability):** standard deviation $\sigma$
+
+ 
+
+-   Shorthand for a random variable, $X$, that has a Normal
+    distribution: $$X \sim \text{Normal}(\mu, \sigma)$$
+:::
+
+::: {.column width="60%"}
+![](../img_slides/Normal_examples.png)
+:::
+:::::
 
 ## Standard Normal Distribution
 
@@ -120,52 +153,80 @@ $Z$](../img_slides/X_to_Z_transformation_Brase.png){width="5in"}
 
 $$Z = \dfrac{X - \mu}{\sigma} \qquad X = \mu + Z\sigma$$
 
--   The $Z$-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).
+-   The $Z$-score of an observation quantifies how far the observation
+    is from the mean, in units of standard deviation(s).
 
--   For example, if an observation has $Z$-score $z = 3.4$, then the observation is 3.4 standard deviations above the mean.
-
+-   For example, if an observation has $Z$-score $z = 3.4$, then the
+    observation is 3.4 standard deviations above the mean.
 
 ## Normal distribution: R commands
 
 R commands with their [input]{style="color:#BF396F"} and
 [output]{style="color:#367B79"}:
 
-+------------------+--------------------------------------------------+
-| R code           | What does it return?                             |
-+==================+==================================================+
-| `rnorm()`        | returns [sample of random                        |
-|                  | variables]{style="color:#367B79"} with           |
-|                  | [specified normal                                |
-|                  | distribution]{style="color:#BF396F"}             |
-+------------------+--------------------------------------------------+
-| `dnorm()`        | returns [value of probability                    |
-|                  | density]{style="color:#367B79"} at [certain      |
-|                  | point of the normal                              |
-|                  | distribution]{style="color:#BF396F"}             |
-|                  |                                                  |
-|                  | -   Not typically used                           |
-+------------------+--------------------------------------------------+
-| `pnorm()`        | returns [cumulative                              |
-|                  | probability]{style="color:#367B79"} of getting   |
-|                  | [certain point (or less) of the normal           |
-|                  | distribution]{style="color:#BF396F"}             |
-+------------------+--------------------------------------------------+
-| `qnorm()`        | returns [z-score]{style="color:#367B79"}        |
-|                  | corresponding to [desired                        |
-|                  | quantile]{style="color:#BF396F"}                 |
-+------------------+--------------------------------------------------+
++----------------+------------------------------------------------+
+| R code         | What does it return?                           |
++================+================================================+
+| `rnorm()`      | returns [sample of random                      |
+|                | variables]{style="color:#367B79"} with         |
+|                | [specified normal                              |
+|                | distribution]{style="color:#BF396F"}           |
++----------------+------------------------------------------------+
+| `dnorm()`      | returns [value of probability                  |
+|                | density]{style="color:#367B79"} at [certain    |
+|                | point of the normal                            |
+|                | distribution]{style="color:#BF396F"}           |
+|                |                                                |
+|                | -   Not typically used                         |
++----------------+------------------------------------------------+
+| `pnorm()`      | returns [cumulative                            |
+|                | probability]{style="color:#367B79"} of getting |
+|                | [certain point (or less) of the normal         |
+|                | distribution]{style="color:#BF396F"}           |
++----------------+------------------------------------------------+
+| `qnorm()`      | returns [z-score]{style="color:#367B79"}       |
+|                | corresponding to [desired                      |
+|                | quantile]{style="color:#BF396F"}               |
++----------------+------------------------------------------------+
 
-## Example calculating 
+## Calculating probabilities from a Normal distribution
 
-::: example
+Three ways to calculate probabilities from a normal distribution:
+
+1.  Calculus **(not for us!)**
+
+ 
+
+2.  Normal probability table
+
+    -   The textbook has a normal probability table in Appendix B.1,
+        which is included as the next two pages
+    -   Not required for this class
+
+ 
+
+3.  R commands
+
+    -   $P(Z \leq q) =$ `pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)`
+
+ 
+
+4.  Random online calculators
+
+    -   Like this one:
+        <https://onlinestatbook.com/2/calculators/normal_dist.html>
+
+## Example: Calculating probabilities from a Normal distribution (1/5)
+
+::::: example
 ::: ex-ttl
 Example: Calculating standard normal probabilities practice
 :::
+
 ::: ex-cont
-Let $Z$ be a standard normal random variable,
-$Z\sim N(\mu=0,\sigma=1)$. Calculate the following probabilities.
-Include sketches of the normal curves with the probability areas shaded
-in.
+Let $Z$ be a standard normal random variable, $Z\sim N(\mu=0,\sigma=1)$.
+Calculate the following probabilities. Include sketches of the normal
+curves with the probability areas shaded in.
 
 1.  $\mathbb{P}( Z < 2.67 )$
 
@@ -175,18 +236,141 @@ in.
 
 4.  $\mathbb{P}(Z = 1.53 )$
 :::
+:::::
+
+## Example: Calculating probabilities from a Normal distribution (2/5)
+
+::::: example
+::: ex-ttl
+Example: Calculating standard normal probabilities practice
 :::
 
-## example 1
+::: ex-cont
+Let $Z$ be a standard normal random variable, $Z\sim N(\mu=0,\sigma=1)$.
+Calculate the following probabilities. Include sketches of the normal
+curves with the probability areas shaded in.
 
-::: example
+1.  $\mathbb{P}( Z < 2.67 )$
+:::
+:::::
+
+::::: columns
+::: column
+![](../img_slides/standard_normal.png){width="800"}
+:::
+
+::: column
+```{r}
+pnorm(q = 2.67, mean = 0, sd = 1)
+```
+
+```{r}
+pnorm(q = 2.67)
+```
+:::
+:::::
+
+## Example: Calculating probabilities from a Normal distribution (3/5)
+
+::::: example
+::: ex-ttl
+Example: Calculating standard normal probabilities practice
+:::
+
+::: ex-cont
+Let $Z$ be a standard normal random variable, $Z\sim N(\mu=0,\sigma=1)$.
+Calculate the following probabilities. Include sketches of the normal
+curves with the probability areas shaded in.
+
+2.  $\mathbb{P}( Z > -0.37 )$
+:::
+:::::
+
+::::: columns
+::: column
+![](../img_slides/standard_normal.png){width="800"}
+:::
+
+::: column
+```{r}
+1 - pnorm(q = -0.37, 
+          mean = 0, 
+          sd = 1)
+```
+
+```{r}
+pnorm(q = -0.37, mean = 0, sd = 1, 
+      lower.tail = FALSE)
+```
+:::
+:::::
+
+## Example: Calculating probabilities from a Normal distribution (4/5)
+
+::::: example
+::: ex-ttl
+Example: Calculating standard normal probabilities practice
+:::
+
+::: ex-cont
+Let $Z$ be a standard normal random variable, $Z\sim N(\mu=0,\sigma=1)$.
+Calculate the following probabilities. Include sketches of the normal
+curves with the probability areas shaded in.
+
+3.  $\mathbb{P}( -2.18 < Z < 2.46 )$
+:::
+:::::
+
+::::: columns
+::: column
+![](../img_slides/standard_normal.png){width="800"}
+:::
+
+::: column
+```{r}
+pnorm(q = 2.46, mean = 0, sd = 1) - 
+  pnorm(q = -2.18, mean = 0, sd = 1)
+```
+:::
+:::::
+
+## Example: Calculating probabilities from a Normal distribution (5/5)
+
+::::: example
+::: ex-ttl
+Example: Calculating standard normal probabilities practice
+:::
+
+::: ex-cont
+Let $Z$ be a standard normal random variable, $Z\sim N(\mu=0,\sigma=1)$.
+Calculate the following probabilities. Include sketches of the normal
+curves with the probability areas shaded in.
+
+4.  $\mathbb{P}(Z = 1.53 )$
+:::
+:::::
+
+::::: columns
+::: column
+![](../img_slides/standard_normal.png){width="800"}
+:::
+
+::: column
+
+:::
+:::::
+
+## Using Normal distribution in word problems
+
+::::: example
 ::: ex-ttl
 Example: Diastolic blood pressure (DBP)
 :::
+
 ::: ex-cont
-Suppose the distribution of diastolic blood
-pressure (DBP) in 35- to 44-year old men is normally distributed with
-mean 80 mm Hg and variance 144 mm Hg.
+Suppose the distribution of diastolic blood pressure (DBP) in 35- to
+44-year old men is normally distributed with mean 80 mm Hg and variance
+144 mm Hg.
 
 1.  Mild hypertension is when the DBP is between 90 and 99 mm Hg. What
     proportion of this population has mild hypertension?
@@ -195,26 +379,122 @@ mean 80 mm Hg and variance 144 mm Hg.
 
 3.  What is the $95^{th}$ percentile of the DBP distribution?
 :::
+:::::
+
+## Using Normal distribution in word problems
+
+::::: example
+::: ex-ttl
+Example: Diastolic blood pressure (DBP)
 :::
 
-## Normal approximation of the binomial distribution
+::: ex-cont
+Suppose the distribution of diastolic blood pressure (DBP) in 35- to
+44-year old men is normally distributed with mean 80 mm Hg and variance
+144 mm Hg.
+
+1.  Mild hypertension is when the DBP is between 90 and 99 mm Hg. What
+    proportion of this population has mild hypertension?
+:::
+:::::
+
+::: columns
+::: column
+- Draw on a normal curve:
+:::
+::: column
+- Compute in R:
+```{r}
+pnorm(q = 99, mean = 80, 
+      sd = sqrt(144)) - 
+  pnorm(q = 90, mean = 80, 
+        sd = sqrt(144))
+```
+:::
+:::
+
+## Using Normal distribution in word problems
+
+::::: example
+::: ex-ttl
+Example: Diastolic blood pressure (DBP)
+:::
+
+::: ex-cont
+Suppose the distribution of diastolic blood pressure (DBP) in 35- to
+44-year old men is normally distributed with mean 80 mm Hg and variance
+144 mm Hg.
+
+2.  What is the $10^{th}$ percentile of the DBP distribution?
+:::
+:::::
+
+::: columns
+::: column
+- Draw on a normal curve:
+:::
+::: column
+- Compute in R:
+```{r}
+qnorm(p = 0.10, 
+      mean = 80, 
+      sd = sqrt(144))
+```
+:::
+:::
+
+## Using Normal distribution in word problems
+
+::::: example
+::: ex-ttl
+Example: Diastolic blood pressure (DBP)
+:::
+
+::: ex-cont
+Suppose the distribution of diastolic blood pressure (DBP) in 35- to
+44-year old men is normally distributed with mean 80 mm Hg and variance
+144 mm Hg.
+
+3.  What is the $95^{th}$ percentile of the DBP distribution?
+:::
+:::::
+
+::: columns
+::: column
+- Draw on a normal curve:
+:::
+::: column
+- Compute in R:
+```{r}
+qnorm(p = 0.95, 
+      mean = 80, 
+      sd = sqrt(144))
+```
+:::
+:::
+
+# Learning Objectives
+
+## Normal Approximation of the Binomial Distribution
 
 -   Recall that a binomial random variable $X$ counts the total number
     of successes in $n$ independent trials, each with probability $p$ of
     a success.
+    
+ 
 
 -   Probability function for $x = 0, 1, ..., n$ :
     $$P(X = k) = {n\choose k}p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}$$
 
+ 
+
 -   Tedious to compute for large number of trails ($n$), although doable
     with software like R
 
--   As $n$ gets big though, the distribution shape of a binomial r.v.
-    gets more and more symmetric, and can be *approximated by a normal
-    distribution*.
+ 
 
-![Binomial distribution histograms for varying $n$ when
-$p=0.10$](../img_slides/fourBinomialModelsShowingApproxToNormal.pdf){width="5in"}
+-   As $n$ gets big though, the distribution shape of a binomial r.v.
+    gets more and more symmetric, and can be approximated by a normal distribution
 
 ## Normal Approximation of the Binomial Distribution
 
@@ -222,56 +502,120 @@ $p=0.10$](../img_slides/fourBinomialModelsShowingApproxToNormal.pdf){width="5in"
 
 -   IF $X\sim \text{Binomial}(n,p)$ and $np>10$ and $nq = n(1-p) > 10$
 
-    -   Ensures sample size ($n$) is moderately large and the $p$ is not too close to 0 or 1
+    -   Ensures sample size ($n$) is moderately large and the $p$ is not
+        too close to 0 or 1
     -   Other resources use other criteria (like $npq>5$ or $np>5$)
-    -   When looking at a sample, we use $\widehat{p}$ instead of $p$ to check this!!
+    -   When looking at a sample, we use $\widehat{p}$ instead of $p$ to
+        check this!!
 
  
 
--   THEN approximately $𝑋\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)$
+-   THEN approximately
+    $𝑋\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)$
 
-    -   Or we often write this as the sampling distribution of $\widehat{p}$: $$\widehat{p} \sim \text{Normal}\bigg(\mu_{\widehat{p}} = p, \sigma_{\widehat{p}} = \sqrt{\dfrac{p(1-p)}{n}}\bigg)$$
+    -   Or we often write this as the sampling distribution of
+        $\widehat{p}$:
+        $$\widehat{p} \sim \text{Normal}\bigg(\mu_{\widehat{p}} = p, \sigma_{\widehat{p}} = \sqrt{\dfrac{p(1-p)}{n}}\bigg)$$
 
--   [Pretty good video behind the intuition of this](https://www.youtube.com/watch?v=CCqWkJ_pqNU&ab_channel=jbstatistics) (Watch 00:00 - 05:40)
+-   [Pretty good video behind the intuition of
+    this](https://www.youtube.com/watch?v=CCqWkJ_pqNU&ab_channel=jbstatistics)
+    (Watch 00:00 - 05:40)
 
-## Example using Normal approximation
+## Example: Normal approximation or Binomial distribution
 
-::: example
+::: columns
+::: {.column width="40%"}
+
+::::: example
 ::: ex-ttl
 Example: Vaccinated people testing positive for Covid-19 (revisited)
 :::
-::: ex-cont
-About 25% of people that test positive for Covid-19 are
-vaccinated for Covid-19. Suppose 100 people have tested positive for
-Covid-19 (independently of each other). Let* $X$ denote the number of
-people that are vaccinated amongst the 100 that tested positive. What is
-the probability that fewer than 20 of the people that tested positive
-are vaccinated?
 
-![](../img_slides/binom_n100_p25_crop.png){width="5in"}
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?
 
 1.  Calculate exact probability.
 
 2.  Calculate approximate probability.
 :::
+:::::
 :::
+::: {.column width="60%"}
+$p=0.25$, $n=100$, we want $P(X < 20)$
+
+ 
+
+1. Exact probability = Binomial distribution
+
+$$X \sim \text{Binomial}(n=100, p=0.25)$$
+
+$$P(X < 20) = P(X \leq 19) = \sum_{j=0}^{19}P(X = j)$$
+
+ 
+
+```{r}
+pbinom(q = 19, size = 100, prob = 0.25)
+```
+
+:::
+:::
+
+
+## Example: Normal approximation or Binomial distribution
+
+::: columns
+::: {.column width="40%"}
+
+::::: example
+::: ex-ttl
+Example: Vaccinated people testing positive for Covid-19 (revisited)
+:::
+
+::: ex-cont
+About 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?
+
+1.  Calculate exact probability.
+
+2.  Calculate approximate probability.
+:::
+:::::
+:::
+::: {.column width="60%"}
+$p=0.25$, $n=100$, we want $P(X < 20)$
+
+2. Approximate probability = Normal distribution
+
+    - Mean = $\mu = np = 0.25\cdot 100 = 25$
+    - SD = $\sigma = \sqrt{np(1-p)}=\sqrt{100\cdot 0.25 \cdot (1-0.25)}$
+    
+$$X \sim \text{Normal}\bigg(\mu=25, \sigma = \sqrt{100\cdot 0.25 \cdot (1-0.25)}\bigg)$$
+
+- For these probabilities, we use something called a **continuity correction**. Instead of calculating $P(X < 20)$, we calculate $P(X \leq 19.5)$
+    
+```{r}
+pnorm(q = 19.5, mean = 25, 
+      sd = sqrt( 100*0.25*0.75 ))
+```
+:::
+:::
+
 
 ## Some resources for the normal distribution
 
-- [Page on R commands](https://seankross.com/notes/dpqr/)
+-   [Page on R commands](https://seankross.com/notes/dpqr/)
 
 # Learning objectives
 
 ## Introduction to the Poisson distribution
 
-- The Poisson distribution is often used to model **count data (# of successes)**, especially for **rare
-    events**
+-   The Poisson distribution is often used to model **count data (# of
+    successes)**, especially for **rare events**
 
-  - It is a **discrete distribution!**
+    -   It is a **discrete distribution!**
 
-- It used most often in settings where events happen at a rate $\lambda$
-per unit of population and per unit time, such as the annual incidence
-of a disease in a population.
+-   It used most often in settings where events happen at a rate
+    $\lambda$ per unit of population and per unit time, such as the
+    annual incidence of a disease in a population.
 
  
 
@@ -281,8 +625,9 @@ of a disease in a population.
 
  
 
--   Also used to approximate binomial distribution when $n$ is large and $p$ is small
-    - When Normal approximation does not work
+-   Also used to approximate binomial distribution when $n$ is large and
+    $p$ is small
+    -   When Normal approximation does not work
 
 ## Poisson Distribution
 
@@ -358,6 +703,8 @@ per year from typhoid fever over a 1-year period.*
 
 3.  *What is the probability of more than 12 deaths in 2 years?*
 :::
+
+# Learning Objective?
 
 ## Example: Poisson approximation of binomial distribution
 
