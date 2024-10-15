@@ -15958,5 +15958,124 @@
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Normal approximation or Binomial distribution",
     "text": "Example: Normal approximation or Binomial distribution\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n\nApproximate probability = Normal distribution\n\nMean = \\(\\mu = np = 0.25\\cdot 100 = 25\\)\nSD = \\(\\sigma = \\sqrt{np(1-p)}=\\sqrt{100\\cdot 0.25 \\cdot (1-0.25)}\\)\n\n\n\\[X \\sim \\text{Normal}\\bigg(\\mu=25, \\sigma = \\sqrt{100\\cdot 0.25 \\cdot (1-0.25)}\\bigg)\\]\n\nFor these probabilities, we use something called a continuity correction. Instead of calculating \\(P(X &lt; 20)\\), we calculate \\(P(X \\leq 19.5)\\)\n\n\npnorm(q = 19.5, mean = 25, \n      sd = sqrt( 100*0.25*0.75 ))\n\n[1] 0.1020119"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Group assignments are up!\nDid you catch the muddy points from last week?\n\nPosted extra videos and notes for some of the confusing class examples"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html#announcements",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Group assignments are up!\nDid you catch the muddy points from last week?\n\nPosted extra videos and notes for some of the confusing class examples"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html#key-dates",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nHomework 2 due this Friday!\nHomework 1 solutions due Sunday\n\nBUT with very flexible deadline since you might need more time to initially organize as a group"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Here’s another video and PDF with a better explanation of what we did in class!\nPlease follow this link for my work through of the example.\nAnd here is the PDF with my work."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#covid-19-rapid-testing-example",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#covid-19-rapid-testing-example",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Here’s another video and PDF with a better explanation of what we did in class!\nPlease follow this link for my work through of the example.\nAnd here is the PDF with my work."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#bayes-theorem-applications",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#bayes-theorem-applications",
+    "title": "Muddy Points",
+    "section": "2. Bayes’ theorem: applications",
+    "text": "2. Bayes’ theorem: applications\nSee the last two questions in the above example for the application of Bayes’ Theorem!!"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#x-2-diagnostic-table-for-diagnostic-problems",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#x-2-diagnostic-table-for-diagnostic-problems",
+    "title": "Muddy Points",
+    "section": "3. 2 x 2 diagnostic table for diagnostic problems",
+    "text": "3. 2 x 2 diagnostic table for diagnostic problems\nSee above link to video and pdf where I use the 2 x 2 table. It’s not necessary for this type of problem, but you can use it! I also like tree diagrams, which I included in the example above.\n\nCan we use a 2x2 in homework solutions?\nYes, definitely!! But do not confuse a 2x2 diagnostic table with the probability or contingency tables. The diagnostic table puts conditional probabilities in the cells instead of joint probabilities!!"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#will-probability-language-be-necessary-to-remember-for-assignments-in-the-future",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#will-probability-language-be-necessary-to-remember-for-assignments-in-the-future",
+    "title": "Muddy Points",
+    "section": "4. Will probability language be necessary to remember for assignments in the future?",
+    "text": "4. Will probability language be necessary to remember for assignments in the future?\nNot in such a precise way like we use them in this week’s word problems. Understanding joint, marginal, and conditional probabilities are important. And knowing the mathematical implications of independent and not independent events. Honestly, it’s more important for you to have a sense of what someone means when they (most likely me hehe) use those words in passing to define something else. There are a lot of statistics methods that hinge on independence, joint, marginal, and conditional."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#does-the-upside-down-u-mean-intersection-union-as-well-as-and",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#does-the-upside-down-u-mean-intersection-union-as-well-as-and",
+    "title": "Muddy Points",
+    "section": "5. Does the upside down U mean “intersection”, “union”, as well as “and”?",
+    "text": "5. Does the upside down U mean “intersection”, “union”, as well as “and”?\n\n\\(\\cup\\) means “union” and “or.” You can think of \\(A \\cup B\\) as: event A on its own OR event B on its own OR both events\n\\(\\cap\\) means “intersection” and “and.” You can think of \\(A \\cap B\\) as: event A and B happening (cannot be each on their own)\nHere’s me posing a similar question to ChatGPT"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#why-does-pba-pbca-1",
+    "href": "lessons/05_RVs_Binomial/04_RVs_Binomial_muddy_points.html#why-does-pba-pbca-1",
+    "title": "Muddy Points",
+    "section": "6. Why does \\(P(B|A) + P(B^c|A) = 1\\)?",
+    "text": "6. Why does \\(P(B|A) + P(B^c|A) = 1\\)?\nA few facts will help us here:\n\n\\(B\\) and \\(B^c\\) are disjoint events (this is by nature of complements)\nFor disjoint events, the probability of the union is the addition of each probability: \\[P(B \\cup B^c) = P(B) + P(B^c)\\]\n\\(P(B|A) = \\dfrac{P(B\\cap A)}{P(A)}\\) and we can even extend this to something like \\(P(D \\cup C|A) = \\dfrac{P([D \\cup C]\\cap A)}{P(A)}\\)\n\nNo matter what is on the left or right side of the “|” (given) statement, we can apply the same conditional probability\n\n\nWe can start with the fact that\n\\[P(B \\cup B^c | A) = 1\\]\nWhy is that?\n\\[\\begin{aligned}\nP(B \\cup B^c | A) = \\dfrac{P([B \\cup B^c]\\cap A)}{P(A)}\n\\end{aligned}\\]\nThe union (\\(\\cup\\)) of \\(B\\) and \\(B^c\\) is the sample space, so when we talk about \\([B \\cup B^c]\\cap A\\), we are asking about the shared space between the sample space and \\(A\\), which is just \\(A\\)\nSo….\n\\[\\begin{aligned}\nP(B \\cup B^c | A) = & \\dfrac{P([B \\cup B^c]\\cap A)}{P(A)} \\\\\n= & \\dfrac{P(S\\cap A)}{P(A)} \\\\\n= & \\dfrac{P(A)}{P(A)} \\\\\n= & 1 \\\\\n\\end{aligned}\\]\nSo we have shown \\[P(B \\cup B^c | A) = 1\\]\nNow we can split \\(P(B \\cup B^c | A)\\) into a different form since \\(B\\) and \\(B^c\\) are disjoint:\n\\[\\begin{aligned}\nP(B \\cup B^c | A) = & 1 \\\\\n\\dfrac{P([B \\cup B^c]\\cap A)}{P(A)} = & 1 \\\\\n\\dfrac{P(B\\cap A) + P(B^c \\cap A)}{P(A)}= & 1 \\\\\n\\dfrac{P(B\\cap A)}{P(A)} + \\dfrac{P(B^c \\cap A)}{P(A)}= & 1 \\\\\nP(B|A) + P(B^c|A)= & 1\\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#use-of-these-distributions",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#use-of-these-distributions",
+    "title": "Muddy Points",
+    "section": "2. Use of these distributions",
+    "text": "2. Use of these distributions\n\nWhen it comes to important distributions in statistics, we want to get familiar with the the characteristics and calculations because it is an important step in the data analysis process.\n\nHere is the basic data analysis process:\n\nRecognize type of data we’re dealing with (continuous, discrete, categorical, ordinal, count?)\nDetermine the key characteristics of the data. What is it measuring? For example, count data can be out of a certain number of trials (binomial) or has no limit to the count (Poisson)\nIdentify the distribution of the data so we can easily describe/summarize the data (using known properties of the distribution)\nUse specific tools that are designed specifically for that distribution to analyze the data (aka answer a specific research question)"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#section",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#section",
+    "title": "Muddy Points",
+    "section": "3.",
+    "text": "3."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#application-of-expected-values-and-variance",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#application-of-expected-values-and-variance",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#binomial-distribution",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#binomial-distribution",
+    "title": "Muddy Points",
+    "section": "3. Binomial distribution",
+    "text": "3. Binomial distribution\nEek! I’ve ran out of time to organize and really get into this explanation. Instead, I’m going to drop a few links below. Keep Googling for other videos on Bernoulli and Binomial distributions! There are a lot out there, so let me know if one really resonates with you.\n\nHere’s some back and forth between me and Chatgpt: https://chatgpt.com/share/670eb8e4-7644-8006-8eb9-c62348ecdef6\nThis video explain the Binomial dsitribution pretty well: https://www.youtube.com/watch?v=J8jNoF-K8E8&ab_channel=StatQuestwithJoshStarmer\n\nWatch up until ~10 minutes. After that, it goes into a test beyond us right now!\n\nHere’s a video on Binomial distribution with an example and R calculations: https://www.youtube.com/watch?v=j_T66Cph7Ro&ab_channel=EquitableEquations"
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#variance-of-a-discrete-random-variable",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#variance-of-a-discrete-random-variable",
+    "title": "Muddy Points",
+    "section": "4. Variance of a discrete random variable",
+    "text": "4. Variance of a discrete random variable\nI wouldn’t get too caught up in the formula here. The important part of variance is that we measure the spread (as seen in Muddy Point 1) of a distribution or data."
+  },
+  {
+    "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#application-of-expected-values-and-variance-for-discrete-rvs",
+    "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#application-of-expected-values-and-variance-for-discrete-rvs",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!"
   }
 ]

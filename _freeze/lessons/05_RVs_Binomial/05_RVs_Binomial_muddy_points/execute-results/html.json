@@ -1,0 +1,16 @@
+{
+  "hash": "1ffd1131ede09d795472f0475b1b4211",
+  "result": {
+    "markdown": "---\ntitle: \"Muddy Points\"\ndate: \"10/7/2024\"\ndate-modified: \"today\"\nformat: \n  html:\n    link-external-newwindow: true\n    page-layout: full\n    toc: false\neditor_options: \n  chunk_output_type: console\n---\n\n\n## 1. Application of expected values and variance for discrete RVs\n\nExpected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of \"successes\" and how spread out the number of successes are. \n\nLet's use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows $n$, the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!\n\n::: {.cell}\n::: {.cell-output-display}\n![](05_RVs_Binomial_muddy_points_files/figure-html/unnamed-chunk-1-1.png){width=1152}\n:::\n:::\n\n\n## 2. Use of these distributions\n\n- When it comes to important distributions in statistics, we want to get familiar with the the characteristics and calculations because it is an important step in the data analysis process.\n\n\nHere is the basic data analysis process:\n\n1. Recognize type of data we're dealing with (continuous, discrete, categorical, ordinal, count?)\n2. Determine the key characteristics of the data. What is it measuring? For example, count data can be out of a certain number of trials (binomial) or has no limit to the count (Poisson)\n3. Identify the distribution of the data so we can easily describe/summarize the data (using known properties of the distribution)\n4. Use specific tools that are designed specifically for that distribution to analyze the data (aka answer a specific research question)\n\n## 3. Binomial distribution\n\nEek! I've ran out of time to organize and really get into this explanation. Instead, I'm going to drop a few links below. Keep Googling for other videos on Bernoulli and Binomial distributions! There are a lot out there, so let me know if one really resonates with you. \n\n- Here's some back and forth between me and Chatgpt: <https://chatgpt.com/share/670eb8e4-7644-8006-8eb9-c62348ecdef6>\n\n- This video explain the Binomial dsitribution pretty well: <https://www.youtube.com/watch?v=J8jNoF-K8E8&ab_channel=StatQuestwithJoshStarmer>\n  - Watch up until ~10 minutes. After that, it goes into a test beyond us right now!\n\n- Here's a video on Binomial distribution with an example and R calculations: <https://www.youtube.com/watch?v=j_T66Cph7Ro&ab_channel=EquitableEquations>\n\n## 4. Variance of a discrete random variable\n\nI wouldn't get too caught up in the formula here. The important part of variance is that we measure the spread (as seen in Muddy Point 1) of a distribution or data.\n\n",
+    "supporting": [
+      "05_RVs_Binomial_muddy_points_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
