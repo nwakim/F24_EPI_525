@@ -24,20 +24,44 @@ editor:
     wrap: 72
 ---
 
+```{r}
+#| echo: false
+library(here)
+library(tidyverse)
+
+source(here("lessons", "slides_color_palette.R"))
+```
+
 # Learning Objectives
 
-1.  Understand how probabilities can extend to continuous distributions
-2.  Calculate probabilities for different events using a Normal
+1.  Understand how probability distributions extend to continuous distributions
+2.  Calculate probabilities for specific events using a Normal
     distribution
-3.  Normal apprximation of the binomial distribution
+3.  Apply the Normal distribution to approximate probabilities for binomial events
 4.  Calculate probabilities for different events using a Poisson
     distribution
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
 
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
 # Learning Objectives
+
+::: lob
+1.  Understand how probability distributions extend to continuous distributions
+:::
+
+2.  Calculate probabilities for specific events using a Normal
+    distribution
+3.  Apply the Normal distribution to approximate probabilities for binomial events
+4.  Calculate probabilities for different events using a Poisson
+    distribution
 
 ## Last time: Discrete vs. continuous random variables
 
@@ -117,10 +141,22 @@ When working with continuous random variables, probability is found for
 
 # Learning Objectives
 
+1.  Understand how probability distributions extend to continuous distributions
+
+::: lob
+2.  Calculate probabilities for specific events using a Normal
+    distribution
+:::
+
+3.  Apply the Normal distribution to approximate probabilities for binomial events
+4.  Calculate probabilities for different events using a Poisson
+    distribution
+
 ## Normal distribution
 
 ::::: columns
 ::: {.column width="40%"}
+
 -   A random variable X is modeled with a normal distribution if:
 
     -   **Shape:** symmetric, unimodal bell curve
@@ -138,12 +174,10 @@ When working with continuous random variables, probability is found for
 :::
 :::::
 
-## Standard Normal Distribution
+  
+- **Example:** We recorded the high temperature in the past 100 years for today. The mean high is 19°C (66.2°F)
 
-![Transformation from general normal $X$ to standard normal
-$Z$](../img_slides/X_to_Z_transformation_Brase.png){width="5in"}
-
-## Standard Normal Distribution
+## Standard Normal distribution (1/2)
 
 -   A *standard normal* distribution is defined as a normal distribution
     with mean 0 and variance 1. It is often denoted as $Z \sim N(0, 1)$.
@@ -159,35 +193,41 @@ $$Z = \dfrac{X - \mu}{\sigma} \qquad X = \mu + Z\sigma$$
 -   For example, if an observation has $Z$-score $z = 3.4$, then the
     observation is 3.4 standard deviations above the mean.
 
+## Standard Normal distribution (2/2)
+
+![Transformation from general normal $X$ to standard normal
+$Z$](../img_slides/X_to_Z_transformation_Brase.png){width="5in"}
+
 ## Normal distribution: R commands
 
 R commands with their [input]{style="color:#BF396F"} and
 [output]{style="color:#367B79"}:
 
-+----------------+------------------------------------------------+
-| R code         | What does it return?                           |
-+================+================================================+
-| `rnorm()`      | returns [sample of random                      |
-|                | variables]{style="color:#367B79"} with         |
-|                | [specified normal                              |
-|                | distribution]{style="color:#BF396F"}           |
-+----------------+------------------------------------------------+
-| `dnorm()`      | returns [value of probability                  |
-|                | density]{style="color:#367B79"} at [certain    |
-|                | point of the normal                            |
-|                | distribution]{style="color:#BF396F"}           |
-|                |                                                |
-|                | -   Not typically used                         |
-+----------------+------------------------------------------------+
-| `pnorm()`      | returns [cumulative                            |
-|                | probability]{style="color:#367B79"} of getting |
-|                | [certain point (or less) of the normal         |
-|                | distribution]{style="color:#BF396F"}           |
-+----------------+------------------------------------------------+
-| `qnorm()`      | returns [z-score]{style="color:#367B79"}       |
-|                | corresponding to [desired                      |
-|                | quantile]{style="color:#BF396F"}               |
-+----------------+------------------------------------------------+
++----------------+-----------------------------------------------+
+| R code         | What does it return?                          |
++================+===============================================+
+| `rnorm()`      | returns [sample of random                     |
+|                | variables]{style="color:#367B79"} with        |
+|                | [specified normal                             |
+|                | distribution]{style="color:#BF396F"}          |
++----------------+-----------------------------------------------+
+| `dnorm()`      | returns [value of probability                 |
+|                | density]{style="color:#367B79"} at [certain   |
+|                | point of the normal                           |
+|                | distribution]{style="color:#BF396F"}          |
+|                |                                               |
+|                | -   Not typically used bc this is a           |
+|                |     continuous distributon                    |
++----------------+-----------------------------------------------+
+| `pnorm()`      | returns [cumulative                           |
+|                | probability]{style="color:#367B79"} of        |
+|                | getting [certain point (or less) of the       |
+|                | normal distribution]{style="color:#BF396F"}   |
++----------------+-----------------------------------------------+
+| `qnorm()`      | returns [z-score]{style="color:#367B79"}      |
+|                | corresponding to [desired                     |
+|                | quantile]{style="color:#BF396F"}              |
++----------------+-----------------------------------------------+
 
 ## Calculating probabilities from a Normal distribution
 
@@ -256,10 +296,13 @@ curves with the probability areas shaded in.
 
 ::::: columns
 ::: column
-![](../img_slides/standard_normal.png){width="800"}
+1.  Draw on standard Normal curve:
+    ![](../img_slides/standard_normal.png){width="800"}
 :::
 
 ::: column
+2.  Calculate probability:
+
 ```{r}
 pnorm(q = 2.67, mean = 0, sd = 1)
 ```
@@ -288,6 +331,8 @@ curves with the probability areas shaded in.
 
 ::::: columns
 ::: column
+1.  Draw on standard Normal curve:
+
 ![](../img_slides/standard_normal.png){width="800"}
 :::
 
@@ -323,6 +368,8 @@ curves with the probability areas shaded in.
 
 ::::: columns
 ::: column
+1.  Draw on standard Normal curve:
+
 ![](../img_slides/standard_normal.png){width="800"}
 :::
 
@@ -352,11 +399,12 @@ curves with the probability areas shaded in.
 
 ::::: columns
 ::: column
+1.  Draw on standard Normal curve:
+
 ![](../img_slides/standard_normal.png){width="800"}
 :::
 
 ::: column
-
 :::
 :::::
 
@@ -398,12 +446,14 @@ Suppose the distribution of diastolic blood pressure (DBP) in 35- to
 :::
 :::::
 
-::: columns
+::::: columns
 ::: column
-- Draw on a normal curve:
+-   Draw on a normal curve:
 :::
+
 ::: column
-- Compute in R:
+-   Compute in R:
+
 ```{r}
 pnorm(q = 99, mean = 80, 
       sd = sqrt(144)) - 
@@ -411,7 +461,7 @@ pnorm(q = 99, mean = 80,
         sd = sqrt(144))
 ```
 :::
-:::
+:::::
 
 ## Using Normal distribution in word problems
 
@@ -429,19 +479,21 @@ Suppose the distribution of diastolic blood pressure (DBP) in 35- to
 :::
 :::::
 
-::: columns
+::::: columns
 ::: column
-- Draw on a normal curve:
+-   Draw on a normal curve:
 :::
+
 ::: column
-- Compute in R:
+-   Compute in R:
+
 ```{r}
 qnorm(p = 0.10, 
       mean = 80, 
       sd = sqrt(144))
 ```
 :::
-:::
+:::::
 
 ## Using Normal distribution in word problems
 
@@ -459,28 +511,41 @@ Suppose the distribution of diastolic blood pressure (DBP) in 35- to
 :::
 :::::
 
-::: columns
+::::: columns
 ::: column
-- Draw on a normal curve:
+-   Draw on a normal curve:
 :::
+
 ::: column
-- Compute in R:
+-   Compute in R:
+
 ```{r}
 qnorm(p = 0.95, 
       mean = 80, 
       sd = sqrt(144))
 ```
 :::
-:::
+:::::
 
 # Learning Objectives
+
+1.  Understand how probability distributions extend to continuous distributions
+2.  Calculate probabilities for specific events using a Normal
+    distribution
+    
+::: lob
+3.  Apply the Normal distribution to approximate probabilities for binomial events
+:::
+
+4.  Calculate probabilities for different events using a Poisson
+    distribution
 
 ## Normal Approximation of the Binomial Distribution
 
 -   Recall that a binomial random variable $X$ counts the total number
     of successes in $n$ independent trials, each with probability $p$ of
     a success.
-    
+
  
 
 -   Probability function for $x = 0, 1, ..., n$ :
@@ -494,58 +559,101 @@ qnorm(p = 0.95,
  
 
 -   As $n$ gets big though, the distribution shape of a binomial r.v.
-    gets more and more symmetric, and can be approximated by a normal distribution
-
-## Normal Approximation of the Binomial Distribution
-
--   Also known as: **Sampling distribution of** $\widehat{p}$
-
--   IF $X\sim \text{Binomial}(n,p)$ and $np>10$ and $nq = n(1-p) > 10$
-
-    -   Ensures sample size ($n$) is moderately large and the $p$ is not
-        too close to 0 or 1
-    -   Other resources use other criteria (like $npq>5$ or $np>5$)
-    -   When looking at a sample, we use $\widehat{p}$ instead of $p$ to
-        check this!!
-
- 
-
--   THEN approximately
-    $𝑋\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)$
-
-    -   Or we often write this as the sampling distribution of
-        $\widehat{p}$:
-        $$\widehat{p} \sim \text{Normal}\bigg(\mu_{\widehat{p}} = p, \sigma_{\widehat{p}} = \sqrt{\dfrac{p(1-p)}{n}}\bigg)$$
+    gets more and more symmetric, and can be approximated by a normal
+    distribution
 
 -   [Pretty good video behind the intuition of
     this](https://www.youtube.com/watch?v=CCqWkJ_pqNU&ab_channel=jbstatistics)
     (Watch 00:00 - 05:40)
 
-## Example: Normal approximation or Binomial distribution
+## We can look at a plot of Binomial distributions
 
-::: columns
-::: {.column width="40%"}
+-   Binomial distributions for different $n$ (columns) and $p$ (rows)
 
+```{r}
+#| echo: false
+#| message: false
+#| fig-height: 4
+#| fig-width: 10
+
+library(tidyverse)
+
+x <- 0:250
+n = c(6,14,30,60)
+p = c(0.1, 0.5)
+
+binom = expand.grid(x = x, n = n, p = p) %>%
+  mutate(y = dbinom(x, size = n, prob = p))
+
+ggplot(binom %>% filter(y > 1e-5) %>% 
+         group_by(n), 
+       aes(x, y, color=factor(n))) +
+  geom_point(size=1) +
+  geom_segment(aes(x=x, xend=x, y=0, yend=y, color=factor(n)), lwd=0.8, alpha=0.5) +
+  facet_grid(rows = vars(p), cols = vars(n), scales="free_x", space="free_x") +
+  theme(legend.position = "none",
+        axis.title = element_text(size = 14),    # Axis title size
+        axis.text = element_text(size = 12),     # Axis text size
+        strip.text = element_text(size = 13)) +  # Facet label size
+  labs(x = "Number of successes", y = "Probability") +
+  scale_color_manual(values = palette_525)
+```
+
+## Normal Approximation of the Binomial Distribution
+
+-   Also known as: **Sampling distribution of** $\widehat{p}$
+
+-   If $X\sim \text{Binomial}(n,p)$ and $np>10$ and $nq = n(1-p) > 10$
+
+    -   Ensures sample size ($n$) is moderately large and the $p$ is not
+        too close to 0 or 1
+    -   Other resources use other criteria (like $npq>5$ or $np>5$)
+
+ 
+
+-   THEN approximately
+    $$X\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)$$
+
+-   **Continuity Correction**: Applied to account for the fact that the
+    binomial distribution is discrete, while the normal distribution is
+    continuous
+
+    -   Adjust the binomial value (# of successes) by ±0.5 before
+        calculating the normal probability.
+    -   For $P(X \leq k)$ (Binomial), you would instead calculate
+        $P(X \leq k + 0.5)$ (Normal approx)
+    -   For $P(X \geq k)$ (Binomial), you would instead calculate
+        $P(X \leq k - 0.5)$ (Normal approx)
+
+## Example: Normal approximation or Binomial distribution (1/2)
+
+:::::::: columns
+:::::: {.column width="40%"}
 ::::: example
 ::: ex-ttl
 Example: Vaccinated people testing positive for Covid-19 (revisited)
 :::
 
 ::: ex-cont
-About 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?
+About 25% of people that test positive for Covid-19 are vaccinated for
+it. Suppose 100 people have tested positive for Covid-19 (independently
+of each other). Let $X$ denote the number of people that are vaccinated
+among the 100 that tested positive. What is the probability that fewer
+than 20 of the people that tested positive are vaccinated?
 
 1.  Calculate exact probability.
 
 2.  Calculate approximate probability.
 :::
 :::::
-:::
+::::::
+
 ::: {.column width="60%"}
 $p=0.25$, $n=100$, we want $P(X < 20)$
 
  
 
-1. Exact probability = Binomial distribution
+1.  Exact probability = Binomial distribution
 
 $$X \sim \text{Binomial}(n=100, p=0.25)$$
 
@@ -556,55 +664,68 @@ $$P(X < 20) = P(X \leq 19) = \sum_{j=0}^{19}P(X = j)$$
 ```{r}
 pbinom(q = 19, size = 100, prob = 0.25)
 ```
-
 :::
-:::
+::::::::
 
+## Example: Normal approximation or Binomial distribution (2/2)
 
-## Example: Normal approximation or Binomial distribution
-
-::: columns
-::: {.column width="40%"}
-
+:::::::: columns
+:::::: {.column width="40%"}
 ::::: example
 ::: ex-ttl
 Example: Vaccinated people testing positive for Covid-19 (revisited)
 :::
 
 ::: ex-cont
-About 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let $X$ denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?
+About 25% of people that test positive for Covid-19 are vaccinated for
+it. Suppose 100 people have tested positive for Covid-19 (independently
+of each other). Let $X$ denote the number of people that are vaccinated
+among the 100 that tested positive. What is the probability that fewer
+than 20 of the people that tested positive are vaccinated?
 
 1.  Calculate exact probability.
 
 2.  Calculate approximate probability.
 :::
 :::::
-:::
+::::::
+
 ::: {.column width="60%"}
 $p=0.25$, $n=100$, we want $P(X < 20)$
 
-2. Approximate probability = Normal distribution
+2.  Approximate probability = Normal distribution
 
-    - Mean = $\mu = np = 0.25\cdot 100 = 25$
-    - SD = $\sigma = \sqrt{np(1-p)}=\sqrt{100\cdot 0.25 \cdot (1-0.25)}$
-    
-$$X \sim \text{Normal}\bigg(\mu=25, \sigma = \sqrt{100\cdot 0.25 \cdot (1-0.25)}\bigg)$$
+    -   Mean = $\mu = np = 0.25\cdot 100 = 25$
+    -   SD =
+        $\sigma = \sqrt{np(1-p)}=\sqrt{100\cdot 0.25 \cdot (1-0.25)} = 4.33$
 
-- For these probabilities, we use something called a **continuity correction**. Instead of calculating $P(X < 20)$, we calculate $P(X \leq 19.5)$
-    
+$$X \sim \text{Normal}\big(\mu=25, \sigma = 4.33\big)$$
+
+-   Use **continuity correction**: Instead of calculating
+    $P(X \leq 19)$, we calculate $P(X \leq 19.5)$
+
 ```{r}
 pnorm(q = 19.5, mean = 25, 
       sd = sqrt( 100*0.25*0.75 ))
 ```
 :::
-:::
-
+::::::::
 
 ## Some resources for the normal distribution
 
 -   [Page on R commands](https://seankross.com/notes/dpqr/)
 
-# Learning objectives
+# Learning Objectives
+
+1.  Understand how probability distributions extend to continuous distributions
+2.  Calculate probabilities for specific events using a Normal
+    distribution
+3.  Apply the Normal distribution to approximate probabilities for binomial events
+
+::: lob
+4.  Calculate probabilities for different events using a Poisson
+    distribution
+:::
 
 ## Introduction to the Poisson distribution
 
@@ -613,108 +734,247 @@ pnorm(q = 19.5, mean = 25,
 
     -   It is a **discrete distribution!**
 
--   It used most often in settings where events happen at a rate
-    $\lambda$ per unit of population and per unit time, such as the
-    annual incidence of a disease in a population.
-
  
 
--   **Quick example:** for children ages 0 - 14, the incidence rate of
-    acute lymphocytic leukemia (ALL) was approximately 30 diagnosed
-    cases per million children per year in 2010.
+-   It is used most often in settings where **events happen at a rate**
+    $\lambda$ per unit of population and per unit time
+
+::: columns
+::: {.column width="50%"}
+-   **Example:** historical records of hospitalizations in New York City indicate that an average of 4.4 people are hospitalized each day for an acute myocardial infarction (AMI)
+
+    - We can plot the distribution of hospitalizations on each day
 
  
+    
+:::
 
--   Also used to approximate binomial distribution when $n$ is large and
-    $p$ is small
-    -   When Normal approximation does not work
-
-## Poisson Distribution
-
-Suppose events occur over time in such a way that
-
-1.  The probability an event occurs in an interval is proportional to
-    the length of the interval.
-
-2.  Events occur independently at a rate $\lambda$ per unit of time.
-
-Then the probability of exactly $x$ events in one unit of time is $$
-P(X = x) = \frac{e^{-\lambda}\lambda^{x}}{x!}, \,\, x = 0, 1, 2,
-\ldots
-$$
-
-The probability of exactly $x$ events $t$ units of time is $$
-P(X = x) = \frac{e^{-\lambda t}(\lambda t)^{x}}{x!}, \,\, x = 0, 1,
-2, \ldots
-$$
-
-For the Poisson distribution modeling the number of events in one unit
-of time:
-
--   The mean is $\lambda$.
-
--   The standard deviation is $\sqrt{\lambda}$.
-
-In $t$ units of time, the mean and standard deviation are, respectively,
-$\lambda t$ and $\sqrt{\lambda t}$.
+::: {.column width="50%"}
+![](../img_slides/pois_ex.png)
+:::
+:::
 
 ## Poisson distribution
 
--   Discrete distribution
+-   Suppose events occur over time in such a way that
 
--   Used to model count data (# of successes), especially for rare
-    events
+    1.  The probability an event occurs in an interval is proportional
+        to the length of the interval.
 
--   Used to approximate binomial distribution when $n$ is large and $p$
-    is small
+    2.  Events occur independently at a rate $\lambda$ per unit of time.
 
-## 
+-   Then the probability of exactly $x$ events in one unit of time is $$
+    P(X = k) = \frac{e^{-\lambda}\lambda^{k}}{k!}, \,\, k = 0, 1, 2,
+    \ldots
+    $$
 
-::: definition
-**Definition 6**. *Distribution of a **Poisson** random variable. Let*
-$X$ be the total number of successes in an interval (such as time) with
-an average success rate $\lambda$. Then probability of observing exactly
-$k$ successes in a unit interval is
-:::
+-   For the Poisson distribution modeling the number of events in one
+    unit of time:
 
--   The parameter of a Poisson distribution is $\lambda$.
+    -   The mean is $\lambda$.
 
--   If a r.v. $X$ is modeled by a Poisson distribution, then we write in
-    shorthand
+    -   The standard deviation is $\sqrt{\lambda}$.
 
-## Mean and SD
+-   Shorthand for a random variable, $X$, that has a Poisson
+    distribution: $$X \sim \text{Pois}(\lambda)$$
 
-::: theorem
-**Theorem 7**. *Mean and SD of a Poisson r.v. If* $X$ is a Poisson r.v.
-with parameter $\lambda$, then
-:::
+## Poisson distribution: R commands
 
-## Example
+R commands with their [input]{style="color:#BF396F"} and
+[output]{style="color:#367B79"}:
+
++----------------+-----------------------------------------------+
+| R code         | What does it return?                          |
++================+===============================================+
+| `rpois()`      | returns [sample of random                     |
+|                | variables]{style="color:#367B79"} with        |
+|                | [specified Poisson                            |
+|                | distribution]{style="color:#BF396F"}          |
++----------------+-----------------------------------------------+
+| `dpois()`      | returns [value of probability                 |
+|                | density]{style="color:#367B79"} at [certain   |
+|                | point of the Poisson                          |
+|                | distribution]{style="color:#BF396F"}          |
++----------------+-----------------------------------------------+
+| `ppois()`      | returns [cumulative                           |
+|                | probability]{style="color:#367B79"} of        |
+|                | getting [certain point (or less) of the       |
+|                | Poisson distribution]{style="color:#BF396F"}  |
++----------------+-----------------------------------------------+
+| `qpois()`      | returns [number of                            |
+|                | cases]{style="color:#367B79"} corresponding  |
+|                | to [desired quantile]{style="color:#BF396F"}  |
++----------------+-----------------------------------------------+
+
+## Example: probabilities from a Poisson distribution (1/4)
 
 ::: example
-**Example 8**. ***Typhoid fever** Suppose there are on average 5 deaths
-per year from typhoid fever over a 1-year period.*
+::: ex-ttl
+Typhoid fever
+:::
+::: ex-cont
+::: columns
+::: column
+Suppose there are on average 5 deaths
+per year from typhoid fever over a 1-year period.
 
-![image](../img_slides/Poisson_L5.png){width="5in"}
+1.  What is the probability of 3 deaths in a year?
 
-1.  *What is the probability of 3 deaths in a year?*
+2.  What is the probability of 2 deaths in 0.5 years?
 
-2.  *What is the probability of 2 deaths in 0.5 years?*
+3.  What is the probability of more than 12 deaths in 2 years?
+:::
+::: column
+```{r}
+#| echo: false
+#| message: false
+#| fig-height: 4
+#| fig-width: 7
 
-3.  *What is the probability of more than 12 deaths in 2 years?*
+library(tidyverse)
+
+x <- 0:250
+lambda = 5
+
+pois = expand.grid(x = x, lambda = lambda) %>%
+  mutate(y = dpois(x, lambda = lambda))
+
+ggplot(pois %>% filter(y > 1e-5), 
+       aes(x, y)) +
+  geom_point(size=1) +
+  geom_segment(aes(x=x, xend=x, y=0, yend=y), lwd=0.8, alpha=0.5) +
+  theme(legend.position = "none",
+        axis.title = element_text(size = 22),    # Axis title size
+        axis.text = element_text(size = 22),     # Axis text size
+        strip.text = element_text(size = 22), 
+        title = element_text(size = 22)) +  # Facet label size
+  labs(x = "Number of successes (x)", y = "Probability, P(x)", 
+       title = "Poisson distribution with lambda of 5") +
+  scale_color_manual(values = palette_525)
+```
+:::
+:::
+:::
 :::
 
-# Learning Objective?
-
-## Example: Poisson approximation of binomial distribution
+## Example: probabilities from a Poisson distribution (2/4)
 
 ::: example
-**Example 9**. ***Cleft palate** About 1 in every 1,700 babies is born
-with cleft palate in the United States. Find the probability that there
-are 2 babies born with cleft palates amongst the next 3000 births at
-OHSU.*
-
-1.  *Calculate exact probability.*
-
-2.  *Calculate approximate probability.*
+::: ex-ttl
+Typhoid fever
 :::
+::: ex-cont
+Suppose there are on average 5 deaths
+per year from typhoid fever over a 1-year period.
+
+1.  What is the probability of 3 deaths in a year?
+:::
+:::
+
+- $\lambda = 5$ and we want $P(X = 3)$
+
+$$P(X=3) = \frac{e^{-5}5^{3}}{3!} = 0.1404$$
+
+```{r}
+dpois(x = 3, lambda = 5)
+```
+
+## Example: probabilities from a Poisson distribution (3/4)
+
+::: example
+::: ex-ttl
+Typhoid fever
+:::
+::: ex-cont
+Suppose there are on average 5 deaths
+per year from typhoid fever over a 1-year period.
+
+2.  What is the probability of 2 deaths in 0.5 years?
+
+:::
+:::
+
+$\lambda = ?$ and we want $P(X = 2)$
+
+- $\lambda=5$ was the rate for one year. When we want the rate for half year, we need to calculate a new $\lambda$: 
+
+    - $\lambda = \dfrac{5 \text{ deaths}}{1 \text{ year}}\cdot\dfrac{1 \text{ year}}{2 \text{ half-years}}=\dfrac{2.5 \text{ deaths}}{1 \text{ half-year}}$
+
+$$P(X=2) = \frac{e^{-2.5}2.5^{2}}{2!} = 0.0.2565$$
+
+```{r}
+dpois(x = 2, lambda = 2.5)
+```
+
+## Example: probabilities from a Poisson distribution (4/4)
+
+::: example
+::: ex-ttl
+Typhoid fever
+:::
+::: ex-cont
+Suppose there are on average 5 deaths
+per year from typhoid fever over a 1-year period.
+
+3.  What is the probability of more than 12 deaths in 2 years?
+:::
+:::
+
+$\lambda = ?$ and we want $P(X > 12)$
+
+- Need to calculate a new $\lambda$ for 2 years: $\lambda = \dfrac{5 \text{ deaths}}{1 \text{ year}}\cdot\dfrac{2 \text{ years}}{1 \text{ two-years}}=\dfrac{10 \text{ deaths}}{1 \text{ two-year}}=\dfrac{10 \text{ deaths}}{2 \text{ years}}$
+
+$$P(X>12) = 1 - P(X \leq 12) = 1 - \sum_{k=0}^{12}\frac{e^{-10}10^{k}}{k!} = 0.2084$$
+
+::: columns
+::: column
+```{r}
+1 - ppois(q = 12, lambda = 10)
+```
+:::
+
+::: column
+```{r}
+ppois(q = 12, lambda = 10, 
+      lower.tail = F)
+```
+:::
+:::
+
+
+## Poisson approximation of binomial distribution
+
+-   Poisson distribution can be used to approximate binomial distribution when $n$ is large and
+    $p$ is small
+    -   When Normal approximation does not work
+
+-   Binomial distributions for different $n$ (columns) and $p$ (rows)
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-height: 4
+#| fig-width: 10
+
+library(tidyverse)
+
+x <- 0:250
+n = c(60,100,200,400)
+p = c(0.005, 0.02)
+
+binom = expand.grid(x = x, n = n, p = p) %>%
+  mutate(y = dbinom(x, size = n, prob = p))
+
+ggplot(binom %>% filter(y > 1e-5) %>% 
+         group_by(n), 
+       aes(x, y, color=factor(n))) +
+  geom_point(size=1) +
+  geom_segment(aes(x=x, xend=x, y=0, yend=y, color=factor(n)), lwd=0.8, alpha=0.5) +
+  facet_grid(rows = vars(p), cols = vars(n), scales="free_x", space="free_x") +
+  theme(legend.position = "none",
+        axis.title = element_text(size = 14),    # Axis title size
+        axis.text = element_text(size = 12),     # Axis text size
+        strip.text = element_text(size = 13)) +  # Facet label size
+  labs(x = "Number of successes", y = "Probability") +
+  scale_color_manual(values = palette_525)
+```

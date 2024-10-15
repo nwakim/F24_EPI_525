@@ -4834,7 +4834,7 @@
     "href": "homework/HW_03.html#osteosarcoma-in-nyc",
     "title": "Homework 3",
     "section": "3.40 Osteosarcoma in NYC",
-    "text": "3.40 Osteosarcoma in NYC"
+    "text": "3.40 Osteosarcoma in NYC\nOnly parts a-c"
   },
   {
     "objectID": "homework/HW_04.html#clinican-time-with-patients",
@@ -10672,14 +10672,14 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal distribution",
-    "text": "Normal distribution\n\n\n\nA random variable X is modeled with a normal distribution if:\n\nShape: symmetric, unimodal bell curve\nCenter: mean \\(\\mu\\)\nSpread (variability): standard deviation \\(\\sigma\\)\n\n\n \n\nShorthand for a random variable, \\(X\\), that has a Normal distribution: \\[X \\sim \\text{Normal}(\\mu, \\sigma)\\]"
+    "text": "Normal distribution\n\n\n\nA random variable X is modeled with a normal distribution if:\n\nShape: symmetric, unimodal bell curve\nCenter: mean \\(\\mu\\)\nSpread (variability): standard deviation \\(\\sigma\\)\n\n\n \n\nShorthand for a random variable, \\(X\\), that has a Normal distribution: \\[X \\sim \\text{Normal}(\\mu, \\sigma)\\]\n\n\n\n\n\n\nExample: We recorded the high temperature in the past 100 years for today. The mean high is 19°C (66.2°F)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
-    "section": "Poisson Distribution",
-    "text": "Poisson Distribution\nSuppose events occur over time in such a way that\n\nThe probability an event occurs in an interval is proportional to the length of the interval.\nEvents occur independently at a rate \\(\\lambda\\) per unit of time.\n\nThen the probability of exactly \\(x\\) events in one unit of time is \\[\nP(X = x) = \\frac{e^{-\\lambda}\\lambda^{x}}{x!}, \\,\\, x = 0, 1, 2,\n\\ldots\n\\]\nThe probability of exactly \\(x\\) events \\(t\\) units of time is \\[\nP(X = x) = \\frac{e^{-\\lambda t}(\\lambda t)^{x}}{x!}, \\,\\, x = 0, 1,\n2, \\ldots\n\\]\nFor the Poisson distribution modeling the number of events in one unit of time:\n\nThe mean is \\(\\lambda\\).\nThe standard deviation is \\(\\sqrt{\\lambda}\\).\n\nIn \\(t\\) units of time, the mean and standard deviation are, respectively, \\(\\lambda t\\) and \\(\\sqrt{\\lambda t}\\)."
+    "section": "Poisson distribution",
+    "text": "Poisson distribution\n\nSuppose events occur over time in such a way that\n\nThe probability an event occurs in an interval is proportional to the length of the interval.\nEvents occur independently at a rate \\(\\lambda\\) per unit of time.\n\nThen the probability of exactly \\(x\\) events in one unit of time is \\[\nP(X = k) = \\frac{e^{-\\lambda}\\lambda^{k}}{k!}, \\,\\, k = 0, 1, 2,\n\\ldots\n\\]\nFor the Poisson distribution modeling the number of events in one unit of time:\n\nThe mean is \\(\\lambda\\).\nThe standard deviation is \\(\\sqrt{\\lambda}\\).\n\nShorthand for a random variable, \\(X\\), that has a Poisson distribution: \\[X \\sim \\text{Pois}(\\lambda)\\]"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section",
@@ -10693,7 +10693,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "",
-    "text": "Theorem 7. Mean and SD of a Poisson r.v. If \\(X\\) is a Poisson r.v. with parameter \\(\\lambda\\), then"
+    "text": "Definition 6. Distribution of a Poisson random variable. Let \\(X\\) be the total number of successes in an interval (such as time) with an average success rate \\(\\lambda\\). Then probability of observing exactly \\(k\\) successes in a unit interval is\n\n\nThe parameter of a Poisson distribution is \\(\\lambda\\).\nIf a r.v. \\(X\\) is modeled by a Poisson distribution, then we write in shorthand"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-2",
@@ -10735,7 +10735,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal Approximation of the Binomial Distribution",
-    "text": "Normal Approximation of the Binomial Distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\n\n \n\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\n\n \n\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R\n\n \n\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution"
+    "text": "Normal Approximation of the Binomial Distribution\n\nRecall that a binomial random variable \\(X\\) counts the total number of successes in \\(n\\) independent trials, each with probability \\(p\\) of a success.\n\n \n\nProbability function for \\(x = 0, 1, ..., n\\) : \\[P(X = k) = {n\\choose k}p^k(1-p)^{n-k} = \\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\]\n\n \n\nTedious to compute for large number of trails (\\(n\\)), although doable with software like R\n\n \n\nAs \\(n\\) gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution\nPretty good video behind the intuition of this (Watch 00:00 - 05:40)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#section-6",
@@ -10763,7 +10763,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example",
-    "text": "Example\n\nExample 8. Typhoid fever Suppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\n\n\nimage\n\n\n\nWhat is the probability of 3 deaths in a year?\nWhat is the probability of 2 deaths in 0.5 years?\nWhat is the probability of more than 12 deaths in 2 years?"
+    "text": "Example\n\n\nTyphoid fever\n\n\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 3 deaths in a year?\nWhat is the probability of 2 deaths in 0.5 years?\nWhat is the probability of more than 12 deaths in 2 years?"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-1",
@@ -15516,7 +15516,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Standard Normal Distribution",
-    "text": "Standard Normal Distribution\n\nTransformation from general normal \\(X\\) to standard normal \\(Z\\)"
+    "text": "Standard Normal Distribution\n\nA standard normal distribution is defined as a normal distribution with mean 0 and variance 1. It is often denoted as \\(Z \\sim N(0, 1)\\).\nAny normal random variable \\(X\\) can be transformed into a standard normal random variable \\(Z\\).\n\n\\[Z = \\dfrac{X - \\mu}{\\sigma} \\qquad X = \\mu + Z\\sigma\\]\n\nThe \\(Z\\)-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).\nFor example, if an observation has \\(Z\\)-score \\(z = 3.4\\), then the observation is 3.4 standard deviations above the mean."
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#a-normal-example-1",
@@ -15544,7 +15544,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#introduction-to-the-poisson-distribution",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Introduction to the Poisson distribution",
-    "text": "Introduction to the Poisson distribution\n\nThe Poisson distribution is often used to model count data (# of successes), especially for rare events\n\nIt is a discrete distribution!\n\nIt used most often in settings where events happen at a rate \\(\\lambda\\) per unit of population and per unit time, such as the annual incidence of a disease in a population.\n\n \n\nQuick example: for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.\n\n \n\nAlso used to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small\n\nWhen Normal approximation does not work"
+    "text": "Introduction to the Poisson distribution\n\nThe Poisson distribution is often used to model count data (# of successes), especially for rare events\n\nIt is a discrete distribution!\n\n\n \n\nIt is used most often in settings where events happen at a rate \\(\\lambda\\) per unit of population and per unit time\n\n\n\n\nExample: historical records of hospitalizations in New York City indicate that an average of 4.4 people are hospitalized each day for an acute myocardial infarction (AMI)\n\nWe can plot the distribution of hospitalizations on each day"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-outbreaks-of-childhood-leukemia",
@@ -15600,7 +15600,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-distribution-r-commands",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal distribution: R commands",
-    "text": "Normal distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrnorm()\nreturns sample of random variables with specified normal distribution\n\n\ndnorm()\nreturns value of probability density at certain point of the normal distribution\n\nNot typically used\n\n\n\npnorm()\nreturns cumulative probability of getting certain point (or less) of the normal distribution\n\n\nqnorm()\nreturns z-score corresponding to desired quantile"
+    "text": "Normal distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrnorm()\nreturns sample of random variables with specified normal distribution\n\n\ndnorm()\nreturns value of probability density at certain point of the normal distribution\n\nNot typically used bc this is a continuous distributon\n\n\n\npnorm()\nreturns cumulative probability of getting certain point (or less) of the normal distribution\n\n\nqnorm()\nreturns z-score corresponding to desired quantile"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating",
@@ -15642,14 +15642,14 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Standard Normal Distribution",
-    "text": "Standard Normal Distribution\n\nA standard normal distribution is defined as a normal distribution with mean 0 and variance 1. It is often denoted as \\(Z \\sim N(0, 1)\\).\nAny normal random variable \\(X\\) can be transformed into a standard normal random variable \\(Z\\).\n\n\\[Z = \\dfrac{X - \\mu}{\\sigma} \\qquad X = \\mu + Z\\sigma\\]\n\nThe \\(Z\\)-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).\nFor example, if an observation has \\(Z\\)-score \\(z = 3.4\\), then the observation is 3.4 standard deviations above the mean."
+    "text": "Standard Normal Distribution\n\nTransformation from general normal \\(X\\) to standard normal \\(Z\\)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-1",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Normal Approximation of the Binomial Distribution",
-    "text": "Normal Approximation of the Binomial Distribution\n\nAlso known as: Sampling distribution of \\(\\widehat{p}\\)\nIF \\(X\\sim \\text{Binomial}(n,p)\\) and \\(np&gt;10\\) and \\(nq = n(1-p) &gt; 10\\)\n\nEnsures sample size (\\(n\\)) is moderately large and the \\(p\\) is not too close to 0 or 1\nOther resources use other criteria (like \\(npq&gt;5\\) or \\(np&gt;5\\))\nWhen looking at a sample, we use \\(\\widehat{p}\\) instead of \\(p\\) to check this!!\n\n\n \n\nTHEN approximately \\(𝑋\\sim \\text{Normal}\\big(\\mu_X = np, \\sigma_X = \\sqrt{np(1-p)} \\big)\\)\n\nOr we often write this as the sampling distribution of \\(\\widehat{p}\\): \\[\\widehat{p} \\sim \\text{Normal}\\bigg(\\mu_{\\widehat{p}} = p, \\sigma_{\\widehat{p}} = \\sqrt{\\dfrac{p(1-p)}{n}}\\bigg)\\]\n\nPretty good video behind the intuition of this (Watch 00:00 - 05:40)"
+    "text": "Normal Approximation of the Binomial Distribution\n\nAlso known as: Sampling distribution of \\(\\widehat{p}\\)\nIf \\(X\\sim \\text{Binomial}(n,p)\\) and \\(np&gt;10\\) and \\(nq = n(1-p) &gt; 10\\)\n\nEnsures sample size (\\(n\\)) is moderately large and the \\(p\\) is not too close to 0 or 1\nOther resources use other criteria (like \\(npq&gt;5\\) or \\(np&gt;5\\))\n\n\n \n\nTHEN approximately \\[X\\sim \\text{Normal}\\big(\\mu_X = np, \\sigma_X = \\sqrt{np(1-p)} \\big)\\]\nContinuity Correction: Applied to account for the fact that the binomial distribution is discrete, while the normal distribution is continuous\n\nAdjust the binomial value (# of successes) by ±0.5 before calculating the normal probability.\nFor \\(P(X \\leq k)\\) (Binomial), you would instead calculate \\(P(X \\leq k + 0.5)\\) (Normal approx)\nFor \\(P(X \\geq k)\\) (Binomial), you would instead calculate \\(P(X \\leq k - 0.5)\\) (Normal approx)"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#normal-approximation-of-the-binomial-distribution-2",
@@ -15894,28 +15894,28 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-25",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Calculating probabilities from a Normal distribution (2/5)",
-    "text": "Example: Calculating probabilities from a Normal distribution (2/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\n\n\n\n\n\n\n\npnorm(q = 2.67, mean = 0, sd = 1)\n\n[1] 0.9962074\n\n\n\npnorm(q = 2.67)\n\n[1] 0.9962074"
+    "text": "Example: Calculating probabilities from a Normal distribution (2/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &lt; 2.67 )\\)\n\n\n\n\n\n\nDraw on standard Normal curve: \n\n\n\nCalculate probability:\n\n\npnorm(q = 2.67, mean = 0, sd = 1)\n\n[1] 0.9962074\n\n\n\npnorm(q = 2.67)\n\n[1] 0.9962074"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-35",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-35",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Calculating probabilities from a Normal distribution (3/5)",
-    "text": "Example: Calculating probabilities from a Normal distribution (3/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\n\n\n\n\n\n\n\n1 - pnorm(q = -0.37, \n          mean = 0, \n          sd = 1)\n\n[1] 0.6443088\n\n\n\npnorm(q = -0.37, mean = 0, sd = 1, \n      lower.tail = FALSE)\n\n[1] 0.6443088"
+    "text": "Example: Calculating probabilities from a Normal distribution (3/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( Z &gt; -0.37 )\\)\n\n\n\n\n\n\nDraw on standard Normal curve:\n\n\n\n\n1 - pnorm(q = -0.37, \n          mean = 0, \n          sd = 1)\n\n[1] 0.6443088\n\n\n\npnorm(q = -0.37, mean = 0, sd = 1, \n      lower.tail = FALSE)\n\n[1] 0.6443088"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-45",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-45",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Calculating probabilities from a Normal distribution (4/5)",
-    "text": "Example: Calculating probabilities from a Normal distribution (4/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\n\n\n\n\n\n\n\npnorm(q = 2.46, mean = 0, sd = 1) - \n  pnorm(q = -2.18, mean = 0, sd = 1)\n\n[1] 0.9784244"
+    "text": "Example: Calculating probabilities from a Normal distribution (4/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}( -2.18 &lt; Z &lt; 2.46 )\\)\n\n\n\n\n\n\nDraw on standard Normal curve:\n\n\n\n\npnorm(q = 2.46, mean = 0, sd = 1) - \n  pnorm(q = -2.18, mean = 0, sd = 1)\n\n[1] 0.9784244"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-55",
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-calculating-probabilities-from-a-normal-distribution-55",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Calculating probabilities from a Normal distribution (5/5)",
-    "text": "Example: Calculating probabilities from a Normal distribution (5/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}(Z = 1.53 )\\)"
+    "text": "Example: Calculating probabilities from a Normal distribution (5/5)\n\n\nExample: Calculating standard normal probabilities practice\n\n\nLet \\(Z\\) be a standard normal random variable, \\(Z\\sim N(\\mu=0,\\sigma=1)\\). Calculate the following probabilities. Include sketches of the normal curves with the probability areas shaded in.\n\n\\(\\mathbb{P}(Z = 1.53 )\\)\n\n\n\n\n\n\nDraw on standard Normal curve:"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#using-normal-distribution-in-word-problems",
@@ -15957,7 +15957,7 @@
     "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-1",
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Normal approximation or Binomial distribution",
-    "text": "Example: Normal approximation or Binomial distribution\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n\nApproximate probability = Normal distribution\n\nMean = \\(\\mu = np = 0.25\\cdot 100 = 25\\)\nSD = \\(\\sigma = \\sqrt{np(1-p)}=\\sqrt{100\\cdot 0.25 \\cdot (1-0.25)}\\)\n\n\n\\[X \\sim \\text{Normal}\\bigg(\\mu=25, \\sigma = \\sqrt{100\\cdot 0.25 \\cdot (1-0.25)}\\bigg)\\]\n\nFor these probabilities, we use something called a continuity correction. Instead of calculating \\(P(X &lt; 20)\\), we calculate \\(P(X \\leq 19.5)\\)\n\n\npnorm(q = 19.5, mean = 25, \n      sd = sqrt( 100*0.25*0.75 ))\n\n[1] 0.1020119"
+    "text": "Example: Normal approximation or Binomial distribution\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n\nApproximate probability = Normal distribution\n\nMean = \\(\\mu = np = 0.25\\cdot 100 = 25\\)\nSD = \\(\\sigma = \\sqrt{np(1-p)}=\\sqrt{100\\cdot 0.25 \\cdot (1-0.25)} = 4.33\\)\n\n\n\\[X \\sim \\text{Normal}\\big(\\mu=25, \\sigma = 4.33\\big)\\]\n\nUse continuity correction: Instead of calculating \\(P(X \\leq 19)\\), we calculate \\(P(X \\leq 19.5)\\)\n\n\npnorm(q = 19.5, mean = 25, \n      sd = sqrt( 100*0.25*0.75 ))\n\n[1] 0.1020119"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_key_info.html",
@@ -16077,5 +16077,110 @@
     "title": "Muddy Points",
     "section": "",
     "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#we-can-look-at-a-plot-of-binomial-distributions",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#we-can-look-at-a-plot-of-binomial-distributions",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "We can look at a plot of Binomial distributions",
+    "text": "We can look at a plot of Binomial distributions\n\nBinomial distributions for different \\(n\\) (columns) and \\(p\\) (rows)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-approximation-of-binomial-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-approximation-of-binomial-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Poisson approximation of binomial distribution",
+    "text": "Poisson approximation of binomial distribution\n\nPoisson distribution can be used to approximate binomial distribution when \\(n\\) is large and \\(p\\) is small\n\nWhen Normal approximation does not work\n\nBinomial distributions for different \\(n\\) (columns) and \\(p\\) (rows)\n\n\n\n\nLesson 6 Slides"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-r-commands",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#poisson-distribution-r-commands",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Poisson distribution: R commands",
+    "text": "Poisson distribution: R commands\nR commands with their input and output:\n\n\n\n\n\n\n\nR code\nWhat does it return?\n\n\n\n\nrpois()\nreturns sample of random variables with specified Poisson distribution\n\n\ndpois()\nreturns value of probability density at certain point of the Poisson distribution\n\n\nppois()\nreturns cumulative probability of getting certain point (or less) of the Poisson distribution\n\n\nqpois()\nreturns number of cases corresponding | to desired quantile"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution",
+    "text": "Example: probabilities from a Poisson distribution\n\n\nTyphoid fever\n\n\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 3 deaths in a year?\nWhat is the probability of 2 deaths in 0.5 years?\nWhat is the probability of more than 12 deaths in 2 years?"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-1",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-1",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution",
+    "text": "Example: probabilities from a Poisson distribution\n\n\nTyphoid fever\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 3 deaths in a year?\n\n\n\n\n\\(\\lambda = 5\\) and we want \\(P(X = 3)\\)\n\n\\[P(X=3) = \\frac{e^{-5}5^{3}}{3!} = 0.1404\\]\n\ndpois(x = 3, lambda = 5)\n\n[1] 0.1403739"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-2",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-2",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution",
+    "text": "Example: probabilities from a Poisson distribution\n\n\nTyphoid fever\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 2 deaths in 0.5 years?\n\n\n\n\\(\\lambda = ?\\) and we want \\(P(X = 2)\\)\n\n\\(\\lambda=5\\) was the rate for one year. When we want the rate for half year, we need to calculate a new \\(\\lambda\\):\n\n\\(\\lambda = \\dfrac{5 \\text{ deaths}}{1 \\text{ year}}\\cdot\\dfrac{1 \\text{ year}}{2 \\text{ half-years}}=\\dfrac{2.5 \\text{ deaths}}{1 \\text{ half-year}}\\)\n\n\n\\[P(X=2) = \\frac{e^{-2.5}2.5^{2}}{2!} = 0.0.2565\\]\n\ndpois(x = 2, lambda = 2.5)\n\n[1] 0.2565156"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-3",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-3",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution",
+    "text": "Example: probabilities from a Poisson distribution\n\n\nTyphoid fever\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of more than 12 deaths in 2 years?\n\n\n\n\\(\\lambda = ?\\) and we want \\(P(X &gt; 12)\\)\n\nNeed to calculate a new \\(\\lambda\\) for 2 years: \\(\\lambda = \\dfrac{5 \\text{ deaths}}{1 \\text{ year}}\\cdot\\dfrac{2 \\text{ years}}{1 \\text{ two-years}}=\\dfrac{10 \\text{ deaths}}{1 \\text{ two-year}}=\\dfrac{10 \\text{ deaths}}{2 \\text{ years}}\\)\n\n\\[P(X&gt;12) = 1 - P(X \\leq 12) = 1 - \\sum_{k=0}^{12}\\frac{e^{-10}10^{k}}{k!} = 0.2084\\]\n\n\n\n1 - ppois(q = 12, lambda = 10)\n\n[1] 0.2084435\n\n\n\n\nppois(q = 12, lambda = 10, \n      lower.tail = F)\n\n[1] 0.2084435"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-12",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-12",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Standard Normal distribution (1/2)",
+    "text": "Standard Normal distribution (1/2)\n\nA standard normal distribution is defined as a normal distribution with mean 0 and variance 1. It is often denoted as \\(Z \\sim N(0, 1)\\).\nAny normal random variable \\(X\\) can be transformed into a standard normal random variable \\(Z\\).\n\n\\[Z = \\dfrac{X - \\mu}{\\sigma} \\qquad X = \\mu + Z\\sigma\\]\n\nThe \\(Z\\)-score of an observation quantifies how far the observation is from the mean, in units of standard deviation(s).\nFor example, if an observation has \\(Z\\)-score \\(z = 3.4\\), then the observation is 3.4 standard deviations above the mean."
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-22",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#standard-normal-distribution-22",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Standard Normal distribution (2/2)",
+    "text": "Standard Normal distribution (2/2)\n\nTransformation from general normal \\(X\\) to standard normal \\(Z\\)"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-14",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-14",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution (1/4)",
+    "text": "Example: probabilities from a Poisson distribution (1/4)\n\n\nTyphoid fever\n\n\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 3 deaths in a year?\nWhat is the probability of 2 deaths in 0.5 years?\nWhat is the probability of more than 12 deaths in 2 years?"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-24",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-24",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution (2/4)",
+    "text": "Example: probabilities from a Poisson distribution (2/4)\n\n\nTyphoid fever\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 3 deaths in a year?\n\n\n\n\n\\(\\lambda = 5\\) and we want \\(P(X = 3)\\)\n\n\\[P(X=3) = \\frac{e^{-5}5^{3}}{3!} = 0.1404\\]\n\ndpois(x = 3, lambda = 5)\n\n[1] 0.1403739"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-34",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-34",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution (3/4)",
+    "text": "Example: probabilities from a Poisson distribution (3/4)\n\n\nTyphoid fever\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of 2 deaths in 0.5 years?\n\n\n\n\\(\\lambda = ?\\) and we want \\(P(X = 2)\\)\n\n\\(\\lambda=5\\) was the rate for one year. When we want the rate for half year, we need to calculate a new \\(\\lambda\\):\n\n\\(\\lambda = \\dfrac{5 \\text{ deaths}}{1 \\text{ year}}\\cdot\\dfrac{1 \\text{ year}}{2 \\text{ half-years}}=\\dfrac{2.5 \\text{ deaths}}{1 \\text{ half-year}}\\)\n\n\n\\[P(X=2) = \\frac{e^{-2.5}2.5^{2}}{2!} = 0.0.2565\\]\n\ndpois(x = 2, lambda = 2.5)\n\n[1] 0.2565156"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-44",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-probabilities-from-a-poisson-distribution-44",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: probabilities from a Poisson distribution (4/4)",
+    "text": "Example: probabilities from a Poisson distribution (4/4)\n\n\nTyphoid fever\n\n\nSuppose there are on average 5 deaths per year from typhoid fever over a 1-year period.\n\nWhat is the probability of more than 12 deaths in 2 years?\n\n\n\n\\(\\lambda = ?\\) and we want \\(P(X &gt; 12)\\)\n\nNeed to calculate a new \\(\\lambda\\) for 2 years: \\(\\lambda = \\dfrac{5 \\text{ deaths}}{1 \\text{ year}}\\cdot\\dfrac{2 \\text{ years}}{1 \\text{ two-years}}=\\dfrac{10 \\text{ deaths}}{1 \\text{ two-year}}=\\dfrac{10 \\text{ deaths}}{2 \\text{ years}}\\)\n\n\\[P(X&gt;12) = 1 - P(X \\leq 12) = 1 - \\sum_{k=0}^{12}\\frac{e^{-10}10^{k}}{k!} = 0.2084\\]\n\n\n\n1 - ppois(q = 12, lambda = 10)\n\n[1] 0.2084435\n\n\n\n\nppois(q = 12, lambda = 10, \n      lower.tail = F)\n\n[1] 0.2084435"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-12",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-12",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Normal approximation or Binomial distribution (1/2)",
+    "text": "Example: Normal approximation or Binomial distribution (1/2)\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n \n\nExact probability = Binomial distribution\n\n\\[X \\sim \\text{Binomial}(n=100, p=0.25)\\]\n\\[P(X &lt; 20) = P(X \\leq 19) = \\sum_{j=0}^{19}P(X = j)\\]\n \n\npbinom(q = 19, size = 100, prob = 0.25)\n\n[1] 0.09953041"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-22",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#example-normal-approximation-or-binomial-distribution-22",
+    "title": "Lesson 6: Normal and Poisson distributions",
+    "section": "Example: Normal approximation or Binomial distribution (2/2)",
+    "text": "Example: Normal approximation or Binomial distribution (2/2)\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n\nApproximate probability = Normal distribution\n\nMean = \\(\\mu = np = 0.25\\cdot 100 = 25\\)\nSD = \\(\\sigma = \\sqrt{np(1-p)}=\\sqrt{100\\cdot 0.25 \\cdot (1-0.25)} = 4.33\\)\n\n\n\\[X \\sim \\text{Normal}\\big(\\mu=25, \\sigma = 4.33\\big)\\]\n\nUse continuity correction: Instead of calculating \\(P(X \\leq 19)\\), we calculate \\(P(X \\leq 19.5)\\)\n\n\npnorm(q = 19.5, mean = 25, \n      sd = sqrt( 100*0.25*0.75 ))\n\n[1] 0.1020119"
   }
 ]

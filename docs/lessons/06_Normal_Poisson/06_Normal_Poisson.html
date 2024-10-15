@@ -410,11 +410,18 @@ Meike Niederhausen and Nicky Wakim
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li>Understand how probabilities can extend to continuous distributions</li>
-<li>Calculate probabilities for different events using a Normal distribution</li>
-<li>Normal apprximation of the binomial distribution</li>
+<li>Understand how probability distributions extend to continuous distributions</li>
+<li>Calculate probabilities for specific events using a Normal distribution</li>
+<li>Apply the Normal distribution to approximate probabilities for binomial events</li>
 <li>Calculate probabilities for different events using a Poisson distribution</li>
 </ol>
+<div class="cell">
+<style type="text/css">
+.reveal code {
+  max-height: 100% !important;
+}
+</style>
+</div>
 </section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
@@ -423,7 +430,16 @@ Meike Niederhausen and Nicky Wakim
 <section>
 <section id="learning-objectives-1" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-
+<div class="lob">
+<ol type="1">
+<li>Understand how probability distributions extend to continuous distributions</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Calculate probabilities for specific events using a Normal distribution</li>
+<li>Apply the Normal distribution to approximate probabilities for binomial events</li>
+<li>Calculate probabilities for different events using a Poisson distribution</li>
+</ol>
 </section>
 <section id="last-time-discrete-vs.-continuous-random-variables" class="slide level2">
 <h2>Last time: Discrete vs.&nbsp;continuous random variables</h2>
@@ -494,7 +510,18 @@ Meike Niederhausen and Nicky Wakim
 <section>
 <section id="learning-objectives-2" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-
+<ol type="1">
+<li>Understand how probability distributions extend to continuous distributions</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Calculate probabilities for specific events using a Normal distribution</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Apply the Normal distribution to approximate probabilities for binomial events</li>
+<li>Calculate probabilities for different events using a Poisson distribution</li>
+</ol>
 </section>
 <section id="normal-distribution" class="slide level2">
 <h2>Normal distribution</h2>
@@ -516,13 +543,12 @@ Meike Niederhausen and Nicky Wakim
 <p><img data-src="../img_slides/Normal_examples.png"></p>
 </div>
 </div>
+<ul>
+<li><strong>Example:</strong> We recorded the high temperature in the past 100 years for today. The mean high is 19°C (66.2°F)</li>
+</ul>
 </section>
-<section id="standard-normal-distribution" class="slide level2">
-<h2>Standard Normal Distribution</h2>
-
-<img data-src="../img_slides/X_to_Z_transformation_Brase.png" style="width:5in" class="r-stretch quarto-figure-center"><p class="caption">Transformation from general normal <span class="math inline">\(X\)</span> to standard normal <span class="math inline">\(Z\)</span></p></section>
-<section id="standard-normal-distribution-1" class="slide level2">
-<h2>Standard Normal Distribution</h2>
+<section id="standard-normal-distribution-12" class="slide level2">
+<h2>Standard Normal distribution (1/2)</h2>
 <ul>
 <li><p>A <em>standard normal</em> distribution is defined as a normal distribution with mean 0 and variance 1. It is often denoted as <span class="math inline">\(Z \sim N(0, 1)\)</span>.</p></li>
 <li><p>Any normal random variable <span class="math inline">\(X\)</span> can be transformed into a standard normal random variable <span class="math inline">\(Z\)</span>.</p></li>
@@ -533,13 +559,17 @@ Meike Niederhausen and Nicky Wakim
 <li><p>For example, if an observation has <span class="math inline">\(Z\)</span>-score <span class="math inline">\(z = 3.4\)</span>, then the observation is 3.4 standard deviations above the mean.</p></li>
 </ul>
 </section>
+<section id="standard-normal-distribution-22" class="slide level2">
+<h2>Standard Normal distribution (2/2)</h2>
+
+<img data-src="../img_slides/X_to_Z_transformation_Brase.png" style="width:5in" class="r-stretch quarto-figure-center"><p class="caption">Transformation from general normal <span class="math inline">\(X\)</span> to standard normal <span class="math inline">\(Z\)</span></p></section>
 <section id="normal-distribution-r-commands" class="slide level2">
 <h2>Normal distribution: R commands</h2>
 <p>R commands with their <span style="color:#BF396F">input</span> and <span style="color:#367B79">output</span>:</p>
-<table style="width:92%;">
+<table style="width:90%;">
 <colgroup>
 <col style="width: 23%">
-<col style="width: 68%">
+<col style="width: 66%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -556,7 +586,7 @@ Meike Niederhausen and Nicky Wakim
 <td><code>dnorm()</code></td>
 <td><p>returns <span style="color:#367B79">value of probability density</span> at <span style="color:#BF396F">certain point of the normal distribution</span></p>
 <ul>
-<li>Not typically used</li>
+<li>Not typically used bc this is a continuous distributon</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -631,8 +661,13 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="columns">
 <div class="column">
-<p><img data-src="../img_slides/standard_normal.png" width="800"></p>
+<ol type="1">
+<li>Draw on standard Normal curve: <img data-src="../img_slides/standard_normal.png" width="800"></li>
+</ol>
 </div><div class="column">
+<ol start="2" type="1">
+<li>Calculate probability:</li>
+</ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">2.67</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -663,6 +698,9 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="columns">
 <div class="column">
+<ol type="1">
+<li>Draw on standard Normal curve:</li>
+</ol>
 <p><img data-src="../img_slides/standard_normal.png" width="800"></p>
 </div><div class="column">
 <div class="cell">
@@ -698,6 +736,9 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="columns">
 <div class="column">
+<ol type="1">
+<li>Draw on standard Normal curve:</li>
+</ol>
 <p><img data-src="../img_slides/standard_normal.png" width="800"></p>
 </div><div class="column">
 <div class="cell">
@@ -725,6 +766,9 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="columns">
 <div class="column">
+<ol type="1">
+<li>Draw on standard Normal curve:</li>
+</ol>
 <p><img data-src="../img_slides/standard_normal.png" width="800"></p>
 </div><div class="column">
 
@@ -850,7 +894,18 @@ Meike Niederhausen and Nicky Wakim
 <section>
 <section id="learning-objectives-3" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-
+<ol type="1">
+<li>Understand how probability distributions extend to continuous distributions</li>
+<li>Calculate probabilities for specific events using a Normal distribution</li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Apply the Normal distribution to approximate probabilities for binomial events</li>
+</ol>
+</div>
+<ol start="4" type="1">
+<li>Calculate probabilities for different events using a Poisson distribution</li>
+</ol>
 </section>
 <section id="normal-approximation-of-the-binomial-distribution" class="slide level2">
 <h2>Normal Approximation of the Binomial Distribution</h2>
@@ -867,31 +922,40 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li>As <span class="math inline">\(n\)</span> gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution</li>
+<li><p>As <span class="math inline">\(n\)</span> gets big though, the distribution shape of a binomial r.v. gets more and more symmetric, and can be approximated by a normal distribution</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=CCqWkJ_pqNU&amp;ab_channel=jbstatistics">Pretty good video behind the intuition of this</a> (Watch 00:00 - 05:40)</p></li>
 </ul>
 </section>
+<section id="we-can-look-at-a-plot-of-binomial-distributions" class="slide level2">
+<h2>We can look at a plot of Binomial distributions</h2>
+<ul>
+<li>Binomial distributions for different <span class="math inline">\(n\)</span> (columns) and <span class="math inline">\(p\)</span> (rows)</li>
+</ul>
+
+<img data-src="06_Normal_Poisson_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="normal-approximation-of-the-binomial-distribution-1" class="slide level2">
 <h2>Normal Approximation of the Binomial Distribution</h2>
 <ul>
 <li><p>Also known as: <strong>Sampling distribution of</strong> <span class="math inline">\(\widehat{p}\)</span></p></li>
-<li><p>IF <span class="math inline">\(X\sim \text{Binomial}(n,p)\)</span> and <span class="math inline">\(np&gt;10\)</span> and <span class="math inline">\(nq = n(1-p) &gt; 10\)</span></p>
+<li><p>If <span class="math inline">\(X\sim \text{Binomial}(n,p)\)</span> and <span class="math inline">\(np&gt;10\)</span> and <span class="math inline">\(nq = n(1-p) &gt; 10\)</span></p>
 <ul>
 <li>Ensures sample size (<span class="math inline">\(n\)</span>) is moderately large and the <span class="math inline">\(p\)</span> is not too close to 0 or 1</li>
 <li>Other resources use other criteria (like <span class="math inline">\(npq&gt;5\)</span> or <span class="math inline">\(np&gt;5\)</span>)</li>
-<li>When looking at a sample, we use <span class="math inline">\(\widehat{p}\)</span> instead of <span class="math inline">\(p\)</span> to check this!!</li>
 </ul></li>
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li><p>THEN approximately <span class="math inline">\(𝑋\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)\)</span></p>
+<li><p>THEN approximately <span class="math display">\[X\sim \text{Normal}\big(\mu_X = np, \sigma_X = \sqrt{np(1-p)} \big)\]</span></p></li>
+<li><p><strong>Continuity Correction</strong>: Applied to account for the fact that the binomial distribution is discrete, while the normal distribution is continuous</p>
 <ul>
-<li>Or we often write this as the sampling distribution of <span class="math inline">\(\widehat{p}\)</span>: <span class="math display">\[\widehat{p} \sim \text{Normal}\bigg(\mu_{\widehat{p}} = p, \sigma_{\widehat{p}} = \sqrt{\dfrac{p(1-p)}{n}}\bigg)\]</span></li>
+<li>Adjust the binomial value (# of successes) by ±0.5 before calculating the normal probability.</li>
+<li>For <span class="math inline">\(P(X \leq k)\)</span> (Binomial), you would instead calculate <span class="math inline">\(P(X \leq k + 0.5)\)</span> (Normal approx)</li>
+<li>For <span class="math inline">\(P(X \geq k)\)</span> (Binomial), you would instead calculate <span class="math inline">\(P(X \leq k - 0.5)\)</span> (Normal approx)</li>
 </ul></li>
-<li><p><a href="https://www.youtube.com/watch?v=CCqWkJ_pqNU&amp;ab_channel=jbstatistics">Pretty good video behind the intuition of this</a> (Watch 00:00 - 05:40)</p></li>
 </ul>
 </section>
-<section id="example-normal-approximation-or-binomial-distribution" class="slide level2">
-<h2>Example: Normal approximation or Binomial distribution</h2>
+<section id="example-normal-approximation-or-binomial-distribution-12" class="slide level2">
+<h2>Example: Normal approximation or Binomial distribution (1/2)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="example">
@@ -924,8 +988,8 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
-<section id="example-normal-approximation-or-binomial-distribution-1" class="slide level2">
-<h2>Example: Normal approximation or Binomial distribution</h2>
+<section id="example-normal-approximation-or-binomial-distribution-22" class="slide level2">
+<h2>Example: Normal approximation or Binomial distribution (2/2)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="example">
@@ -946,12 +1010,12 @@ Meike Niederhausen and Nicky Wakim
 <li><p>Approximate probability = Normal distribution</p>
 <ul>
 <li>Mean = <span class="math inline">\(\mu = np = 0.25\cdot 100 = 25\)</span></li>
-<li>SD = <span class="math inline">\(\sigma = \sqrt{np(1-p)}=\sqrt{100\cdot 0.25 \cdot (1-0.25)}\)</span></li>
+<li>SD = <span class="math inline">\(\sigma = \sqrt{np(1-p)}=\sqrt{100\cdot 0.25 \cdot (1-0.25)} = 4.33\)</span></li>
 </ul></li>
 </ol>
-<p><span class="math display">\[X \sim \text{Normal}\bigg(\mu=25, \sigma = \sqrt{100\cdot 0.25 \cdot (1-0.25)}\bigg)\]</span></p>
+<p><span class="math display">\[X \sim \text{Normal}\big(\mu=25, \sigma = 4.33\big)\]</span></p>
 <ul>
-<li>For these probabilities, we use something called a <strong>continuity correction</strong>. Instead of calculating <span class="math inline">\(P(X &lt; 20)\)</span>, we calculate <span class="math inline">\(P(X \leq 19.5)\)</span></li>
+<li>Use <strong>continuity correction</strong>: Instead of calculating <span class="math inline">\(P(X \leq 19)\)</span>, we calculate <span class="math inline">\(P(X \leq 19.5)\)</span></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="fl">19.5</span>, <span class="at">mean =</span> <span class="dv">25</span>, </span>
@@ -971,8 +1035,17 @@ Meike Niederhausen and Nicky Wakim
 </section></section>
 <section>
 <section id="learning-objectives-4" class="title-slide slide level1 center">
-<h1>Learning objectives</h1>
-
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Understand how probability distributions extend to continuous distributions</li>
+<li>Calculate probabilities for specific events using a Normal distribution</li>
+<li>Apply the Normal distribution to approximate probabilities for binomial events</li>
+</ol>
+<div class="lob">
+<ol start="4" type="1">
+<li>Calculate probabilities for different events using a Poisson distribution</li>
+</ol>
+</div>
 </section>
 <section id="introduction-to-the-poisson-distribution" class="slide level2">
 <h2>Introduction to the Poisson distribution</h2>
@@ -981,99 +1054,206 @@ Meike Niederhausen and Nicky Wakim
 <ul>
 <li>It is a <strong>discrete distribution!</strong></li>
 </ul></li>
-<li><p>It used most often in settings where events happen at a rate <span class="math inline">\(\lambda\)</span> per unit of population and per unit time, such as the annual incidence of a disease in a population.</p></li>
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li><strong>Quick example:</strong> for children ages 0 - 14, the incidence rate of acute lymphocytic leukemia (ALL) was approximately 30 diagnosed cases per million children per year in 2010.</li>
+<li>It is used most often in settings where <strong>events happen at a rate</strong> <span class="math inline">\(\lambda\)</span> per unit of population and per unit time</li>
 </ul>
-<p>&nbsp;</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Also used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small
+<li><p><strong>Example:</strong> historical records of hospitalizations in New York City indicate that an average of 4.4 people are hospitalized each day for an acute myocardial infarction (AMI)</p>
 <ul>
-<li>When Normal approximation does not work</li>
+<li>We can plot the distribution of hospitalizations on each day</li>
 </ul></li>
 </ul>
+<p>&nbsp;</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../img_slides/pois_ex.png"></p>
+</div>
+</div>
 </section>
 <section id="poisson-distribution" class="slide level2">
-<h2>Poisson Distribution</h2>
-<p>Suppose events occur over time in such a way that</p>
+<h2>Poisson distribution</h2>
+<ul>
+<li><p>Suppose events occur over time in such a way that</p>
 <ol type="1">
 <li><p>The probability an event occurs in an interval is proportional to the length of the interval.</p></li>
 <li><p>Events occur independently at a rate <span class="math inline">\(\lambda\)</span> per unit of time.</p></li>
-</ol>
-<p>Then the probability of exactly <span class="math inline">\(x\)</span> events in one unit of time is <span class="math display">\[
-P(X = x) = \frac{e^{-\lambda}\lambda^{x}}{x!}, \,\, x = 0, 1, 2,
+</ol></li>
+<li><p>Then the probability of exactly <span class="math inline">\(x\)</span> events in one unit of time is <span class="math display">\[
+P(X = k) = \frac{e^{-\lambda}\lambda^{k}}{k!}, \,\, k = 0, 1, 2,
 \ldots
-\]</span></p>
-<p>The probability of exactly <span class="math inline">\(x\)</span> events <span class="math inline">\(t\)</span> units of time is <span class="math display">\[
-P(X = x) = \frac{e^{-\lambda t}(\lambda t)^{x}}{x!}, \,\, x = 0, 1,
-2, \ldots
-\]</span></p>
-<p>For the Poisson distribution modeling the number of events in one unit of time:</p>
+\]</span></p></li>
+<li><p>For the Poisson distribution modeling the number of events in one unit of time:</p>
 <ul>
 <li><p>The mean is <span class="math inline">\(\lambda\)</span>.</p></li>
 <li><p>The standard deviation is <span class="math inline">\(\sqrt{\lambda}\)</span>.</p></li>
-</ul>
-<p>In <span class="math inline">\(t\)</span> units of time, the mean and standard deviation are, respectively, <span class="math inline">\(\lambda t\)</span> and <span class="math inline">\(\sqrt{\lambda t}\)</span>.</p>
-</section>
-<section id="poisson-distribution-1" class="slide level2">
-<h2>Poisson distribution</h2>
-<ul>
-<li><p>Discrete distribution</p></li>
-<li><p>Used to model count data (# of successes), especially for rare events</p></li>
-<li><p>Used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small</p></li>
+</ul></li>
+<li><p>Shorthand for a random variable, <span class="math inline">\(X\)</span>, that has a Poisson distribution: <span class="math display">\[X \sim \text{Pois}(\lambda)\]</span></p></li>
 </ul>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="definition">
-<p><strong>Definition 6</strong>. <em>Distribution of a <strong>Poisson</strong> random variable. Let</em> <span class="math inline">\(X\)</span> be the total number of successes in an interval (such as time) with an average success rate <span class="math inline">\(\lambda\)</span>. Then probability of observing exactly <span class="math inline">\(k\)</span> successes in a unit interval is</p>
-</div>
-<ul>
-<li><p>The parameter of a Poisson distribution is <span class="math inline">\(\lambda\)</span>.</p></li>
-<li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a Poisson distribution, then we write in shorthand</p></li>
-</ul>
+<section id="poisson-distribution-r-commands" class="slide level2">
+<h2>Poisson distribution: R commands</h2>
+<p>R commands with their <span style="color:#BF396F">input</span> and <span style="color:#367B79">output</span>:</p>
+<table style="width:90%;">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>R code</th>
+<th>What does it return?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>rpois()</code></td>
+<td>returns <span style="color:#367B79">sample of random variables</span> with <span style="color:#BF396F">specified Poisson distribution</span></td>
+</tr>
+<tr class="even">
+<td><code>dpois()</code></td>
+<td>returns <span style="color:#367B79">value of probability density</span> at <span style="color:#BF396F">certain point of the Poisson distribution</span></td>
+</tr>
+<tr class="odd">
+<td><code>ppois()</code></td>
+<td>returns <span style="color:#367B79">cumulative probability</span> of getting <span style="color:#BF396F">certain point (or less) of the Poisson distribution</span></td>
+</tr>
+<tr class="even">
+<td><code>qpois()</code></td>
+<td>returns <span style="color:#367B79">number of cases</span> corresponding | to <span style="color:#BF396F">desired quantile</span></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="mean-and-sd" class="slide level2">
-<h2>Mean and SD</h2>
-<div class="theorem">
-<p><strong>Theorem 7</strong>. <em>Mean and SD of a Poisson r.v. If</em> <span class="math inline">\(X\)</span> is a Poisson r.v. with parameter <span class="math inline">\(\lambda\)</span>, then</p>
-</div>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
+<section id="example-probabilities-from-a-poisson-distribution-14" class="slide level2">
+<h2>Example: probabilities from a Poisson distribution (1/4)</h2>
 <div class="example">
-<p><strong>Example 8</strong>. <em><strong>Typhoid fever</strong> Suppose there are on average 5 deaths per year from typhoid fever over a 1-year period.</em></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/Poisson_L5.png" style="width:5in"></p>
-<figcaption>image</figcaption>
-</figure>
+<div class="ex-ttl">
+<p>Typhoid fever</p>
 </div>
+<div class="ex-cont">
+<div class="columns">
+<div class="column">
+<p>Suppose there are on average 5 deaths per year from typhoid fever over a 1-year period.</p>
 <ol type="1">
-<li><p><em>What is the probability of 3 deaths in a year?</em></p></li>
-<li><p><em>What is the probability of 2 deaths in 0.5 years?</em></p></li>
-<li><p><em>What is the probability of more than 12 deaths in 2 years?</em></p></li>
+<li><p>What is the probability of 3 deaths in a year?</p></li>
+<li><p>What is the probability of 2 deaths in 0.5 years?</p></li>
+<li><p>What is the probability of more than 12 deaths in 2 years?</p></li>
+</ol>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="06_Normal_Poisson_files/figure-revealjs/unnamed-chunk-14-1.png" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-probabilities-from-a-poisson-distribution-24" class="slide level2">
+<h2>Example: probabilities from a Poisson distribution (2/4)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Typhoid fever</p>
+</div>
+<div class="ex-cont">
+<p>Suppose there are on average 5 deaths per year from typhoid fever over a 1-year period.</p>
+<ol type="1">
+<li>What is the probability of 3 deaths in a year?</li>
 </ol>
 </div>
-</section></section>
-<section>
-<section id="learning-objective" class="title-slide slide level1 center">
-<h1>Learning Objective?</h1>
-
+</div>
+<ul>
+<li><span class="math inline">\(\lambda = 5\)</span> and we want <span class="math inline">\(P(X = 3)\)</span></li>
+</ul>
+<p><span class="math display">\[P(X=3) = \frac{e^{-5}5^{3}}{3!} = 0.1404\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">dpois</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">lambda =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1403739</code></pre>
+</div>
+</div>
 </section>
-<section id="example-poisson-approximation-of-binomial-distribution" class="slide level2">
-<h2>Example: Poisson approximation of binomial distribution</h2>
+<section id="example-probabilities-from-a-poisson-distribution-34" class="slide level2">
+<h2>Example: probabilities from a Poisson distribution (3/4)</h2>
 <div class="example">
-<p><strong>Example 9</strong>. <em><strong>Cleft palate</strong> About 1 in every 1,700 babies is born with cleft palate in the United States. Find the probability that there are 2 babies born with cleft palates amongst the next 3000 births at OHSU.</em></p>
-<ol type="1">
-<li><p><em>Calculate exact probability.</em></p></li>
-<li><p><em>Calculate approximate probability.</em></p></li>
+<div class="ex-ttl">
+<p>Typhoid fever</p>
+</div>
+<div class="ex-cont">
+<p>Suppose there are on average 5 deaths per year from typhoid fever over a 1-year period.</p>
+<ol start="2" type="1">
+<li>What is the probability of 2 deaths in 0.5 years?</li>
 </ol>
 </div>
+</div>
+<p><span class="math inline">\(\lambda = ?\)</span> and we want <span class="math inline">\(P(X = 2)\)</span></p>
+<ul>
+<li><p><span class="math inline">\(\lambda=5\)</span> was the rate for one year. When we want the rate for half year, we need to calculate a new <span class="math inline">\(\lambda\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\lambda = \dfrac{5 \text{ deaths}}{1 \text{ year}}\cdot\dfrac{1 \text{ year}}{2 \text{ half-years}}=\dfrac{2.5 \text{ deaths}}{1 \text{ half-year}}\)</span></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[P(X=2) = \frac{e^{-2.5}2.5^{2}}{2!} = 0.0.2565\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">dpois</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">lambda =</span> <span class="fl">2.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2565156</code></pre>
+</div>
+</div>
+</section>
+<section id="example-probabilities-from-a-poisson-distribution-44" class="slide level2">
+<h2>Example: probabilities from a Poisson distribution (4/4)</h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Typhoid fever</p>
+</div>
+<div class="ex-cont">
+<p>Suppose there are on average 5 deaths per year from typhoid fever over a 1-year period.</p>
+<ol start="3" type="1">
+<li>What is the probability of more than 12 deaths in 2 years?</li>
+</ol>
+</div>
+</div>
+<p><span class="math inline">\(\lambda = ?\)</span> and we want <span class="math inline">\(P(X &gt; 12)\)</span></p>
+<ul>
+<li>Need to calculate a new <span class="math inline">\(\lambda\)</span> for 2 years: <span class="math inline">\(\lambda = \dfrac{5 \text{ deaths}}{1 \text{ year}}\cdot\dfrac{2 \text{ years}}{1 \text{ two-years}}=\dfrac{10 \text{ deaths}}{1 \text{ two-year}}=\dfrac{10 \text{ deaths}}{2 \text{ years}}\)</span></li>
+</ul>
+<p><span class="math display">\[P(X&gt;12) = 1 - P(X \leq 12) = 1 - \sum_{k=0}^{12}\frac{e^{-10}10^{k}}{k!} = 0.2084\]</span></p>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">ppois</span>(<span class="at">q =</span> <span class="dv">12</span>, <span class="at">lambda =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2084435</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ppois</span>(<span class="at">q =</span> <span class="dv">12</span>, <span class="at">lambda =</span> <span class="dv">10</span>, </span>
+<span id="cb27-2"><a href="#cb27-2"></a>      <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2084435</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="poisson-approximation-of-binomial-distribution" class="slide level2">
+<h2>Poisson approximation of binomial distribution</h2>
+<ul>
+<li>Poisson distribution can be used to approximate binomial distribution when <span class="math inline">\(n\)</span> is large and <span class="math inline">\(p\)</span> is small
+<ul>
+<li>When Normal approximation does not work</li>
+</ul></li>
+<li>Binomial distributions for different <span class="math inline">\(n\)</span> (columns) and <span class="math inline">\(p\)</span> (rows)</li>
+</ul>
 
-<div class="footer footer-default">
+
+<img data-src="06_Normal_Poisson_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 <p>Lesson 6 Slides</p>
 </div>
 </section></section>
