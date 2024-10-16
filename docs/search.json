@@ -14487,14 +14487,14 @@
     "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#case-study-description",
     "title": "R06: ggplot2, Part 1",
     "section": "Case Study Description",
-    "text": "Case Study Description\n\nIn the US, individuals with developmental disabilities typically receive services and support from state governments.\n\nCalifornia allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)\nRecipients of DDS funds are referred to as “consumers.”\n\nDataset dds.discr\n\nsample of 1,000 DDS consumers (out of a total of ~ 250,000)\ndata include age, gender, race/ethnicity, and annual DDS financial support per consumer\n\nPrevious research\n\nResearchers examined expenditures on consumers by ethnicity\nFound that the mean annual expenditure on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\nSee Section 1.7.1 in the textbook for more details"
+    "text": "Case Study Description\n\nIn the US, individuals with developmental disabilities typically receive services and support from state governments.\n\nCalifornia allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)\nRecipients of DDS funds are referred to as “consumers.”\n\n\n \n\nDataset dds.discr\n\nSample of 1,000 DDS consumers (out of a total of ~ 250,000)\nData include age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer\n\n\n \n\nFor now, we are going to explore these data with R\nSee Section 1.7.1 in the textbook for more details"
   },
   {
     "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#load-dds.discr-dataset-from-oibiostat-package",
     "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#load-dds.discr-dataset-from-oibiostat-package",
     "title": "R06: ggplot2, Part 1",
     "section": "Load dds.discr dataset from oibiostat package",
-    "text": "Load dds.discr dataset from oibiostat package\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+    "text": "Load dds.discr dataset from oibiostat package\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\n \nThe code below needs to be run every time you restart R or render a Qmd file:\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n \n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
   },
   {
     "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#getting-to-know-the-dataset",
@@ -16182,5 +16182,26 @@
     "title": "Lesson 6: Normal and Poisson distributions",
     "section": "Example: Normal approximation or Binomial distribution (2/2)",
     "text": "Example: Normal approximation or Binomial distribution (2/2)\n\n\n\n\nExample: Vaccinated people testing positive for Covid-19 (revisited)\n\n\nAbout 25% of people that test positive for Covid-19 are vaccinated for it. Suppose 100 people have tested positive for Covid-19 (independently of each other). Let \\(X\\) denote the number of people that are vaccinated among the 100 that tested positive. What is the probability that fewer than 20 of the people that tested positive are vaccinated?\n\nCalculate exact probability.\nCalculate approximate probability.\n\n\n\n\n\\(p=0.25\\), \\(n=100\\), we want \\(P(X &lt; 20)\\)\n\nApproximate probability = Normal distribution\n\nMean = \\(\\mu = np = 0.25\\cdot 100 = 25\\)\nSD = \\(\\sigma = \\sqrt{np(1-p)}=\\sqrt{100\\cdot 0.25 \\cdot (1-0.25)} = 4.33\\)\n\n\n\\[X \\sim \\text{Normal}\\big(\\mu=25, \\sigma = 4.33\\big)\\]\n\nUse continuity correction: Instead of calculating \\(P(X \\leq 19)\\), we calculate \\(P(X \\leq 19.5)\\)\n\n\npnorm(q = 19.5, mean = 25, \n      sd = sqrt( 100*0.25*0.75 ))\n\n[1] 0.1020119"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Adding more to plots!",
+    "text": "Adding more to plots!\nTilt text so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots-1",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots-1",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Adding more to plots!",
+    "text": "Adding more to plots!\nWe can change labels!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(x = \"Race and ethnicity\", y = \"Proportion\", \n       title = \"Proportion of individuals receiving DDS by race and ethnicity\")"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots-2",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots-2",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Adding more to plots!",
+    "text": "Adding more to plots!\nIncrease text size so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),\n        axis.title = element_text(size = 35))\n\n\n\n\nR06 Slides"
   }
 ]

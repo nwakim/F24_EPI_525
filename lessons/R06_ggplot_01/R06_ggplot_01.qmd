@@ -147,19 +147,16 @@ library(gtsummary) # NEW!!
     -   California allocates funds to developmentally disabled residents through the *Department of Developmental Services (DDS)*
     -   Recipients of DDS funds are referred to as "consumers."
 
+ 
+
 -   Dataset `dds.discr`
 
-    -   sample of 1,000 DDS consumers (out of a total of \~ 250,000)
-    -   data include [**age, gender, race/ethnicity, and annual DDS financial support per consumer**]{style="color:green"}
+    -   Sample of 1,000 DDS consumers (out of a total of \~ 250,000)
+    -   Data include [age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer]{style="color:#C83532"}
 
--   **Previous research**
+ 
 
-    -   Researchers examined expenditures on consumers by ethnicity
-    -   Found that the mean annual expenditure on Hispanics was less than that on White non-Hispanics.
-
--   Result: an allegation of ethnic discrimination was brought against the California DDS.
-
--   **Question: Are the data sufficient evidence of ethnic discrimination?**
+- For now, we are going to explore these data with `R`
 
 -   See Section 1.7.1 in the textbook for more details
 
@@ -171,12 +168,16 @@ library(gtsummary) # NEW!!
 
 -   Load the `oibiostat` package and the dataset `dds.discr`
 
-[**the code below needs to be run *every time* you restart R or render a Qmd file**]{style="color:darkorange"}
+ 
+
+[**The code below needs to be run *every time* you restart R or render a Qmd file:**]{style="color:#BF396F"}
 
 ```{r}
 library(oibiostat)
 data("dds.discr")
 ```
+
+ 
 
 -   After loading the dataset `dds.discr` using `data("dds.discr")`, you will see `dds.discr` in the Data list of the Environment window.
 
@@ -291,7 +292,7 @@ ggplot(data = dds.discr1,
 :::
 :::::
 
-## Density plots
+## Density plots {visibility="hidden"}
 
 What is being measured on the vertical axes?
 
@@ -343,18 +344,6 @@ ggplot(data = dds.discr1,
 :::
 :::::
 
-## Boxplots: 5 number summary visualization
-
-<!-- ![](../img_slides/boxplot_no_outliers.png) -->
-
-No outliers:
-
-![https://www.simplypsychology.org/boxplots.html](../img_slides/boxplot_no_outliers.png){fig-align="center" width="821"}
-
-With outliers:
-
-![https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51](../img_slides/boxplot_w_outliers.png){fig-align="center" width="796"}
-
 # Categorical data
 
 ## Barplots
@@ -389,195 +378,44 @@ ggplot(data = dds.discr1,
 :::
 :::::
 
-# Summarizing categorical data and some data wrangling
 
-<!-- ::: {layout-ncol=3} -->
+## Adding more to plots!
 
-:::::: columns
-::: {.column width="33%"}
-![[dplyr](https://dplyr.tidyverse.org/)](../img_slides/hex-dplyr.png){fig-align="center" height="300"}
-:::
-
-::: {.column width="33%"}
-![[magrittr](https://magrittr.tidyverse.org/)](../img_slides/magrittr.png){fig-align="center" height="300"}
-:::
-
-::: {.column width="33%"}
-![[janitor](https://cran.r-project.org/web/packages/janitor/readme/README.html)](../img_slides/janitor_logo_small.png){fig-align="center" height="300"}
-:::
-::::::
-
-## Frequency tables: `count()`
-
-::::: columns
-::: {.column width="50%"}
--   `count` is from the `dplyr` package
--   the output is a long tibble, and not a "nice" table
-
+Tilt text so we can read it!
 ```{r}
-dds.discr1 %>% count(r_e)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-dds.discr1 %>% 
-  count(r_e, age.cohort)
-```
-:::
-:::::
-
-## How to use the pipe `%>%`
-
-The pipe operator `%>%` strings together commands to be performed sequentially
-
-```{r}
-dds.discr1 %>% head(n=3)      # pronounce %>% as "then"
-```
-
--   Always *first list the tibble* that the commands are being applied to
--   Can use **multiple pipes** to run multiple commands in sequence
-    -   What does the following code do?
-
-```{r}
-#| eval: false
-dds.discr1 %>% head(n=3) %>% summary()
-```
-
-## Frequency tables: `janitor` package's `tabyl` function
-
-::::: columns
-::: {.column width="50%"}
-```{r}
+#| fig.height: 8
+#| fig.width: 14
 #| code-line-numbers: "3"
-# default table
-dds.discr1 %>% 
-  tabyl(r_e)  
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
 ```
-:::
 
-::: {.column width="50%"}
-`adorn_` your table!
+## Adding more to plots!
 
+We can change labels!
 ```{r}
-#| code-line-numbers: "3-4"
-dds.discr1 %>% 
-  tabyl(r_e) %>%
-  adorn_totals("row") %>% 
-  adorn_pct_formatting(digits=2)  
-```
-:::
-:::::
-
-## Relative frequency table
-
-::::: columns
-::: {.column width="40%"}
--   A **relative frequency** table shows **proportions (or percentages)** instead of counts
-
--   To the right I removed (deselected) the counts column (`n`) to create a relative frequency table
-:::
-
-::: {.column width="60%"}
-```{r}
+#| fig.height: 8
+#| fig.width: 14
 #| code-line-numbers: "4-5"
-dds.discr1 %>% 
-  tabyl(r_e) %>%
-  adorn_totals("row") %>% 
-  adorn_pct_formatting(digits=2) %>%   
-  select(-n) 
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Race and ethnicity", y = "Proportion", 
+       title = "Proportion of individuals receiving DDS by race and ethnicity")
 ```
-:::
-:::::
 
-## Contingency tables (two-way tables)
+## Adding more to plots!
 
-::::: columns
-::: {.column width="40%"}
--   **Contingency tables** summarize data for two categorical variables
-    -   with each value in the table representing the number of times\
-        a particular combination of outcomes occurs
--   **Row & column totals**\
-    are sometimes called **marginal totals**
-:::
-
-::: {.column width="60%"}
+Increase text size so we can read it!
 ```{r}
-#| code-line-numbers: "2-3"
-dds.discr1 %>% 
-  tabyl(r_e, sex_MF) %>%    
-  adorn_totals(c("row", "col"))    
-```
-:::
-:::::
-
-## Contingency tables with percentages
-
-```{r}
-#| code-line-numbers: "4-6"
-dds.discr1 %>% 
-  tabyl(r_e, age.cohort) %>%
-  adorn_totals(c("row")) %>%
-  adorn_percentages("row") %>%   
-  adorn_pct_formatting(digits=0) %>%    
-  adorn_ns()    
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "3-5"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),
+        axis.title = element_text(size = 35))
 ```
 
-# Summarizing numeric data
 
-## Mean annual DDS expenditures by race/ethnicity
-
-::::: columns
-::: {.column width="45%"}
-```{r}
-mean(dds.discr1$expenditures)
-
-dds.discr1 %>% 
-  summarize(
-    ave = mean(expenditures),
-    SD = sd(expenditures),
-    med = median(expenditures))
-```
-:::
-
-::: {.column width="55%"}
-```{r}
-#| code-line-numbers: "2"
-dds.discr1 %>% 
-  group_by(r_e) %>% 
-  summarize(
-    ave = mean(expenditures),
-    SD = sd(expenditures),
-    med = median(expenditures))
-```
-:::
-:::::
-
-## `get_summary_stats()` from `rstatix` package
-
-```{r}
-dds.discr1 %>% get_summary_stats()
-
-dds.discr1 %>% 
-  group_by(r_e) %>%
-  get_summary_stats(expenditures, type = "common")
-```
-
-## How to force all output to be shown? (1/2)
-
-Use `kable()` from the `knitr` package.
-
-```{r}
-dds.discr1 %>% get_summary_stats() %>% kable()
-```
-
-## How to force all output to be shown? `knitr` (2/2)
-
-Use `kable()` from the `knitr` package.
-
-```{r}
-dds.discr1 %>% 
-  group_by(r_e) %>%
-  get_summary_stats(expenditures, type = "common") %>% 
-  kable()
-```
