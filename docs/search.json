@@ -16048,7 +16048,7 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html",
     "title": "Muddy Points",
     "section": "",
-    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!"
+    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!\n\n\nCode that I used to create these plots of binomial RVs\nlibrary(tidyverse)\n\nx &lt;- -5:250\nn = c(6,14,30,60,100)\np = 0.5\n\nbinom = data.frame(x=rep(x, length(n)), \n                   y=dbinom(x, rep(n, each=length(x)), p),\n                   n=rep(n, each=length(x)))\n\nggplot(binom %&gt;% filter(y &gt; 1e-5) %&gt;% \n         group_by(n), \n       aes(x, y, colour=factor(n))) +\n  geom_point(size=0.6) +\n  geom_segment(aes(x=x, xend=x, y=0, yend=y, colour=factor(n)), lwd=0.8, alpha=0.5) +\n  facet_grid(. ~ n, scales=\"free\", space=\"free\") +\n  theme(legend.position = \"none\",\n        axis.title = element_text(size = 14),    # Axis title size\n        axis.text = element_text(size = 12),     # Axis text size\n        strip.text = element_text(size = 13)) +  # Facet label size\n  labs(x = \"Number of successes\", y = \"Probability\")"
   },
   {
     "objectID": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#application-of-expected-values-and-variance",
@@ -16076,7 +16076,7 @@
     "href": "lessons/05_RVs_Binomial/05_RVs_Binomial_muddy_points.html#application-of-expected-values-and-variance-for-discrete-rvs",
     "title": "Muddy Points",
     "section": "",
-    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!"
+    "text": "Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.\nLet’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows \\(n\\), the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!\n\n\nCode that I used to create these plots of binomial RVs\nlibrary(tidyverse)\n\nx &lt;- -5:250\nn = c(6,14,30,60,100)\np = 0.5\n\nbinom = data.frame(x=rep(x, length(n)), \n                   y=dbinom(x, rep(n, each=length(x)), p),\n                   n=rep(n, each=length(x)))\n\nggplot(binom %&gt;% filter(y &gt; 1e-5) %&gt;% \n         group_by(n), \n       aes(x, y, colour=factor(n))) +\n  geom_point(size=0.6) +\n  geom_segment(aes(x=x, xend=x, y=0, yend=y, colour=factor(n)), lwd=0.8, alpha=0.5) +\n  facet_grid(. ~ n, scales=\"free\", space=\"free\") +\n  theme(legend.position = \"none\",\n        axis.title = element_text(size = 14),    # Axis title size\n        axis.text = element_text(size = 12),     # Axis text size\n        strip.text = element_text(size = 13)) +  # Facet label size\n  labs(x = \"Number of successes\", y = \"Probability\")"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson.html#we-can-look-at-a-plot-of-binomial-distributions",
@@ -16203,5 +16203,47 @@
     "title": "R06: ggplot2, Part 1",
     "section": "Adding more to plots!",
     "text": "Adding more to plots!\nIncrease text size so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),\n        axis.title = element_text(size = 35))\n\n\n\n\nR06 Slides"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Because statistical software can easily compute probabilities for Binomial random variables (RVs), it may seem like the Normal approximation of the Binomial distribution is not necessary. And that’s mostly true!\nHowever, once we get to inference, we will see some cases where the Normal approximation is really helpful. For example, calculating confidence intervals for the probability of success is really hard to do with a Binomial distribution, but it is much easier with a Normal approximation!"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#why-do-we-care-about-the-normal-approximation-of-the-binomial-distribution",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#why-do-we-care-about-the-normal-approximation-of-the-binomial-distribution",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "Because statistical software can easily compute probabilities for Binomial random variables (RVs), it may seem like the Normal approximation of the Binomial distribution is not necessary. And that’s mostly true!\nHowever, once we get to inference, we will see some cases where the Normal approximation is really helpful. For example, calculating confidence intervals for the probability of success is really hard to do with a Binomial distribution, but it is much easier with a Normal approximation!"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#why-is-quarto-necessary",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#why-is-quarto-necessary",
+    "title": "Muddy Points",
+    "section": "2. Why is Quarto necessary?",
+    "text": "2. Why is Quarto necessary?\nIt’s not necessary, but it is an incredible tool when you are trying to share or show your coding work to someone else. You will be able to neatly and clearly explain yourself outside of the code, then integrate code and output into one document!"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#normal-approximation-of-the-binomial-distribution-feeling-difficult",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#normal-approximation-of-the-binomial-distribution-feeling-difficult",
+    "title": "Muddy Points",
+    "section": "3. Normal approximation of the Binomial distribution feeling difficult?",
+    "text": "3. Normal approximation of the Binomial distribution feeling difficult?\nTry watching YouTube videos on it, like this one: https://www.youtube.com/watch?v=CCqWkJ_pqNU&ab_channel=jbstatistics"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#need-more-help-with-the-r-coding-for-the-dnorm-and-pnorm-functions",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#need-more-help-with-the-r-coding-for-the-dnorm-and-pnorm-functions",
+    "title": "Muddy Points",
+    "section": "4. Need more help with the R coding for the dnorm and pnorm functions?",
+    "text": "4. Need more help with the R coding for the dnorm and pnorm functions?\nHere’s a good site! https://seankross.com/notes/dpqr/"
+  },
+  {
+    "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#need-help-with-normal-distribution-probabilities",
+    "href": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html#need-help-with-normal-distribution-probabilities",
+    "title": "Muddy Points",
+    "section": "4. Need help with Normal distribution probabilities?",
+    "text": "4. Need help with Normal distribution probabilities?\nTextbook pages 156-160 have some pretty helpful graphics with a Normal curve that show how to calculate probabilities!"
   }
 ]

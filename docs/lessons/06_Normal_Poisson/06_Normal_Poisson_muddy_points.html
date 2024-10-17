@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-10-14">
+<meta name="dcterms.date" content="2024-10-16">
 
 <title>Biostatistics 1 - Muddy Points</title>
 <style>
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -95,8 +61,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -164,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 14, 2024</p>
+      <p class="date">October 16, 2024</p>
     </div>
   </div>
   
@@ -180,68 +144,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="application-of-expected-values-and-variance-for-discrete-rvs" class="level2">
-<h2 class="anchored" data-anchor-id="application-of-expected-values-and-variance-for-discrete-rvs">1. Application of expected values and variance for discrete RVs</h2>
-<p>Expected value (mean) and variance, as we saw in this lesson about random variables, is the same as what we saw in Lesson 2 on numeric summaries! These are really good tools to calculate the center and spread of a distribution. In the case of a random variable with a Binomial distribution, this will tell us the expected number of “successes” and how spread out the number of successes are.</p>
-<p>Let’s use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows <span class="math inline">\(n\)</span>, the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!</p>
-<div class="cell">
-<details>
-<summary>Code that I used to create these plots of binomial RVs</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">250</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">14</span>,<span class="dv">30</span>,<span class="dv">60</span>,<span class="dv">100</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fl">0.5</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>binom <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">rep</span>(x, <span class="fu">length</span>(n)), </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y=</span><span class="fu">dbinom</span>(x, <span class="fu">rep</span>(n, <span class="at">each=</span><span class="fu">length</span>(x)), p),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">n=</span><span class="fu">rep</span>(n, <span class="at">each=</span><span class="fu">length</span>(x)))</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(binom <span class="sc">%&gt;%</span> <span class="fu">filter</span>(y <span class="sc">&gt;</span> <span class="fl">1e-5</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>         <span class="fu">group_by</span>(n), </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(x, y, <span class="at">colour=</span><span class="fu">factor</span>(n))) <span class="sc">+</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">xend=</span>x, <span class="at">y=</span><span class="dv">0</span>, <span class="at">yend=</span>y, <span class="at">colour=</span><span class="fu">factor</span>(n)), <span class="at">lwd=</span><span class="fl">0.8</span>, <span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> n, <span class="at">scales=</span><span class="st">"free"</span>, <span class="at">space=</span><span class="st">"free"</span>) <span class="sc">+</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),    <span class="co"># Axis title size</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),     <span class="co"># Axis text size</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">13</span>)) <span class="sc">+</span>  <span class="co"># Facet label size</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of successes"</span>, <span class="at">y =</span> <span class="st">"Probability"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img src="05_RVs_Binomial_muddy_points_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="1152"></p>
-</div>
-</div>
+<section id="why-do-we-care-about-the-normal-approximation-of-the-binomial-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-we-care-about-the-normal-approximation-of-the-binomial-distribution">1. Why do we care about the Normal approximation of the Binomial distribution?</h2>
+<p>Because statistical software can easily compute probabilities for Binomial random variables (RVs), it may seem like the Normal approximation of the Binomial distribution is not necessary. And that’s mostly true!</p>
+<p>However, once we get to inference, we will see some cases where the Normal approximation is really helpful. For example, calculating confidence intervals for the probability of success is really hard to do with a Binomial distribution, but it is much easier with a Normal approximation!</p>
 </section>
-<section id="use-of-these-distributions" class="level2">
-<h2 class="anchored" data-anchor-id="use-of-these-distributions">2. Use of these distributions</h2>
-<ul>
-<li>When it comes to important distributions in statistics, we want to get familiar with the the characteristics and calculations because it is an important step in the data analysis process.</li>
-</ul>
-<p>Here is the basic data analysis process:</p>
-<ol type="1">
-<li>Recognize type of data we’re dealing with (continuous, discrete, categorical, ordinal, count?)</li>
-<li>Determine the key characteristics of the data. What is it measuring? For example, count data can be out of a certain number of trials (binomial) or has no limit to the count (Poisson)</li>
-<li>Identify the distribution of the data so we can easily describe/summarize the data (using known properties of the distribution)</li>
-<li>Use specific tools that are designed specifically for that distribution to analyze the data (aka answer a specific research question)</li>
-</ol>
+<section id="why-is-quarto-necessary" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-quarto-necessary">2. Why is Quarto necessary?</h2>
+<p>It’s not necessary, but it is an incredible tool when you are trying to share or show your coding work to someone else. You will be able to neatly and clearly explain yourself outside of the code, then integrate code and output into one document!</p>
 </section>
-<section id="binomial-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="binomial-distribution">3. Binomial distribution</h2>
-<p>Eek! I’ve ran out of time to organize and really get into this explanation. Instead, I’m going to drop a few links below. Keep Googling for other videos on Bernoulli and Binomial distributions! There are a lot out there, so let me know if one really resonates with you.</p>
-<ul>
-<li><p>Here’s some back and forth between me and Chatgpt: <a href="https://chatgpt.com/share/670eb8e4-7644-8006-8eb9-c62348ecdef6" class="uri">https://chatgpt.com/share/670eb8e4-7644-8006-8eb9-c62348ecdef6</a></p></li>
-<li><p>This video explain the Binomial dsitribution pretty well: <a href="https://www.youtube.com/watch?v=J8jNoF-K8E8&amp;ab_channel=StatQuestwithJoshStarmer" class="uri">https://www.youtube.com/watch?v=J8jNoF-K8E8&amp;ab_channel=StatQuestwithJoshStarmer</a></p>
-<ul>
-<li>Watch up until ~10 minutes. After that, it goes into a test beyond us right now!</li>
-</ul></li>
-<li><p>Here’s a video on Binomial distribution with an example and R calculations: <a href="https://www.youtube.com/watch?v=j_T66Cph7Ro&amp;ab_channel=EquitableEquations" class="uri">https://www.youtube.com/watch?v=j_T66Cph7Ro&amp;ab_channel=EquitableEquations</a></p></li>
-</ul>
+<section id="normal-approximation-of-the-binomial-distribution-feeling-difficult" class="level2">
+<h2 class="anchored" data-anchor-id="normal-approximation-of-the-binomial-distribution-feeling-difficult">3. Normal approximation of the Binomial distribution feeling difficult?</h2>
+<p>Try watching YouTube videos on it, like this one: <a href="https://www.youtube.com/watch?v=CCqWkJ_pqNU&amp;ab_channel=jbstatistics" class="uri">https://www.youtube.com/watch?v=CCqWkJ_pqNU&amp;ab_channel=jbstatistics</a></p>
 </section>
-<section id="variance-of-a-discrete-random-variable" class="level2">
-<h2 class="anchored" data-anchor-id="variance-of-a-discrete-random-variable">4. Variance of a discrete random variable</h2>
-<p>I wouldn’t get too caught up in the formula here. The important part of variance is that we measure the spread (as seen in Muddy Point 1) of a distribution or data.</p>
+<section id="need-more-help-with-the-r-coding-for-the-dnorm-and-pnorm-functions" class="level2">
+<h2 class="anchored" data-anchor-id="need-more-help-with-the-r-coding-for-the-dnorm-and-pnorm-functions">4. Need more help with the R coding for the <code>dnorm</code> and <code>pnorm</code> functions?</h2>
+<p>Here’s a good site! <a href="https://seankross.com/notes/dpqr/" class="uri">https://seankross.com/notes/dpqr/</a></p>
+</section>
+<section id="need-help-with-normal-distribution-probabilities" class="level2">
+<h2 class="anchored" data-anchor-id="need-help-with-normal-distribution-probabilities">4. Need help with Normal distribution probabilities?</h2>
+<p>Textbook pages 156-160 have some pretty helpful graphics with a Normal curve that show how to calculate probabilities!</p>
 
 
 </section>

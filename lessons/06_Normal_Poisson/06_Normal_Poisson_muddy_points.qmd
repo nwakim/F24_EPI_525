@@ -1,0 +1,34 @@
+---
+title: "Muddy Points"
+date: "10/16/2024"
+date-modified: "today"
+format: 
+  html:
+    link-external-newwindow: true
+    page-layout: full
+    toc: false
+editor_options: 
+  chunk_output_type: console
+---
+
+## 1. Why do we care about the Normal approximation of the Binomial distribution?
+
+Because statistical software can easily compute probabilities for Binomial random variables (RVs), it may seem like the Normal approximation of the Binomial distribution is not necessary. And that's mostly true! 
+
+However, once we get to inference, we will see some cases where the Normal approximation is really helpful. For example, calculating confidence intervals for the probability of success is really hard to do with a Binomial distribution, but it is much easier with a Normal approximation!
+
+## 2. Why is Quarto necessary?
+
+It's not necessary, but it is an incredible tool when you are trying to share or show your coding work to someone else. You will be able to neatly and clearly explain yourself outside of the code, then integrate code and output into one document!
+
+## 3. Normal approximation of the Binomial distribution feeling difficult?
+
+Try watching YouTube videos on it, like this one: <https://www.youtube.com/watch?v=CCqWkJ_pqNU&ab_channel=jbstatistics>
+
+## 4. Need more help with the R coding for the `dnorm` and `pnorm` functions?
+
+Here's a good site! <https://seankross.com/notes/dpqr/>
+
+## 4. Need help with Normal distribution probabilities?
+
+Textbook pages 156-160 have some pretty helpful graphics with a Normal curve that show how to calculate probabilities!

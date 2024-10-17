@@ -1,12 +1,13 @@
 ---
 title: "Muddy Points"
-date: "10/7/2024"
+date: "10/14/2024"
 date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
     page-layout: full
     toc: false
+    code-fold: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -17,10 +18,10 @@ Expected value (mean) and variance, as we saw in this lesson about random variab
 
 Let's use some simulations to show this! The probability of success for all of these random variables is 0.5. The top part of the graphs shows $n$, the number of trials. The centers and spreads for each of these random variables (all Binomally distributed) are different!
 ```{r}
-#| echo: false
 #| message: false
 #| fig-height: 4
 #| fig-width: 12
+#| code-summary: "Code that I used to create these plots of binomial RVs"
 
 library(tidyverse)
 
