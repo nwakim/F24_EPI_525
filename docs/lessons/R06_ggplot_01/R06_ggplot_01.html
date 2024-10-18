@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Meike Niederhausen and Nicky Wakim">
-  <meta name="dcterms.date" content="2024-10-16">
+  <meta name="dcterms.date" content="2024-10-21">
   <title>Biostatistics 1 - R06: ggplot2, Part 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -403,7 +403,7 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 
-  <p class="date">2024-10-16</p>
+  <p class="date">2024-10-21</p>
 </section>
 <section id="from-last-time-r-packages" class="slide level2">
 <h2>From last time: R Packages</h2>
@@ -489,8 +489,24 @@ Meike Niederhausen and Nicky Wakim
 </section>
 <section id="introduction-to-ggplot2" class="slide level2">
 <h2>Introduction to <code>ggplot2</code></h2>
-
-<img data-src="../img_slides/horst_ggplot2_exploratory.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/">Artwork by @allison_horst</a></p></section>
+<div class="columns">
+<div class="column" style="width:46%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/horst_ggplot2_exploratory.png"></p>
+<figcaption><a href="https://allisonhorst.com/">Artwork by @allison_horst</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:54%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/ggplot2_masterpiece.png"></p>
+<figcaption><a href="https://allisonhorst.com/">Artwork by @allison_horst</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="ggplot2-in-tidyverse" class="slide level2">
 <h2><code>ggplot2</code> in tidyverse</h2>
 <div class="columns">
@@ -498,15 +514,10 @@ Meike Niederhausen and Nicky Wakim
 <p><img data-src="../img_slides/ggplot2-part-of-tidyverse.png"></p>
 </div><div class="column" style="width:60%;">
 <ul>
-<li><p>We talked about this in our review notes</p>
+<li><p><code>ggplot2</code> is tidyverse’s data visualization package</p>
 <ul>
-<li>I want to revisit it: always helps to have more examples!</li>
-<li>This example is closer to the multivariable work we’ll do in this class!</li>
+<li>This is one of the main ways to create plots and explore data</li>
 </ul></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><strong>ggplot2</strong> is tidyverse’s data visualization package</li>
 </ul>
 <p>&nbsp;</p>
 <ul>
@@ -514,7 +525,11 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li>It is inspired by the book <strong>Grammar of Graphics</strong> by Leland Wilkinson</li>
+<li><p>It is inspired by the book <strong>Grammar of Graphics</strong> by Leland Wilkinson</p>
+<ul>
+<li>Make graphs/plots by combining independent components</li>
+<li>Start with a basic plot then add layers</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -525,6 +540,111 @@ Meike Niederhausen and Nicky Wakim
 }
 </style>
 </div>
+</section>
+<section id="basics-of-a-ggplot" class="slide level2">
+<h2>Basics of a ggplot</h2>
+
+<img data-src="../img_slides/ggplot_basics_from_ppt.png" class="r-stretch quarto-figure-center"></section>
+<section id="grammar-of-ggplot2" class="slide level2">
+<h2>Grammar of ggplot2</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../../lessons/img_slides/ggplot_layers.png" width="1600"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li><code>ggplot2</code> needs at least the following three to produce a chart:
+<ul>
+<li>data, a mapping, and a layer</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>For the most part, there are default settings for the other parts:
+<ul>
+<li>scales, facets, coordinates, and themes</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data" class="slide level2">
+<h2><strong>Data</strong></h2>
+<ul>
+<li><p>ggplot2 uses data to construct a plot</p></li>
+<li><p>Works best when every observation is a row and each variable is a column</p></li>
+<li><p>First step in plotting:</p>
+<ul>
+<li>Pass the data to the <code>ggplot</code> function, which stores the data to be used later by other parts of the plotting system</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-1" class="slide level2">
+<h2>Data</h2>
+<ul>
+<li>For example, if we intend to make a graphic about the <code>mpg</code> dataset, we would start as follows:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="576" class="r-stretch quarto-figure-center"></section>
+<section id="mapping" class="slide level2">
+<h2><strong>Mapping</strong></h2>
+<ul>
+<li><p>Mappings use the <code>aes()</code> function to <strong>map</strong> variables to the different axes on a plot</p>
+<ul>
+<li><code>aes()</code> stands for “aesthetics”</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-mapping" class="slide level2">
+<h2>Data + Mapping</h2>
+<ul>
+<li>If we want the <code>cty</code> and <code>hwy</code> columns to map to the x- and y-coordinates in the plot, we can do that as follows:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> cty, <span class="at">y =</span> hwy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-5-1.png" width="576" class="r-stretch quarto-figure-center"></section>
+<section id="layers" class="slide level2">
+<h2><strong>Layers</strong></h2>
+<p>The heart of any graphic is the <a href="https://ggplot2-book.org/toolbox.html">layers</a>. They take the mapped data and display it in something humans can understand as a representation of the data. Every layer consists of three important parts:</p>
+<ol type="1">
+<li><p>The <a href="https://ggplot2-book.org/individual-geoms.html"><strong>geometry</strong></a> that determines <em>how</em> data are displayed, such as points, lines, or rectangles.</p></li>
+<li><p>The <a href="https://ggplot2-book.org/statistical-summaries.html"><strong>statistical transformation</strong></a> that may compute new variables from the data and affect <em>what</em> of the data is displayed.</p></li>
+<li><p>The <a href="https://ggplot2-book.org/layers.html#position"><strong>position adjustment</strong></a> that primarily determines <em>where</em> a piece of data is being displayed.</p></li>
+</ol>
+<p>A layer can be constructed using the <code>geom_*()</code> and <code>stat_*()</code> functions. These functions often determine one of the three parts of a layer, while the other two can still be specified. Here is how we can use two layers to display the <code>cty</code> and <code>hwy</code> columns of the <code>mpg</code> dataset as points and stack a trend line on top.</p>
+</section>
+<section id="data-mapping-layers" class="slide level2">
+<h2>Data + Mapping + Layers</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(cty, hwy)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="co"># to create a scatterplot</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="co"># to fit and overlay a loess trendline</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-6-1.png" width="576" class="r-stretch quarto-figure-center"></section>
+<section id="more" class="slide level2">
+<h2>more</h2>
+
+<img data-src="../img_slides/khealy_ggplot1.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://github.com/rstudio-conf-2020/dataviz">Kieran Healy</a></p></section>
+<section id="case-study" class="title-slide slide level1 center">
+<h1>Case study?</h1>
+
+</section>
+
+<section>
+<section id="visualize-numerical-variables-with-ggplot2" class="title-slide slide level1 center">
+<h1>Visualize numerical variables with <code>ggplot2</code></h1>
+
 </section>
 <section id="case-study-description" class="slide level2">
 <h2>Case Study Description</h2>
@@ -559,8 +679,8 @@ Meike Niederhausen and Nicky Wakim
 <p>&nbsp;</p>
 <p><span style="color:#BF396F"><strong>The code below needs to be run <em>every time</em> you restart R or render a Qmd file:</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(oibiostat)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">data</span>(<span class="st">"dds.discr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(oibiostat)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">data</span>(<span class="st">"dds.discr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
 <ul>
@@ -575,8 +695,8 @@ Meike Niederhausen and Nicky Wakim
 <li><code>glimpse()</code> tends to have nicer output for <code>tibbles</code> than <code>str()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,000
 Columns: 6
@@ -592,7 +712,7 @@ $ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, His
 <section id="some-things-to-note-on-this-dataset" class="slide level2">
 <h2>Some things to note on this dataset</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,000
 Columns: 6
@@ -624,11 +744,11 @@ $ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, His
 </ul>
 <p>&nbsp;</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>dds.discr1 <span class="ot">=</span> dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">rename</span>(<span class="at">sex_MF =</span> gender, </span>
-<span id="cb7-3"><a href="#cb7-3"></a>         <span class="at">r_e =</span> ethnicity)</span>
-<span id="cb7-4"><a href="#cb7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">glimpse</span>(dds.discr1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>dds.discr1 <span class="ot">=</span> dds.discr <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">rename</span>(<span class="at">sex_MF =</span> gender, </span>
+<span id="cb10-3"><a href="#cb10-3"></a>         <span class="at">r_e =</span> ethnicity)</span>
+<span id="cb10-4"><a href="#cb10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">glimpse</span>(dds.discr1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,000
 Columns: 6
@@ -641,55 +761,26 @@ $ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, His
 </div>
 </div>
 </section>
-<section>
-<section id="visualize-numerical-variables-with-ggplot2" class="title-slide slide level1 center">
-<h1>Visualize numerical variables with <code>ggplot2</code></h1>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/ggplotlogo.png" height="400"></p>
-<figcaption><a href="https://ggplot2.tidyverse.org/index.html">ggplot</a></figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/ggplot2_masterpiece.png" height="400"></p>
-<figcaption><a href="https://allisonhorst.com/">Artwork by @allison_horst</a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="basics-of-a-ggplot" class="slide level2">
-<h2>Basics of a ggplot</h2>
-
-<img data-src="../img_slides/ggplot_basics_from_ppt.png" class="r-stretch quarto-figure-center"></section>
-<section id="grammar-of-ggplot2" class="slide level2">
-<h2>Grammar of ggplot2</h2>
-
-<img data-src="../img_slides/khealy_ggplot1.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://github.com/rstudio-conf-2020/dataviz">Kieran Healy</a></p></section>
 <section id="histograms" class="slide level2">
 <h2>Histograms</h2>
 <p>What is being measured on the vertical axes?</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb9-2"><a href="#cb9-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb12-2"><a href="#cb12-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb10-2"><a href="#cb10-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb13-2"><a href="#cb13-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -700,24 +791,24 @@ $ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, His
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb11-2"><a href="#cb11-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb14-2"><a href="#cb14-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb12-2"><a href="#cb12-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb12-4"><a href="#cb12-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
-<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
-<span id="cb12-6"><a href="#cb12-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb15-2"><a href="#cb15-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb15-4"><a href="#cb15-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
+<span id="cb15-5"><a href="#cb15-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
+<span id="cb15-6"><a href="#cb15-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -729,20 +820,20 @@ $ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, His
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb15-2"><a href="#cb15-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
-<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb18-2"><a href="#cb18-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-14-1.png" width="480"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-17-1.png" width="480"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb16-2"><a href="#cb16-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
-<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-15-1.png" width="480"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-18-1.png" width="480"></p>
 </div>
 </div>
 </div>
@@ -760,23 +851,23 @@ $ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, His
 <p>Counts (below) vs.<br>
 percentages (right)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb17-2"><a href="#cb17-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">geom_bar</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb20-2"><a href="#cb20-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_bar</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-16-1.png" width="576"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-19-1.png" width="576"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
-<span id="cb18-2"><a href="#cb18-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop),  </span>
-<span id="cb18-4"><a href="#cb18-4"></a>               <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb18-5"><a href="#cb18-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>  </span>
-<span id="cb18-6"><a href="#cb18-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb21-2"><a href="#cb21-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop),  </span>
+<span id="cb21-4"><a href="#cb21-4"></a>               <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb21-5"><a href="#cb21-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>  </span>
+<span id="cb21-6"><a href="#cb21-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-17-1.png" width="576"></p>
+<p><img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-20-1.png" width="576"></p>
 </div>
 </div>
 </div>
@@ -786,36 +877,44 @@ percentages (right)</p>
 <h2>Adding more to plots!</h2>
 <p>Tilt text so we can read it!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-18-1.png" width="1344" class="r-stretch"></section>
+<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-21-1.png" width="1344" class="r-stretch"></section>
 <section id="adding-more-to-plots-1" class="slide level2">
 <h2>Adding more to plots!</h2>
 <p>We can change labels!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Race and ethnicity"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>, </span>
-<span id="cb20-5"><a href="#cb20-5"></a>       <span class="at">title =</span> <span class="st">"Proportion of individuals receiving DDS by race and ethnicity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Race and ethnicity"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>, </span>
+<span id="cb23-5"><a href="#cb23-5"></a>       <span class="at">title =</span> <span class="st">"Proportion of individuals receiving DDS by race and ethnicity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-19-1.png" width="1344" class="r-stretch"></section>
+<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-22-1.png" width="1344" class="r-stretch"></section>
 <section id="adding-more-to-plots-2" class="slide level2">
 <h2>Adding more to plots!</h2>
 <p>Increase text size so we can read it!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">60</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">35</span>),</span>
-<span id="cb21-4"><a href="#cb21-4"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">35</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">60</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">35</span>),</span>
+<span id="cb24-4"><a href="#cb24-4"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">35</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
+<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-23-1.png" width="1344" class="r-stretch"></section>
+<section id="resources-on-ggplot" class="slide level2">
+<h2>Resources on <code>ggplot</code></h2>
+<ul>
+<li><code>ggplot2</code> package website: <a href="https://ggplot2.tidyverse.org/articles/ggplot2.html" class="uri">https://ggplot2.tidyverse.org/articles/ggplot2.html</a></li>
+<li>Online textbook for <code>ggplot2</code>: <a href="https://ggplot2-book.org/" class="uri">https://ggplot2-book.org/</a></li>
+<li>Another online resource for data visualization with <code>ggplot2</code>: <a href="https://socviz.co/index.html#preface" class="uri">https://socviz.co/index.html#preface</a></li>
+</ul>
 
-<img data-src="R06_ggplot_01_files/figure-revealjs/unnamed-chunk-20-1.png" width="1344" class="r-stretch"><div class="footer footer-default">
+<div class="footer footer-default">
 <p>R06 Slides</p>
 </div>
 </section></section>

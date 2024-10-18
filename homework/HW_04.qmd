@@ -22,11 +22,14 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+- Assignment due 11/1
+- Solutions due 11/10
 
-**Due 10/31/24**
+## Directions {.unnumbered}
 
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_04.qmd).
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
 
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd) if you want to work in a Quarto doc. **You do not need to work in a Quarto doc for this homework!!**
 
 ## Directions {.unnumbered}
 
@@ -42,6 +45,14 @@ It is a good idea to try rendering your document from time to time as you go alo
 :::
 
 # Book exercises
+
+## 3.38 Stenographer’s typos {.unnumbered}
+
+
+
+## 3.40 Osteosarcoma in NYC {.unnumbered}
+
+Only parts a-c
 
 ## 1.24 Income and education in US counties {.unnumbered}
 

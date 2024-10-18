@@ -8,9 +8,6 @@ format:
     toc: true
     toc_float:
       collapsed: false
-    number-sections: true
-    number-depth: 3
-    theme: lumen
     self-contained: true
     html-math-method: mathjax
 ---
@@ -21,18 +18,24 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Due 10/25/24**
+## Key dates
+
+- Assignment due 10/25
+- Solutions due 11/3
+- Presentation 
+  - Due 11/12 for videos
+  - Meetings scheduled for week of 11/11
 
 ## Directions {.unnumbered}
 
 [Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
 
-You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd) if you want to work in a Quarto doc.
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd) if you want to work in a Quarto doc. **You do not need to work in a Quarto doc for this homework!!**
 
 
 :::{.callout-important}
 * The non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
-    * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand._
+    * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand if you want._
     * You can also have all your R code together at the end of your homework file
 * If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
 :::
@@ -50,9 +53,9 @@ Note that the solutions in the back of the book are not quite right. For part (a
 
 ## 3.8 Chickenpox, Part I.  {.unnumbered}
 
-For #3.8, calculate the binomial probabilities two ways:  
-(1) using the formula (can use R to calculate factorials or the choose function) and  
-(2) using R functions for binomial distribution probabilities. 
+For #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
+
+In part d, $|Z| < 0.5$ uses an absolute value. This translates to $-0.5 < Z < 0.5$.
 
 
 ## 3.10 Chickenpox, Part II.  {.unnumbered}
@@ -65,7 +68,7 @@ For #3.10, you can use R functions to calculate the binomial probabilities inste
 For this problem:
 
 - Make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
-- Calculate probabilities using R 
+- Calculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)
 :::
 
 
@@ -79,14 +82,6 @@ For this problem:
 ## 3.32 Chickenpox, Part III  {.unnumbered}
 
 
-
-## 3.38 Stenographer’s typos {.unnumbered}
-
-
-
-## 3.40 Osteosarcoma in NYC {.unnumbered}
-
-Only parts a-c
 
 
 

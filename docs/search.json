@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot part 1\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/21\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nggplot part 2\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/?\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -2202,7 +2202,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3*\n\n10/25\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\nPlease note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#assignments",
@@ -2335,14 +2335,14 @@
     "href": "homework/HW_03.html",
     "title": "Homework 3",
     "section": "",
-    "text": "Due 10/25/24"
+    "text": "Assignment due 10/25\nSolutions due 11/3\nPresentation\n\nDue 11/12 for videos\nMeetings scheduled for week of 11/11"
   },
   {
     "objectID": "homework/HW_03.html#directions",
     "href": "homework/HW_03.html#directions",
     "title": "Homework 3",
     "section": "Directions",
-    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc.\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.\n\nSome problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.\nYou can also have all your R code together at the end of your homework file\n\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment."
+    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc. You do not need to work in a Quarto doc for this homework!!\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.\n\nSome problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand if you want.\nYou can also have all your R code together at the end of your homework file\n\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment."
   },
   {
     "objectID": "homework/HW_03.html#baggage-fees",
@@ -2370,7 +2370,7 @@
     "href": "homework/HW_03.html#chickenpox-part-i.",
     "title": "Homework 3",
     "section": "3.8 Chickenpox, Part I.",
-    "text": "3.8 Chickenpox, Part I.\nFor #3.8, calculate the binomial probabilities two ways:\n(1) using the formula (can use R to calculate factorials or the choose function) and\n(2) using R functions for binomial distribution probabilities."
+    "text": "3.8 Chickenpox, Part I.\nFor #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\nIn part d, \\(|Z| &lt; 0.5\\) uses an absolute value. This translates to \\(-0.5 &lt; Z &lt; 0.5\\)."
   },
   {
     "objectID": "homework/HW_03.html#chickenpox-part-ii.",
@@ -2496,14 +2496,14 @@
     "href": "homework/HW_04.html",
     "title": "Homework 4",
     "section": "",
-    "text": "Due 10/31/24\nDownload the .qmd file for this assignment from Github."
+    "text": "Assignment due 11/1\nSolutions due 11/10"
   },
   {
     "objectID": "homework/HW_04.html#directions",
     "href": "homework/HW_04.html#directions",
     "title": "Homework 4",
     "section": "Directions",
-    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe R exercises are to be completed using Quarto.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc. You do not need to work in a Quarto doc for this homework!!"
   },
   {
     "objectID": "homework/HW_04.html#instructions-for-normal-probability-exercises",
@@ -2559,7 +2559,7 @@
     "href": "homework/HW_04.html#osteosarcoma-in-nyc",
     "title": "Homework 4",
     "section": "3.40 Osteosarcoma in NYC",
-    "text": "3.40 Osteosarcoma in NYC"
+    "text": "3.40 Osteosarcoma in NYC\nOnly parts a-c"
   },
   {
     "objectID": "homework/HW_04.html#heights-of-adults",
@@ -4792,7 +4792,7 @@
     "href": "homework/HW_03.html#area-under-the-curve-part-ii",
     "title": "Homework 3",
     "section": "3.20 Area under the curve, Part II",
-    "text": "3.20 Area under the curve, Part II\n\n\n\n\n\n\nImportant\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R"
+    "text": "3.20 Area under the curve, Part II\n\n\n\n\n\n\nImportant\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)"
   },
   {
     "objectID": "homework/HW_03.html#triathlon-times",
@@ -7116,14 +7116,14 @@
     "href": "homework.html#homeworks",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3\n\n10/26\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Please note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3*\n\n10/25\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\nPlease note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#structure",
     "href": "homework.html#structure",
     "title": "Homework",
     "section": "Structure",
-    "text": "Structure\nThere are three distinct parts to our homework:\n\n\n\n\n\n\n\n\n\nHomework part\nDue date\nWhat is required?\nGrading\n\n\n\n\nIndividual assignment\nDate specified above\nYou will complete the homework assignment, and turn in an individual copy of your work. This will be graded for completion.\nFor completion\n\n\nGroup solutions\n~ 1 week after assignment is due\nWith groups of 4, you will make a homework key for 4 questions (that Nicky chooses). Each group member will be in charge of turning in one question’s solutions. This will be graded for correctness. The group will receive the same grade, which is summed across questions.\nFor correctness\n\n\nIndividual presentation\n(May refer to this as videos/meeting)\nHW 3: 11/10?\nHW 6: 12/8?\nFor homeworks 3 and 6, you will also need to make a video or meet with me. You will use less than 10 minutes to explain your homework question solutions. This will be graded for correctness. Example videos will be posted after homework 1.\nGraded out of 4 points. 0 indicating no understanding of the solutions. 1 indicating some basic understanding, but missing major steps. 3 indicating that most of the problem is considered, but not necessarily all or all correctly. 4 indicating that all needed parts were considered and correctly solved.\n\n\n\nIf you are having any group dynamic issues, please please please come see me earlier rather than later! You do not need to wait for group evals. We will come up with options for moving forward!"
+    "text": "Structure\nThere are three distinct parts to our homework:\n\n\n\n\n\n\n\n\n\nHomework part\nDue date\nWhat is required?\nGrading\n\n\n\n\nIndividual assignment\nDate specified above\nYou will complete the homework assignment, and turn in an individual copy of your work. This will be graded for completion. However, it will be very helpful if you work hard on each problem.\nFor completion\n\n\nGroup solutions\n~ 1 week after assignment is due\nWith groups of 4, you will make a homework key for 4 questions (that Nicky chooses). Each group member will be in charge of turning in one question’s solutions. You can think of solutions as a written explanation of your thought process or a written teaching of the work to someone new to the problem. This will be graded for correctness. The group will receive the same grade, which is summed across questions.\nFor correctness\n\n\nIndividual presentation\n(May refer to this as videos/meeting)\nHW 3: 11/12 (meetings in week of 11/11)\nHW 6: 12/8?\nFor homeworks 3 and 6, you will need to make a video or meet with me to explain the solutions to one homework problem. Nicky will identify a single problem for the homework (1 of the 4 solutions problems). You will use less than 10 minutes to explain the homework solution. This will be graded for correctness. Example videos will be posted after homework 2.\nGraded out of 4 points. 0 indicating no understanding of the solutions. 1 indicating some basic understanding, but missing major steps. 3 indicating that most of the problem is considered, but not necessarily all or all correctly. 4 indicating that all needed parts were considered and correctly solved.\n\n\n\nIf you are having any group dynamic issues, please please please come see me earlier rather than later! You do not need to wait for group evals. We will come up with options for moving forward!"
   },
   {
     "objectID": "hw_answers/HW_01.html",
@@ -11211,7 +11211,7 @@
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Include organization\n\nHave them do a data management script!!\n\nself-contained not a proper yaml command now\ncitations!! in zotero!!\nGit and GitHub!!"
+    "text": "We are going to finish our Lesson 06 notes on Poisson regression\nThen we are going to embark on a really fun week involving ggplot and data visualization!"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_key_info.html#to-nicky",
@@ -14550,7 +14550,7 @@
     "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#grammar-of-ggplot2",
     "title": "R06: ggplot2, Part 1",
     "section": "Grammar of ggplot2",
-    "text": "Grammar of ggplot2\n\nKieran Healy"
+    "text": "Grammar of ggplot2\n\n\n\n\n\n\n\n\n\nggplot2 needs at least the following three to produce a chart:\n\ndata, a mapping, and a layer\n\n\n \n\nFor the most part, there are default settings for the other parts:\n\nscales, facets, coordinates, and themes"
   },
   {
     "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#histograms",
@@ -14998,21 +14998,21 @@
     "href": "hw_answers/HW_03_ans.html",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "Review the solution in the back of the book for exercise 3.5.\n\n\n215 eggs\n\n\n\n8.53 eggs\n\n\n\n\n\n\n\nFor #3.8, calculate the binomial probabilities two ways:\n(1) using the formula (can use R to calculate factorials or the choose function) and\n(2) using R functions for binomial distribution probabilities.\n\n\n\nFor #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nAdditional Instructions - IMPORTANT!!!\n\nFor ALL normal distribution exercises:\n\nmake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\ncalculate probabilities using both\n\nz-table\nR"
+    "text": "Important\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a).\n\n\n\n\n\n\n\n\nFor #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\n\nFor #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)"
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#gull-clutch-size",
     "href": "hw_answers/HW_03_ans.html#gull-clutch-size",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "Review the solution in the back of the book for exercise 3.5.\n\n\n215 eggs\n\n\n\n8.53 eggs"
+    "text": "Important\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a)."
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-i.",
     "href": "hw_answers/HW_03_ans.html#chickenpox-part-i.",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "For #3.8, calculate the binomial probabilities two ways:\n(1) using the formula (can use R to calculate factorials or the choose function) and\n(2) using R functions for binomial distribution probabilities."
+    "text": "For #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities."
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-ii.",
@@ -15145,7 +15145,7 @@
     "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#introduction-to-ggplot2",
     "title": "R06: ggplot2, Part 1",
     "section": "Introduction to ggplot2",
-    "text": "Introduction to ggplot2\n\nArtwork by @allison_horst"
+    "text": "Introduction to ggplot2\n\n\n\n\n\nArtwork by @allison_horst\n\n\n\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#from-last-time-r-packages",
@@ -15173,7 +15173,7 @@
     "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#ggplot2-in-tidyverse",
     "title": "R06: ggplot2, Part 1",
     "section": "ggplot2 in tidyverse",
-    "text": "ggplot2 in tidyverse\n\n\n\n\n\nWe talked about this in our review notes\n\nI want to revisit it: always helps to have more examples!\nThis example is closer to the multivariable work we’ll do in this class!\n\n\n \n\nggplot2 is tidyverse’s data visualization package\n\n \n\nThe gg in “ggplot2” stands for Grammar of Graphics\n\n \n\nIt is inspired by the book Grammar of Graphics by Leland Wilkinson"
+    "text": "ggplot2 in tidyverse\n\n\n\n\n\nggplot2 is tidyverse’s data visualization package\n\nThis is one of the main ways to create plots and explore data\n\n\n \n\nThe gg in “ggplot2” stands for Grammar of Graphics\n\n \n\nIt is inspired by the book Grammar of Graphics by Leland Wilkinson\n\nMake graphs/plots by combining independent components\nStart with a basic plot then add layers"
   },
   {
     "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#rename-one-of-the-first-things-i-usually-do",
@@ -16202,7 +16202,7 @@
     "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#adding-more-to-plots-2",
     "title": "R06: ggplot2, Part 1",
     "section": "Adding more to plots!",
-    "text": "Adding more to plots!\nIncrease text size so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),\n        axis.title = element_text(size = 35))\n\n\n\n\nR06 Slides"
+    "text": "Adding more to plots!\nIncrease text size so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),\n        axis.title = element_text(size = 35))"
   },
   {
     "objectID": "lessons/06_Normal_Poisson/06_Normal_Poisson_muddy_points.html",
@@ -16245,5 +16245,103 @@
     "title": "Muddy Points",
     "section": "4. Need help with Normal distribution probabilities?",
     "text": "4. Need help with Normal distribution probabilities?\nTextbook pages 156-160 have some pretty helpful graphics with a Normal curve that show how to calculate probabilities!"
+  },
+  {
+    "objectID": "homework/HW_04.html#directions-1",
+    "href": "homework/HW_04.html#directions-1",
+    "title": "Homework 4",
+    "section": "Directions",
+    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe R exercises are to be completed using Quarto.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+  },
+  {
+    "objectID": "homework/HW_03.html#key-dates",
+    "href": "homework/HW_03.html#key-dates",
+    "title": "Homework 3",
+    "section": "",
+    "text": "Assignment due 10/25\nSolutions due 11/3\nPresentation\n\nDue 11/12 for videos\nMeetings scheduled for week of 11/11"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html",
+    "title": "R06: ggplot2, Part 1",
+    "section": "",
+    "text": "A good analogy for R packages is that they are like apps you can download onto a mobile phone:\n\n\n\nModernDive Figure 1.4"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#area-under-the-curve-part-ii",
+    "href": "hw_answers/HW_03_ans.html#area-under-the-curve-part-ii",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "Important\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_key_info.html#today",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_key_info.html#today",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "We are going to finish our Lesson 06 notes on Poisson regression\nThen we are going to embark on a really fun week involving ggplot and data visualization!"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#resources-on-ggplot",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#resources-on-ggplot",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Resources on ggplot",
+    "text": "Resources on ggplot\n\nggplot2 package website: https://ggplot2.tidyverse.org/articles/ggplot2.html\nOnline textbook for ggplot2: https://ggplot2-book.org/\nAnother online resource for data visualization with ggplot2: https://socviz.co/index.html#preface\n\n\n\nR06 Slides"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#more",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#more",
+    "title": "R06: ggplot2, Part 1",
+    "section": "more",
+    "text": "more\n\nKieran Healy"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#data",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#data",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Data",
+    "text": "Data\n\nggplot2 uses data to construct a plot\nWorks best when every observation is a row and each variable is a column\nFirst step in plotting:\n\nPass the data to the ggplot function, which stores the data to be used later by other parts of the plotting system"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#mapping",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#mapping",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Mapping",
+    "text": "Mapping\n\nMappings use the aes() function to map variables to the different axes on a plot\n\naes() stands for “aesthetics”"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#layers",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#layers",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Layers",
+    "text": "Layers\nThe heart of any graphic is the layers. They take the mapped data and display it in something humans can understand as a representation of the data. Every layer consists of three important parts:\n\nThe geometry that determines how data are displayed, such as points, lines, or rectangles.\nThe statistical transformation that may compute new variables from the data and affect what of the data is displayed.\nThe position adjustment that primarily determines where a piece of data is being displayed.\n\nA layer can be constructed using the geom_*() and stat_*() functions. These functions often determine one of the three parts of a layer, while the other two can still be specified. Here is how we can use two layers to display the cty and hwy columns of the mpg dataset as points and stack a trend line on top."
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#data-1",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#data-1",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Data",
+    "text": "Data\n\nFor example, if we intend to make a graphic about the mpg dataset, we would start as follows:\n\n\nggplot(data = mpg)"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#data-mapping",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#data-mapping",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Data + Mapping",
+    "text": "Data + Mapping\n\nIf we want the cty and hwy columns to map to the x- and y-coordinates in the plot, we can do that as follows:\n\n\nggplot(mpg, mapping = aes(x = cty, y = hwy))"
+  },
+  {
+    "objectID": "lessons/R06_ggplot_01/R06_ggplot_01.html#data-mapping-layers",
+    "href": "lessons/R06_ggplot_01/R06_ggplot_01.html#data-mapping-layers",
+    "title": "R06: ggplot2, Part 1",
+    "section": "Data + Mapping + Layers",
+    "text": "Data + Mapping + Layers\n\nggplot(mpg, aes(cty, hwy)) +\n  # to create a scatterplot\n  geom_point() +\n  # to fit and overlay a loess trendline\n  geom_smooth(formula = y ~ x, method = \"lm\")"
+  },
+  {
+    "objectID": "homework.html#rubrics",
+    "href": "homework.html#rubrics",
+    "title": "Homework",
+    "section": "Rubrics",
+    "text": "Rubrics\n\nAssignmentsSolutionsPresentations\n\n\nA total of 1 point will be given for a complete homework. The following rubric will be used:\n\n\n\n\n\n\n\n\n\n1 point\n0 points\n\n\n\n\nCompleteness\nAll problems and parts (like a, b, c, etc.) are thoroughly attempted. Answers can be incorrect or correct. For parts with longer processes and calculations, solution set up and calculations are required.\nEntire problems or parts are skipped. -OR- The full process of a problem is not completed through the calculation.\n\n\n\n\n\nA total of 12 points is given to the whole group, 3 points per question. For each question, the following rubric will be used:\n\n\n\n\n\n\n\n\n\n\n1 point\n0.5 points\n0 points\n\n\n\n\nAccuracy\nAll calculations and answers are correct, with clear and logical steps\nMinor errors in calculations or reasoning, but most concepts are applied correctly\nMajor mistakes or incorrect application of statistical methods\n\n\nUnderstanding of concepts\nDemonstrates strong understanding of statistical concepts and their application\nSome understanding, but with gaps or misconceptions about certain concepts\nLittle or no understanding of the key statistical ideas\n\n\nPresentation and clarity\nHomework is well-organized, legible, and easy to follow, with clear explanations of steps and reasoning\nWork is somewhat disorganized or unclear, but the main points can still be understood\nPoorly organized or difficult to understand, with little to no explanation of the work\n\n\n\n\n\nPresentations will be graded out of 9 points with the following rubric:\n\n\n\n\n\n\n\n\n\n\n\n3 point\n2 points\n1 point\n0 points\n\n\n\n\nAccuracy\nAll solutions are correct, with accurate calculations and appropriate use of statistical methods\nMost solutions are correct, but there are minor errors or slight misapplications of methods\nSeveral solutions are incorrect or contain significant errors in calculations or methodology\nMost or all solutions are incorrect or missing, with little to no evidence of correct application of methods\n\n\nUnderstanding of concepts\nDemonstrates a strong understanding of the statistical concepts, applying them accurately and clearly throughout the presentation\nShows good understanding of the concepts, though there may be occasional errors, unclear explanations of key ideas, or exclusion of an important step.\nShows limited understanding, with several misapplications, gaps in conceptual explanations, or exclusion of an important step\nLittle to no understanding of the statistical concepts is demonstrated; frequent errors or misconceptions are present\n\n\nOrganization and formatting\nThe presentation is well-organized, with a logical flow that is easy to follow. Sections and explanations are clearly structured. Easy to follow thought process and learn.\nThe presentation is mostly organized, but some sections may lack logical flow. Fairly easy to follow thought process.\n-OR-\nPresentation deserves 3 points but it exceeds 10 minutes.\nThe presentation is somewhat disorganized, with several sections lacking clear structure or transitions. Hard to follow thought process.\n-OR-\nPresentation deserves 2 points but it exceeds 10 minutes.\nThe presentation is poorly organized, with no logical structure. Cannot follow thought process.\n-OR-\nPresentation deserves 1 points but it exceeds 10 minutes."
   }
 ]

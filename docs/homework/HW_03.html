@@ -4440,6 +4440,17 @@ vertical-align: -.125em;
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
 
 </head>
 
@@ -4495,7 +4506,8 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#directions" id="toc-directions" class="nav-link active" data-scroll-target="#directions">Directions</a></li>
+  <li><a href="#key-dates" id="toc-key-dates" class="nav-link active" data-scroll-target="#key-dates">Key dates</a></li>
+  <li><a href="#directions" id="toc-directions" class="nav-link" data-scroll-target="#directions">Directions</a></li>
   <li><a href="#book-exercises" id="toc-book-exercises" class="nav-link" data-scroll-target="#book-exercises">Book exercises</a>
   <ul class="collapse">
   <li><a href="#gull-clutch-size" id="toc-gull-clutch-size" class="nav-link" data-scroll-target="#gull-clutch-size">3.5 Gull clutch size</a></li>
@@ -4506,8 +4518,6 @@ vertical-align: -.125em;
   <li><a href="#triathlon-times" id="toc-triathlon-times" class="nav-link" data-scroll-target="#triathlon-times">3.22 Triathlon times</a></li>
   <li><a href="#arsenic-poisoning" id="toc-arsenic-poisoning" class="nav-link" data-scroll-target="#arsenic-poisoning">3.28 Arsenic poisoning</a></li>
   <li><a href="#chickenpox-part-iii" id="toc-chickenpox-part-iii" class="nav-link" data-scroll-target="#chickenpox-part-iii">3.32 Chickenpox, Part III</a></li>
-  <li><a href="#stenographers-typos" id="toc-stenographers-typos" class="nav-link" data-scroll-target="#stenographers-typos">3.38 Stenographer’s typos</a></li>
-  <li><a href="#osteosarcoma-in-nyc" id="toc-osteosarcoma-in-nyc" class="nav-link" data-scroll-target="#osteosarcoma-in-nyc">3.40 Osteosarcoma in NYC</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -4539,11 +4549,22 @@ vertical-align: -.125em;
 
 </header>
 
-<p><strong>Due 10/25/24</strong></p>
+<section id="key-dates" class="level2">
+<h2 class="anchored" data-anchor-id="key-dates">Key dates</h2>
+<ul>
+<li>Assignment due 10/25</li>
+<li>Solutions due 11/3</li>
+<li>Presentation
+<ul>
+<li>Due 11/12 for videos</li>
+<li>Meetings scheduled for week of 11/11</li>
+</ul></li>
+</ul>
+</section>
 <section id="directions" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="directions">Directions</h2>
 <p><a href="https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508">Please turn in this homework on Sakai.</a> Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.</p>
-<p>You can download the .qmd file for this assignment from <a href="https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd">Github</a> if you want to work in a Quarto doc.</p>
+<p>You can download the .qmd file for this assignment from <a href="https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd">Github</a> if you want to work in a Quarto doc. <strong>You do not need to work in a Quarto doc for this homework!!</strong></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -4557,7 +4578,7 @@ Important
 <ul>
 <li>The non-R exercises may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
 <ul>
-<li><em>Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.</em></li>
+<li><em>Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand if you want.</em></li>
 <li>You can also have all your R code together at the end of your homework file</li>
 </ul></li>
 <li>If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.</li>
@@ -4588,9 +4609,8 @@ Important
 </section>
 <section id="chickenpox-part-i." class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="chickenpox-part-i.">3.8 Chickenpox, Part I.</h2>
-<p>For #3.8, calculate the binomial probabilities two ways:<br>
-(1) using the formula (can use R to calculate factorials or the choose function) and<br>
-(2) using R functions for binomial distribution probabilities.</p>
+<p>For #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.</p>
+<p>In part d, <span class="math inline">\(|Z| &lt; 0.5\)</span> uses an absolute value. This translates to <span class="math inline">\(-0.5 &lt; Z &lt; 0.5\)</span>.</p>
 </section>
 <section id="chickenpox-part-ii." class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="chickenpox-part-ii.">3.10 Chickenpox, Part II.</h2>
@@ -4611,7 +4631,7 @@ Important
 <p>For this problem:</p>
 <ul>
 <li>Make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.</li>
-<li>Calculate probabilities using R</li>
+<li>Calculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)</li>
 </ul>
 </div>
 </div>
@@ -4624,13 +4644,6 @@ Important
 </section>
 <section id="chickenpox-part-iii" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="chickenpox-part-iii">3.32 Chickenpox, Part III</h2>
-</section>
-<section id="stenographers-typos" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="stenographers-typos">3.38 Stenographer’s typos</h2>
-</section>
-<section id="osteosarcoma-in-nyc" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="osteosarcoma-in-nyc">3.40 Osteosarcoma in NYC</h2>
-<p>Only parts a-c</p>
 
 
 </section>

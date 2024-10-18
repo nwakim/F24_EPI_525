@@ -3,7 +3,7 @@ title: "R06: `ggplot2`, Part 1"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
-date: "10/16/2024"
+date: "10/21/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -104,24 +104,27 @@ library(gtsummary) # NEW!!
 
 ## Introduction to `ggplot2`
 
+::::: columns
+::: {.column width="46%"}
 ![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/horst_ggplot2_exploratory.png){fig-align="center"}
+:::
+
+::: {.column width="54%"}
+![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/ggplot2_masterpiece.png){fig-align="center"}
+:::
+:::::
 
 ## `ggplot2` in tidyverse
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 ![](../img_slides/ggplot2-part-of-tidyverse.png)
 :::
 
 ::: {.column width="60%"}
--   We talked about this in our review notes
+-   `ggplot2` is tidyverse's data visualization package
 
-    -   I want to revisit it: always helps to have more examples!
-    -   This example is closer to the multivariable work we'll do in this class!
-
- 
-
--   **ggplot2** is tidyverse's data visualization package
+    -   This is one of the main ways to create plots and explore data
 
  
 
@@ -130,15 +133,113 @@ library(gtsummary) # NEW!!
  
 
 -   It is inspired by the book **Grammar of Graphics** by Leland Wilkinson
-:::
-:::
 
+    -   Make graphs/plots by combining independent components
+    -   Start with a basic plot then add layers
+:::
+:::::
 
 ```{css, echo=FALSE}
 .reveal code {
   max-height: 100% !important;
 }
 ```
+
+## Basics of a ggplot
+
+![](../img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
+
+## Grammar of ggplot2
+
+::::: columns
+::: {.column width="60%"}
+![](/lessons/img_slides/ggplot_layers.png){fig-align="center" width="1600"}
+:::
+
+::: {.column width="40%"}
+-   `ggplot2` needs at least the following three to produce a chart:
+    -   data, a mapping, and a layer
+
+ 
+
+-   For the most part, there are default settings for the other parts:
+    -   scales, facets, coordinates, and themes
+:::
+:::::
+
+## **Data**
+
+-   ggplot2 uses data to construct a plot
+
+-   Works best when every observation is a row and each variable is a column
+
+-   First step in plotting:
+
+    -   Pass the data to the `ggplot` function, which stores the data to be used later by other parts of the plotting system
+
+## Data
+
+-   For example, if we intend to make a graphic about the `mpg` dataset, we would start as follows:
+
+```{r}
+#| fig-width: 6
+#| fig-height: 4
+#| fig-align: center
+
+ggplot(data = mpg)
+```
+
+## **Mapping**
+
+-   Mappings use the `aes()` function to **map** variables to the different axes on a plot
+
+    -   `aes()` stands for "aesthetics"
+
+## Data + Mapping
+
+-   If we want the `cty` and `hwy` columns to map to the x- and y-coordinates in the plot, we can do that as follows:
+
+```{r}
+#| fig-width: 6
+#| fig-height: 4
+#| fig-align: center
+
+ggplot(mpg, mapping = aes(x = cty, y = hwy))
+```
+
+## **Layers**
+
+The heart of any graphic is the [layers](https://ggplot2-book.org/toolbox.html). They take the mapped data and display it in something humans can understand as a representation of the data. Every layer consists of three important parts:
+
+1.  The [**geometry**](https://ggplot2-book.org/individual-geoms.html) that determines *how* data are displayed, such as points, lines, or rectangles.
+
+2.  The [**statistical transformation**](https://ggplot2-book.org/statistical-summaries.html) that may compute new variables from the data and affect *what* of the data is displayed.
+
+3.  The [**position adjustment**](https://ggplot2-book.org/layers.html#position) that primarily determines *where* a piece of data is being displayed.
+
+A layer can be constructed using the `geom_*()` and `stat_*()` functions. These functions often determine one of the three parts of a layer, while the other two can still be specified. Here is how we can use two layers to display the `cty` and `hwy` columns of the `mpg` dataset as points and stack a trend line on top.
+
+## Data + Mapping + Layers
+
+```{r}
+#| fig-width: 6
+#| fig-height: 4
+#| fig-align: center
+
+ggplot(mpg, aes(cty, hwy)) +
+  # to create a scatterplot
+  geom_point() +
+  # to fit and overlay a loess trendline
+  geom_smooth(formula = y ~ x, method = "lm")
+```
+
+## more
+
+![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](../img_slides/khealy_ggplot1.png){fig-align="center"}
+
+# Case study?
+
+# Visualize numerical variables with `ggplot2`
 
 ## Case Study Description
 
@@ -156,7 +257,7 @@ library(gtsummary) # NEW!!
 
  
 
-- For now, we are going to explore these data with `R`
+-   For now, we are going to explore these data with `R`
 
 -   See Section 1.7.1 in the textbook for more details
 
@@ -198,16 +299,16 @@ glimpse(dds.discr)  # from tidyverse package (dplyr)
 glimpse(dds.discr)  # from tidyverse package (dplyr)
 ```
 
-- This happens in older datasets (and honestly some newer ones): gender and sex get conflated
-  - I try to catch these issues before sharing datasets with you, but when we load datasets directly from the `oibiostat` package, I can't make these changes
-  - If you are unfamiliar with the differences, please see [this NIH site on sex and gender](https://orwh.od.nih.gov/sex-gender)
-- Also, race and ethnicity can be mislabeled
-  - "White not hispanic" combines race and ethnicity
-  - If you are unfamiliar with the differences, please see [this APA site on race and ethnicity](https://www.apa.org/topics/race-ethnicity)
+-   This happens in older datasets (and honestly some newer ones): gender and sex get conflated
+    -   I try to catch these issues before sharing datasets with you, but when we load datasets directly from the `oibiostat` package, I can't make these changes
+    -   If you are unfamiliar with the differences, please see [this NIH site on sex and gender](https://orwh.od.nih.gov/sex-gender)
+-   Also, race and ethnicity can be mislabeled
+    -   "White not hispanic" combines race and ethnicity
+    -   If you are unfamiliar with the differences, please see [this APA site on race and ethnicity](https://www.apa.org/topics/race-ethnicity)
 
 ## `rename()`: one of the first things I usually do
 
-- I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)
+-   I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)
 
  
 
@@ -218,26 +319,6 @@ dds.discr1 = dds.discr %>%
 
 glimpse(dds.discr1)
 ```
-
-# Visualize numerical variables with `ggplot2`
-
-::::: columns
-::: {.column width="40%"}
-![[ggplot](https://ggplot2.tidyverse.org/index.html)](../img_slides/ggplotlogo.png){fig-align="center" height="400"}
-:::
-
-::: {.column width="60%"}
-![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/ggplot2_masterpiece.png){fig-align="center" height="400"}
-:::
-:::::
-
-## Basics of a ggplot
-
-![](../img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
-
-## Grammar of ggplot2
-
-![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](../img_slides/khealy_ggplot1.png){fig-align="center"}
 
 ## Histograms
 
@@ -378,10 +459,10 @@ ggplot(data = dds.discr1,
 :::
 :::::
 
-
 ## Adding more to plots!
 
 Tilt text so we can read it!
+
 ```{r}
 #| fig.height: 8
 #| fig.width: 14
@@ -394,6 +475,7 @@ ggplot(data = dds.discr1, aes(x = r_e)) +
 ## Adding more to plots!
 
 We can change labels!
+
 ```{r}
 #| fig.height: 8
 #| fig.width: 14
@@ -408,6 +490,7 @@ ggplot(data = dds.discr1, aes(x = r_e)) +
 ## Adding more to plots!
 
 Increase text size so we can read it!
+
 ```{r}
 #| fig.height: 8
 #| fig.width: 14
@@ -418,4 +501,8 @@ ggplot(data = dds.discr1, aes(x = r_e)) +
         axis.title = element_text(size = 35))
 ```
 
+## Resources on `ggplot`
 
+-   `ggplot2` package website: <https://ggplot2.tidyverse.org/articles/ggplot2.html>
+-   Online textbook for `ggplot2`: <https://ggplot2-book.org/>
+-   Another online resource for data visualization with `ggplot2`: <https://socviz.co/index.html#preface>
