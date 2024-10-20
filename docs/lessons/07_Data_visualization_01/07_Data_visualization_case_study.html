@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Biostatistics 1 - Untitled</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/EPI_525.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Biostatistics 1</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../instructors.html" rel="" target="">
+ <span class="menu-text">Instructors</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../homework.html" rel="" target="">
+ <span class="menu-text">Homework</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#case-study" id="toc-case-study" class="nav-link active" data-scroll-target="#case-study">Case study</a>
+  <ul class="collapse">
+  <li><a href="#case-study-description" id="toc-case-study-description" class="nav-link" data-scroll-target="#case-study-description">Case Study Description</a></li>
+  <li><a href="#load-dds.discr-dataset-from-oibiostat-package" id="toc-load-dds.discr-dataset-from-oibiostat-package" class="nav-link" data-scroll-target="#load-dds.discr-dataset-from-oibiostat-package">Load <code>dds.discr</code> dataset from <code>oibiostat</code> package</a></li>
+  <li><a href="#glimpse" id="toc-glimpse" class="nav-link" data-scroll-target="#glimpse"><code>glimpse()</code></a></li>
+  <li><a href="#some-things-to-note-on-this-dataset" id="toc-some-things-to-note-on-this-dataset" class="nav-link" data-scroll-target="#some-things-to-note-on-this-dataset">Some things to note on this dataset</a></li>
+  <li><a href="#rename-one-of-the-first-things-i-usually-do" id="toc-rename-one-of-the-first-things-i-usually-do" class="nav-link" data-scroll-target="#rename-one-of-the-first-things-i-usually-do"><code>rename()</code>: one of the first things I usually do</a></li>
+  <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms">Histograms</a></li>
+  <li><a href="#histograms-showing-proportions" id="toc-histograms-showing-proportions" class="nav-link" data-scroll-target="#histograms-showing-proportions">Histograms showing proportions</a></li>
+  <li><a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots">Density plots</a></li>
+  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots">Boxplots</a></li>
+  </ul></li>
+  <li><a href="#categorical-data" id="toc-categorical-data" class="nav-link" data-scroll-target="#categorical-data">Categorical data</a>
+  <ul class="collapse">
+  <li><a href="#barplots" id="toc-barplots" class="nav-link" data-scroll-target="#barplots">Barplots</a></li>
+  <li><a href="#adding-more-to-plots" id="toc-adding-more-to-plots" class="nav-link" data-scroll-target="#adding-more-to-plots">Adding more to plots!</a></li>
+  <li><a href="#adding-more-to-plots-1" id="toc-adding-more-to-plots-1" class="nav-link" data-scroll-target="#adding-more-to-plots-1">Adding more to plots!</a></li>
+  <li><a href="#adding-more-to-plots-2" id="toc-adding-more-to-plots-2" class="nav-link" data-scroll-target="#adding-more-to-plots-2">Adding more to plots!</a></li>
+  </ul></li>
+  <li><a href="#meikes-notes" id="toc-meikes-notes" class="nav-link" data-scroll-target="#meikes-notes">Meike’s notes</a>
+  <ul class="collapse">
+  <li><a href="#getting-to-know-the-dataset" id="toc-getting-to-know-the-dataset" class="nav-link" data-scroll-target="#getting-to-know-the-dataset">Getting to know the dataset</a></li>
+  <li><a href="#str-structure" id="toc-str-structure" class="nav-link" data-scroll-target="#str-structure"><code>str()</code> structure</a></li>
+  <li><a href="#glimpse-1" id="toc-glimpse-1" class="nav-link" data-scroll-target="#glimpse-1"><code>glimpse()</code></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><code>summary()</code></a></li>
+  <li><a href="#tbl_summary-summary-table" id="toc-tbl_summary-summary-table" class="nav-link" data-scroll-target="#tbl_summary-summary-table"><code>tbl_summary()</code>: summary table</a></li>
+  </ul></li>
+  <li><a href="#visualize-numerical-variables-with-ggplot" id="toc-visualize-numerical-variables-with-ggplot" class="nav-link" data-scroll-target="#visualize-numerical-variables-with-ggplot">Visualize numerical variables with <code>ggplot</code></a>
+  <ul class="collapse">
+  <li><a href="#what-data-variables-are-included-in-the-plot-below" id="toc-what-data-variables-are-included-in-the-plot-below" class="nav-link" data-scroll-target="#what-data-variables-are-included-in-the-plot-below">What data (variables) are included in the plot below?</a></li>
+  <li><a href="#basics-of-a-ggplot" id="toc-basics-of-a-ggplot" class="nav-link" data-scroll-target="#basics-of-a-ggplot">Basics of a ggplot</a></li>
+  <li><a href="#grammar-of-ggplot2" id="toc-grammar-of-ggplot2" class="nav-link" data-scroll-target="#grammar-of-ggplot2">Grammar of ggplot2</a></li>
+  <li><a href="#histograms-1" id="toc-histograms-1" class="nav-link" data-scroll-target="#histograms-1">Histograms</a></li>
+  <li><a href="#histograms-showing-proportions-1" id="toc-histograms-showing-proportions-1" class="nav-link" data-scroll-target="#histograms-showing-proportions-1">Histograms showing proportions</a></li>
+  <li><a href="#distribution-shapes" id="toc-distribution-shapes" class="nav-link" data-scroll-target="#distribution-shapes">Distribution shapes</a></li>
+  <li><a href="#density-plots-1" id="toc-density-plots-1" class="nav-link" data-scroll-target="#density-plots-1">Density plots</a></li>
+  <li><a href="#dot-plots" id="toc-dot-plots" class="nav-link" data-scroll-target="#dot-plots">Dot plots</a></li>
+  <li><a href="#boxplots-1" id="toc-boxplots-1" class="nav-link" data-scroll-target="#boxplots-1">Boxplots</a></li>
+  <li><a href="#boxplots-5-number-summary-visualization" id="toc-boxplots-5-number-summary-visualization" class="nav-link" data-scroll-target="#boxplots-5-number-summary-visualization">Boxplots: 5 number summary visualization</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Untitled</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="case-study" class="level1">
+<h1>Case study</h1>
+<section id="case-study-description" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-description">Case Study Description</h2>
+<ul>
+<li><p>In the US, individuals with developmental disabilities typically receive services and support from state governments.</p>
+<ul>
+<li>California allocates funds to developmentally disabled residents through the <em>Department of Developmental Services (DDS)</em></li>
+<li>Recipients of DDS funds are referred to as “consumers.”</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>Dataset <code>dds.discr</code></p>
+<ul>
+<li>Sample of 1,000 DDS consumers (out of a total of ~ 250,000)</li>
+<li>Data include <span style="color:#C83532">age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer</span></li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>For now, we are going to explore these data with <code>R</code></p></li>
+<li><p>See Section 1.7.1 in the textbook for more details</p></li>
+</ul>
+</section>
+<section id="load-dds.discr-dataset-from-oibiostat-package" class="level2">
+<h2 class="anchored" data-anchor-id="load-dds.discr-dataset-from-oibiostat-package">Load <code>dds.discr</code> dataset from <code>oibiostat</code> package</h2>
+<ul>
+<li><p>The textbook’s datasets are in the R package <code>oibiostat</code></p></li>
+<li><p>Make sure the <code>oibiostat</code> package is installed before running the code below.</p></li>
+<li><p>Load the <code>oibiostat</code> package and the dataset <code>dds.discr</code></p></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color:#BF396F"><strong>The code below needs to be run <em>every time</em> you restart R or render a Qmd file:</strong></span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(oibiostat)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"dds.discr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>After loading the dataset <code>dds.discr</code> using <code>data("dds.discr")</code>, you will see <code>dds.discr</code> in the Data list of the Environment window.</li>
+</ul>
+</section>
+<section id="glimpse" class="level2">
+<h2 class="anchored" data-anchor-id="glimpse"><code>glimpse()</code></h2>
+<ul>
+<li>We previously used the base R structure command <code>str()</code> to get information about variable types in a dataset (in R03: R basics part 2)</li>
+<li>Use <code>glimpse()</code> from the <code>tidyverse</code> package (technically it’s from the <code>dplyr</code> package) to get information about variable types.</li>
+<li><code>glimpse()</code> tends to have nicer output for <code>tibbles</code> than <code>str()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+</section>
+<section id="some-things-to-note-on-this-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="some-things-to-note-on-this-dataset">Some things to note on this dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+<ul>
+<li>This happens in older datasets (and honestly some newer ones): gender and sex get conflated
+<ul>
+<li>I try to catch these issues before sharing datasets with you, but when we load datasets directly from the <code>oibiostat</code> package, I can’t make these changes</li>
+<li>If you are unfamiliar with the differences, please see <a href="https://orwh.od.nih.gov/sex-gender">this NIH site on sex and gender</a></li>
+</ul></li>
+<li>Also, race and ethnicity can be mislabeled
+<ul>
+<li>“White not hispanic” combines race and ethnicity</li>
+<li>If you are unfamiliar with the differences, please see <a href="https://www.apa.org/topics/race-ethnicity">this APA site on race and ethnicity</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="rename-one-of-the-first-things-i-usually-do" class="level2">
+<h2 class="anchored" data-anchor-id="rename-one-of-the-first-things-i-usually-do"><code>rename()</code>: one of the first things I usually do</h2>
+<ul>
+<li>I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)</li>
+</ul>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dds.discr1 <span class="ot">=</span> dds.discr <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">sex_MF =</span> gender, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">r_e =</span> ethnicity)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dds.discr1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ sex_MF       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+</section>
+<section id="histograms" class="level2">
+<h2 class="anchored" data-anchor-id="histograms">Histograms</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms-showing-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="histograms-showing-proportions">Histograms showing proportions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb14-2"><a href="#cb14-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `stat(density)` was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(density)` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb17-2"><a href="#cb17-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
+<span id="cb17-6"><a href="#cb17-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="density-plots" class="level2" data-visibility="hidden">
+<h2 data-visibility="hidden" class="anchored" data-anchor-id="density-plots">Density plots</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">geom_density</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb20-2"><a href="#cb20-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="boxplots" class="level2">
+<h2 class="anchored" data-anchor-id="boxplots">Boxplots</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb22-2"><a href="#cb22-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb23-2"><a href="#cb23-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="categorical-data" class="level1">
+<h1>Categorical data</h1>
+<section id="barplots" class="level2">
+<h2 class="anchored" data-anchor-id="barplots">Barplots</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Counts (below) vs.<br>
+percentages (right)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb24-2"><a href="#cb24-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">geom_bar</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb25-2"><a href="#cb25-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop),  </span>
+<span id="cb25-4"><a href="#cb25-4"></a>               <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>  </span>
+<span id="cb25-6"><a href="#cb25-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-more-to-plots" class="level2">
+<h2 class="anchored" data-anchor-id="adding-more-to-plots">Adding more to plots!</h2>
+<p>Tilt text so we can read it!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="1344"></p>
+</div>
+</div>
+</section>
+<section id="adding-more-to-plots-1" class="level2">
+<h2 class="anchored" data-anchor-id="adding-more-to-plots-1">Adding more to plots!</h2>
+<p>We can change labels!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Race and ethnicity"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>, </span>
+<span id="cb27-5"><a href="#cb27-5"></a>       <span class="at">title =</span> <span class="st">"Proportion of individuals receiving DDS by race and ethnicity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="1344"></p>
+</div>
+</div>
+</section>
+<section id="adding-more-to-plots-2" class="level2">
+<h2 class="anchored" data-anchor-id="adding-more-to-plots-2">Adding more to plots!</h2>
+<p>Increase text size so we can read it!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">60</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">35</span>),</span>
+<span id="cb28-4"><a href="#cb28-4"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">35</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="1344"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="meikes-notes" class="level1">
+<h1>Meike’s notes</h1>
+<section id="getting-to-know-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="getting-to-know-the-dataset">Getting to know the dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1000    6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "id"           "age.cohort"   "age"          "gender"       "expenditures"
+[6] "ethnicity"   </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(dds.discr<span class="sc">$</span>id)) <span class="co"># How many unique id's are there?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1000</code></pre>
+</div>
+</div>
+</section>
+<section id="str-structure" class="level2">
+<h2 class="anchored" data-anchor-id="str-structure"><code>str()</code> structure</h2>
+<div style="font-size: 80%;">
+<ul>
+<li>We previously used the base R structure command <code>str()</code> to get information about variable types in a dataset.</li>
+<li>Note this dataset is a <code>tibble</code> instead of a <code>data.frame</code></li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dds.discr)      <span class="co"># base R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [1,000 × 6] (S3: tbl_df/tbl/data.frame)
+ $ id          : int [1:1000] 10210 10409 10486 10538 10568 10690 10711 10778 10820 10823 ...
+ $ age.cohort  : Factor w/ 6 levels "0-5","6-12","13-17",..: 3 5 1 4 3 3 3 3 3 3 ...
+ $ age         : int [1:1000] 17 37 3 19 13 15 13 17 14 13 ...
+ $ gender      : Factor w/ 2 levels "Female","Male": 1 2 2 1 2 1 1 2 1 2 ...
+ $ expenditures: int [1:1000] 2113 41924 1454 6400 4412 4566 3915 3873 5021 2887 ...
+ $ ethnicity   : Factor w/ 8 levels "American Indian",..: 8 8 4 4 8 4 8 3 8 4 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   ID = col_integer(),
+  ..   `Age Cohort` = col_character(),
+  ..   Age = col_integer(),
+  ..   Gender = col_character(),
+  ..   Expenditures = col_integer(),
+  ..   Ethnicity = col_character()
+  .. )</code></pre>
+</div>
+</div>
+<!-- ![](../img_slides/dds.discr_str.png){fig-align="center"} -->
+</section>
+<section id="glimpse-1" class="level2">
+<h2 class="anchored" data-anchor-id="glimpse-1"><code>glimpse()</code></h2>
+<div style="font-size: 80%;">
+<p><strong>New: <code>glimpse()</code></strong></p>
+<ul>
+<li>Use <code>glimpse()</code> from the <code>tidyverse</code> package (technically it’s from the <code>dplyr</code> package) to get information about variable types.</li>
+<li><code>glimpse()</code> tends to have nicer output for <code>tibbles</code> than <code>str()</code></li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary"><code>summary()</code></h2>
+<div style="font-size: 80%;">
+<ul>
+<li>We previously used the base R structure command <code>summary()</code> to get summary information about variables</li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dds.discr)      <span class="co"># base R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       id        age.cohort       age          gender     expenditures  
+ Min.   :10210   0-5  : 82   Min.   : 0.0   Female:503   Min.   :  222  
+ 1st Qu.:31809   6-12 :175   1st Qu.:12.0   Male  :497   1st Qu.: 2899  
+ Median :55384   13-17:212   Median :18.0                Median : 7026  
+ Mean   :54663   18-21:199   Mean   :22.8                Mean   :18066  
+ 3rd Qu.:76135   22-50:226   3rd Qu.:26.0                3rd Qu.:37713  
+ Max.   :99898   51+  :106   Max.   :95.0                Max.   :75098  
+                                                                        
+              ethnicity  
+ White not Hispanic:401  
+ Hispanic          :376  
+ Asian             :129  
+ Black             : 59  
+ Multi Race        : 26  
+ American Indian   :  4  
+ (Other)           :  5  </code></pre>
+</div>
+</div>
+</section>
+<section id="tbl_summary-summary-table" class="level2">
+<h2 class="anchored" data-anchor-id="tbl_summary-summary-table"><code>tbl_summary()</code>: summary table</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 80%;">
+<ul>
+<li><strong>New:</strong> Use <code>tbl_summary()</code> from the <code>gtsummary</code> package to get summary information</li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(gtsummary)</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/dds.discr_gtsummary.jpg" height="650" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="visualize-numerical-variables-with-ggplot" class="level1">
+<h1>Visualize numerical variables with <code>ggplot</code></h1>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/ggplotlogo.png" height="400" class="figure-img"></p>
+<figcaption class="figure-caption"><a href="https://ggplot2.tidyverse.org/index.html">ggplot</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/ggplot2_masterpiece.png" height="400" class="figure-img"></p>
+<figcaption class="figure-caption"><a href="https://allisonhorst.com/">Artwork by @allison_horst</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="what-data-variables-are-included-in-the-plot-below" class="level2">
+<h2 class="anchored" data-anchor-id="what-data-variables-are-included-in-the-plot-below">What data (variables) are included in the plot below?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/ggplot_basics_from_ppt_figure_only.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="basics-of-a-ggplot" class="level2">
+<h2 class="anchored" data-anchor-id="basics-of-a-ggplot">Basics of a ggplot</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/ggplot_basics_from_ppt.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="grammar-of-ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="grammar-of-ggplot2">Grammar of ggplot2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/khealy_ggplot1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption"><a href="https://github.com/rstudio-conf-2020/dataviz">Kieran Healy</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="histograms-1" class="level2">
+<h2 class="anchored" data-anchor-id="histograms-1">Histograms</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms-showing-proportions-1" class="level2">
+<h2 class="anchored" data-anchor-id="histograms-showing-proportions-1">Histograms showing proportions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb46-2"><a href="#cb46-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb46-4"><a href="#cb46-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb48-2"><a href="#cb48-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb48-4"><a href="#cb48-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
+<span id="cb48-5"><a href="#cb48-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
+<span id="cb48-6"><a href="#cb48-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-shapes" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-shapes">Distribution shapes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/distribution_shapes.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="density-plots-1" class="level2">
+<h2 class="anchored" data-anchor-id="density-plots-1">Density plots</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb50-2"><a href="#cb50-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb50-3"><a href="#cb50-3"></a>  <span class="fu">geom_density</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb51-2"><a href="#cb51-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb51-3"><a href="#cb51-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="dot-plots" class="level2">
+<h2 class="anchored" data-anchor-id="dot-plots">Dot plots</h2>
+<div style="font-size: 80%;">
+<ul>
+<li>Better for smaller samples</li>
+<li>What is being measured on the vertical axes?</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb53-2"><a href="#cb53-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb53-3"><a href="#cb53-3"></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb54-2"><a href="#cb54-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb54-3"><a href="#cb54-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="boxplots-1" class="level2">
+<h2 class="anchored" data-anchor-id="boxplots-1">Boxplots</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb55-2"><a href="#cb55-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
+<span id="cb55-3"><a href="#cb55-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb56-2"><a href="#cb56-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
+<span id="cb56-3"><a href="#cb56-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="07_Data_visualization_case_study_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="boxplots-5-number-summary-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="boxplots-5-number-summary-visualization">Boxplots: 5 number summary visualization</h2>
+<!-- ![](../img_slides/boxplot_no_outliers.png) -->
+<p>No outliers: <img src="../img_slides/boxplot_no_outliers.png" data-fig-align="center" height="280" alt="https://www.simplypsychology.org/boxplots.html"></p>
+<p>With outliers: <img src="../img_slides/boxplot_w_outliers.png" data-fig-align="center" height="300" alt="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51"></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -211,7 +211,7 @@ Categorical variables
 | character         | categorical   | text, "strings"                                   |
 | logical           | categorical   | boolean (TRUE, FALSE)                             |
 
-## Exploring data with simple tools
+## Exploring data initially
 
 -   Techniques for exploring and summarizing data **differ** for [**numerical**]{style="color:#E75B5C;"} versus [**categorical**]{style="color:#EF85B3;"} variables.
 

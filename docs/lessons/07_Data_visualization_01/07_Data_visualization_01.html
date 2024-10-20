@@ -10,9 +10,9 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Meike Niederhausen and Nicky Wakim">
+  <meta name="author" content="Nicky Wakim">
   <meta name="dcterms.date" content="2024-10-21">
-  <title>Biostatistics 1 - Lesson 7: Data visualization - Part 1</title>
+  <title>Biostatistics 1 - Lesson 7: Data visualization of a single variable</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,1428 +393,618 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#3070BF" class="quarto-title-block center">
-  <h1 class="title">Lesson 7: Data visualization - Part 1</h1>
+  <h1 class="title">Lesson 7: Data visualization of a single variable</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Meike Niederhausen and Nicky Wakim 
+Nicky Wakim 
 </div>
 </div>
 </div>
 
   <p class="date">2024-10-21</p>
 </section>
-<section id="goals-for-today" class="slide level2">
-<h2>Goals for today</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><strong>Exploratory Data Analysis (EDA)</strong> (Sections 1.4, 1.5, 1.6, 1.7.1)
-<ul>
-<li>Data visualization with ggplot
-<ul>
-<li>numerical &amp; categorical variables, and relationships between variables</li>
-</ul></li>
-<li>Summarizing numerical data</li>
-<li>Frequency (two-way) tables</li>
-</ul></li>
-<li>Some <strong>data wrangling</strong> techniques along the way</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/horst_ggplot2_exploratory.png"></p>
-<figcaption><a href="https://allisonhorst.com/">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
 <section>
-<section id="r-packages" class="title-slide slide level1 center">
-<h1>R Packages</h1>
-<p>A good analogy for R packages is that they<br>
-are like apps you can download onto a mobile phone:</p>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Visualize distributions of numeric data/variables using histograms and boxplots</p></li>
+<li><p>Recognize when transforming data helps make asymmetric data more symmetric (log values)</p></li>
+<li><p>Visualize distributions of categorical data/variables using frequency tables and barplots</p></li>
+</ol>
+</section>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
 
-<img data-src="../img_slides/R_vs_R_packages.png" class="r-stretch quarto-figure-center"><p><a href="https://moderndive.com/1-getting-started.html#packages">ModernDive Figure 1.4</a></p>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="../img_slides/debugging.png" alt="A cartoon of a fuzzy round monster face showing 10 different emotions experienced during the process of debugging code. The progression goes from (1) “I got this” - looking determined and optimistic; (2) “Huh. Really thought that was it.” - looking a bit baffled; (3) “...” - looking up at the ceiling in thought; (4) “Fine. Restarting.” - looking a bit annoyed; (5) “OH WTF.” Looking very frazzled and frustrated; (6) “Zombie meltdown.” - looking like a full meltdown; (7) (blank) - sleeping; (8) “A NEW HOPE!” - a happy looking monster with a lightbulb above; (9) “insert awesome theme song” - looking determined and typing away; (10) “I love coding” - arms raised in victory with a big smile, with confetti falling." class="r-stretch quarto-figure-center"><p class="caption">Artwork by @allison_horst</p></section>
+<section id="why-do-we-bother-with-visualizing-data1" class="slide level2">
+<h2>Why do we bother with visualizing data?<sup>1</sup></h2>
+<ul>
+<li><p><strong>Makes data easier to understand</strong></p>
+<ul>
+<li>helps you understand large amounts of data by turning it into a visual context, such as a graph or map</li>
+</ul></li>
+<li><p><strong>Helps identify patterns</strong></p>
+<ul>
+<li>helps identify patterns, trends, and outliers in data sets.&nbsp;</li>
+</ul></li>
+<li><p><strong>Reveals data features</strong></p>
+<ul>
+<li>reveals data features that statistics and models might miss, such as unusual distributions, gaps, and outliers</li>
+</ul></li>
+<li><p><strong>Helps with decision-making</strong></p>
+<ul>
+<li>helps with decision-making on analysis plans</li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Adapted from my Google search AI results: <a href="https://www.google.com/search?q=why+do+statistics+bother+with+data+visualization&amp;rlz=1C5GCEM_enUS1130&amp;oq=why+do+statistics+bother+with+data+visu&amp;gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRirAtIBCDk3NDBqMGo0qAIAsAIB&amp;sourceid=chrome&amp;ie=UTF-8" class="uri">https://www.google.com/search?q=why+do+statistics+bother+with+data+visualization&amp;rlz=1C5GCEM_enUS1130&amp;oq=why+do+statistics+bother+with+data+visu&amp;gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRirAtIBCDk3NDBqMGo0qAIAsAIB&amp;sourceid=chrome&amp;ie=UTF-8</a></p></li></ol></aside></section>
+<section id="from-lesson-2-example-the-frog-study2" class="slide level2">
+<h2>From Lesson 2: Example: the frog study<sup>1</sup></h2>
+<p>In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.</p>
+<p>&nbsp;</p>
+<p>We will be working with the <code>frog</code> dataset, which originates from a 2013 study<sup>2</sup> about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.</p>
+<p>&nbsp;</p>
+<p>Researchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li><li id="fn3"><p>Chen, W., et al.&nbsp;Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.</p>
+<h2 id="section-1"></h2>
+</li></ol></aside></section>
+<section id="from-lesson-2-four-rows-from-frog-data-frame" class="slide level2">
+<h2>From Lesson 2: Four rows from frog data frame</h2>
+<table style="width:94%;">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>altitude</th>
+<th>latitude</th>
+<th>egg.size</th>
+<th>clutch.size</th>
+<th>clutch.volume</th>
+<th>body.size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>181.97</td>
+<td>177.83</td>
+<td>3.63</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>269.15</td>
+<td>257.04</td>
+<td>3.63</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3,462.00</td>
+<td>34.82</td>
+<td>1.95</td>
+<td>158.49</td>
+<td>151.36</td>
+<td>3.72</td>
+</tr>
+<tr class="even">
+<td>150</td>
+<td>2,597.00</td>
+<td>34.05</td>
+<td>2.24</td>
+<td>537.03</td>
+<td>776.25</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<ul>
+<li>Each <strong>row</strong> is an <span style="color:#BF396F;"><strong>observation</strong></span></li>
+<li>Each <strong>column</strong> is a <span style="color:#459B99;"><strong>variable</strong></span></li>
+<li>All the <span style="color:#BF396F;"><strong>observations</strong></span> and <span style="color:#459B99;"><strong>variables</strong></span> together make a <span style="color:#8043F3;"><strong>data frame</strong></span> (sometimes called data matrix)</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Missing values:</strong> <code>NA</code> means the measured value for body size in clutch #150 is missing</li>
+</ul>
 </section>
-<section id="from-last-time-install-the-pacakges-listed-below" class="slide level2">
-<h2>From last time: Install the pacakges listed below</h2>
-<div style="font-size: 50%;">
+<section id="from-lesson-2-exploring-data-initially" class="slide level2">
+<h2>From Lesson 2: Exploring data initially</h2>
 <ul>
-<li><code>knitr</code>
+<li>Techniques for exploring and summarizing data <strong>differ</strong> for <span style="color:#E75B5C;"><strong>numerical</strong></span> versus <span style="color:#EF85B3;"><strong>categorical</strong></span> variables.</li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>this might actually already be installed</li>
-<li>check your packages list</li>
-</ul></li>
-<li><code>tidyverse</code>
+<li>Numerical and graphical summaries are useful for examining variables one at a time
 <ul>
-<li>this is actually a bundle of packages</li>
-<li><em>Warning: it will take a while to install!!!</em></li>
-<li>see more info at <a href="https://tidyverse.tidyverse.org/">https://tidyverse.tidyverse.org/</a></li>
-</ul></li>
-<li><code>rstatix</code>
-<ul>
-<li>for summary statistics of a dataset</li>
-</ul></li>
-<li><code>janitor</code>
-<ul>
-<li>for cleaning and exploring data</li>
-</ul></li>
-<li><code>ggridges</code>
-<ul>
-<li>for creating ridgeline plots</li>
-</ul></li>
-<li><code>devtools</code>
-<ul>
-<li>used to create R packages</li>
-<li>for our purposes, needed to install some packages</li>
-</ul></li>
-<li><code>oi_biostat_data</code>
-<ul>
-<li>this package is on github</li>
-<li><strong>see the next slide for directions on how to install <code>oi_biostat_data</code></strong></li>
+<li>Can also be used for exploring the relationships between variables</li>
+<li><em>Numerical</em> summaries are not just for <span style="color:#E75B5C;"><strong>numerical</strong></span> variables (certain ones are used for <span style="color:#EF85B3;"><strong>categorical</strong></span> variables)</li>
 </ul></li>
 </ul>
-</div>
-</section>
-<section id="directions-for-installing-package-oibiostat" class="slide level2">
-<h2>Directions for installing package <code>oibiostat</code></h2>
-<div style="font-size: 70%;">
+<p>&nbsp;</p>
 <ul>
-<li>The textbook’s datasets are in the R package <code>oibiostat</code></li>
-<li>Explanation of code below
-<ul>
-<li>Installation of <code>oibiostat</code> package requires first installing <code>devtools</code> package</li>
-<li>The code <code>devtools::install_github()</code> tells R to use the command <code>install_github()</code> from the <code>devtools</code> package without loading the entire package and all of its commands (which <code>library(devtools)</code> would do).</li>
-</ul></li>
+<li>Today we we look at ways to <strong>visualize</strong> a <span style="color:#E75B5C;"><strong>numerical</strong></span> variable and a <span style="color:#EF85B3;"><strong>categorical</strong></span> variable</li>
 </ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"OI-Biostat/oi_biostat_data"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div style="font-size: 70%;">
-<ul>
-<li>After running the code above, put <code>#</code> in front of the commands so that RStudio doesn’t evaluate them when rendering.</li>
-<li>Now load the <code>oibiostat</code> package
-<ul>
-<li><span style="color:darkorange">the code below needs to be run <em>every time</em> you restart R or render a Qmd file</span></li>
-</ul></li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(oibiostat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="load-packages-with-library-command" class="slide level2">
-<h2>Load packages with <code>library()</code> command</h2>
-<div style="font-size: 90%;">
-<ul>
-<li><p>Tip: <strong>at the top of your Qmd file,</strong> create a chunk that loads all of the R packages you want to use in that file.</p></li>
-<li><p>Use the <code>library()</code> command to load each required package.</p>
-<ul>
-<li>Packages need to be reloaded <em>every</em> time you open Rstudio.</li>
-<li><code>library()</code> commands to load needed packages <em>must</em> be in the Qmd file</li>
-</ul></li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># run these every time you open Rstudio</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(tidyverse)    </span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">library</span>(oibiostat)</span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">library</span>(ggridges)</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">library</span>(rstatix)</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">library</span>(gtsummary) <span class="co"># NEW!!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div style="font-size: 90%;">
-<ul>
-<li>You can check whether a package has been loaded or not
-<ul>
-<li>by looking at the Packages tab and</li>
-<li>seeing whether it has been checked off or not</li>
-</ul></li>
-</ul>
-</div>
 </section></section>
 <section>
-<section id="case-study-discrimination-in-developmental-disability-support-section-1.7.1" class="title-slide slide level1 center">
-<h1>Case study: discrimination in developmental disability support (Section 1.7.1)</h1>
-
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Visualize distributions of numeric data/variables using histograms and boxplots</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Recognize when transforming data helps make asymmetric data more symmetric (log values)</p></li>
+<li><p>Visualize distributions of categorical data/variables using frequency tables and barplots</p></li>
+</ol>
 </section>
-<section id="case-study-description" class="slide level2">
-<h2>Case Study Description</h2>
-<div style="font-size: 65%;">
-<ul>
-<li><p>In the US, individuals with developmental disabilities typically receive services and support from state governments.</p>
-<ul>
-<li>California allocates funds to developmentally disabled residents through the <em>Department of Developmental Services (DDS)</em></li>
-<li>Recipients of DDS funds are referred to as “consumers.”</li>
-</ul></li>
-<li><p>Dataset <code>dds.discr</code></p>
-<ul>
-<li>sample of 1,000 DDS consumers (out of a total of ~ 250,000)</li>
-<li>data include <strong><span style="color:green">age, gender, race/ethnicity, and annual DDS financial support per consumer</span></strong></li>
-</ul></li>
-<li><p><strong>Previous research</strong></p>
-<ul>
-<li>Researchers examined expenditures on consumers by ethnicity</li>
-<li>Found that the mean annual expenditure on Hispanics was less than that on White non-Hispanics.</li>
-</ul></li>
-<li><p>Result: an allegation of ethnic discrimination was brought against the California DDS.</p></li>
-<li><p><strong>Question: Are the data sufficient evidence of ethnic discrimination?</strong></p></li>
-<li><p>See Section 1.7.1 in the textbook for more details</p></li>
-</ul>
-</div>
-</section>
-<section id="load-dds.discr-dataset-from-oibiostat-package" class="slide level2">
-<h2>Load <code>dds.discr</code> dataset from <code>oibiostat</code> package</h2>
-<div style="font-size: 90%;">
-<ul>
-<li><p>The textbook’s datasets are in the R package <code>oibiostat</code></p></li>
-<li><p>Make sure the <code>oibiostat</code> package is installed before running the code below.</p></li>
-<li><p>Load the <code>oibiostat</code> package and the dataset <code>dds.discr</code></p></li>
-</ul>
-<p><strong><span style="color:darkorange">the code below needs to be run <em>every time</em> you restart R or render a Qmd file</span></strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(oibiostat)</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">data</span>(<span class="st">"dds.discr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>After loading the dataset <code>dds.discr</code> using <code>data("dds.discr")</code>, you will see <code>dds.discr</code> in the Data list of the Environment window.</li>
-</ul>
-</div>
-</section>
-<section id="getting-to-know-the-dataset" class="slide level2">
-<h2>Getting to know the dataset</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">dim</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1000    6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">names</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "id"           "age.cohort"   "age"          "gender"       "expenditures"
-[6] "ethnicity"   </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(dds.discr<span class="sc">$</span>id)) <span class="co"># How many unique id's are there?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1000</code></pre>
-</div>
-</div>
-</section>
-<section id="str-structure" class="slide level2">
-<h2><code>str()</code> structure</h2>
-<div style="font-size: 80%;">
-<ul>
-<li>We previously used the base R structure command <code>str()</code> to get information about variable types in a dataset.</li>
-<li>Note this dataset is a <code>tibble</code> instead of a <code>data.frame</code></li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">str</span>(dds.discr)      <span class="co"># base R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>tibble [1,000 × 6] (S3: tbl_df/tbl/data.frame)
- $ id          : int [1:1000] 10210 10409 10486 10538 10568 10690 10711 10778 10820 10823 ...
- $ age.cohort  : Factor w/ 6 levels "0-5","6-12","13-17",..: 3 5 1 4 3 3 3 3 3 3 ...
- $ age         : int [1:1000] 17 37 3 19 13 15 13 17 14 13 ...
- $ gender      : Factor w/ 2 levels "Female","Male": 1 2 2 1 2 1 1 2 1 2 ...
- $ expenditures: int [1:1000] 2113 41924 1454 6400 4412 4566 3915 3873 5021 2887 ...
- $ ethnicity   : Factor w/ 8 levels "American Indian",..: 8 8 4 4 8 4 8 3 8 4 ...
- - attr(*, "spec")=
-  .. cols(
-  ..   ID = col_integer(),
-  ..   `Age Cohort` = col_character(),
-  ..   Age = col_integer(),
-  ..   Gender = col_character(),
-  ..   Expenditures = col_integer(),
-  ..   Ethnicity = col_character()
-  .. )</code></pre>
-</div>
-</div>
-<!-- ![](../img_slides/dds.discr_str.png){fig-align="center"} -->
-</section>
-<section id="glimpse" class="slide level2">
-<h2><code>glimpse()</code></h2>
-<div style="font-size: 80%;">
-<p><strong>New: <code>glimpse()</code></strong></p>
-<ul>
-<li>Use <code>glimpse()</code> from the <code>tidyverse</code> package (technically it’s from the <code>dplyr</code> package) to get information about variable types.</li>
-<li><code>glimpse()</code> tends to have nicer output for <code>tibbles</code> than <code>str()</code></li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 1,000
-Columns: 6
-$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
-$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
-$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
-$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
-$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
-$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
-</div>
-</div>
-<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
-</section>
-<section id="summary" class="slide level2">
-<h2><code>summary()</code></h2>
-<div style="font-size: 80%;">
-<ul>
-<li>We previously used the base R structure command <code>summary()</code> to get summary information about variables</li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">summary</span>(dds.discr)      <span class="co"># base R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       id        age.cohort       age          gender     expenditures  
- Min.   :10210   0-5  : 82   Min.   : 0.0   Female:503   Min.   :  222  
- 1st Qu.:31809   6-12 :175   1st Qu.:12.0   Male  :497   1st Qu.: 2899  
- Median :55384   13-17:212   Median :18.0                Median : 7026  
- Mean   :54663   18-21:199   Mean   :22.8                Mean   :18066  
- 3rd Qu.:76135   22-50:226   3rd Qu.:26.0                3rd Qu.:37713  
- Max.   :99898   51+  :106   Max.   :95.0                Max.   :75098  
-                                                                        
-              ethnicity  
- White not Hispanic:401  
- Hispanic          :376  
- Asian             :129  
- Black             : 59  
- Multi Race        : 26  
- American Indian   :  4  
- (Other)           :  5  </code></pre>
-</div>
-</div>
-</section>
-<section id="tbl_summary-summary-table" class="slide level2">
-<h2><code>tbl_summary()</code>: summary table</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div style="font-size: 80%;">
-<ul>
-<li><strong>New:</strong> Use <code>tbl_summary()</code> from the <code>gtsummary</code> package to get summary information</li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># library(gtsummary)</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">tbl_summary</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/dds.discr_gtsummary.jpg" height="650"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="visualize-numerical-variables-with-ggplot" class="title-slide slide level1 center">
-<h1>Visualize numerical variables with <code>ggplot</code></h1>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/ggplotlogo.png" height="400"></p>
-<figcaption><a href="https://ggplot2.tidyverse.org/index.html">ggplot</a></figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/ggplot2_masterpiece.png" height="400"></p>
-<figcaption><a href="https://allisonhorst.com/">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="what-data-variables-are-included-in-the-plot-below" class="slide level2">
-<h2>What data (variables) are included in the plot below?</h2>
-
-<img data-src="../img_slides/ggplot_basics_from_ppt_figure_only.png" class="r-stretch quarto-figure-center"></section>
-<section id="basics-of-a-ggplot" class="slide level2">
-<h2>Basics of a ggplot</h2>
-
-<img data-src="../img_slides/ggplot_basics_from_ppt.png" class="r-stretch quarto-figure-center"></section>
-<section id="grammar-of-ggplot2" class="slide level2">
-<h2>Grammar of ggplot2</h2>
-
-<img data-src="../img_slides/khealy_ggplot1.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://github.com/rstudio-conf-2020/dataviz">Kieran Healy</a></p></section>
 <section id="histograms" class="slide level2">
 <h2>Histograms</h2>
-<p>What is being measured on the vertical axes?</p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb18-2"><a href="#cb18-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb19-2"><a href="#cb19-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="histograms-showing-proportions" class="slide level2">
-<h2>Histograms showing proportions</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb20-2"><a href="#cb20-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb20-4"><a href="#cb20-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb21-2"><a href="#cb21-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb21-4"><a href="#cb21-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
-<span id="cb21-5"><a href="#cb21-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
-<span id="cb21-6"><a href="#cb21-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="distribution-shapes" class="slide level2">
-<h2>Distribution shapes</h2>
-
-<img data-src="../img_slides/distribution_shapes.png" class="r-stretch quarto-figure-center"></section>
-<section id="density-plots" class="slide level2">
-<h2>Density plots</h2>
-<p>What is being measured on the vertical axes?</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb22-2"><a href="#cb22-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_density</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb23-2"><a href="#cb23-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="dot-plots" class="slide level2">
-<h2>Dot plots</h2>
-<div style="font-size: 80%;">
+<div class="column" style="width:45%;">
 <ul>
-<li>Better for smaller samples</li>
-<li>What is being measured on the vertical axes?</li>
+<li>Histograms show the counts of observations (y-axis) that have values within a specific interval for a specific variable (x-axis)</li>
+<li>Show the shape of the distribution and data density</li>
+<li>Distribution is considered <strong>symmetric</strong> if the trailing parts of the plot are roughly equal</li>
+<li>Distribution is considered <strong>asymmetric</strong> if one tail trails off more than the other (as we see with clutch volume)</li>
+<li>Asymmetric distributions are said to be skewed
+<ul>
+<li><strong>Skewed right</strong> if trails off to right</li>
+<li><strong>Skewed left</strong> if trails off to the left</li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/frog_hist.png" width="1000"></p>
+</figure>
 </div>
+</div>
+</div>
+</section>
+<section id="histograms-1" class="slide level2">
+<h2>Histograms</h2>
+<ul>
+<li>Mode is represented by the tallest peak in the distribution</li>
+<li>When data have one prominent peak, we call it unimodel</li>
+<li>If there is more than one relative peak, we call it multimodel</li>
+</ul>
+
+<img data-src="../img_slides/dist_1.19.png" class="r-stretch"></section>
+<section id="histograms-2" class="slide level2">
+<h2>Histograms</h2>
+<p>We can make a histogram of clutch volume or clutch size:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb24-2"><a href="#cb24-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> frog, </span>
+<span id="cb1-2"><a href="#cb1-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.volume)) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb25-2"><a href="#cb25-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
-<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> frog, </span>
+<span id="cb2-2"><a href="#cb2-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.size)) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div>
+</section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
 </section>
 <section id="boxplots" class="slide level2">
 <h2>Boxplots</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb26-2"><a href="#cb26-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
-<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-19-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb27-2"><a href="#cb27-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
-<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-20-1.png" width="480"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="boxplots-5-number-summary-visualization" class="slide level2">
-<h2>Boxplots: 5 number summary visualization</h2>
-<!-- ![](../img_slides/boxplot_no_outliers.png) -->
-<p>No outliers: <img data-src="../img_slides/boxplot_no_outliers.png" data-fig-align="center" height="280" alt="https://www.simplypsychology.org/boxplots.html"></p>
-<p>With outliers: <img data-src="../img_slides/boxplot_w_outliers.png" data-fig-align="center" height="300" alt="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51"></p>
-</section></section>
-<section>
-<section id="visualizing-relationships-between-numerical-and-categorical-variables-1.6.3" class="title-slide slide level1 center">
-<h1>Visualizing relationships between numerical and categorical variables (1.6.3)</h1>
-
-</section>
-<section id="side-by-side-boxplots" class="slide level2">
-<h2>Side-by-side boxplots</h2>
-<div class="columns">
-<div class="column" style="width:53%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb28-2"><a href="#cb28-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures,</span>
-<span id="cb28-3"><a href="#cb28-3"></a>           <span class="at">y =</span> ethnicity)) <span class="sc">+</span> </span>
-<span id="cb28-4"><a href="#cb28-4"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
-<span id="cb28-5"><a href="#cb28-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Annual Expenditures ($)"</span>, </span>
-<span id="cb28-6"><a href="#cb28-6"></a>       <span class="at">y =</span> <span class="st">"Race and ethnicity"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div style="font-size: 80%;">
-<p>Can you determine the following using boxplots?</p>
+<div class="column" style="width:43%;">
 <ul>
-<li>distribution shape</li>
-<li>sample size</li>
-</ul>
-</div>
-</div><div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/box_sbs_out-1.png" width="672"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="side-by-side-boxplots-with-data-points" class="slide level2">
-<h2>Side-by-side boxplots with data points</h2>
-<div class="columns">
-<div class="column" style="width:53%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="4,7-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb29-2"><a href="#cb29-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures,</span>
-<span id="cb29-3"><a href="#cb29-3"></a>           <span class="at">y =</span> ethnicity)) <span class="sc">+</span> </span>
-<span id="cb29-4"><a href="#cb29-4"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color=</span><span class="st">"darkgrey"</span>) <span class="sc">+</span> </span>
-<span id="cb29-5"><a href="#cb29-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Annual Expenditures ($)"</span>,</span>
-<span id="cb29-6"><a href="#cb29-6"></a>       <span class="at">y =</span> <span class="st">"Race and ethnicity"</span>) <span class="sc">+</span></span>
-<span id="cb29-7"><a href="#cb29-7"></a>  <span class="fu">geom_jitter</span>(     </span>
-<span id="cb29-8"><a href="#cb29-8"></a>    <span class="fu">aes</span>(<span class="at">color =</span> ethnicity),      </span>
-<span id="cb29-9"><a href="#cb29-9"></a>    <span class="at">alpha =</span> <span class="fl">0.3</span>,      </span>
-<span id="cb29-10"><a href="#cb29-10"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,      </span>
-<span id="cb29-11"><a href="#cb29-11"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(     </span>
-<span id="cb29-12"><a href="#cb29-12"></a>      <span class="at">height =</span> <span class="fl">0.4</span>))      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div style="font-size: 80%;">
-<p>Can you determine the following using boxplots?</p>
+<li>A <strong>boxplot</strong> indicates the positions of the first, second, and third quartiles of a distribution in addition to extreme observations</li>
+<li>Interquartile range (IQR) represented by rectangle with black line through it for the median</li>
+<li>Whiskers extend from the box to capture data that are between <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_1 - 1.5 IQR\)</span> and separately between <span class="math inline">\(Q_3\)</span> and <span class="math inline">\(Q_3 + 1.5 IQR\)</span></li>
+<li>An <strong>outlier</strong> is a value that appears extreme relative to the rest of the data
 <ul>
-<li>distribution shape</li>
-<li>sample size</li>
-</ul>
-</div>
-</div><div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/box_sbs_jitter_out-1.png" width="672"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="density-plots-by-group" class="slide level2">
-<h2>Density plots by group</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb30-2"><a href="#cb30-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures,</span>
-<span id="cb30-3"><a href="#cb30-3"></a>           <span class="at">color =</span> ethnicity)) <span class="sc">+</span> </span>
-<span id="cb30-4"><a href="#cb30-4"></a>  <span class="fu">geom_density</span>() <span class="sc">+</span> </span>
-<span id="cb30-5"><a href="#cb30-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Annual Expenditures ($)"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
-<section id="ridgeline-plot" class="slide level2">
-<h2>Ridgeline plot</h2>
-<div class="columns">
-<div class="column" style="width:53%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="4-5,7-9,12-14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># library(ggridges)</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr,</span>
-<span id="cb31-3"><a href="#cb31-3"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures,</span>
-<span id="cb31-4"><a href="#cb31-4"></a>           <span class="at">y =</span> ethnicity,      </span>
-<span id="cb31-5"><a href="#cb31-5"></a>           <span class="at">fill =</span> ethnicity)      </span>
-<span id="cb31-6"><a href="#cb31-6"></a>       ) <span class="sc">+</span> </span>
-<span id="cb31-7"><a href="#cb31-7"></a>  <span class="fu">geom_density_ridges</span>(      </span>
-<span id="cb31-8"><a href="#cb31-8"></a>    <span class="at">alpha =</span> <span class="fl">0.3</span>,      </span>
-<span id="cb31-9"><a href="#cb31-9"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span>      </span>
-<span id="cb31-10"><a href="#cb31-10"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Annual Expenditures ($)"</span>,</span>
-<span id="cb31-11"><a href="#cb31-11"></a>       <span class="at">y =</span> <span class="st">"Race and ethnicity"</span>,</span>
-<span id="cb31-12"><a href="#cb31-12"></a>       <span class="at">title =</span>        </span>
-<span id="cb31-13"><a href="#cb31-13"></a><span class="st">"Expenditures by race and </span></span>
-<span id="cb31-14"><a href="#cb31-14"></a><span class="st">       </span><span class="sc">\n</span><span class="st">ethnicity"</span>)       </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:47%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/density_ridge_out-1.png" width="672"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="transforming-data-1.4.5" class="slide level2">
-<h2>Transforming data (1.4.5)</h2>
-<div style="font-size: 80%;">
-<ul>
-<li>We sometimes apply a transformation to highly skewed data to make it more symmetric</li>
-<li>Log transformations are often used for skewed right data</li>
-</ul>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><code>x = expenditures</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb32-2"><a href="#cb32-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span>  </span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">geom_density</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p><code>x = log(expenditures)</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb33-2"><a href="#cb33-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(expenditures))) <span class="sc">+</span>  </span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">geom_density</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="relationships-between-two-numerical-variables-1.6.1" class="title-slide slide level1 center">
-<h1>Relationships between two numerical variables (1.6.1)</h1>
-
-</section>
-<section id="scatterplots" class="slide level2">
-<h2>Scatterplots</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb34-2"><a href="#cb34-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age,</span>
-<span id="cb34-3"><a href="#cb34-3"></a>           <span class="at">y =</span> expenditures)) <span class="sc">+</span> </span>
-<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span>       </span>
-<span id="cb34-5"><a href="#cb34-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age"</span>,</span>
-<span id="cb34-6"><a href="#cb34-6"></a>       <span class="at">y =</span> <span class="st">"Annual Expenditures ($)"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div style="font-size: 80%;">
-<p>Response vs.&nbsp;explanatory variables (Section 1.2.3)</p>
-<ul>
-<li>A <strong>response variable</strong> measures the outcome of interest in a study</li>
-<li>A study will typically examine whether the values of a response variable differ as values of an <strong>explanatory variable</strong> change</li>
-</ul>
-</div>
-</div><div class="column" style="width:45%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/scatter_out-1.png" width="576"></p>
-</div>
-</div>
-</div>
-</div>
-<div style="font-size: 80%;">
-<p>Describe the association between the variables</p>
-</div>
-</section>
-<section id="describing-associations-between-2-numerical-variables" class="slide level2">
-<h2>Describing associations between 2 numerical variables</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div style="font-size: 80%;">
-<p>Two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are</p>
-<ul>
-<li><p><strong>positively associated</strong> if <span class="math inline">\(y\)</span> increases as <span class="math inline">\(x\)</span> increases.</p></li>
-<li><p><strong>negatively associated</strong> if <span class="math inline">\(y\)</span> decreases as <span class="math inline">\(x\)</span> increases.</p></li>
-<li><p>If there is no association between the variables, then we say they are <strong>uncorrelated</strong> or <strong>independent</strong>.</p></li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/scatter_out2-1.png" width="576"></p>
-</div>
-</div>
-</div>
-</div>
-<div style="font-size: 80%;">
-<ul>
-<li>The term “association” is a very general term.
-<ul>
-<li>Can be used for numerical or categorical variables</li>
-<li>Not specifically referring to linear associations</li>
+<li>It is more than <span class="math inline">\(1.5IQR\)</span> away from <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_3\)</span></li>
 </ul></li>
 </ul>
-</div>
-</section>
-<section id="pearson-correlation-coefficient-r" class="slide level2">
-<h2>(Pearson) Correlation coefficient <span class="math inline">\(r\)</span></h2>
-<div style="font-size: 70%;">
-<ul>
-<li><p><span class="math inline">\(r = -1\)</span> indicates a <strong>perfect negative linear relationship</strong>: As one variable increases, the value of the other variable tends to go down, following a <em>straight line</em>.</p></li>
-<li><p><span class="math inline">\(r = 0\)</span> indicates <strong>no linear relationship</strong>: The values of both variables go up/down independently of each other.</p></li>
-<li><p><span class="math inline">\(r = 1\)</span> indicates a <strong>perfect positive linear relationship</strong>: As the value of one variable goes up, the value of the other variable tends to go up as well in a linear fashion.</p></li>
-<li><p>The closer <span class="math inline">\(r\)</span> is to ±1, the stronger the linear association.</p></li>
-</ul>
-</div>
-
-<img data-src="../img_slides/MD_correlation1-1.png" class="r-stretch quarto-figure-center"></section>
-<section id="pearson-correlation-coefficient-r-formula" class="slide level2">
-<h2>(Pearson) Correlation coefficient (r): formula</h2>
-<div style="font-size: 80%;">
-<p>The (Peasron) correlation coefficient of variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> can be computed using the formula <span class="math display">\[r = \frac{1}{n-1}\sum_{i=1}^{n}\Big(\frac{x_i - \bar{x}}{s_x}\Big)\Big(\frac{y_i - \bar{y}}{s_y}\Big)\]</span> where</p>
-<ul>
-<li><span class="math inline">\((x_1,y_1),(x_2,y_2),...,(x_n,y_n)\)</span> are the <span class="math inline">\(n\)</span> paired values of the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></li>
-<li><span class="math inline">\(s_x\)</span> and <span class="math inline">\(s_y\)</span> are the sample standard deviations of the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, respectively</li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">cor</span>(dds.discr<span class="sc">$</span>age, dds.discr<span class="sc">$</span>expenditures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8432422</code></pre>
+</div><div class="column" style="width:57%;">
+<p><img data-src="../img_slides/boxplot_CV.png" width="1100"></p>
 </div>
 </div>
 </section>
-<section id="guess-the-correlation-game" class="slide level2">
-<h2>Guess the correlation game!</h2>
-<div style="font-size: 80%;">
+<section id="boxplots-1" class="slide level2">
+<h2>Boxplots</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Rossman &amp; Chance’s applet</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/screenshot_guess_corr_iscam.png"></p>
-</figure>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> frog, </span>
+<span id="cb3-2"><a href="#cb3-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.volume)) <span class="sc">+</span> </span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="576"></p>
 </div>
-<p>Tracks performance of guess vs.&nbsp;actual, error vs.&nbsp;actual, and error vs.&nbsp;trial</p>
-<p><a href="http://www.rossmanchance.com/applets/GuessCorrelation.html">http://www.rossmanchance.com/applets/GuessCorrelation.html</a></p>
+</div>
 </div><div class="column" style="width:50%;">
-<p>Or, for the Atari-like experience</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/screenshot_guess_corr_atari.png"></p>
-<figcaption><a href="http://guessthecorrelation.com/">http://guessthecorrelation.com/</a></figcaption>
-</figure>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> frog, </span>
+<span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> clutch.volume)) <span class="sc">+</span> </span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-5-1.png" width="480"></p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Visualize distributions of numeric data/variables using histograms and boxplots</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Recognize when transforming data helps make asymmetric data more symmetric (log values)</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Visualize distributions of categorical data/variables using frequency tables and barplots</li>
+</ol>
+</section>
+<section id="we-may-want-to-transform-data" class="slide level2">
+<h2>We may want to transform data</h2>
+<ul>
+<li><p>When working with strongly skewed data, it can be useful to apply a transformation</p></li>
+<li><p>Common to use the <strong>natural log transformation</strong> on skewed data</p>
+<ul>
+<li><p>We typically just call this the “log transformation”</p></li>
+<li><p>Especially for variables with many values clustered near 0 and other observations that are positive</p></li>
+</ul></li>
+<li><p>Transformations are mostly used when we make certain assumptions about the distribution of our data</p>
+<ul>
+<li>For a lot of statistics methods, we assume the data is distributed normally</li>
+<li>So we may need to transform the data to make it normal!</li>
+</ul></li>
+</ul>
+</section>
+<section id="lets-transform-clutch-volume" class="slide level2">
+<h2>Let’s transform clutch volume!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> frog, </span>
+<span id="cb5-2"><a href="#cb5-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.volume)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> frog, </span>
+<span id="cb6-2"><a href="#cb6-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(clutch.volume))) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="scatterplots-with-color-coded-dots" class="slide level2">
-<h2>Scatterplots with color-coded dots</h2>
-<p>Describe the association between the variables</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="4-5,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb37-2"><a href="#cb37-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> expenditures,</span>
-<span id="cb37-3"><a href="#cb37-3"></a>           <span class="at">color =</span> ethnicity)) <span class="sc">+</span>   </span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span>       </span>
-<span id="cb37-5"><a href="#cb37-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age"</span>, <span class="at">y =</span> <span class="st">"Annual Expenditures ($)"</span>) <span class="sc">+</span></span>
-<span id="cb37-6"><a href="#cb37-6"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-34-1.png" width="1152" class="r-stretch"></section></section>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll everywhere question 2</h2>
+</section></section>
 <section>
-<section id="categorical-data-1.5-and-relationships-between-two-categorical-variables-1.6.2" class="title-slide slide level1 center">
-<h1>Categorical data (1.5) and Relationships between two categorical variables (1.6.2)</h1>
-
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Visualize distributions of numeric data/variables using histograms and boxplots</p></li>
+<li><p>Recognize when transforming data helps make asymmetric data more symmetric (log values)</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Visualize distributions of categorical data/variables using frequency tables and barplots</li>
+</ol>
+</div>
+</section>
+<section id="from-lesson-4-example-hypertension-prevalence-12" class="slide level2">
+<h2>From Lesson 4: Example: hypertension prevalence (1/2)</h2>
+<ul>
+<li>US CDC estimated that between 2011 and 2014<sup>1</sup>, 29% of the population in America had hypertension</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
+<ul>
+<li>However, this is <strong>only the case if nothing else is known about the patient</strong></li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn4"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li></ol></aside></section>
+<section id="from-lesson-4-example-hypertension-prevalence" class="slide level2">
+<h2>From Lesson 4: Example: hypertension prevalence</h2>
+<ul>
+<li>Prevalence of <strong>hypertension varies significantly with age</strong>
+<ul>
+<li>Among adults aged 18-39, 7.3% have hypertension</li>
+<li>Adults aged 40-59, 32.2%</li>
+<li>Adults aged 60 or older, 64.9% have hypertension</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>Knowing the age of a patient provides important information about the likelihood of hypertension</p>
+<ul>
+<li>Age and hypertension status are <strong>not independent</strong> (we will get into this)</li>
+</ul></li>
+<li><p>While the probability of hypertension of a randomly chosen adult is 0.29…</p>
+<ul>
+<li>The <strong>conditional probability</strong> of hypertension in a person known to be 60 or older is 0.649</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+</section>
+<section id="from-lesson-4-contingency-tables" class="slide level2">
+<h2>From Lesson 4: Contingency tables</h2>
+<ul>
+<li>We can start looking at the <strong>contingency table</strong> for hypertension for different age groups
+<ul>
+<li><strong>Contingency table:</strong> type of data table that displays the frequency distribution of two or more categorical variables</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Table: Contingency table showing hypertension status and age group, in thousands.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Hypertension</th>
+<th style="text-align: right;">No Hypertension</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">90862</td>
+<td style="text-align: right;">222458</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="lets-look-at-each-variable-separately" class="slide level2">
+<h2>Let’s look at each variable separately</h2>
+<ul>
+<li>The label “contingency tables” are usually reserved for when we have two variables in one table</li>
+<li>When we have one variable, we often call these <strong>frequency tables</strong>
+<ul>
+<li>Shows the count of observations that fall into a specific category</li>
+</ul></li>
+<li>In a <strong>relative frequency table</strong>, proportions for each category is shown instead of counts</li>
+</ul>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Frequency table for age group variable</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Relative frequency table for age group variable</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 years</td>
+<td style="text-align: right;">0.3863</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40 to 59 years</td>
+<td style="text-align: right;">0.4174</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greater than 60 years</td>
+<td style="text-align: right;">0.1963</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">1.0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="barplots" class="slide level2">
 <h2>Barplots</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div style="font-size: 80%;">
-<p>Counts (below) vs.<br>
-percentages (right)</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb38-2"><a href="#cb38-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> ethnicity)) <span class="sc">+</span></span>
-<span id="cb38-3"><a href="#cb38-3"></a>  <span class="fu">geom_bar</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-35-1.png" width="576"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb39-2"><a href="#cb39-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> ethnicity)) <span class="sc">+</span></span>
-<span id="cb39-3"><a href="#cb39-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop),  </span>
-<span id="cb39-4"><a href="#cb39-4"></a>               <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb39-5"><a href="#cb39-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>  </span>
-<span id="cb39-6"><a href="#cb39-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-36-1.png" width="576"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="barplots-with-2-variables-segmented-bar-plots" class="slide level2">
-<h2>Barplots with 2 variables: segmented bar plots</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb40-2"><a href="#cb40-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> ethnicity,</span>
-<span id="cb40-3"><a href="#cb40-3"></a>           <span class="at">fill =</span> age.cohort)) <span class="sc">+</span> </span>
-<span id="cb40-4"><a href="#cb40-4"></a>  <span class="fu">geom_bar</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-37-1.png" width="576"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb41-2"><a href="#cb41-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> ethnicity,</span>
-<span id="cb41-3"><a href="#cb41-3"></a>           <span class="at">fill =</span> age.cohort)) <span class="sc">+</span> </span>
-<span id="cb41-4"><a href="#cb41-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-38-1.png" width="576"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="barplots-with-2-variables-side-by-side-bar-plots" class="slide level2">
-<h2>Barplots with 2 variables: side-by-side bar plots</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
-<span id="cb42-2"><a href="#cb42-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> ethnicity,</span>
-<span id="cb42-3"><a href="#cb42-3"></a>           <span class="at">fill =</span> age.cohort)) <span class="sc">+</span> </span>
-<span id="cb42-4"><a href="#cb42-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-39-1.png" width="1152" class="r-stretch"></section></section>
-<section>
-<section id="summarizing-categorical-data-and-some-data-wrangling" class="title-slide slide level1 center">
-<h1>Summarizing categorical data and some data wrangling</h1>
-<!-- ::: {layout-ncol=3} -->
-<div class="columns">
-<div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/hex-dplyr.png" height="300"></p>
-<figcaption><a href="https://dplyr.tidyverse.org/">dplyr</a></figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/magrittr.png" height="300"></p>
-<figcaption><a href="https://magrittr.tidyverse.org/">magrittr</a></figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:33%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/janitor_logo_small.png" height="300"></p>
-<figcaption><a href="https://cran.r-project.org/web/packages/janitor/readme/README.html">janitor</a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="frequency-tables-count" class="slide level2">
-<h2>Frequency tables: <code>count()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div style="font-size: 80%;">
 <ul>
-<li><code>count</code> is from the <code>dplyr</code> package</li>
-<li>the output is a long tibble, and not a “nice” table</li>
-</ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>dds.discr <span class="sc">%&gt;%</span> <span class="fu">count</span>(ethnicity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8 × 2
-  ethnicity              n
-  &lt;fct&gt;              &lt;int&gt;
-1 American Indian        4
-2 Asian                129
-3 Black                 59
-4 Hispanic             376
-5 Multi Race            26
-6 Native Hawaiian        3
-7 Other                  2
-8 White not Hispanic   401</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">count</span>(ethnicity, age.cohort)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 35 × 3
-   ethnicity       age.cohort     n
-   &lt;fct&gt;           &lt;fct&gt;      &lt;int&gt;
- 1 American Indian 13-17          1
- 2 American Indian 22-50          1
- 3 American Indian 51+            2
- 4 Asian           0-5            8
- 5 Asian           6-12          18
- 6 Asian           13-17         20
- 7 Asian           18-21         41
- 8 Asian           22-50         29
- 9 Asian           51+           13
-10 Black           0-5            3
-# ℹ 25 more rows</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="how-to-use-the-pipe" class="slide level2">
-<h2>How to use the pipe <code>%&gt;%</code></h2>
-<div style="font-size: 80%;">
-<p>The pipe operator <code>%&gt;%</code> strings together commands to be performed sequentially</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>dds.discr <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="at">n=</span><span class="dv">3</span>)      <span class="co"># pronounce %&gt;% as "then"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 6
-     id age.cohort   age gender expenditures ethnicity         
-  &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;             
-1 10210 13-17         17 Female         2113 White not Hispanic
-2 10409 22-50         37 Male          41924 White not Hispanic
-3 10486 0-5            3 Male           1454 Hispanic          </code></pre>
-</div>
-</div>
-<div style="font-size: 80%;">
+<li>A bar plot is a common way to display a single categorical variable
 <ul>
-<li>Always <em>first list the tibble</em> that the commands are being applied to</li>
-<li>Can use <strong>multiple pipes</strong> to run multiple commands in sequence
-<ul>
-<li>What does the following code do?</li>
+<li>Show counts (or proportion) per category for a variable</li>
 </ul></li>
 </ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>dds.discr <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="at">n=</span><span class="dv">3</span>) <span class="sc">%&gt;%</span> <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="frequency-tables-janitor-packages-tabyl-function" class="slide level2">
-<h2>Frequency tables: <code>janitor</code> package’s <code>tabyl</code> function</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co"># default table</span></span>
-<span id="cb50-2"><a href="#cb50-2"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb50-3"><a href="#cb50-3"></a>  <span class="fu">tabyl</span>(ethnicity)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          ethnicity   n percent
-    American Indian   4   0.004
-              Asian 129   0.129
-              Black  59   0.059
-           Hispanic 376   0.376
-         Multi Race  26   0.026
-    Native Hawaiian   3   0.003
-              Other   2   0.002
- White not Hispanic 401   0.401</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p><code>adorn_</code> your table!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">tabyl</span>(ethnicity) <span class="sc">%&gt;%</span></span>
-<span id="cb52-3"><a href="#cb52-3"></a>  <span class="fu">adorn_totals</span>(<span class="st">"row"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb52-4"><a href="#cb52-4"></a>  <span class="fu">adorn_pct_formatting</span>(<span class="at">digits=</span><span class="dv">2</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          ethnicity    n percent
-    American Indian    4   0.40%
-              Asian  129  12.90%
-              Black   59   5.90%
-           Hispanic  376  37.60%
-         Multi Race   26   2.60%
-    Native Hawaiian    3   0.30%
-              Other    2   0.20%
- White not Hispanic  401  40.10%
-              Total 1000 100.00%</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="relative-frequency-table" class="slide level2">
-<h2>Relative frequency table</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div style="font-size: 80%;">
-<ul>
-<li><p>A <strong>relative frequency</strong> table shows <strong>proportions (or percentages)</strong> instead of counts</p></li>
-<li><p>To the right I removed (deselected) the counts column (<code>n</code>) to create a relative frequency table</p></li>
-</ul>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb54-2"><a href="#cb54-2"></a>  <span class="fu">tabyl</span>(ethnicity) <span class="sc">%&gt;%</span></span>
-<span id="cb54-3"><a href="#cb54-3"></a>  <span class="fu">adorn_totals</span>(<span class="st">"row"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb54-4"><a href="#cb54-4"></a>  <span class="fu">adorn_pct_formatting</span>(<span class="at">digits=</span><span class="dv">2</span>) <span class="sc">%&gt;%</span>   </span>
-<span id="cb54-5"><a href="#cb54-5"></a>  <span class="fu">select</span>(<span class="sc">-</span>n) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          ethnicity percent
-    American Indian   0.40%
-              Asian  12.90%
-              Black   5.90%
-           Hispanic  37.60%
-         Multi Race   2.60%
-    Native Hawaiian   0.30%
-              Other   0.20%
- White not Hispanic  40.10%
-              Total 100.00%</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="contingency-tables-two-way-tables" class="slide level2">
-<h2>Contingency tables (two-way tables)</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div style="font-size: 80%;">
-<ul>
-<li><strong>Contingency tables</strong> summarize data for two categorical variables
-<ul>
-<li>with each value in the table representing the number of times<br>
-a particular combination of outcomes occurs</li>
-</ul></li>
-<li><strong>Row &amp; column totals</strong><br>
-are sometimes called <strong>marginal totals</strong></li>
-</ul>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb56" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb56-2"><a href="#cb56-2"></a>  <span class="fu">tabyl</span>(ethnicity, gender) <span class="sc">%&gt;%</span>    </span>
-<span id="cb56-3"><a href="#cb56-3"></a>  <span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>))    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          ethnicity Female Male Total
-    American Indian      3    1     4
-              Asian     61   68   129
-              Black     26   33    59
-           Hispanic    192  184   376
-         Multi Race     13   13    26
-    Native Hawaiian      2    1     3
-              Other      1    1     2
- White not Hispanic    205  196   401
-              Total    503  497  1000</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="contingency-tables-with-percentages" class="slide level2">
-<h2>Contingency tables with percentages</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb58" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb58-2"><a href="#cb58-2"></a>  <span class="fu">tabyl</span>(ethnicity, age.cohort) <span class="sc">%&gt;%</span></span>
-<span id="cb58-3"><a href="#cb58-3"></a>  <span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb58-4"><a href="#cb58-4"></a>  <span class="fu">adorn_percentages</span>(<span class="st">"row"</span>) <span class="sc">%&gt;%</span>   </span>
-<span id="cb58-5"><a href="#cb58-5"></a>  <span class="fu">adorn_pct_formatting</span>(<span class="at">digits=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span>    </span>
-<span id="cb58-6"><a href="#cb58-6"></a>  <span class="fu">adorn_ns</span>()    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          ethnicity      0-5      6-12      13-17     18-21     22-50       51+
-    American Indian  0%  (0)  0%   (0)  25%   (1)  0%   (0) 25%   (1) 50%   (2)
-              Asian  6%  (8) 14%  (18)  16%  (20) 32%  (41) 22%  (29) 10%  (13)
-              Black  5%  (3) 19%  (11)  20%  (12) 15%   (9) 29%  (17) 12%   (7)
-           Hispanic 12% (44) 24%  (91)  27% (103) 21%  (78) 11%  (43)  5%  (17)
-         Multi Race 27%  (7) 35%   (9)  27%   (7)  8%   (2)  4%   (1)  0%   (0)
-    Native Hawaiian  0%  (0)  0%   (0)   0%   (0)  0%   (0) 67%   (2) 33%   (1)
-              Other  0%  (0)  0%   (0) 100%   (2)  0%   (0)  0%   (0)  0%   (0)
- White not Hispanic  5% (20) 11%  (46)  17%  (67) 17%  (69) 33% (133) 16%  (66)
-              Total  8% (82) 18% (175)  21% (212) 20% (199) 23% (226) 11% (106)</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="summarizing-numeric-data" class="title-slide slide level1 center">
-<h1>Summarizing numeric data</h1>
-
-</section>
-<section id="mean-annual-dds-expenditures-by-raceethnicity" class="slide level2">
-<h2>Mean annual DDS expenditures by race/ethnicity</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">mean</span>(dds.discr<span class="sc">$</span>expenditures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 18065.79</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb62-2"><a href="#cb62-2"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb62-3"><a href="#cb62-3"></a>    <span class="at">ave =</span> <span class="fu">mean</span>(expenditures),</span>
-<span id="cb62-4"><a href="#cb62-4"></a>    <span class="at">SD =</span> <span class="fu">sd</span>(expenditures),</span>
-<span id="cb62-5"><a href="#cb62-5"></a>    <span class="at">med =</span> <span class="fu">median</span>(expenditures))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 3
-     ave     SD   med
-   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
-1 18066. 19543.  7026</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:55%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb64" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb64-2"><a href="#cb64-2"></a>  <span class="fu">group_by</span>(ethnicity) <span class="sc">%&gt;%</span> </span>
-<span id="cb64-3"><a href="#cb64-3"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb64-4"><a href="#cb64-4"></a>    <span class="at">ave =</span> <span class="fu">mean</span>(expenditures),</span>
-<span id="cb64-5"><a href="#cb64-5"></a>    <span class="at">SD =</span> <span class="fu">sd</span>(expenditures),</span>
-<span id="cb64-6"><a href="#cb64-6"></a>    <span class="at">med =</span> <span class="fu">median</span>(expenditures))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8 × 4
-  ethnicity             ave     SD    med
-  &lt;fct&gt;               &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1 American Indian    36438. 25694. 41818.
-2 Asian              18392. 19209.  9369 
-3 Black              20885. 20549.  8687 
-4 Hispanic           11066. 15630.  3952 
-5 Multi Race          4457.  7332.  2622 
-6 Native Hawaiian    42782.  6576. 40727 
-7 Other               3316.  1836.  3316.
-8 White not Hispanic 24698. 20604. 15718 </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="get_summary_stats-from-rstatix-package" class="slide level2">
-<h2><code>get_summary_stats()</code> from <code>rstatix</code> package</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>dds.discr <span class="sc">%&gt;%</span> <span class="fu">get_summary_stats</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 13
-  variable         n   min   max median     q1     q3   iqr    mad   mean     sd
-  &lt;fct&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1 id            1000 10210 99898 55384. 31809. 76135. 44326 3.27e4 5.47e4 2.56e4
-2 age           1000     0    95    18     12     26     14 1.04e1 2.28e1 1.85e1
-3 expenditures  1000   222 75098  7026   2899. 37713. 34814 7.76e3 1.81e4 1.95e4
-# ℹ 2 more variables: se &lt;dbl&gt;, ci &lt;dbl&gt;</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb68-2"><a href="#cb68-2"></a>  <span class="fu">group_by</span>(ethnicity) <span class="sc">%&gt;%</span></span>
-<span id="cb68-3"><a href="#cb68-3"></a>  <span class="fu">get_summary_stats</span>(expenditures, <span class="at">type =</span> <span class="st">"common"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8 × 11
-  ethnicity variable     n   min   max median    iqr   mean     sd     se     ci
-  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1 American… expendi…     4  3726 58392 41818. 34085. 36438. 25694. 12847. 40885.
-2 Asian     expendi…   129   374 75098  9369  30892  18392. 19209.  1691.  3346.
-3 Black     expendi…    59   240 60808  8687  37987  20885. 20549.  2675.  5355.
-4 Hispanic  expendi…   376   222 65581  3952   7961. 11066. 15630.   806.  1585.
-5 Multi Ra… expendi…    26   669 38619  2622   2060.  4457.  7332.  1438.  2962.
-6 Native H… expendi…     3 37479 50141 40727   6331  42782.  6576.  3797. 16337.
-7 Other     expendi…     2  2018  4615  3316.  1298.  3316.  1836.  1298. 16499.
-8 White no… expendi…   401   340 68890 15718  39157  24698. 20604.  1029.  2023.</code></pre>
-</div>
-</div>
-</section>
-<section id="how-to-force-all-output-to-be-shown-12" class="slide level2">
-<h2>How to force all output to be shown? (1/2)</h2>
-<p>Use <code>kable()</code> from the <code>knitr</code> package.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>dds.discr <span class="sc">%&gt;%</span> <span class="fu">get_summary_stats</span>() <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hyp_data, </span>
+<span id="cb7-2"><a href="#cb7-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Age_Group)) <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hyp_data, </span>
+<span id="cb8-2"><a href="#cb8-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Age_Group)) <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), </span>
+<span id="cb8-4"><a href="#cb8-4"></a>               <span class="at">group =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="when-to-use-what" class="slide level2">
+<h2>When to use what?</h2>
+<table style="width:99%;">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 4%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 5%">
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 7%">
-<col style="width: 8%">
+<col style="width: 25%">
+<col style="width: 23%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">variable</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">min</th>
-<th style="text-align: right;">max</th>
-<th style="text-align: right;">median</th>
-<th style="text-align: right;">q1</th>
-<th style="text-align: right;">q3</th>
-<th style="text-align: right;">iqr</th>
-<th style="text-align: right;">mad</th>
-<th style="text-align: right;">mean</th>
-<th style="text-align: right;">sd</th>
-<th style="text-align: right;">se</th>
-<th style="text-align: right;">ci</th>
+<th>Variable type</th>
+<th>Possible Visualizations</th>
+<th>Nicky’s preferences</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">id</td>
-<td style="text-align: right;">1000</td>
-<td style="text-align: right;">10210</td>
-<td style="text-align: right;">99898</td>
-<td style="text-align: right;">55384.5</td>
-<td style="text-align: right;">31808.75</td>
-<td style="text-align: right;">76134.75</td>
-<td style="text-align: right;">44326</td>
-<td style="text-align: right;">32734.325</td>
-<td style="text-align: right;">54662.85</td>
-<td style="text-align: right;">25643.673</td>
-<td style="text-align: right;">810.924</td>
-<td style="text-align: right;">1591.310</td>
+<td>Numerical, discrete</td>
+<td>histograms, boxplots</td>
+<td>histograms</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">age</td>
-<td style="text-align: right;">1000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">12.00</td>
-<td style="text-align: right;">26.00</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">10.378</td>
-<td style="text-align: right;">22.80</td>
-<td style="text-align: right;">18.462</td>
-<td style="text-align: right;">0.584</td>
-<td style="text-align: right;">1.146</td>
+<td>Numerical, continuous</td>
+<td>histograms, boxplots</td>
+<td>histograms</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">1000</td>
-<td style="text-align: right;">222</td>
-<td style="text-align: right;">75098</td>
-<td style="text-align: right;">7026.0</td>
-<td style="text-align: right;">2898.75</td>
-<td style="text-align: right;">37712.75</td>
-<td style="text-align: right;">34814</td>
-<td style="text-align: right;">7760.670</td>
-<td style="text-align: right;">18065.79</td>
-<td style="text-align: right;">19542.831</td>
-<td style="text-align: right;">617.999</td>
-<td style="text-align: right;">1212.724</td>
+<td>Categorical, ordinal</td>
+<td>frequency tables, barplots</td>
+<td><p>if I’m just looking: barplot</p>
+<p>if I’m writing a report: frequency table</p></td>
+</tr>
+<tr class="even">
+<td>Categorical, nominal</td>
+<td>frequency tables, barplots</td>
+<td><p>if I’m just looking: barplot</p>
+<p>if I’m writing a report: frequency table</p></td>
+</tr>
+<tr class="odd">
+<td>Categorical, logical (binary)</td>
+<td>frequency tables, barplots</td>
+<td>frequency table or just a percent for one of the categories</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 </section>
-<section id="how-to-force-all-output-to-be-shown-knitr-22" class="slide level2">
-<h2>How to force all output to be shown? <code>knitr</code> (2/2)</h2>
-<p>Use <code>kable()</code> from the <code>knitr</code> package.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>dds.discr <span class="sc">%&gt;%</span> </span>
-<span id="cb71-2"><a href="#cb71-2"></a>  <span class="fu">group_by</span>(ethnicity) <span class="sc">%&gt;%</span></span>
-<span id="cb71-3"><a href="#cb71-3"></a>  <span class="fu">get_summary_stats</span>(expenditures, <span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb71-4"><a href="#cb71-4"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table>
-<colgroup>
-<col style="width: 18%">
-<col style="width: 12%">
-<col style="width: 3%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">ethnicity</th>
-<th style="text-align: left;">variable</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">min</th>
-<th style="text-align: right;">max</th>
-<th style="text-align: right;">median</th>
-<th style="text-align: right;">iqr</th>
-<th style="text-align: right;">mean</th>
-<th style="text-align: right;">sd</th>
-<th style="text-align: right;">se</th>
-<th style="text-align: right;">ci</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">American Indian</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">3726</td>
-<td style="text-align: right;">58392</td>
-<td style="text-align: right;">41817.5</td>
-<td style="text-align: right;">34085.25</td>
-<td style="text-align: right;">36438.250</td>
-<td style="text-align: right;">25693.912</td>
-<td style="text-align: right;">12846.956</td>
-<td style="text-align: right;">40884.748</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Asian</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">129</td>
-<td style="text-align: right;">374</td>
-<td style="text-align: right;">75098</td>
-<td style="text-align: right;">9369.0</td>
-<td style="text-align: right;">30892.00</td>
-<td style="text-align: right;">18392.372</td>
-<td style="text-align: right;">19209.225</td>
-<td style="text-align: right;">1691.278</td>
-<td style="text-align: right;">3346.482</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Black</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">59</td>
-<td style="text-align: right;">240</td>
-<td style="text-align: right;">60808</td>
-<td style="text-align: right;">8687.0</td>
-<td style="text-align: right;">37987.00</td>
-<td style="text-align: right;">20884.593</td>
-<td style="text-align: right;">20549.274</td>
-<td style="text-align: right;">2675.288</td>
-<td style="text-align: right;">5355.170</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hispanic</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">376</td>
-<td style="text-align: right;">222</td>
-<td style="text-align: right;">65581</td>
-<td style="text-align: right;">3952.0</td>
-<td style="text-align: right;">7961.25</td>
-<td style="text-align: right;">11065.569</td>
-<td style="text-align: right;">15629.847</td>
-<td style="text-align: right;">806.048</td>
-<td style="text-align: right;">1584.940</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Multi Race</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">26</td>
-<td style="text-align: right;">669</td>
-<td style="text-align: right;">38619</td>
-<td style="text-align: right;">2622.0</td>
-<td style="text-align: right;">2059.75</td>
-<td style="text-align: right;">4456.731</td>
-<td style="text-align: right;">7332.135</td>
-<td style="text-align: right;">1437.950</td>
-<td style="text-align: right;">2961.514</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Native Hawaiian</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">37479</td>
-<td style="text-align: right;">50141</td>
-<td style="text-align: right;">40727.0</td>
-<td style="text-align: right;">6331.00</td>
-<td style="text-align: right;">42782.333</td>
-<td style="text-align: right;">6576.462</td>
-<td style="text-align: right;">3796.922</td>
-<td style="text-align: right;">16336.838</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Other</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2018</td>
-<td style="text-align: right;">4615</td>
-<td style="text-align: right;">3316.5</td>
-<td style="text-align: right;">1298.50</td>
-<td style="text-align: right;">3316.500</td>
-<td style="text-align: right;">1836.356</td>
-<td style="text-align: right;">1298.500</td>
-<td style="text-align: right;">16499.007</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">White not Hispanic</td>
-<td style="text-align: left;">expenditures</td>
-<td style="text-align: right;">401</td>
-<td style="text-align: right;">340</td>
-<td style="text-align: right;">68890</td>
-<td style="text-align: right;">15718.0</td>
-<td style="text-align: right;">39157.00</td>
-<td style="text-align: right;">24697.549</td>
-<td style="text-align: right;">20604.376</td>
-<td style="text-align: right;">1028.933</td>
-<td style="text-align: right;">2022.793</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section></section>
-<section>
-<section id="back-to-research-question" class="title-slide slide level1 center">
-<h1>Back to research question</h1>
-
-</section>
-<section id="case-study-discrimination-in-developmental-disability-support-1.7.1" class="slide level2">
-<h2>Case study: discrimination in developmental disability support (1.7.1)</h2>
+<section id="some-notes-about-my-visualization-process" class="slide level2">
+<h2>Some notes about my visualization process</h2>
 <ul>
-<li><strong>Previous research</strong>
+<li><p>If I am just looking at data alone, I use visualizations and summary statistics</p>
 <ul>
-<li>Researchers examined DDS expenditures for developmentally disabled residents by ethnicity</li>
-<li>Found that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.</li>
+<li><p>I keep everything in its basic form without polishing the output</p></li>
+<li><p>Plot labels are kept as variable name</p></li>
+<li><p>I use a basic function like <code>summary()</code> to get</p>
+<ul>
+<li><p>Mean and standard deviation for numeric variables</p></li>
+<li><p>Counts for categorical variables</p></li>
 </ul></li>
-<li><strong>Result</strong>: an allegation of ethnic discrimination was brought against the California DDS.</li>
-<li><strong>Question: Are the data sufficient evidence of ethnic discrimination?</strong></li>
+</ul></li>
+<li><p>If I am presenting visualizations or summary statistics, I will polish up everything</p>
+<ul>
+<li><p>So that someone who is unfamiliar with the data can understand what I’m looking at</p>
+<ul>
+<li>For example, I make sure variable names are written out and explained</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>I want us to practice presenting visualizations, so I really want our homework visualizations to be polished</strong></li>
 </ul>
 
 <div class="footer footer-default">
 <p>Lesson 7 Slides</p>
 </div>
 </section></section>
+
     </div>
   </div>
 

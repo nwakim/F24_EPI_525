@@ -1,6 +1,5 @@
 ---
 title: "Lesson 8: Data visualization - Part 2"
-subtitle: ""
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
@@ -31,297 +30,547 @@ library(tidyverse)
 library(lubridate)
 library(janitor)
 library(here)
+library(oibiostat)
+library(knitr)
+library(ggridges)
+library(rstatix)
+data(frog) 
+data(dds.discr)
+data("famuss")
 
 # terminal: for icons
 # quarto install extension quarto-ext/fontawesome
 
 # set ggplot theme for slides 
 theme_set(theme_bw(base_size = 22))
-# theme_update(text = element_text(size=20))  # set global text size for ggplots
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+
+# Create the hypertension data
+hyp_data <- data.frame(Age_Group = c(rep("18-39 yrs",121042),  
+                                     rep("40-59 yrs", 130772),
+                                     rep("60+ yrs", 61506)), 
+                       Hypertension = c(rep("Hypertension", 8836), 
+                                        rep("No hypertension", 112206),
+                                        rep("Hypertension", 42109), 
+                                        rep("No hypertension", 88663),
+                                        rep("Hypertension", 39917), 
+                                        rep("No hypertension", 21589)
+                                        ))
 ```
 
-# Back to research question
+# Learning Objectives
 
+1.  Visualize relationships between two numeric variables using scatterplots and determine their correlation
 
-## Case study: discrimination in developmental disability support (1.7.1)
+2.  Visualize relationships between two categorical variables using contingency tables and segmented barplots
 
-* __Previous research__
-  * Researchers examined DDS expenditures for developmentally disabled residents by ethnicity
-  * Found that the mean annual expenditures on Hispanics was less than that on White non-Hispanics. 
-* __Result__: an allegation of ethnic discrimination was brought against the California DDS.
-* __Question: Are the data sufficient evidence of ethnic discrimination?__
+3.  Visualize relationships between a categorical variable and a numeric variable using side-by-side boxplots, density plots, and ridgeline plots
 
-
-
-## Load `dds.discr` dataset from `oibiostat` package
-
-::: {style="font-size: 90%;"}
-* The textbook's datasets are in the R package `oibiostat`
-* Make sure the `oibiostat` package is installed before running the code below.
-
-* Load the `oibiostat` package and the dataset `dds.discr`
-
-__[the code below needs to be run _every time_ you restart R or render a Qmd file]{style="color:darkorange"}__
-```{r}
-library(oibiostat)
-data("dds.discr")
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+.reveal pre.sourceCode code {
+  max-height: 100% !important;
+}
 ```
 
-* After loading the dataset `dds.discr` using `data("dds.discr")`, you will see `dds.discr` in the Data list of the Environment window.
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
+
+## Relationships between two variables
+
+- Many studies are motivated by a researcher examining how two or more variables are related
+
+ 
+
+- Example questions about relationships:
+
+  - Do the values of one variable increase as the values of another decrease? 
+  - Do the values of one variable tend to differ by the levels of another variable?
+
+ 
+
+- Today we are introducing **summarization and data visualization methods** for exploring and summarizing **relationships between two variables**
+
+ 
+
+- Approaches vary depending on whether the two variables are:
+  - Both numerical
+  - Both categorical
+  - One numerical and one categorical
+  
+## We often identify a response variable from our research question
+  
+::: columns
+::: column
+
+::: red
+::: red-ttl
+Response Variable
+:::
+::: red-cont
+A **response variable** is defined by the particular research question a study seeks to address
+
+- It **measures the outcome of interest** in the study
+:::
+:::
 :::
 
+::: column
 
-## `glimpse()`
-
-::: {style="font-size: 80%;"}
-__New: `glimpse()`__
-
-* Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types. 
-* `glimpse()` tends to have nicer output for `tibbles` than `str()`
+::: blue
+::: blue-ttl
+Explanatory Variable
 :::
-```{r}
-library(tidyverse)
-glimpse(dds.discr)  # from tidyverse package (dplyr)
-```
+::: blue-cont
+A study will typically examine whether the values of a response variable differ as values of an **explanatory variable** change, and if so, how the two variables are related.
 
-<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+- A given study may examine several explanatory variables for a single response variable
+:::
+:::
+:::
+:::
 
+- Sometimes we're interested in viewing the relationship between our **response variable** and **explanatory variable(s)**
 
-## Recall previous data viz
+- Sometimes we're just interested in viewing the relationship **between explanatory variables**
+
+# Learning Objectives
+
+::: lob
+1.  Visualize relationships between two numeric variables using scatterplots and determine their correlation
+:::
+
+2.  Visualize relationships between two categorical variables using contingency tables and segmented barplots
+
+3.  Visualize relationships between a categorical variable and a numeric variable using side-by-side boxplots, density plots, and ridgeline plots
+
+## Scatterplots
 
 ::: columns
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| fig.height: 7
-#| fig.width: 7
-#| code-line-numbers: "7-12"
-ggplot(data = dds.discr, 
-       aes(x = expenditures,
-           y = ethnicity)) + 
-  geom_boxplot(color="darkgrey") + 
-  labs(x = "Annual Expenditures ($)",
-       y = "Race and ethnicity") +
-  geom_jitter(     
-    aes(color = ethnicity),      
-    alpha = 0.3,      
-    show.legend = FALSE,      
-    position = position_jitter(     
-      height = 0.4))      
-```
+::: {.column width="55%"}
 
-:::
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| fig.height: 7
-#| fig.width: 7
-#| code-line-numbers: "4"
-ggplot(data = dds.discr, 
-       aes(x = age,
-           y = expenditures)) + 
-  geom_point() +       
-  labs(x = "Age",
-       y = "Annual Expenditures ($)") 
-```
-:::
-:::
+- Scatterplots provide case-by-case view of the **relationship between two numerical variables**
 
+ 
 
-## Visualize in more detail: 
-
-ethnicity, age, and expenditures (code on next slide)
+- We can make a scatterplot of clutch volume vs. body size, with clutch volume on the y-axis and body size on the x-axis
+- Each point represents an observation (egg clutch) with its measurement for clutch volumn and body size of parent
 
 ```{r}
-#| echo: false
-#| fig.width: 12
-#| fig.height: 7
-#| code-line-numbers: "1-2, 5,9"
-dds.discr_Hips_WhnH <- dds.discr %>%  
-  filter(ethnicity == "White not Hispanic" | ethnicity == "Hispanic" ) %>% 
-  droplevels() 
-
-ggplot(data = dds.discr_Hips_WhnH,   
-       aes(x = expenditures,
-           y = age.cohort)) + 
-  geom_boxplot(color="darkgrey") + 
-  facet_grid(rows = "ethnicity") +   
-  labs(x = "Annual Expenditures ($)",
-       y = "Race and ethnicity") +
-  geom_jitter(     
-    aes(color = ethnicity),      
-    alpha = 0.3,      
-    show.legend = FALSE,      
-    position = position_jitter(     
-      height = 0.4)) +
-  theme(axis.title.x = element_text(size=20),
-        axis.text.x  = element_text(size=16),
-        axis.title.y = element_text(size=20),
-        axis.text.y  = element_text(size=16))
-```
-
-
-## Code for Visualize in more detail: ethnicity, age, and expenditures
-
-::: {style="font-size: 80%;"}
-Plot on previous slide
-:::
-```{r}
+#| label: "scatter"
 #| eval: false
-#| code-line-numbers: "1-2,5,9"
-dds.discr_Hips_WhnH <- dds.discr %>%  
-  filter(ethnicity == "White not Hispanic" | ethnicity == "Hispanic" ) %>% 
-  droplevels()   # remove empty factor levels
-
-ggplot(data = dds.discr_Hips_WhnH,   
-       aes(x = expenditures,
-           y = age.cohort)) + 
-  geom_boxplot(color="darkgrey") + 
-  facet_grid(rows = "ethnicity") +   
-  labs(x = "Annual Expenditures ($)",
-       y = "Race and ethnicity") +
-  geom_jitter(     
-    aes(color = ethnicity),      
-    alpha = 0.3,      
-    show.legend = FALSE,      
-    position = position_jitter(     
-      height = 0.4))      
+#| code-line-numbers: "4"
+ggplot(data = frog, 
+       aes(x = body.size,
+           y = clutch.volume)) + 
+  geom_point(size = 3) +       
+  labs(x = "Female Body Size (cm)",
+       y = "Clutch Volume (mm3)") 
 ```
 
-
-## Mean annual DDS expenditures by race/ethnicity: default long format
-
-::: columns
+:::
 ::: {.column width="45%"}
 ```{r}
-#| code-line-numbers: "3,5"
-mean_expend <- 
-  dds.discr_Hips_WhnH %>% 
-  group_by(
-    ethnicity, age.cohort)%>% 
-  summarize(
-    ave = mean(expenditures))
+#| label: "scatter_out"
+#| ref.label: "scatter"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 6
+#| fig.width: 8
 ```
 :::
+:::
+  
+## Describing associations between 2 numerical variables
 
-::: {.column width="55%"}
+::: columns
+::: {.column width="50%"}
+
+- Two variables $x$ and $y$ are 
+
+  - [**Positively associated**]{style="color:#E75B5C;"} if $y$ increases as $x$ increases
+
+  - [**Negatively associated**]{style="color:#BF396F;"} if $y$ decreases as $x$ increases
+  
+ 
+
+- If there is no association between the variables, then we say they are **uncorrelated** or **independent**
+
+ 
+
+- The term "association" is a very general term
+
+  - Can be used for numerical or categorical variables
+  - Not specifically referring to linear associations
+
+:::
+
+::: {.column width="50%"}
 ```{r}
-mean_expend
+#| label: "scatter_out"
+#| ref.label: "scatter"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 6
+#| fig.width: 8
+#| fig-align: center
 ```
+
+::: lob
+Female body size and clutch volume are positively associated with each other
+:::
+
 :::
 :::
 
-## Mean annual DDS expenditures by race/ethnicity: wide format
+## (Pearson) Correlation coefficient ($r$)
 
 ::: columns
 ::: {.column width="40%"}
-```{r}
-#| code-line-numbers: "3-5"
-mean_expend_wide <- 
-  mean_expend %>% 
-  pivot_wider(
-    names_from = ethnicity,
-    values_from = ave)
-```
+* $r = -1$ indicates a __perfect negative linear relationship__: As one variable increases, the value of the other variable tends to go down, following a *straight line*
+* $r = 0$ indicates __no linear relationship__: The values of both variables go up/down independently of each other
+* $r = 1$ indicates a __perfect positive linear relationship__: As the value of one variable goes up, the value of the other variable tends to go up as well in a linear fashion
+
+ 
+
+* The closer $r$ is to ±1, the stronger the linear association
 :::
 
 ::: {.column width="60%"}
+
+![](../img_slides/posNegCorPlots.png){fig-align="center"}
+:::
+:::
+
+## (Pearson) Correlation coefficient (r): formula
+
+The (Pearson) correlation coefficient of variables $x$ and $y$ can be computed using the formula
+$$r = \frac{1}{n-1}\sum_{i=1}^{n}\Big(\frac{x_i - \bar{x}}{s_x}\Big)\Big(\frac{y_i - \bar{y}}{s_y}\Big)$$
+where 
+
+* $(x_1,y_1),(x_2,y_2),...,(x_n,y_n)$ are the $n$ paired values of the variables $x$ and $y$ 
+* $s_x$ and $s_y$ are the sample standard deviations of the variables $x$ and $y$, respectively
+
+ 
+
+- We can use `cor()` in R to calculate this!
 ```{r}
-mean_expend_wide
-```
-:::
-:::
-
-
-## Differences in mean annual DDS expenditures by age cohort and race/ethnicity
-
-```{r}
-#| code-line-numbers: "2"
-mean_expend_wide <- mean_expend_wide %>% 
-  mutate(diff_mean = `White not Hispanic` - Hispanic)
-
-mean_expend_wide
+cor(frog$body.size, frog$clutch.volume, use = "pairwise.complete.obs")
 ```
 
-::: {style="font-size: 80%;"}
-__Question__: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?
-:::
-
-## Simpson’s paradox
-
-::: {style="font-size: 80%;"}
-* This case study is an example of __confounding__ known as Simpson’s paradox
-
-* __Simpson’s paradox__ happens when an association observed in several groups disappears or reverses direction when the groups are combined. 
-
-* In other words, an association between two variables $X$ and $Y$ may disappear or reverse direction once data are partitioned into subpopulations based on a third variable $Z$ (i.e., a confounding variable).
-:::
-
-![](../img_slides/ddsConfounding.png){fig-align="center"}
-
-# The tidyverse
-
-![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/tidyverse_celestial.png){fig-align="center"}
 
 
-## Tools for wrangling data
 
-::: {style="font-size: 70%;"}
-- `tidyverse` functions
-    + `tidyverse` is a [suite of packages](https://www.tidyverse.org/packages/) that implement `tidy` methods for data importing, cleaning, wrangling, and visualizing
-    + load the `tidyverse` packages by running the code `library(tidyverse)` 
-        * Don't forget to first install `tidyverse`!
-
-- Functions to easily work with rows and columns, such as
-    + subset rows/columns
-    + add new rows/columns
-    + join together different data sets
-    + make data _long_ or _wide_
-
-- There are often many steps to tidy data
-    + we string together commands 
-    + to be performed sequentially 
-    + using pipes `%>%`
-:::
-
-
-## Summary of data wrangling so far
-
-::: {style="font-size: 80%;"}
-* The pipe `%>%` to string together commands in sequence
-* `mutate()` to add a new variable to a dataset
-* `select()` to select columns (or deselect columns with -variable)
-* `filter()` to select specific rows
-* `pivot_wider()` to reshape a dataset from a long to a wide format
-
-__Summarizing data__
-
-* `tabyl()` from `janitor` package to make frequency tables of categorical variables
-* `summarize()` to get summary statistics of variables
-* `group_by()` to group data by categorical variables before finding summaries
-:::
-
-## What packages are included in the `tidyverse`? {.smaller}
+## Guess the correlation game!
 
 ::: columns
-::: {.column width="35%"}
-__Core packages__  
-These automatically load when loading the tidyverse package
+::: {.column width="50%"}
+Rossman & Chance's applet
 
-![[https://www.tidyverse.org/](https://www.tidyverse.org/)](../img_slides/tidyverse_core.png){fig-align="center"}
+![](../img_slides/screenshot_guess_corr_iscam.png){fig-align="center"}
+
+Tracks performance of guess vs. actual, error vs. actual, and error vs. trial
+
+[http://www.rossmanchance.com/applets/GuessCorrelation.html](http://www.rossmanchance.com/applets/GuessCorrelation.html)
 :::
 
-::: {.column width="65%"}
+::: {.column width="50%"}
 
-List of all packages:
+
+Or, for the Atari-like experience
+
+
+![[http://guessthecorrelation.com/](http://guessthecorrelation.com/)](../img_slides/screenshot_guess_corr_atari.png){fig-align="center"}
+
+:::
+:::
+
+# Learning Objectives
+
+1.  Visualize relationships between two numeric variables using scatterplots and determine their correlation
+
+::: lob
+2.  Visualize relationships between two categorical variables using contingency tables and segmented barplots
+:::
+
+3.  Visualize relationships between a categorical variable and a numeric variable using side-by-side boxplots, density plots, and ridgeline plots
+
+## From Lesson 4: Contingency tables
+
+-   We can start looking at the **contingency table** for hypertension for different age groups
+    -   **Contingency table:** type of data table that displays the frequency distribution of two or more categorical variables
 
 ```{r}
-tidyverse_packages(include_self = TRUE)
+#| echo: false
+
+# Create the table data
+hyp_cont <- data.frame(
+  Age_Group = c("18-39 years", "40-59 years", "60+ years", "Total"),
+  Hypertension = c(8836, 42109, 39917, 90862),
+  No_Hypertension = c(112206, 88663, 21589, 222458),
+  Total = c(121042, 130772, 61506, 313320)
+)
+
+# Generate table using kable
+kable(hyp_cont, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Contingency table showing hypertension status and age group, in
+thousands.")
 ```
 
-* Packages not a part of the core get installed with the tidyverse suite, but need to be loaded separately.  
-* See [https://www.tidyverse.org/packages/](https://www.tidyverse.org/packages/) for more info.
+## From Lesson 4: Probability tables
 
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_prob <- data.frame(
+  Age_Group = c("18-39 years", "40-59 years", "60+ years", "Total"),
+  Hypertension = c(0.0282, 0.1344, 0.1274, 0.2900),
+  No_Hypertension = c(0.3581, 0.2830, 0.0689, 0.7100),
+  Total = c(0.3863, 0.4174, 0.1963, 1)
+)
+
+# Generate table using kable
+kable(hyp_prob, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Probability table summarizing hypertension status and age group.")
+```
+
+- [**Joint probability**]{style="color:#E75B5C;"}: intersection of row and column
+    
+- [**Marginal probability**]{style="color:#BF396F;"}: row or column total
+
+ 
+
+::: lob
+We can work towards visualizing the data in contingency and probability tables
+:::
+
+## Last time: Barplots
+Counts (below) vs. percentages (right)
+
+::: columns
+
+::: column
+```{r}
+ggplot(data = hyp_data, 
+       aes(x = Age_Group)) + 
+  geom_bar()
+```
+:::
+
+::: column
+```{r}
+ggplot(data = hyp_data, 
+       aes(x = Age_Group)) + 
+  geom_bar(aes(y = stat(prop), 
+               group = 1))
+```
+:::
+
+:::
+
+
+## Barplots with 2 variables: segmented bar plots
+
+- Way of visualizing the information from a contingency table
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| code-line-numbers: "3"
+ggplot(data = hyp_data, 
+       aes(x = Age_Group, 
+       fill = Hypertension)) + 
+  geom_bar() 
+```
+:::
+::: {.column width="50%"}
+
+```{r}
+#| code-line-numbers: "3-4"
+ggplot(data = hyp_data, 
+       aes(x = Age_Group, 
+       fill = Hypertension)) + 
+  geom_bar(position = "fill")  
+```
 :::
 :::
 
+
+## Barplots with 2 variables: side-by-side bar plots
+
+```{r}
+#| code-line-numbers: "3-4"
+ggplot(data = hyp_data, 
+       aes(x = Age_Group, 
+       fill = Hypertension)) + 
+  geom_bar(position = "dodge") 
+```
+
+# Learning Objectives
+
+1.  Visualize relationships between two numeric variables using scatterplots and determine their correlation
+
+2.  Visualize relationships between two categorical variables using contingency tables and segmented barplots
+
+::: lob
+3.  Visualize relationships between a categorical variable and a numeric variable using side-by-side boxplots, density plots, and ridgeline plots
+:::
+
+## Visualizing relationships between numerical and categorical variables
+
+::: {.column width="55%"}
+- Useful visualizations for directly comparing how the [**distribution of a numerical variable**]{style="color:#EF85B3;"} [**differs by category**]{style="color:#367B79;"}:
+  
+   
+  
+  - Side-by-side boxplots
+  
+   
+  
+  - Side-by-side boxplots with data points
+  
+   
+  
+  - Density plots by group
+  
+   
+  
+  - Ridgeline plot
+:::
+
+## We need to introduce a new dataset for this
+
+- Study investigating whether ACTN3 genotype at a particular location (residue 577) is associated with change in muscle function
+
+ 
+
+- **Categorical variable:** genotypes (CC, TT, CT)
+
+ 
+
+- **Numeric variable:** Muscle function, measured as percent change in non-dominant arm strength
+
+ 
+
+- We can start the investigation by plotting the relationship
+
+## Side-by-side boxplots 
+
+- We can look at the boxplot of percent change for each genotype
+
+::: columns
+::: {.column width="53%"}
+```{r}
+#| label: "box_sbs"
+#| eval: false
+#| code-line-numbers: "2-4"
+ggplot(data = famuss, 
+       aes(x = actn3.r577x, 
+           y = ndrm.ch)) + 
+  geom_boxplot() + 
+  labs(x = "ACTN3 genotype", 
+       y = "Percent Change in Non-Dominant Arm Strength")  
+```
+:::
+
+::: {.column width="47%"}
+```{r}
+#| label: "box_sbs_out"
+#| ref.label: "box_sbs"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 7.5
+#| fig.width: 7
+```
+:::
+:::
+
+## Side-by-side boxplots with data points
+
+- We can look at the boxplot of percent change for each genotype **with points shown so we can see the distribution of observations better**
+
+::: columns
+::: {.column width="53%"}
+```{r}
+#| label: "box_sbs_jitter"
+#| eval: false
+#| code-line-numbers: "7-11"
+ggplot(data = famuss, 
+       aes(x = actn3.r577x, 
+           y = ndrm.ch)) + 
+  geom_boxplot() + 
+  labs(x = "ACTN3 genotype", 
+       y = "Percent Change in Non-Dominant Arm Strength")  +
+  geom_jitter(aes(color = actn3.r577x), 
+    alpha = 0.3,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4))      
+```
+
+:::
+::: {.column width="47%"}
+```{r}
+#| label: "box_sbs_jitter_out"
+#| ref.label: "box_sbs_jitter"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 7.5
+#| fig.width: 7
+```
+:::
+:::
+
+## Density plots by group
+
+- Allows us to see the densities of percent change for each genotype
+
+```{r}
+#| fig.height: 5
+#| fig.width: 12
+#| code-line-numbers: "3"
+#| fig-align: center
+ggplot(data = famuss, aes(color = actn3.r577x, x = ndrm.ch)) + 
+  geom_density() + 
+  labs(x = "Percent Change in Non-Dominant Arm Strength", color = "ACTN3 genotype")  
+```
+
+
+## Ridgeline plot 
+
+- Overlapped densities were easy enough to see with 3 genotypes
+- If you have **many categories**, a ridgeline plot might make it easier to see
+
+::: columns
+::: {.column width="53%"}
+```{r}
+#| label: "density_ridge"
+#| eval: false
+#| code-line-numbers: "6-7"
+library(ggridges)
+ggplot(data = famuss, 
+       aes(y = actn3.r577x, 
+           x = ndrm.ch, 
+           fill = actn3.r577x)) +
+  geom_density_ridges(alpha = 0.3, 
+          show.legend = FALSE) +      
+  labs(x = "Percent Change in Non-Dominant Arm Strength",
+       y = "ACTN3 genotype",
+       title = "Strength change by genotype")       
+```
+:::
+::: {.column width="47%"}
+```{r}
+#| label: "density_ridge_out"
+#| ref.label: "density_ridge"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 7.5
+#| fig.width: 7.5
+```
+:::
+:::

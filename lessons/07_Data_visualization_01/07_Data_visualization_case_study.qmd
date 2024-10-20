@@ -1,0 +1,505 @@
+---
+title: "Untitled"
+editor: visual
+---
+
+# Case study
+
+## Case Study Description
+
+-   In the US, individuals with developmental disabilities typically receive services and support from state governments.
+
+    -   California allocates funds to developmentally disabled residents through the *Department of Developmental Services (DDS)*
+    -   Recipients of DDS funds are referred to as "consumers."
+
+ 
+
+-   Dataset `dds.discr`
+
+    -   Sample of 1,000 DDS consumers (out of a total of \~ 250,000)
+    -   Data include [age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer]{style="color:#C83532"}
+
+ 
+
+-   For now, we are going to explore these data with `R`
+
+-   See Section 1.7.1 in the textbook for more details
+
+## Load `dds.discr` dataset from `oibiostat` package
+
+-   The textbook's datasets are in the R package `oibiostat`
+
+-   Make sure the `oibiostat` package is installed before running the code below.
+
+-   Load the `oibiostat` package and the dataset `dds.discr`
+
+ 
+
+[**The code below needs to be run *every time* you restart R or render a Qmd file:**]{style="color:#BF396F"}
+
+```{r}
+library(oibiostat)
+data("dds.discr")
+```
+
+ 
+
+-   After loading the dataset `dds.discr` using `data("dds.discr")`, you will see `dds.discr` in the Data list of the Environment window.
+
+## `glimpse()`
+
+-   We previously used the base R structure command `str()` to get information about variable types in a dataset (in R03: R basics part 2)
+-   Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types.
+-   `glimpse()` tends to have nicer output for `tibbles` than `str()`
+
+```{r}
+library(tidyverse)
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+## Some things to note on this dataset
+
+```{r}
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+-   This happens in older datasets (and honestly some newer ones): gender and sex get conflated
+    -   I try to catch these issues before sharing datasets with you, but when we load datasets directly from the `oibiostat` package, I can't make these changes
+    -   If you are unfamiliar with the differences, please see [this NIH site on sex and gender](https://orwh.od.nih.gov/sex-gender)
+-   Also, race and ethnicity can be mislabeled
+    -   "White not hispanic" combines race and ethnicity
+    -   If you are unfamiliar with the differences, please see [this APA site on race and ethnicity](https://www.apa.org/topics/race-ethnicity)
+
+## `rename()`: one of the first things I usually do
+
+-   I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)
+
+ 
+
+```{r}
+dds.discr1 = dds.discr %>% 
+  rename(sex_MF = gender, 
+         r_e = ethnicity)
+
+glimpse(dds.discr1)
+```
+
+## Histograms
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr1, 
+       aes(x = expenditures)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Histograms showing proportions
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4" 
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density)))  
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4-6"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density))) +  
+  scale_y_continuous(labels =   
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Density plots {visibility="hidden"}
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_density() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Boxplots
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) + 
+  geom_boxplot() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr1, 
+       aes(y = age)) + 
+  geom_boxplot() 
+```
+:::
+:::::
+
+# Categorical data
+
+## Barplots
+
+::::: columns
+::: {.column width="50%"}
+Counts (below) vs.\
+percentages (right)
+
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = r_e)) +
+  geom_bar() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "3-6"
+ggplot(data = dds.discr1, 
+       aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop),  
+               group = 1)) + 
+  scale_y_continuous(labels =  
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Adding more to plots!
+
+Tilt text so we can read it!
+
+```{r}
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+```
+
+## Adding more to plots!
+
+We can change labels!
+
+```{r}
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "4-5"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Race and ethnicity", y = "Proportion", 
+       title = "Proportion of individuals receiving DDS by race and ethnicity")
+```
+
+## Adding more to plots!
+
+Increase text size so we can read it!
+
+```{r}
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "3-5"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),
+        axis.title = element_text(size = 35))
+```
+
+# Meike's notes
+
+## Getting to know the dataset
+
+```{r}
+dim(dds.discr)
+names(dds.discr)
+length(unique(dds.discr$id)) # How many unique id's are there?
+```
+
+## `str()` structure
+
+::: {style="font-size: 80%;"}
+-   We previously used the base R structure command `str()` to get information about variable types in a dataset.
+-   Note this dataset is a `tibble` instead of a `data.frame`
+:::
+
+```{r}
+str(dds.discr)      # base R
+```
+
+<!-- ![](../img_slides/dds.discr_str.png){fig-align="center"} -->
+
+## `glimpse()`
+
+::: {style="font-size: 80%;"}
+**New: `glimpse()`**
+
+-   Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types.
+-   `glimpse()` tends to have nicer output for `tibbles` than `str()`
+:::
+
+```{r}
+library(tidyverse)
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+
+## `summary()`
+
+::: {style="font-size: 80%;"}
+-   We previously used the base R structure command `summary()` to get summary information about variables
+:::
+
+```{r}
+summary(dds.discr)      # base R
+```
+
+## `tbl_summary()`: summary table
+
+:::::: columns
+:::: {.column width="50%"}
+::: {style="font-size: 80%;"}
+-   **New:** Use `tbl_summary()` from the `gtsummary` package to get summary information
+:::
+
+```{r}
+#| eval: false
+# library(gtsummary)
+tbl_summary(dds.discr)
+```
+::::
+
+::: {.column width="50%"}
+![](../img_slides/dds.discr_gtsummary.jpg){fig-align="center" height="650"}
+:::
+::::::
+
+# Visualize numerical variables with `ggplot`
+
+::::: columns
+::: {.column width="40%"}
+![[ggplot](https://ggplot2.tidyverse.org/index.html)](../img_slides/ggplotlogo.png){fig-align="center" height="400"}
+:::
+
+::: {.column width="60%"}
+![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/ggplot2_masterpiece.png){fig-align="center" height="400"}
+:::
+:::::
+
+## What data (variables) are included in the plot below?
+
+![](../img_slides/ggplot_basics_from_ppt_figure_only.png){fig-align="center"}
+
+## Basics of a ggplot
+
+![](../img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
+
+## Grammar of ggplot2
+
+![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](../img_slides/khealy_ggplot1.png){fig-align="center"}
+
+## Histograms
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr, 
+       aes(x = expenditures)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Histograms showing proportions
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4" 
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density)))  
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4-6"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density))) +  
+  scale_y_continuous(labels =   
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Distribution shapes
+
+![](../img_slides/distribution_shapes.png){fig-align="center"}
+
+## Density plots
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_density() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Dot plots
+
+::: {style="font-size: 80%;"}
+-   Better for smaller samples
+-   What is being measured on the vertical axes?
+:::
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_dotplot(binwidth =1) 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram(binwidth =1) 
+```
+:::
+:::::
+
+## Boxplots
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr, 
+       aes(x = age)) + 
+  geom_boxplot() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr, 
+       aes(y = age)) + 
+  geom_boxplot() 
+```
+:::
+:::::
+
+## Boxplots: 5 number summary visualization
+
+<!-- ![](../img_slides/boxplot_no_outliers.png) -->
+
+No outliers: ![https://www.simplypsychology.org/boxplots.html](../img_slides/boxplot_no_outliers.png){fig-align="center" height="280"}
+
+With outliers: ![https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51](../img_slides/boxplot_w_outliers.png){fig-align="center" height="300"}
