@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -16930,7 +16930,7 @@
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#ridgeline-plot",
     "title": "Lesson 8: Data visualization of two variables",
     "section": "Ridgeline plot",
-    "text": "Ridgeline plot\n\nOverlapped densities were easy enough to see with 3 genotypes\nIf you have many categories, a ridgeline plot might make it easier to see\n\n\n\n\nlibrary(ggridges)\nggplot(data = famuss, \n       aes(y = actn3.r577x, \n           x = ndrm.ch, \n           fill = actn3.r577x)) +\n  geom_density_ridges(alpha = 0.3, \n          show.legend = FALSE) +      \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\",\n       y = \"ACTN3 genotype\",\n       title = \"Strength change by genotype\")       \n\n\n\n\n\n\n\n\n\n\n\nLesson 8 Slides"
+    "text": "Ridgeline plot\n\nOverlapped densities were easy enough to see with 3 genotypes\nIf you have many categories, a ridgeline plot might make it easier to see\n\n\n\n\nlibrary(ggridges)\nggplot(data = famuss, \n       aes(y = actn3.r577x, \n           x = ndrm.ch, \n           fill = actn3.r577x)) +\n  geom_density_ridges(alpha = 0.3, \n          show.legend = FALSE) +      \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\",\n       y = \"ACTN3 genotype\",\n       title = \"Strength change by genotype\")"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#transforming-data-1.4.5",
@@ -16964,8 +16964,8 @@
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#pearson-correlation-coefficient-r-formula",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#pearson-correlation-coefficient-r-formula",
     "title": "Lesson 8: Data visualization of two variables",
-    "section": "(Pearson) Correlation coefficient (r): formula",
-    "text": "(Pearson) Correlation coefficient (r): formula\nThe (Pearson) correlation coefficient of variables \\(x\\) and \\(y\\) can be computed using the formula \\[r = \\frac{1}{n-1}\\sum_{i=1}^{n}\\Big(\\frac{x_i - \\bar{x}}{s_x}\\Big)\\Big(\\frac{y_i - \\bar{y}}{s_y}\\Big)\\] where\n\n\\((x_1,y_1),(x_2,y_2),...,(x_n,y_n)\\) are the \\(n\\) paired values of the variables \\(x\\) and \\(y\\)\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the variables \\(x\\) and \\(y\\), respectively\n\n \n\nWe can use cor() in R to calculate this!\n\n\ncor(frog$body.size, frog$clutch.volume, use = \"pairwise.complete.obs\")\n\n[1] 0.6755435"
+    "section": "(Pearson) Correlation coefficient (\\(r\\)): formula",
+    "text": "(Pearson) Correlation coefficient (\\(r\\)): formula\nThe (Pearson) correlation coefficient of variables \\(x\\) and \\(y\\) can be computed using the formula \\[r = \\frac{1}{n-1}\\sum_{i=1}^{n}\\Big(\\frac{x_i - \\bar{x}}{s_x}\\Big)\\Big(\\frac{y_i - \\bar{y}}{s_y}\\Big)\\] where\n\n\\((x_1,y_1),(x_2,y_2),...,(x_n,y_n)\\) are the \\(n\\) paired values of the variables \\(x\\) and \\(y\\)\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the variables \\(x\\) and \\(y\\), respectively\n\n \n\nWe can use cor() in R to calculate this!\n\n\ncor(frog$body.size, frog$clutch.volume, use = \"pairwise.complete.obs\")\n\n[1] 0.6755435"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#guess-the-correlation-game",
@@ -17180,7 +17180,7 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-1",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-1",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Poll Everywhere Question 1",
     "text": "Poll Everywhere Question 1"
   },
@@ -17246,5 +17246,229 @@
     "title": "Lesson 8: Data visualization of two variables",
     "section": "We often identify a response variable from our research question",
     "text": "We often identify a response variable from our research question\n\n\n\n\nResponse Variable\n\n\nA response variable is defined by the particular research question a study seeks to address\n\nIt measures the outcome of interest in the study\n\n\n\n\n\n\nExplanatory Variable\n\n\nA study will typically examine whether the values of a response variable differ as values of an explanatory variable change, and if so, how the two variables are related.\n\nA given study may examine several explanatory variables for a single response variable\n\n\n\n\n\n\nSometimes we’re interested in viewing the relationship between our response variable and explanatory variable(s)\nSometimes we’re just interested in viewing the relationship between explanatory variables"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#frequency-tables-count",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#frequency-tables-count",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Frequency tables: count()",
+    "text": "Frequency tables: count()\n\n\n\ncount is from the dplyr package\nthe output is a long tibble, and not a “nice” table\n\n\ndds.discr %&gt;% count(ethnicity)\n\n# A tibble: 8 × 2\n  ethnicity              n\n  &lt;fct&gt;              &lt;int&gt;\n1 American Indian        4\n2 Asian                129\n3 Black                 59\n4 Hispanic             376\n5 Multi Race            26\n6 Native Hawaiian        3\n7 Other                  2\n8 White not Hispanic   401\n\n\n\n\ndds.discr %&gt;% \n  count(ethnicity, age.cohort)\n\n# A tibble: 35 × 3\n   ethnicity       age.cohort     n\n   &lt;fct&gt;           &lt;fct&gt;      &lt;int&gt;\n 1 American Indian 13-17          1\n 2 American Indian 22-50          1\n 3 American Indian 51+            2\n 4 Asian           0-5            8\n 5 Asian           6-12          18\n 6 Asian           13-17         20\n 7 Asian           18-21         41\n 8 Asian           22-50         29\n 9 Asian           51+           13\n10 Black           0-5            3\n# ℹ 25 more rows"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#how-to-use-the-pipe",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#how-to-use-the-pipe",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "How to use the pipe %>%",
+    "text": "How to use the pipe %&gt;%\nThe pipe operator %&gt;% strings together commands to be performed sequentially\n\ndds.discr %&gt;% head(n=3)      # pronounce %&gt;% as \"then\"\n\n# A tibble: 3 × 6\n     id age.cohort   age gender expenditures ethnicity         \n  &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;             \n1 10210 13-17         17 Female         2113 White not Hispanic\n2 10409 22-50         37 Male          41924 White not Hispanic\n3 10486 0-5            3 Male           1454 Hispanic          \n\n\n\nAlways first list the tibble that the commands are being applied to\nCan use multiple pipes to run multiple commands in sequence\n\nWhat does the following code do?\n\n\n\ndds.discr %&gt;% head(n=3) %&gt;% summary()"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#frequency-tables-janitor-packages-tabyl-function",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#frequency-tables-janitor-packages-tabyl-function",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Frequency tables: janitor package’s tabyl function",
+    "text": "Frequency tables: janitor package’s tabyl function\n\n\n\n# default table\ndds.discr %&gt;% \n  tabyl(ethnicity)  \n\n          ethnicity   n percent\n    American Indian   4   0.004\n              Asian 129   0.129\n              Black  59   0.059\n           Hispanic 376   0.376\n         Multi Race  26   0.026\n    Native Hawaiian   3   0.003\n              Other   2   0.002\n White not Hispanic 401   0.401\n\n\n\nadorn_ your table!\n\ndds.discr %&gt;% \n  tabyl(ethnicity) %&gt;%\n  adorn_totals(\"row\") %&gt;% \n  adorn_pct_formatting(digits=2)  \n\n          ethnicity    n percent\n    American Indian    4   0.40%\n              Asian  129  12.90%\n              Black   59   5.90%\n           Hispanic  376  37.60%\n         Multi Race   26   2.60%\n    Native Hawaiian    3   0.30%\n              Other    2   0.20%\n White not Hispanic  401  40.10%\n              Total 1000 100.00%"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#relative-frequency-table",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#relative-frequency-table",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Relative frequency table",
+    "text": "Relative frequency table\n\n\n\nA relative frequency table shows proportions (or percentages) instead of counts\nTo the right I removed (deselected) the counts column (n) to create a relative frequency table\n\n\n\ndds.discr %&gt;% \n  tabyl(ethnicity) %&gt;%\n  adorn_totals(\"row\") %&gt;% \n  adorn_pct_formatting(digits=2) %&gt;%   \n  select(-n) \n\n          ethnicity percent\n    American Indian   0.40%\n              Asian  12.90%\n              Black   5.90%\n           Hispanic  37.60%\n         Multi Race   2.60%\n    Native Hawaiian   0.30%\n              Other   0.20%\n White not Hispanic  40.10%\n              Total 100.00%"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#contingency-tables-two-way-tables",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#contingency-tables-two-way-tables",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Contingency tables (two-way tables)",
+    "text": "Contingency tables (two-way tables)\n\n\n\nContingency tables summarize data for two categorical variables\n\nwith each value in the table representing the number of times\na particular combination of outcomes occurs\n\nRow & column totals\nare sometimes called marginal totals\n\n\n\ndds.discr %&gt;% \n  tabyl(ethnicity, gender) %&gt;%    \n  adorn_totals(c(\"row\", \"col\"))    \n\n          ethnicity Female Male Total\n    American Indian      3    1     4\n              Asian     61   68   129\n              Black     26   33    59\n           Hispanic    192  184   376\n         Multi Race     13   13    26\n    Native Hawaiian      2    1     3\n              Other      1    1     2\n White not Hispanic    205  196   401\n              Total    503  497  1000"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#contingency-tables-with-percentages",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#contingency-tables-with-percentages",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Contingency tables with percentages",
+    "text": "Contingency tables with percentages\n\ndds.discr %&gt;% \n  tabyl(ethnicity, age.cohort) %&gt;%\n  adorn_totals(c(\"row\")) %&gt;%\n  adorn_percentages(\"row\") %&gt;%   \n  adorn_pct_formatting(digits=0) %&gt;%    \n  adorn_ns()    \n\n          ethnicity      0-5      6-12      13-17     18-21     22-50       51+\n    American Indian  0%  (0)  0%   (0)  25%   (1)  0%   (0) 25%   (1) 50%   (2)\n              Asian  6%  (8) 14%  (18)  16%  (20) 32%  (41) 22%  (29) 10%  (13)\n              Black  5%  (3) 19%  (11)  20%  (12) 15%   (9) 29%  (17) 12%   (7)\n           Hispanic 12% (44) 24%  (91)  27% (103) 21%  (78) 11%  (43)  5%  (17)\n         Multi Race 27%  (7) 35%   (9)  27%   (7)  8%   (2)  4%   (1)  0%   (0)\n    Native Hawaiian  0%  (0)  0%   (0)   0%   (0)  0%   (0) 67%   (2) 33%   (1)\n              Other  0%  (0)  0%   (0) 100%   (2)  0%   (0)  0%   (0)  0%   (0)\n White not Hispanic  5% (20) 11%  (46)  17%  (67) 17%  (69) 33% (133) 16%  (66)\n              Total  8% (82) 18% (175)  21% (212) 20% (199) 23% (226) 11% (106)"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Mean annual DDS expenditures by race/ethnicity",
+    "text": "Mean annual DDS expenditures by race/ethnicity\n\n\n\nmean(dds.discr$expenditures)\n\n[1] 18065.79\n\ndds.discr %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 1 × 3\n     ave     SD   med\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 18066. 19543.  7026\n\n\n\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 8 × 4\n  ethnicity             ave     SD    med\n  &lt;fct&gt;               &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American Indian    36438. 25694. 41818.\n2 Asian              18392. 19209.  9369 \n3 Black              20885. 20549.  8687 \n4 Hispanic           11066. 15630.  3952 \n5 Multi Race          4457.  7332.  2622 \n6 Native Hawaiian    42782.  6576. 40727 \n7 Other               3316.  1836.  3316.\n8 White not Hispanic 24698. 20604. 15718"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#get_summary_stats-from-rstatix-package",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#get_summary_stats-from-rstatix-package",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "get_summary_stats() from rstatix package",
+    "text": "get_summary_stats() from rstatix package\n\ndds.discr %&gt;% get_summary_stats()\n\n# A tibble: 3 × 13\n  variable         n   min   max median     q1     q3   iqr    mad   mean     sd\n  &lt;fct&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 id            1000 10210 99898 55384. 31809. 76135. 44326 3.27e4 5.47e4 2.56e4\n2 age           1000     0    95    18     12     26     14 1.04e1 2.28e1 1.85e1\n3 expenditures  1000   222 75098  7026   2899. 37713. 34814 7.76e3 1.81e4 1.95e4\n# ℹ 2 more variables: se &lt;dbl&gt;, ci &lt;dbl&gt;\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;%\n  get_summary_stats(expenditures, type = \"common\")\n\n# A tibble: 8 × 11\n  ethnicity variable     n   min   max median    iqr   mean     sd     se     ci\n  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American… expendi…     4  3726 58392 41818. 34085. 36438. 25694. 12847. 40885.\n2 Asian     expendi…   129   374 75098  9369  30892  18392. 19209.  1691.  3346.\n3 Black     expendi…    59   240 60808  8687  37987  20885. 20549.  2675.  5355.\n4 Hispanic  expendi…   376   222 65581  3952   7961. 11066. 15630.   806.  1585.\n5 Multi Ra… expendi…    26   669 38619  2622   2060.  4457.  7332.  1438.  2962.\n6 Native H… expendi…     3 37479 50141 40727   6331  42782.  6576.  3797. 16337.\n7 Other     expendi…     2  2018  4615  3316.  1298.  3316.  1836.  1298. 16499.\n8 White no… expendi…   401   340 68890 15718  39157  24698. 20604.  1029.  2023."
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#how-to-force-all-output-to-be-shown-12",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#how-to-force-all-output-to-be-shown-12",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "How to force all output to be shown? (1/2)",
+    "text": "How to force all output to be shown? (1/2)\nUse kable() from the knitr package.\n\ndds.discr %&gt;% get_summary_stats() %&gt;% kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvariable\nn\nmin\nmax\nmedian\nq1\nq3\niqr\nmad\nmean\nsd\nse\nci\n\n\n\n\nid\n1000\n10210\n99898\n55384.5\n31808.75\n76134.75\n44326\n32734.325\n54662.85\n25643.673\n810.924\n1591.310\n\n\nage\n1000\n0\n95\n18.0\n12.00\n26.00\n14\n10.378\n22.80\n18.462\n0.584\n1.146\n\n\nexpenditures\n1000\n222\n75098\n7026.0\n2898.75\n37712.75\n34814\n7760.670\n18065.79\n19542.831\n617.999\n1212.724"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "How to force all output to be shown? knitr (2/2)",
+    "text": "How to force all output to be shown? knitr (2/2)\nUse kable() from the knitr package.\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;%\n  get_summary_stats(expenditures, type = \"common\") %&gt;% \n  kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nethnicity\nvariable\nn\nmin\nmax\nmedian\niqr\nmean\nsd\nse\nci\n\n\n\n\nAmerican Indian\nexpenditures\n4\n3726\n58392\n41817.5\n34085.25\n36438.250\n25693.912\n12846.956\n40884.748\n\n\nAsian\nexpenditures\n129\n374\n75098\n9369.0\n30892.00\n18392.372\n19209.225\n1691.278\n3346.482\n\n\nBlack\nexpenditures\n59\n240\n60808\n8687.0\n37987.00\n20884.593\n20549.274\n2675.288\n5355.170\n\n\nHispanic\nexpenditures\n376\n222\n65581\n3952.0\n7961.25\n11065.569\n15629.847\n806.048\n1584.940\n\n\nMulti Race\nexpenditures\n26\n669\n38619\n2622.0\n2059.75\n4456.731\n7332.135\n1437.950\n2961.514\n\n\nNative Hawaiian\nexpenditures\n3\n37479\n50141\n40727.0\n6331.00\n42782.333\n6576.462\n3796.922\n16336.838\n\n\nOther\nexpenditures\n2\n2018\n4615\n3316.5\n1298.50\n3316.500\n1836.356\n1298.500\n16499.007\n\n\nWhite not Hispanic\nexpenditures\n401\n340\n68890\n15718.0\n39157.00\n24697.549\n20604.376\n1028.933\n2022.793"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Case study: discrimination in developmental disability support (1.7.1)",
+    "text": "Case study: discrimination in developmental disability support (1.7.1)\n\nPrevious research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\n\n\n\nR07 Slides"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#what-is-the-tidyverse",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#what-is-the-tidyverse",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "What is the tidyverse?",
+    "text": "What is the tidyverse?\nThe tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.\n\n\n\nggplot2 - data visualisation\ndplyr - data manipulation\ntidyr - tidy data\nreadr - read rectangular data\npurrr - functional programming\ntibble - modern data frames\nstringr - string manipulation\nforcats - factors\nand many more …"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#tidy-data1",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#tidy-data1",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Tidy data1",
+    "text": "Tidy data1\n\n\nEach variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell.\n\nSource: R for Data Science. Grolemund and Wickham."
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#pipe-operator-magrittr",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#pipe-operator-magrittr",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Pipe operator (magrittr)",
+    "text": "Pipe operator (magrittr)\n\nThe pipe operator (%&gt;%) allows us to step through sequential functions in the same way we follow if-then statements or steps from instructions\n\n \n\nI want to find my keys, then start my car, then drive to work, then park my car.\n\n \n\n\nNested\n\npark(drive(start_car(find(\"keys\")), \n           to = \"work\"))\n\n\nPiped\n\nfind(\"keys\") %&gt;%\n  start_car() %&gt;%\n  drive(to = \"work\") %&gt;%\n  park()"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#recoding-a-binary-variable-with-pipe-operator",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#recoding-a-binary-variable-with-pipe-operator",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Recoding a binary variable with pipe operator",
+    "text": "Recoding a binary variable with pipe operator\n \n\nLet’s say I want a variable transmission to show the category names that are assigned to numeric values in the code. I want 0 to be coded as automatic and 1 to be coded as manual.\n\n \n\n\nBase R:\n\nmtcars$transmission &lt;-\n  ifelse(\n    mtcars$am == 0,\n    \"automatic\",\n    \"manual\"\n  )\n\n\nTidyverse:\n\nmtcars &lt;- mtcars %&gt;%\n  mutate(\n    transmission = case_when(\n      am == 0 ~ \"automatic\",\n      am == 1 ~ \"manual\"\n    )\n  )\n\n \n\nmutate() creates new columns that are functions of existing variables"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#recoding-a-multi-level-variable",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#recoding-a-multi-level-variable",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Recoding a multi-level variable",
+    "text": "Recoding a multi-level variable\n \n\nLet’s say I want a variable gear to show the category names that are assigned to numeric values in the code. I want 3 to be coded as gear three, 4 to be coded as gear four, 5 to be coded as gear five.\n\n \n\n\nBase R:\n\nmtcars$gear_char &lt;-\n  ifelse(\n    mtcars$gear == 3,\n    \"three\",\n    ifelse(\n      mtcars$gear == 4,\n      \"four\",\n      \"five\"\n    )\n  )\n\n\nTidyverse:\n\nmtcars &lt;- mtcars %&gt;%\n  mutate(\n    gear_char = case_when(\n      gear == 3 ~ \"three\",\n      gear == 4 ~ \"four\",\n      gear == 5 ~ \"five\"\n    )\n  )"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#summarizing-categorical-data-and-some-data-wrangling",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#summarizing-categorical-data-and-some-data-wrangling",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Summarizing categorical data and some data wrangling",
+    "text": "Summarizing categorical data and some data wrangling\n\n\n\n\n\n\ndplyr\n\n\n\n\n\n\nmagrittr\n\n\n\n\n\n\njanitor"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#mutate-constructing-new-variables-from-what-you-have",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#mutate-constructing-new-variables-from-what-you-have",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "mutate(): constructing new variables from what you have",
+    "text": "mutate(): constructing new variables from what you have\n\nWe’ve seen a couple examples for mutate() so far (mostly because its used so often!)\nWe haven’t seen an example where we make a new variable from two variables\n\n\nI want to make a variable that is the ratio of expenditures over age\n\n   \n\ndds.discr1 = dds.discr %&gt;% \n  rename(SAB = gender, \n         R_E = ethnicity)\n\n\ndds.discr2 = dds.discr1 %&gt;%\n  mutate(exp_to_age = expenditures/age)\n\nglimpse(dds.discr2)\n\nRows: 1,000\nColumns: 7\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#tbl_summary-table-summary-12",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#tbl_summary-table-summary-12",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "tbl_summary() : table summary (1/2)",
+    "text": "tbl_summary() : table summary (1/2)\n\nWhat if I want one of those fancy summary tables that are at the top of most research articles? (lovingly called “Table 1”)\n\n\n\n\nlibrary(gtsummary)\ntbl_summary(dds.discr2)\n\n\n\n\n\n\n\n\n  \n    \n      Characteristic\n\n      N = 1,000\n1\n    \n  \n  \n    id\n55,385 (31,759, 76,205)\n    age.cohort\n\n        0-5\n82 (8.2%)\n        6-12\n175 (18%)\n        13-17\n212 (21%)\n        18-21\n199 (20%)\n        22-50\n226 (23%)\n        51+\n106 (11%)\n    age\n18 (12, 26)\n    SAB\n\n        Female\n503 (50%)\n        Male\n497 (50%)\n    expenditures\n7,026 (2,898, 37,718)\n    R_E\n\n        American Indian\n4 (0.4%)\n        Asian\n129 (13%)\n        Black\n59 (5.9%)\n        Hispanic\n376 (38%)\n        Multi Race\n26 (2.6%)\n        Native Hawaiian\n3 (0.3%)\n        Other\n2 (0.2%)\n        White not Hispanic\n401 (40%)\n    exp_to_age\n462 (273, 938)\n  \n  \n  \n    \n      1 Median (Q1, Q3); n (%)"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#tbl_summary-table-summary-22",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#tbl_summary-table-summary-22",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "tbl_summary() : table summary (2/2)",
+    "text": "tbl_summary() : table summary (2/2)\n\nLet’s make this more presentable\n\n \n\n\n\ndds.discr2 %&gt;%\n  select(-id, -age.cohort, -exp_to_age) %&gt;%\n  tbl_summary(label = c(age ~ \"Age\", \n                        R_E ~ \"Race/Ethnicity\", \n                        SAB ~ \"Sex Assigned at Birth\", \n                        expenditures ~ \"Expenditures\") ,\n              statistic = list(all_continuous() ~ \"{mean} ({sd})\"))\n\n\n\n\n\n\n\n\n  \n    \n      Characteristic\n\n      N = 1,000\n1\n    \n  \n  \n    Age\n23 (18)\n    Sex Assigned at Birth\n\n        Female\n503 (50%)\n        Male\n497 (50%)\n    Expenditures\n18,066 (19,543)\n    Race/Ethnicity\n\n        American Indian\n4 (0.4%)\n        Asian\n129 (13%)\n        Black\n59 (5.9%)\n        Hispanic\n376 (38%)\n        Multi Race\n26 (2.6%)\n        Native Hawaiian\n3 (0.3%)\n        Other\n2 (0.2%)\n        White not Hispanic\n401 (40%)\n  \n  \n  \n    \n      1 Mean (SD); n (%)"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#group_by-group-by-one-or-more-variables",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#group_by-group-by-one-or-more-variables",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "group_by(): group by one or more variables",
+    "text": "group_by(): group by one or more variables\n\nWhat if I want to quickly look at group differences?\nIt will not change how the data look, but changes the actions of following functions\n\n\nI want to group my data by sex assigned at birth.\n\n \n\ndds.discr5 = dds.discr2 %&gt;%\n  group_by(SAB)\nglimpse(dds.discr5)\n\nRows: 1,000\nColumns: 7\nGroups: SAB [2]\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…\n\n\n\nLet’s see how the groups change something like the summarize() function in the next slide"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#summarize-summarize-your-data-or-grouped-data-into-one-row",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#summarize-summarize-your-data-or-grouped-data-into-one-row",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "summarize(): summarize your data or grouped data into one row",
+    "text": "summarize(): summarize your data or grouped data into one row\n\nWhat if I want to calculate specific descriptive statistics for my variables?\nThis function is often best used with group_by()\nIf only presenting the summaries, functions like tbl_summary() is better\nsummarize() creates a new data frame, which means you can plot and manipulate the summarized data\n\n \n\n\nOver whole sample:\n\ndds.discr2 %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 1 × 3\n     ave     SD   med\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 18066. 19543.  7026\n\n\n\nGrouped by sex assigned at birth:\n\ndds.discr2 %&gt;% \n  group_by(SAB) %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 2 × 4\n  SAB       ave     SD   med\n  &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;\n1 Female 18130. 20020.  6400\n2 Male   18001. 19068.  7219"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#across-apply-a-function-across-multiple-columns",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#across-apply-a-function-across-multiple-columns",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "across(): apply a function across multiple columns",
+    "text": "across(): apply a function across multiple columns\n\nLike group_by(), this function is often paired with another transformation function\n\n\nI want all my integer values to have two significant figures.\n\n \n\ndds.discr6 = dds.discr2 %&gt;%\n  mutate(across(where(is.integer), signif, digits = 2))\n\nglimpse(dds.discr6)\n\nRows: 1,000\nColumns: 7\n$ id           &lt;dbl&gt; 10000, 10000, 10000, 11000, 11000, 11000, 11000, 11000, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;dbl&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;dbl&gt; 2100, 42000, 1500, 6400, 4400, 4600, 3900, 3900, 5000, 29…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#we-need-to-introduce-a-new-dataset-for-this",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#we-need-to-introduce-a-new-dataset-for-this",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "We need to introduce a new dataset for this",
+    "text": "We need to introduce a new dataset for this\n\nStudy investigating whether ACTN3 genotype at a particular location (residue 577) is associated with change in muscle function\n\n \n\nCategorical variable: ACTN3 genotypes (CC, TT, CT)\n\n \n\nNumeric variable: Muscle function, measured as percent change in non-dominant arm strength\n\n \n\nWe can start the investigation by plotting the relationship"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#mean-percent-change-by-actn3-genotypes",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#mean-percent-change-by-actn3-genotypes",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Mean percent change by ACTN3 genotypes",
+    "text": "Mean percent change by ACTN3 genotypes\n\n\n\nmean(famuss$ndrm.ch)\n\n[1] 53.29109\n\ndds.discr %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 1 × 3\n     ave     SD   med\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 18066. 19543.  7026\n\n\n\n\ndds.discr %&gt;% \n  group_by(ethnicity) %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 8 × 4\n  ethnicity             ave     SD    med\n  &lt;fct&gt;               &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American Indian    36438. 25694. 41818.\n2 Asian              18392. 19209.  9369 \n3 Black              20885. 20549.  8687 \n4 Hispanic           11066. 15630.  3952 \n5 Multi Race          4457.  7332.  2622 \n6 Native Hawaiian    42782.  6576. 40727 \n7 Other               3316.  1836.  3316.\n8 White not Hispanic 24698. 20604. 15718"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#dplyr-resources",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#dplyr-resources",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "dplyr resources",
+    "text": "dplyr resources\n\nMore dpylr functions to reference!\n\nAdditional details and examples are available in the vignettes:\n\ncolumn-wise operations vignette\nrow-wise operations vignette\n\n \nand the dplyr 1.0.0 release blog posts:\n\nworking across columns\nworking within rows"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#r-programming-class-at-ohsu",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#r-programming-class-at-ohsu",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "R programming class at OHSU!",
+    "text": "R programming class at OHSU!\nYou can check out Dr. Jessica Minnier’s R class page if you want more notes, videos, etc."
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#the-larger-tidy-ecosystem",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#the-larger-tidy-ecosystem",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "The larger tidy ecosystem",
+    "text": "The larger tidy ecosystem\nJust to name a few…\n\njanitor\nkableExtra\npatchwork\ngghighlight\ntidybayes"
+  },
+  {
+    "objectID": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#credit-to-mine-çetinkaya-rundel",
+    "href": "lessons/R07_Summarizing_data/R07_Summarizing_data.html#credit-to-mine-çetinkaya-rundel",
+    "title": "R07: Summarizing data with tidyverse",
+    "section": "Credit to Mine Çetinkaya-Rundel",
+    "text": "Credit to Mine Çetinkaya-Rundel\n\nThese notes were built from Mine’s notes\n\nMost pages and code were left as she made them\nI changed a few things to match our class\n\nPlease see her Github repository for the original notes\n\n\n\nR07 Slides"
+  },
+  {
+    "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-2",
+    "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-2",
+    "title": "Lesson 8: Data visualization of two variables",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-3",
+    "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-3",
+    "title": "Lesson 8: Data visualization of two variables",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-4",
+    "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#poll-everywhere-question-4",
+    "title": "Lesson 8: Data visualization of two variables",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4\n\n\nLesson 8 Slides"
   }
 ]

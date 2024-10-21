@@ -1,0 +1,636 @@
+---
+title: "R07: Summarizing data with `tidyverse`"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/23/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R07 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+library(oibiostat)
+library(knitr)
+library(ggridges)
+library(rstatix)
+data(frog) 
+data(dds.discr)
+data("famuss")
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
+# Introduction to the `tidyverse`
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
+
+## 
+
+![](../img_slides/spiderverse.jpeg){fig-align="center"}
+
+## What is the tidyverse?
+
+The **tidyverse** is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
+
+::: columns
+::: {.column width="45%"}
+-   **ggplot2** - data visualisation
+-   **dplyr** - data manipulation
+-   **tidyr** - tidy data
+-   **readr** - read rectangular data
+-   **purrr** - functional programming
+-   **tibble** - modern data frames
+-   **stringr** - string manipulation
+-   **forcats** - factors
+-   and many more ...
+:::
+
+::: {.column width="55%"}
+![](../img_slides/tidyverse.png){fig-align="center" width="669"}
+:::
+:::
+
+## Tidy data[^1]
+
+[^1]: Source: R for Data Science. Grolemund and Wickham.
+
+![](../img_slides/tidy-data-frame.png)
+
+1.  Each variable must have its own column.
+
+2.  Each observation must have its own row.
+
+3.  Each value must have its own cell.
+
+## `mutate()`: constructing new variables from what you have
+
+-   We've seen a couple examples for `mutate()` so far (mostly because its used so often!)
+
+-   We haven't seen an example where we make a new variable from two variables
+
+::: heq
+I want to make a variable that is the ratio of expenditures over age
+:::
+
+ 
+ 
+
+```{r}
+dds.discr1 = dds.discr %>% 
+  rename(SAB = gender, 
+         R_E = ethnicity)
+```
+
+```{r}
+dds.discr2 = dds.discr1 %>%
+  mutate(exp_to_age = expenditures/age)
+
+glimpse(dds.discr2)
+```
+
+## Pipe operator (`magrittr`)
+
+-   The pipe operator (`%>%`) allows us to step through sequential functions in the same way we follow if-then statements or steps from instructions
+
+ 
+
+::: heq
+I want to find my keys, then start my car, then drive to work, then park my car.
+:::
+
+ 
+
+::: columns
+::: {.column width="50%"}
+**Nested**
+
+```{r eval = FALSE}
+park(drive(start_car(find("keys")), 
+           to = "work"))
+```
+:::
+
+::: {.column width="50%"}
+**Piped**
+
+```{r eval = FALSE}
+find("keys") %>%
+  start_car() %>%
+  drive(to = "work") %>%
+  park()
+```
+:::
+:::
+
+## Recoding a binary variable with pipe operator
+
+ 
+
+::: heq
+Let's say I want a variable `transmission` to show the category names that are assigned to numeric values in the code. I want `0` to be coded as `automatic` and `1` to be coded as `manual`.
+:::
+
+ 
+
+::: columns
+::: {.column width="50%"}
+Base R:
+
+```{r}
+mtcars$transmission <-
+  ifelse(
+    mtcars$am == 0,
+    "automatic",
+    "manual"
+  )
+```
+:::
+
+::: {.column width="50%"}
+Tidyverse:
+
+```{r}
+mtcars <- mtcars %>%
+  mutate(
+    transmission = case_when(
+      am == 0 ~ "automatic",
+      am == 1 ~ "manual"
+    )
+  )
+```
+
+ 
+
+::: hl
+`mutate()` creates new columns that are functions of existing variables
+:::
+:::
+:::
+
+## Recoding a multi-level variable
+
+ 
+
+::: heq
+Let's say I want a variable `gear` to show the category names that are assigned to numeric values in the code. I want `3` to be coded as gear `three`, `4` to be coded as gear `four`, `5` to be coded as gear `five`.
+:::
+
+ 
+
+::: columns
+::: {.column width="50%"}
+Base R:
+
+```{r}
+mtcars$gear_char <-
+  ifelse(
+    mtcars$gear == 3,
+    "three",
+    ifelse(
+      mtcars$gear == 4,
+      "four",
+      "five"
+    )
+  )
+```
+:::
+
+::: {.column width="50%"}
+Tidyverse:
+
+```{r}
+mtcars <- mtcars %>%
+  mutate(
+    gear_char = case_when(
+      gear == 3 ~ "three",
+      gear == 4 ~ "four",
+      gear == 5 ~ "five"
+    )
+  )
+```
+:::
+:::
+
+# Summarizing Data
+
+## `tbl_summary()` : table summary (1/2)
+
+-   What if I want one of those fancy summary tables that are at the top of most research articles? (lovingly called "Table 1")
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+
+library(gtsummary)
+tbl_summary(dds.discr2)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+
+library(gtsummary)
+tbl_summary(dds.discr2)
+```
+:::
+:::
+
+## `tbl_summary()` : table summary (2/2)
+
+-   Let's make this more presentable
+
+ 
+
+::: columns
+::: {.column width="70%"}
+```{r}
+#| eval: false
+
+dds.discr2 %>%
+  select(-id, -age.cohort, -exp_to_age) %>%
+  tbl_summary(label = c(age ~ "Age", 
+                        R_E ~ "Race/Ethnicity", 
+                        SAB ~ "Sex Assigned at Birth", 
+                        expenditures ~ "Expenditures") ,
+              statistic = list(all_continuous() ~ "{mean} ({sd})"))
+```
+:::
+
+::: {.column width="30%"}
+```{r}
+#| echo: false
+
+dds.discr2 %>%
+  select(-id, -age.cohort, -exp_to_age) %>%
+  tbl_summary(label = c(age ~ "Age", 
+                        R_E ~ "Race/Ethnicity", 
+                        SAB ~ "Sex Assigned at Birth", 
+                        expenditures ~ "Expenditures") ,
+              statistic = list(all_continuous() ~ "{mean} ({sd})"))
+```
+:::
+:::
+
+## `group_by()`: group by one or more variables
+
+-   What if I want to quickly look at group differences?
+-   It will not change how the data look, but changes the actions of following functions
+
+::: heq
+I want to group my data by sex assigned at birth.
+:::
+
+ 
+
+```{r}
+dds.discr5 = dds.discr2 %>%
+  group_by(SAB)
+glimpse(dds.discr5)
+```
+
+-   Let's see how the groups change something like the `summarize()` function in the next slide
+
+## `summarize()`: summarize your data or grouped data into one row
+
+-   What if I want to calculate specific descriptive statistics for my variables?
+-   This function is often best used with `group_by()`
+-   If only presenting the summaries, functions like `tbl_summary()` is better
+-   `summarize()` creates a new data frame, which means you can plot and manipulate the summarized data
+
+ 
+
+::: columns
+::: column
+Over whole sample:
+
+```{r}
+dds.discr2 %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+
+::: column
+Grouped by sex assigned at birth:
+
+```{r}
+dds.discr2 %>% 
+  group_by(SAB) %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+:::
+
+## `across()`: apply a function across multiple columns
+
+-   Like `group_by()`, this function is often paired with another transformation function
+
+::: heq
+I want all my integer values to have two significant figures.
+:::
+
+ 
+
+```{r}
+dds.discr6 = dds.discr2 %>%
+  mutate(across(where(is.integer), signif, digits = 2))
+
+glimpse(dds.discr6)
+```
+
+# Summarizing categorical data and some data wrangling
+
+<!-- ::: {layout-ncol=3} -->
+
+:::::: columns
+::: {.column width="33%"}
+![[dplyr](https://dplyr.tidyverse.org/)](../img_slides/hex-dplyr.png){fig-align="center" height="300"}
+:::
+
+::: {.column width="33%"}
+![[magrittr](https://magrittr.tidyverse.org/)](../img_slides/magrittr.png){fig-align="center" height="300"}
+:::
+
+::: {.column width="33%"}
+![[janitor](https://cran.r-project.org/web/packages/janitor/readme/README.html)](../img_slides/janitor_logo_small.png){fig-align="center" height="300"}
+:::
+::::::
+
+## Frequency tables: `count()`
+
+::::: columns
+::: {.column width="50%"}
+-   `count` is from the `dplyr` package
+-   the output is a long tibble, and not a "nice" table
+
+```{r}
+dds.discr %>% count(ethnicity)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+dds.discr %>% 
+  count(ethnicity, age.cohort)
+```
+:::
+:::::
+
+## How to use the pipe `%>%`
+
+The pipe operator `%>%` strings together commands to be performed sequentially
+
+```{r}
+dds.discr %>% head(n=3)      # pronounce %>% as "then"
+```
+
+-   Always *first list the tibble* that the commands are being applied to
+-   Can use **multiple pipes** to run multiple commands in sequence
+    -   What does the following code do?
+
+```{r}
+#| eval: false
+dds.discr %>% head(n=3) %>% summary()
+```
+
+## Frequency tables: `janitor` package's `tabyl` function
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| code-line-numbers: "3"
+# default table
+dds.discr %>% 
+  tabyl(ethnicity)  
+```
+:::
+
+::: {.column width="50%"}
+`adorn_` your table!
+
+```{r}
+#| code-line-numbers: "3-4"
+dds.discr %>% 
+  tabyl(ethnicity) %>%
+  adorn_totals("row") %>% 
+  adorn_pct_formatting(digits=2)  
+```
+:::
+:::::
+
+## Relative frequency table
+
+::::: columns
+::: {.column width="40%"}
+-   A **relative frequency** table shows **proportions (or percentages)** instead of counts
+
+-   To the right I removed (deselected) the counts column (`n`) to create a relative frequency table
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "4-5"
+dds.discr %>% 
+  tabyl(ethnicity) %>%
+  adorn_totals("row") %>% 
+  adorn_pct_formatting(digits=2) %>%   
+  select(-n) 
+```
+:::
+:::::
+
+## Contingency tables (two-way tables)
+
+::::: columns
+::: {.column width="40%"}
+-   **Contingency tables** summarize data for two categorical variables
+    -   with each value in the table representing the number of times\
+        a particular combination of outcomes occurs
+-   **Row & column totals**\
+    are sometimes called **marginal totals**
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "2-3"
+dds.discr %>% 
+  tabyl(ethnicity, gender) %>%    
+  adorn_totals(c("row", "col"))    
+```
+:::
+:::::
+
+## Contingency tables with percentages
+
+```{r}
+#| code-line-numbers: "4-6"
+dds.discr %>% 
+  tabyl(ethnicity, age.cohort) %>%
+  adorn_totals(c("row")) %>%
+  adorn_percentages("row") %>%   
+  adorn_pct_formatting(digits=0) %>%    
+  adorn_ns()    
+```
+
+# Summarizing numeric data
+
+## We need to introduce a new dataset for this
+
+- Study investigating whether ACTN3 genotype at a particular location (residue 577) is associated with change in muscle function
+
+ 
+
+- **Categorical variable:** ACTN3 genotypes (CC, TT, CT)
+
+ 
+
+- **Numeric variable:** Muscle function, measured as percent change in non-dominant arm strength
+
+ 
+
+- We can start the investigation by plotting the relationship
+
+## Mean percent change by ACTN3 genotypes
+
+::::: columns
+::: {.column width="45%"}
+```{r}
+mean(famuss$ndrm.ch)
+
+dds.discr %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+
+::: {.column width="55%"}
+```{r}
+#| code-line-numbers: "2"
+dds.discr %>% 
+  group_by(ethnicity) %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+:::::
+
+## `get_summary_stats()` from `rstatix` package
+
+```{r}
+dds.discr %>% get_summary_stats()
+
+dds.discr %>% 
+  group_by(ethnicity) %>%
+  get_summary_stats(expenditures, type = "common")
+```
+
+## How to force all output to be shown? (1/2)
+
+Use `kable()` from the `knitr` package.
+
+```{r}
+dds.discr %>% get_summary_stats() %>% kable()
+```
+
+## How to force all output to be shown? `knitr` (2/2)
+
+Use `kable()` from the `knitr` package.
+
+```{r}
+dds.discr %>% 
+  group_by(ethnicity) %>%
+  get_summary_stats(expenditures, type = "common") %>% 
+  kable()
+```
+
+
+# Resources
+
+## `dplyr` resources
+
+-   [More `dpylr` functions to reference!](https://dplyr.tidyverse.org/reference/index.html)
+
+Additional details and examples are available in the vignettes:
+
+-   [column-wise operations vignette](https://dplyr.tidyverse.org/articles/colwise.html)
+
+-   [row-wise operations vignette](https://dplyr.tidyverse.org/articles/rowwise.html)
+
+ 
+
+and the dplyr 1.0.0 release blog posts:
+
+-   [working across columns](https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-colwise/)
+-   [working within rows](https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-rowwise/)
+
+## R programming class at OHSU!
+
+You can check out [Dr. Jessica Minnier's R class page](https://sph-r-programming-2022.netlify.app/) if you want more notes, videos, etc.
+
+## The larger tidy ecosystem
+
+Just to name a few...
+
+-   [janitor](https://garthtarr.github.io/meatR/janitor.html)
+
+-   [kableExtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+
+-   [patchwork](https://patchwork.data-imaginist.com/)
+
+-   [gghighlight](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html)
+
+-   [tidybayes](https://mjskay.github.io/tidybayes/)
+
+## Credit to Mine Çetinkaya-Rundel
+
+-   These notes were built from Mine's notes
+
+    -   Most pages and code were left as she made them
+
+    -   I changed a few things to match our class
+
+-   Please see [her Github repository](https://github.com/mine-cetinkaya-rundel/teach-ds-wsc-2021/tree/main) for the original notes
+

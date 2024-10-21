@@ -137,6 +137,8 @@ A study will typically examine whether the values of a response variable differ 
 
 - Sometimes we're just interested in viewing the relationship **between explanatory variables**
 
+## Poll Everywhere Question 1
+
 # Learning Objectives
 
 ::: lob
@@ -245,7 +247,11 @@ Female body size and clutch volume are positively associated with each other
 :::
 :::
 
-## (Pearson) Correlation coefficient (r): formula
+## Poll Everywhere Question 2
+
+
+
+## (Pearson) Correlation coefficient ($r$): formula
 
 The (Pearson) correlation coefficient of variables $x$ and $y$ can be computed using the formula
 $$r = \frac{1}{n-1}\sum_{i=1}^{n}\Big(\frac{x_i - \bar{x}}{s_x}\Big)\Big(\frac{y_i - \bar{y}}{s_y}\Big)$$
@@ -398,6 +404,9 @@ ggplot(data = hyp_data,
 ```
 :::
 :::
+
+## Poll Everywhere Question 3
+
 
 
 ## Barplots with 2 variables: side-by-side bar plots
@@ -574,3 +583,6 @@ ggplot(data = famuss,
 ```
 :::
 :::
+
+## Poll Everywhere Question 4
+
