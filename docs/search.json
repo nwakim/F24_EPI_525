@@ -16907,28 +16907,28 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#side-by-side-boxplots",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#side-by-side-boxplots",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Side-by-side boxplots",
     "text": "Side-by-side boxplots\n\nWe can look at the boxplot of percent change for each genotype\n\n\n\n\nggplot(data = famuss, \n       aes(x = actn3.r577x, \n           y = ndrm.ch)) + \n  geom_boxplot() + \n  labs(x = \"ACTN3 genotype\", \n       y = \"Percent Change in Non-Dominant Arm Strength\")"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#side-by-side-boxplots-with-data-points",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#side-by-side-boxplots-with-data-points",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Side-by-side boxplots with data points",
     "text": "Side-by-side boxplots with data points\n\nWe can look at the boxplot of percent change for each genotype with points shown so we can see the distribution of observations better\n\n\n\n\nggplot(data = famuss, \n       aes(x = actn3.r577x, \n           y = ndrm.ch)) + \n  geom_boxplot() + \n  labs(x = \"ACTN3 genotype\", \n       y = \"Percent Change in Non-Dominant Arm Strength\")  +\n  geom_jitter(aes(color = actn3.r577x), \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#density-plots-by-group",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#density-plots-by-group",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Density plots by group",
     "text": "Density plots by group\n\nAllows us to see the densities of percent change for each genotype\n\n\nggplot(data = famuss, aes(color = actn3.r577x, x = ndrm.ch)) + \n  geom_density() + \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\", color = \"ACTN3 genotype\")"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#ridgeline-plot",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#ridgeline-plot",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Ridgeline plot",
     "text": "Ridgeline plot\n\nOverlapped densities were easy enough to see with 3 genotypes\nIf you have many categories, a ridgeline plot might make it easier to see\n\n\n\n\nlibrary(ggridges)\nggplot(data = famuss, \n       aes(y = actn3.r577x, \n           x = ndrm.ch, \n           fill = actn3.r577x)) +\n  geom_density_ridges(alpha = 0.3, \n          show.legend = FALSE) +      \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\",\n       y = \"ACTN3 genotype\",\n       title = \"Strength change by genotype\")       \n\n\n\n\n\n\n\n\n\n\n\nLesson 8 Slides"
   },
@@ -16942,35 +16942,35 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#scatterplots",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#scatterplots",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Scatterplots",
     "text": "Scatterplots\n\n\n\nScatterplots provide case-by-case view of the relationship between two numerical variables\n\n \n\nWe can make a scatterplot of clutch volume vs. body size, with clutch volume on the y-axis and body size on the x-axis\nEach point represents an observation (egg clutch) with its measurement for clutch volumn and body size of parent\n\n\nggplot(data = frog, \n       aes(x = body.size,\n           y = clutch.volume)) + \n  geom_point(size = 3) +       \n  labs(x = \"Female Body Size (cm)\",\n       y = \"Clutch Volume (mm3)\")"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#describing-associations-between-2-numerical-variables",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#describing-associations-between-2-numerical-variables",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Describing associations between 2 numerical variables",
     "text": "Describing associations between 2 numerical variables\n\n\n\nTwo variables \\(x\\) and \\(y\\) are\n\nPositively associated if \\(y\\) increases as \\(x\\) increases\nNegatively associated if \\(y\\) decreases as \\(x\\) increases\n\n\n \n\nIf there is no association between the variables, then we say they are uncorrelated or independent\n\n \n\nThe term “association” is a very general term\n\nCan be used for numerical or categorical variables\nNot specifically referring to linear associations\n\n\n\n\n\n\n\n\n\n\n\n\n\nFemale body size and clutch volume are positively associated with each other"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#pearson-correlation-coefficient-r",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#pearson-correlation-coefficient-r",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "(Pearson) Correlation coefficient (\\(r\\))",
     "text": "(Pearson) Correlation coefficient (\\(r\\))\n\n\n\n\\(r = -1\\) indicates a perfect negative linear relationship: As one variable increases, the value of the other variable tends to go down, following a straight line\n\\(r = 0\\) indicates no linear relationship: The values of both variables go up/down independently of each other\n\\(r = 1\\) indicates a perfect positive linear relationship: As the value of one variable goes up, the value of the other variable tends to go up as well in a linear fashion\n\n \n\nThe closer \\(r\\) is to ±1, the stronger the linear association"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#pearson-correlation-coefficient-r-formula",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#pearson-correlation-coefficient-r-formula",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "(Pearson) Correlation coefficient (r): formula",
     "text": "(Pearson) Correlation coefficient (r): formula\nThe (Pearson) correlation coefficient of variables \\(x\\) and \\(y\\) can be computed using the formula \\[r = \\frac{1}{n-1}\\sum_{i=1}^{n}\\Big(\\frac{x_i - \\bar{x}}{s_x}\\Big)\\Big(\\frac{y_i - \\bar{y}}{s_y}\\Big)\\] where\n\n\\((x_1,y_1),(x_2,y_2),...,(x_n,y_n)\\) are the \\(n\\) paired values of the variables \\(x\\) and \\(y\\)\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the variables \\(x\\) and \\(y\\), respectively\n\n \n\nWe can use cor() in R to calculate this!\n\n\ncor(frog$body.size, frog$clutch.volume, use = \"pairwise.complete.obs\")\n\n[1] 0.6755435"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#guess-the-correlation-game",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#guess-the-correlation-game",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Guess the correlation game!",
     "text": "Guess the correlation game!\n\n\nRossman & Chance’s applet\n\n\n\n\n\nTracks performance of guess vs. actual, error vs. actual, and error vs. trial\nhttp://www.rossmanchance.com/applets/GuessCorrelation.html\n\nOr, for the Atari-like experience\n\n\n\nhttp://guessthecorrelation.com/"
   },
@@ -16991,14 +16991,14 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#barplots-with-2-variables-segmented-bar-plots",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#barplots-with-2-variables-segmented-bar-plots",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Barplots with 2 variables: segmented bar plots",
     "text": "Barplots with 2 variables: segmented bar plots\n\nWay of visualizing the information from a contingency table\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group, \n       fill = Hypertension)) + \n  geom_bar() \n\n\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group, \n       fill = Hypertension)) + \n  geom_bar(position = \"fill\")"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#barplots-with-2-variables-side-by-side-bar-plots",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#barplots-with-2-variables-side-by-side-bar-plots",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Barplots with 2 variables: side-by-side bar plots",
     "text": "Barplots with 2 variables: side-by-side bar plots\n\nggplot(data = hyp_data, \n       aes(x = Age_Group, \n       fill = Hypertension)) + \n  geom_bar(position = \"dodge\")"
   },
@@ -17131,14 +17131,14 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#where-are-we",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#where-are-we",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Where are we?",
     "text": "Where are we?"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#relationships-between-two-variables",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#relationships-between-two-variables",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Relationships between two variables",
     "text": "Relationships between two variables\n\nMany studies are motivated by a researcher examining how two or more variables are related\n\n \n\nExample questions about relationships:\n\nDo the values of one variable increase as the values of another decrease?\nDo the values of one variable tend to differ by the levels of another variable?\n\n\n \n\nToday we are introducing summarization and data visualization methods for exploring and summarizing relationships between two variables\n\n \n\nApproaches vary depending on whether the two variables are:\n\nBoth numerical\nBoth categorical\nOne numerical and one categorical"
   },
@@ -17152,7 +17152,7 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#last-time-barplots",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#last-time-barplots",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Last time: Barplots",
     "text": "Last time: Barplots\nCounts (below) vs. percentages (right)\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group)) + \n  geom_bar()\n\n\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group)) + \n  geom_bar(aes(y = stat(prop), \n               group = 1))"
   },
@@ -17166,7 +17166,7 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#from-lesson-4-contingency-tables",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#from-lesson-4-contingency-tables",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "From Lesson 4: Contingency tables",
     "text": "From Lesson 4: Contingency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40-59 years\n42109\n88663\n130772\n\n\n60+ years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
   },
@@ -17194,7 +17194,7 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#from-lesson-4-probability-tables",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#from-lesson-4-probability-tables",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "From Lesson 4: Probability tables",
     "text": "From Lesson 4: Probability tables\n\n\n\nTable: Probability table summarizing hypertension status and age group.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n0.0282\n0.3581\n0.3863\n\n\n40-59 years\n0.1344\n0.2830\n0.4174\n\n\n60+ years\n0.1274\n0.0689\n0.1963\n\n\nTotal\n0.2900\n0.7100\n1.0000\n\n\n\n\n\n\nJoint probability: intersection of row and column\nMarginal probability: row or column total\n\n \n\nWe can work towards visualizing the data in contingency and probability tables"
   },
@@ -17208,14 +17208,14 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#visualizing-relationships-between-numerical-and-categorical-variables",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#visualizing-relationships-between-numerical-and-categorical-variables",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "Visualizing relationships between numerical and categorical variables",
     "text": "Visualizing relationships between numerical and categorical variables\n\n\nUseful visualizations for directly comparing how the distribution of a numerical variable differs by category:\n \n\nSide-by-side boxplots\n\n \n\nSide-by-side boxplots with data points\n\n \n\nDensity plots by group\n\n \n\nRidgeline plot"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#we-need-to-introduce-a-new-dataset-for-this",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#we-need-to-introduce-a-new-dataset-for-this",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "We need to introduce a new dataset for this",
     "text": "We need to introduce a new dataset for this\n\nStudy investigating whether ACTN3 genotype at a particular location (residue 577) is associated with change in muscle function\n\n \n\nCategorical variable: genotypes (CC, TT, CT)\n\n \n\nNumeric variable: Muscle function, measured as percent change in non-dominant arm strength\n\n \n\nWe can start the investigation by plotting the relationship"
   },
@@ -17243,7 +17243,7 @@
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#we-often-identify-a-response-variable-from-our-research-question",
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#we-often-identify-a-response-variable-from-our-research-question",
-    "title": "Lesson 8: Data visualization - Part 2",
+    "title": "Lesson 8: Data visualization of two variables",
     "section": "We often identify a response variable from our research question",
     "text": "We often identify a response variable from our research question\n\n\n\n\nResponse Variable\n\n\nA response variable is defined by the particular research question a study seeks to address\n\nIt measures the outcome of interest in the study\n\n\n\n\n\n\nExplanatory Variable\n\n\nA study will typically examine whether the values of a response variable differ as values of an explanatory variable change, and if so, how the two variables are related.\n\nA given study may examine several explanatory variables for a single response variable\n\n\n\n\n\n\nSometimes we’re interested in viewing the relationship between our response variable and explanatory variable(s)\nSometimes we’re just interested in viewing the relationship between explanatory variables"
   }
