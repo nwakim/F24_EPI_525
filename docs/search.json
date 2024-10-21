@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -2202,7 +2202,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3*\n\n10/25\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\nPlease note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n2.8, 2.10, 2.18, Non-book problem\n10/27\n\n\n\n\n3*\n\n10/25\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\nPlease note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#assignments",
@@ -7116,7 +7116,7 @@
     "href": "homework.html#homeworks",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n\n10/27\n\n\n\n\n3*\n\n10/25\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\nPlease note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n2.8, 2.10, 2.18, Non-book problem\n10/27\n\n\n\n\n3*\n\n10/25\n\n\n11/3\n\n\n\n\n4\n\n11/1\n\n\n11/10\n\n\n\n\n5\n\n11/8\n\n\n11/17\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\nPlease note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#structure",
@@ -10070,7 +10070,7 @@
     "href": "lessons/09_Variability/09_Variability.html#goals-for-today",
     "title": "Lesson 9: Variability in estimates",
     "section": "Goals for today",
-    "text": "Goals for today\nSection 4.1\n\nSampling from a population\n\npopulation parameters vs. point estimates\nsampling variation\n\nSampling distribution of the mean\n\nCentral Limit Theorem\n\n\n\nArtwork by @allison_horst"
+    "text": "Goals for today\nSection 4.1\n\nSampling from a population\n\npopulation parameters vs. point estimates\nsampling variation\n\nSampling distribution of the mean\n\nCentral Limit Theorem\nStandard error of the mean\n\n\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#moritzs-tip-of-the-day-add-a-code-pane-in-rstudio",
@@ -10252,7 +10252,7 @@
     "href": "lessons/09_Variability/09_Variability.html#class-discussion",
     "title": "Lesson 9: Variability in estimates",
     "section": "Class Discussion",
-    "text": "Class Discussion\n\nSlide 21: match figures to distribution (Sampling high schoolers’ weights)\n\nProblems from Homework 4:\n\nR1: Youth weights (YRBSS)\nBook exercise: 4.2\nNon-book exercise: Ethan Allen\n\n\n\nLesson 2 Slides"
+    "text": "Class Discussion\n\nSlide 21: match figures to distribution (Sampling high schoolers’ weights)\n\nProblems from Homework 4:\n\nR1: Youth weights (YRBSS)\nBook exercise: 4.2\nNon-book exercise: Ethan Allen\n\n\n\nLesson 9 Slides"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
@@ -10446,7 +10446,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#histograms",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#histograms",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Histograms",
     "text": "Histograms\n\n\n\nHistograms show the counts of observations (y-axis) that have values within a specific interval for a specific variable (x-axis)\nShow the shape of the distribution and data density\nDistribution is considered symmetric if the trailing parts of the plot are roughly equal\nDistribution is considered asymmetric if one tail trails off more than the other (as we see with clutch volume)\nAsymmetric distributions are said to be skewed\n\nSkewed right if trails off to right\nSkewed left if trails off to the left"
   },
@@ -10481,7 +10481,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#boxplots",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#boxplots",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Boxplots",
     "text": "Boxplots\n\n\n\nA boxplot indicates the positions of the first, second, and third quartiles of a distribution in addition to extreme observations\nInterquartile range (IQR) represented by rectangle with black line through it for the median\nWhiskers extend from the box to capture data that are between \\(Q_1\\) and \\(Q_1 - 1.5 IQR\\) and separately between \\(Q_3\\) and \\(Q_3 + 1.5 IQR\\)\nAn outlier is a value that appears extreme relative to the rest of the data\n\nIt is more than \\(1.5IQR\\) away from \\(Q_1\\) and \\(Q_3\\)"
   },
@@ -10572,9 +10572,9 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#barplots",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#barplots",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Barplots",
-    "text": "Barplots\n\nA bar plot is a common way to display a single categorical variable\n\nShow counts (or proportion) per category for a variable\n\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group)) + \n  geom_bar()\n\n\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group)) + \n  geom_bar(aes(y = stat(prop), \n               group = 1))"
+    "text": "Barplots"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#barplots-with-2-variables-segmented-bar-plots",
@@ -16438,7 +16438,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#histograms-1",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#histograms-1",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Histograms",
     "text": "Histograms\n\nMode is represented by the tallest peak in the distribution\nWhen data have one prominent peak, we call it unimodel\nIf there is more than one relative peak, we call it multimodel"
   },
@@ -16459,7 +16459,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#boxplots-1",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#boxplots-1",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Boxplots",
     "text": "Boxplots\n\n\n\nggplot(data = frog, \n       aes(x = clutch.volume)) + \n  geom_boxplot() \n\n\n\n\n\n\nggplot(data = frog, \n       aes(y = clutch.volume)) + \n  geom_boxplot()"
   },
@@ -16473,7 +16473,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#section",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#section",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "",
     "text": "Artwork by @allison_horst"
   },
@@ -16522,7 +16522,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#histograms-2",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#histograms-2",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Histograms",
     "text": "Histograms\nWe can make a histogram of clutch volume or clutch size:\n\n\n\nggplot(data = frog, \n       aes(x = clutch.volume)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = frog, \n       aes(x = clutch.size)) +\n  geom_histogram()"
   },
@@ -16557,7 +16557,7 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-2-four-rows-from-frog-data-frame",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-2-four-rows-from-frog-data-frame",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "From Lesson 2: Four rows from frog data frame",
     "text": "From Lesson 2: Four rows from frog data frame\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA\n\n\n\n \n\nEach row is an observation\nEach column is a variable\nAll the observations and variables together make a data frame (sometimes called data matrix)\n\n \n\nMissing values: NA means the measured value for body size in clutch #150 is missing"
   },
@@ -16578,14 +16578,14 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-2-exploring-data-initially",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-2-exploring-data-initially",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "From Lesson 2: Exploring data initially",
     "text": "From Lesson 2: Exploring data initially\n\nTechniques for exploring and summarizing data differ for numerical versus categorical variables.\n\n \n\nNumerical and graphical summaries are useful for examining variables one at a time\n\nCan also be used for exploring the relationships between variables\nNumerical summaries are not just for numerical variables (certain ones are used for categorical variables)\n\n\n \n\nToday we we look at ways to visualize a numerical variable and a categorical variable"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#poll-everywhere-question-1",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#poll-everywhere-question-1",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Poll Everywhere Question 1",
     "text": "Poll Everywhere Question 1"
   },
@@ -16634,28 +16634,28 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#we-may-want-to-transform-data",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#we-may-want-to-transform-data",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "We may want to transform data",
     "text": "We may want to transform data\n\nWhen working with strongly skewed data, it can be useful to apply a transformation\nCommon to use the natural log transformation on skewed data\n\nWe typically just call this the “log transformation”\nEspecially for variables with many values clustered near 0 and other observations that are positive\n\nTransformations are mostly used when we make certain assumptions about the distribution of our data\n\nFor a lot of statistics methods, we assume the data is distributed normally\nSo we may need to transform the data to make it normal!"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#lets-transform-clutch-volume",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#lets-transform-clutch-volume",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Let’s transform clutch volume!",
     "text": "Let’s transform clutch volume!\n\n\n\nggplot(data = frog, \n       aes(x = clutch.volume)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = frog, \n       aes(x = log(clutch.volume))) +\n  geom_histogram()"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#poll-everywhere-question-2",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#poll-everywhere-question-2",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Poll everywhere question 2",
     "text": "Poll everywhere question 2"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-4-contingency-tables",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-4-contingency-tables",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "From Lesson 4: Contingency tables",
     "text": "From Lesson 4: Contingency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
   },
@@ -16676,23 +16676,23 @@
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-4-example-hypertension-prevalence-12",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-4-example-hypertension-prevalence-12",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "From Lesson 4: Example: hypertension prevalence (1/2)",
     "text": "From Lesson 4: Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-4-example-hypertension-prevalence",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#from-lesson-4-example-hypertension-prevalence",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "From Lesson 4: Example: hypertension prevalence",
     "text": "From Lesson 4: Example: hypertension prevalence\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\n\n \n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension of a randomly chosen adult is 0.29…\n\nThe conditional probability of hypertension in a person known to be 60 or older is 0.649"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#lets-look-at-each-variable-separately",
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#lets-look-at-each-variable-separately",
-    "title": "Lesson 7: Data visualization of a single variable",
+    "title": "Lesson 7: Data visualization - Part 1",
     "section": "Let’s look at each variable separately",
-    "text": "Let’s look at each variable separately\n\nThe label “contingency tables” are usually reserved for when we have two variables in one table\nWhen we have one variable, we often call these frequency tables\n\nShows the count of observations that fall into a specific category\n\nIn a relative frequency table, proportions for each category is shown instead of counts\n\n\n\n\n\n\nFrequency table for age group variable\n\n\nAge Group\nCount\n\n\n\n\n18-39 years\n121042\n\n\n40 to 59 years\n130772\n\n\nGreater than 60 years\n61506\n\n\nTotal\n313320\n\n\n\n\n\n\n\n\n\nRelative frequency table for age group variable\n\n\nAge Group\nCount\n\n\n\n\n18-39 years\n0.3863\n\n\n40 to 59 years\n0.4174\n\n\nGreater than 60 years\n0.1963\n\n\nTotal\n1.0000"
+    "text": "Let’s look at each variable separately\n\nThe label “contingency tables” are usually reserved for when we have two variables in one table\nWhen we have one variable, we often call these frequency tables\n\nShows the count of observati"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_case_study.html",
@@ -17470,5 +17470,12 @@
     "title": "Lesson 8: Data visualization of two variables",
     "section": "Poll Everywhere Question 4",
     "text": "Poll Everywhere Question 4\n\n\nLesson 8 Slides"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#summary-point-estimate-terminology",
+    "href": "lessons/09_Variability/09_Variability.html#summary-point-estimate-terminology",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Summary: Point Estimate Terminology",
+    "text": "Summary: Point Estimate Terminology\n\nPopulation mean: \\(\\mu\\)\nPopulation standard deviation: \\(\\sigma\\)\nSample mean: \\(\\overline{x}\\)\nSample standard deviation: \\(s\\)\nSampling distribution: Distribution of sample means for repeated samples.\nStandard error (SE): The standard deviation of the sampling distribution.\n\nFormula: \\(SE = \\frac{s}{\\sqrt{n}}\\)"
   }
 ]

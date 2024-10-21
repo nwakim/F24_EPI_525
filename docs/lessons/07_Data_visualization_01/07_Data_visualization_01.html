@@ -10,9 +10,9 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Nicky Wakim">
+  <meta name="author" content="Meike Niederhausen and Nicky Wakim">
   <meta name="dcterms.date" content="2024-10-21">
-  <title>Biostatistics 1 - Lesson 7: Data visualization of a single variable</title>
+  <title>Biostatistics 1 - Lesson 7: Data visualization - Part 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,12 +393,12 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#3070BF" class="quarto-title-block center">
-  <h1 class="title">Lesson 7: Data visualization of a single variable</h1>
+  <h1 class="title">Lesson 7: Data visualization - Part 1</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Nicky Wakim 
+Meike Niederhausen and Nicky Wakim 
 </div>
 </div>
 </div>
@@ -409,41 +409,17 @@ Nicky Wakim
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li><p>Visualize distributions of numeric data/variables using histograms and boxplots</p></li>
-<li><p>Recognize when transforming data helps make asymmetric data more symmetric (log values)</p></li>
-<li><p>Visualize distributions of categorical data/variables using frequency tables and barplots</p></li>
+<li><p>Visualizing distributions of numeric data: histograms and boxplots</p></li>
+<li><p>transforming data (log values)</p></li>
+<li><p>data viz, categorical: bar plot</p></li>
+<li><p>case study? dds.disc</p></li>
 </ol>
 </section>
-<section id="where-are-we" class="slide level2">
-<h2>Where are we?</h2>
-
-<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
 <section id="section" class="slide level2">
 <h2></h2>
 
 <img data-src="../img_slides/debugging.png" alt="A cartoon of a fuzzy round monster face showing 10 different emotions experienced during the process of debugging code. The progression goes from (1) “I got this” - looking determined and optimistic; (2) “Huh. Really thought that was it.” - looking a bit baffled; (3) “...” - looking up at the ceiling in thought; (4) “Fine. Restarting.” - looking a bit annoyed; (5) “OH WTF.” Looking very frazzled and frustrated; (6) “Zombie meltdown.” - looking like a full meltdown; (7) (blank) - sleeping; (8) “A NEW HOPE!” - a happy looking monster with a lightbulb above; (9) “insert awesome theme song” - looking determined and typing away; (10) “I love coding” - arms raised in victory with a big smile, with confetti falling." class="r-stretch quarto-figure-center"><p class="caption">Artwork by @allison_horst</p></section>
-<section id="why-do-we-bother-with-visualizing-data1" class="slide level2">
-<h2>Why do we bother with visualizing data?<sup>1</sup></h2>
-<ul>
-<li><p><strong>Makes data easier to understand</strong></p>
-<ul>
-<li>helps you understand large amounts of data by turning it into a visual context, such as a graph or map</li>
-</ul></li>
-<li><p><strong>Helps identify patterns</strong></p>
-<ul>
-<li>helps identify patterns, trends, and outliers in data sets.&nbsp;</li>
-</ul></li>
-<li><p><strong>Reveals data features</strong></p>
-<ul>
-<li>reveals data features that statistics and models might miss, such as unusual distributions, gaps, and outliers</li>
-</ul></li>
-<li><p><strong>Helps with decision-making</strong></p>
-<ul>
-<li>helps with decision-making on analysis plans</li>
-</ul></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Adapted from my Google search AI results: <a href="https://www.google.com/search?q=why+do+statistics+bother+with+data+visualization&amp;rlz=1C5GCEM_enUS1130&amp;oq=why+do+statistics+bother+with+data+visu&amp;gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRirAtIBCDk3NDBqMGo0qAIAsAIB&amp;sourceid=chrome&amp;ie=UTF-8" class="uri">https://www.google.com/search?q=why+do+statistics+bother+with+data+visualization&amp;rlz=1C5GCEM_enUS1130&amp;oq=why+do+statistics+bother+with+data+visu&amp;gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRirAtIBCDk3NDBqMGo0qAIAsAIB&amp;sourceid=chrome&amp;ie=UTF-8</a></p></li></ol></aside></section>
-<section id="from-lesson-2-example-the-frog-study2" class="slide level2">
+<section id="from-lesson-2-example-the-frog-study1" class="slide level2">
 <h2>From Lesson 2: Example: the frog study<sup>1</sup></h2>
 <p>In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.</p>
 <p>&nbsp;</p>
@@ -452,20 +428,20 @@ Nicky Wakim
 <p>Researchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li><li id="fn3"><p>Chen, W., et al.&nbsp;Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li><li id="fn2"><p>Chen, W., et al.&nbsp;Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.</p>
 <h2 id="section-1"></h2>
 </li></ol></aside></section>
 <section id="from-lesson-2-four-rows-from-frog-data-frame" class="slide level2">
 <h2>From Lesson 2: Four rows from frog data frame</h2>
-<table style="width:94%;">
+<table>
 <colgroup>
-<col style="width: 11%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 15%">
-<col style="width: 17%">
+<col style="width: 6%">
 <col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -546,18 +522,15 @@ Nicky Wakim
 <li>Today we we look at ways to <strong>visualize</strong> a <span style="color:#E75B5C;"><strong>numerical</strong></span> variable and a <span style="color:#EF85B3;"><strong>categorical</strong></span> variable</li>
 </ul>
 </section></section>
-<section>
 <section id="learning-objectives-1" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-<div class="lob">
-<ol type="1">
-<li>Visualize distributions of numeric data/variables using histograms and boxplots</li>
-</ol>
-</div>
-<ol start="2" type="1">
-<li><p>Recognize when transforming data helps make asymmetric data more symmetric (log values)</p></li>
-<li><p>Visualize distributions of categorical data/variables using frequency tables and barplots</p></li>
-</ol>
+
+</section>
+
+<section>
+<section id="visualize-numerical-variables-with-ggplot" class="title-slide slide level1 center">
+<h1>Visualize numerical variables with <code>ggplot</code></h1>
+
 </section>
 <section id="histograms" class="slide level2">
 <h2>Histograms</h2>
@@ -602,7 +575,7 @@ Nicky Wakim
 <span id="cb1-2"><a href="#cb1-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.volume)) <span class="sc">+</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -611,7 +584,7 @@ Nicky Wakim
 <span id="cb2-2"><a href="#cb2-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.size)) <span class="sc">+</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -647,7 +620,7 @@ Nicky Wakim
 <span id="cb3-2"><a href="#cb3-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.volume)) <span class="sc">+</span> </span>
 <span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="576"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-5-1.png" width="576"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -656,26 +629,11 @@ Nicky Wakim
 <span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> clutch.volume)) <span class="sc">+</span> </span>
 <span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-5-1.png" width="480"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-6-1.png" width="480"></p>
 </div>
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="learning-objectives-2" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li>Visualize distributions of numeric data/variables using histograms and boxplots</li>
-</ol>
-<div class="lob">
-<ol start="2" type="1">
-<li>Recognize when transforming data helps make asymmetric data more symmetric (log values)</li>
-</ol>
-</div>
-<ol start="3" type="1">
-<li>Visualize distributions of categorical data/variables using frequency tables and barplots</li>
-</ol>
 </section>
 <section id="we-may-want-to-transform-data" class="slide level2">
 <h2>We may want to transform data</h2>
@@ -702,7 +660,7 @@ Nicky Wakim
 <span id="cb5-2"><a href="#cb5-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> clutch.volume)) <span class="sc">+</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -711,7 +669,7 @@ Nicky Wakim
 <span id="cb6-2"><a href="#cb6-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(clutch.volume))) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -721,17 +679,9 @@ Nicky Wakim
 <h2>Poll everywhere question 2</h2>
 </section></section>
 <section>
-<section id="learning-objectives-3" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li><p>Visualize distributions of numeric data/variables using histograms and boxplots</p></li>
-<li><p>Recognize when transforming data helps make asymmetric data more symmetric (log values)</p></li>
-</ol>
-<div class="lob">
-<ol start="3" type="1">
-<li>Visualize distributions of categorical data/variables using frequency tables and barplots</li>
-</ol>
-</div>
+<section id="visualize-categorical-data" class="title-slide slide level1 center">
+<h1>Visualize categorical data</h1>
+
 </section>
 <section id="from-lesson-4-example-hypertension-prevalence-12" class="slide level2">
 <h2>From Lesson 4: Example: hypertension prevalence (1/2)</h2>
@@ -745,7 +695,7 @@ Nicky Wakim
 <li>However, this is <strong>only the case if nothing else is known about the patient</strong></li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn4"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li></ol></aside></section>
 <section id="from-lesson-4-example-hypertension-prevalence" class="slide level2">
 <h2>From Lesson 4: Example: hypertension prevalence</h2>
 <ul>
@@ -825,180 +775,582 @@ Nicky Wakim
 <li>The label “contingency tables” are usually reserved for when we have two variables in one table</li>
 <li>When we have one variable, we often call these <strong>frequency tables</strong>
 <ul>
-<li>Shows the count of observations that fall into a specific category</li>
+<li>Shows the count of observati</li>
 </ul></li>
-<li>In a <strong>relative frequency table</strong>, proportions for each category is shown instead of counts</li>
 </ul>
-<div class="columns">
-<div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<caption>Frequency table for age group variable</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Age Group</th>
-<th style="text-align: right;">Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">18-39 years</td>
-<td style="text-align: right;">121042</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">40 to 59 years</td>
-<td style="text-align: right;">130772</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Greater than 60 years</td>
-<td style="text-align: right;">61506</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Total</td>
-<td style="text-align: right;">313320</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div><div class="column">
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<caption>Relative frequency table for age group variable</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Age Group</th>
-<th style="text-align: right;">Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">18-39 years</td>
-<td style="text-align: right;">0.3863</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">40 to 59 years</td>
-<td style="text-align: right;">0.4174</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Greater than 60 years</td>
-<td style="text-align: right;">0.1963</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Total</td>
-<td style="text-align: right;">1.0000</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section id="barplots" class="slide level2">
 <h2>Barplots</h2>
-<ul>
-<li>A bar plot is a common way to display a single categorical variable
-<ul>
-<li>Show counts (or proportion) per category for a variable</li>
-</ul></li>
-</ul>
-<div class="columns">
-<div class="column">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hyp_data, </span>
-<span id="cb7-2"><a href="#cb7-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Age_Group)) <span class="sc">+</span> </span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hyp_data, </span>
-<span id="cb8-2"><a href="#cb8-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Age_Group)) <span class="sc">+</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), </span>
-<span id="cb8-4"><a href="#cb8-4"></a>               <span class="at">group =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
+</section></section>
+<section>
+<section id="case-study" class="title-slide slide level1 center">
+<h1>Case study</h1>
+
 </section>
-<section id="when-to-use-what" class="slide level2">
-<h2>When to use what?</h2>
-<table style="width:99%;">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 23%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable type</th>
-<th>Possible Visualizations</th>
-<th>Nicky’s preferences</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Numerical, discrete</td>
-<td>histograms, boxplots</td>
-<td>histograms</td>
-</tr>
-<tr class="even">
-<td>Numerical, continuous</td>
-<td>histograms, boxplots</td>
-<td>histograms</td>
-</tr>
-<tr class="odd">
-<td>Categorical, ordinal</td>
-<td>frequency tables, barplots</td>
-<td><p>if I’m just looking: barplot</p>
-<p>if I’m writing a report: frequency table</p></td>
-</tr>
-<tr class="even">
-<td>Categorical, nominal</td>
-<td>frequency tables, barplots</td>
-<td><p>if I’m just looking: barplot</p>
-<p>if I’m writing a report: frequency table</p></td>
-</tr>
-<tr class="odd">
-<td>Categorical, logical (binary)</td>
-<td>frequency tables, barplots</td>
-<td>frequency table or just a percent for one of the categories</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="some-notes-about-my-visualization-process" class="slide level2">
-<h2>Some notes about my visualization process</h2>
+<section id="case-study-description" class="slide level2">
+<h2>Case Study Description</h2>
 <ul>
-<li><p>If I am just looking at data alone, I use visualizations and summary statistics</p>
+<li><p>In the US, individuals with developmental disabilities typically receive services and support from state governments.</p>
 <ul>
-<li><p>I keep everything in its basic form without polishing the output</p></li>
-<li><p>Plot labels are kept as variable name</p></li>
-<li><p>I use a basic function like <code>summary()</code> to get</p>
-<ul>
-<li><p>Mean and standard deviation for numeric variables</p></li>
-<li><p>Counts for categorical variables</p></li>
-</ul></li>
-</ul></li>
-<li><p>If I am presenting visualizations or summary statistics, I will polish up everything</p>
-<ul>
-<li><p>So that someone who is unfamiliar with the data can understand what I’m looking at</p>
-<ul>
-<li>For example, I make sure variable names are written out and explained</li>
-</ul></li>
+<li>California allocates funds to developmentally disabled residents through the <em>Department of Developmental Services (DDS)</em></li>
+<li>Recipients of DDS funds are referred to as “consumers.”</li>
 </ul></li>
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li><strong>I want us to practice presenting visualizations, so I really want our homework visualizations to be polished</strong></li>
+<li><p>Dataset <code>dds.discr</code></p>
+<ul>
+<li>Sample of 1,000 DDS consumers (out of a total of ~ 250,000)</li>
+<li>Data include <span style="color:#C83532">age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer</span></li>
+</ul></li>
 </ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>For now, we are going to explore these data with <code>R</code></p></li>
+<li><p>See Section 1.7.1 in the textbook for more details</p></li>
+</ul>
+</section>
+<section id="load-dds.discr-dataset-from-oibiostat-package" class="slide level2">
+<h2>Load <code>dds.discr</code> dataset from <code>oibiostat</code> package</h2>
+<ul>
+<li><p>The textbook’s datasets are in the R package <code>oibiostat</code></p></li>
+<li><p>Make sure the <code>oibiostat</code> package is installed before running the code below.</p></li>
+<li><p>Load the <code>oibiostat</code> package and the dataset <code>dds.discr</code></p></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color:#BF396F"><strong>The code below needs to be run <em>every time</em> you restart R or render a Qmd file:</strong></span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(oibiostat)</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">data</span>(<span class="st">"dds.discr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>After loading the dataset <code>dds.discr</code> using <code>data("dds.discr")</code>, you will see <code>dds.discr</code> in the Data list of the Environment window.</li>
+</ul>
+</section>
+<section id="glimpse" class="slide level2">
+<h2><code>glimpse()</code></h2>
+<ul>
+<li>We previously used the base R structure command <code>str()</code> to get information about variable types in a dataset (in R03: R basics part 2)</li>
+<li>Use <code>glimpse()</code> from the <code>tidyverse</code> package (technically it’s from the <code>dplyr</code> package) to get information about variable types.</li>
+<li><code>glimpse()</code> tends to have nicer output for <code>tibbles</code> than <code>str()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+</section>
+<section id="some-things-to-note-on-this-dataset" class="slide level2">
+<h2>Some things to note on this dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+<ul>
+<li>This happens in older datasets (and honestly some newer ones): gender and sex get conflated
+<ul>
+<li>I try to catch these issues before sharing datasets with you, but when we load datasets directly from the <code>oibiostat</code> package, I can’t make these changes</li>
+<li>If you are unfamiliar with the differences, please see <a href="https://orwh.od.nih.gov/sex-gender">this NIH site on sex and gender</a></li>
+</ul></li>
+<li>Also, race and ethnicity can be mislabeled
+<ul>
+<li>“White not hispanic” combines race and ethnicity</li>
+<li>If you are unfamiliar with the differences, please see <a href="https://www.apa.org/topics/race-ethnicity">this APA site on race and ethnicity</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="rename-one-of-the-first-things-i-usually-do" class="slide level2">
+<h2><code>rename()</code>: one of the first things I usually do</h2>
+<ul>
+<li>I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)</li>
+</ul>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>dds.discr1 <span class="ot">=</span> dds.discr <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">rename</span>(<span class="at">sex_MF =</span> gender, </span>
+<span id="cb12-3"><a href="#cb12-3"></a>         <span class="at">r_e =</span> ethnicity)</span>
+<span id="cb12-4"><a href="#cb12-4"></a></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="fu">glimpse</span>(dds.discr1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ sex_MF       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+</section>
+<section id="histograms-3" class="slide level2">
+<h2>Histograms</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb14-2"><a href="#cb14-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb15-2"><a href="#cb15-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms-showing-proportions" class="slide level2">
+<h2>Histograms showing proportions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb16-2"><a href="#cb16-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb17-2"><a href="#cb17-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
+<span id="cb17-6"><a href="#cb17-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="boxplots-2" class="slide level2">
+<h2>Boxplots</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb20-2"><a href="#cb20-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-20-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb21-2"><a href="#cb21-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-21-1.png" width="480"></p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="categorical-data" class="title-slide slide level1 center">
+<h1>Categorical data</h1>
+
+</section>
+<section id="barplots-1" class="slide level2">
+<h2>Barplots</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Counts (below) vs.<br>
+percentages (right)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb22-2"><a href="#cb22-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_bar</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-22-1.png" width="576"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, </span>
+<span id="cb23-2"><a href="#cb23-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop),  </span>
+<span id="cb23-4"><a href="#cb23-4"></a>               <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb23-5"><a href="#cb23-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>  </span>
+<span id="cb23-6"><a href="#cb23-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-23-1.png" width="576"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-more-to-plots" class="slide level2">
+<h2>Adding more to plots!</h2>
+<p>Tilt text so we can read it!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-24-1.png" width="1344" class="r-stretch"></section>
+<section id="adding-more-to-plots-1" class="slide level2">
+<h2>Adding more to plots!</h2>
+<p>We can change labels!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Race and ethnicity"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>, </span>
+<span id="cb25-5"><a href="#cb25-5"></a>       <span class="at">title =</span> <span class="st">"Proportion of individuals receiving DDS by race and ethnicity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-25-1.png" width="1344" class="r-stretch"></section>
+<section id="adding-more-to-plots-2" class="slide level2">
+<h2>Adding more to plots!</h2>
+<p>Increase text size so we can read it!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr1, <span class="fu">aes</span>(<span class="at">x =</span> r_e)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(prop), <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">60</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">35</span>),</span>
+<span id="cb26-4"><a href="#cb26-4"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">35</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-26-1.png" width="1344" class="r-stretch"></section></section>
+<section>
+<section id="meikes-notes" class="title-slide slide level1 center">
+<h1>Meike’s notes</h1>
+
+</section>
+<section id="getting-to-know-the-dataset" class="slide level2">
+<h2>Getting to know the dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">dim</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1000    6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">names</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "id"           "age.cohort"   "age"          "gender"       "expenditures"
+[6] "ethnicity"   </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(dds.discr<span class="sc">$</span>id)) <span class="co"># How many unique id's are there?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1000</code></pre>
+</div>
+</div>
+</section>
+<section id="str-structure" class="slide level2">
+<h2><code>str()</code> structure</h2>
+<div style="font-size: 80%;">
+<ul>
+<li>We previously used the base R structure command <code>str()</code> to get information about variable types in a dataset.</li>
+<li>Note this dataset is a <code>tibble</code> instead of a <code>data.frame</code></li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">str</span>(dds.discr)      <span class="co"># base R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [1,000 × 6] (S3: tbl_df/tbl/data.frame)
+ $ id          : int [1:1000] 10210 10409 10486 10538 10568 10690 10711 10778 10820 10823 ...
+ $ age.cohort  : Factor w/ 6 levels "0-5","6-12","13-17",..: 3 5 1 4 3 3 3 3 3 3 ...
+ $ age         : int [1:1000] 17 37 3 19 13 15 13 17 14 13 ...
+ $ gender      : Factor w/ 2 levels "Female","Male": 1 2 2 1 2 1 1 2 1 2 ...
+ $ expenditures: int [1:1000] 2113 41924 1454 6400 4412 4566 3915 3873 5021 2887 ...
+ $ ethnicity   : Factor w/ 8 levels "American Indian",..: 8 8 4 4 8 4 8 3 8 4 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   ID = col_integer(),
+  ..   `Age Cohort` = col_character(),
+  ..   Age = col_integer(),
+  ..   Gender = col_character(),
+  ..   Expenditures = col_integer(),
+  ..   Ethnicity = col_character()
+  .. )</code></pre>
+</div>
+</div>
+<!-- ![](../img_slides/dds.discr_str.png){fig-align="center"} -->
+</section>
+<section id="glimpse-1" class="slide level2">
+<h2><code>glimpse()</code></h2>
+<div style="font-size: 80%;">
+<p><strong>New: <code>glimpse()</code></strong></p>
+<ul>
+<li>Use <code>glimpse()</code> from the <code>tidyverse</code> package (technically it’s from the <code>dplyr</code> package) to get information about variable types.</li>
+<li><code>glimpse()</code> tends to have nicer output for <code>tibbles</code> than <code>str()</code></li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="fu">glimpse</span>(dds.discr)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 6
+$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…
+$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…
+$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…
+$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…
+$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…
+$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…</code></pre>
+</div>
+</div>
+<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+</section>
+<section id="summary" class="slide level2">
+<h2><code>summary()</code></h2>
+<div style="font-size: 80%;">
+<ul>
+<li>We previously used the base R structure command <code>summary()</code> to get summary information about variables</li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">summary</span>(dds.discr)      <span class="co"># base R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       id        age.cohort       age          gender     expenditures  
+ Min.   :10210   0-5  : 82   Min.   : 0.0   Female:503   Min.   :  222  
+ 1st Qu.:31809   6-12 :175   1st Qu.:12.0   Male  :497   1st Qu.: 2899  
+ Median :55384   13-17:212   Median :18.0                Median : 7026  
+ Mean   :54663   18-21:199   Mean   :22.8                Mean   :18066  
+ 3rd Qu.:76135   22-50:226   3rd Qu.:26.0                3rd Qu.:37713  
+ Max.   :99898   51+  :106   Max.   :95.0                Max.   :75098  
+                                                                        
+              ethnicity  
+ White not Hispanic:401  
+ Hispanic          :376  
+ Asian             :129  
+ Black             : 59  
+ Multi Race        : 26  
+ American Indian   :  4  
+ (Other)           :  5  </code></pre>
+</div>
+</div>
+</section>
+<section id="tbl_summary-summary-table" class="slide level2">
+<h2><code>tbl_summary()</code>: summary table</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 80%;">
+<ul>
+<li><strong>New:</strong> Use <code>tbl_summary()</code> from the <code>gtsummary</code> package to get summary information</li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># library(gtsummary)</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="fu">tbl_summary</span>(dds.discr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/dds.discr_gtsummary.jpg" height="650"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="visualize-numerical-variables-with-ggplot-1" class="title-slide slide level1 center">
+<h1>Visualize numerical variables with <code>ggplot</code></h1>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/ggplotlogo.png" height="400"></p>
+<figcaption><a href="https://ggplot2.tidyverse.org/index.html">ggplot</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/ggplot2_masterpiece.png" height="400"></p>
+<figcaption><a href="https://allisonhorst.com/">Artwork by @allison_horst</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-data-variables-are-included-in-the-plot-below" class="slide level2">
+<h2>What data (variables) are included in the plot below?</h2>
+
+<img data-src="../img_slides/ggplot_basics_from_ppt_figure_only.png" class="r-stretch quarto-figure-center"></section>
+<section id="basics-of-a-ggplot" class="slide level2">
+<h2>Basics of a ggplot</h2>
+
+<img data-src="../img_slides/ggplot_basics_from_ppt.png" class="r-stretch quarto-figure-center"></section>
+<section id="grammar-of-ggplot2" class="slide level2">
+<h2>Grammar of ggplot2</h2>
+
+<img data-src="../img_slides/khealy_ggplot1.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://github.com/rstudio-conf-2020/dataviz">Kieran Healy</a></p></section>
+<section id="histograms-4" class="slide level2">
+<h2>Histograms</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb40-2"><a href="#cb40-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb41-2"><a href="#cb41-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> expenditures)) <span class="sc">+</span></span>
+<span id="cb41-3"><a href="#cb41-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms-showing-proportions-1" class="slide level2">
+<h2>Histograms showing proportions</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb42-2"><a href="#cb42-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb42-4"><a href="#cb42-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density)))  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="4-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb43-2"><a href="#cb43-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb43-3"><a href="#cb43-3"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb43-4"><a href="#cb43-4"></a>    <span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">stat</span>(density))) <span class="sc">+</span>  </span>
+<span id="cb43-5"><a href="#cb43-5"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span>   </span>
+<span id="cb43-6"><a href="#cb43-6"></a>      scales<span class="sc">::</span><span class="fu">percent_format</span>())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distribution-shapes" class="slide level2">
+<h2>Distribution shapes</h2>
+
+<img data-src="../img_slides/distribution_shapes.png" class="r-stretch quarto-figure-center"></section>
+<section id="density-plots-1" class="slide level2">
+<h2>Density plots</h2>
+<p>What is being measured on the vertical axes?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb44-2"><a href="#cb44-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3"></a>  <span class="fu">geom_density</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb45-2"><a href="#cb45-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">geom_histogram</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="dot-plots" class="slide level2">
+<h2>Dot plots</h2>
+<div style="font-size: 80%;">
+<ul>
+<li>Better for smaller samples</li>
+<li>What is being measured on the vertical axes?</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb46-2"><a href="#cb46-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb47-2"><a href="#cb47-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span></span>
+<span id="cb47-3"><a href="#cb47-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span><span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-39-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="boxplots-3" class="slide level2">
+<h2>Boxplots</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb48-2"><a href="#cb48-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> </span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-40-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dds.discr, </span>
+<span id="cb49-2"><a href="#cb49-2"></a>       <span class="fu">aes</span>(<span class="at">y =</span> age)) <span class="sc">+</span> </span>
+<span id="cb49-3"><a href="#cb49-3"></a>  <span class="fu">geom_boxplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="07_Data_visualization_01_files/figure-revealjs/unnamed-chunk-41-1.png" width="480"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="boxplots-5-number-summary-visualization" class="slide level2">
+<h2>Boxplots: 5 number summary visualization</h2>
+<!-- ![](../img_slides/boxplot_no_outliers.png) -->
+<p>No outliers: <img data-src="../img_slides/boxplot_no_outliers.png" data-fig-align="center" height="280" alt="https://www.simplypsychology.org/boxplots.html"></p>
+<p>With outliers: <img data-src="../img_slides/boxplot_w_outliers.png" data-fig-align="center" height="300" alt="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51"></p>
 
 <div class="footer footer-default">
 <p>Lesson 7 Slides</p>

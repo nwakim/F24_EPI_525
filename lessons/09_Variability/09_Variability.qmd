@@ -13,7 +13,7 @@ format:
     show-slide-number: all
     width: 1955
     height: 1100
-    footer: Lesson 2 Slides
+    footer: Lesson 9 Slides
     html-math-method: mathjax
     highlight-style: arrow
 execute:
@@ -47,13 +47,17 @@ set.seed(456)
 
 ## Where are we?
 
-<br>
-<br>
+![](../img_slides/course_map.png){fig-align="center"}
 
-![](../img_slides/flowchart_511_v1.jpg){fig-align="center"}
+## Summary: Point Estimate Terminology
 
-
-
+- **Population mean**: $\mu$
+- **Population standard deviation**: $\sigma$
+- **Sample mean**: $\overline{x}$
+- **Sample standard deviation**: $s$
+- **Sampling distribution**: Distribution of sample means for repeated samples.
+- **Standard error (SE)**: The standard deviation of the sampling distribution.
+    - Formula: $SE = \frac{s}{\sqrt{n}}$
 
 ## Goals for today
 
@@ -65,19 +69,9 @@ __Section 4.1__
 
 * Sampling distribution of the mean
   * Central Limit Theorem
+  * Standard error of the mean
 
 ![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/horst_samples.png){fig-align="center"}
-
-
-
-## MoRitz's tip of the day: add a code pane in RStudio
-
-Do you want to be able to view two code files side-by-side?  
-You can do that by adding a column to the RStudio layout. 
-
-![](../img_slides/rstudio_pane_add_column_MM.jpg){fig-align="center"}
-
-See [https://posit.co/blog/rstudio-1-4-preview-multiple-source-columns/](https://posit.co/blog/rstudio-1-4-preview-multiple-source-columns/) for more information.
 
 
 ## Population vs. sample (from section 1.3)
