@@ -19,17 +19,63 @@ editor_options:
 Note that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is _not_ correct, as a result of the error in the work for part (a).
 :::
 
+### a 
+
+215
+
+### b
+
+8.53
+
 ## 3.6 Scooping ice cream  {.unnumbered}
+
+### a
+
+Expected value: 54 fl oz, SD: 1.09 fl oz
+
+### b
+
+Expected value: 46 fl oz, SD: 1.03 fl oz
+
+### c
 
 
 ## 3.8 Chickenpox, Part I.  {.unnumbered}
 
 For #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
 
+### a
+
+Appropriate
+
+### b
+
+0.0059
+
+### c
+
+0.0059
+
+### d
+
+0.9999999999 (lots of 9's) or 1
+
+### e
+
+0.9872
+
 
 ## 3.10 Chickenpox, Part II.  {.unnumbered}
 
 For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.
+
+### a
+
+Expected value: 108, sd: 3.29
+
+### b
+ 
+No
 
 ## 3.20 Area under the curve, Part II {.unnumbered}
 
@@ -40,15 +86,53 @@ For this problem:
 - Calculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)
 :::
 
+### a
+
+87.08%
+
+### b
+
+57.14%
+
+### c
+
+6.22^{-14}%
+
+### d
+
+38.29% 
 
 ## 3.22 Triathlon times {.unnumbered}
 
+### a
+
+13.8%
+
+### b
+
+37.74%
+
+### c
+
+3354.05 seconds
+
+### d
+
+6295.21 seconds
 
 ## 3.28 Arsenic poisoning {.unnumbered}
 
+0.26μg/dl and 6.14μg/dl
 
 ## 3.32 Chickenpox, Part III  {.unnumbered}
 
+### a
+
+Expected value: 108, sd: 3.29
+
+### b 
+
+0.223
 
 
 

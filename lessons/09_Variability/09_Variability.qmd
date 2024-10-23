@@ -45,6 +45,32 @@ theme_set(theme_bw(base_size = 22))
 set.seed(456)
 ```
 
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
+
+# Learning Objectives
+1. Understand that a single sample may not be a perfect representation of the population
+
+2. Illustrate how information from several samples are connected to the population
+
+  - There is variation between samples
+
+3. Learn characteristics of the Sampling Distribution of Sample Means
+
+  - Mean of the sampling distribution is the same as mean of population
+
+4. Distinguish different language referring to different variabilities
+
+  - Variability of the population
+  - Variability within a sample 
+  - Variability between samples 
+
+5. Solidify what we learn about sampling distributions through coding and visualizing in Rstudio Cloud
+
+
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
@@ -74,34 +100,69 @@ __Section 4.1__
 ![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/horst_samples.png){fig-align="center"}
 
 
-## Population vs. sample (from section 1.3)
+## From Lesson 1: Population vs. sample
 
 ::: columns
-::: {.column width="50%"}
-__(Target) Population__
+::: column
 
-* group of interest being studied
-* group from which the sample is selected
-  - studies often have _inclusion_ and/or _exclusion_ criteria
-
-__Sample__
-
-* group on which data are collected
-* often a small subset of the population
-
+::: red
+::: red-ttl
+(Target) Population
 :::
-::: {.column width="50%"}
-__Simple random sample (SRS)__
-
-* each individual of a population has the _same chance_ of being sampled
-* randomly sampled
-* considered best way to sample
-
-![](../img_slides/sampleRandomHealthPlan.png){fig-align="center"}
-
+::: red-cont
+* Group of interest being studied
+* Group from which the sample is selected
+  - Studies often have _inclusion_ and/or _exclusion_ criteria
+* Almost always too expensive or logistically impossible to collect data for every case in a population
+  
+:::
 :::
 :::
 
+::: column
+::: pink
+::: pink-ttl
+Sample
+::: 
+::: pink-cont
+* Group on which data are collected
+* Often a **small subset** of the population
+* Easier to collect data on 
+* If we do it right, we might be able to answer our question about the target population
+:::
+:::
+
+:::
+:::
+
+## From Lesson 1: Sampling 
+
+- Goal is to get a __representative__ sample of the population: the characteristics of the sample are similar to the characteristics of the population
+- There are different ways to sample from a target population
+- Types of sampling that we discuss
+    - Simple random sample (SRS)
+    - Convenient sample
+    - Stratified sample
+    - Cluster sample
+    - Multistage sample
+    
+## Why sample statistics?
+
+- When we want to estimate features of the population
+
+  - We can use corresponding summary statistics calculated from our sample
+
+ 
+
+- Much easier to measure statistics from our sample (Lesson 1)
+
+  - However, statistics from our sample are not exactly the same as the population measurements that we're aiming for
+  
+  - We call the population measurements **population parameters**
+  
+ 
+
+- So we need to start by distinguishing between the population parameters and sample statistics
 
 
 ## Population parameters vs. sample statistics
@@ -109,17 +170,99 @@ __Simple random sample (SRS)__
 ::: columns
 ::: {.column width="50%"}
 
-__Population parameter__
+[__Population parameter__]{style="color:#C83532;"}
+
+- Mean: $\mu$ ("mu")
+- Standard deviation: $\sigma$ ("sigma")
+- Variance: $\sigma^2$
+
+ 
+
+- Proportion: $p$, $\pi$ ("pi")
+
+ 
+
+- Correlation
 
 :::
 
 ::: {.column width="50%"}
-__Sample statistic (point estimate)__
+[__Sample statistic (point estimate)__]{style="color:#EF85B3;"}
+
+- Sample mean: $\overline{x}$
+- Sample standard deviation: $s$
+- Sample variance: $s^2$
+
+ 
+
+- Sample proportion: $\hat{p}$ ("p-hat")
+
+ 
+
+- Sample correlation coefficient: $r$
 
 :::
 :::
 
+## Poll Everywhere Question 1
 
+# Sampling variation
+Build the intuition around samplign variation
+
+## Population 
+
+![](../img_slides/samp_dist_01.png){fig-align="center"}
+
+## Take one sample
+
+![](../img_slides/samp_dist_02.png){fig-align="center"}
+
+## Take one sample
+
+![](../img_slides/samp_dist_03.png){fig-align="center"}
+
+## Take one sample
+
+![](../img_slides/samp_dist_04.png){fig-align="center"}
+
+## Take one sample
+
+![](../img_slides/samp_dist_05.png){fig-align="center"}
+
+## Take one sample
+
+![](../img_slides/samp_dist_06.png){fig-align="center"}
+
+## Take another sample
+
+![](../img_slides/samp_dist_07.png){fig-align="center"}
+
+## Take another sample
+
+![](../img_slides/samp_dist_08.png){fig-align="center"}
+
+## Take another sample
+
+![](../img_slides/samp_dist_09.png){fig-align="center"}
+
+## Take another sample
+
+![](../img_slides/samp_dist_10.png){fig-align="center"}
+
+## Take several samples
+
+![](../img_slides/samp_dist_11.png){fig-align="center"}
+
+## Difference between samples?
+
+![](../img_slides/samp_dist_12.png){fig-align="center"}
+
+
+## More concrete example with height
+
+
+
+# Meike's notes
 
 
 

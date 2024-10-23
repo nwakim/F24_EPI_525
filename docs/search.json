@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\nR07\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR09\nRevisiting projects and the here package\n\n\n\n\n\n\n\n\n\n\n\n10/30\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -10091,7 +10091,7 @@
     "href": "lessons/09_Variability/09_Variability.html#population-parameters-vs.-sample-statistics",
     "title": "Lesson 9: Variability in estimates",
     "section": "Population parameters vs. sample statistics",
-    "text": "Population parameters vs. sample statistics\n\n\nPopulation parameter\n\nSample statistic (point estimate)"
+    "text": "Population parameters vs. sample statistics\n\n\nPopulation parameter\n\nMean: \\(\\mu\\) (“mu”)\nStandard deviation: \\(\\sigma\\) (“sigma”)\nVariance: \\(\\sigma^2\\)\n\n \n\nProportion: \\(p\\), \\(\\pi\\) (“pi”)\n\n \n\nCorrelation\n\n\nSample statistic (point estimate)\n\nSample mean: \\(\\overline{x}\\)\nSample standard deviation: \\(s\\)\nSample variance: \\(s^2\\)\n\n \n\nSample proportion: \\(\\hat{p}\\) (“p-hat”)\n\n \n\nSample correlation coefficient: \\(r\\)"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#our-hypothetical-population-yrbss",
@@ -14998,28 +14998,28 @@
     "href": "hw_answers/HW_03_ans.html",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "Important\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a).\n\n\n\n\n\n\n\n\nFor #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\n\nFor #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)"
+    "text": "Important\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a).\n\n\n\n\n215\n\n\n\n8.53\n\n\n\n\n\n\nExpected value: 54 fl oz, SD: 1.09 fl oz\n\n\n\nExpected value: 46 fl oz, SD: 1.03 fl oz\n\n\n\n\n\n\n\nFor #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\nAppropriate\n\n\n\n0.0059\n\n\n\n0.0059\n\n\n\n0.9999999999 (lots of 9’s) or 1\n\n\n\n0.9872\n\n\n\n\nFor #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\nExpected value: 108, sd: 3.29\n\n\n\nNo\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)\n\n\n\n\n\n87.08%\n\n\n\n57.14%\n\n\n\n6.22^{-14}%\n\n\n\n38.29%\n\n\n\n\n\n\n13.8%\n\n\n\n37.74%\n\n\n\n3354.05 seconds\n\n\n\n6295.21 seconds\n\n\n\n\n0.26μg/dl and 6.14μg/dl\n\n\n\n\n\nExpected value: 108, sd: 3.29\n\n\n\n0.223"
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#gull-clutch-size",
     "href": "hw_answers/HW_03_ans.html#gull-clutch-size",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "Important\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a)."
+    "text": "Important\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a).\n\n\n\n\n215\n\n\n\n8.53"
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-i.",
     "href": "hw_answers/HW_03_ans.html#chickenpox-part-i.",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "For #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities."
+    "text": "For #3.8, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\nAppropriate\n\n\n\n0.0059\n\n\n\n0.0059\n\n\n\n0.9999999999 (lots of 9’s) or 1\n\n\n\n0.9872"
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-ii.",
     "href": "hw_answers/HW_03_ans.html#chickenpox-part-ii.",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities."
+    "text": "For #3.10, you can use R functions to calculate the binomial probabilities instead of directly using the formula. However, include the mathematical formulas that would be used to calculate the probabilities.\n\n\nExpected value: 108, sd: 3.29\n\n\n\nNo"
   },
   {
     "objectID": "hw_answers/HW_03_ans.html#instructions-for-normal-probability-exercises",
@@ -16272,7 +16272,7 @@
     "href": "hw_answers/HW_03_ans.html#area-under-the-curve-part-ii",
     "title": "Homework 3 Answers",
     "section": "",
-    "text": "Important\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)"
+    "text": "Important\n\n\n\nFor this problem:\n\nMake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\nCalculate probabilities using R (You can hand write the code you used to find your answer if you do not want submit typed R code or a Quarto document.)\n\n\n\n\n\n87.08%\n\n\n\n57.14%\n\n\n\n6.22^{-14}%\n\n\n\n38.29%"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_key_info.html#today",
@@ -17477,5 +17477,159 @@
     "title": "Lesson 9: Variability in estimates",
     "section": "Summary: Point Estimate Terminology",
     "text": "Summary: Point Estimate Terminology\n\nPopulation mean: \\(\\mu\\)\nPopulation standard deviation: \\(\\sigma\\)\nSample mean: \\(\\overline{x}\\)\nSample standard deviation: \\(s\\)\nSampling distribution: Distribution of sample means for repeated samples.\nStandard error (SE): The standard deviation of the sampling distribution.\n\nFormula: \\(SE = \\frac{s}{\\sqrt{n}}\\)"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#from-lesson-1-population-vs.-sample",
+    "href": "lessons/09_Variability/09_Variability.html#from-lesson-1-population-vs.-sample",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "From Lesson 1: Population vs. sample",
+    "text": "From Lesson 1: Population vs. sample\n\n\n\n\n(Target) Population\n\n\n\nGroup of interest being studied\nGroup from which the sample is selected\n\nStudies often have inclusion and/or exclusion criteria\n\nAlmost always too expensive or logistically impossible to collect data for every case in a population\n\n\n\n\n\n\nSample\n\n\n\nGroup on which data are collected\nOften a small subset of the population\nEasier to collect data on\nIf we do it right, we might be able to answer our question about the target population"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#from-lesson-1-sampling",
+    "href": "lessons/09_Variability/09_Variability.html#from-lesson-1-sampling",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "From Lesson 1: Sampling",
+    "text": "From Lesson 1: Sampling\n\nGoal is to get a representative sample of the population: the characteristics of the sample are similar to the characteristics of the population\nThere are different ways to sample from a target population\nTypes of sampling that we discuss\n\nSimple random sample (SRS)\nConvenient sample\nStratified sample\nCluster sample\nMultistage sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#why-sample-statistics",
+    "href": "lessons/09_Variability/09_Variability.html#why-sample-statistics",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Why sample statistics?",
+    "text": "Why sample statistics?\n\nWhen we want to estimate features of the population\n\nWe can use corresponding summary statistics calculated from our sample\n\n\n \n\nMuch easier to measure statistics from our sample (Lesson 1)\n\nHowever, statistics from our sample are not exactly the same as the population measurements that we’re aiming for\nWe call the population measurements population parameters\n\n\n \n\nSo we need to start by distinguishing between the population parameters and sample statistics"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-1",
+    "href": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#population",
+    "href": "lessons/09_Variability/09_Variability.html#population",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Population",
+    "text": "Population"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-one-sample",
+    "href": "lessons/09_Variability/09_Variability.html#take-one-sample",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take one sample",
+    "text": "Take one sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-another-sample",
+    "href": "lessons/09_Variability/09_Variability.html#take-another-sample",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take another sample",
+    "text": "Take another sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-several-samples",
+    "href": "lessons/09_Variability/09_Variability.html#take-several-samples",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take several samples",
+    "text": "Take several samples"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#difference-between-samples",
+    "href": "lessons/09_Variability/09_Variability.html#difference-between-samples",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Difference between samples?",
+    "text": "Difference between samples?"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height",
+    "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "More concrete example with height",
+    "text": "More concrete example with height"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#sampling-variation-1",
+    "href": "lessons/09_Variability/09_Variability.html#sampling-variation-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Sampling variation",
+    "text": "Sampling variation\n\nIf a different random sample is taken, the mean height (point estimate) will likely be different\n\nthis is a result of sampling variation\n\n\n\n\nTake a 2nd random sample of size\nn = 5 from yrbss2:\n\nsamp_n5_rep1 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 1,\n               replace = FALSE)\nsamp_n5_rep1\n\n# A tibble: 5 × 4\n# Groups:   replicate [1]\n  replicate    id height.ft weight.lb\n      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1         1  2329      6.07      182.\n2         1  8863      5.25      125.\n3         1  8058      5.84      135.\n4         1   335      6.17      235.\n5         1  4698      5.58      124.\n\n\n\nCalculate the mean of the 2nd random sample:\n\nmeans_hght_samp_n5_rep1 &lt;- \n  samp_n5_rep1 %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep1\n\n# A tibble: 1 × 2\n  replicate mean_height\n      &lt;int&gt;       &lt;dbl&gt;\n1         1        5.78\n\n\n\n\nDid we get the same mean height with our 2nd sample?"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-one-sample-1",
+    "href": "lessons/09_Variability/09_Variability.html#take-one-sample-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take one sample",
+    "text": "Take one sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-one-sample-2",
+    "href": "lessons/09_Variability/09_Variability.html#take-one-sample-2",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take one sample",
+    "text": "Take one sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-one-sample-3",
+    "href": "lessons/09_Variability/09_Variability.html#take-one-sample-3",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take one sample",
+    "text": "Take one sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-one-sample-4",
+    "href": "lessons/09_Variability/09_Variability.html#take-one-sample-4",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take one sample",
+    "text": "Take one sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-another-sample-1",
+    "href": "lessons/09_Variability/09_Variability.html#take-another-sample-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take another sample",
+    "text": "Take another sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-another-sample-2",
+    "href": "lessons/09_Variability/09_Variability.html#take-another-sample-2",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take another sample",
+    "text": "Take another sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#take-another-sample-3",
+    "href": "lessons/09_Variability/09_Variability.html#take-another-sample-3",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Take another sample",
+    "text": "Take another sample"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#scooping-ice-cream",
+    "href": "hw_answers/HW_03_ans.html#scooping-ice-cream",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "Expected value: 54 fl oz, SD: 1.09 fl oz\n\n\n\nExpected value: 46 fl oz, SD: 1.03 fl oz"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#triathlon-times",
+    "href": "hw_answers/HW_03_ans.html#triathlon-times",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "13.8%\n\n\n\n37.74%\n\n\n\n3354.05 seconds\n\n\n\n6295.21 seconds"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#arsenic-poisoning",
+    "href": "hw_answers/HW_03_ans.html#arsenic-poisoning",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "0.26μg/dl and 6.14μg/dl"
+  },
+  {
+    "objectID": "hw_answers/HW_03_ans.html#chickenpox-part-iii",
+    "href": "hw_answers/HW_03_ans.html#chickenpox-part-iii",
+    "title": "Homework 3 Answers",
+    "section": "",
+    "text": "Expected value: 108, sd: 3.29\n\n\n\n0.223"
   }
 ]
