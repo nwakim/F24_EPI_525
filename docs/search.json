@@ -2356,14 +2356,14 @@
     "href": "homework/HW_03.html#gull-clutch-size",
     "title": "Homework 3",
     "section": "3.5 Gull clutch size",
-    "text": "3.5 Gull clutch size\n\n\n\n\n\n\nImportant\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a)."
+    "text": "3.5 Gull clutch size\n\n\n\n\n\n\nImportant\n\n\n\nNote that the solutions in the back of the book are not quite right. For part (a), the answer is correct, but there is an error in the work and the notation is sloppy. For part (b), the answer is not correct, as a result of the error in the work for part (a).\n\n\nFor part b, you can assume the seagulls are independent!"
   },
   {
     "objectID": "homework/HW_03.html#scooping-ice-cream",
     "href": "homework/HW_03.html#scooping-ice-cream",
     "title": "Homework 3",
     "section": "3.6 Scooping ice cream",
-    "text": "3.6 Scooping ice cream"
+    "text": "3.6 Scooping ice cream\nAssume all random varibles are independent."
   },
   {
     "objectID": "homework/HW_03.html#chickenpox-part-i.",
@@ -2503,7 +2503,7 @@
     "href": "homework/HW_04.html#directions",
     "title": "Homework 4",
     "section": "Directions",
-    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc. You do not need to work in a Quarto doc for this homework!!"
+    "text": "Directions\nPlease turn in this homework on Sakai. Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc. You do not need to work in a Quarto doc for this homework!!\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_04.html#instructions-for-normal-probability-exercises",
@@ -2579,8 +2579,8 @@
     "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here.",
     "title": "Homework 4",
-    "section": "2.1 Load all the packages you need below here.",
-    "text": "2.1 Load all the packages you need below here."
+    "section": "4.6 Load all the packages you need below here.",
+    "text": "4.6 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_04.html#r1-youth-weights",
@@ -17631,5 +17631,68 @@
     "title": "Homework 3 Answers",
     "section": "",
     "text": "Expected value: 108, sd: 3.29\n\n\n\n0.223"
+  },
+  {
+    "objectID": "homework/HW_04.html#load-all-the-packages-you-need-below-here",
+    "href": "homework/HW_04.html#load-all-the-packages-you-need-below-here",
+    "title": "Homework 4",
+    "section": "2.1 Load all the packages you need below here",
+    "text": "2.1 Load all the packages you need below here"
+  },
+  {
+    "objectID": "homework/HW_04.html#load-all-needed-libraries-here",
+    "href": "homework/HW_04.html#load-all-needed-libraries-here",
+    "title": "Homework 4",
+    "section": "2.1 Load all needed libraries here",
+    "text": "2.1 Load all needed libraries here\nYou can keep adding libraries"
+  },
+  {
+    "objectID": "homework/HW_04.html#import-dataset",
+    "href": "homework/HW_04.html#import-dataset",
+    "title": "Homework 4",
+    "section": "2.2 Import dataset",
+    "text": "2.2 Import dataset"
+  },
+  {
+    "objectID": "homework/HW_04.html#make-a-histogram",
+    "href": "homework/HW_04.html#make-a-histogram",
+    "title": "Homework 4",
+    "section": "2.3 Make a histogram",
+    "text": "2.3 Make a histogram"
+  },
+  {
+    "objectID": "homework/HW_04.html#r-exercise-1",
+    "href": "homework/HW_04.html#r-exercise-1",
+    "title": "Homework 4",
+    "section": "2.1 R exercise 1",
+    "text": "2.1 R exercise 1\nBelow you will be using the dataset called NHANES from the NHANES R package.\n\n2.1.1 Load all the packages you need below here\nYou don’t need to do it all at once, you can add more libraries as you realize you need them.\n\n\n2.1.2 Import dataset\nBelow you will be using the dataset called NHANES from the NHANES R package. * Install and load the NHANES package using the code below. * This loads the dataset also called NHANES that is within the NHANES package.\n\n\n2.1.3 Make a histogram"
+  },
+  {
+    "objectID": "hw_answers/HW_04_ans.html",
+    "href": "hw_answers/HW_04_ans.html",
+    "title": "Homework 4 Answers",
+    "section": "",
+    "text": "A very skilled court stenographer makes one typographical error (typo) per hour on average.\n\n\nWhat are the mean and the standard deviation of the number of typos this stenographer makes in an hour?\n\nMean: 1, standard deviation: 1\n\n\n\n\nCalculate the probability that this stenographer makes at most 3 typos in a given hour.\n\n0.981\n\n\n\n\nCalculate the probability that this stenographer makes at least 5 typos over 3 hours.\n\n0.185\n\n\n\n\n\nOsteosarcoma is a relatively rare type of bone cancer. It occurs most often in young adults, age 10 - 19; it is diagnosed in approximately 8 per 1,000,000 individuals per year in that age group. In New York City (including all five boroughs), the number of young adults in this age range is approximately 1,400,000.\n\n\nWhat is the expected number of cases of osteosarcoma in NYC in a given year?\n\n11.2\n\n\n\n\nWhat is the probability that 15 or more cases will be diagnosed in a given year?\n\n0.161\n\n\n\n\nThe largest concentration of young adults in NYC is in the borough of Brooklyn, where the population in that age range is approximately 450,000. What is the probability of 10 or more cases in Brooklyn in a given year?\n\n0.004\n\n\n\n\nSuppose that in a given year, 10 cases of osteosarcoma were observed in NYC, with all 10 cases occurring among young adults living in Brooklyn. An official from the NYC Public Health Department claims that the probability of this event (that is, the probability of 10 or more cases being observed, and all of them occurring in Brooklyn) is what was calculated in part c). Is the official correct? Explain your answer. You may assume that your answer to part c) is correct. This question can be answered without doing any calculations.\n\nOfficial is not correct\n\n\n\n\nSuppose that over five years, there was one year in which 10 or more cases of osteosarcoma were observed in Brooklyn. Is the probability of this event equal to the probability calculated in part c)? Explain your answer.\n\n0.01979"
+  },
+  {
+    "objectID": "hw_answers/HW_04_ans.html#stenographers-typos",
+    "href": "hw_answers/HW_04_ans.html#stenographers-typos",
+    "title": "Homework 4 Answers",
+    "section": "",
+    "text": "A very skilled court stenographer makes one typographical error (typo) per hour on average.\n\n\nWhat are the mean and the standard deviation of the number of typos this stenographer makes in an hour?\n\nMean: 1, standard deviation: 1\n\n\n\n\nCalculate the probability that this stenographer makes at most 3 typos in a given hour.\n\n0.981\n\n\n\n\nCalculate the probability that this stenographer makes at least 5 typos over 3 hours.\n\n0.185"
+  },
+  {
+    "objectID": "hw_answers/HW_04_ans.html#osteosarcoma-in-nyc",
+    "href": "hw_answers/HW_04_ans.html#osteosarcoma-in-nyc",
+    "title": "Homework 4 Answers",
+    "section": "",
+    "text": "Osteosarcoma is a relatively rare type of bone cancer. It occurs most often in young adults, age 10 - 19; it is diagnosed in approximately 8 per 1,000,000 individuals per year in that age group. In New York City (including all five boroughs), the number of young adults in this age range is approximately 1,400,000.\n\n\nWhat is the expected number of cases of osteosarcoma in NYC in a given year?\n\n11.2\n\n\n\n\nWhat is the probability that 15 or more cases will be diagnosed in a given year?\n\n0.161\n\n\n\n\nThe largest concentration of young adults in NYC is in the borough of Brooklyn, where the population in that age range is approximately 450,000. What is the probability of 10 or more cases in Brooklyn in a given year?\n\n0.004\n\n\n\n\nSuppose that in a given year, 10 cases of osteosarcoma were observed in NYC, with all 10 cases occurring among young adults living in Brooklyn. An official from the NYC Public Health Department claims that the probability of this event (that is, the probability of 10 or more cases being observed, and all of them occurring in Brooklyn) is what was calculated in part c). Is the official correct? Explain your answer. You may assume that your answer to part c) is correct. This question can be answered without doing any calculations.\n\nOfficial is not correct\n\n\n\n\nSuppose that over five years, there was one year in which 10 or more cases of osteosarcoma were observed in Brooklyn. Is the probability of this event equal to the probability calculated in part c)? Explain your answer.\n\n0.01979"
+  },
+  {
+    "objectID": "hw_answers/HW_04_ans.html#r-exercise-1",
+    "href": "hw_answers/HW_04_ans.html#r-exercise-1",
+    "title": "Homework 4 Answers",
+    "section": "R exercise 1",
+    "text": "R exercise 1\nBelow you will be using a dataset from Gapminder to complete a few R exercises.\n\nLoad all the packages you need below here\nYou don’t need to do it all at once, you can add more libraries as you realize you need them.\n\n\n\n\n\nImport dataset\nImport the dataset called “Gapminder_2011_LifeExp_CO2.csv” You can find it in the student files under Data then Homework. You will need to download the file onto your computer, and use the correct file path to import the data.\n\n\n\n\n\nMake a histogram\nUsing ggplot2, make a histogram of the variable CO2emissions."
   }
 ]

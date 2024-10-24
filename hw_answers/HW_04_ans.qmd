@@ -11,3 +11,130 @@ editor_options:
   chunk_output_type: console
 ---
 
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+
+# Book exercises {.unnumbered}
+
+## 3.38 Stenographer’s typos {.unnumbered}
+
+__A very skilled court stenographer makes one typographical error (typo) per hour on average.__
+
+### a {.unnumbered}
+
+__What are the mean and the standard deviation of the number of typos this stenographer makes in an hour?__
+
+::: blue
+Mean: 1, standard deviation: 1
+:::
+
+### b {.unnumbered}
+
+__Calculate the probability that this stenographer makes at most 3 typos in a given hour.__
+
+::: blue
+0.981
+:::
+
+### c {.unnumbered}
+
+__Calculate the probability that this stenographer makes at least 5 typos over 3 hours.__
+
+::: blue
+0.185
+:::
+
+## 3.40 Osteosarcoma in NYC {.unnumbered}
+
+__Osteosarcoma is a relatively rare type of bone cancer.  It occurs most often in young adults, age 10 - 19; it is diagnosed in approximately 8 per 1,000,000 individuals per year in that age group. In New York City (including all five boroughs), the number of young adults in this age range is approximately 1,400,000.__
+
+### a {.unnumbered}
+
+__What is the expected number of cases of osteosarcoma in NYC in a given year?__
+
+::: blue
+11.2
+:::
+
+### b {.unnumbered}
+
+__What is the probability that 15 or more cases will be diagnosed in a given year?__
+
+::: blue
+0.161
+:::
+
+### c {.unnumbered}
+
+__The largest concentration of young adults in NYC is in the borough of Brooklyn, where the population in that age range is approximately 450,000. What is the probability of 10 or more cases in Brooklyn in a given year?__
+
+::: blue
+ 0.004
+:::
+
+### d {.unnumbered}
+
+__Suppose that in a given year, 10 cases of osteosarcoma were observed in NYC, with all 10 cases occurring among young adults living in Brooklyn. An official from the NYC Public Health Department claims that the probability of this event (that is, the probability of 10 or more cases being observed, and all of them occurring in Brooklyn) is what was calculated in part c). Is the official correct? Explain your answer. You may assume that your answer to part c) is correct. This question can be answered without doing any calculations.__
+
+::: blue
+Official is not correct
+:::
+
+### e {.unnumbered}
+
+__Suppose that over five years, there was one year in which 10 or more cases of osteosarcoma were observed in Brooklyn. Is the probability of this event equal to the probability calculated in part c)? Explain your answer.__
+
+::: blue
+0.01979
+:::
+
+# R exercises
+
+## R exercise 1
+
+Below you will be using a dataset from Gapminder to complete a few R exercises.
+
+### Load all the packages you need below here
+
+You don't need to do it all at once, you can add more libraries as you realize you need them.
+
+::: blue
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+library(tidyverse)
+library(here)
+library(ggplot2)
+```
+:::
+
+### Import dataset
+
+Import the dataset called "Gapminder_2011_LifeExp_CO2.csv" You can find it in the student files under Data then Homework. You will need to download the file onto your computer, and use the correct file path to import the data. 
+
+::: blue
+```{r}
+#| echo: false
+gapmndr = read.csv(here("data/Gapminder_2011_LifeExp_CO2.csv"))
+```
+:::
+
+### Make a histogram
+
+Using `ggplot2`, make a histogram of the variable `CO2emissions`.
+
+::: blue
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+ggplot(data = gapmndr, aes(x = CO2emissions)) +
+  geom_histogram()
+```
+:::
+
