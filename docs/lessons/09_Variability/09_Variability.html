@@ -645,662 +645,113 @@ Meike Niederhausen and Nicky Wakim
 <img data-src="../img_slides/samp_dist_12.png" class="r-stretch quarto-figure-center"></section>
 <section id="more-concrete-example-with-height" class="slide level2">
 <h2>More concrete example with height</h2>
-</section></section>
-<section>
-<section id="meikes-notes" class="title-slide slide level1 center">
-<h1>Meike’s notes</h1>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p>Variation in population (<span class="math inline">\(\sigma\)</span>):</p>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-4-1.png" width="672"></p>
+</div>
+</div>
+<p><span class="math display">\[ \mu = 65 \text{ inches}\]</span> <span class="math display">\[ \sigma = 3 \text{ inches}\]</span></p>
+</div><div class="column" style="width:30%;">
 
+</div><div class="column" style="width:35%;">
+
+</div>
+</div>
 </section>
-<section id="our-hypothetical-population-yrbss" class="slide level2">
-<h2>Our hypothetical population: YRBSS</h2>
-<p><strong><a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">Youth Risk Behavior Surveillance System</a> (YRBSS)</strong></p>
-<ul>
-<li>Yearly survey conducted by the US Centers for Disease Control (CDC)</li>
-<li>“A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12.”<sup>1</sup></li>
-<li>Dataset <code>yrbss</code> from <code>oibiostat</code> pacakge contains responses from <em>n</em> = 13,583 participants in 2013 for a subset of the variables included in the complete survey data</li>
-</ul>
+<section id="more-concrete-example-with-height-1" class="slide level2">
+<h2>More concrete example with height</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(oibiostat)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">data</span>(<span class="st">"yrbss"</span>)  <span class="co">#load the data</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># ?yrbss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">dim</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 13583    13</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">names</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "age"                      "gender"                  
- [3] "grade"                    "hispanic"                
- [5] "race"                     "height"                  
- [7] "weight"                   "helmet.12m"              
- [9] "text.while.driving.30d"   "physically.active.7d"    
-[11] "hours.tv.per.school.day"  "strength.training.7d"    
-[13] "school.night.hours.sleep"</code></pre>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Youth Risk Behavior Surveillance System <a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">https://www.cdc.gov/healthyyouth/data/yrbs/index.htm</a> (YRBSS)</p></li></ol></aside></section>
-<section id="getting-to-know-the-dataset-glimpse" class="slide level2">
-<h2>Getting to know the dataset: <code>glimpse()</code></h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">glimpse</span>(yrbss)  <span class="co"># from tidyverse package (dplyr)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 13,583
-Columns: 13
-$ age                      &lt;int&gt; 14, 14, 15, 15, 15, 15, 15, 14, 15, 15, 15, 1…
-$ gender                   &lt;chr&gt; "female", "female", "female", "female", "fema…
-$ grade                    &lt;chr&gt; "9", "9", "9", "9", "9", "9", "9", "9", "9", …
-$ hispanic                 &lt;chr&gt; "not", "not", "hispanic", "not", "not", "not"…
-$ race                     &lt;chr&gt; "Black or African American", "Black or Africa…
-$ height                   &lt;dbl&gt; NA, NA, 1.73, 1.60, 1.50, 1.57, 1.65, 1.88, 1…
-$ weight                   &lt;dbl&gt; NA, NA, 84.37, 55.79, 46.72, 67.13, 131.54, 7…
-$ helmet.12m               &lt;chr&gt; "never", "never", "never", "never", "did not …
-$ text.while.driving.30d   &lt;chr&gt; "0", NA, "30", "0", "did not drive", "did not…
-$ physically.active.7d     &lt;int&gt; 4, 2, 7, 0, 2, 1, 4, 4, 5, 0, 0, 0, 4, 7, 7, …
-$ hours.tv.per.school.day  &lt;chr&gt; "5+", "5+", "5+", "2", "3", "5+", "5+", "5+",…
-$ strength.training.7d     &lt;int&gt; 0, 0, 0, 0, 1, 0, 2, 0, 3, 0, 3, 0, 0, 7, 7, …
-$ school.night.hours.sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6", "&lt;5"…</code></pre>
-</div>
-</div>
-</section>
-<section id="height-weight-variables" class="slide level2">
-<h2>Height &amp; weight variables</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>yrbss <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">select</span>(height, weight) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     height          weight      
- Min.   :1.270   Min.   : 29.94  
- 1st Qu.:1.600   1st Qu.: 56.25  
- Median :1.680   Median : 64.41  
- Mean   :1.691   Mean   : 67.91  
- 3rd Qu.:1.780   3rd Qu.: 76.20  
- Max.   :2.110   Max.   :180.99  
- NA's   :1004    NA's   :1004    </code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, </span>
-<span id="cb10-2"><a href="#cb10-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> height)) <span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="transform-height-weight-from-metric-to-to-standard" class="slide level2">
-<h2>Transform height &amp; weight from metric to to standard</h2>
-<p>Also, drop missing values and add a column of id values</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>yrbss2 <span class="ot">&lt;-</span> yrbss <span class="sc">%&gt;%</span>                 <span class="co"># save new dataset with new name</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(                           <span class="co"># add variables for </span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="at">height.ft =</span> <span class="fl">3.28084</span><span class="sc">*</span>height,     <span class="co">#     height in feet</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="at">weight.lb =</span> <span class="fl">2.20462</span><span class="sc">*</span>weight      <span class="co">#     weight in pounds</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-6"><a href="#cb11-6"></a>  <span class="fu">drop_na</span>(height.ft, weight.lb) <span class="sc">%&gt;%</span> <span class="co"># drop rows w/ missing height/weight values</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span>        <span class="co"># add id column</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a>  <span class="fu">select</span>(id, height.ft, weight.lb)  <span class="co"># restrict dataset to columns of interest</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a></span>
-<span id="cb11-10"><a href="#cb11-10"></a><span class="fu">head</span>(yrbss2)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  id height.ft weight.lb
-1  1  5.675853  186.0038
-2  2  5.249344  122.9957
-3  3  4.921260  102.9998
-4  4  5.150919  147.9961
-5  5  5.413386  289.9957
-6  6  6.167979  157.0130</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">dim</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12579     3</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># number of rows deleted that had missing values for height and/or weight:</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">nrow</span>(yrbss) <span class="sc">-</span> <span class="fu">nrow</span>(yrbss2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1004</code></pre>
-</div>
-</div>
-</section>
-<section id="yrbss2-summary" class="slide level2">
-<h2><code>yrbss2</code> summary</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">summary</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       id          height.ft       weight.lb     
- Min.   :    1   Min.   :4.167   Min.   : 66.01  
- 1st Qu.: 3146   1st Qu.:5.249   1st Qu.:124.01  
- Median : 6290   Median :5.512   Median :142.00  
- Mean   : 6290   Mean   :5.549   Mean   :149.71  
- 3rd Qu.: 9434   3rd Qu.:5.840   3rd Qu.:167.99  
- Max.   :12579   Max.   :6.923   Max.   :399.01  </code></pre>
-</div>
-</div>
-<p>Another summary:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>yrbss2 <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"mean_sd"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">variable</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">mean</th>
-<th style="text-align: right;">sd</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">id</td>
-<td style="text-align: right;">12579</td>
-<td style="text-align: right;">6290.000</td>
-<td style="text-align: right;">3631.389</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">height.ft</td>
-<td style="text-align: right;">12579</td>
-<td style="text-align: right;">5.549</td>
-<td style="text-align: right;">0.343</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">weight.lb</td>
-<td style="text-align: right;">12579</td>
-<td style="text-align: right;">149.708</td>
-<td style="text-align: right;">37.254</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="random-sample-of-size-n-5-from-yrbss2" class="slide level2">
-<h2>Random sample of size n = 5 from <code>yrbss2</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Take a random sample of size n = 5 from <code>yrbss2</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">library</span>(moderndive)</span>
-<span id="cb20-2"><a href="#cb20-2"></a>samp_n5_rep1 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">5</span>, </span>
-<span id="cb20-4"><a href="#cb20-4"></a>               <span class="at">reps =</span> <span class="dv">1</span>,</span>
-<span id="cb20-5"><a href="#cb20-5"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb20-6"><a href="#cb20-6"></a>samp_n5_rep1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 4
-# Groups:   replicate [1]
-  replicate    id height.ft weight.lb
-      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1         1  5869      5.15      145.
-2         1  6694      5.41      127.
-3         1  2517      5.74      130.
-4         1  5372      6.07      180.
-5         1  5403      6.07      163.</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Calculate the mean of the random sample:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>means_hght_samp_n5_rep1 <span class="ot">&lt;-</span> </span>
-<span id="cb22-2"><a href="#cb22-2"></a>  samp_n5_rep1 <span class="sc">%&gt;%</span> </span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb22-4"><a href="#cb22-4"></a>    <span class="at">mean_height =</span> <span class="fu">mean</span>(height.ft))</span>
-<span id="cb22-5"><a href="#cb22-5"></a></span>
-<span id="cb22-6"><a href="#cb22-6"></a>means_hght_samp_n5_rep1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  replicate mean_height
-      &lt;int&gt;       &lt;dbl&gt;
-1         1        5.69</code></pre>
-</div>
-</div>
-</div>
-</div>
-<p><span style="color:purple">Would we get the same mean height if we took another sample?</span></p>
-</section>
-<section id="sampling-variation-1" class="slide level2">
-<h2>Sampling variation</h2>
-<ul>
-<li>If a different random sample is taken, the mean height (point estimate) will likely be different
-<ul>
-<li>this is a result of <strong><span style="color:darkorange">sampling variation</span></strong></li>
-</ul></li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Take a 2nd random sample of size<br>
-n = 5 from <code>yrbss2</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>samp_n5_rep1 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">5</span>, </span>
-<span id="cb24-3"><a href="#cb24-3"></a>               <span class="at">reps =</span> <span class="dv">1</span>,</span>
-<span id="cb24-4"><a href="#cb24-4"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb24-5"><a href="#cb24-5"></a>samp_n5_rep1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 4
-# Groups:   replicate [1]
-  replicate    id height.ft weight.lb
-      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1         1  2329      6.07      182.
-2         1  8863      5.25      125.
-3         1  8058      5.84      135.
-4         1   335      6.17      235.
-5         1  4698      5.58      124.</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Calculate the mean of the 2nd random sample:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>means_hght_samp_n5_rep1 <span class="ot">&lt;-</span> </span>
-<span id="cb26-2"><a href="#cb26-2"></a>  samp_n5_rep1 <span class="sc">%&gt;%</span> </span>
-<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb26-4"><a href="#cb26-4"></a>    <span class="at">mean_height =</span> <span class="fu">mean</span>(height.ft))</span>
-<span id="cb26-5"><a href="#cb26-5"></a></span>
-<span id="cb26-6"><a href="#cb26-6"></a>means_hght_samp_n5_rep1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  replicate mean_height
-      &lt;int&gt;       &lt;dbl&gt;
-1         1        5.78</code></pre>
-</div>
-</div>
-</div>
-</div>
-<p><span style="color:purple">Did we get the same mean height with our 2nd sample?</span></p>
-</section>
-<section id="random-samples-of-size-n-5-from-yrbss2" class="slide level2">
-<h2>100 random samples of size n = 5 from <code>yrbss2</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Take 100 random samples of size<br>
-n = 5 from <code>yrbss2</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>samp_n5_rep100 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">5</span>, </span>
-<span id="cb28-3"><a href="#cb28-3"></a>               <span class="at">reps =</span> <span class="dv">100</span>,</span>
-<span id="cb28-4"><a href="#cb28-4"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-5"><a href="#cb28-5"></a>samp_n5_rep100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 500 × 4
-# Groups:   replicate [100]
-   replicate    id height.ft weight.lb
-       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
- 1         1  6483      5.51     145. 
- 2         1  9899      4.92      90.0
- 3         1  6103      5.68     118. 
- 4         1  2702      5.68     150. 
- 5         1 11789      5.35     115. 
- 6         2 10164      5.51     140. 
- 7         2  5807      5.41     215. 
- 8         2  9382      5.15      98.0
- 9         2  4904      6.00     196. 
-10         2   229      6.07     101. 
-# ℹ 490 more rows</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Calculate the mean for each of the 100 random samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>means_hght_samp_n5_rep100 <span class="ot">&lt;-</span> </span>
-<span id="cb30-2"><a href="#cb30-2"></a>  samp_n5_rep100 <span class="sc">%&gt;%</span> </span>
-<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">group_by</span>(replicate) <span class="sc">%&gt;%</span> </span>
-<span id="cb30-4"><a href="#cb30-4"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb30-5"><a href="#cb30-5"></a>    <span class="at">mean_height =</span> <span class="fu">mean</span>(height.ft))</span>
-<span id="cb30-6"><a href="#cb30-6"></a></span>
-<span id="cb30-7"><a href="#cb30-7"></a>means_hght_samp_n5_rep100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 100 × 2
-   replicate mean_height
-       &lt;int&gt;       &lt;dbl&gt;
- 1         1        5.43
- 2         2        5.63
- 3         3        5.34
- 4         4        5.70
- 5         5        5.90
- 6         6        5.37
- 7         7        5.49
- 8         8        5.60
- 9         9        5.50
-10        10        5.68
-# ℹ 90 more rows</code></pre>
-</div>
-</div>
-</div>
-</div>
-<p><span style="color:purple">How close are the mean heights for each of the 100 random samples?</span></p>
-</section>
-<section id="distribution-of-100-sample-mean-heights-n-5" class="slide level2">
-<h2>Distribution of 100 sample mean heights (n = 5)</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<p>Describe the distribution shape.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb32-2"><a href="#cb32-2"></a>  means_hght_samp_n5_rep100, </span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
-<span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-18-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:55%;">
-<p>Calculate the mean and SD of the 100 mean heights from the 100 samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>stats_means_hght_samp_n5_rep100 <span class="ot">&lt;-</span> </span>
-<span id="cb33-2"><a href="#cb33-2"></a>  means_hght_samp_n5_rep100 <span class="sc">%&gt;%</span> </span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb33-4"><a href="#cb33-4"></a>   <span class="at">mean_mean_height =</span> <span class="fu">mean</span>(mean_height),</span>
-<span id="cb33-5"><a href="#cb33-5"></a>   <span class="at">sd_mean_height =</span> <span class="fu">sd</span>(mean_height)</span>
-<span id="cb33-6"><a href="#cb33-6"></a>   )</span>
-<span id="cb33-7"><a href="#cb33-7"></a>stats_means_hght_samp_n5_rep100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  mean_mean_height sd_mean_height
-             &lt;dbl&gt;          &lt;dbl&gt;
-1             5.58          0.150</code></pre>
-</div>
-</div>
-<p><span style="color:purple">Is the mean of the means close to the “center” of the distribution?</span></p>
-</div>
-</div>
-</section>
-<section id="random-samples-of-size-n-5-from-yrbss2-1" class="slide level2">
-<h2>10,000 random samples of size n = 5 from <code>yrbss2</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Take 10,000 random samples of size<br>
-n = 5 from <code>yrbss2</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>samp_n5_rep10000 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">5</span>, </span>
-<span id="cb35-3"><a href="#cb35-3"></a>               <span class="at">reps =</span> <span class="dv">10000</span>,</span>
-<span id="cb35-4"><a href="#cb35-4"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb35-5"><a href="#cb35-5"></a>samp_n5_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 50,000 × 4
-# Groups:   replicate [10,000]
-   replicate    id height.ft weight.lb
-       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
- 1         1  6383      5.35      126.
- 2         1  4019      5.41      107.
- 3         1  4856      5.25      135.
- 4         1  9988      5.58      120.
- 5         1  2245      6.17      270.
- 6         2 10580      5.68      155.
- 7         2  2254      5.84      159.
- 8         2  8081      5.09      110.
- 9         2 10194      5.35      115.
-10         2  7689      5.35      135.
-# ℹ 49,990 more rows</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Calculate the mean for each of the 10,000 random samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>means_hght_samp_n5_rep10000 <span class="ot">&lt;-</span> </span>
-<span id="cb37-2"><a href="#cb37-2"></a>  samp_n5_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb37-3"><a href="#cb37-3"></a>  <span class="fu">group_by</span>(replicate) <span class="sc">%&gt;%</span> </span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb37-5"><a href="#cb37-5"></a>    <span class="at">mean_height =</span> <span class="fu">mean</span>(height.ft))</span>
-<span id="cb37-6"><a href="#cb37-6"></a></span>
-<span id="cb37-7"><a href="#cb37-7"></a>means_hght_samp_n5_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10,000 × 2
-   replicate mean_height
-       &lt;int&gt;       &lt;dbl&gt;
- 1         1        5.55
- 2         2        5.46
- 3         3        5.49
- 4         4        5.60
- 5         5        5.47
- 6         6        5.83
- 7         7        5.68
- 8         8        5.47
- 9         9        5.37
-10        10        5.15
-# ℹ 9,990 more rows</code></pre>
-</div>
-</div>
-</div>
-</div>
-<p><span style="color:purple">How close are the mean heights for each of the 10,000 random samples?</span></p>
-</section>
-<section id="distribution-of-10000-sample-mean-heights-n-5" class="slide level2">
-<h2>Distribution of 10,000 sample mean heights (n = 5)</h2>
-<div class="columns">
-<div class="column" style="width:48%;">
-<p>Describe the distribution shape.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb39-2"><a href="#cb39-2"></a>  means_hght_samp_n5_rep10000, </span>
-<span id="cb39-3"><a href="#cb39-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
-<span id="cb39-4"><a href="#cb39-4"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-22-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:52%;">
-<p>Calculate the mean and SD of the 10,000 mean heights from the 10,000 samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>stats_means_hght_samp_n5_rep10000 <span class="ot">&lt;-</span> </span>
-<span id="cb40-2"><a href="#cb40-2"></a>  means_hght_samp_n5_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb40-3"><a href="#cb40-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb40-4"><a href="#cb40-4"></a>   <span class="at">mean_mean_height=</span><span class="fu">mean</span>(mean_height),</span>
-<span id="cb40-5"><a href="#cb40-5"></a>   <span class="at">sd_mean_height =</span> <span class="fu">sd</span>(mean_height)</span>
-<span id="cb40-6"><a href="#cb40-6"></a>   )</span>
-<span id="cb40-7"><a href="#cb40-7"></a>stats_means_hght_samp_n5_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  mean_mean_height sd_mean_height
-             &lt;dbl&gt;          &lt;dbl&gt;
-1             5.55          0.153</code></pre>
-</div>
-</div>
-<p><span style="color:purple">Is the mean of the means close to the “center” of the distribution?</span></p>
-</div>
-</div>
-</section>
-<section id="samples-of-size-n-30-from-yrbss2" class="slide level2">
-<h2>10,000 samples of size n = 30 from <code>yrbss2</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Take 10,000 random samples of size<br>
-n = 30 from <code>yrbss2</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>samp_n30_rep10000 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">30</span>, </span>
-<span id="cb42-3"><a href="#cb42-3"></a>               <span class="at">reps =</span> <span class="dv">10000</span>,</span>
-<span id="cb42-4"><a href="#cb42-4"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb42-5"><a href="#cb42-5"></a>samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 300,000 × 4
-# Groups:   replicate [10,000]
-   replicate    id height.ft weight.lb
-       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
- 1         1  3871      5.25      115.
- 2         1 12090      5.15      125.
- 3         1   241      5.58      119.
- 4         1  4570      5.58      140.
- 5         1  4131      5.35      143.
- 6         1 11513      5.35      135.
- 7         1  9663      5.25      125.
- 8         1  3789      5.25      160.
- 9         1   442      5.15      130.
-10         1 11528      5.51      200.
-# ℹ 299,990 more rows</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50;">
-<p>Calculate the mean for each of the 10,000 random samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>means_hght_samp_n30_rep10000 <span class="ot">&lt;-</span> </span>
-<span id="cb44-2"><a href="#cb44-2"></a>  samp_n30_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb44-3"><a href="#cb44-3"></a>  <span class="fu">group_by</span>(replicate) <span class="sc">%&gt;%</span> </span>
-<span id="cb44-4"><a href="#cb44-4"></a>  <span class="fu">summarise</span>(<span class="at">mean_height =</span> </span>
-<span id="cb44-5"><a href="#cb44-5"></a>            <span class="fu">mean</span>(height.ft))</span>
-<span id="cb44-6"><a href="#cb44-6"></a></span>
-<span id="cb44-7"><a href="#cb44-7"></a>means_hght_samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10,000 × 2
-   replicate mean_height
-       &lt;int&gt;       &lt;dbl&gt;
- 1         1        5.48
- 2         2        5.63
- 3         3        5.46
- 4         4        5.46
- 5         5        5.51
- 6         6        5.54
- 7         7        5.56
- 8         8        5.51
- 9         9        5.51
-10        10        5.50
-# ℹ 9,990 more rows</code></pre>
-</div>
-</div>
-</div>
-</div>
-<p><span style="color:purple">How close are the mean heights for each of the 10,000 random samples?</span></p>
-</section>
-<section id="distribution-of-10000-sample-mean-heights-n-30" class="slide level2">
-<h2>Distribution of 10,000 sample mean heights (n = 30)</h2>
-<div class="columns">
-<div class="column" style="width:48%;">
-<p>Describe the distribution shape.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb46-2"><a href="#cb46-2"></a>  means_hght_samp_n30_rep10000, </span>
-<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
-<span id="cb46-4"><a href="#cb46-4"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-26-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:52%;">
-<p>Calculate the mean and SD of the 10,000 mean heights from the 10,000 samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>stats_means_hght_samp_n30_rep10000<span class="ot">&lt;-</span> </span>
-<span id="cb47-2"><a href="#cb47-2"></a>  means_hght_samp_n30_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb47-3"><a href="#cb47-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb47-4"><a href="#cb47-4"></a>   <span class="at">mean_mean_height=</span><span class="fu">mean</span>(mean_height),</span>
-<span id="cb47-5"><a href="#cb47-5"></a>   <span class="at">sd_mean_height =</span> <span class="fu">sd</span>(mean_height)</span>
-<span id="cb47-6"><a href="#cb47-6"></a>   )</span>
-<span id="cb47-7"><a href="#cb47-7"></a>stats_means_hght_samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  mean_mean_height sd_mean_height
-             &lt;dbl&gt;          &lt;dbl&gt;
-1             5.55         0.0623</code></pre>
-</div>
-</div>
-<p><span style="color:purple">Is the mean of the means close to the “center” of the distribution?</span></p>
-</div>
-</div>
-</section>
-<section id="compare-distributions-of-10000-sample-mean-heights-when-n-5-left-vs.-n-30-right" class="slide level2">
-<h2>Compare distributions of 10,000 sample mean heights when n = 5 (left) vs.&nbsp;n = 30 (right)</h2>
-<p><span style="color:purple">How are the center, shape, and spread similar and/or different?</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:35%;">
+<p>Variation in population (<span class="math inline">\(\sigma\)</span>):</p>
+<p>&nbsp;</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-28-1.png" width="480"></p>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  mean_mean_height sd_mean_height
-             &lt;dbl&gt;          &lt;dbl&gt;
-1             5.55          0.153</code></pre>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-5-1.png" width="672"></p>
 </div>
 </div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-29-1.png" width="480"></p>
+<p><span class="math display">\[ \mu = 65 \text{ inches}\]</span> <span class="math display">\[ \sigma = 3 \text{ inches}\]</span></p>
+</div><div class="column" style="width:30%;">
+<p>Variation within samples (<span class="math inline">\(S\)</span>):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/heights_samples.png"></p>
+</figure>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  mean_mean_height sd_mean_height
-             &lt;dbl&gt;          &lt;dbl&gt;
-1             5.55         0.0623</code></pre>
-</div>
-</div>
+</div><div class="column" style="width:35%;">
+
 </div>
 </div>
 </section>
-<section id="sampling-high-schoolers-weights" class="slide level2">
-<h2>Sampling high schoolers’ weights</h2>
+<section id="more-concrete-example-with-height-2" class="slide level2">
+<h2>More concrete example with height</h2>
 <div class="columns">
-<div class="column" style="width:100%;">
-<p>Which figure is which?</p>
-<ul>
-<li>Population distribution of weights</li>
-<li>Sampling distribution of mean weights when <span class="math inline">\(n=5\)</span></li>
-<li>Sampling distribution of mean weights when <span class="math inline">\(n=30\)</span>.</li>
-</ul>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:32%;">
-<p>A</p>
+<div class="column" style="width:35%;">
+<p>Variation in population (<span class="math inline">\(\sigma\)</span>):</p>
+<p>&nbsp;</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-6-1.png" width="672"></p>
 </div>
 </div>
-</div><div class="column" style="width:32%;">
-<p>B</p>
+<p><span class="math display">\[ \mu = 65 \text{ inches}\]</span> <span class="math display">\[ \sigma = 3 \text{ inches}\]</span></p>
+</div><div class="column" style="width:30%;">
+<p>Variation within samples (<span class="math inline">\(S\)</span>):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/heights_samples.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:35%;">
+<p>Variation between samples (<span class="math inline">\(SE\)</span>):</p>
+<p>&nbsp;</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-7-1.png" width="672"></p>
 </div>
 </div>
-</div><div class="column" style="width:32%;">
-<p>C</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
-</div>
-</div>
+<p><span class="math display">\[ \hat{\mu} = 64.975 \text{ inches}\]</span> <span class="math display">\[ SE = 0.414 \text{ inches}\]</span></p>
 </div>
 </div>
 </section>
-<section id="the-sampling-distribution-of-the-mean" class="slide level2">
-<h2>The sampling distribution of the mean</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="different-variabilities" class="slide level2">
+<h2>Different variabilities</h2>
+</section>
+<section id="sampling-distribution-of-sample-means" class="slide level2">
+<h2>Sampling Distribution of Sample Means</h2>
 <ul>
 <li><p>The <strong><span style="color:darkorang">sampling distribution</span></strong> of the mean is the distribution of sample means calculated from repeated random samples of <em>the same size</em> from the same population</p></li>
 <li><p>Our simulations show approximations of the sampling distribution of the mean for various sample sizes</p></li>
 <li><p>The theoretical sampling distribution is based on all possible samples of a given sample size <span class="math inline">\(n\)</span>.</p></li>
 </ul>
+</section>
+<section id="what-happens-if-we-have-10000-samples" class="slide level2">
+<h2>What happens if we have 10000 samples?</h2>
+</section>
+<section id="compare-sampling-distribution-of-1000-samples-for-n50-left-and-n100-right" class="slide level2">
+<h2>Compare sampling distribution of 1000 samples for n=50 (left) and n=100 (right)</h2>
+<p><span style="color:purple">How are the center, shape, and spread similar and/or different?</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-8-1.png" width="672"></p>
+</div>
+</div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-9-1.png" width="672"></p>
 </div>
 </div>
 </div>
 </div>
+</section>
+<section id="poll-everywhere-question" class="slide level2">
+<h2>Poll Everywhere question</h2>
 </section>
 <section id="the-central-limit-theorem-clt" class="slide level2">
 <h2>The Central Limit Theorem (CLT)</h2>
@@ -1340,24 +791,20 @@ n = 30 from <code>yrbss2</code>:</p>
 </ul>
 
 <img data-src="../img_slides/CLT_video_preview.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="sampling-distribution-of-mean-heights-when-n-30-12" class="slide level2">
-<h2>Sampling distribution of mean heights when n = 30 (1/2)</h2>
+<section id="sampling-distribution-of-mean-heights-when-n-50-12" class="slide level2">
+<h2>Sampling distribution of mean heights when n = 50 (1/2)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb51-2"><a href="#cb51-2"></a>  means_hght_samp_n30_rep10000, </span>
-<span id="cb51-3"><a href="#cb51-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
-<span id="cb51-4"><a href="#cb51-4"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-35-1.png" width="480"></p>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-10-1.png" width="672"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <p>CLT tells us that we can model the sampling distribution of mean heights using a normal distribution.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-36-1.png" width="576"></p>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-11-1.png" width="576"></p>
 </div>
 </div>
 </div>
@@ -1367,41 +814,28 @@ n = 30 from <code>yrbss2</code>:</p>
 <h2>Sampling distribution of mean heights when n = 30 (2/2)</h2>
 <div class="columns">
 <div class="column" style="width:65%;">
-<p>Mean and SD of population:</p>
+<p>Mean and SD of population: <span class="math display">\[ \mu = 65 \text{ inches}\]</span> <span class="math display">\[ \sigma = 3 \text{ inches}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>(mean_height.ft <span class="ot">&lt;-</span> <span class="fu">mean</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">3</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5.548691</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>(sd_height.ft <span class="ot">&lt;-</span> <span class="fu">sd</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3434949</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>sd_height.ft<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.06271331</code></pre>
+<pre><code>[1] 0.4242641</code></pre>
 </div>
 </div>
-<p>Mean and SD of simulated sampling distribution:</p>
+<p>Sampling mean and sampling SD of simulated sampling distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>stats_means_hght_samp_n30_rep10000<span class="ot">&lt;-</span> </span>
-<span id="cb58-2"><a href="#cb58-2"></a>  means_hght_samp_n30_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb58-3"><a href="#cb58-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb58-4"><a href="#cb58-4"></a>   <span class="at">mean_mean_height=</span><span class="fu">mean</span>(mean_height),</span>
-<span id="cb58-5"><a href="#cb58-5"></a>   <span class="at">sd_mean_height =</span> <span class="fu">sd</span>(mean_height)</span>
-<span id="cb58-6"><a href="#cb58-6"></a>   )</span>
-<span id="cb58-7"><a href="#cb58-7"></a>stats_means_hght_samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>(<span class="at">sample_mean =</span> <span class="fu">mean</span>(means50<span class="sc">$</span>means))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  mean_mean_height sd_mean_height
-             &lt;dbl&gt;          &lt;dbl&gt;
-1             5.55         0.0623</code></pre>
+<pre><code>[1] 65.01157</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>(<span class="at">sample_sd =</span> <span class="fu">sd</span>(means50<span class="sc">$</span>means))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4254565</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:35%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-39-1.png" width="384"></p>
+<p><img data-src="09_Variability_files/figure-revealjs/unnamed-chunk-14-1.png" width="672"></p>
 </div>
 </div>
 </div>
@@ -1430,7 +864,6 @@ n = 30 from <code>yrbss2</code>:</p>
 <p>Lesson 9 Slides</p>
 </div>
 </section></section>
-
     </div>
   </div>
 

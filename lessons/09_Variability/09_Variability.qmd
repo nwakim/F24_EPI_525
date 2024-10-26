@@ -34,6 +34,8 @@ library(rstatix)
 library(oibiostat) 
 library(knitr)
 library(moderndive) # NEW!!
+library(ggplot2)
+library(dplyr)
 
 # terminal: for icons
 # quarto install extension quarto-ext/fontawesome
@@ -260,514 +262,253 @@ Build the intuition around samplign variation
 
 ## More concrete example with height
 
+```{r}
+#| echo: false
+#| message: false
 
+set.seed(4258)
+n=10000000
+height = rnorm(n, 65, 3)
 
-# Meike's notes
+heights = as.data.frame(cbind(1:n, height))
 
-
-
-## Our hypothetical population: YRBSS
-
-__[Youth Risk Behavior Surveillance System](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)__
-
-* Yearly survey conducted by the US Centers for Disease Control (CDC) 
-* "A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12."[^1]
-* Dataset `yrbss` from `oibiostat` pacakge contains responses from _n_ = 13,583 participants in 2013 for a subset of the variables included in the complete survey data
-
-[^1]: Youth Risk Behavior Surveillance System [https://www.cdc.gov/healthyyouth/data/yrbs/index.htm](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)
+#density(height)
+```
 
 ::: columns
-::: {.column width="50%"}
+
+::: {.column width="35%"}
+
+Variation in population ($\sigma$):
+
+ 
+
 ```{r}
-library(oibiostat)
-data("yrbss")  #load the data
-# ?yrbss
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+heights %>% 
+  ggplot(aes(x=height)) + 
+  geom_density(color="black", fill="grey") +
+  theme_classic() +
+  labs(x="Height (inches)", y="Probability Density") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme(text = element_text(size = 24))
 ```
+
+$$ \mu = 65 \text{ inches}$$
+$$ \sigma = 3 \text{ inches}$$
 :::
-::: {.column width="50%"}
 
-```{r}
-dim(yrbss)
-```
+::: {.column width="30%"}
+
+:::
+
+::: {.column width="35%"}
+
 :::
 :::
-```{r}
-names(yrbss)
-```
 
 
 
-## Getting to know the dataset: `glimpse()`
-
-
-```{r}
-glimpse(yrbss)  # from tidyverse package (dplyr)
-```
-
-
-
-
-## Height & weight variables
+## More concrete example with height
 
 ::: columns
-::: {.column width="50%"}
+
+::: {.column width="35%"}
+Variation in population ($\sigma$):
+
+ 
+
 ```{r}
-yrbss %>% 
-  select(height, weight) %>% 
-  summary()
-
-
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+heights %>% 
+  ggplot(aes(x=height)) + 
+  geom_density(color="black", fill="grey") +
+  theme_classic() +
+  labs(x="Height (inches)", y="Probability Density") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme(text = element_text(size = 24))
 ```
+
+$$ \mu = 65 \text{ inches}$$
+$$ \sigma = 3 \text{ inches}$$
 :::
-::: {.column width="50%"}
 
-```{r}
-#| fig.height: 7
-ggplot(data = yrbss, 
-       aes(x = height)) +
-  geom_histogram()
-```
+::: {.column width="30%"}
+
+Variation within samples ($S$):
+
+![](../img_slides/heights_samples.png){fig-align="center"}
+
+:::
+
+::: {.column width="35%"}
+
 :::
 :::
 
 
-## Transform height & weight from metric to to standard
 
-Also, drop missing values and add a column of id values
-```{r}
-yrbss2 <- yrbss %>%                 # save new dataset with new name
-  mutate(                           # add variables for 
-    height.ft = 3.28084*height,     #     height in feet
-    weight.lb = 2.20462*weight      #     weight in pounds
-  ) %>% 
-  drop_na(height.ft, weight.lb) %>% # drop rows w/ missing height/weight values
-  mutate(id = 1:nrow(.)) %>%        # add id column
-  select(id, height.ft, weight.lb)  # restrict dataset to columns of interest
-
-head(yrbss2)  
-dim(yrbss2)
-# number of rows deleted that had missing values for height and/or weight:
-nrow(yrbss) - nrow(yrbss2) 
-```
-
-
-## `yrbss2` summary
-
-```{r}
-summary(yrbss2)
-```
-
-Another summary:
-
-```{r}
-yrbss2 %>% 
-  get_summary_stats(type = "mean_sd") %>% 
-  kable()
-```
-
-
-## Random sample of size n = 5 from `yrbss2`
+## More concrete example with height
 
 ::: columns
-::: {.column width="50%"}
 
-Take a random sample of size n = 5 from `yrbss2`:
+::: {.column width="35%"}
+
+Variation in population ($\sigma$):
+
+ 
+
 ```{r}
-library(moderndive)
-samp_n5_rep1 <- yrbss2 %>%
-  rep_sample_n(size = 5, 
-               reps = 1,
-               replace = FALSE)
-samp_n5_rep1
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+heights %>% 
+  ggplot(aes(x=height)) + 
+  geom_density(color="black", fill="grey") +
+  theme_classic() +
+  labs(x="Height (inches)", y="Probability Density") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme(text = element_text(size = 24))
 ```
 
+$$ \mu = 65 \text{ inches}$$
+$$ \sigma = 3 \text{ inches}$$
 :::
-::: {.column width="50%"}
-Calculate the mean of the random sample:
-```{r}
-#| fig.height: 5.5
-means_hght_samp_n5_rep1 <- 
-  samp_n5_rep1 %>% 
-  summarise(
-    mean_height = mean(height.ft))
 
-means_hght_samp_n5_rep1
+::: {.column width="30%"}
+
+Variation within samples ($S$):
+
+![](../img_slides/heights_samples.png){fig-align="center"}
+
+:::
+
+::: {.column width="35%"}
+
+Variation between samples ($SE$):
+
+
+ 
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+
+means=NULL;sds=NULL
+for(i in 1:1000){
+  height = rnorm(50, 65, 3)
+  means = c(means, mean(height))
+  sds = c(sds, sd(height))
+}
+means = as.data.frame(cbind(1:1000, means, sds))
+
+means %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60) +
+  labs(x="Mean height from samples (inches)", y="Frequency") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme_classic() +
+  theme(text = element_text(size = 24))
+
+sample_mean = mean(means$means)
+sample_sd = sd(means$means)
+# 3/sqrt(50)
 ```
 
-:::
-:::
+$$ \hat{\mu} = `r round(sample_mean, 3)` \text{ inches}$$
+$$ SE = `r round(sample_sd, 3)` \text{ inches}$$
 
-[Would we get the same mean height if we took another sample?]{style="color:purple"}
-
-
-
-## Sampling variation
-
-* If a different random sample is taken, the mean height (point estimate) will likely be different
-    * this is a result of __[sampling variation]{style="color:darkorange"}__
-
-::: columns
-::: {.column width="50%"}
-
-Take a 2nd random sample of size  
-n = 5 from `yrbss2`:
-```{r}
-samp_n5_rep1 <- yrbss2 %>%
-  rep_sample_n(size = 5, 
-               reps = 1,
-               replace = FALSE)
-samp_n5_rep1
-```
-:::
-::: {.column width="50%"}
-Calculate the mean of the 2nd random sample:
-```{r}
-#| fig.height: 5.5
-means_hght_samp_n5_rep1 <- 
-  samp_n5_rep1 %>% 
-  summarise(
-    mean_height = mean(height.ft))
-
-means_hght_samp_n5_rep1
-```
 :::
 :::
 
-[Did we get the same mean height with our 2nd sample?]{style="color:purple"}
+## Different variabilities
 
 
-## 100 random samples of size n = 5 from `yrbss2`
+## Sampling Distribution of Sample Means
 
-::: columns
-::: {.column width="50%"}
-Take 100 random samples of size  
-n = 5 from `yrbss2`:
-```{r}
-samp_n5_rep100 <- yrbss2 %>%
-  rep_sample_n(size = 5, 
-               reps = 100,
-               replace = FALSE)
-samp_n5_rep100
-```
+* The __[sampling distribution]{style="color:darkorang"}__ of the mean is the distribution of sample means calculated from repeated random samples of _the same size_ from the same population
 
-:::
-::: {.column width="50%"}
-Calculate the mean for each of the 100 random samples:
-```{r}
-means_hght_samp_n5_rep100 <- 
-  samp_n5_rep100 %>% 
-  group_by(replicate) %>% 
-  summarise(
-    mean_height = mean(height.ft))
+* Our simulations show approximations of the sampling distribution of the mean for various sample sizes
 
-means_hght_samp_n5_rep100
-```
-:::
-:::
+* The theoretical sampling distribution is based on all possible samples of a given sample size $n$.
 
-[How close are the mean heights for each of the 100 random samples?]{style="color:purple"}
+## What happens if we have 10000 samples?
 
-
-## Distribution of 100 sample mean heights (n = 5)
-::: columns
-::: {.column width="45%"}
-Describe the distribution shape. 
-```{r}
-#| fig.height: 5
-#| fig.width: 5
-ggplot(
-  means_hght_samp_n5_rep100, 
-  aes(x = mean_height)) + 
-  geom_histogram()
-```
-
-:::
-::: {.column width="55%"}
-Calculate the mean and SD of the 100 mean heights from the 100 samples:
-```{r}
-stats_means_hght_samp_n5_rep100 <- 
-  means_hght_samp_n5_rep100 %>% 
-  summarise(
-   mean_mean_height = mean(mean_height),
-   sd_mean_height = sd(mean_height)
-   )
-stats_means_hght_samp_n5_rep100
-```
-
-
-[Is the mean of the means close to the "center" of the distribution?]{style="color:purple"}
-:::
-:::
-
-
-## 10,000 random samples of size n = 5 from `yrbss2`
-::: columns
-::: {.column width="50%"}
-Take 10,000 random samples of size  
-n = 5 from `yrbss2`:
-```{r}
-samp_n5_rep10000 <- yrbss2 %>%
-  rep_sample_n(size = 5, 
-               reps = 10000,
-               replace = FALSE)
-samp_n5_rep10000
-```
-
-:::
-::: {.column width="50%"}
-Calculate the mean for each of the 10,000 random samples:
-```{r}
-means_hght_samp_n5_rep10000 <- 
-  samp_n5_rep10000 %>% 
-  group_by(replicate) %>% 
-  summarise(
-    mean_height = mean(height.ft))
-
-means_hght_samp_n5_rep10000
-```
-:::
-:::
-
-[How close are the mean heights for each of the 10,000 random samples?]{style="color:purple"}
-
-
-## Distribution of 10,000 sample mean heights (n = 5)
-::: columns
-::: {.column width="48%"}
-Describe the distribution shape. 
-```{r}
-#| fig.height: 5
-#| fig.width: 5
-ggplot(
-  means_hght_samp_n5_rep10000, 
-  aes(x = mean_height)) + 
-  geom_histogram()
-```
-
-:::
-::: {.column width="52%"}
-Calculate the mean and SD of the 10,000 mean heights from the 10,000 samples:
-```{r}
-stats_means_hght_samp_n5_rep10000 <- 
-  means_hght_samp_n5_rep10000 %>% 
-  summarise(
-   mean_mean_height=mean(mean_height),
-   sd_mean_height = sd(mean_height)
-   )
-stats_means_hght_samp_n5_rep10000
-```
-
-[Is the mean of the means close to the "center" of the distribution?]{style="color:purple"}
-:::
-:::
-
-
-## 10,000 samples of size n = 30 from `yrbss2`
-::: columns
-::: {.column width="50%"}
-Take 10,000 random samples of size  
-n = 30 from `yrbss2`:
-```{r}
-samp_n30_rep10000 <- yrbss2 %>%
-  rep_sample_n(size = 30, 
-               reps = 10000,
-               replace = FALSE)
-samp_n30_rep10000
-```
-
-:::
-::: {.column width="50"}
-Calculate the mean for each of the 10,000 random samples:
-```{r}
-means_hght_samp_n30_rep10000 <- 
-  samp_n30_rep10000 %>% 
-  group_by(replicate) %>% 
-  summarise(mean_height = 
-            mean(height.ft))
-
-means_hght_samp_n30_rep10000
-```
-:::
-:::
-
-[How close are the mean heights for each of the 10,000 random samples?]{style="color:purple"}
-
-
-## Distribution of 10,000 sample mean heights (n = 30)
-::: columns
-::: {.column width="48%"}
-Describe the distribution shape. 
-```{r}
-#| fig.height: 5
-#| fig.width: 5
-ggplot(
-  means_hght_samp_n30_rep10000, 
-  aes(x = mean_height)) + 
-  geom_histogram()
-```
-
-:::
-::: {.column width="52%"}
-Calculate the mean and SD of the 10,000 mean heights from the 10,000 samples:
-```{r}
-stats_means_hght_samp_n30_rep10000<- 
-  means_hght_samp_n30_rep10000 %>% 
-  summarise(
-   mean_mean_height=mean(mean_height),
-   sd_mean_height = sd(mean_height)
-   )
-stats_means_hght_samp_n30_rep10000
-```
-
-[Is the mean of the means close to the "center" of the distribution?]{style="color:purple"}
-:::
-:::
-
-
-## Compare distributions of 10,000 sample mean heights when n = 5 (left) vs. n = 30 (right)
+## Compare sampling distribution of 1000 samples for n=50 (left) and n=100 (right)
 
 [How are the center, shape, and spread similar and/or different?]{style="color:purple"}
 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-#| fig.height: 5
-#| fig.width: 5
 #| echo: false
-ggplot(
-  means_hght_samp_n5_rep10000, 
-  aes(x = mean_height)) + 
-  geom_histogram()
+#| fig-width: 7
+#| fig-height: 4
 
-stats_means_hght_samp_n5_rep10000
+means=NULL;sds=NULL
+for(i in 1:1000){
+  height = rnorm(50, 65, 3)
+  means = c(means, mean(height))
+  sds = c(sds, sd(height))
+}
+means50 = as.data.frame(cbind(1:1000, means, sds))
+
+means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60) +
+  labs(x="Mean height from samples (inches)", y="Frequency") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme_classic() +
+  theme(text = element_text(size = 24))
+
+sample_mean = mean(means50$means)
+sample_sd = sd(means50$means)
+# 3/sqrt(50)
 ```
 
 :::
 ::: {.column width="50%"}
 
 ```{r}
-#| fig.height: 5
-#| fig.width: 5
 #| echo: false
-ggplot(
-  means_hght_samp_n30_rep10000, 
-  aes(x = mean_height)) + 
-  geom_histogram()
+#| fig-width: 7
+#| fig-height: 4
 
-stats_means_hght_samp_n30_rep10000
+means=NULL;sds=NULL
+for(i in 1:1000){
+  height = rnorm(100, 65, 3)
+  means = c(means, mean(height))
+  sds = c(sds, sd(height))
+}
+means100 = as.data.frame(cbind(1:1000, means, sds))
+
+means100 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60) +
+  labs(x="Mean height from samples (inches)", y="Frequency") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme_classic() +
+  theme(text = element_text(size = 24))
+
+sample_mean = mean(means100$means)
+sample_sd = sd(means100$means)
+# 3/sqrt(50)
 ```
 :::
 :::
 
-
-## Sampling high schoolers' weights
-
-::: columns
-::: {.column width="100%"}
-Which figure is which?
-
-* Population distribution of weights
-* Sampling distribution of mean weights when $n=5$
-* Sampling distribution of mean weights when $n=30$.
-:::
-:::
-
-::: columns
-::: {.column width="32%"}
-A
-```{r}
-#| echo: false
-#| fig.height: 10
-means_wght_samp_n30_rep10000 <- 
-  samp_n30_rep10000 %>% 
-  group_by(replicate) %>% 
-  summarise(mean_weight = 
-            mean(weight.lb))
-
-# means_wght_samp_n30_rep10000
-ggplot(
-  means_wght_samp_n30_rep10000, 
-  aes(x = mean_weight)) + 
-  geom_histogram() +
-  theme(text=element_text(size=50))+
-  labs(x = "")
-```
-:::
-
-::: {.column width="32%"}
-B
-```{r}
-#| echo: false
-#| fig.height: 10
-means_wght_samp_n5_rep10000 <- 
-  samp_n5_rep10000 %>% 
-  group_by(replicate) %>% 
-  summarise(mean_weight = 
-            mean(weight.lb))
-
-# means_wght_samp_n5_rep10000
-ggplot(
-  means_wght_samp_n5_rep10000, 
-  aes(x = mean_weight)) + 
-  geom_histogram() +
-  theme(text=element_text(size=50)) +
-  labs(x = "")
-```
-:::
-
-::: {.column width="32%"}
-C
-```{r}
-#| echo: false
-#| fig.height: 10
-ggplot(data = yrbss2, 
-       aes(x = weight.lb)) +
-  geom_histogram() +
-  # lab(title = "population distribution") +
-  theme(text=element_text(size=50)) +
-  labs(x = "")
-```
-:::
-:::
-
-
-## The sampling distribution of the mean
-::: columns
-::: {.column width="50%"}
-* The __[sampling distribution]{style="color:darkorang"}__ of the mean is the distribution of sample means calculated from repeated random samples of _the same size_ from the same population
-
-* Our simulations show approximations of the sampling distribution of the mean for various sample sizes
-
-* The theoretical sampling distribution is based on all possible samples of a given sample size $n$.
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| fig.height: 5.5
-ggplot(data = yrbss2, 
-       aes(x = weight.lb)) +
-  geom_histogram() +
-  xlim(65, 400) +
-  labs(title = "Population distribution") +
-  theme(text=element_text(size=30))
-```
-
-```{r}
-#| echo: false
-#| fig.height: 5.5
-ggplot(
-  means_wght_samp_n30_rep10000, 
-  aes(x = mean_weight)) + 
-  geom_histogram() +
-  xlim(65, 400)+
-  labs(title = "Sampling distribution (n=30)") +
-  theme(text=element_text(size=30))
-```
-
-:::
-:::
-
+## Poll Everywhere question 
 
 ## The Central Limit Theorem (CLT) 
 
@@ -789,7 +530,6 @@ ggplot(
       * _standard deviation_ $\frac{\sigma}{\sqrt{n}}$
 
 
-
 ## The cutest statistics video on YouTube
 
 * _[Bunnies, Dragons and the 'Normal' World: Central Limit Theorem]{style="color:purple"}_ 
@@ -800,16 +540,22 @@ ggplot(
 
 
 
-## Sampling distribution of mean heights when n = 30 (1/2)
+## Sampling distribution of mean heights when n = 50 (1/2)
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-#| fig.height: 5
-#| fig.width: 5
-ggplot(
-  means_hght_samp_n30_rep10000, 
-  aes(x = mean_height)) + 
-  geom_histogram()
+#| echo: false  
+#| fig.height: 4
+#| fig.width: 7
+
+means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60) +
+  labs(x="Mean height from samples (inches)", y="Frequency") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme_classic() +
+  theme(text = element_text(size = 24))
 ```
 
 :::
@@ -821,8 +567,8 @@ CLT tells us that we can model the sampling distribution of mean heights using a
 #| echo: false
 #| fig.height: 5.5
 #| fig.width: 6
-mu <- 5.55
-SE <- 0.34/sqrt(30)
+mu <- 65
+SE <- 3/sqrt(50)
 sig <- round(SE, 2)
 
 # sig
@@ -869,30 +615,25 @@ gg_samp_dist_heights
 ::: columns
 ::: {.column width="65%"}
 Mean and SD of population:
+$$ \mu = 65 \text{ inches}$$
+$$ \sigma = 3 \text{ inches}$$
 
 ```{r}
-(mean_height.ft <- mean(yrbss2$height.ft))
-(sd_height.ft <- sd(yrbss2$height.ft))
-sd_height.ft/sqrt(30)
+3/sqrt(50)
 ```
 
-Mean and SD of simulated sampling distribution:
+Sampling mean and sampling SD of simulated sampling distribution:
 
 ```{r}
-stats_means_hght_samp_n30_rep10000<- 
-  means_hght_samp_n30_rep10000 %>% 
-  summarise(
-   mean_mean_height=mean(mean_height),
-   sd_mean_height = sd(mean_height)
-   )
-stats_means_hght_samp_n30_rep10000
+(sample_mean = mean(means50$means))
+(sample_sd = sd(means50$means))
 ```
 :::
 ::: {.column width="35%"}
 ```{r}
 #| echo: false
-#| fig.height: 5
-#| fig.width: 4
+#| fig.height: 4
+#| fig.width: 7
 gg_samp_dist_heights +
   theme(text=element_text(size=15))
 ```

@@ -10133,7 +10133,7 @@
     "href": "lessons/09_Variability/09_Variability.html#random-sample-of-size-n-5-from-yrbss2",
     "title": "Lesson 9: Variability in estimates",
     "section": "Random sample of size n = 5 from yrbss2",
-    "text": "Random sample of size n = 5 from yrbss2\n\n\nTake a random sample of size n = 5 from yrbss2:\n\nlibrary(moderndive)\nsamp_n5_rep1 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 1,\n               replace = FALSE)\nsamp_n5_rep1\n\n# A tibble: 5 × 4\n# Groups:   replicate [1]\n  replicate    id height.ft weight.lb\n      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1         1  5869      5.15      145.\n2         1  6694      5.41      127.\n3         1  2517      5.74      130.\n4         1  5372      6.07      180.\n5         1  5403      6.07      163.\n\n\n\nCalculate the mean of the random sample:\n\nmeans_hght_samp_n5_rep1 &lt;- \n  samp_n5_rep1 %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep1\n\n# A tibble: 1 × 2\n  replicate mean_height\n      &lt;int&gt;       &lt;dbl&gt;\n1         1        5.69\n\n\n\n\nWould we get the same mean height if we took another sample?"
+    "text": "Random sample of size n = 5 from yrbss2\n\n\nTake a random sample of size n = 5 from yrbss2:\n\nlibrary(moderndive)\nsamp_n5_rep1 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 1,\n               replace = FALSE)\nsamp_n5_rep1\n\n# A tibble: 5 × 4\n# Groups:   replicate [1]\n  replicate    id height.ft weight.lb\n      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1         1  4662      5.74      125.\n2         1  4680      5.58      132.\n3         1 10910      5.91      140.\n4         1  2274      5.51      136.\n5         1 11874      5.35      120.\n\n\n\nCalculate the mean of the random sample:\n\nmeans_hght_samp_n5_rep1 &lt;- \n  samp_n5_rep1 %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep1\n\n# A tibble: 1 × 2\n  replicate mean_height\n      &lt;int&gt;       &lt;dbl&gt;\n1         1        5.62\n\n\n\n\nWould we get the same mean height if we took another sample?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#sampling-variation",
@@ -10147,49 +10147,49 @@
     "href": "lessons/09_Variability/09_Variability.html#random-samples-of-size-n-5-from-yrbss2",
     "title": "Lesson 9: Variability in estimates",
     "section": "100 random samples of size n = 5 from yrbss2",
-    "text": "100 random samples of size n = 5 from yrbss2\n\n\nTake 100 random samples of size\nn = 5 from yrbss2:\n\nsamp_n5_rep100 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 100,\n               replace = FALSE)\nsamp_n5_rep100\n\n# A tibble: 500 × 4\n# Groups:   replicate [100]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  6483      5.51     145. \n 2         1  9899      4.92      90.0\n 3         1  6103      5.68     118. \n 4         1  2702      5.68     150. \n 5         1 11789      5.35     115. \n 6         2 10164      5.51     140. \n 7         2  5807      5.41     215. \n 8         2  9382      5.15      98.0\n 9         2  4904      6.00     196. \n10         2   229      6.07     101. \n# ℹ 490 more rows\n\n\n\nCalculate the mean for each of the 100 random samples:\n\nmeans_hght_samp_n5_rep100 &lt;- \n  samp_n5_rep100 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep100\n\n# A tibble: 100 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.43\n 2         2        5.63\n 3         3        5.34\n 4         4        5.70\n 5         5        5.90\n 6         6        5.37\n 7         7        5.49\n 8         8        5.60\n 9         9        5.50\n10        10        5.68\n# ℹ 90 more rows\n\n\n\n\nHow close are the mean heights for each of the 100 random samples?"
+    "text": "100 random samples of size n = 5 from yrbss2\n\n\nTake 100 random samples of size\nn = 5 from yrbss2:\n\nsamp_n5_rep100 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 100,\n               replace = FALSE)\nsamp_n5_rep100\n\n# A tibble: 500 × 4\n# Groups:   replicate [100]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  4376      5.09      145.\n 2         1  4409      5.25      110.\n 3         1  2744      5.25      170.\n 4         1  3560      5.09      128.\n 5         1  2325      5.68      130.\n 6         2  2410      5.91      187.\n 7         2  7452      6.07      157.\n 8         2   104      5.58      165.\n 9         2 10672      5.35      120.\n10         2  2226      5.68      113.\n# ℹ 490 more rows\n\n\n\nCalculate the mean for each of the 100 random samples:\n\nmeans_hght_samp_n5_rep100 &lt;- \n  samp_n5_rep100 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep100\n\n# A tibble: 100 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.27\n 2         2        5.72\n 3         3        5.89\n 4         4        5.51\n 5         5        5.70\n 6         6        5.43\n 7         7        5.70\n 8         8        5.28\n 9         9        5.58\n10        10        5.49\n# ℹ 90 more rows\n\n\n\n\nHow close are the mean heights for each of the 100 random samples?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#distribution-of-100-sample-mean-heights-n-5",
     "href": "lessons/09_Variability/09_Variability.html#distribution-of-100-sample-mean-heights-n-5",
     "title": "Lesson 9: Variability in estimates",
     "section": "Distribution of 100 sample mean heights (n = 5)",
-    "text": "Distribution of 100 sample mean heights (n = 5)\n\n\nDescribe the distribution shape.\n\nggplot(\n  means_hght_samp_n5_rep100, \n  aes(x = mean_height)) + \n  geom_histogram()\n\n\n\n\n\nCalculate the mean and SD of the 100 mean heights from the 100 samples:\n\nstats_means_hght_samp_n5_rep100 &lt;- \n  means_hght_samp_n5_rep100 %&gt;% \n  summarise(\n   mean_mean_height = mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n5_rep100\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.58          0.150\n\n\nIs the mean of the means close to the “center” of the distribution?"
+    "text": "Distribution of 100 sample mean heights (n = 5)\n\n\nDescribe the distribution shape.\n\nggplot(\n  means_hght_samp_n5_rep100, \n  aes(x = mean_height)) + \n  geom_histogram()\n\n\n\n\n\nCalculate the mean and SD of the 100 mean heights from the 100 samples:\n\nstats_means_hght_samp_n5_rep100 &lt;- \n  means_hght_samp_n5_rep100 %&gt;% \n  summarise(\n   mean_mean_height = mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n5_rep100\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.53          0.156\n\n\nIs the mean of the means close to the “center” of the distribution?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#random-samples-of-size-n-5-from-yrbss2-1",
     "href": "lessons/09_Variability/09_Variability.html#random-samples-of-size-n-5-from-yrbss2-1",
     "title": "Lesson 9: Variability in estimates",
     "section": "10,000 random samples of size n = 5 from yrbss2",
-    "text": "10,000 random samples of size n = 5 from yrbss2\n\n\nTake 10,000 random samples of size\nn = 5 from yrbss2:\n\nsamp_n5_rep10000 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 10000,\n               replace = FALSE)\nsamp_n5_rep10000\n\n# A tibble: 50,000 × 4\n# Groups:   replicate [10,000]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  6383      5.35      126.\n 2         1  4019      5.41      107.\n 3         1  4856      5.25      135.\n 4         1  9988      5.58      120.\n 5         1  2245      6.17      270.\n 6         2 10580      5.68      155.\n 7         2  2254      5.84      159.\n 8         2  8081      5.09      110.\n 9         2 10194      5.35      115.\n10         2  7689      5.35      135.\n# ℹ 49,990 more rows\n\n\n\nCalculate the mean for each of the 10,000 random samples:\n\nmeans_hght_samp_n5_rep10000 &lt;- \n  samp_n5_rep10000 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep10000\n\n# A tibble: 10,000 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.55\n 2         2        5.46\n 3         3        5.49\n 4         4        5.60\n 5         5        5.47\n 6         6        5.83\n 7         7        5.68\n 8         8        5.47\n 9         9        5.37\n10        10        5.15\n# ℹ 9,990 more rows\n\n\n\n\nHow close are the mean heights for each of the 10,000 random samples?"
+    "text": "10,000 random samples of size n = 5 from yrbss2\n\n\nTake 10,000 random samples of size\nn = 5 from yrbss2:\n\nsamp_n5_rep10000 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 10000,\n               replace = FALSE)\nsamp_n5_rep10000\n\n# A tibble: 50,000 × 4\n# Groups:   replicate [10,000]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  9007      5.15      125.\n 2         1  9970      5.09      132.\n 3         1  3233      4.99      160.\n 4         1 10712      4.99      140.\n 5         1 11792      5.91      140.\n 6         2  7884      5.58      197.\n 7         2 11031      5.51      150.\n 8         2  5593      4.99      115.\n 9         2  5725      5.25      145.\n10         2 12383      5.84      169.\n# ℹ 49,990 more rows\n\n\n\nCalculate the mean for each of the 10,000 random samples:\n\nmeans_hght_samp_n5_rep10000 &lt;- \n  samp_n5_rep10000 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep10000\n\n# A tibble: 10,000 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.22\n 2         2        5.43\n 3         3        5.56\n 4         4        5.46\n 5         5        5.78\n 6         6        5.54\n 7         7        5.63\n 8         8        5.66\n 9         9        5.72\n10        10        5.58\n# ℹ 9,990 more rows\n\n\n\n\nHow close are the mean heights for each of the 10,000 random samples?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#distribution-of-10000-sample-mean-heights-n-5",
     "href": "lessons/09_Variability/09_Variability.html#distribution-of-10000-sample-mean-heights-n-5",
     "title": "Lesson 9: Variability in estimates",
     "section": "Distribution of 10,000 sample mean heights (n = 5)",
-    "text": "Distribution of 10,000 sample mean heights (n = 5)\n\n\nDescribe the distribution shape.\n\nggplot(\n  means_hght_samp_n5_rep10000, \n  aes(x = mean_height)) + \n  geom_histogram()\n\n\n\n\n\nCalculate the mean and SD of the 10,000 mean heights from the 10,000 samples:\n\nstats_means_hght_samp_n5_rep10000 &lt;- \n  means_hght_samp_n5_rep10000 %&gt;% \n  summarise(\n   mean_mean_height=mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n5_rep10000\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55          0.153\n\n\nIs the mean of the means close to the “center” of the distribution?"
+    "text": "Distribution of 10,000 sample mean heights (n = 5)\n\n\nDescribe the distribution shape.\n\nggplot(\n  means_hght_samp_n5_rep10000, \n  aes(x = mean_height)) + \n  geom_histogram()\n\n\n\n\n\nCalculate the mean and SD of the 10,000 mean heights from the 10,000 samples:\n\nstats_means_hght_samp_n5_rep10000 &lt;- \n  means_hght_samp_n5_rep10000 %&gt;% \n  summarise(\n   mean_mean_height=mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n5_rep10000\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55          0.154\n\n\nIs the mean of the means close to the “center” of the distribution?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#samples-of-size-n-30-from-yrbss2",
     "href": "lessons/09_Variability/09_Variability.html#samples-of-size-n-30-from-yrbss2",
     "title": "Lesson 9: Variability in estimates",
     "section": "10,000 samples of size n = 30 from yrbss2",
-    "text": "10,000 samples of size n = 30 from yrbss2\n\n\nTake 10,000 random samples of size\nn = 30 from yrbss2:\n\nsamp_n30_rep10000 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 30, \n               reps = 10000,\n               replace = FALSE)\nsamp_n30_rep10000\n\n# A tibble: 300,000 × 4\n# Groups:   replicate [10,000]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  3871      5.25      115.\n 2         1 12090      5.15      125.\n 3         1   241      5.58      119.\n 4         1  4570      5.58      140.\n 5         1  4131      5.35      143.\n 6         1 11513      5.35      135.\n 7         1  9663      5.25      125.\n 8         1  3789      5.25      160.\n 9         1   442      5.15      130.\n10         1 11528      5.51      200.\n# ℹ 299,990 more rows\n\n\n\nCalculate the mean for each of the 10,000 random samples:\n\nmeans_hght_samp_n30_rep10000 &lt;- \n  samp_n30_rep10000 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(mean_height = \n            mean(height.ft))\n\nmeans_hght_samp_n30_rep10000\n\n# A tibble: 10,000 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.48\n 2         2        5.63\n 3         3        5.46\n 4         4        5.46\n 5         5        5.51\n 6         6        5.54\n 7         7        5.56\n 8         8        5.51\n 9         9        5.51\n10        10        5.50\n# ℹ 9,990 more rows\n\n\n\n\nHow close are the mean heights for each of the 10,000 random samples?"
+    "text": "10,000 samples of size n = 30 from yrbss2\n\n\nTake 10,000 random samples of size\nn = 30 from yrbss2:\n\nsamp_n30_rep10000 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 30, \n               reps = 10000,\n               replace = FALSE)\nsamp_n30_rep10000\n\n# A tibble: 300,000 × 4\n# Groups:   replicate [10,000]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  6491      5.15      115.\n 2         1  6953      5.35      130.\n 3         1  8636      5.35      118.\n 4         1  8905      5.84      148.\n 5         1  2994      5.15      107.\n 6         1   795      5.51      155.\n 7         1  2343      5.41      155.\n 8         1  8551      5.41      165.\n 9         1  7564      5.51      150.\n10         1  5518      5.91      160.\n# ℹ 299,990 more rows\n\n\n\nCalculate the mean for each of the 10,000 random samples:\n\nmeans_hght_samp_n30_rep10000 &lt;- \n  samp_n30_rep10000 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(mean_height = \n            mean(height.ft))\n\nmeans_hght_samp_n30_rep10000\n\n# A tibble: 10,000 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.52\n 2         2        5.49\n 3         3        5.59\n 4         4        5.61\n 5         5        5.54\n 6         6        5.50\n 7         7        5.53\n 8         8        5.57\n 9         9        5.46\n10        10        5.47\n# ℹ 9,990 more rows\n\n\n\n\nHow close are the mean heights for each of the 10,000 random samples?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#distribution-of-10000-sample-mean-heights-n-30",
     "href": "lessons/09_Variability/09_Variability.html#distribution-of-10000-sample-mean-heights-n-30",
     "title": "Lesson 9: Variability in estimates",
     "section": "Distribution of 10,000 sample mean heights (n = 30)",
-    "text": "Distribution of 10,000 sample mean heights (n = 30)\n\n\nDescribe the distribution shape.\n\nggplot(\n  means_hght_samp_n30_rep10000, \n  aes(x = mean_height)) + \n  geom_histogram()\n\n\n\n\n\nCalculate the mean and SD of the 10,000 mean heights from the 10,000 samples:\n\nstats_means_hght_samp_n30_rep10000&lt;- \n  means_hght_samp_n30_rep10000 %&gt;% \n  summarise(\n   mean_mean_height=mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n30_rep10000\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55         0.0623\n\n\nIs the mean of the means close to the “center” of the distribution?"
+    "text": "Distribution of 10,000 sample mean heights (n = 30)\n\n\nDescribe the distribution shape.\n\nggplot(\n  means_hght_samp_n30_rep10000, \n  aes(x = mean_height)) + \n  geom_histogram()\n\n\n\n\n\nCalculate the mean and SD of the 10,000 mean heights from the 10,000 samples:\n\nstats_means_hght_samp_n30_rep10000&lt;- \n  means_hght_samp_n30_rep10000 %&gt;% \n  summarise(\n   mean_mean_height=mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n30_rep10000\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55         0.0627\n\n\nIs the mean of the means close to the “center” of the distribution?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#compare-distributions-of-10000-sample-mean-heights-when-n-5-left-vs.-n-30-right",
     "href": "lessons/09_Variability/09_Variability.html#compare-distributions-of-10000-sample-mean-heights-when-n-5-left-vs.-n-30-right",
     "title": "Lesson 9: Variability in estimates",
     "section": "Compare distributions of 10,000 sample mean heights when n = 5 (left) vs. n = 30 (right)",
-    "text": "Compare distributions of 10,000 sample mean heights when n = 5 (left) vs. n = 30 (right)\nHow are the center, shape, and spread similar and/or different?\n\n\n\n\n\n\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55          0.153\n\n\n\n\n\n\n\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55         0.0623"
+    "text": "Compare distributions of 10,000 sample mean heights when n = 5 (left) vs. n = 30 (right)\nHow are the center, shape, and spread similar and/or different?\n\n\n\n\n\n\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55          0.154\n\n\n\n\n\n\n\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55         0.0627"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#sampling-high-schoolers-weights",
@@ -10231,7 +10231,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-30-22",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling distribution of mean heights when n = 30 (2/2)",
-    "text": "Sampling distribution of mean heights when n = 30 (2/2)\n\n\nMean and SD of population:\n\n(mean_height.ft &lt;- mean(yrbss2$height.ft))\n\n[1] 5.548691\n\n(sd_height.ft &lt;- sd(yrbss2$height.ft))\n\n[1] 0.3434949\n\nsd_height.ft/sqrt(30)\n\n[1] 0.06271331\n\n\nMean and SD of simulated sampling distribution:\n\nstats_means_hght_samp_n30_rep10000&lt;- \n  means_hght_samp_n30_rep10000 %&gt;% \n  summarise(\n   mean_mean_height=mean(mean_height),\n   sd_mean_height = sd(mean_height)\n   )\nstats_means_hght_samp_n30_rep10000\n\n# A tibble: 1 × 2\n  mean_mean_height sd_mean_height\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             5.55         0.0623"
+    "text": "Sampling distribution of mean heights when n = 30 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\n3/sqrt(50)\n\n[1] 0.4242641\n\n\nSampling mean and sampling SD of simulated sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.01157\n\n(sample_sd = sd(means50$means))\n\n[1] 0.4254565"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#why-is-the-mean-mu-the-standard-error-fracsigmasqrtn",
@@ -17546,14 +17546,14 @@
     "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height",
     "title": "Lesson 9: Variability in estimates",
     "section": "More concrete example with height",
-    "text": "More concrete example with height"
+    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#sampling-variation-1",
     "href": "lessons/09_Variability/09_Variability.html#sampling-variation-1",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling variation",
-    "text": "Sampling variation\n\nIf a different random sample is taken, the mean height (point estimate) will likely be different\n\nthis is a result of sampling variation\n\n\n\n\nTake a 2nd random sample of size\nn = 5 from yrbss2:\n\nsamp_n5_rep1 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 1,\n               replace = FALSE)\nsamp_n5_rep1\n\n# A tibble: 5 × 4\n# Groups:   replicate [1]\n  replicate    id height.ft weight.lb\n      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1         1  2329      6.07      182.\n2         1  8863      5.25      125.\n3         1  8058      5.84      135.\n4         1   335      6.17      235.\n5         1  4698      5.58      124.\n\n\n\nCalculate the mean of the 2nd random sample:\n\nmeans_hght_samp_n5_rep1 &lt;- \n  samp_n5_rep1 %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep1\n\n# A tibble: 1 × 2\n  replicate mean_height\n      &lt;int&gt;       &lt;dbl&gt;\n1         1        5.78\n\n\n\n\nDid we get the same mean height with our 2nd sample?"
+    "text": "Sampling variation\n\nIf a different random sample is taken, the mean height (point estimate) will likely be different\n\nthis is a result of sampling variation\n\n\n\n\nTake a 2nd random sample of size\nn = 5 from yrbss2:\n\nsamp_n5_rep1 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 5, \n               reps = 1,\n               replace = FALSE)\nsamp_n5_rep1\n\n# A tibble: 5 × 4\n# Groups:   replicate [1]\n  replicate    id height.ft weight.lb\n      &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1         1  4866      6.17      142.\n2         1  8365      5.91      145.\n3         1  9574      5.91      180.\n4         1  9678      5.58      130.\n5         1  8932      5.09      130.\n\n\n\nCalculate the mean of the 2nd random sample:\n\nmeans_hght_samp_n5_rep1 &lt;- \n  samp_n5_rep1 %&gt;% \n  summarise(\n    mean_height = mean(height.ft))\n\nmeans_hght_samp_n5_rep1\n\n# A tibble: 1 × 2\n  replicate mean_height\n      &lt;int&gt;       &lt;dbl&gt;\n1         1        5.73\n\n\n\n\nDid we get the same mean height with our 2nd sample?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#take-one-sample-1",
@@ -17813,5 +17813,61 @@
     "title": "Homework 5",
     "section": "5.2 R1: Youth weights",
     "text": "5.2 R1: Youth weights\nIn this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples.\n\n5.2.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n5.2.2 CI\nSuppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS “population.”\n\n\n5.2.3 Another CI\nCalculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40."
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-1",
+    "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "More concrete example with height",
+    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(S\\)):"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-2",
+    "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-2",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "More concrete example with height",
+    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(S\\)):\n\n\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\hat{\\mu} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#different-variabilities",
+    "href": "lessons/09_Variability/09_Variability.html#different-variabilities",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Different variabilities",
+    "text": "Different variabilities"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means",
+    "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Sampling Distribution of Sample Means",
+    "text": "Sampling Distribution of Sample Means\n\nThe sampling distribution of the mean is the distribution of sample means calculated from repeated random samples of the same size from the same population\nOur simulations show approximations of the sampling distribution of the mean for various sample sizes\nThe theoretical sampling distribution is based on all possible samples of a given sample size \\(n\\)."
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#what-happens-if-we-have-10000-samples",
+    "href": "lessons/09_Variability/09_Variability.html#what-happens-if-we-have-10000-samples",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "What happens if we have 10000 samples?",
+    "text": "What happens if we have 10000 samples?"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#compare-sampling-distribution-of-1000-samples-for-n50-left-and-n100-right",
+    "href": "lessons/09_Variability/09_Variability.html#compare-sampling-distribution-of-1000-samples-for-n50-left-and-n100-right",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Compare sampling distribution of 1000 samples for n=50 (left) and n=100 (right)",
+    "text": "Compare sampling distribution of 1000 samples for n=50 (left) and n=100 (right)\nHow are the center, shape, and spread similar and/or different?"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#poll-everywhere-question",
+    "href": "lessons/09_Variability/09_Variability.html#poll-everywhere-question",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Poll Everywhere question",
+    "text": "Poll Everywhere question"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-12",
+    "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-12",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Sampling distribution of mean heights when n = 50 (1/2)",
+    "text": "Sampling distribution of mean heights when n = 50 (1/2)\n\n\n\n\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution."
   }
 ]
