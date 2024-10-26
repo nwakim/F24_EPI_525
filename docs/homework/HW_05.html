@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -4502,6 +4536,9 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#book-exercises" id="toc-book-exercises" class="nav-link" data-scroll-target="#book-exercises">Book exercises</a>
   <ul class="collapse">
+  <li><a href="#income-and-education-in-us-counties" id="toc-income-and-education-in-us-counties" class="nav-link" data-scroll-target="#income-and-education-in-us-counties">1.24 Income and education in US counties</a></li>
+  <li><a href="#mix-and-match" id="toc-mix-and-match" class="nav-link" data-scroll-target="#mix-and-match">1.28 Mix-and-match</a></li>
+  <li><a href="#associations" id="toc-associations" class="nav-link" data-scroll-target="#associations">1.36 Associations</a></li>
   <li><a href="#heights-of-adults" id="toc-heights-of-adults" class="nav-link" data-scroll-target="#heights-of-adults">4.2 Heights of adults</a></li>
   <li><a href="#mental-health-part-i" id="toc-mental-health-part-i" class="nav-link" data-scroll-target="#mental-health-part-i">4.4 Mental health, Part I</a></li>
   <li><a href="#thanksgiving-spending-part-i" id="toc-thanksgiving-spending-part-i" class="nav-link" data-scroll-target="#thanksgiving-spending-part-i">4.6 Thanksgiving spending, Part I</a></li>
@@ -4525,18 +4562,49 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises"><span class="header-section-number">2</span> R exercises</a>
   <ul class="collapse">
-  <li><a href="#load-all-the-packages-you-need-below-here." id="toc-load-all-the-packages-you-need-below-here." class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here."><span class="header-section-number">2.1</span> Load all the packages you need below here.</a></li>
-  <li><a href="#r1-youth-weights" id="toc-r1-youth-weights" class="nav-link" data-scroll-target="#r1-youth-weights"><span class="header-section-number">2.2</span> R1: Youth weights</a>
-  <ul class="collapse">
-  <li><a href="#use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed." id="toc-use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed." class="nav-link" data-scroll-target="#use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed."><span class="header-section-number">2.2.1</span> Use the <code>set.seed()</code> command to set a randomization seed. Use whatever number you want for the seed.</a></li>
-  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><span class="header-section-number">2.2.2</span> CI</a></li>
-  <li><a href="#another-ci" id="toc-another-ci" class="nav-link" data-scroll-target="#another-ci"><span class="header-section-number">2.2.3</span> Another CI</a></li>
+  <li><a href="#load-all-the-packages-you-need-below-here" id="toc-load-all-the-packages-you-need-below-here" class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here"><span class="header-section-number">2.1</span> Load all the packages you need below here</a></li>
   </ul></li>
-  <li><a href="#r2-swim-times" id="toc-r2-swim-times" class="nav-link" data-scroll-target="#r2-swim-times"><span class="header-section-number">2.3</span> R2: Swim times</a>
+  <li><a href="#r1-nhanes" id="toc-r1-nhanes" class="nav-link" data-scroll-target="#r1-nhanes"><span class="header-section-number">3</span> R1: NHANES</a>
   <ul class="collapse">
-  <li><a href="#mean-sd-of-differences" id="toc-mean-sd-of-differences" class="nav-link" data-scroll-target="#mean-sd-of-differences"><span class="header-section-number">2.3.1</span> Mean &amp; SD of differences</a></li>
-  <li><a href="#dot-plot-of-differences" id="toc-dot-plot-of-differences" class="nav-link" data-scroll-target="#dot-plot-of-differences"><span class="header-section-number">2.3.2</span> Dot plot of differences</a></li>
-  <li><a href="#hypothesis-test" id="toc-hypothesis-test" class="nav-link" data-scroll-target="#hypothesis-test"><span class="header-section-number">2.3.3</span> Hypothesis test</a></li>
+  <li><a href="#what-are-the-dimensions-and-column-names-of-the-dataset" id="toc-what-are-the-dimensions-and-column-names-of-the-dataset" class="nav-link" data-scroll-target="#what-are-the-dimensions-and-column-names-of-the-dataset"><span class="header-section-number">3.1</span> What are the dimensions and column names of the dataset?</a></li>
+  <li><a href="#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers" id="toc-how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers" class="nav-link" data-scroll-target="#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers"><span class="header-section-number">3.2</span> How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?</a></li>
+  <li><a href="#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants." id="toc-using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants." class="nav-link" data-scroll-target="#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants."><span class="header-section-number">3.3</span> Using numerical and graphical summaries, describe the distribution of ages among study participants.</a></li>
+  <li><a href="#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants." id="toc-using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants." class="nav-link" data-scroll-target="#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants."><span class="header-section-number">3.4</span> Using numerical and graphical summaries, describe the distribution of heights among study participants.</a></li>
+  <li><a href="#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not" id="toc-investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not" class="nav-link" data-scroll-target="#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not"><span class="header-section-number">3.5</span> Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?</a></li>
+  <li><a href="#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data." id="toc-calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data." class="nav-link" data-scroll-target="#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data."><span class="header-section-number">3.6</span> Calculate the median and interquartile range of the distribution of the variable <code>Poverty</code>. Write a sentence explaining the median and IQR in the context of these data.</a></li>
+  </ul></li>
+  <li><a href="#r2-nhanes" id="toc-r2-nhanes" class="nav-link" data-scroll-target="#r2-nhanes"><span class="header-section-number">4</span> R2: NHANES</a>
+  <ul class="collapse">
+  <li><a href="#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches." id="toc-use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches." class="nav-link" data-scroll-target="#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches."><span class="header-section-number">4.1</span> Use the <code>mutate()</code> command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.</a></li>
+  <li><a href="#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates" id="toc-what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates" class="nav-link" data-scroll-target="#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates"><span class="header-section-number">4.2</span> What proportion of Americans at least 25 years of age are college graduates?</a></li>
+  <li><a href="#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates" id="toc-what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates" class="nav-link" data-scroll-target="#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates"><span class="header-section-number">4.3</span> What proportion of Americans at least 25 years of age with a high school degree are college graduates?</a></li>
+  <li><a href="#two-way-table" id="toc-two-way-table" class="nav-link" data-scroll-target="#two-way-table"><span class="header-section-number">4.4</span> Two-way table</a></li>
+  <li><a href="#relative-risk" id="toc-relative-risk" class="nav-link" data-scroll-target="#relative-risk"><span class="header-section-number">4.5</span> Relative Risk</a></li>
+  <li><a href="#load-all-the-packages-you-need-below-here." id="toc-load-all-the-packages-you-need-below-here." class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here."><span class="header-section-number">4.6</span> Load all the packages you need below here.</a></li>
+  <li><a href="#r1-youth-weights" id="toc-r1-youth-weights" class="nav-link" data-scroll-target="#r1-youth-weights"><span class="header-section-number">4.7</span> R1: Youth weights</a>
+  <ul class="collapse">
+  <li><a href="#use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed." id="toc-use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed." class="nav-link" data-scroll-target="#use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed."><span class="header-section-number">4.7.1</span> Use the <code>set.seed()</code> command to set a randomization seed. Use whatever number you want for the seed.</a></li>
+  <li><a href="#take-1000-random-samples-of-size-10-and-save-the-tibble-with-the-random-samples.-show-the-first-20-lines-of-this-tibble." id="toc-take-1000-random-samples-of-size-10-and-save-the-tibble-with-the-random-samples.-show-the-first-20-lines-of-this-tibble." class="nav-link" data-scroll-target="#take-1000-random-samples-of-size-10-and-save-the-tibble-with-the-random-samples.-show-the-first-20-lines-of-this-tibble."><span class="header-section-number">4.7.2</span> Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.</a></li>
+  <li><a href="#create-a-tibble-with-mean-weights-from-the-1000-random-samples.-show-the-first-10-rows-of-this-tibble." id="toc-create-a-tibble-with-mean-weights-from-the-1000-random-samples.-show-the-first-10-rows-of-this-tibble." class="nav-link" data-scroll-target="#create-a-tibble-with-mean-weights-from-the-1000-random-samples.-show-the-first-10-rows-of-this-tibble."><span class="header-section-number">4.7.3</span> Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.</a></li>
+  <li><a href="#make-a-histogram-of-the-1000-mean-weights.-what-do-we-call-this-distribution-describe-the-shape-of-the-distribution." id="toc-make-a-histogram-of-the-1000-mean-weights.-what-do-we-call-this-distribution-describe-the-shape-of-the-distribution." class="nav-link" data-scroll-target="#make-a-histogram-of-the-1000-mean-weights.-what-do-we-call-this-distribution-describe-the-shape-of-the-distribution."><span class="header-section-number">4.7.4</span> Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.</a></li>
+  <li><a href="#calculate-the-mean-and-standard-deviation-of-the-1000-sample-mean-weights.-what-is-another-name-for-this-standard-deviation" id="toc-calculate-the-mean-and-standard-deviation-of-the-1000-sample-mean-weights.-what-is-another-name-for-this-standard-deviation" class="nav-link" data-scroll-target="#calculate-the-mean-and-standard-deviation-of-the-1000-sample-mean-weights.-what-is-another-name-for-this-standard-deviation"><span class="header-section-number">4.7.5</span> Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?</a></li>
+  <li><a href="#what-are-the-theoretical-values-for-mean-and-standard-deviation-of-the-sampling-distribution-from-the-clt-and-how-do-your-simulated-values-compare-to-the-theoretical-values" id="toc-what-are-the-theoretical-values-for-mean-and-standard-deviation-of-the-sampling-distribution-from-the-clt-and-how-do-your-simulated-values-compare-to-the-theoretical-values" class="nav-link" data-scroll-target="#what-are-the-theoretical-values-for-mean-and-standard-deviation-of-the-sampling-distribution-from-the-clt-and-how-do-your-simulated-values-compare-to-the-theoretical-values"><span class="header-section-number">4.7.6</span> What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#r-exercises-1" id="toc-r-exercises-1" class="nav-link" data-scroll-target="#r-exercises-1"><span class="header-section-number">5</span> R exercises</a>
+  <ul class="collapse">
+  <li><a href="#load-all-the-packages-you-need-below-here.-1" id="toc-load-all-the-packages-you-need-below-here.-1" class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here.-1"><span class="header-section-number">5.1</span> Load all the packages you need below here.</a></li>
+  <li><a href="#r1-youth-weights-1" id="toc-r1-youth-weights-1" class="nav-link" data-scroll-target="#r1-youth-weights-1"><span class="header-section-number">5.2</span> R1: Youth weights</a>
+  <ul class="collapse">
+  <li><a href="#use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed.-1" id="toc-use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed.-1" class="nav-link" data-scroll-target="#use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed.-1"><span class="header-section-number">5.2.1</span> Use the <code>set.seed()</code> command to set a randomization seed. Use whatever number you want for the seed.</a></li>
+  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><span class="header-section-number">5.2.2</span> CI</a></li>
+  <li><a href="#another-ci" id="toc-another-ci" class="nav-link" data-scroll-target="#another-ci"><span class="header-section-number">5.2.3</span> Another CI</a></li>
+  </ul></li>
+  <li><a href="#r2-swim-times" id="toc-r2-swim-times" class="nav-link" data-scroll-target="#r2-swim-times"><span class="header-section-number">5.3</span> R2: Swim times</a>
+  <ul class="collapse">
+  <li><a href="#mean-sd-of-differences" id="toc-mean-sd-of-differences" class="nav-link" data-scroll-target="#mean-sd-of-differences"><span class="header-section-number">5.3.1</span> Mean &amp; SD of differences</a></li>
+  <li><a href="#dot-plot-of-differences" id="toc-dot-plot-of-differences" class="nav-link" data-scroll-target="#dot-plot-of-differences"><span class="header-section-number">5.3.2</span> Dot plot of differences</a></li>
+  <li><a href="#hypothesis-test" id="toc-hypothesis-test" class="nav-link" data-scroll-target="#hypothesis-test"><span class="header-section-number">5.3.3</span> Hypothesis test</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -4606,6 +4674,15 @@ Tip
 </section>
 <section id="book-exercises" class="level1 unnumbered">
 <h1 class="unnumbered">Book exercises</h1>
+<section id="income-and-education-in-us-counties" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="income-and-education-in-us-counties">1.24 Income and education in US counties</h2>
+</section>
+<section id="mix-and-match" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="mix-and-match">1.28 Mix-and-match</h2>
+</section>
+<section id="associations" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="associations">1.36 Associations</h2>
+</section>
 <section id="heights-of-adults" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="heights-of-adults">4.2 Heights of adults</h2>
 </section>
@@ -4663,40 +4740,184 @@ Tip
 </section>
 <section id="r-exercises" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> R exercises</h1>
-<section id="load-all-the-packages-you-need-below-here." class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here."><span class="header-section-number">2.1</span> Load all the packages you need below here.</h2>
+<section id="load-all-the-packages-you-need-below-here" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here"><span class="header-section-number">2.1</span> Load all the packages you need below here</h2>
 </section>
-<section id="r1-youth-weights" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="r1-youth-weights"><span class="header-section-number">2.2</span> R1: Youth weights</h2>
+</section>
+<section id="r1-nhanes" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> R1: NHANES</h1>
+<ul>
+<li>Below you will be using the dataset called NHANES from the <code>NHANES</code> R package.</li>
+<li>Install and load the NHANES package using the code below.
+<ul>
+<li>This loads the dataset also called NHANES that is within the NHANES package.</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;NHANES&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHANES)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;NHANES&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<p>The National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.</p>
+</blockquote>
+<ul>
+<li>To view the complete list of study variables and their descriptions, access the NHANES documentation page with <code>?NHANES</code>.
+<ul>
+<li>You must first install the <code>NHANES</code> package to see the help files.</li>
+</ul></li>
+</ul>
+<section id="what-are-the-dimensions-and-column-names-of-the-dataset" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="what-are-the-dimensions-and-column-names-of-the-dataset"><span class="header-section-number">3.1</span> What are the dimensions and column names of the dataset?</h2>
+</section>
+<section id="how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers"><span class="header-section-number">3.2</span> How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?</h2>
+</section>
+<section id="using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants." class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants."><span class="header-section-number">3.3</span> Using numerical and graphical summaries, describe the distribution of ages among study participants.</h2>
+</section>
+<section id="using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants." class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants."><span class="header-section-number">3.4</span> Using numerical and graphical summaries, describe the distribution of heights among study participants.</h2>
+</section>
+<section id="investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not"><span class="header-section-number">3.5</span> Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?</h2>
+<p><em>Use whatever EDA tools you think are appropriate to answer this question.</em></p>
+</section>
+<section id="calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data." class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data."><span class="header-section-number">3.6</span> Calculate the median and interquartile range of the distribution of the variable <code>Poverty</code>. Write a sentence explaining the median and IQR in the context of these data.</h2>
+</section>
+</section>
+<section id="r2-nhanes" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> R2: NHANES</h1>
+<p>Continue using the same NHANES data as for the previous problem.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>For most of the summary statistic base R commands (such as <code>mean()</code>, <code>sd()</code>, <code>median()</code>, etc.), you will get <code>NA</code> as the result if there are missing values.</li>
+<li>In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the <code>na.rm = TRUE</code> option within the parentheses of the command: <code>mean(dataset$variablename, na.rm = TRUE)</code>.</li>
+</ul>
+</div>
+</div>
+<section id="use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches." class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches."><span class="header-section-number">4.1</span> Use the <code>mutate()</code> command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Column names cannot start with a number or symbol</li>
+<li>Names are case sensitive</li>
+<li>It’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates"><span class="header-section-number">4.2</span> What proportion of Americans at least 25 years of age are college graduates?</h2>
+<p><em>Hint: First create a new dataset that is restricted to Americans at least 25 years old.</em></p>
+</section>
+<section id="what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates"><span class="header-section-number">4.3</span> What proportion of Americans at least 25 years of age with a high school degree are college graduates?</h2>
+</section>
+<section id="two-way-table" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="two-way-table"><span class="header-section-number">4.4</span> Two-way table</h2>
+<p><strong>Construct a two-way table (contingency table), with <code>PhysActive</code> as the row variable and <code>Diabetes</code> as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?</strong></p>
+</section>
+<section id="relative-risk" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="relative-risk"><span class="header-section-number">4.5</span> Relative Risk</h2>
+<p><strong>In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?</strong></p>
+</section>
+<section id="load-all-the-packages-you-need-below-here." class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here."><span class="header-section-number">4.6</span> Load all the packages you need below here.</h2>
+</section>
+<section id="r1-youth-weights" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="r1-youth-weights"><span class="header-section-number">4.7</span> R1: Youth weights</h2>
+<p>In this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will need to install and load the <code>moderndive</code> R package to use the <code>rep_sample_n()</code> command from the class notes.</p>
+</div>
+</div>
+<section id="use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed." class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed."><span class="header-section-number">4.7.1</span> Use the <code>set.seed()</code> command to set a randomization seed. Use whatever number you want for the seed.</h3>
+</section>
+<section id="take-1000-random-samples-of-size-10-and-save-the-tibble-with-the-random-samples.-show-the-first-20-lines-of-this-tibble." class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="take-1000-random-samples-of-size-10-and-save-the-tibble-with-the-random-samples.-show-the-first-20-lines-of-this-tibble."><span class="header-section-number">4.7.2</span> Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.</h3>
+</section>
+<section id="create-a-tibble-with-mean-weights-from-the-1000-random-samples.-show-the-first-10-rows-of-this-tibble." class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="create-a-tibble-with-mean-weights-from-the-1000-random-samples.-show-the-first-10-rows-of-this-tibble."><span class="header-section-number">4.7.3</span> Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.</h3>
+</section>
+<section id="make-a-histogram-of-the-1000-mean-weights.-what-do-we-call-this-distribution-describe-the-shape-of-the-distribution." class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="make-a-histogram-of-the-1000-mean-weights.-what-do-we-call-this-distribution-describe-the-shape-of-the-distribution."><span class="header-section-number">4.7.4</span> Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.</h3>
+</section>
+<section id="calculate-the-mean-and-standard-deviation-of-the-1000-sample-mean-weights.-what-is-another-name-for-this-standard-deviation" class="level3" data-number="4.7.5">
+<h3 data-number="4.7.5" class="anchored" data-anchor-id="calculate-the-mean-and-standard-deviation-of-the-1000-sample-mean-weights.-what-is-another-name-for-this-standard-deviation"><span class="header-section-number">4.7.5</span> Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?</h3>
+</section>
+<section id="what-are-the-theoretical-values-for-mean-and-standard-deviation-of-the-sampling-distribution-from-the-clt-and-how-do-your-simulated-values-compare-to-the-theoretical-values" class="level3" data-number="4.7.6">
+<h3 data-number="4.7.6" class="anchored" data-anchor-id="what-are-the-theoretical-values-for-mean-and-standard-deviation-of-the-sampling-distribution-from-the-clt-and-how-do-your-simulated-values-compare-to-the-theoretical-values"><span class="header-section-number">4.7.6</span> What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?</h3>
+</section>
+</section>
+</section>
+<section id="r-exercises-1" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> R exercises</h1>
+<section id="load-all-the-packages-you-need-below-here.-1" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here.-1"><span class="header-section-number">5.1</span> Load all the packages you need below here.</h2>
+</section>
+<section id="r1-youth-weights-1" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="r1-youth-weights-1"><span class="header-section-number">5.2</span> R1: Youth weights</h2>
 <p>In this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples.</p>
-<section id="use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed." class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed."><span class="header-section-number">2.2.1</span> Use the <code>set.seed()</code> command to set a randomization seed. Use whatever number you want for the seed.</h3>
+<section id="use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed.-1" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="use-the-set.seed-command-to-set-a-randomization-seed.-use-whatever-number-you-want-for-the-seed.-1"><span class="header-section-number">5.2.1</span> Use the <code>set.seed()</code> command to set a randomization seed. Use whatever number you want for the seed.</h3>
 </section>
-<section id="ci" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="ci"><span class="header-section-number">2.2.2</span> CI</h3>
+<section id="ci" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="ci"><span class="header-section-number">5.2.2</span> CI</h3>
 <p><strong>Suppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS “population.”</strong></p>
 </section>
-<section id="another-ci" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="another-ci"><span class="header-section-number">2.2.3</span> Another CI</h3>
+<section id="another-ci" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="another-ci"><span class="header-section-number">5.2.3</span> Another CI</h3>
 <p><strong>Calculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40.</strong></p>
 </section>
 </section>
-<section id="r2-swim-times" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="r2-swim-times"><span class="header-section-number">2.3</span> R2: Swim times</h2>
+<section id="r2-swim-times" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="r2-swim-times"><span class="header-section-number">5.3</span> R2: Swim times</h2>
 <ul>
 <li>In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.</li>
 <li>The data are in the <code>oibiostats</code> package and called <code>swim</code>.</li>
 </ul>
-<section id="mean-sd-of-differences" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="mean-sd-of-differences"><span class="header-section-number">2.3.1</span> Mean &amp; SD of differences</h3>
+<section id="mean-sd-of-differences" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="mean-sd-of-differences"><span class="header-section-number">5.3.1</span> Mean &amp; SD of differences</h3>
 <p><strong>Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?</strong></p>
 </section>
-<section id="dot-plot-of-differences" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="dot-plot-of-differences"><span class="header-section-number">2.3.2</span> Dot plot of differences</h3>
+<section id="dot-plot-of-differences" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="dot-plot-of-differences"><span class="header-section-number">5.3.2</span> Dot plot of differences</h3>
 <p><strong>Create a dot plot of the differences in swim times and comment on the distribution shape.</strong></p>
 </section>
-<section id="hypothesis-test" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="hypothesis-test"><span class="header-section-number">2.3.3</span> Hypothesis test</h3>
+<section id="hypothesis-test" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="hypothesis-test"><span class="header-section-number">5.3.3</span> Hypothesis test</h3>
 <p><strong>Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.</strong></p>
 
 

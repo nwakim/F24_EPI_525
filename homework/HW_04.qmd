@@ -55,10 +55,9 @@ You don't need to do it all at once, you can add more libraries as you realize y
 
 ### Import dataset
 
-Below you will be using the dataset called NHANES from the `NHANES` R package. 
-* Install and load the NHANES package using the code below.
-    * This loads the dataset also called NHANES that is within the NHANES package.
+Import the dataset called "Gapminder_2011_LifeExp_CO2.csv" You can find it in the student files under Data then Homework. You will need to download the file onto your computer, and use the correct file path to import the data.
 
 ### Make a histogram
 
+Using `ggplot2`, make a histogram of the variable `CO2emissions`.
 
