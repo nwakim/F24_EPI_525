@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "EPI 525: Biostatistics 1",
     "section": "",
-    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nNicky  M 4-5pm VPT 627\nMiyuki  W 3-4pm VPT 515\nLiv  Th 3:30-4:30pm virtual\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
+    "text": "EPI 525: Biostatistics 1\n\nFall 2024\nWelcome to EPI 525! This course covers a broad range of basic statistical methods used in the health sciences. We will start with a review of descriptive statistics and introductory probability, then explore probability and sampling distributions, central limit theorem, and confidence intervals. These topics will be followed by basic hypothesis testing framework, along with the appropriate power and sample size considerations. We will also cover large-sample hypothesis tests for means, proportions and variances, and some exact tests. Students will be introduced to one-way analysis of variance (ANOVA), correlation and simple linear regression in preparation for BSTA 512/612. Most homework assignments are to be completed using R.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n OneDrive Folder\n\n\n\n\n\n\n\n\n\nInstructor\n Dr. Nicky Wakim\n Vanport 622A\n wakim@ohsu.edu\n\n\nOffice Hours\nNicky  M 3-4pm VPT 515\nMiyuki  W 3-4pm VPT 515\nLiv  W 12-1pm virtual\n\n\nCourse details\n Mondays, Wednesdays\n Sept 30 - Dec 9\n 1:00 PM - 2:50 PM\n In-person, VPT 515\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n\nR10\nSubsetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\nR11\nTransforming data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR12\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR13\nMore Quarto!\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR14\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR15\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR16\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -2230,21 +2230,21 @@
     "href": "instructors.html",
     "title": "Instructors",
     "section": "",
-    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\n\nMonday’s 4-5pm in VPT 627"
+    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\n\nMondays 3-4pm in VPT 515"
   },
   {
     "objectID": "instructors.html#instructor-nicole-nicky-wakim-phd",
     "href": "instructors.html#instructor-nicole-nicky-wakim-phd",
     "title": "Instructors",
     "section": "",
-    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\n\nMonday’s 4-5pm in VPT 627"
+    "text": "Email: wakim@ohsu.edu\nOffice: VPT 622A\n\nPronouns: she/her/hers\nYou are welcome to address me as Nicky (pronounced “nik-EE”), Dr. Wakim (pronounced “wah-KEEM”), Dr. W, Dr. Nicky, Professor, Professor Wakim, or any combination of the prior.\nBest method to contact: Office hours or Slack for general course questions or E-mail/Calendly appointments for private communication.\n\n\n\n\n\n\n\n\n\n\nBrief professor statement: As a professor, my main goal is to instill a growth mindset into my students. Growth mindset means we are NOT stuck in our abilities or knowledge, and that we all can and will grow! This course aims to be as transparent as possible. I want you to understand my motivation for assessments, questions, and lessons. I also want those assessments to be clear, so please ask for clarification whenever needed.\n\n\n\nMondays 3-4pm in VPT 515"
   },
   {
     "objectID": "instructors.html#teaching-assistants",
     "href": "instructors.html#teaching-assistants",
     "title": "Instructors",
     "section": "Teaching Assistants",
-    "text": "Teaching Assistants\nLiv Ainsworth and Miyuki Sun will serve as our TAs for the quarter!! They will have the following office hours and will help answer questions on Slack.\n\nLiv Ainsworth\nLink to Webex!!\n\nThursday’s 3:30-4:30pm\n\n\n\nMiyuki Sun\n\nWednesday’s 3-4pm in VPT 515"
+    "text": "Teaching Assistants\nLiv Ainsworth and Miyuki Sun will serve as our TAs for the quarter!! They will have the following office hours and will help answer questions on Slack.\n\nLiv Ainsworth\nLink to Webex!!\n\nWednesdays 12-1pm\n\n\n\nMiyuki Sun\n\nWednesdays 3-4pm in VPT 515"
   },
   {
     "objectID": "homework/HW_09.html",
@@ -10070,7 +10070,7 @@
     "href": "lessons/09_Variability/09_Variability.html#goals-for-today",
     "title": "Lesson 9: Variability in estimates",
     "section": "Goals for today",
-    "text": "Goals for today\nSection 4.1\n\nSampling from a population\n\npopulation parameters vs. point estimates\nsampling variation\n\nSampling distribution of the mean\n\nCentral Limit Theorem\nStandard error of the mean\n\n\n\nArtwork by @allison_horst"
+    "text": "Goals for today\n\nArtwork by @allison_horst"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#moritzs-tip-of-the-day-add-a-code-pane-in-rstudio",
@@ -10210,7 +10210,7 @@
     "href": "lessons/09_Variability/09_Variability.html#the-central-limit-theorem-clt",
     "title": "Lesson 9: Variability in estimates",
     "section": "The Central Limit Theorem (CLT)",
-    "text": "The Central Limit Theorem (CLT)\n\nFor “large” sample sizes ( \\(n\\geq 30\\) ),\n\nthe sampling distribution of the sample mean\ncan be approximated by a normal distribution,with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\n  \n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe sampling distribution of the sample mean\nis a normal distribution, with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)"
+    "text": "The Central Limit Theorem (CLT)\n\nIf a sample consists of at least 30 independent observations, then the distribution of the sample mean is well approximated by a normal model\nAka, for “large” sample sizes ( \\(n\\geq 30\\) ),\n\nThe sampling distribution of the sample mean can be approximated by a normal distribution,with\n\nMean equal to the population mean value \\(\\mu\\)\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\nThis is regardless of the original sample is from a different distribution\n\nFor example, if we count the number of heads in 50 coin flips, the sampling distribution of the sample mean will be ____-_____"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#the-cutest-statistics-video-on-youtube",
@@ -10231,7 +10231,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-30-22",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling distribution of mean heights when n = 30 (2/2)",
-    "text": "Sampling distribution of mean heights when n = 30 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\n3/sqrt(50)\n\n[1] 0.4242641\n\n\nSampling mean and sampling SD of simulated sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.01157\n\n(sample_sd = sd(means50$means))\n\n[1] 0.4254565"
+    "text": "Sampling distribution of mean heights when n = 30 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\nFrom the CLT,\n\n3/sqrt(50)\n\n[1] 0.4242641\n\n\nSampling mean and sampling SD of simulated sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.01157\n\n(sample_sd = sd(means50$means))\n\n[1] 0.4254565"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#why-is-the-mean-mu-the-standard-error-fracsigmasqrtn",
@@ -17483,7 +17483,7 @@
     "href": "lessons/09_Variability/09_Variability.html#from-lesson-1-population-vs.-sample",
     "title": "Lesson 9: Variability in estimates",
     "section": "From Lesson 1: Population vs. sample",
-    "text": "From Lesson 1: Population vs. sample\n\n\n\n\n(Target) Population\n\n\n\nGroup of interest being studied\nGroup from which the sample is selected\n\nStudies often have inclusion and/or exclusion criteria\n\nAlmost always too expensive or logistically impossible to collect data for every case in a population\n\n\n\n\n\n\nSample\n\n\n\nGroup on which data are collected\nOften a small subset of the population\nEasier to collect data on\nIf we do it right, we might be able to answer our question about the target population"
+    "text": "From Lesson 1: Population vs. sample\n\n\n\n\n(Target) Population\n\n\n\nGroup of interest being studied\nGroup from which the sample is selected\n\nStudies often have inclusion and/or exclusion criteria\n\nAlmost always too expensive or logistically impossible to collect data for every case in a population\n\n\n\n\n\n\nSample\n\n\n\nGroup on which data are collected\nOften a small subset of the population\nEasier to collect data on\nIf we do it right, we might be able to answer our question about the target population\n\n\n\n\n\n\nGoal is to get a representative sample of the population: the characteristics of the sample are similar to the characteristics of the population"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#from-lesson-1-sampling",
@@ -17497,7 +17497,7 @@
     "href": "lessons/09_Variability/09_Variability.html#why-sample-statistics",
     "title": "Lesson 9: Variability in estimates",
     "section": "Why sample statistics?",
-    "text": "Why sample statistics?\n\nWhen we want to estimate features of the population\n\nWe can use corresponding summary statistics calculated from our sample\n\n\n \n\nMuch easier to measure statistics from our sample (Lesson 1)\n\nHowever, statistics from our sample are not exactly the same as the population measurements that we’re aiming for\nWe call the population measurements population parameters\n\n\n \n\nSo we need to start by distinguishing between the population parameters and sample statistics"
+    "text": "Why sample statistics?\n\nWhen we want to estimate features of the population\n\nWe can use corresponding summary statistics calculated from our sample\nOften called point estimates or sample statistics\n\n\n \n\nMuch easier to measure statistics from our sample (Lesson 1)\n\nHowever, statistics from our sample are not exactly the same as the population measurements that we’re aiming for\nWe call the population measurements population parameters\n\n\n \n\nSo we need to start by distinguishing between the population parameters and sample statistics"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-1",
@@ -17826,7 +17826,7 @@
     "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-2",
     "title": "Lesson 9: Variability in estimates",
     "section": "More concrete example with height",
-    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(S\\)):\n\n\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\hat{\\mu} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
+    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(s\\)):\n\n\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\hat{\\mu} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#different-variabilities",
@@ -17840,7 +17840,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling Distribution of Sample Means",
-    "text": "Sampling Distribution of Sample Means\n\nThe sampling distribution of the mean is the distribution of sample means calculated from repeated random samples of the same size from the same population\nOur simulations show approximations of the sampling distribution of the mean for various sample sizes\nThe theoretical sampling distribution is based on all possible samples of a given sample size \\(n\\)."
+    "text": "Sampling Distribution of Sample Means\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular point estimate as being drawn from a sampling distribution\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\hat{\\mu} = 65.012 \\text{ inches}\\] \\[ SE = 0.425 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#what-happens-if-we-have-10000-samples",
@@ -17861,13 +17861,62 @@
     "href": "lessons/09_Variability/09_Variability.html#poll-everywhere-question",
     "title": "Lesson 9: Variability in estimates",
     "section": "Poll Everywhere question",
-    "text": "Poll Everywhere question"
+    "text": "Poll Everywhere question\nwhich plot is which?"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-12",
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-12",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling distribution of mean heights when n = 50 (1/2)",
-    "text": "Sampling distribution of mean heights when n = 50 (1/2)\n\n\n\n\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution."
+    "text": "Sampling distribution of mean heights when n = 50 (1/2)\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution:"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#other-cases-when-sample-can-approximated-with-a-normal-distribution",
+    "href": "lessons/09_Variability/09_Variability.html#other-cases-when-sample-can-approximated-with-a-normal-distribution",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Other cases when sample can approximated with a normal distribution",
+    "text": "Other cases when sample can approximated with a normal distribution\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe sampling distribution of the sample mean\nis a normal distribution, with\n\nMean equal to the population mean value \\(\\mu\\), and\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt",
+    "href": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Check out this video explanation of CLT",
+    "text": "Check out this video explanation of CLT\n\nBunnies, Dragons and the ‘Normal’ World: Central Limit Theorem\n\nCreature Cast from the New York Times\nhttps://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be\n\n\n\n\n\nLesson 9 Slides"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt-1",
+    "href": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Check out this video explanation of CLT",
+    "text": "Check out this video explanation of CLT\n\nBunnies, Dragons and the ‘Normal’ World: Central Limit Theorem\n\nCreature Cast from the New York Times\nhttps://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be\n\n\n\n\n\nLesson 9 Slides"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-22",
+    "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-22",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Sampling distribution of mean heights when n = 50 (2/2)",
+    "text": "Sampling distribution of mean heights when n = 50 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nSampling mean and sampling SD of simulated sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 64.99266\n\n(sample_sd = sd(means50$means))\n\n[1] 0.4360285"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#compare-sampling-distribution-of-1000-samples",
+    "href": "lessons/09_Variability/09_Variability.html#compare-sampling-distribution-of-1000-samples",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Compare sampling distribution of 1,000 samples",
+    "text": "Compare sampling distribution of 1,000 samples\nHow are the center, shape, and spread similar and/or different?"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#summary-review-point-estimate-terminology",
+    "href": "lessons/09_Variability/09_Variability.html#summary-review-point-estimate-terminology",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Summary Review: Point Estimate Terminology",
+    "text": "Summary Review: Point Estimate Terminology\n\nPopulation mean: \\(\\mu\\)\nPopulation standard deviation: \\(\\sigma\\)\nSample mean: \\(\\overline{x}\\)\nSample standard deviation: \\(s\\)\nSampling distribution: Distribution of sample means for repeated samples.\n\nUse \\(\\overline{X}\\) as the RV for this distribution\n\\(\\overline{X} \\sim \\text{Normal} \\bigg(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\bigg)\\)\n\nStandard error (SE): The standard deviation of the sampling distribution.\n\nFormula: \\(SE = \\frac{s}{\\sqrt{n}}\\)"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#section",
+    "href": "lessons/09_Variability/09_Variability.html#section",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "",
+    "text": "Artwork by @allison_horst"
   }
 ]

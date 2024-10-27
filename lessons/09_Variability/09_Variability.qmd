@@ -4,7 +4,7 @@ subtitle: "TB sections 4.1"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
-date: "10/28/2024"
+date: "10/30/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -18,7 +18,7 @@ format:
     highlight-style: arrow
 execute:
   echo: true
-  freeze: auto
+  freeze: true
 ---
 
 
@@ -47,6 +47,10 @@ theme_set(theme_bw(base_size = 22))
 set.seed(456)
 ```
 
+## 
+
+![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/horst_samples.png){fig-align="center"}
+
 ```{css, echo=FALSE}
 .reveal code {
   max-height: 100% !important;
@@ -54,52 +58,15 @@ set.seed(456)
 ```
 
 # Learning Objectives
-1. Understand that a single sample may not be a perfect representation of the population
+2. Illustrate how information from several samples are connected to the population and to the sampling distribution
 
-2. Illustrate how information from several samples are connected to the population
+4. Distinguish different language referring to different variabilities (population, sample, sampling distribution)
 
-  - There is variation between samples
-
-3. Learn characteristics of the Sampling Distribution of Sample Means
-
-  - Mean of the sampling distribution is the same as mean of population
-
-4. Distinguish different language referring to different variabilities
-
-  - Variability of the population
-  - Variability within a sample 
-  - Variability between samples 
-
-5. Solidify what we learn about sampling distributions through coding and visualizing in Rstudio Cloud
-
+3. Apply the Central Limit Theorem to approximate the sampling distribution
 
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
-
-## Summary: Point Estimate Terminology
-
-- **Population mean**: $\mu$
-- **Population standard deviation**: $\sigma$
-- **Sample mean**: $\overline{x}$
-- **Sample standard deviation**: $s$
-- **Sampling distribution**: Distribution of sample means for repeated samples.
-- **Standard error (SE)**: The standard deviation of the sampling distribution.
-    - Formula: $SE = \frac{s}{\sqrt{n}}$
-
-## Goals for today
-
-__Section 4.1__
-
-* Sampling from a population
-  * population parameters vs. point estimates
-  * sampling variation
-
-* Sampling distribution of the mean
-  * Central Limit Theorem
-  * Standard error of the mean
-
-![[Artwork by @allison_horst](https://allisonhorst.com/)](../img_slides/horst_samples.png){fig-align="center"}
 
 
 ## From Lesson 1: Population vs. sample
@@ -137,22 +104,14 @@ Sample
 :::
 :::
 
-## From Lesson 1: Sampling 
-
 - Goal is to get a __representative__ sample of the population: the characteristics of the sample are similar to the characteristics of the population
-- There are different ways to sample from a target population
-- Types of sampling that we discuss
-    - Simple random sample (SRS)
-    - Convenient sample
-    - Stratified sample
-    - Cluster sample
-    - Multistage sample
     
 ## Why sample statistics?
 
 - When we want to estimate features of the population
 
   - We can use corresponding summary statistics calculated from our sample
+  - Often called [**point estimates**]{style="color:#EF85B3;"} or [**sample statistics**]{style="color:#EF85B3;"}
 
  
 
@@ -160,7 +119,7 @@ Sample
 
   - However, statistics from our sample are not exactly the same as the population measurements that we're aiming for
   
-  - We call the population measurements **population parameters**
+  - We call the population measurements [**population parameters**]{style="color:#C83532;"}
   
  
 
@@ -208,8 +167,8 @@ Sample
 
 ## Poll Everywhere Question 1
 
-# Sampling variation
-Build the intuition around samplign variation
+# LO
+
 
 ## Population 
 
@@ -259,6 +218,7 @@ Build the intuition around samplign variation
 
 ![](../img_slides/samp_dist_12.png){fig-align="center"}
 
+# Learning Objective
 
 ## More concrete example with height
 
@@ -384,7 +344,7 @@ $$ \sigma = 3 \text{ inches}$$
 
 ::: {.column width="30%"}
 
-Variation within samples ($S$):
+Variation within samples ($s$):
 
 ![](../img_slides/heights_samples.png){fig-align="center"}
 
@@ -435,24 +395,70 @@ $$ SE = `r round(sample_sd, 3)` \text{ inches}$$
 
 ## Sampling Distribution of Sample Means
 
-* The __[sampling distribution]{style="color:darkorang"}__ of the mean is the distribution of sample means calculated from repeated random samples of _the same size_ from the same population
+::: columns
 
-* Our simulations show approximations of the sampling distribution of the mean for various sample sizes
+::: {.column width="65%"}
 
-* The theoretical sampling distribution is based on all possible samples of a given sample size $n$.
+- The __[sampling distribution]{style="color:#E75B5C"}__ is the distribution of sample means calculated from repeated random samples of _the same size_ from the same population
+
+- It is useful to think of a particular point estimate as
+being drawn from a sampling distribution
+
+:::
+
+::: {.column width="35%"}
+
+Variation between samples ($SE$):
+
+
+ 
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+
+means=NULL;sds=NULL
+for(i in 1:1000){
+  height = rnorm(50, 65, 3)
+  means = c(means, mean(height))
+  sds = c(sds, sd(height))
+}
+means = as.data.frame(cbind(1:1000, means, sds))
+
+means %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60) +
+  labs(x="Mean height from samples (inches)", y="Frequency") +
+  scale_x_continuous(breaks = seq(55, 75, by = 5), 
+                     limits = c(55, 75)) +
+  theme_classic() +
+  theme(text = element_text(size = 24))
+
+sample_mean = mean(means$means)
+sample_sd = sd(means$means)
+# 3/sqrt(50)
+```
+
+$$ \hat{\mu} = `r round(sample_mean, 3)` \text{ inches}$$
+$$ SE = `r round(sample_sd, 3)` \text{ inches}$$
+
+:::
+:::
+
 
 ## What happens if we have 10000 samples?
 
-## Compare sampling distribution of 1000 samples for n=50 (left) and n=100 (right)
+## Compare sampling distribution of 1,000 samples
 
-[How are the center, shape, and spread similar and/or different?]{style="color:purple"}
+How are the center, shape, and spread similar and/or different?
 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
 #| echo: false
-#| fig-width: 7
-#| fig-height: 4
+#| fig-width: 9
+#| fig-height: 6
 
 means=NULL;sds=NULL
 for(i in 1:1000){
@@ -465,9 +471,10 @@ means50 = as.data.frame(cbind(1:1000, means, sds))
 means50 %>% 
   ggplot(aes(x=means)) + 
   geom_histogram(color="black", fill="grey", bins=60) +
-  labs(x="Mean height from samples (inches)", y="Frequency") +
-  scale_x_continuous(breaks = seq(55, 75, by = 5), 
-                     limits = c(55, 75)) +
+  labs(x="Mean height from samples (inches)", y="Frequency", 
+       title="Sampling distribution (n=50)") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
   theme_classic() +
   theme(text = element_text(size = 24))
 
@@ -481,8 +488,8 @@ sample_sd = sd(means50$means)
 
 ```{r}
 #| echo: false
-#| fig-width: 7
-#| fig-height: 4
+#| fig-width: 9
+#| fig-height: 6
 
 means=NULL;sds=NULL
 for(i in 1:1000){
@@ -495,9 +502,10 @@ means100 = as.data.frame(cbind(1:1000, means, sds))
 means100 %>% 
   ggplot(aes(x=means)) + 
   geom_histogram(color="black", fill="grey", bins=60) +
-  labs(x="Mean height from samples (inches)", y="Frequency") +
-  scale_x_continuous(breaks = seq(55, 75, by = 5), 
-                     limits = c(55, 75)) +
+  labs(x="Mean height from samples (inches)", y="Frequency", 
+       title="Sampling distribution (n=100)") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
   theme_classic() +
   theme(text = element_text(size = 24))
 
@@ -510,63 +518,64 @@ sample_sd = sd(means100$means)
 
 ## Poll Everywhere question 
 
+which plot is which?
+
+# Learning Objectives
+
+
 ## The Central Limit Theorem (CLT) 
 
-* For **"large" sample sizes** ( $n\geq 30$ ),
-    * the __sampling distribution__ of the sample mean
-    * can be approximated by a __normal distribution__,with 
-      * _mean_ equal to the _population mean_ value $\mu$, and 
-      * _standard deviation_ $\frac{\sigma}{\sqrt{n}}$
+- If a sample consists of at least 30 independent observations, then the distribution of the sample mean is well approximated by a normal model
 
-<!-- $$\bar{X}\sim N(\mu_{\bar{X}} = \ \ \ \ \ \ \ \ \ \ \ , \sigma_{\bar{X}}= \ \ \ \ \ \ \ \ \ \ \ )$$ -->
-<br>
-<br>
-<br>
+- Aka, for **"large" sample sizes** ( $n\geq 30$ ),
+    * The __sampling distribution__ of the sample mean can be approximated by a __normal distribution__,with 
+      * Mean equal to the population mean value $\mu$
+      * Standard deviation $\frac{\sigma}{\sqrt{n}}$
+      
+- This is regardless of the original sample is from a different distribution
+  - For example, if we count the number of heads in 50 coin flips, the sampling distribution of the sample mean will be ____-_____
 
+## Other cases when sample can approximated with a normal distribution
 * For **small sample sizes**, if the population is known to be normally distributed, then
     * the __sampling distribution__ of the sample mean
     * is a __normal distribution__, with 
-      * _mean_ equal to the _population mean_ value $\mu$, and 
-      * _standard deviation_ $\frac{\sigma}{\sqrt{n}}$
-
-
-## The cutest statistics video on YouTube
-
-* _[Bunnies, Dragons and the 'Normal' World: Central Limit Theorem]{style="color:purple"}_ 
-    * Creature Cast from the New York Times
-    * [https://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be](https://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be)
-
-![](../img_slides/CLT_video_preview.png){fig-align="center" width=80%}
-
-
+      * Mean equal to the population mean value $\mu$, and 
+      * Standard deviation $\frac{\sigma}{\sqrt{n}}$
 
 ## Sampling distribution of mean heights when n = 50 (1/2)
 ::: columns
 ::: {.column width="50%"}
+:::
+
+::: {.column width="50%"}
+CLT tells us that we can model the sampling distribution of mean heights using a normal distribution:
+:::
+:::
+
+::: columns
+::: {.column width="50%"}
 ```{r}
 #| echo: false  
-#| fig.height: 4
-#| fig.width: 7
+#| fig.height: 6
+#| fig.width: 8
 
 means50 %>% 
   ggplot(aes(x=means)) + 
   geom_histogram(color="black", fill="grey", bins=60) +
-  labs(x="Mean height from samples (inches)", y="Frequency") +
-  scale_x_continuous(breaks = seq(55, 75, by = 5), 
-                     limits = c(55, 75)) +
-  theme_classic() +
+  labs(x="Mean height from samples (inches)", y="Frequency",  
+       title = "Sampling distribution of sample means") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
   theme(text = element_text(size = 24))
 ```
 
 :::
 ::: {.column width="50%"}
 
-CLT tells us that we can model the sampling distribution of mean heights using a normal distribution.
-
 ```{r}
 #| echo: false
-#| fig.height: 5.5
-#| fig.width: 6
+#| fig.height: 6
+#| fig.width: 8
 mu <- 65
 SE <- 3/sqrt(50)
 sig <- round(SE, 2)
@@ -579,31 +588,34 @@ sig <- round(SE, 2)
 
 gg_samp_dist_heights <- ggplot(data.frame(x = c(mu-4*sig, mu+4*sig)), aes(x = x)) + 
   stat_function(fun = dnorm, 
-                args = list(mean = mu, sd = sig)) + 
-  stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu-4*sig, mu-2*sig), 
-                geom = "area", fill = "darkblue") +
+                geom = "area", fill = "#C83532") +
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu+2*sig, mu+4*sig), 
-                geom = "area", fill = "darkblue") +
+                geom = "area", fill = "#C83532") +
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu-2*sig, mu-1*sig), 
-                geom = "area", fill = "darkgreen") +
+                geom = "area", fill = "#5BAFF8") +
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu+1*sig, mu+2*sig), 
-                geom = "area", fill = "darkgreen")+
+                geom = "area", fill = "#5BAFF8")+
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu-1*sig, mu+1*sig), 
-                geom = "area", fill = "orange") +
-  scale_x_continuous(name ="mean height (ft)", 
+                geom = "area", fill = "#EF85B3") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 2) + 
+  scale_x_continuous(name ="Mean height from samples (inches)", 
                     breaks=c(mu-2*sig,mu-1*sig,mu, mu+1*sig, mu+2*sig)) +
   labs(title = "Sampling distribution", y = "") +
-  scale_y_continuous(labels = NULL, breaks = NULL)
+  scale_y_continuous(labels = NULL, breaks = NULL) +
+  theme(text = element_text(size = 24))
+
 
 gg_samp_dist_heights   
 ```
@@ -611,18 +623,19 @@ gg_samp_dist_heights
 :::
 
 
-## Sampling distribution of mean heights when n = 30 (2/2)
+## Sampling distribution of mean heights when n = 50 (2/2)
 ::: columns
 ::: {.column width="65%"}
-Mean and SD of population:
+Mean and SD of **population**:
 $$ \mu = 65 \text{ inches}$$
 $$ \sigma = 3 \text{ inches}$$
 
-```{r}
-3/sqrt(50)
-```
+From the CLT, we can figure out the mean and standard deviation of our sampling distribution:
 
-Sampling mean and sampling SD of simulated sampling distribution:
+$$ \mu = 65 \text{ inches}$$
+$$ SE = \frac{\sigma}{\sqrt{n}} \text{ inches} = \frac{3}{\sqrt{50}} \text{ inches} = 0.424 \text{ inches}$$
+
+Sampling mean and sampling SD of **simulated** sampling distribution:
 
 ```{r}
 (sample_mean = mean(means50$means))
@@ -635,7 +648,7 @@ Sampling mean and sampling SD of simulated sampling distribution:
 #| fig.height: 4
 #| fig.width: 7
 gg_samp_dist_heights +
-  theme(text=element_text(size=15))
+  theme(text=element_text(size=20))
 ```
 :::
 :::
@@ -649,16 +662,24 @@ gg_samp_dist_heights +
 
 What is the probability that for a random sample of 30 high schoolers, that their mean height is greater than 5.6 ft?
 
+## Summary Review: Point Estimate Terminology
 
-## Class Discussion
+- **Population mean**: $\mu$
+- **Population standard deviation**: $\sigma$
+- **Sample mean**: $\overline{x}$
+- **Sample standard deviation**: $s$
+- **Sampling distribution**: Distribution of sample means for repeated samples.
+  - Use $\overline{X}$ as the RV for this distribution
+  - $\overline{X} \sim \text{Normal} \bigg(\mu_{\overline{X}} = \mu, \sigma_{\overline{X}}= SE = \frac{s}{\sqrt{n}} \bigg)$
+- **Standard error (SE)**: The standard deviation of the sampling distribution.
+    - Formula: $SE = \frac{s}{\sqrt{n}}$
 
-* Slide 21: match figures to distribution (Sampling high schoolers' weights)
+## Check out this video explanation of CLT
 
-Problems from Homework 4:
+* [Bunnies, Dragons and the 'Normal' World: Central Limit Theorem]{style="color:#BF396F"}
+    * Creature Cast from the New York Times
+    * [https://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be](https://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be)
 
-* R1: Youth weights (YRBSS)
-* Book exercise: 4.2
-* Non-book exercise: Ethan Allen
-
+![](../img_slides/CLT_video_preview.png){fig-align="center" width=80%}
 
 
