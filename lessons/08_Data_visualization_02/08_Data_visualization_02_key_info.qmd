@@ -1,7 +1,6 @@
 ---
 title: "Key Info and Announcements"
-subtitle: "Lesson 1: Introduction to R"
-date: "09/30/2024"
+date: "10/28/2024"
 date-modified: "today"
 format: 
   html:
@@ -10,17 +9,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-## To Nicky
-
-- Include organization
-  - Have them do a data management script!!
-  
-- [self-contained not a proper yaml command now](https://github.com/quarto-dev/quarto-cli/discussions/3021)
-
-- citations!! in zotero!!
-
-- Git and GitHub!!
-
 ## Announcements
+- Group eval is in HW 04 assignment
+  - Please complete by due date
+- Mid-quarter feedback in HW 05 assignment
 
 ## Key Dates
