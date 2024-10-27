@@ -22,16 +22,15 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-**Due 11/7/24**
-
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_05.qmd).
-
-
 ## Directions {.unnumbered}
 
-* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
-* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) Please submit your homework in pdf format. You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
+
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd) if you want to work in a Quarto doc.
+
+## Complete the mid-quarter feedback
+
+<https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURVc3WkpWQVk5OVQ1OUhSMkg0UUZLUjZJOC4u>
 
 
 ### R & LaTeX code for probability distributions {.unnumbered}
