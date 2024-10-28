@@ -34,7 +34,7 @@ Welcome to EPI 525! This course covers a broad range of basic statistical method
 
 ::: grid
 
-::: g-col-5
+::: {.g-col-3}
 
 :::
 
@@ -43,7 +43,8 @@ Welcome to EPI 525! This course covers a broad range of basic statistical method
 :::
 
 
-::: g-col-4
+::: {.g-col-4}
+[{{< iconify logos zoom-icon size=24px >}}](https://pdx.zoom.us/j/7842715376) Class Zoom link
 :::
 
 :::
