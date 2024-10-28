@@ -10210,7 +10210,7 @@
     "href": "lessons/09_Variability/09_Variability.html#the-central-limit-theorem-clt",
     "title": "Lesson 9: Variability in estimates",
     "section": "The Central Limit Theorem (CLT)",
-    "text": "The Central Limit Theorem (CLT)\n\nIf a sample consists of at least 30 independent observations, then the distribution of the sample mean is well approximated by a normal model\nAka, for “large” sample sizes ( \\(n\\geq 30\\) ),\n\nThe sampling distribution of the sample mean can be approximated by a normal distribution,with\n\nMean equal to the population mean value \\(\\mu\\)\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\nThis is regardless of the original sample is from a different distribution\n\nFor example, if we count the number of heads in 50 coin flips, the sampling distribution of the sample mean will be ____-_____"
+    "text": "The Central Limit Theorem (CLT)\n\nIf a sample consists of at least 30 independent observations, then the sampling distribution of the sample mean is approximated by a normal model\nAka, for “large” sample sizes ( \\(n\\geq 30\\) ),\n\nThe sampling distribution of the sample mean can be approximated by a normal distribution,with\n\nMean equal to the population mean value \\(\\mu\\)\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\nThis is regardless of the original sample is from a different distribution\n\nFor example, if we count the number of heads in 50 coin flips, and do this for many samples, then our sampling distribution will be Normally distributed around \\(n\\cdot p = 50 \\cdot 0.5= 25\\)"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#the-cutest-statistics-video-on-youtube",
@@ -10245,7 +10245,7 @@
     "href": "lessons/09_Variability/09_Variability.html#applying-the-clt",
     "title": "Lesson 9: Variability in estimates",
     "section": "Applying the CLT",
-    "text": "Applying the CLT\nWhat is the probability that for a random sample of 30 high schoolers, that their mean height is greater than 5.6 ft?"
+    "text": "Applying the CLT\n\n\nExample 1\n\n\nFor a random sample of 100 people, what is the probability that their mean height is greater than 65 inches? We happen to know the population mean is 64 inches and population standard deviation is 4 inches.\n\n\n\nFind the mean and standard error for our sampling distribution: \\[\\mu_{\\overline{X}}=64\\] \\[SE = \\frac{\\sigma}{\\sqrt{n}}= \\frac{4}{\\sqrt{100}}= 0.4 \\text{ inches}\\] \\[ \\overline{X} \\sim \\text{Normal} (64, 0.4)\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#class-discussion",
@@ -11155,7 +11155,7 @@
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Group eval is in HW 04 assignment\n\nPlease complete by due date\n\nMid-quarter feedback in HW 05 assignment"
+    "text": "Group eval is in HW 04 assignment\n\nPlease complete by due date\n\nMid-quarter feedback in HW 05 assignment\nHW 01 solutions graded"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02_key_info.html#to-nicky",
@@ -11169,7 +11169,7 @@
     "href": "lessons/08_Data_visualization_02/08_Data_visualization_02_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Group eval is in HW 04 assignment\n\nPlease complete by due date\n\nMid-quarter feedback in HW 05 assignment"
+    "text": "Group eval is in HW 04 assignment\n\nPlease complete by due date\n\nMid-quarter feedback in HW 05 assignment\nHW 01 solutions graded"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02_key_info.html#key-dates",
@@ -17819,7 +17819,7 @@
     "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-1",
     "title": "Lesson 9: Variability in estimates",
     "section": "More concrete example with height",
-    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(S\\)):"
+    "text": "More concrete example with height\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(s\\)):"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-2",
@@ -17840,7 +17840,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling Distribution of Sample Means",
-    "text": "Sampling Distribution of Sample Means\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular point estimate as being drawn from a sampling distribution\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\hat{\\mu} = 65.012 \\text{ inches}\\] \\[ SE = 0.425 \\text{ inches}\\]"
+    "text": "Sampling Distribution of Sample Means\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#what-happens-if-we-have-10000-samples",
@@ -17875,14 +17875,14 @@
     "href": "lessons/09_Variability/09_Variability.html#other-cases-when-sample-can-approximated-with-a-normal-distribution",
     "title": "Lesson 9: Variability in estimates",
     "section": "Other cases when sample can approximated with a normal distribution",
-    "text": "Other cases when sample can approximated with a normal distribution\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe sampling distribution of the sample mean\nis a normal distribution, with\n\nMean equal to the population mean value \\(\\mu\\), and\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)"
+    "text": "Other cases when sample can approximated with a normal distribution\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nThe sampling distribution of the sample mean is a normal distribution, with\n\nMean equal to the population mean value \\(\\mu\\), and\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt",
     "href": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt",
     "title": "Lesson 9: Variability in estimates",
     "section": "Check out this video explanation of CLT",
-    "text": "Check out this video explanation of CLT\n\nBunnies, Dragons and the ‘Normal’ World: Central Limit Theorem\n\nCreature Cast from the New York Times\nhttps://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be\n\n\n\n\n\nLesson 9 Slides"
+    "text": "Check out this video explanation of CLT\n\nBunnies, Dragons and the ‘Normal’ World: Central Limit Theorem\n\nCreature Cast from the New York Times\nhttps://www.youtube.com/watch?v=jvoxEYmQHNM&feature=youtu.be"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#check-out-this-video-explanation-of-clt-1",
@@ -17896,7 +17896,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-mean-heights-when-n-50-22",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling distribution of mean heights when n = 50 (2/2)",
-    "text": "Sampling distribution of mean heights when n = 50 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nSampling mean and sampling SD of simulated sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 64.99266\n\n(sample_sd = sd(means50$means))\n\n[1] 0.4360285"
+    "text": "Sampling distribution of mean heights when n = 50 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nSampling mean and sampling SD of simulated sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.00743\n\n(sample_sd = sd(means50$means))\n\n[1] 0.4193165"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#compare-sampling-distribution-of-1000-samples",
@@ -17910,7 +17910,7 @@
     "href": "lessons/09_Variability/09_Variability.html#summary-review-point-estimate-terminology",
     "title": "Lesson 9: Variability in estimates",
     "section": "Summary Review: Point Estimate Terminology",
-    "text": "Summary Review: Point Estimate Terminology\n\nPopulation mean: \\(\\mu\\)\nPopulation standard deviation: \\(\\sigma\\)\nSample mean: \\(\\overline{x}\\)\nSample standard deviation: \\(s\\)\nSampling distribution: Distribution of sample means for repeated samples.\n\nUse \\(\\overline{X}\\) as the RV for this distribution\n\\(\\overline{X} \\sim \\text{Normal} \\bigg(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\bigg)\\)\n\nStandard error (SE): The standard deviation of the sampling distribution.\n\nFormula: \\(SE = \\frac{s}{\\sqrt{n}}\\)"
+    "text": "Summary Review: Point Estimate Terminology\n\nPopulation mean: \\(\\mu\\)\nPopulation standard deviation: \\(\\sigma\\)\nSample mean: \\(\\overline{x}\\)\nSample standard deviation: \\(s\\)\nSampling distribution: Distribution of sample means for repeated samples.\n\nUse \\(\\overline{X}\\) as the RV for this distribution\n\\(\\overline{X} \\sim \\text{Normal} \\bigg(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\bigg)\\)\n\nStandard error (SE): The standard deviation of the sampling distribution.\n\nFormula: \\(SE = \\frac{s}{\\sqrt{n}}\\)\n\n\n\n\nLesson 9 Slides"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#section",
@@ -17932,5 +17932,124 @@
     "title": "Homework 4",
     "section": "0.1 Complete the group evaluation",
     "text": "0.1 Complete the group evaluation\nPlease complete the group evaluation form by the homework assignment due date.\nhttps://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURUY1SEhBVzJLQkxGM1lZWERQUlRLNEUzSi4u"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-13",
+    "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-13",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "More concrete example with height (1/3)",
+    "text": "More concrete example with height (1/3)\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-23",
+    "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-23",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "More concrete example with height (2/3)",
+    "text": "More concrete example with height (2/3)\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(s\\)):"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-33",
+    "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-33",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "More concrete example with height (3/3)",
+    "text": "More concrete example with height (3/3)\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(s\\)):\n\n\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#okay-but-in-real-life-we-only-have-one-sample",
+    "href": "lessons/09_Variability/09_Variability.html#okay-but-in-real-life-we-only-have-one-sample",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Okay, but in real life we only have one sample…?",
+    "text": "Okay, but in real life we only have one sample…?\n\nIn a study, conclusions about a population parameter must be drawn from the data collected from a single sample\n\n \n\nThe sampling distribution of X is a theoretical concept\n\nObtaining repeated samples by conducting a study many times is not possible\n\n\n \n\nNot feasible to calculate the population mean \\(\\mu\\) by finding the mean of the sampling distribution for \\(\\overline{X}\\)\n\n \n\nIn the next lesson on confidence intervals, we’ll see what kind of statements we can make about the population mean from a single sample"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#for-following-poll-everywhere-question",
+    "href": "lessons/09_Variability/09_Variability.html#for-following-poll-everywhere-question",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "For following Poll Everywhere Question",
+    "text": "For following Poll Everywhere Question\nHow are the center, shape, and spread similar and/or different?"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-2",
+    "href": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-2",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#lets-discuss-the-center-and-spread",
+    "href": "lessons/09_Variability/09_Variability.html#lets-discuss-the-center-and-spread",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Let’s discuss the center and spread",
+    "text": "Let’s discuss the center and spread\nHow are the center, shape, and spread similar and/or different?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheoretically (using only population values): \\[\\overline{X} \\sim \\text{Normal} \\bigg(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{\\sigma}{\\sqrt{n}} \\bigg)\\]"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#what-happens-if-we-collect-more-or-less-samples",
+    "href": "lessons/09_Variability/09_Variability.html#what-happens-if-we-collect-more-or-less-samples",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "What happens if we collect more or less samples?",
+    "text": "What happens if we collect more or less samples?\nFor samples that measure 50 people’s heights (\\(n=50\\)), we can look at the sampling distribution for…\n\n\n20 samples:\n\n\n\n\n\n\n100 samples:\n\n\n\n\n\n\n1,000 samples:\n\n\n\n\n\n\n10,000 samples:"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means-with-the-clt",
+    "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means-with-the-clt",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Sampling Distribution of Sample Means (with the CLT)",
+    "text": "Sampling Distribution of Sample Means (with the CLT)\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\n\nWith CLT and \\(\\overline{X}\\) as the RV for the sampling distribution\n\n\n\nTheoretically (using only population values): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{\\sigma}{\\sqrt{n}} \\big)\\)\nIn real use (using sample values for SE): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\big)\\)\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.99 \\text{ inches}\\] \\[ SE = 0.304 \\text{ inches}\\]"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#other-cases-for-normal-approximation",
+    "href": "lessons/09_Variability/09_Variability.html#other-cases-for-normal-approximation",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Other cases for normal approximation",
+    "text": "Other cases for normal approximation\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nThe sampling distribution of the sample mean is a normal distribution, with\n\nMean equal to the population mean value \\(\\mu\\), and\nStandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\nNot technically the Central Limit Theorem, but sampling distribution approximated using same Normal distribution"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-12",
+    "href": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-12",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Let’s apply the CLT to our sampling distribution when n = 50 (1/2)",
+    "text": "Let’s apply the CLT to our sampling distribution when n = 50 (1/2)\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution:"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-12-1",
+    "href": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-12-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Let’s apply the CLT to our sampling distribution when n = 50 (1/2)",
+    "text": "Let’s apply the CLT to our sampling distribution when n = 50 (1/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the theoretical mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nI simulated the data, so I can calculate mean and SE of the sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.00743\n\n(sample_se = sd(means50$means))\n\n[1] 0.4193165"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-22",
+    "href": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-22",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Let’s apply the CLT to our sampling distribution when n = 50 (2/2)",
+    "text": "Let’s apply the CLT to our sampling distribution when n = 50 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches} \\text{,  } \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the theoretical mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nI simulated the data, so I can calculate mean and SE of the sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.01157\n\n(sample_se = sd(means50$means))\n\n[1] 0.4254565"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#applying-the-clt-1",
+    "href": "lessons/09_Variability/09_Variability.html#applying-the-clt-1",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Applying the CLT",
+    "text": "Applying the CLT\n\n\nExample 1\n\n\nFor a random sample of 100 people, what is the probability that their mean height is greater than 65 inches? We happen to know the population mean is 64 inches and population standard deviation is 4 inches.\n\n\n\nCalculate the probability from a Normal distribution: \\(P(H \\geq 66)\\)\n\n\n\n\n\n\n\n\n\n\npnorm(q = 65, mean = 64, sd = 0.4, \n      lower.tail = F)\n\n[1] 0.006209665\n\n\nThe probability that a 100-person sample has a mean of 65 or greater is 0.006. Makes me question if our sample really came from the population…"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#applying-the-clt-12",
+    "href": "lessons/09_Variability/09_Variability.html#applying-the-clt-12",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Applying the CLT (1/2)",
+    "text": "Applying the CLT (1/2)\n\n\nExample 1\n\n\nFor a random sample of 100 people, what is the probability that their mean height is greater than 65 inches? We happen to know the population mean is 64 inches and population standard deviation is 4 inches.\n\n\n\nMake sure that the number of individuals in the sample is greater than 30: \\(100 &gt; 30\\), so we can use the CLT\nFind the mean and standard error for our sampling distribution: \\[\\mu_{\\overline{X}}=64\\] \\[SE = \\frac{\\sigma}{\\sqrt{n}}= \\frac{4}{\\sqrt{100}}= 0.4 \\text{ inches}\\] \\[ \\overline{X} \\sim \\text{Normal} (64, 0.4)\\]"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#applying-the-clt-22",
+    "href": "lessons/09_Variability/09_Variability.html#applying-the-clt-22",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Applying the CLT (2/2)",
+    "text": "Applying the CLT (2/2)\n\n\nExample 1\n\n\nFor a random sample of 100 people, what is the probability that their mean height is greater than 65 inches? We happen to know the population mean is 64 inches and population standard deviation is 4 inches.\n\n\n\nCalculate the probability from a Normal distribution: \\(P(H \\geq 65)\\)\n\n\n\n\n\n\n\n\n\n\npnorm(q = 65, mean = 64, sd = 0.4, \n      lower.tail = F)\n\n[1] 0.006209665\n\n\nThe probability that a 100-person sample has a mean of 65 or greater is 0.006. Makes me question if our sample really came from the population…"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-3",
+    "href": "lessons/09_Variability/09_Variability.html#poll-everywhere-question-3",
+    "title": "Lesson 9: Variability in estimates",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
   }
 ]
