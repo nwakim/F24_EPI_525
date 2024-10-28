@@ -1,5 +1,5 @@
 ---
-title: "Lesson 7: Data visualization - Part 1"
+title: "Lesson 7: Data visualization of a single variable"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
@@ -43,13 +43,11 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 
 # Learning Objectives
 
-1.  Visualizing distributions of numeric data: histograms and boxplots
+1.  Visualize distributions of numeric data/variables using histograms and boxplots
 
-2.  transforming data (log values)
+2.  Recognize when transforming data helps make asymmetric data more symmetric (log values)
 
-3.  data viz, categorical: bar plot
-
-4.  case study? dds.disc
+3.  Visualize distributions of categorical data/variables using frequency tables and barplots
 
 ## 
 
