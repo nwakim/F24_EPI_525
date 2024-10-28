@@ -10574,7 +10574,7 @@
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#barplots",
     "title": "Lesson 7: Data visualization of a single variable",
     "section": "Barplots",
-    "text": "Barplots"
+    "text": "Barplots\n\nA bar plot is a common way to display a single categorical variable\n\nShow counts (or proportion) per category for a variable\n\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group)) + \n  geom_bar()\n\n\n\n\n\n\nggplot(data = hyp_data, \n       aes(x = Age_Group)) + \n  geom_bar(aes(y = stat(prop), \n               group = 1))"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#barplots-with-2-variables-segmented-bar-plots",
@@ -16692,7 +16692,7 @@
     "href": "lessons/07_Data_visualization_01/07_Data_visualization_01.html#lets-look-at-each-variable-separately",
     "title": "Lesson 7: Data visualization of a single variable",
     "section": "Let’s look at each variable separately",
-    "text": "Let’s look at each variable separately\n\nThe label “contingency tables” are usually reserved for when we have two variables in one table\nWhen we have one variable, we often call these frequency tables\n\nShows the count of observati"
+    "text": "Let’s look at each variable separately\n\nThe label “contingency tables” are usually reserved for when we have two variables in one table\nWhen we have one variable, we often call these frequency tables\n\nShows the count of observations that fall into a specific category\n\nIn a relative frequency table, proportions for each category is shown instead of counts\n\n\n\n\n\n\nFrequency table for age group variable\n\n\nAge Group\nCount\n\n\n\n\n18-39 years\n121042\n\n\n40 to 59 years\n130772\n\n\nGreater than 60 years\n61506\n\n\nTotal\n313320\n\n\n\n\n\n\n\n\n\nRelative frequency table for age group variable\n\n\nAge Group\nCount\n\n\n\n\n18-39 years\n0.3863\n\n\n40 to 59 years\n0.4174\n\n\nGreater than 60 years\n0.1963\n\n\nTotal\n1.0000"
   },
   {
     "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_case_study.html",
@@ -18051,5 +18051,320 @@
     "title": "Lesson 9: Variability in estimates",
     "section": "Poll Everywhere Question 3",
     "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#section",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#section",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "",
+    "text": "Artwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-2-example-the-frog-study1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-2-example-the-frog-study1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "From Lesson 2: Example: the frog study1",
+    "text": "From Lesson 2: Example: the frog study1\nIn evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.\n \nWe will be working with the frog dataset, which originates from a 2013 study2 about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.\n \nResearchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.\n \n \nhttps://www.cdc.gov/nchs/products/databriefs/db220.htmChen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715."
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-2-four-rows-from-frog-data-frame",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-2-four-rows-from-frog-data-frame",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "From Lesson 2: Four rows from frog data frame",
+    "text": "From Lesson 2: Four rows from frog data frame\n\n\n\n\n\n\n\n\n\n\n\n\n\naltitude\nlatitude\negg.size\nclutch.size\nclutch.volume\nbody.size\n\n\n\n\n1\n3,462.00\n34.82\n1.95\n181.97\n177.83\n3.63\n\n\n2\n3,462.00\n34.82\n1.95\n269.15\n257.04\n3.63\n\n\n3\n3,462.00\n34.82\n1.95\n158.49\n151.36\n3.72\n\n\n150\n2,597.00\n34.05\n2.24\n537.03\n776.25\nNA\n\n\n\n \n\nEach row is an observation\nEach column is a variable\nAll the observations and variables together make a data frame (sometimes called data matrix)\n\n \n\nMissing values: NA means the measured value for body size in clutch #150 is missing"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-2-exploring-data-initially",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-2-exploring-data-initially",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "From Lesson 2: Exploring data initially",
+    "text": "From Lesson 2: Exploring data initially\n\nTechniques for exploring and summarizing data differ for numerical versus categorical variables.\n\n \n\nNumerical and graphical summaries are useful for examining variables one at a time\n\nCan also be used for exploring the relationships between variables\nNumerical summaries are not just for numerical variables (certain ones are used for categorical variables)\n\n\n \n\nToday we we look at ways to visualize a numerical variable and a categorical variable"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms",
+    "text": "Histograms\n\n\n\nHistograms show the counts of observations (y-axis) that have values within a specific interval for a specific variable (x-axis)\nShow the shape of the distribution and data density\nDistribution is considered symmetric if the trailing parts of the plot are roughly equal\nDistribution is considered asymmetric if one tail trails off more than the other (as we see with clutch volume)\nAsymmetric distributions are said to be skewed\n\nSkewed right if trails off to right\nSkewed left if trails off to the left"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms",
+    "text": "Histograms\n\nMode is represented by the tallest peak in the distribution\nWhen data have one prominent peak, we call it unimodel\nIf there is more than one relative peak, we call it multimodel"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-2",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-2",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms",
+    "text": "Histograms\nWe can make a histogram of clutch volume or clutch size:\n\n\n\nggplot(data = frog, \n       aes(x = clutch.volume)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = frog, \n       aes(x = clutch.size)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#poll-everywhere-question-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#poll-everywhere-question-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Boxplots",
+    "text": "Boxplots\n\n\n\nA boxplot indicates the positions of the first, second, and third quartiles of a distribution in addition to extreme observations\nInterquartile range (IQR) represented by rectangle with black line through it for the median\nWhiskers extend from the box to capture data that are between \\(Q_1\\) and \\(Q_1 - 1.5 IQR\\) and separately between \\(Q_3\\) and \\(Q_3 + 1.5 IQR\\)\nAn outlier is a value that appears extreme relative to the rest of the data\n\nIt is more than \\(1.5IQR\\) away from \\(Q_1\\) and \\(Q_3\\)"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Boxplots",
+    "text": "Boxplots\n\n\n\nggplot(data = frog, \n       aes(x = clutch.volume)) + \n  geom_boxplot() \n\n\n\n\n\n\nggplot(data = frog, \n       aes(y = clutch.volume)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#we-may-want-to-transform-data",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#we-may-want-to-transform-data",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "We may want to transform data",
+    "text": "We may want to transform data\n\nWhen working with strongly skewed data, it can be useful to apply a transformation\nCommon to use the natural log transformation on skewed data\n\nWe typically just call this the “log transformation”\nEspecially for variables with many values clustered near 0 and other observations that are positive\n\nTransformations are mostly used when we make certain assumptions about the distribution of our data\n\nFor a lot of statistics methods, we assume the data is distributed normally\nSo we may need to transform the data to make it normal!"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#lets-transform-clutch-volume",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#lets-transform-clutch-volume",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Let’s transform clutch volume!",
+    "text": "Let’s transform clutch volume!\n\n\n\nggplot(data = frog, \n       aes(x = clutch.volume)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = frog, \n       aes(x = log(clutch.volume))) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#poll-everywhere-question-2",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#poll-everywhere-question-2",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Poll everywhere question 2",
+    "text": "Poll everywhere question 2"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-4-example-hypertension-prevalence-12",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-4-example-hypertension-prevalence-12",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "From Lesson 4: Example: hypertension prevalence (1/2)",
+    "text": "From Lesson 4: Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-4-example-hypertension-prevalence",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-4-example-hypertension-prevalence",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "From Lesson 4: Example: hypertension prevalence",
+    "text": "From Lesson 4: Example: hypertension prevalence\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\n\n \n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension of a randomly chosen adult is 0.29…\n\nThe conditional probability of hypertension in a person known to be 60 or older is 0.649"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-4-contingency-tables",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#from-lesson-4-contingency-tables",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "From Lesson 4: Contingency tables",
+    "text": "From Lesson 4: Contingency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#lets-look-at-each-variable-separately",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#lets-look-at-each-variable-separately",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Let’s look at each variable separately",
+    "text": "Let’s look at each variable separately\n\nThe label “contingency tables” are usually reserved for when we have two variables in one table\nWhen we have one variable, we often call these frequency tables\n\nShows the count of observati"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#barplots",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#barplots",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Barplots",
+    "text": "Barplots"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#case-study-description",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#case-study-description",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Case Study Description",
+    "text": "Case Study Description\n\nIn the US, individuals with developmental disabilities typically receive services and support from state governments.\n\nCalifornia allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)\nRecipients of DDS funds are referred to as “consumers.”\n\n\n \n\nDataset dds.discr\n\nSample of 1,000 DDS consumers (out of a total of ~ 250,000)\nData include age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer\n\n\n \n\nFor now, we are going to explore these data with R\nSee Section 1.7.1 in the textbook for more details"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#load-dds.discr-dataset-from-oibiostat-package",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#load-dds.discr-dataset-from-oibiostat-package",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Load dds.discr dataset from oibiostat package",
+    "text": "Load dds.discr dataset from oibiostat package\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\n \nThe code below needs to be run every time you restart R or render a Qmd file:\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n \n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#glimpse",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#glimpse",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "glimpse()",
+    "text": "glimpse()\n\nWe previously used the base R structure command str() to get information about variable types in a dataset (in R03: R basics part 2)\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#some-things-to-note-on-this-dataset",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#some-things-to-note-on-this-dataset",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Some things to note on this dataset",
+    "text": "Some things to note on this dataset\n\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n\n\n\nThis happens in older datasets (and honestly some newer ones): gender and sex get conflated\n\nI try to catch these issues before sharing datasets with you, but when we load datasets directly from the oibiostat package, I can’t make these changes\nIf you are unfamiliar with the differences, please see this NIH site on sex and gender\n\nAlso, race and ethnicity can be mislabeled\n\n“White not hispanic” combines race and ethnicity\nIf you are unfamiliar with the differences, please see this APA site on race and ethnicity"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#rename-one-of-the-first-things-i-usually-do",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#rename-one-of-the-first-things-i-usually-do",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "rename(): one of the first things I usually do",
+    "text": "rename(): one of the first things I usually do\n\nI want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)\n\n \n\ndds.discr1 = dds.discr %&gt;% \n  rename(sex_MF = gender, \n         r_e = ethnicity)\n\nglimpse(dds.discr1)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ sex_MF       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ r_e          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-3",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-3",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms",
+    "text": "Histograms\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = expenditures)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-showing-proportions",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-showing-proportions",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms showing proportions",
+    "text": "Histograms showing proportions\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density)))  \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density))) +  \n  scale_y_continuous(labels =   \n      scales::percent_format())"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-2",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-2",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Boxplots",
+    "text": "Boxplots\n\n\n\nggplot(data = dds.discr1, \n       aes(x = age)) + \n  geom_boxplot() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(y = age)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#barplots-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#barplots-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Barplots",
+    "text": "Barplots\n\n\nCounts (below) vs.\npercentages (right)\n\nggplot(data = dds.discr1, \n       aes(x = r_e)) +\n  geom_bar() \n\n\n\n\n\n\nggplot(data = dds.discr1, \n       aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop),  \n               group = 1)) + \n  scale_y_continuous(labels =  \n      scales::percent_format())"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#adding-more-to-plots",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#adding-more-to-plots",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Adding more to plots!",
+    "text": "Adding more to plots!\nTilt text so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#adding-more-to-plots-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#adding-more-to-plots-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Adding more to plots!",
+    "text": "Adding more to plots!\nWe can change labels!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(x = \"Race and ethnicity\", y = \"Proportion\", \n       title = \"Proportion of individuals receiving DDS by race and ethnicity\")"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#adding-more-to-plots-2",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#adding-more-to-plots-2",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Adding more to plots!",
+    "text": "Adding more to plots!\nIncrease text size so we can read it!\n\nggplot(data = dds.discr1, aes(x = r_e)) +\n  geom_bar(aes(y = stat(prop), group = 1)) +\n  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),\n        axis.title = element_text(size = 35))"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#getting-to-know-the-dataset",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#getting-to-know-the-dataset",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Getting to know the dataset",
+    "text": "Getting to know the dataset\n\ndim(dds.discr)\n\n[1] 1000    6\n\nnames(dds.discr)\n\n[1] \"id\"           \"age.cohort\"   \"age\"          \"gender\"       \"expenditures\"\n[6] \"ethnicity\"   \n\nlength(unique(dds.discr$id)) # How many unique id's are there?\n\n[1] 1000"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#str-structure",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#str-structure",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "str() structure",
+    "text": "str() structure\n\n\nWe previously used the base R structure command str() to get information about variable types in a dataset.\nNote this dataset is a tibble instead of a data.frame\n\n\n\nstr(dds.discr)      # base R\n\ntibble [1,000 × 6] (S3: tbl_df/tbl/data.frame)\n $ id          : int [1:1000] 10210 10409 10486 10538 10568 10690 10711 10778 10820 10823 ...\n $ age.cohort  : Factor w/ 6 levels \"0-5\",\"6-12\",\"13-17\",..: 3 5 1 4 3 3 3 3 3 3 ...\n $ age         : int [1:1000] 17 37 3 19 13 15 13 17 14 13 ...\n $ gender      : Factor w/ 2 levels \"Female\",\"Male\": 1 2 2 1 2 1 1 2 1 2 ...\n $ expenditures: int [1:1000] 2113 41924 1454 6400 4412 4566 3915 3873 5021 2887 ...\n $ ethnicity   : Factor w/ 8 levels \"American Indian\",..: 8 8 4 4 8 4 8 3 8 4 ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   ID = col_integer(),\n  ..   `Age Cohort` = col_character(),\n  ..   Age = col_integer(),\n  ..   Gender = col_character(),\n  ..   Expenditures = col_integer(),\n  ..   Ethnicity = col_character()\n  .. )"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#glimpse-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#glimpse-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "glimpse()",
+    "text": "glimpse()\n\nNew: glimpse()\n\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#summary",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#summary",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "summary()",
+    "text": "summary()\n\n\nWe previously used the base R structure command summary() to get summary information about variables\n\n\n\nsummary(dds.discr)      # base R\n\n       id        age.cohort       age          gender     expenditures  \n Min.   :10210   0-5  : 82   Min.   : 0.0   Female:503   Min.   :  222  \n 1st Qu.:31809   6-12 :175   1st Qu.:12.0   Male  :497   1st Qu.: 2899  \n Median :55384   13-17:212   Median :18.0                Median : 7026  \n Mean   :54663   18-21:199   Mean   :22.8                Mean   :18066  \n 3rd Qu.:76135   22-50:226   3rd Qu.:26.0                3rd Qu.:37713  \n Max.   :99898   51+  :106   Max.   :95.0                Max.   :75098  \n                                                                        \n              ethnicity  \n White not Hispanic:401  \n Hispanic          :376  \n Asian             :129  \n Black             : 59  \n Multi Race        : 26  \n American Indian   :  4  \n (Other)           :  5"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#tbl_summary-summary-table",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#tbl_summary-summary-table",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "tbl_summary(): summary table",
+    "text": "tbl_summary(): summary table\n\n\n\n\nNew: Use tbl_summary() from the gtsummary package to get summary information\n\n\n\n# library(gtsummary)\ntbl_summary(dds.discr)"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#what-data-variables-are-included-in-the-plot-below",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#what-data-variables-are-included-in-the-plot-below",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "What data (variables) are included in the plot below?",
+    "text": "What data (variables) are included in the plot below?"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#basics-of-a-ggplot",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#basics-of-a-ggplot",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Basics of a ggplot",
+    "text": "Basics of a ggplot"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#grammar-of-ggplot2",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#grammar-of-ggplot2",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Grammar of ggplot2",
+    "text": "Grammar of ggplot2\n\nKieran Healy"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-4",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-4",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms",
+    "text": "Histograms\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-showing-proportions-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#histograms-showing-proportions-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Histograms showing proportions",
+    "text": "Histograms showing proportions\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density)))  \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(\n    aes(y = stat(density))) +  \n  scale_y_continuous(labels =   \n      scales::percent_format())"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#distribution-shapes",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#distribution-shapes",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Distribution shapes",
+    "text": "Distribution shapes"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#density-plots-1",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#density-plots-1",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Density plots",
+    "text": "Density plots\nWhat is being measured on the vertical axes?\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_density() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#dot-plots",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#dot-plots",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Dot plots",
+    "text": "Dot plots\n\n\nBetter for smaller samples\nWhat is being measured on the vertical axes?\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_dotplot(binwidth =1) \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) +\n  geom_histogram(binwidth =1)"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-3",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-3",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Boxplots",
+    "text": "Boxplots\n\n\n\nggplot(data = dds.discr, \n       aes(x = age)) + \n  geom_boxplot() \n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(y = age)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-5-number-summary-visualization",
+    "href": "lessons/07_Data_visualization_01/07_Data_visualization_01_fixed.html#boxplots-5-number-summary-visualization",
+    "title": "Lesson 7: Data visualization of a single variable",
+    "section": "Boxplots: 5 number summary visualization",
+    "text": "Boxplots: 5 number summary visualization\n\nNo outliers: \nWith outliers: \n\n\nLesson 7 Slides"
   }
 ]

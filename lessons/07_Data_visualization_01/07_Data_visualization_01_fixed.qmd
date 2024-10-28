@@ -1,0 +1,818 @@
+---
+title: "Lesson 7: Data visualization of a single variable"
+author: "Meike Niederhausen and Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/21/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: Lesson 7 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+library(oibiostat)
+library(knitr)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
+# Learning Objectives
+
+1.  Visualize distributions of numeric data/variables using histograms and boxplots
+
+2.  Recognize when transforming data helps make asymmetric data more symmetric (log values)
+
+3.  Visualize distributions of categorical data/variables using frequency tables and barplots
+
+## 
+
+![Artwork by \@allison_horst](../img_slides/debugging.png){fig-alt="A cartoon of a fuzzy round monster face showing 10 different emotions experienced during the process of debugging code. The progression goes from (1) “I got this” - looking determined and optimistic; (2) “Huh. Really thought that was it.” - looking a bit baffled; (3) “...” - looking up at the ceiling in thought; (4) “Fine. Restarting.” - looking a bit annoyed; (5) “OH WTF.” Looking very frazzled and frustrated; (6) “Zombie meltdown.” - looking like a full meltdown; (7) (blank) - sleeping; (8) “A NEW HOPE!” - a happy looking monster with a lightbulb above; (9) “insert awesome theme song” - looking determined and typing away; (10) “I love coding” - arms raised in victory with a big smile, with confetti falling."}
+
+## From Lesson 2: Example: the frog study[^1]
+
+[^1]: From *Introductory Statistics for the Life and Biomedical Sciences*
+
+In evolutionary biology, parental investment refers to the amount of time, energy, or other resources devoted towards raising offspring.
+
+ 
+
+We will be working with the `frog` dataset, which originates from a 2013 study[^2] about maternal investment in a frog species. Reproduction is a costly process for female frogs, necessitating a trade-off between individual egg size and total number of eggs produced.
+
+[^2]: Chen, W., et al. Maternal investment increases with altitude in a frog on the Tibetan Plateau. Journal of evolutionary biology 26.12 (2013): 2710-2715.
+
+    ## 
+
+ 
+
+Researchers were interested in investigating how maternal investment varies with altitude. They collected measurements on egg clutches found at breeding ponds across 11 study sites; for 5 sites, the body size of individual female frogs was also recorded.
+
+ 
+
+ 
+
+## From Lesson 2: Four rows from frog data frame
+
+\captionsetup[table]{labelformat=empty}
+
+```{r echo=FALSE}
+data(frog) 
+```
+
+|     | altitude | latitude | egg.size | clutch.size | clutch.volume | body.size |
+|-----|----------|----------|----------|-------------|---------------|-----------|
+| 1   | 3,462.00 | 34.82    | 1.95     | 181.97      | 177.83        | 3.63      |
+| 2   | 3,462.00 | 34.82    | 1.95     | 269.15      | 257.04        | 3.63      |
+| 3   | 3,462.00 | 34.82    | 1.95     | 158.49      | 151.36        | 3.72      |
+| 150 | 2,597.00 | 34.05    | 2.24     | 537.03      | 776.25        | NA        |
+
+ 
+
+-   Each **row** is an [**observation**]{style="color:#BF396F;"}
+-   Each **column** is a [**variable**]{style="color:#459B99;"}
+-   All the [**observations**]{style="color:#BF396F;"} and [**variables**]{style="color:#459B99;"} together make a [**data frame**]{style="color:#8043F3;"} (sometimes called data matrix)
+
+ 
+
+-   **Missing values:** `NA` means the measured value for body size in clutch #150 is missing
+
+## From Lesson 2: Exploring data initially
+
+-   Techniques for exploring and summarizing data **differ** for [**numerical**]{style="color:#E75B5C;"} versus [**categorical**]{style="color:#EF85B3;"} variables.
+
+ 
+
+-   Numerical and graphical summaries are useful for examining variables one at a time
+    -   Can also be used for exploring the relationships between variables
+    -   *Numerical* summaries are not just for [**numerical**]{style="color:#E75B5C;"} variables (certain ones are used for [**categorical**]{style="color:#EF85B3;"} variables)
+
+ 
+
+-   Today we we look at ways to **visualize** a [**numerical**]{style="color:#E75B5C;"} variable and a [**categorical**]{style="color:#EF85B3;"} variable
+
+# Learning Objectives
+
+# Visualize numerical variables with `ggplot`
+
+## Histograms
+
+::::: columns
+::: {.column width="45%"}
+-   Histograms show the counts of observations (y-axis) that have values within a specific interval for a specific variable (x-axis)
+-   Show the shape of the distribution and data density
+-   Distribution is considered **symmetric** if the trailing parts of the plot are roughly equal
+-   Distribution is considered **asymmetric** if one tail trails off more than the other (as we see with clutch volume)
+-   Asymmetric distributions are said to be skewed
+    -   **Skewed right** if trails off to right
+    -   **Skewed left** if trails off to the left
+:::
+
+::: {.column width="55%"}
+![](../img_slides/frog_hist.png){fig-align="center" fig-width="400" width="1000"}
+:::
+:::::
+
+## Histograms
+
+-   Mode is represented by the tallest peak in the distribution
+-   When data have one prominent peak, we call it unimodel
+-   If there is more than one relative peak, we call it multimodel
+
+![](../img_slides/dist_1.19.png)
+
+## Histograms
+
+We can make a histogram of clutch volume or clutch size:
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = frog, 
+       aes(x = clutch.volume)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = frog, 
+       aes(x = clutch.size)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Poll Everywhere Question 1
+
+## Boxplots
+
+::::: columns
+::: {.column width="43%"}
+-   A **boxplot** indicates the positions of the first, second, and third quartiles of a distribution in addition to extreme observations
+-   Interquartile range (IQR) represented by rectangle with black line through it for the median
+-   Whiskers extend from the box to capture data that are between $Q_1$ and $Q_1 - 1.5 IQR$ and separately between $Q_3$ and $Q_3 + 1.5 IQR$
+-   An **outlier** is a value that appears extreme relative to the rest of the data
+    -   It is more than $1.5IQR$ away from $Q_1$ and $Q_3$
+:::
+
+::: {.column width="57%"}
+![](../img_slides/boxplot_CV.png){width="1100"}
+:::
+:::::
+
+## Boxplots
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "2-3"
+ggplot(data = frog, 
+       aes(x = clutch.volume)) + 
+  geom_boxplot() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 6
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = frog, 
+       aes(y = clutch.volume)) + 
+  geom_boxplot() 
+```
+:::
+:::::
+
+## We may want to transform data
+
+-   When working with strongly skewed data, it can be useful to apply a transformation
+
+-   Common to use the **natural log transformation** on skewed data 
+    
+    -   We typically just call this the "log transformation"
+
+    -   Especially for variables with many values clustered near 0 and other observations that are positive
+    
+-   Transformations are mostly used when we make certain assumptions about the distribution of our data
+    - For a lot of statistics methods, we assume the data is distributed normally
+    - So we may need to transform the data to make it normal!
+
+## Let's transform clutch volume!
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = frog, 
+       aes(x = clutch.volume)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = frog, 
+       aes(x = log(clutch.volume))) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Poll everywhere question 2 
+
+# Visualize categorical data
+
+## From Lesson 4: Example: hypertension prevalence (1/2)
+
+-   US CDC estimated that between 2011 and 2014[^1], 29% of the population in America had hypertension
+
+ 
+
+-   A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
+    -   However, this is **only the case if nothing else is known about the patient**
+
+[^1]: <https://www.cdc.gov/nchs/products/databriefs/db220.htm>
+
+
+## From Lesson 4: Example: hypertension prevalence
+
+- Prevalence of **hypertension varies significantly with age**
+    - Among adults aged 18-39, 7.3% have hypertension
+    - Adults aged 40-59, 32.2%
+    - Adults aged 60 or older, 64.9% have hypertension
+
+ 
+
+-   Knowing the age of a patient provides important information about the likelihood of hypertension
+    - Age and hypertension status are **not independent** (we will get into this)
+    
+-   While the probability of hypertension of a randomly chosen adult is 0.29...
+    
+    -   The **conditional probability** of hypertension in a person known to be 60 or older is 0.649
+
+ 
+
+## From Lesson 4: Contingency tables 
+
+- We can start looking at the **contingency table** for hypertension for different age groups
+  - **Contingency table:** type of data table that displays the frequency distribution of two or more categorical variables
+  
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_data <- data.frame(
+  Age_Group = c("18-39 years", "40 to 59 years", "Greater than 60 years", "Total"),
+  Hypertension = c(8836, 42109, 39917, 90862),
+  No_Hypertension = c(112206, 88663, 21589, 222458),
+  Total = c(121042, 130772, 61506, 313320)
+)
+
+# Generate table using kable
+kable(hyp_data, col.names = c("Age Group", "Hypertension", "No Hypertension", "Total"), 
+      caption = "Table: Contingency table showing hypertension status and age group, in
+thousands.")
+```
+
+## Let's look at each variable separately
+
+- The label "contingency tables" are usually reserved for when we have two variables in one table
+- When we have one variable, we often call these **frequency tables**
+  - Shows the count of observati
+
+
+## Barplots
+
+
+
+
+# Case study
+
+## Case Study Description
+
+-   In the US, individuals with developmental disabilities typically receive services and support from state governments.
+
+    -   California allocates funds to developmentally disabled residents through the *Department of Developmental Services (DDS)*
+    -   Recipients of DDS funds are referred to as "consumers."
+
+ 
+
+-   Dataset `dds.discr`
+
+    -   Sample of 1,000 DDS consumers (out of a total of \~ 250,000)
+    -   Data include [age, sex assigned at birth, race/ethnicity, and annual DDS financial support per consumer]{style="color:#C83532"}
+
+ 
+
+-   For now, we are going to explore these data with `R`
+
+-   See Section 1.7.1 in the textbook for more details
+
+## Load `dds.discr` dataset from `oibiostat` package
+
+-   The textbook's datasets are in the R package `oibiostat`
+
+-   Make sure the `oibiostat` package is installed before running the code below.
+
+-   Load the `oibiostat` package and the dataset `dds.discr`
+
+ 
+
+[**The code below needs to be run *every time* you restart R or render a Qmd file:**]{style="color:#BF396F"}
+
+```{r}
+library(oibiostat)
+data("dds.discr")
+```
+
+ 
+
+-   After loading the dataset `dds.discr` using `data("dds.discr")`, you will see `dds.discr` in the Data list of the Environment window.
+
+## `glimpse()`
+
+-   We previously used the base R structure command `str()` to get information about variable types in a dataset (in R03: R basics part 2)
+-   Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types.
+-   `glimpse()` tends to have nicer output for `tibbles` than `str()`
+
+```{r}
+library(tidyverse)
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+## Some things to note on this dataset
+
+```{r}
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+-   This happens in older datasets (and honestly some newer ones): gender and sex get conflated
+    -   I try to catch these issues before sharing datasets with you, but when we load datasets directly from the `oibiostat` package, I can't make these changes
+    -   If you are unfamiliar with the differences, please see [this NIH site on sex and gender](https://orwh.od.nih.gov/sex-gender)
+-   Also, race and ethnicity can be mislabeled
+    -   "White not hispanic" combines race and ethnicity
+    -   If you are unfamiliar with the differences, please see [this APA site on race and ethnicity](https://www.apa.org/topics/race-ethnicity)
+
+## `rename()`: one of the first things I usually do
+
+-   I want to rename the variable, gender, to sex and rename ethnicity to r_e (race and ethnicity)
+
+ 
+
+```{r}
+dds.discr1 = dds.discr %>% 
+  rename(sex_MF = gender, 
+         r_e = ethnicity)
+
+glimpse(dds.discr1)
+```
+
+## Histograms
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr1, 
+       aes(x = expenditures)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Histograms showing proportions
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4" 
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density)))  
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4-6"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density))) +  
+  scale_y_continuous(labels =   
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Density plots {visibility="hidden"}
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_density() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Boxplots
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr1, 
+       aes(x = age)) + 
+  geom_boxplot() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr1, 
+       aes(y = age)) + 
+  geom_boxplot() 
+```
+:::
+:::::
+
+# Categorical data
+
+## Barplots
+
+::::: columns
+::: {.column width="50%"}
+Counts (below) vs.\
+percentages (right)
+
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, 
+       aes(x = r_e)) +
+  geom_bar() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5
+#| fig.width: 6
+#| code-line-numbers: "3-6"
+ggplot(data = dds.discr1, 
+       aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop),  
+               group = 1)) + 
+  scale_y_continuous(labels =  
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Adding more to plots!
+
+Tilt text so we can read it!
+
+```{r}
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "3"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+```
+
+## Adding more to plots!
+
+We can change labels!
+
+```{r}
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "4-5"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Race and ethnicity", y = "Proportion", 
+       title = "Proportion of individuals receiving DDS by race and ethnicity")
+```
+
+## Adding more to plots!
+
+Increase text size so we can read it!
+
+```{r}
+#| fig.height: 8
+#| fig.width: 14
+#| code-line-numbers: "3-5"
+ggplot(data = dds.discr1, aes(x = r_e)) +
+  geom_bar(aes(y = stat(prop), group = 1)) +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1, size = 35),
+        axis.title = element_text(size = 35))
+```
+
+# Meike's notes
+
+## Getting to know the dataset
+
+```{r}
+dim(dds.discr)
+names(dds.discr)
+length(unique(dds.discr$id)) # How many unique id's are there?
+```
+
+## `str()` structure
+
+::: {style="font-size: 80%;"}
+-   We previously used the base R structure command `str()` to get information about variable types in a dataset.
+-   Note this dataset is a `tibble` instead of a `data.frame`
+:::
+
+```{r}
+str(dds.discr)      # base R
+```
+
+<!-- ![](../img_slides/dds.discr_str.png){fig-align="center"} -->
+
+## `glimpse()`
+
+::: {style="font-size: 80%;"}
+**New: `glimpse()`**
+
+-   Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types.
+-   `glimpse()` tends to have nicer output for `tibbles` than `str()`
+:::
+
+```{r}
+library(tidyverse)
+glimpse(dds.discr)  # from tidyverse package (dplyr)
+```
+
+<!-- ![](../img_slides/dds.discr_glimpse.png){fig-align="center"} -->
+
+## `summary()`
+
+::: {style="font-size: 80%;"}
+-   We previously used the base R structure command `summary()` to get summary information about variables
+:::
+
+```{r}
+summary(dds.discr)      # base R
+```
+
+## `tbl_summary()`: summary table
+
+:::::: columns
+:::: {.column width="50%"}
+::: {style="font-size: 80%;"}
+-   **New:** Use `tbl_summary()` from the `gtsummary` package to get summary information
+:::
+
+```{r}
+#| eval: false
+# library(gtsummary)
+tbl_summary(dds.discr)
+```
+::::
+
+::: {.column width="50%"}
+![](../img_slides/dds.discr_gtsummary.jpg){fig-align="center" height="650"}
+:::
+::::::
+
+# Visualize numerical variables with `ggplot`
+
+::::: columns
+::: {.column width="40%"}
+![[ggplot](https://ggplot2.tidyverse.org/index.html)](../img_slides/ggplotlogo.png){fig-align="center" height="400"}
+:::
+
+::: {.column width="60%"}
+![[Artwork by \@allison_horst](https://allisonhorst.com/)](../img_slides/ggplot2_masterpiece.png){fig-align="center" height="400"}
+:::
+:::::
+
+## What data (variables) are included in the plot below?
+
+![](../img_slides/ggplot_basics_from_ppt_figure_only.png){fig-align="center"}
+
+## Basics of a ggplot
+
+![](../img_slides/ggplot_basics_from_ppt.png){fig-align="center"}
+
+## Grammar of ggplot2
+
+![[Kieran Healy](https://github.com/rstudio-conf-2020/dataviz)](../img_slides/khealy_ggplot1.png){fig-align="center"}
+
+## Histograms
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+ggplot(data = dds.discr, 
+       aes(x = expenditures)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Histograms showing proportions
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4" 
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density)))  
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "4-6"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram(
+    aes(y = stat(density))) +  
+  scale_y_continuous(labels =   
+      scales::percent_format())  
+```
+:::
+:::::
+
+## Distribution shapes
+
+![](../img_slides/distribution_shapes.png){fig-align="center"}
+
+## Density plots
+
+What is being measured on the vertical axes?
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_density() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram() 
+```
+:::
+:::::
+
+## Dot plots
+
+::: {style="font-size: 80%;"}
+-   Better for smaller samples
+-   What is being measured on the vertical axes?
+:::
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_dotplot(binwidth =1) 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 7
+#| code-line-numbers: "3"
+ggplot(data = dds.discr, 
+       aes(x = age)) +
+  geom_histogram(binwidth =1) 
+```
+:::
+:::::
+
+## Boxplots
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr, 
+       aes(x = age)) + 
+  geom_boxplot() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.height: 5.5
+#| fig.width: 5
+#| code-line-numbers: "2-3"
+ggplot(data = dds.discr, 
+       aes(y = age)) + 
+  geom_boxplot() 
+```
+:::
+:::::
+
+## Boxplots: 5 number summary visualization
+
+<!-- ![](../img_slides/boxplot_no_outliers.png) -->
+
+No outliers: ![https://www.simplypsychology.org/boxplots.html](../img_slides/boxplot_no_outliers.png){fig-align="center" height="280"}
+
+With outliers: ![https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51](../img_slides/boxplot_w_outliers.png){fig-align="center" height="300"}
