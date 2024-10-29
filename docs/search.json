@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR08\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto?\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR10\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto?\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -1866,14 +1866,14 @@
     "href": "homework/HW_05.html",
     "title": "Homework 5",
     "section": "",
-    "text": "Please turn in this homework on Sakai. Please submit your homework in pdf format if you are not rendering a Quarto document. If you are using a Quarto doc to render your full homework, then you can keep it as an html! You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc. You do not need to work in a Quarto doc for this homework!!"
+    "text": "Please turn in this homework on Sakai. This homework must be submitted using a Quarto document. Please keep it rendered as an html! I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!\nYou can download the .qmd file for this assignment from Github\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_05.html#directions",
     "href": "homework/HW_05.html#directions",
     "title": "Homework 5",
     "section": "",
-    "text": "Please turn in this homework on Sakai. Please submit your homework in pdf format if you are not rendering a Quarto document. If you are using a Quarto doc to render your full homework, then you can keep it as an html! You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.\nYou can download the .qmd file for this assignment from Github if you want to work in a Quarto doc. You do not need to work in a Quarto doc for this homework!!"
+    "text": "Please turn in this homework on Sakai. This homework must be submitted using a Quarto document. Please keep it rendered as an html! I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!\nYou can download the .qmd file for this assignment from Github\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_05.html#mental-health-part-i",
@@ -1935,15 +1935,15 @@
     "objectID": "homework/HW_05.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_05.html#load-all-the-packages-you-need-below-here.",
     "title": "Homework 5",
-    "section": "4.6 Load all the packages you need below here.",
-    "text": "4.6 Load all the packages you need below here."
+    "section": "3.6 Load all the packages you need below here.",
+    "text": "3.6 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_05.html#r1-youth-weights",
     "href": "homework/HW_05.html#r1-youth-weights",
     "title": "Homework 5",
-    "section": "4.7 R1: Youth weights",
-    "text": "4.7 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n4.7.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n4.7.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n4.7.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n4.7.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n4.7.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n4.7.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
+    "section": "1.5 R1: Youth weights",
+    "text": "1.5 R1: Youth weights\nIn this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below.\n\n\n\n\n\n\nImportant\n\n\n\nYou will need to install and load the moderndive R package to use the rep_sample_n() command from the class notes.\n\n\n\n1.5.1 Use the set.seed() command to set a randomization seed. Use whatever number you want for the seed.\n\n\n1.5.2 Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.\n\n\n1.5.3 Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.\n\n\n1.5.4 Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.\n\n\n1.5.5 Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?\n\n\n1.5.6 What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?"
   },
   {
     "objectID": "homework/HW_05.html#r2-swim-times",
@@ -4848,7 +4848,7 @@
     "href": "homework/HW_05.html#heights-of-adults",
     "title": "Homework 5",
     "section": "4.2 Heights of adults",
-    "text": "4.2 Heights of adults"
+    "text": "4.2 Heights of adults\nPlease note that the wording of this problem is a little confusing. The textbook uses the phrase “sample distribution,” which is very close to the phrasing we’ve used to discuss the “sampling distribution” to refer to the sampling distribution of the sample means. However, they are using “sample distribution” to refer to the distribution of the sample of 507 active individuals.\n\n\n\n\n\n\nImportant\n\n\n\nUse LaTeX code to write out any math work that you would use in part c and part e\n\n\n\nHint for part a and b: point estimates are sample statistics\nHint for part c: It would be helpful to calculate the z-score\nHint for part d: Would it be exactly the same?\nHint for part e: Using the standard deviation from our sample, can we get an estimate of the standard error for the sampling distribution of the sample means? Compute that standard error."
   },
   {
     "objectID": "homework/HW_05.html#clinican-time-with-patients",
@@ -17720,85 +17720,85 @@
     "objectID": "homework/HW_05.html#load-all-the-packages-you-need-below-here",
     "href": "homework/HW_05.html#load-all-the-packages-you-need-below-here",
     "title": "Homework 5",
-    "section": "2.1 Load all the packages you need below here",
-    "text": "2.1 Load all the packages you need below here"
+    "section": "1.2 Load all the packages you need below here",
+    "text": "1.2 Load all the packages you need below here"
   },
   {
     "objectID": "homework/HW_05.html#what-are-the-dimensions-and-column-names-of-the-dataset",
     "href": "homework/HW_05.html#what-are-the-dimensions-and-column-names-of-the-dataset",
     "title": "Homework 5",
-    "section": "3.1 What are the dimensions and column names of the dataset?",
-    "text": "3.1 What are the dimensions and column names of the dataset?"
+    "section": "2.1 What are the dimensions and column names of the dataset?",
+    "text": "2.1 What are the dimensions and column names of the dataset?"
   },
   {
     "objectID": "homework/HW_05.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
     "href": "homework/HW_05.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
     "title": "Homework 5",
-    "section": "3.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?",
-    "text": "3.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?"
+    "section": "2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?",
+    "text": "2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?"
   },
   {
     "objectID": "homework/HW_05.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
     "href": "homework/HW_05.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
     "title": "Homework 5",
-    "section": "3.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.",
-    "text": "3.3 Using numerical and graphical summaries, describe the distribution of ages among study participants."
+    "section": "2.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.",
+    "text": "2.3 Using numerical and graphical summaries, describe the distribution of ages among study participants."
   },
   {
     "objectID": "homework/HW_05.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
     "href": "homework/HW_05.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
     "title": "Homework 5",
-    "section": "3.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.",
-    "text": "3.4 Using numerical and graphical summaries, describe the distribution of heights among study participants."
+    "section": "2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.",
+    "text": "2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants."
   },
   {
     "objectID": "homework/HW_05.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
     "href": "homework/HW_05.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
     "title": "Homework 5",
-    "section": "3.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?",
-    "text": "3.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question."
+    "section": "2.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?",
+    "text": "2.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question."
   },
   {
     "objectID": "homework/HW_05.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
     "href": "homework/HW_05.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
     "title": "Homework 5",
-    "section": "3.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data.",
-    "text": "3.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
+    "section": "2.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data.",
+    "text": "2.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
   },
   {
     "objectID": "homework/HW_05.html#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
     "href": "homework/HW_05.html#use-the-mutate-command-explained-on-slide-23-pdf-pg-22-of-the-day-3-part-3-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
     "title": "Homework 5",
-    "section": "4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
-    "text": "4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
+    "section": "3.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
+    "text": "3.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
   },
   {
     "objectID": "homework/HW_05.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
     "href": "homework/HW_05.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
     "title": "Homework 5",
-    "section": "4.2 What proportion of Americans at least 25 years of age are college graduates?",
-    "text": "4.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old."
+    "section": "3.2 What proportion of Americans at least 25 years of age are college graduates?",
+    "text": "3.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old."
   },
   {
     "objectID": "homework/HW_05.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
     "href": "homework/HW_05.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
     "title": "Homework 5",
-    "section": "4.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?",
-    "text": "4.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
+    "section": "3.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?",
+    "text": "3.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
   },
   {
     "objectID": "homework/HW_05.html#two-way-table",
     "href": "homework/HW_05.html#two-way-table",
     "title": "Homework 5",
-    "section": "4.4 Two-way table",
-    "text": "4.4 Two-way table\nConstruct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?"
+    "section": "3.4 Two-way table",
+    "text": "3.4 Two-way table\nConstruct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?"
   },
   {
     "objectID": "homework/HW_05.html#relative-risk",
     "href": "homework/HW_05.html#relative-risk",
     "title": "Homework 5",
-    "section": "4.5 Relative Risk",
-    "text": "4.5 Relative Risk\nIn this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
+    "section": "3.5 Relative Risk",
+    "text": "3.5 Relative Risk\nIn this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
   },
   {
     "objectID": "homework/HW_05.html#load-all-the-packages-you-need-below-here.-1",
@@ -17924,7 +17924,7 @@
     "href": "homework/HW_05.html#complete-the-mid-quarter-feedback",
     "title": "Homework 5",
     "section": "0.1 Complete the mid-quarter feedback",
-    "text": "0.1 Complete the mid-quarter feedback\nhttps://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURVc3WkpWQVk5OVQ1OUhSMkg0UUZLUjZJOC4u\n\nR & LaTeX code for probability distributions\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "0.1 Complete the mid-quarter feedback\nhttps://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURVc3WkpWQVk5OVQ1OUhSMkg0UUZLUjZJOC4u"
   },
   {
     "objectID": "homework/HW_04.html#complete-the-group-evaluation",
@@ -18366,5 +18366,222 @@
     "title": "Lesson 7: Data visualization of a single variable",
     "section": "Boxplots: 5 number summary visualization",
     "text": "Boxplots: 5 number summary visualization\n\nNo outliers: \nWith outliers: \n\n\nLesson 7 Slides"
+  },
+  {
+    "objectID": "homework/HW_05.html#r1-nhanes",
+    "href": "homework/HW_05.html#r1-nhanes",
+    "title": "Homework 5",
+    "section": "1.3 R1: NHANES",
+    "text": "1.3 R1: NHANES\n\nBelow you will be using the dataset called NHANES from the NHANES R package.\nInstall and load the NHANES package using the code below.\n\nThis loads the dataset also called NHANES that is within the NHANES package.\n\n\n\ninstall.packages(\"NHANES\")\n\n\nlibrary(NHANES)\ndata(\"NHANES\")\n\n\nThe National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.\n\n\nTo view the complete list of study variables and their descriptions, access the NHANES documentation page with ?NHANES.\n\nYou must first install the NHANES package to see the help files.\n\n\n\n1.3.1 What are the dimensions and column names of the dataset?\nHint: Use functions covered in the R lesson on Basics in R (part 2)\n\n\n1.3.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?\nThis will require a new function called unique()\n\n\n1.3.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.\n\n\n1.3.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.\n\n\n1.3.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question.\n\n\n1.3.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
+  },
+  {
+    "objectID": "homework/HW_05.html#r2-nhanes",
+    "href": "homework/HW_05.html#r2-nhanes",
+    "title": "Homework 5",
+    "section": "1.4 R2: NHANES",
+    "text": "1.4 R2: NHANES\nContinue using the same NHANES data as for the previous problem.\n\n\n\n\n\n\nWarning\n\n\n\n\nFor most of the summary statistic base R commands (such as mean(), sd(), median(), etc.), you will get NA as the result if there are missing values.\nIn order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the na.rm = TRUE option within the parentheses of the command: mean(dataset$variablename, na.rm = TRUE).\n\n\n\n\n1.4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces.\n\n\n\n\n\n1.4.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old.\n\n\n1.4.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?\n\n\n1.4.4 Two-way table\nConstruct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?\n\n\n1.4.5 Relative Risk\nIn this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
+  },
+  {
+    "objectID": "homework/HW_05.html#hen-eggs",
+    "href": "homework/HW_05.html#hen-eggs",
+    "title": "Homework 5",
+    "section": "0.2 4.3 Hen eggs",
+    "text": "0.2 4.3 Hen eggs"
+  },
+  {
+    "objectID": "homework/HW_05.html#add-something-with-latex",
+    "href": "homework/HW_05.html#add-something-with-latex",
+    "title": "Homework 5",
+    "section": "1.1 Add something with LaTeX",
+    "text": "1.1 Add something with LaTeX"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#introduction-to-latex-in-quarto",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#introduction-to-latex-in-quarto",
+    "title": "R07: LaTeX",
+    "section": "Introduction to LaTeX in Quarto",
+    "text": "Introduction to LaTeX in Quarto\n\nQuarto allows LaTeX syntax for math expressions.\nSupports inline math, display equations, and complex formatting.\nUseful for scientific writing, presentations, and reports.\n\n \n\nWhat is LaTeX?\n\nIt is a form of coding within qmd files (and many other types of files) that helps us write equations in an easily readable format"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#inline-math",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#inline-math",
+    "title": "R07: LaTeX",
+    "section": "Inline Math",
+    "text": "Inline Math\n\nTo include inline math, wrap your LaTeX code in $...$\nExample: \\(a^2 + b^2 = c^2\\) is written as $a^2 + b^2 = c^2$\nThis is great for brief equations within text"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#display-equations",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#display-equations",
+    "title": "R07: LaTeX",
+    "section": "Display Equations",
+    "text": "Display Equations\n\nFor equations that should be centered on their own line, use $$...$$.\nExample: We can make an equation with a new line using $$E = mc^2$$\n\\[E = mc^2\\]\nThis makes the equation stand out"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#matrices-and-aligning-equations",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#matrices-and-aligning-equations",
+    "title": "R07: LaTeX",
+    "section": "Matrices and Aligning Equations",
+    "text": "Matrices and Aligning Equations\n\nLaTeX supports creating matrices, which can be used in Quarto as well.\n\\[\n\\mathbf{A} = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\n\\]\nTo align multiple equations, use the align environment:\n\n\n\n$$\n\\begin{align}\nx + y &= 10 \\\\\nx - y &= 6\n\\end{align}\n$$\n\n\\[\n  \\begin{align}\n  x + y &= 10 \\\\\n  x - y &= 6\n  \\end{align}\n  \\]"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#symbols-and-greek-letters",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#symbols-and-greek-letters",
+    "title": "R07: LaTeX",
+    "section": "Symbols and Greek Letters",
+    "text": "Symbols and Greek Letters\n\nQuarto LaTeX can include Greek letters and other symbols\n\n\n\nGreek letters\n\nmu (\\(\\mu\\)): \\mu\nsigma (\\(\\sigma\\)): \\sigma\nbeta (\\(\\beta\\)): \\beta\nlambda (\\(\\lambda\\)): \\lambda\n\n\nMath symbols\n\nGreater than (\\(&gt;\\)): &gt;\nGreater than or equal to (\\(\\geq\\)): \\geq\nNot equal to (\\(\\neq\\)): \\neq\nMultiplication\n\n\\(\\cdot\\) from \\cdot\n\\(\\times\\) from \\times\n\n\n\n\n\nOther Greek letters and math symbols"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#example-of-a-complex-expression",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#example-of-a-complex-expression",
+    "title": "R07: LaTeX",
+    "section": "Example of a Complex Expression",
+    "text": "Example of a Complex Expression\n\nExample using more advanced formatting:\n\\[\nf(x) = \\frac{1}{\\sqrt{2 \\pi \\sigma^2}} e^{-\\frac{(x - \\mu)^2}{2 \\sigma^2}}\n\\]\nThis is a normal distribution formula."
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#practical-uses-of-latex-in-quarto",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#practical-uses-of-latex-in-quarto",
+    "title": "R07: LaTeX",
+    "section": "Practical Uses of LaTeX in Quarto",
+    "text": "Practical Uses of LaTeX in Quarto\n\nWriting technical documents with lots of math\nFormatting statistics for reports and papers\nPresenting mathematical concepts in presentations like this one"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#summary",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#summary",
+    "title": "R07: LaTeX",
+    "section": "Summary",
+    "text": "Summary\n\nQuarto supports LaTeX for math in both inline and display modes.\nYou can use symbols, align equations, and format matrices.\nPractice these techniques to enhance your Quarto documents!"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#resources",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#resources",
+    "title": "R07: LaTeX",
+    "section": "Resources",
+    "text": "Resources\n\nQuarto Documentation\nLaTeX Math Symbols\nList of Greek letters and math symbols\nAriel’s guide from my previous course\n\n\n\nR07 Slides"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#aligning-equations",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#aligning-equations",
+    "title": "R07: LaTeX",
+    "section": "Aligning Equations",
+    "text": "Aligning Equations\n\nTo align multiple equations, use the align environment\n\n \n\n\nLaTeX:\n$$\n\\begin{align}\nx + y &= 10 \\\\\nx - 3y &= 6\n\\end{align}\n$$\n\nOutput in html:\n\\[\n\\begin{align}\nx + y &= 10 \\\\\nx - 3y &= 6\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#open-a-new-qmd-file",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#open-a-new-qmd-file",
+    "title": "R07: LaTeX",
+    "section": "Open a new qmd file",
+    "text": "Open a new qmd file\n\nYou can follow along in the file\nSource vs. Visual: Source is often easier when using LaTeX, but it works in Visual\nLaTeX is written in the text portion of a qmd, NOT the code portion\nWe use $’s to tell our Quarto doc where we are writing LaTeX code"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#fractions-in-latex",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#fractions-in-latex",
+    "title": "R07: LaTeX",
+    "section": "Fractions in LaTeX",
+    "text": "Fractions in LaTeX\n\nTo create fractions, use the \\frac{numerator}{denominator} command\n\n\n\n\n\n\n\nLaTeX:\n$$\\frac{a}{b}$$\n\nOutput in html:\n\\[\\frac{a}{b}\\]\n\n\n\n\n\n\n\n\n$$\\frac{\\sqrt{a^2 + b^2}}{c}$$\n\n\\[\\frac{\\sqrt{a^2 + b^2}}{c}\\]\n\n\n\n\n\n\n\n\n$$\\frac{\\sum_{i=1}^n x_i}{n}$$\n\n\\[\\frac{\\sum_{i=1}^n x_i}{n}\\]\n\n\n\n\n\nFractions can be used in both inline and display modes."
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#subscripts-and-superscripts-in-latex",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#subscripts-and-superscripts-in-latex",
+    "title": "R07: LaTeX",
+    "section": "Subscripts and Superscripts in LaTeX",
+    "text": "Subscripts and Superscripts in LaTeX\n\n\n\nTo create subscripts, use _ (underscore).\n\nExample: $x_1$, $y_{ij}$ render as \\(x_1\\), \\(y_{ij}\\)\n\n\n\n\nTo create superscripts, use ^ (caret).\n\nExample: $x^2$, $e^{5i}$ render as \\(x^2\\), \\(e^{i5i}\\)\n\n\n\n\n\nUse {} for multiple characters in subscripts or superscripts\n\n \n\n\n\n\nLaTeX:\n$$x_i^2 + y_j^3$$\n\nOutput in html:\n\\[x_i^2 + y_j^3\\]\n\n\n\n\n\n\n\n\n$\\sum_{i=1}^n x_i^2$\n\n\\(\\sum_{i=1}^n x_i^2\\)\n\n\n\n\n\n\n\n\n$$\\sum_{i=1}^n x_i^2$$\n\n\\[\\sum_{i=1}^n x_i^2\\]"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#what-you-might-use-in-homework-5",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#what-you-might-use-in-homework-5",
+    "title": "R07: LaTeX",
+    "section": "What you might use in Homework 5",
+    "text": "What you might use in Homework 5\n\n\nLaTeX:\n$$SE = \\frac{\\sigma}{\\sqrt{n}}$$\n\nOutput in html:\n\\[SE = \\frac{\\sigma}{\\sqrt{n}}\\]\n\n\n\n\n\n\n$$z = \\frac{x - \\mu}{\\sigma}$$\n\n\\[z = \\frac{x - \\mu}{\\sigma}\\]"
+  },
+  {
+    "objectID": "lessons/R08_Latex/R07_LaTeX.html#text-within-latex",
+    "href": "lessons/R08_Latex/R07_LaTeX.html#text-within-latex",
+    "title": "R07: LaTeX",
+    "section": "Text within LaTeX",
+    "text": "Text within LaTeX\n\nLaTeX allows you to insert text within mathematical expressions using \\text{...}.\nThis is useful for labeling variables or adding context to equations\n\n\n\n\n\n\n\nLaTeX:\n$$y = mx + \\text{intercept}$$\n\nOutput:\n\\[\ny = mx + \\text{intercept}\n\\]\n\n\n\n\n\n\n\n\n$$P(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total outcomes}}$$\n\n\\[\nP(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total outcomes}}\n\\]"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#introduction-to-latex-in-quarto",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#introduction-to-latex-in-quarto",
+    "title": "R07: LaTeX",
+    "section": "Introduction to LaTeX in Quarto",
+    "text": "Introduction to LaTeX in Quarto\n\nQuarto allows LaTeX syntax for math expressions.\nSupports inline math, display equations, and complex formatting.\nUseful for scientific writing, presentations, and reports.\n\n \n\nWhat is LaTeX?\n\nIt is a form of coding within qmd files (and many other types of files) that helps us write equations in an easily readable format"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#open-a-new-qmd-file",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#open-a-new-qmd-file",
+    "title": "R07: LaTeX",
+    "section": "Open a new qmd file",
+    "text": "Open a new qmd file\n\nYou can follow along in the file\nSource vs. Visual: Source is often easier when using LaTeX, but it works in Visual\nLaTeX is written in the text portion of a qmd, NOT the code portion\nWe use $’s to tell our Quarto doc where we are writing LaTeX code"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#inline-math",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#inline-math",
+    "title": "R07: LaTeX",
+    "section": "Inline Math",
+    "text": "Inline Math\n\nTo include inline math, wrap your LaTeX code in $...$\nExample: \\(a^2 + b^2 = c^2\\) is written as $a^2 + b^2 = c^2$\nThis is great for brief equations within text"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#display-equations",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#display-equations",
+    "title": "R07: LaTeX",
+    "section": "Display Equations",
+    "text": "Display Equations\n\nFor equations that should be centered on their own line, use $$...$$.\nExample: We can make an equation with a new line using $$E = mc^2$$\n\\[E = mc^2\\]\nThis makes the equation stand out"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#symbols-and-greek-letters",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#symbols-and-greek-letters",
+    "title": "R07: LaTeX",
+    "section": "Symbols and Greek Letters",
+    "text": "Symbols and Greek Letters\n\nQuarto LaTeX can include Greek letters and other symbols\n\n\n\nGreek letters\n\nmu (\\(\\mu\\)): \\mu\nsigma (\\(\\sigma\\)): \\sigma\nbeta (\\(\\beta\\)): \\beta\nlambda (\\(\\lambda\\)): \\lambda\n\n\nMath symbols\n\nGreater than (\\(&gt;\\)): &gt;\nGreater than or equal to (\\(\\geq\\)): \\geq\nNot equal to (\\(\\neq\\)): \\neq\nMultiplication\n\n\\(\\cdot\\) from \\cdot\n\\(\\times\\) from \\times\n\n\n\n\n\nOther Greek letters and math symbols"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#subscripts-and-superscripts-in-latex",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#subscripts-and-superscripts-in-latex",
+    "title": "R07: LaTeX",
+    "section": "Subscripts and Superscripts in LaTeX",
+    "text": "Subscripts and Superscripts in LaTeX\n\n\n\nTo create subscripts, use _ (underscore).\n\nExample: $x_1$, $y_{ij}$ render as \\(x_1\\), \\(y_{ij}\\)\n\n\n\n\nTo create superscripts, use ^ (caret).\n\nExample: $x^2$, $e^{5i}$ render as \\(x^2\\), \\(e^{i5i}\\)\n\n\n\n\n\nUse {} for multiple characters in subscripts or superscripts\n\n \n\n\n\n\nLaTeX:\n$$x_i^2 + y_j^3$$\n\nOutput in html:\n\\[x_i^2 + y_j^3\\]\n\n\n\n\n\n\n\n\n$\\sum_{i=1}^n x_i^2$\n\n\\(\\sum_{i=1}^n x_i^2\\)\n\n\n\n\n\n\n\n\n$$\\sum_{i=1}^n x_i^2$$\n\n\\[\\sum_{i=1}^n x_i^2\\]"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#fractions-in-latex",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#fractions-in-latex",
+    "title": "R07: LaTeX",
+    "section": "Fractions in LaTeX",
+    "text": "Fractions in LaTeX\n\nTo create fractions, use the \\frac{numerator}{denominator} command\n\n\n\n\n\n\n\nLaTeX:\n$$\\frac{a}{b}$$\n\nOutput in html:\n\\[\\frac{a}{b}\\]\n\n\n\n\n\n\n\n\n$$\\frac{\\sqrt{a^2 + b^2}}{c}$$\n\n\\[\\frac{\\sqrt{a^2 + b^2}}{c}\\]\n\n\n\n\n\n\n\n\n$$\\frac{\\sum_{i=1}^n x_i}{n}$$\n\n\\[\\frac{\\sum_{i=1}^n x_i}{n}\\]\n\n\n\n\n\nFractions can be used in both inline and display modes."
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#text-within-latex",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#text-within-latex",
+    "title": "R07: LaTeX",
+    "section": "Text within LaTeX",
+    "text": "Text within LaTeX\n\nLaTeX allows you to insert text within mathematical expressions using \\text{...}.\nThis is useful for labeling variables or adding context to equations\n\n\n\n\n\n\n\nLaTeX:\n$$y = mx + \\text{intercept}$$\n\nOutput:\n\\[\ny = mx + \\text{intercept}\n\\]\n\n\n\n\n\n\n\n\n$$P(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total outcomes}}$$\n\n\\[\nP(A) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total outcomes}}\n\\]"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#aligning-equations",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#aligning-equations",
+    "title": "R07: LaTeX",
+    "section": "Aligning Equations",
+    "text": "Aligning Equations\n\nTo align multiple equations, use the align environment\n\n \n\n\nLaTeX:\n$$\n\\begin{align}\nx + y &= 10 \\\\\nx - 3y &= 6\n\\end{align}\n$$\n\nOutput in html:\n\\[\n\\begin{align}\nx + y &= 10 \\\\\nx - 3y &= 6\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#what-you-might-use-in-homework-5",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#what-you-might-use-in-homework-5",
+    "title": "R07: LaTeX",
+    "section": "What you might use in Homework 5",
+    "text": "What you might use in Homework 5\n\n\nLaTeX:\n$$SE = \\frac{\\sigma}{\\sqrt{n}}$$\n\nOutput in html:\n\\[SE = \\frac{\\sigma}{\\sqrt{n}}\\]\n\n\n\n\n\n\n$$z = \\frac{x - \\mu}{\\sigma}$$\n\n\\[z = \\frac{x - \\mu}{\\sigma}\\]"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#practical-uses-of-latex-in-quarto",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#practical-uses-of-latex-in-quarto",
+    "title": "R07: LaTeX",
+    "section": "Practical Uses of LaTeX in Quarto",
+    "text": "Practical Uses of LaTeX in Quarto\n\nWriting technical documents with lots of math\nFormatting statistics for reports and papers\nPresenting mathematical concepts in presentations like this one"
+  },
+  {
+    "objectID": "lessons/R07_LaTeX/R07_LaTeX.html#resources",
+    "href": "lessons/R07_LaTeX/R07_LaTeX.html#resources",
+    "title": "R07: LaTeX",
+    "section": "Resources",
+    "text": "Resources\n\nQuarto Documentation\nLaTeX Math Symbols\nList of Greek letters and math symbols\nAriel’s guide from my previous course\n\n\n\nR07 Slides"
   }
 ]

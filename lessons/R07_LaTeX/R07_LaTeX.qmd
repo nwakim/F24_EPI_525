@@ -1,0 +1,368 @@
+---
+title: "R07: LaTeX"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "10/30/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R07 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+## Introduction to LaTeX in Quarto
+
+- Quarto allows LaTeX syntax for math expressions.
+- Supports inline math, display equations, and complex formatting.
+- Useful for scientific writing, presentations, and reports.
+
+ 
+
+- What is LaTeX?
+  - It is a form of coding within qmd files (and many other types of files) that helps us write equations in an easily readable format
+
+## Open a new qmd file
+
+- You can follow along in the file
+- Source vs. Visual: Source is often easier when using LaTeX, but it works in Visual
+- LaTeX is written in the text portion of a qmd, NOT the code portion
+- We use `$`'s to tell our Quarto doc where we are writing LaTeX code
+
+## Inline Math
+
+- To include inline math, wrap your LaTeX code in `$...$`
+- Example: $a^2 + b^2 = c^2$ is written as `$a^2 + b^2 = c^2$`
+- This is great for brief equations within text
+
+
+## Display Equations
+
+- For equations that should be centered on their own line, use `$$...$$`.
+- Example: We can make an equation with a new line using `$$E = mc^2$$`
+  
+  $$E = mc^2$$
+  
+- This makes the equation stand out
+
+
+## Symbols and Greek Letters
+
+- Quarto LaTeX can include Greek letters and other symbols
+
+::: columns
+::: column
+**Greek letters**
+
+- mu ($\mu$): `\mu`
+- sigma ($\sigma$): `\sigma`
+- beta ($\beta$): `\beta`
+- lambda ($\lambda$): `\lambda`
+
+:::
+
+::: column
+**Math symbols**
+
+- Greater than ($>$): `>`
+- Greater than or equal to ($\geq$): `\geq`
+- Not equal to ($\neq$): `\neq`
+- Multiplication
+  - $\cdot$ from `\cdot`
+  - $\times$ from `\times`
+
+:::
+:::
+
+- [Other Greek letters and math symbols](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols)
+
+## Subscripts and Superscripts in LaTeX
+
+::: columns
+::: column
+- To create **subscripts**, use `_` (underscore).
+  - Example: `$x_1$`, `$y_{ij}$` render as $x_1$, $y_{ij}$
+
+:::
+::: column
+- To create **superscripts**, use `^` (caret).
+  - Example: `$x^2$`, `$e^{5i}$` render as $x^2$, $e^{i5i}$
+
+:::
+:::
+
+- Use `{}` for multiple characters in subscripts or superscripts
+
+ 
+
+::: columns
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="40%"}
+
+LaTeX:
+
+`$$x_i^2 + y_j^3$$`
+:::
+::: {.column width="15%"}
+
+Output in html:
+
+$$x_i^2 + y_j^3$$
+
+:::
+
+::: {.column width="15%"}
+:::
+
+:::
+
+::: columns
+::: {.column width="15%"}
+:::
+
+::: {.column width="40%"}
+
+`$\sum_{i=1}^n x_i^2$`
+
+:::
+::: {.column width="15%"}
+
+$\sum_{i=1}^n x_i^2$
+:::
+::: {.column width="30%"}
+:::
+:::
+
+::: columns
+::: {.column width="15%"}
+:::
+
+::: {.column width="40%"}
+
+`$$\sum_{i=1}^n x_i^2$$`
+
+:::
+::: {.column width="15%"}
+
+$$\sum_{i=1}^n x_i^2$$
+:::
+::: {.column width="30%"}
+:::
+:::
+
+
+## Fractions in LaTeX
+
+- To create fractions, use the `\frac{numerator}{denominator}` command
+
+\
+
+::: columns
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="40%"}
+
+LaTeX:
+
+`$$\frac{a}{b}$$`
+:::
+::: {.column width="30%"}
+
+Output in html:
+
+$$\frac{a}{b}$$
+
+:::
+
+::: {.column width="15%"}
+:::
+
+:::
+
+::: columns
+::: {.column width="15%"}
+:::
+
+::: {.column width="40%"}
+
+`$$\frac{\sqrt{a^2 + b^2}}{c}$$`
+
+:::
+::: {.column width="30%"}
+
+$$\frac{\sqrt{a^2 + b^2}}{c}$$
+:::
+::: {.column width="15%"}
+:::
+:::
+
+::: columns
+::: {.column width="15%"}
+:::
+
+::: {.column width="40%"}
+
+`$$\frac{\sum_{i=1}^n x_i}{n}$$`
+
+:::
+::: {.column width="30%"}
+
+$$\frac{\sum_{i=1}^n x_i}{n}$$
+:::
+::: {.column width="15%"}
+:::
+:::
+
+
+- Fractions can be used in both inline and display modes.
+
+## Text within LaTeX
+
+- LaTeX allows you to insert text within mathematical expressions using `\text{...}`.
+- This is useful for labeling variables or adding context to equations
+
+\
+
+::: columns
+::: {.column width="10%"}
+:::
+::: {.column width="40%"}
+
+LaTeX:
+
+`$$y = mx + \text{intercept}$$`
+
+:::
+::: {.column width="30%"}
+
+Output:
+
+$$
+y = mx + \text{intercept}
+$$
+
+:::
+::: {.column width="15%"}
+:::
+:::
+
+::: columns
+::: {.column width="10%"}
+:::
+::: {.column width="40%"}
+
+`$$P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total outcomes}}$$`
+
+:::
+::: {.column width="30%"}
+
+$$
+P(A) = \frac{\text{Number of favorable outcomes}}{\text{Total outcomes}}
+$$
+
+:::
+::: {.column width="15%"}
+:::
+:::
+
+
+
+## Aligning Equations
+
+- To align multiple equations, use the `align` environment
+
+ 
+
+::: columns
+::: {.column width="30%"}
+
+LaTeX:
+
+`$$`
+  
+`\begin{align}`
+  
+`x + y &= 10 \\`
+  
+`x - 3y &= 6`
+  
+`\end{align}`
+  
+`$$`
+:::
+::: {.column width="30%"}
+
+Output in html:
+
+$$
+\begin{align}
+x + y &= 10 \\
+x - 3y &= 6
+\end{align}
+$$
+:::
+:::
+
+## What you might use in Homework 5
+
+::: columns
+::: {.column width="45%"}
+
+LaTeX:
+
+`$$SE = \frac{\sigma}{\sqrt{n}}$$`
+:::
+::: {.column width="30%"}
+
+Output in html:
+
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+:::
+
+::: {.column width="25%"}
+:::
+:::
+
+::: columns
+::: {.column width="45%"}
+
+`$$z = \frac{x - \mu}{\sigma}$$`
+:::
+::: {.column width="30%"}
+
+$$z = \frac{x - \mu}{\sigma}$$
+:::
+
+::: {.column width="25%"}
+:::
+:::
+
+## Practical Uses of LaTeX in Quarto
+
+- Writing technical documents with lots of math
+- Formatting statistics for reports and papers
+- Presenting mathematical concepts in presentations like this one
+
+## Resources
+
+- [Quarto Documentation](https://quarto.org/docs/)
+- [LaTeX Math Symbols](https://latex.wikia.org/wiki/List_of_LaTeX_symbols)
+- [List of Greek letters and math symbols](https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols)
+- [Ariel's guide from my previous course](https://nwakim.github.io/S2024_BSTA_513/extra_resources/Latex_qmd_formatting.html)
+

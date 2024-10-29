@@ -1,8 +1,8 @@
 ---
 title: "Homework 5"
-subtitle: "Lessons 9-10"
+subtitle: "Lessons 7-9"
 author: "Your name here - update this!!!!"
-date: "Due 11/7/24"
+date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
@@ -12,7 +12,7 @@ format:
     number-sections: true
     number-depth: 3
     theme: lumen
-    self-contained: true
+    embed-resources: true
     html-math-method: mathjax
 ---
 
@@ -24,24 +24,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Directions {.unnumbered}
 
-[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) Please submit your homework in pdf format if you are not rendering a Quarto document. **If you are using a Quarto doc to render your full homework, then you can keep it as an html!** You can type your work on your computer or submit a single file with photos of your written work or any other method that can be turned into a pdf. The Adobe Scan phone app is an easy way to scan photos and compile into a PDF. Please let me know if you greatly prefer to submit a physical copy. We can work out another way for you to turn in homework.
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) This homework must be submitted using a Quarto document. **Please keep it rendered as an html!** I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!
 
-You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_03.qmd) if you want to work in a Quarto doc. **You do not need to work in a Quarto doc for this homework!!**
-
-## Complete the mid-quarter feedback
-
-<https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURVc3WkpWQVk5OVQ1OUhSMkg0UUZLUjZJOC4u>
-
-
-### R & LaTeX code for probability distributions {.unnumbered}
-
-* See the .qmd files with the code from class notes for LaTeX and R code.
-* The LaTeX code will make it easier to show your work in computations.
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_05.qmd)
 
 :::{.callout-tip}
 It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
 :::
 
+## Complete the mid-quarter feedback
+
+<https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhURVc3WkpWQVk5OVQ1OUhSMkg0UUZLUjZJOC4u>
 
 # Book exercises {.unnumbered}
 
@@ -51,79 +44,27 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 1.36 Associations {.unnumbered}
 
-
-
 ## 4.2 Heights of adults {.unnumbered}
 
+Please note that the wording of this problem is a little confusing. The textbook uses the phrase "sample distribution," which is very close to the phrasing we've used to discuss the "sampl**ing** distribution" to refer to the sampling distribution of the sample means. However, they are using "sample distribution" to refer to the distribution of the sample of 507 active individuals.
 
-## 4.4 Mental health, Part I {.unnumbered}
+:::{.callout-important}
+Use LaTeX code to write out any math work that you would use in part c and part e
+:::
 
+- Hint for part a and b: point estimates are sample statistics
+- Hint for part c: It would be helpful to calculate the z-score
+- Hint for part d: Would it be **exactly** the same?
+- Hint for part e: Using the standard deviation from our sample, can we get an estimate of the standard error for the sampling distribution of the sample means? Compute that standard error. 
 
-
-## 4.6 Thanksgiving spending, Part I {.unnumbered}
-
-
-
-## 4.8 Age at first marriage, Part I {.unnumbered}
-
-
-# Non-book
-
-## Clinican time with patients
-
-*Suppose a clinician schedules 20 minutes to spend with each of their patients. However, they sometimes run over or end earlier. Based on past data, the mean "extra" time they spend with a patient is 3 minutes with a standard deviation of 2 minutes. Suppose they see 13 patients today and the extra times they spend with  patients are independent from patient to patient.*
-
-### Expected total time
-
-**Find the expected total time they will spend with all of their patients today.**
-
-
-### SD of total time
-
-**Find the standard deviation of the total time they will spend with all of their patients today.**
-
-## The Ethan Allen
-
-On October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, it was suggested that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat. Could they have predicted this?  
-
-* The maximum weight capacity of passengers that the Ethan Allen could accommodate was estimated to be 7500 pounds. 
-* Data from the Centers for Disease Control and Prevention indicate that weights of American adults in 2005 had a mean of 167 pounds and a standard deviation of 35 pounds.
-
-
-If the tour boat company consistently accepted 47 passengers, what we want to know is the probability that the combined weight of the 47 passengers would exceed this capacity.
-
-
-### Maximum average weight
-
-__With 47 passengers on board, what is the maximum average weight that the Ethan Allen could accommodate?__
-
-
-
-### Probability an individual weighs more than the maximum average weight 
-
-__Assuming that the weights of American adults in 2005 can be modeled with a normal distribution, find the probability that an individual weighs more than the maximum average weight the Ethan Allen can accommodate.__
-
-
-
-### Probability a random sample of 47 American adults has an average weight greater than the maximum average weight
-
-__Calculate the probability that a random sample of 47 American adults has an average weight greater than the maximum average weight the Ethan Allen can accommodate.__  
-
-
-
-### What theorem did you use in the previous part, and why were you able to apply it to this problem?
-
-
-
-### Could the tour operators have predicted realized that the combined weight of so many passengers was likely to exceed the weight capacity of the Ethan Allen?  
-
+## 4.3 Hen eggs
 
 # R exercises 
 
+## Add something with LaTeX
 ## Load all the packages you need below here
 
-
-# R1: NHANES
+## R1: NHANES
 
 * Below you will be using the dataset called NHANES from the `NHANES` R package. 
 * Install and load the NHANES package using the code below.
@@ -145,34 +86,38 @@ data("NHANES")
   * You must first install the `NHANES` package to see the help files.
 
 
-## What are the dimensions and column names of the dataset?
+### What are the dimensions and column names of the dataset?
+
+Hint: Use [functions covered in the R lesson on Basics in R (part 2)](https://nwakim.github.io/F24_EPI_525/lessons/R03_Basics_02/R03_Basics_02.html#/data-set-info)
 
 
 
-## How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  
+### How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  
+
+This will require a new function called `unique()`
 
 
 
-## Using numerical and graphical summaries, describe the distribution of ages among study participants.
+### Using numerical and graphical summaries, describe the distribution of ages among study participants.
 
 
 
 
-## Using numerical and graphical summaries, describe the distribution of heights among study participants.
+### Using numerical and graphical summaries, describe the distribution of heights among study participants.
 
 
 
-## Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not? 
+### Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not? 
 
 *Use whatever EDA tools you think are appropriate to answer this question.*
 
 
 
 
-## Calculate the median and interquartile range of the distribution of the variable `Poverty`. Write a sentence explaining the median and IQR in the context of these data.
+### Calculate the median and interquartile range of the distribution of the variable `Poverty`. Write a sentence explaining the median and IQR in the context of these data.
 
 
-# R2: NHANES
+## R2: NHANES
 
 Continue using the same NHANES data as for the previous problem. 
 
@@ -183,41 +128,36 @@ Continue using the same NHANES data as for the previous problem.
 * In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
 :::
 
-## Use the `mutate()` command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.
+### Use the `mutate()` command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.
 
 :::{.callout-tip}
 
-## Tips
+### Tips
 
 * Column names cannot start with a number or symbol
 * Names are case sensitive
 * It's easier to work with column names that don't have spaces in them. I usually use _ or . instead of spaces.
 :::
 
-## What proportion of Americans at least 25 years of age are college graduates?
+### What proportion of Americans at least 25 years of age are college graduates?
 *Hint: First create a new dataset that is restricted to Americans at least 25 years old.*
 
 
 
 
-## What proportion of Americans at least 25 years of age with a high school degree are college graduates?
+### What proportion of Americans at least 25 years of age with a high school degree are college graduates?
 
 
 
-## Two-way table
+### Two-way table
 
 __Construct a two-way table (contingency table), with `PhysActive` as the row variable and `Diabetes` as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?__
 
 
 
-## Relative Risk
+### Relative Risk
 
 __In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one's chance of becoming diabetic?__
-
-
-
-
-## Load all the packages you need below here. 
 
 
 ## R1: Youth weights
@@ -252,54 +192,4 @@ You will need to install and load the `moderndive` R package to use the `rep_sam
 
 
 ### What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?
-
-# R exercises 
-
-## Load all the packages you need below here. 
-
-
-
-
-
-## R1: Youth weights
-
-In this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples. 
-
-
-### Use the `set.seed()` command to set a randomization seed. Use whatever number you want for the seed.
-
-
-### CI 
-
-__Suppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS "population."__
-
-
-### Another CI 
-
-__Calculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40.__ 
-
-
-
-
-## R2: Swim times
-
-* In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook. 
-* The data are in the `oibiostats` package and called `swim`.
-
-
-### Mean & SD of differences 
-
-__Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?__ 
-
-
-### Dot plot of differences
-
-__Create a dot plot of the differences in swim times and comment on the distribution shape.__ 
-
-
-### Hypothesis test
-
-__Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
-
-
 
