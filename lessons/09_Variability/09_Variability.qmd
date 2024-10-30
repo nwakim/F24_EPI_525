@@ -524,7 +524,7 @@ sample_sd = sd(means100$means)
 
  
 
-- The [**sampling distribution**]{style="color:#E75B5C"} of X is a **theoretical concept**
+- The [**sampling distribution**]{style="color:#E75B5C"} of $\overline{X}$ is a **theoretical concept**
 
     - Obtaining repeated samples by conducting a study many times is not possible
     

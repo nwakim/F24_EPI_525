@@ -17959,7 +17959,7 @@
     "href": "lessons/09_Variability/09_Variability.html#okay-but-in-real-life-we-only-have-one-sample",
     "title": "Lesson 9: Variability in estimates",
     "section": "Okay, but in real life we only have one sample…?",
-    "text": "Okay, but in real life we only have one sample…?\n\nIn a study, conclusions about a population parameter must be drawn from the data collected from a single sample\n\n \n\nThe sampling distribution of X is a theoretical concept\n\nObtaining repeated samples by conducting a study many times is not possible\n\n\n \n\nNot feasible to calculate the population mean \\(\\mu\\) by finding the mean of the sampling distribution for \\(\\overline{X}\\)\n\n \n\nIn the next lesson on confidence intervals, we’ll see what kind of statements we can make about the population mean from a single sample"
+    "text": "Okay, but in real life we only have one sample…?\n\nIn a study, conclusions about a population parameter must be drawn from the data collected from a single sample\n\n \n\nThe sampling distribution of \\(\\overline{X}\\) is a theoretical concept\n\nObtaining repeated samples by conducting a study many times is not possible\n\n\n \n\nNot feasible to calculate the population mean \\(\\mu\\) by finding the mean of the sampling distribution for \\(\\overline{X}\\)\n\n \n\nIn the next lesson on confidence intervals, we’ll see what kind of statements we can make about the population mean from a single sample"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#for-following-poll-everywhere-question",
