@@ -28,7 +28,6 @@ editor_options:
 #| message: false
 #| warning: false
 
-library(tidyverse)
 library(lubridate)
 library(janitor)
 library(here)
@@ -36,6 +35,8 @@ library(oibiostat)
 library(knitr)
 library(ggridges)
 library(rstatix)
+library(tidyverse)
+
 data(frog) 
 data(dds.discr)
 data("famuss")
@@ -49,12 +50,6 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 ```
 
 # Introduction to the `tidyverse`
-
-```{css, echo=FALSE}
-.reveal code {
-  max-height: 100% !important;
-}
-```
 
 ## 
 

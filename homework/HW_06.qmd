@@ -57,6 +57,16 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 # Book exercises {.unnumbered}
 
+## 4.4 Mental health, Part I {.unnumbered}
+
+
+
+## 4.6 Thanksgiving spending, Part I {.unnumbered}
+
+
+
+## 4.8 Age at first marriage, Part I {.unnumbered}
+
 ## 5.6 Working backwards, Part II {.unnumbered}
 
 
@@ -74,6 +84,57 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 
 ## 5.22 DDT exposure {.unnumbered}
+
+
+# R exercises 
+
+## Load all the packages you need below here. 
+
+
+
+
+
+## R1: Youth weights
+
+In this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples. 
+
+
+### Use the `set.seed()` command to set a randomization seed. Use whatever number you want for the seed.
+
+
+### CI 
+
+__Suppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS "population."__
+
+
+### Another CI 
+
+__Calculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40.__ 
+
+
+
+
+## R2: Swim times
+
+* In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook. 
+* The data are in the `oibiostats` package and called `swim`.
+
+
+### Mean & SD of differences 
+
+__Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?__ 
+
+
+### Dot plot of differences
+
+__Create a dot plot of the differences in swim times and comment on the distribution shape.__ 
+
+
+### Hypothesis test
+
+__Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
+
+
 
 
 

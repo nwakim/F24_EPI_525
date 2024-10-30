@@ -1,0 +1,570 @@
+---
+title: "R08: Transforming and subetting data with `tidyverse`"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "11/04/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R08 Slides
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(lubridate)
+library(janitor)
+library(here)
+library(oibiostat)
+library(knitr)
+library(scales)
+library(ggridges)
+library(rstatix)
+library(gtsummary)
+library(tidyverse)
+
+data(frog) 
+data(dds.discr)
+data("famuss")
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
+# Introduction to the `tidyverse`
+
+## 
+
+![](../img_slides/spiderverse.jpeg){fig-align="center"}
+
+## What is the tidyverse?
+
+The **tidyverse** is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
+
+::: columns
+::: {.column width="45%"}
+-   **ggplot2** - data visualisation
+-   **dplyr** - data manipulation
+-   **tidyr** - tidy data
+-   **readr** - read rectangular data
+-   **purrr** - functional programming
+-   **tibble** - modern data frames
+-   **stringr** - string manipulation
+-   **forcats** - factors
+-   and many more ...
+:::
+
+::: {.column width="55%"}
+![](../img_slides/tidyverse.png){fig-align="center" width="669"}
+:::
+:::
+
+## Tidy data[^1]
+
+[^1]: Source: R for Data Science. Grolemund and Wickham.
+
+![](../img_slides/tidy-data-frame.png)
+
+1.  Each variable must have its own column.
+
+2.  Each observation must have its own row.
+
+3.  Each value must have its own cell.
+
+## Pipe operator (`magrittr`)
+
+-   The pipe operator (`%>%`) allows us to step through sequential functions in the same way we follow if-then statements or steps from instructions
+
+ 
+
+::: lob
+I want to find my keys, then start my car, then drive to work, then park my car.
+:::
+
+ 
+
+::: columns
+::: {.column width="50%"}
+**Nested**
+
+```{r eval = FALSE}
+park(drive(start_car(find("keys")), 
+           to = "work"))
+```
+:::
+
+::: {.column width="50%"}
+**Piped**
+
+```{r eval = FALSE}
+find("keys") %>%
+  start_car() %>%
+  drive(to = "work") %>%
+  park()
+```
+:::
+:::
+
+# Helpful functions for transforming and subsetting 
+
+## Helpful functions for transforming and subsetting 
+
+ 
+
+**Data transformation**
+
+-   `rename()`
+
+-   `mutate()`
+
+-   `pivot_longer()` and `pivot_wider()`
+
+**Data subsetting**
+
+-   `filter()`
+
+-   `select()`
+
+## New dataset: `dds.discr`
+
+- In the US, individuals with developmental disabilities typically receive services and support from state governments
+
+    - California allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)
+
+- Dataset `dds.discr`
+
+    - Sample of 1,000 people who received DDS funds (out of a total of ~ 250,000)
+    - Data include age, sex, race/ethnicity, and annual DDS financial support per consumer
+
+## Let's look back at the `dds.discr` dataset 
+
+   
+
+-   We will load the data (This is a special case! `dds.discr` is a built-in R dataset)
+
+```{r}
+data("dds.discr")
+```
+
+-   Now, let's take a glimpse at the dataset:
+
+```{r}
+glimpse(dds.discr)
+```
+
+## Helpful functions for transforming and subsetting 
+
+ 
+
+**Data transformation**
+
+::: lob
+-   `rename()`
+:::
+
+-   `mutate()`
+
+-   `pivot_longer()` and `pivot_wider()`
+
+**Data subsetting**
+
+-   `filter()`
+
+-   `select()`
+
+## `rename()`: one of the first things I usually do
+
+-   I notice that two variables have values that don't necessarily match the variable name
+
+    -   Female and male are not genders ([NIH page on sex and gender](https://orwh.od.nih.gov/sex-gender))
+
+    -   "White not Hispanic" combines race and ethnicity into one category ([APA page on race and ethnicity](https://www.apa.org/topics/race-ethnicity))
+
+ 
+
+::: lob
+I want to rename gender to sex (not sure if assigned at birth or current sex) and rename ethnicity to R_E (race and ethnicity)
+:::
+
+## `rename()`: one of the first things I usually do
+
+- `rename()` can change the name of a column
+
+- We use: `data %>% rename(new_col_name = old_col_name) `
+
+```{r}
+dds.discr1 = dds.discr %>% 
+  rename(SAB = gender, 
+         R_E = ethnicity)
+
+glimpse(dds.discr1)
+```
+
+## Helpful functions for transforming and subsetting 
+
+ 
+
+**Data transformation**
+
+-   `rename()`
+
+::: lob
+-   `mutate()`
+:::
+
+-   `pivot_longer()` and `pivot_wider()`
+
+**Data subsetting**
+
+-   `filter()`
+
+-   `select()`
+
+
+## `mutate()`: constructing new variables from what you have
+
+-   We can create a new variable from other variables
+
+    - Another way to say it: creates new columns that are functions of existing variables
+
+- We often use it like: 
+
+```{r}
+#| eval: false
+
+data %>% mutate(new_variable = some_transformation_of_another_variable)
+```
+
+##  `mutate()`: create a new variable from two other variables
+
+::: lob
+I want to make a variable that is the ratio of expenditures over age
+:::
+
+ 
+
+```{r}
+dds.discr2 = dds.discr1 %>%
+  mutate(exp_to_age = expenditures/age) 
+
+glimpse(dds.discr2)
+```
+
+## Recoding a numeric variable into categorical
+
+ 
+
+::: lob
+Can we recreate `age.cohort` using the `age` varible?
+:::
+
+ 
+
+```{r}
+summary(dds.discr2)
+```
+
+## Recoding a numeric variable into categorical (2/2)
+
+::: columns
+::: {.column width="50%"}
+- We can integrate other functions into `mutate()`
+- For example, `case_when()` is a helpful function for mapping values to a category
+:::
+
+::: {.column width="50%"}
+Tidyverse:
+
+```{r}
+dds.discr3 <- dds.discr2 %>%
+  mutate(
+    age.cohort2 = case_when(
+          age <= 5 ~ "0-5",
+          age <= 12 ~ "6-12", 
+          age <= 17 ~ "13-17",
+          age <= 21 ~ "18-21",
+          age <= 50 ~ "22-50",
+          age >= 51 ~ "51+"
+    )
+  )
+
+```
+
+ 
+:::
+:::
+
+## Have you noticed that I change the number on `dds.discr`?
+
+- I change the number so that R saves a new dataset
+- And I do not overwrite the previous dataset
+- Can be annoying, but VERY helpful when you have to go back and change code
+- When you run things in real time and troubleshoot, it will be helpful to have different versions of the same dataframe
+
+## Helpful functions for transforming and subsetting 
+
+ 
+
+**Data transformation**
+
+-   `rename()`
+
+-   `mutate()`
+
+-   `pivot_longer()` and `pivot_wider()`
+
+**Data subsetting**
+
+::: lob
+-   `filter()`
+:::
+
+-   `select()`
+
+## `filter()`: keep rows that match a condition
+
+-   What if I want to subset the data frame? (keep certain rows of observations)
+
+::: lob
+I want to look at the data for people who between 50 and 60 years old
+:::
+
+ 
+
+```{r}
+dds.discr4 = dds.discr3 %>%
+  filter(age >= 50 & age <= 60)
+
+glimpse(dds.discr4)
+```
+
+## Helpful functions for transforming and subsetting 
+
+ 
+
+**Data transformation**
+
+-   `rename()`
+
+-   `mutate()`
+
+-   `pivot_longer()` and `pivot_wider()`
+
+**Data subsetting**
+
+-   `filter()`
+
+::: lob
+-   `select()`
+:::
+
+## `select()`: keep or drop columns using their names and types
+
+-   What if I want to remove or keep certain variables?
+
+::: lob
+I want to only have age and expenditure in my data frame
+:::
+
+ 
+
+```{r}
+dds.discr5 = dds.discr2 %>%
+  select(age, expenditures)
+
+glimpse(dds.discr5)
+```
+
+# Resources
+
+## `dplyr` resources
+
+-   [More `dpylr` functions to reference!](https://dplyr.tidyverse.org/reference/index.html)
+
+Additional details and examples are available in the vignettes:
+
+-   [column-wise operations vignette](https://dplyr.tidyverse.org/articles/colwise.html)
+
+-   [row-wise operations vignette](https://dplyr.tidyverse.org/articles/rowwise.html)
+
+ 
+
+and the dplyr 1.0.0 release blog posts:
+
+-   [working across columns](https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-colwise/)
+-   [working within rows](https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-rowwise/)
+
+## R programming class at OHSU!
+
+You can check out [Dr. Jessica Minnier's R class page](https://sph-r-programming-2022.netlify.app/) if you want more notes, videos, etc.
+
+## The larger tidy ecosystem
+
+Just to name a few...
+
+-   [janitor](https://garthtarr.github.io/meatR/janitor.html)
+
+-   [kableExtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+
+-   [patchwork](https://patchwork.data-imaginist.com/)
+
+-   [gghighlight](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html)
+
+-   [tidybayes](https://mjskay.github.io/tidybayes/)
+
+## Credit to Mine Çetinkaya-Rundel
+
+-   These notes were built from Mine's notes
+
+    -   Most pages and code were left as she made them
+
+    -   I changed a few things to match our class
+
+-   Please see [her Github repository](https://github.com/mine-cetinkaya-rundel/teach-ds-wsc-2021/tree/main) for the original notes
+
+# If time
+
+## Tidy data[^1]
+
+[^1]: Source: R for Data Science. Grolemund and Wickham.
+
+![](../img_slides/tidy-data-frame.png)
+
+1.  Each variable must have its own column.
+
+2.  Each observation must have its own row.
+
+3.  Each value must have its own cell.
+
+## How do we make our data tidy??
+
+- From a contingency table, we need to create the dataframe using the counts
+
+::: columns
+::: {.column width="52%"}
+
+- In Lesson 4, we saw this contingency table:
+
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_cont <- data.frame(
+  Age_Group = c("18-39 yrs", "40-59 yrs", "60+ yrs"),
+  Hypertension = c(8836, 42109, 39917),
+  No_Hypertension = c(112206, 88663, 21589)
+)
+
+# Generate table using kable
+kable(hyp_cont, col.names = c("Age Group", "Hypertension", "No Hypertension"), 
+      caption = "Table: Contingency table showing hypertension status and age group, in
+thousands.")
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="43%"}
+
+- And then I magically had it in a new format so I could make this plot:
+
+```{r}
+#| echo: false
+
+# Create the table data
+hyp_cont <- data.frame(
+  Age_Group = c("18-39 years", "40-59 years", "60+ years"),
+  Hypertension = c(8836, 42109, 39917),
+  No_Hypertension = c(112206, 88663, 21589)
+)
+
+hyp_data = pivot_longer(hyp_cont, -Age_Group, names_to = "Hypertension") %>%
+  uncount(value)
+```
+
+```{r}
+#| code-fold: true
+ggplot(data = hyp_data, 
+       aes(x = Age_Group, 
+       fill = Hypertension)) + 
+  geom_bar(position = "fill")  
+```
+:::
+:::
+
+## 
+
+![](../img_slides/pivot.gif){fig-align="center"}
+
+
+## `pivot_*()` functions
+
+![](../img_slides/tidyr-longer-wider.gif){fig-align="center"}
+
+## I used `pivot_longer()` to create tidy data (1/2)
+
+- Note that you won't be required to use `pivot_longer()`
+
+  - I will give you data in a tidy form
+  
+- Here's the original data frame: 
+
+```{r}
+hyp_cont <- data.frame(
+  Age_Group = c("18-39 years", "40-59 years", "60+ years"),
+  Hypertension = c(8836, 42109, 39917),
+  No_Hypertension = c(112206, 88663, 21589) )
+```
+
+- Note that I use use `data.frame()` to make a data frame
+- Then I can name each column that we saw in the contingency table
+- Note that information about hypertension vs no hypertension is split between columns
+  - And that we only have 3 rows of data to show all 313320 observations
+
+## I used `pivot_longer()` to create tidy data (2/2)
+We need to tell `pivot_longer()`:
+
+- Which column must be repeated (pivoted) (all other columns are not repeating)
+- The name of the new column that will contain the old variable names 
+- Where the values in each cell under the old variables will go
+
+
+```{r}
+hyp_data1 = pivot_longer(
+              data = hyp_cont, 
+              cols = -Age_Group,         # columns to pivot
+              names_to = "Hypertension", # name of new column for variable names
+              values_to = "Counts")     # name of new column for values
+hyp_data1
+```
+
+## One more step to make it tidy
+
+- Aka we need one more step to make it so every row is an observation
+  - In this case, we want each row to represent data from one person
+  
+```{r}
+hyp_data = hyp_data1 %>% uncount(Counts)
+head(hyp_data, 10)
+```
