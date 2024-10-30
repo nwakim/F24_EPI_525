@@ -17693,7 +17693,7 @@
     "href": "hw_answers/HW_04_ans.html#r-exercise-1",
     "title": "Homework 4 Answers",
     "section": "R exercise 1",
-    "text": "R exercise 1\nBelow you will be using a dataset from Gapminder to complete a few R exercises.\n\nLoad all the packages you need below here\nYou don’t need to do it all at once, you can add more libraries as you realize you need them.\n\n\n\n\n\nImport dataset\nImport the dataset called “Gapminder_2011_LifeExp_CO2.csv” You can find it in the student files under Data then Homework. You will need to download the file onto your computer, and use the correct file path to import the data.\n\n\n\n\n\nMake a histogram\nUsing ggplot2, make a histogram of the variable CO2emissions."
+    "text": "R exercise 1\nBelow you will be using a dataset from Gapminder to complete a few R exercises.\n\nLoad all the packages you need below here\nYou don’t need to do it all at once, you can add more libraries as you realize you need them.\n\n\n\n\n\nImport dataset\nImport the dataset called “Gapminder_2011_LifeExp_CO2.csv” You can find it in the student files under Data then Homework. You will need to download the file onto your computer, and use the correct file path to import the data.\n\n\n\n\n\nMake a histogram\nUsing ggplot2, make a histogram of the variable CO2emissions.\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\nWarning: Removed 4 rows containing non-finite outside the scale range\n(`stat_bin()`)."
   },
   {
     "objectID": "homework/HW_05.html#income-and-education-in-us-counties",
@@ -19094,5 +19094,26 @@
     "title": "R08: Transforming and subetting data with tidyverse",
     "section": "Have you noticed that I change the number on dds.discr?",
     "text": "Have you noticed that I change the number on dds.discr?\n\nI change the number so that R saves a new dataset\nAnd I do not overwrite the previous dataset\nCan be annoying, but VERY helpful when you have to go back and change code\nWhen you run things in real time and troubleshoot, it will be helpful to have different versions of the same dataframe"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Would anyone like to join me for a panel?\n\nFor PSU’s Stem Day on 11/25 right after class\nLocal high schoolers will be visiting and learning about STEM fields at PSU"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#announcements",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Would anyone like to join me for a panel?\n\nFor PSU’s Stem Day on 11/25 right after class\nLocal high schoolers will be visiting and learning about STEM fields at PSU"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#key-dates",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nHW 04 assignment due Friday\nHW 03 solutions due Sunday (still worth 12 points)\n\nI will select one problem from this assignment for everyone to make solutions on\n\nYou may still work in a group, but everyone will submit their own solution\nIt will be on 3.22\nI decided this because I thought it would be unfair to have one group member have extra work with this problem\n\n\nHW 03 videos are due on 11/12 at 11pm\n\nOr scheduled meeting with me on the week of 11/11"
   }
 ]

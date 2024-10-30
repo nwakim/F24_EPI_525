@@ -130,8 +130,6 @@ Using `ggplot2`, make a histogram of the variable `CO2emissions`.
 
 ::: blue
 ```{r}
-#| message: false
-#| warning: false
 #| echo: false
 ggplot(data = gapmndr, aes(x = CO2emissions)) +
   geom_histogram()
