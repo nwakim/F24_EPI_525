@@ -49,7 +49,7 @@ It is a good idea to try rendering your document from time to time as you go alo
 Please note that the wording of this problem is a little confusing. The textbook uses the phrase "sample distribution," which is very close to the phrasing we've used to discuss the "sampl**ing** distribution" to refer to the sampling distribution of the sample means. However, they are using "sample distribution" to refer to the distribution of the sample of 507 active individuals.
 
 :::{.callout-important}
-Use LaTeX code to write out any math work that you would use in part c and part e
+Try using LaTeX code to write out any math work that you would use in part c and part e!! You can insert an image of your written if you would like. 
 :::
 
 - Hint for part a and b: point estimates are sample statistics
@@ -57,11 +57,10 @@ Use LaTeX code to write out any math work that you would use in part c and part 
 - Hint for part d: Would it be **exactly** the same?
 - Hint for part e: Using the standard deviation from our sample, can we get an estimate of the standard error for the sampling distribution of the sample means? Compute that standard error. 
 
-## 4.3 Hen eggs
+## 4.3 Hen eggs {.unnumbered}
 
 # R exercises 
 
-## Add something with LaTeX
 ## Load all the packages you need below here
 
 ## R1: NHANES
@@ -84,6 +83,12 @@ data("NHANES")
 
 * To view the complete list of study variables and their descriptions, access the NHANES documentation page with `?NHANES`. 
   * You must first install the `NHANES` package to see the help files.
+  
+:::{.callout-warning}
+
+* For most of the summary statistic base R commands (such as `mean()`, `sd()`, `median()`, etc.), you will get `NA` as the result if there are missing values. 
+* In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
+:::
 
 
 ### What are the dimensions and column names of the dataset?
@@ -94,102 +99,29 @@ Hint: Use [functions covered in the R lesson on Basics in R (part 2)](https://nw
 
 ### How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  
 
-This will require a new function called `unique()`
+This will require a new function called `unique()`. For example, if I want the unique ages (from variable `Age`) from the dataset, I can use `unique(NHANES$Age)` 
+
+Then I can use the function, `length()` to see how long the list of unique IDs is. `length(unique(NHANES$Age))` 
 
 
 
-### Using numerical and graphical summaries, describe the distribution of ages among study participants.
+### Using numerical summaries and data visualization, describe the distribution of ages among study participants.
 
-
+You don't need to need to use exact stat verbage for this one. Think: is it evenly distributed? Does it trail off? Does it seem like most ages are represented equally? Is there a reason why there's more 80yo's than 79 yo's?
 
 
 ### Using numerical and graphical summaries, describe the distribution of heights among study participants.
 
+For this one, we learned a few more terms and phrases to describe data. Try them out!
 
+### Calculate the median and interquartile range of the distribution of the variable `Poverty` 
 
-### Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not? 
+Write a sentence explaining the median and IQR in the context of these data. Make sure to look up what `Poverty` means in this dataset so you can give the appropriate context!
 
-*Use whatever EDA tools you think are appropriate to answer this question.*
+### Investigate at which age people generally reach their adult height.
 
+You can use whatever data visualization tool to look at this. Hint: age and height are both numeric variables!
 
+### Investigate the relationship between trouble sleeping and hours slept.
 
-
-### Calculate the median and interquartile range of the distribution of the variable `Poverty`. Write a sentence explaining the median and IQR in the context of these data.
-
-
-## R2: NHANES
-
-Continue using the same NHANES data as for the previous problem. 
-
-
-:::{.callout-warning}
-
-* For most of the summary statistic base R commands (such as `mean()`, `sd()`, `median()`, etc.), you will get `NA` as the result if there are missing values. 
-* In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
-:::
-
-### Use the `mutate()` command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.
-
-:::{.callout-tip}
-
-### Tips
-
-* Column names cannot start with a number or symbol
-* Names are case sensitive
-* It's easier to work with column names that don't have spaces in them. I usually use _ or . instead of spaces.
-:::
-
-### What proportion of Americans at least 25 years of age are college graduates?
-*Hint: First create a new dataset that is restricted to Americans at least 25 years old.*
-
-
-
-
-### What proportion of Americans at least 25 years of age with a high school degree are college graduates?
-
-
-
-### Two-way table
-
-__Construct a two-way table (contingency table), with `PhysActive` as the row variable and `Diabetes` as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?__
-
-
-
-### Relative Risk
-
-__In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one's chance of becoming diabetic?__
-
-
-## R1: Youth weights
-
-In this exercise you will use the YRBSS dataset we used in class on Day 8, to simulate the distribution of mean weights from repeated samples. Use the code from class where we simulated mean heights, and apply it to the weights (in pounds) as directed below. 
-
-
-:::{.callout-important}
-
-You will need to install and load the `moderndive` R package to use the `rep_sample_n()` command from the class notes.
-
-:::
-
-
-### Use the `set.seed()` command to set a randomization seed. Use whatever number you want for the seed.
-
-
-
-### Take 1000 random samples of size 10 and save the tibble with the random samples. Show the first 20 lines of this tibble.
-
-
-
-### Create a tibble with mean weights from the 1000 random samples. Show the first 10 rows of this tibble.
-
-
-
-### Make a histogram of the 1000 mean weights. What do we call this distribution? Describe the shape of the distribution.
-
-
-### Calculate the mean and standard deviation of the 1000 sample mean weights. What is another name for this standard deviation?
-
-
-
-### What are the theoretical values for mean and standard deviation of the sampling distribution from the CLT, and how do your simulated values compare to the theoretical values?
-
+This may require you to use a few options to visualize the data! Also, hours slept is numeric, but there's only 11 unique values. It might be interesting to try out the visualization methods for two categorical variables. 
