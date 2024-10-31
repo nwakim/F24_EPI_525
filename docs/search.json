@@ -19122,5 +19122,61 @@
     "title": "Homework 6",
     "section": "1.2 R1: NHANES",
     "text": "1.2 R1: NHANES\n\nBelow you will be using the dataset called NHANES from the NHANES R package.\nInstall and load the NHANES package using the code below.\n\nThis loads the dataset also called NHANES that is within the NHANES package.\n\n\n\ninstall.packages(\"NHANES\")\n\n\nlibrary(NHANES)\ndata(\"NHANES\")\n\n\nThe National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.\n\n\nTo view the complete list of study variables and their descriptions, access the NHANES documentation page with ?NHANES.\n\nYou must first install the NHANES package to see the help files.\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\nFor most of the summary statistic base R commands (such as mean(), sd(), median(), etc.), you will get NA as the result if there are missing values.\nIn order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the na.rm = TRUE option within the parentheses of the command: mean(dataset$variablename, na.rm = TRUE).\n\n\n\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces.\n\n\n\n\n1.2.1 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old.\n\n\n1.2.2 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html",
+    "href": "hw_answers/HW_05_ans.html",
+    "title": "Homework 5 Answers",
+    "section": "",
+    "text": "Warning\n\n\n\nTo see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#income-and-education-in-us-counties",
+    "href": "hw_answers/HW_05_ans.html#income-and-education-in-us-counties",
+    "title": "Homework 5 Answers",
+    "section": "1.24 Income and education in US counties",
+    "text": "1.24 Income and education in US counties\nThe scatterplot below shows the relationship between per capita income (in thousands of dollars) and percent of population with a bachelor’s degree in 3,143 counties in the US in 2010.\n\na\nWhat are the explanatory and response variables?\n\n\n\n\n\nb\nDescribe the relationship between the two variables. Make sure to discuss unusual observations, if any.\n\n\n\n\n\nc\nCan we conclude that having a bachelor’s degree increases one’s income?"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#mix-and-match",
+    "href": "hw_answers/HW_05_ans.html#mix-and-match",
+    "title": "Homework 5 Answers",
+    "section": "1.28 Mix-and-match",
+    "text": "1.28 Mix-and-match\nDescribe the distribution in the histograms below and match them to the box plots.\n\na) 2\nb) 3\nc) 1"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#associations",
+    "href": "hw_answers/HW_05_ans.html#associations",
+    "title": "Homework 5 Answers",
+    "section": "1.36 Associations",
+    "text": "1.36 Associations\nIndicate which of the plots show\n\na: Positive Association\n\n\n\n\n\nb: Negative Assocation\n\nPlot 4\n\n\n\nc: No assocation"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#heights-of-adults",
+    "href": "hw_answers/HW_05_ans.html#heights-of-adults",
+    "title": "Homework 5 Answers",
+    "section": "4.2 Heights of adults",
+    "text": "4.2 Heights of adults\nResearchers studying anthropometry collected body girth measurements and skeletal diameter measurements, as well as age, weight, height and gender, for 507 physically active individuals. The histogram below shows the sample distribution of heights in centimeters.\n\n(a)\nWhat is the point estimate for the average height of active individuals?\n\n171.1 cm\n\n\n\n(b)\nWhat is the point estimate for the standard deviation of the heights of active individuals? What about the IQR?\n\n\\(s=9.4\\)\n\n\n\n(c)\nIs a person who is 1m 80cm (180 cm) tall considered unusually tall? And is a person who is 1m 55cm (155cm) considered unusually short? Explain your reasoning.\n\nNot considered unusually tall (or short)\n\n\n\n(d)\nThe researchers take another random sample of physically active individuals. Would you expect the mean and the standard deviation of this new sample to be the ones given above? Explain your reasoning.\n\nNo\n\n\n\n(e)\nThe sample means obtained are point estimates for the mean height of all active individuals, if the sample of individuals is equivalent to a simple random sample. What measure do we use to quantify the variability of such an estimate? Compute this quantity using the data from the original sample under the condition that the data are a simple random sample.\n\n\\(SE =0.417\\)"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#hen-eggs",
+    "href": "hw_answers/HW_05_ans.html#hen-eggs",
+    "title": "Homework 5 Answers",
+    "section": "4.3 Hen eggs",
+    "text": "4.3 Hen eggs\nThe distribution of the number of eggs laid by a certain species of hen during their breeding period is on average, 35 eggs, with a standard deviation of 18.2. Suppose a group of researchers randomly samples 45 hens of this species, counts the number of eggs laid during their breeding period, and records the sample mean. They repeat this 1,000 times, and build a distribution of sample means.\n\na\nWhat is this distribution called?\n\n\n\n\n\nb\nWould you expect the shape of this distribution to be symmetric, right skewed, or left skewed? Explain your reasoning.\n\nSymmetric\n\n\n\nc\nCalculate the variability of this distribution and state the appropriate term used to refer to this value.\n\n\\(2.713\\)\n\n\n\nd\nSuppose the researchers’ budget is reduced and they are only able to collect random samples of 10 hens.The sample mean of the number of eggs is recorded, and we repeat this 1,000 times, and build a new distribution of sample means. How will the variability of this new distribution compare to the variability of the original distribution?"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#load-all-the-packages-you-need-below-here",
+    "href": "hw_answers/HW_05_ans.html#load-all-the-packages-you-need-below-here",
+    "title": "Homework 5 Answers",
+    "section": "1.1 Load all the packages you need below here",
+    "text": "1.1 Load all the packages you need below here"
+  },
+  {
+    "objectID": "hw_answers/HW_05_ans.html#r1-nhanes",
+    "href": "hw_answers/HW_05_ans.html#r1-nhanes",
+    "title": "Homework 5 Answers",
+    "section": "1.2 R1: NHANES",
+    "text": "1.2 R1: NHANES\n\nBelow you will be using the dataset called NHANES from the NHANES R package.\nInstall and load the NHANES package using the code below.\n\nThis loads the dataset also called NHANES that is within the NHANES package.\n\n\n\nThe National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.\n\n\nTo view the complete list of study variables and their descriptions, access the NHANES documentation page with ?NHANES.\n\nYou must first install the NHANES package to see the help files.\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\nFor most of the summary statistic base R commands (such as mean(), sd(), median(), etc.), you will get NA as the result if there are missing values.\nIn order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the na.rm = TRUE option within the parentheses of the command: mean(dataset$variablename, na.rm = TRUE).\n\n\n\n\n1.2.1 What are the dimensions and column names of the dataset?\nHint: Use functions covered in the R lesson on Basics in R (part 2)\n\n10,000 rows and 76 columns\n\n\n\n1.2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?\nThis will require a new function called unique(). For example, if I want the unique ages (from variable Age) from the dataset, I can use unique(NHANES$Age)\nThen I can use the function, length() to see how long the list of unique IDs is. length(unique(NHANES$Age))\n\n6,779 unique IDs\n\n\n\n1.2.3 Using numerical summaries and data visualization, describe the distribution of ages among study participants.\nYou don’t need to need to use exact stat verbage for this one. Think: is it evenly distributed? Does it trail off? Does it seem like most ages are represented equally? Is there a reason why there’s more 80yo’s than 79 yo’s?\n\nData visualizations options:\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.\nFor this one, we learned a few more terms and phrases to describe data. Try them out!\n\nData visualizations options:\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.5 Calculate the median and interquartile range of the distribution of the variable Poverty\nWrite a sentence explaining the median and IQR in the context of these data. Make sure to look up what Poverty means in this dataset so you can give the appropriate context!\n\nMedian:\n\n\n[1] 2.7\n\n\nIQR:\n\n\n[1] 3.47\n\n\n\n\n\n1.2.6 Investigate at which age people generally reach their adult height.\nYou can use whatever data visualization tool to look at this. Hint: age and height are both numeric variables!\n\n\n\n\n\n\n\n\n\n1.2.7 Investigate the relationship between trouble sleeping and hours slept.\nThis may require you to use a few options to visualize the data! Also, hours slept is numeric, but there’s only 11 unique values. It might be interesting to try out the visualization methods for two categorical variables.\n\nOptions to look at the relationship:"
   }
 ]

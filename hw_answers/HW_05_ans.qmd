@@ -3,13 +3,420 @@ title: "Homework 5 Answers"
 subtitle: "EPI 525"
 date-modified: "today"
 format: 
-  html: 
+  html:
     link-external-newwindow: true
     toc: true
-  pdf: default 
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+    highlight-style: tango
 editor_options: 
   chunk_output_type: console
 ---
 
+::: callout-warning
+To see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!
+:::
+
+```{r}
+#| label: "setup"
+#| include: false
+
+library(gt)
+library(rstatix)
+library(ggplot2)
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+
+# Book exercises {.unnumbered}
+
+## 1.24 Income and education in US counties   {.unnumbered}
+
+The scatterplot below shows the relationship between per capita income (in thousands of dollars) and percent of population with a bachelor’s degree in 3,143 counties in the US in 2010.
+
+### a   {.unnumbered}
+
+What are the explanatory and response variables?   
+
+::: blue
+ 
+:::
+
+### b   {.unnumbered}
+
+Describe the relationship between the two variables. Make sure to discuss unusual observations, if any.
+
+::: blue
+:::
+
+### c     {.unnumbered}
+
+Can we conclude that having a bachelor’s degree increases one’s income?  
+
+::: blue
+:::
+
+## 1.28 Mix-and-match {.unnumbered}
+
+Describe the distribution in the histograms below and match them to the box plots.
+
+::: blue
+**a)** 2
+
+**b)** 3
+
+**c)** 1
+
+:::
 
 
+## 1.36 Associations {.unnumbered}    
+
+Indicate which of the plots show
+
+### a: Positive Association   {.unnumbered}
+
+::: blue
+
+:::
+
+### b: Negative Assocation   {.unnumbered}
+
+::: blue
+Plot 4
+:::
+
+### c: No assocation   {.unnumbered}
+
+::: blue
+
+:::
+
+
+
+## 4.2 Heights of adults {.unnumbered}
+
+Researchers studying anthropometry collected body girth measurements and skeletal diameter measurements, as well as age, weight, height and gender, for 507 physically active individuals. The histogram below shows the sample distribution of heights in centimeters. 
+
+### (a) {.unnumbered} 
+
+What is the point estimate for the average height of active individuals?
+
+::: blue
+171.1 cm
+:::
+
+### (b) {.unnumbered}  
+
+What is the point estimate for the standard deviation of the heights of active individuals? What about the IQR?
+
+::: blue
+$s=9.4$
+:::
+
+### (c) {.unnumbered}  
+
+Is a person who is 1m 80cm (180 cm) tall considered unusually tall? And is a person who is 1m 55cm (155cm) considered unusually short? Explain your reasoning.
+
+::: blue
+Not considered unusually tall (or short)
+:::
+
+### (d) {.unnumbered}  
+
+The researchers take another random sample of physically active individuals. Would you expect the mean and the standard deviation of this new sample to be the ones given above? Explain your reasoning.
+
+::: blue
+No 
+:::
+
+### (e) {.unnumbered}
+
+The sample means obtained are point estimates for the mean height of all active individuals, if the sample of individuals is equivalent to a simple random sample. What measure do we use to quantify the variability of such an estimate? Compute this quantity using the data from the original sample under the condition that the data are a simple random sample.
+
+::: blue
+$SE =0.417$
+:::
+
+## 4.3 Hen eggs {.unnumbered}
+
+The distribution of the number of eggs laid by a certain species of hen during their breeding period is on average, 35 eggs, with a standard deviation of 18.2. Suppose a group of researchers randomly samples 45 hens of this species, counts the number of eggs laid during their breeding period, and records the sample mean. They repeat this 1,000 times, and build a distribution of sample means.
+
+### a {.unnumbered}
+
+What is this distribution called?
+
+::: blue
+:::
+
+### b {.unnumbered}
+
+Would you expect the shape of this distribution to be symmetric, right skewed, or left skewed? Explain your reasoning.
+
+::: blue
+Symmetric
+:::
+
+### c {.unnumbered}
+
+Calculate the variability of this distribution and state the appropriate term used to refer to this value.
+
+::: blue
+$2.713$
+:::
+
+### d {.unnumbered}
+
+Suppose the researchers’ budget is reduced and they are only able to collect random samples of 10 hens.The sample mean of the number of eggs is recorded, and we repeat this 1,000 times, and build a new distribution of sample means. How will the variability of this new distribution compare to the variability of the original distribution?
+
+::: blue
+:::
+
+# R exercises 
+
+## Load all the packages you need below here
+
+## R1: NHANES
+
+* Below you will be using the dataset called NHANES from the `NHANES` R package. 
+* Install and load the NHANES package using the code below.
+    * This loads the dataset also called NHANES that is within the NHANES package.
+
+```{r eval=FALSE}
+install.packages("NHANES")
+```
+
+```{r}
+library(NHANES)
+data("NHANES")
+```
+
+
+> The National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.
+
+* To view the complete list of study variables and their descriptions, access the NHANES documentation page with `?NHANES`. 
+  * You must first install the `NHANES` package to see the help files.
+  
+:::{.callout-warning}
+
+* For most of the summary statistic base R commands (such as `mean()`, `sd()`, `median()`, etc.), you will get `NA` as the result if there are missing values. 
+* In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
+:::
+
+
+### What are the dimensions and column names of the dataset?
+
+Hint: Use [functions covered in the R lesson on Basics in R (part 2)](https://nwakim.github.io/F24_EPI_525/lessons/R03_Basics_02/R03_Basics_02.html#/data-set-info)
+
+::: blue
+10,000 rows and 76 columns
+:::
+
+
+### How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  
+
+This will require a new function called `unique()`. For example, if I want the unique ages (from variable `Age`) from the dataset, I can use `unique(NHANES$Age)` 
+
+Then I can use the function, `length()` to see how long the list of unique IDs is. `length(unique(NHANES$Age))` 
+
+::: blue
+6,779 unique IDs
+:::
+
+
+### Using numerical summaries and data visualization, describe the distribution of ages among study participants.
+
+You don't need to need to use exact stat verbage for this one. Think: is it evenly distributed? Does it trail off? Does it seem like most ages are represented equally? Is there a reason why there's more 80yo's than 79 yo's?
+
+::: blue
+
+Data visualizations options:
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+
+ggplot(data = NHANES, mapping = aes(x = Age)) +
+  geom_histogram() + #histogram 
+  labs(x = "Age (years)", 
+       y = "Number of observations")
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+
+ggplot(NHANES, aes(x = Age)) +
+  geom_density() + #density plot
+  labs(x = "Age (years)", 
+       y = "Portion of observations at given age")  
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+
+ggplot(NHANES, aes(x = Age)) +
+  geom_boxplot() + #boxplot
+  labs(x = "Age (years)")  
+```
+
+:::
+
+### Using numerical and graphical summaries, describe the distribution of heights among study participants.
+
+For this one, we learned a few more terms and phrases to describe data. Try them out!
+
+::: blue
+
+Data visualizations options:
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+
+ggplot(data = NHANES, mapping = aes(x = Height)) +
+  geom_histogram() + #histogram
+  labs(x = "Height (cm)", 
+       y = "Number of observations at given height")  
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+ggplot(NHANES, aes(x = Height)) +
+  geom_density() + #density plot
+  labs(x = "Height (cm)", 
+       y = "Portion of observations at given height")  
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+ggplot(NHANES, aes(x = Height)) +
+  geom_boxplot() + #boxplot
+  labs(x = "Height (cm)")
+```
+:::
+
+### Calculate the median and interquartile range of the distribution of the variable `Poverty` 
+
+Write a sentence explaining the median and IQR in the context of these data. Make sure to look up what `Poverty` means in this dataset so you can give the appropriate context!
+
+::: blue
+
+Median:
+```{r}
+#| echo: false
+
+# median
+(med_pov <- median(NHANES$Poverty, na.rm = TRUE))
+```
+
+IQR:
+```{r}
+#| echo: false
+
+# IQR
+IQR(NHANES$Poverty, na.rm = TRUE)
+```
+:::
+
+### Investigate at which age people generally reach their adult height.
+
+You can use whatever data visualization tool to look at this. Hint: age and height are both numeric variables!
+
+::: blue
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| echo: false
+
+ggplot(NHANES, aes(x = Age, y = Height)) + 
+  geom_point(size = 0.5) + #plot age vs height
+  labs(y = "Height (cm)", x = "Age (years)")
+```
+:::
+
+### Investigate the relationship between trouble sleeping and hours slept.
+
+This may require you to use a few options to visualize the data! Also, hours slept is numeric, but there's only 11 unique values. It might be interesting to try out the visualization methods for two categorical variables. 
+
+::: blue
+
+Options to look at the relationship:
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| warning: false
+
+ggplot(NHANES, aes(color = SleepTrouble, x = SleepHrsNight)) + 
+  geom_density() +
+  labs(x = "Hours slept at night (hours)", color = "Sleep Trouble")
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| warning: false
+
+
+ggplot(NHANES, aes(fill = SleepTrouble, x = SleepHrsNight)) + 
+  geom_histogram() +
+  labs(x = "Hours slept at night (hours)", fill = "Sleep Trouble")
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| warning: false
+ggplot(NHANES, aes(x = SleepTrouble, y = SleepHrsNight)) + 
+  geom_boxplot() +
+  labs(y = "Hours slept at night (hours)", 
+       x = "Sleep Trouble") 
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| warning: false
+ggplot(NHANES, aes(x = SleepTrouble, y = SleepHrsNight)) + 
+  geom_boxplot() +
+  geom_jitter(aes(color = SleepTrouble), 
+    alpha = 0.1,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4)) +
+  labs(y = "Hours slept at night (hours)", 
+       x = "Sleep Trouble")     
+```
+
+```{r}
+#| fig.height: 3.5
+#| fig.width: 6
+#| warning: false
+ggplot(NHANES, aes(fill = SleepTrouble, x = SleepHrsNight)) +
+  geom_bar(position="fill") +
+  labs(x = "Hours slept at night (hours)", 
+       fill = "Sleep Trouble", 
+       y = "Proportion")
+```
+:::
