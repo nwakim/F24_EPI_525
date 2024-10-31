@@ -53,6 +53,12 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 
 # Introduction to the `tidyverse`
 
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
+
 ## 
 
 ![](../img_slides/spiderverse.jpeg){fig-align="center"}
