@@ -19100,14 +19100,14 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Would anyone like to join me for a panel?\n\nFor PSU’s Stem Day on 11/25 right after class\nLocal high schoolers will be visiting and learning about STEM fields at PSU"
+    "text": "Would anyone like to join me for a panel?\n\nFor PSU’s Stem Day on 11/25 right after class\nLocal high schoolers will be visiting and learning about STEM fields at PSU\n\nCreating a video for HW 3 presentations: see homework tab"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#announcements",
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Would anyone like to join me for a panel?\n\nFor PSU’s Stem Day on 11/25 right after class\nLocal high schoolers will be visiting and learning about STEM fields at PSU"
+    "text": "Would anyone like to join me for a panel?\n\nFor PSU’s Stem Day on 11/25 right after class\nLocal high schoolers will be visiting and learning about STEM fields at PSU\n\nCreating a video for HW 3 presentations: see homework tab"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals_key_info.html#key-dates",
@@ -19178,5 +19178,61 @@
     "title": "Homework 5 Answers",
     "section": "1.2 R1: NHANES",
     "text": "1.2 R1: NHANES\n\nBelow you will be using the dataset called NHANES from the NHANES R package.\nInstall and load the NHANES package using the code below.\n\nThis loads the dataset also called NHANES that is within the NHANES package.\n\n\n\nThe National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.\n\n\nTo view the complete list of study variables and their descriptions, access the NHANES documentation page with ?NHANES.\n\nYou must first install the NHANES package to see the help files.\n\n\n\n\n\n\n\n\nWarning\n\n\n\n\nFor most of the summary statistic base R commands (such as mean(), sd(), median(), etc.), you will get NA as the result if there are missing values.\nIn order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the na.rm = TRUE option within the parentheses of the command: mean(dataset$variablename, na.rm = TRUE).\n\n\n\n\n1.2.1 What are the dimensions and column names of the dataset?\nHint: Use functions covered in the R lesson on Basics in R (part 2)\n\n10,000 rows and 76 columns\n\n\n\n1.2.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?\nThis will require a new function called unique(). For example, if I want the unique ages (from variable Age) from the dataset, I can use unique(NHANES$Age)\nThen I can use the function, length() to see how long the list of unique IDs is. length(unique(NHANES$Age))\n\n6,779 unique IDs\n\n\n\n1.2.3 Using numerical summaries and data visualization, describe the distribution of ages among study participants.\nYou don’t need to need to use exact stat verbage for this one. Think: is it evenly distributed? Does it trail off? Does it seem like most ages are represented equally? Is there a reason why there’s more 80yo’s than 79 yo’s?\n\nData visualizations options:\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.\nFor this one, we learned a few more terms and phrases to describe data. Try them out!\n\nData visualizations options:\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1.2.5 Calculate the median and interquartile range of the distribution of the variable Poverty\nWrite a sentence explaining the median and IQR in the context of these data. Make sure to look up what Poverty means in this dataset so you can give the appropriate context!\n\nMedian:\n\n\n[1] 2.7\n\n\nIQR:\n\n\n[1] 3.47\n\n\n\n\n\n1.2.6 Investigate at which age people generally reach their adult height.\nYou can use whatever data visualization tool to look at this. Hint: age and height are both numeric variables!\n\n\n\n\n\n\n\n\n\n1.2.7 Investigate the relationship between trouble sleeping and hours slept.\nThis may require you to use a few options to visualize the data! Also, hours slept is numeric, but there’s only 11 unique values. It might be interesting to try out the visualization methods for two categorical variables.\n\nOptions to look at the relationship:"
+  },
+  {
+    "objectID": "homework.html#how-to-create-a-video",
+    "href": "homework.html#how-to-create-a-video",
+    "title": "Homework",
+    "section": "How to create a video",
+    "text": "How to create a video\nI think the best way to make your video will be to record a meeting in Zoom or Webex. In either app, you can enter your personal room, then share your screen with your work (or an iPad screen).\n\n\n\n\n\n\nPractice short recordings\n\n\n\nI highly recommend that you try out your recording process to make sure everything works! You can make a short video to playback.\n\n\nYou can follow Zoom or Webex’s guide for recording:\n\nWebex: https://help.webex.com/en-us/article/xl9d60/Webex-%7C-Record-a-meeting-in-the-cloud\n\nLogin with OHSU credentials\n\nZoom: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0062627\n\nLogin with PSU credentials"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability_muddy_points.html",
+    "href": "lessons/09_Variability/09_Variability_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "I’m sorry for those online (and those watching the recording) who can’t hear me for part of the Central Limit Theorem!\nThere’s a pretty good StatQuest video on the Central Limit Theorem!!\n\n\nStart the above StatQuest video here for an answer!"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability_muddy_points.html#central-limit-theorem",
+    "href": "lessons/09_Variability/09_Variability_muddy_points.html#central-limit-theorem",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "I’m sorry for those online (and those watching the recording) who can’t hear me for part of the Central Limit Theorem!\nThere’s a pretty good StatQuest video on the Central Limit Theorem!!\n\n\nStart the above StatQuest video here for an answer!"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability_muddy_points.html#why-is-clt-for-n-30-and-why-does-the-standard-error-decrease-as-n-increases",
+    "href": "lessons/09_Variability/09_Variability_muddy_points.html#why-is-clt-for-n-30-and-why-does-the-standard-error-decrease-as-n-increases",
+    "title": "Muddy Points",
+    "section": "2. Why is CLT for n > 30? And why does the standard error decrease as n increases?",
+    "text": "2. Why is CLT for n &gt; 30? And why does the standard error decrease as n increases?\nOkay! We can start by simulating samples with different n’s. In this case, we need to use a different problem set up than heights. I am going to do coin flips with a 0.3 probability of heads. I am going to look at the proportion of heads I flip.\nFor a given \\(n\\), say \\(n=10\\), I have taken 1,000 samples with 10 coin flips in each sample. I take the mean proportion of heads from the 10 flips for each sample. So then each sample has a sample mean to represent its respective 10 flips. Thus, I have 1,000 sample means for \\(n=10\\).\nI do this process for different values of n. So for \\(n=40\\), I have done the same thing: I have taken 1,000 samples with 40 coin flips in each sample. I take the mean proportion of heads from the 40 flips for each sample. So then each sample has a sample mean to represent its respective 40 flips. Thus, I have 1,000 sample means for \\(n=40\\).\nBelow I have plotted the 1,000 sample means for different values of n: 10, 20, 30, 40, 50, and 100.\n\n\nIf you would like to see how I simulated this and plotted it\nlibrary(tidyverse)\nlibrary(ggplot2)\nset.seed(48151623)\n\nmeans=NULL;sds=NULL; n=NULL\nfor (j in c(10, 20, 30, 40, 50, 100)){\n  for(i in 1:1000){\n  heads = rbinom(n = j, size = 1, prob = 0.4)\n  n = c(n, j)\n  means = c(means, mean(heads))\n  sds = c(sds, sd(heads))\n}\n}\n\nmeans_all = as.data.frame(cbind(n, 1:1000, means, sds)) %&gt;%\n  mutate(mu = 0.5, SE = sqrt(0.5*0.5)/sqrt(n))\nn_labels = c(`10` = \"n = 10\", \n             `20` = \"n = 20\", \n             `30` = \"n = 30\", \n             `40` = \"n = 40\", \n             `50` = \"n = 50\", \n             `100` = \"n = 100\")\n\nsamp_dist_plots = means_all %&gt;% \n  ggplot(aes(x=means)) + \n  geom_histogram(color=\"black\", fill=\"grey\", bins=60) +\n  labs(x=\"Mean height from samples (inches)\", y=\"Frequency\", \n       title=\"Sampling distributions from samples with different values of n\") +\n  scale_x_continuous(breaks = seq(0, 1, by = 0.05), \n                     limits = c(0, 1)) +\n  facet_wrap( ~ n, ncol=2, labeller = as_labeller(n_labels)) +\n  theme_classic() +\n  theme(text = element_text(size = 12))\n\nsamp_dist_plots\n\n\n\n\n\n\n\n\n\nWe are left with the questions:\n\nAre all of these approximately normal with a mean of \\(\\mu\\) and a standard error or \\(\\dfrac{\\sigma}{\\sqrt{n}}\\)? (Asking if the CLT applies to all of them)\nWhy is the standard error smaller when n increases?\n\n\n1. Are all of these approximately normal with a mean of \\(\\mu\\) and a standard error or \\(\\dfrac{\\sigma}{\\sqrt{n}}\\)? (Asking if the CLT applies to all of them)\nYou can see that for \\(n=10\\) and \\(n=20\\), the distributions do not look normal. They have a right skewed tail. So the CLT would not work here!\n\n\n2. Why is the standard error smaller when n increases?\nThis is because the sample means become more precise when n increases.\nThe proportion of heads in a sample of 100 flips, can take on values like 34/100 or 32/100. While the proportion for 10 flips can only take 2/10 or 3/10 or 4/10. The more flips, the more precise a proportion we can get."
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability_muddy_points.html#difference-between-standard-deviation-and-standard-error",
+    "href": "lessons/09_Variability/09_Variability_muddy_points.html#difference-between-standard-deviation-and-standard-error",
+    "title": "Muddy Points",
+    "section": "3. Difference between standard deviation and standard error",
+    "text": "3. Difference between standard deviation and standard error\nStandard deviation is defined generically (and mathematically) for any data. We often refer to the population standard deviation simply as the standard deviation (\\(\\sigma\\)).\nThe standard deviation of a single sample is called \\(s\\)!!\nAnd the standard deviation of the sampling distribution (of sample means) is called the standard error!"
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability_muddy_points.html#why-wouldnt-the-10-blue-samples-mean-not-similar-to-the-red-sample",
+    "href": "lessons/09_Variability/09_Variability_muddy_points.html#why-wouldnt-the-10-blue-samples-mean-not-similar-to-the-red-sample",
+    "title": "Muddy Points",
+    "section": "4. Why wouldn’t the 10 blue sample’s mean not similar to the red sample?",
+    "text": "4. Why wouldn’t the 10 blue sample’s mean not similar to the red sample?\nIt would be similar if it pulled from the same population! But because it is a random sample, we will just get 10 people with their own heights. And the 10 people in the blue group might just have different heights than the 10 people in the red group! Thus, they would have slightly similar, but likely not exactly the same, sample means."
+  },
+  {
+    "objectID": "lessons/09_Variability/09_Variability_muddy_points.html#central-limit-theorem-vs-sampling-distribution",
+    "href": "lessons/09_Variability/09_Variability_muddy_points.html#central-limit-theorem-vs-sampling-distribution",
+    "title": "Muddy Points",
+    "section": "5. Central limit theorem vs sampling distribution",
+    "text": "5. Central limit theorem vs sampling distribution\nThe Central Limit Theorem is a theory can we can apply to our sampling distribution! The sampling distribution is how sample means would be distributed if we took many, many samples. The Central Limit Theorem allows us to say that the sampling distribution is approximately normal. By saying it’s approximately normal, we can then use the properties of a normal distribution to do further analysis."
+  },
+  {
+    "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02_muddy_points.html",
+    "href": "lessons/08_Data_visualization_02/08_Data_visualization_02_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "We will go over work in R on 11/4!"
   }
 ]
