@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Meike Niederhausen and Nicky Wakim">
-  <meta name="dcterms.date" content="2024-10-30">
+  <meta name="dcterms.date" content="2024-11-04">
   <title>Biostatistics 1 - Lesson 10: Confidence intervals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -404,314 +404,269 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 
-  <p class="date">2024-10-30</p>
+  <p class="date">2024-11-04</p>
 </section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
 
 <img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
-<section id="last-time---goals-for-today" class="slide level2">
-<h2>Last time -&gt; Goals for today</h2>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Calculate a confidence interval when we know the population standard deviation</li>
+<li>Interpret a confidence interval when we know the population standard deviation</li>
+<li>Calculate and interpret a confidence interval <em>using the t-distribution</em> when we do not know the population standard deviation</li>
+</ol>
+</section>
+
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Calculate a confidence interval when we know the population standard deviation</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Interpret a confidence interval when we know the population standard deviation</li>
+<li>Calculate and interpret a confidence interval <em>using the t-distribution</em> when we do not know the population standard deviation</li>
+</ol>
+</section>
+<section id="last-time-taking-samples-of-heights" class="slide level2">
+<h2>Last time: Taking samples of heights</h2>
+<ul>
+<li>Population mean (<span class="math inline">\(\mu\)</span>): 65 inches</li>
+<li>Population standard deviation (<span class="math inline">\(\sigma\)</span>): 3 inches</li>
+</ul>
+</section>
+<section id="last-time-central-limit-theorem-applied-to-sampling-distribution" class="slide level2">
+<h2>Last time: Central Limit Theorem applied to sampling distribution</h2>
 <div class="columns">
-<div class="column" style="width:47%;">
-<h3 id="day-8-section-4.1">Day 8: Section 4.1</h3>
+<div class="column" style="width:50%;">
+
+</div><div class="column" style="width:50%;">
+<p>CLT tells us that we can model the sampling distribution of mean heights using a normal distribution:</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-2-1.png" width="768"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-3-1.png" width="768"></p>
+</div>
+</div>
+<p><span class="math display">\[\overline{X} \sim \text{Normal}\big(\mu_{\overline{X}}=65, SE = 0.424 \big)\]</span></p>
+</div>
+</div>
+</section>
+<section id="last-time-sampling-distribution-of-sample-means-with-the-clt" class="slide level2">
+<h2>Last time: Sampling Distribution of Sample Means (with the CLT)</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
 <ul>
-<li>Sampling from a population
+<li><p>The <span style="color:#E75B5C"><strong>sampling distribution</strong></span> is the distribution of sample means calculated from repeated random samples of <em>the same size</em> from the same population</p></li>
+<li><p>It is useful to think of a <strong>particular sample statistic</strong> as being <strong>drawn from a</strong> <span style="color:#E75B5C"><strong>sampling distribution</strong></span></p>
 <ul>
-<li>population <strong>parameters</strong> vs.&nbsp;<strong>point estimates</strong></li>
-<li>sampling variation</li>
+<li>So the red sample with <span class="math inline">\(\overline{x} = 65.1\)</span> is <strong>just one sample mean</strong> in the <strong>sampling distribution</strong></li>
 </ul></li>
 </ul>
-<p><br></p>
+<div class="blue">
+<div class="blue-ttl">
+<p>With CLT and <span class="math inline">\(\overline{X}\)</span> as the RV for the <span style="color:#E75B5C"><strong>sampling distribution</strong></span></p>
+</div>
+<div class="blue-cont">
 <ul>
-<li><strong>Sampling distribution</strong> of a mean</li>
-<li><strong>Central Limit Theorem</strong></li>
-</ul>
-</div><div class="column" style="width:4%;">
-
-</div><div class="column" style="width:47%;">
-<h3 id="day-9-section-4.2">Day 9: Section 4.2</h3>
-<p>What are <strong>Confidence Intervals</strong>?</p>
-<ul>
-<li>How to <strong>calculate</strong> CI’s?</li>
-<li>How to <strong>interpret</strong> &amp; <strong>NOT</strong> interpret CI’s?</li>
-</ul>
-<p><br></p>
-<ul>
-<li>What if we don’t know <span class="math inline">\(\sigma\)</span>?</li>
-<li>Student’s <strong>t-distribution</strong></li>
+<li><strong>Theoretically</strong> (using only population values): <span class="math inline">\(\overline{X} \sim \text{Normal} \big(\mu_{\overline{X}} = \mu, \sigma_{\overline{X}}= SE = \frac{\sigma}{\sqrt{n}} \big)\)</span></li>
+<li><strong>In real use</strong> (using sample values for SE): <span class="math inline">\(\overline{X} \sim \text{Normal} \big(\mu_{\overline{X}} = \mu, \sigma_{\overline{X}}= SE = \frac{s}{\sqrt{n}} \big)\)</span></li>
 </ul>
 </div>
 </div>
-</section>
-<section id="where-are-we-continuous-outcome-zoomed-in" class="slide level2">
-<h2>Where are we? Continuous outcome zoomed in</h2>
-<p><br> <br></p>
-
-<img data-src="../img_slides/flowchart_only_continuous.jpg" class="r-stretch quarto-figure-center"></section>
-<section id="our-hypothetical-population-yrbss" class="slide level2">
-<h2>Our hypothetical population: YRBSS</h2>
-<p><strong><a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">Youth Risk Behavior Surveillance System</a> (YRBSS)</strong></p>
-<ul>
-<li>Yearly survey conducted by the US Centers for Disease Control (CDC)</li>
-<li>“A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12.”<sup>1</sup></li>
-<li>Dataset <code>yrbss</code> from <code>oibiostat</code> pacakge contains responses from <em>n</em> = 13,583 participants in 2013 for a subset of the variables included in the complete survey data</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(oibiostat)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">data</span>(<span class="st">"yrbss"</span>)  <span class="co">#load the data</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># ?yrbss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">dim</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 13583    13</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">names</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "age"                      "gender"                  
- [3] "grade"                    "hispanic"                
- [5] "race"                     "height"                  
- [7] "weight"                   "helmet.12m"              
- [9] "text.while.driving.30d"   "physically.active.7d"    
-[11] "hours.tv.per.school.day"  "strength.training.7d"    
-[13] "school.night.hours.sleep"</code></pre>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Youth Risk Behavior Surveillance System <a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">https://www.cdc.gov/healthyyouth/data/yrbs/index.htm</a> (YRBSS)</p></li></ol></aside></section>
-<section id="transform-height-weight-from-metric-to-to-standard" class="slide level2">
-<h2>Transform height &amp; weight from metric to to standard</h2>
-<p>Also, drop missing values and add a column of id values</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>yrbss2 <span class="ot">&lt;-</span> yrbss <span class="sc">%&gt;%</span>                 <span class="co"># save new dataset with new name</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(                           <span class="co"># add variables for </span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="at">height.ft =</span> <span class="fl">3.28084</span><span class="sc">*</span>height,     <span class="co">#     height in feet</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="at">weight.lb =</span> <span class="fl">2.20462</span><span class="sc">*</span>weight      <span class="co">#     weight in pounds</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">drop_na</span>(height.ft, weight.lb) <span class="sc">%&gt;%</span> <span class="co"># drop rows w/ missing height/weight values</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span>        <span class="co"># add id column</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">select</span>(id, height.ft, weight.lb)  <span class="co"># restrict dataset to columns of interest</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="fu">head</span>(yrbss2)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  id height.ft weight.lb
-1  1  5.675853  186.0038
-2  2  5.249344  122.9957
-3  3  4.921260  102.9998
-4  4  5.150919  147.9961
-5  5  5.413386  289.9957
-6  6  6.167979  157.0130</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">dim</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12579     3</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># number of rows deleted that had missing values for height and/or weight:</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">nrow</span>(yrbss) <span class="sc">-</span> <span class="fu">nrow</span>(yrbss2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1004</code></pre>
-</div>
-</div>
-</section>
-<section id="yrbss2-stats-for-height-in-feet" class="slide level2">
-<h2><code>yrbss2</code>: stats for height in feet</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">summary</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       id          height.ft       weight.lb     
- Min.   :    1   Min.   :4.167   Min.   : 66.01  
- 1st Qu.: 3146   1st Qu.:5.249   1st Qu.:124.01  
- Median : 6290   Median :5.512   Median :142.00  
- Mean   : 6290   Mean   :5.549   Mean   :149.71  
- 3rd Qu.: 9434   3rd Qu.:5.840   3rd Qu.:167.99  
- Max.   :12579   Max.   :6.923   Max.   :399.01  </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>(mean_height.ft <span class="ot">&lt;-</span> <span class="fu">mean</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 5.548691</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>(sd_height.ft <span class="ot">&lt;-</span> <span class="fu">sd</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3434949</code></pre>
-</div>
-</div>
-</section>
-<section id="samples-of-size-n-30-from-yrbss2" class="slide level2">
-<h2>10,000 samples of size n = 30 from <code>yrbss2</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Take 10,000 random samples of size<br>
-n = 30 from <code>yrbss2</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>samp_n30_rep10000 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">30</span>, </span>
-<span id="cb18-3"><a href="#cb18-3"></a>               <span class="at">reps =</span> <span class="dv">10000</span>,</span>
-<span id="cb18-4"><a href="#cb18-4"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb18-5"><a href="#cb18-5"></a>samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 300,000 × 4
-# Groups:   replicate [10,000]
-   replicate    id height.ft weight.lb
-       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;
- 1         1  5869      5.15      145.
- 2         1  6694      5.41      127.
- 3         1  2517      5.74      130.
- 4         1  5372      6.07      180.
- 5         1  5403      6.07      163.
- 6         1  2329      6.07      182.
- 7         1  8863      5.25      125.
- 8         1  8058      5.84      135.
- 9         1   335      6.17      235.
-10         1  4698      5.58      124.
-# ℹ 299,990 more rows</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50;">
-<p>Calculate the mean for each of the 10,000 random samples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>means_hght_samp_n30_rep10000 <span class="ot">&lt;-</span> </span>
-<span id="cb20-2"><a href="#cb20-2"></a>  samp_n30_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">group_by</span>(replicate) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">summarise</span>(<span class="at">mean_height =</span> </span>
-<span id="cb20-5"><a href="#cb20-5"></a>            <span class="fu">mean</span>(height.ft))</span>
-<span id="cb20-6"><a href="#cb20-6"></a></span>
-<span id="cb20-7"><a href="#cb20-7"></a>means_hght_samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10,000 × 2
-   replicate mean_height
-       &lt;int&gt;       &lt;dbl&gt;
- 1         1        5.59
- 2         2        5.59
- 3         3        5.51
- 4         4        5.65
- 5         5        5.64
- 6         6        5.57
- 7         7        5.61
- 8         8        5.60
- 9         9        5.52
-10        10        5.64
-# ℹ 9,990 more rows</code></pre>
-</div>
-</div>
-</div>
-</div>
-<p><span style="color:purple">How close are the mean heights for each of the 10,000 random samples?</span></p>
-</section>
-<section id="simulated-sampling-distribution-for-n-30-using-10000-sample-mean-heights" class="slide level2">
-<h2>Simulated sampling distribution for n = 30 <br> using 10,000 sample mean heights</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb22-2"><a href="#cb22-2"></a>  means_hght_samp_n30_rep10000, </span>
-<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
-<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb22-5"><a href="#cb22-5"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated </span><span class="sc">\n</span><span class="st"> sampling distribution"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-9-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>CLT tells us that we can model the sampling distribution of mean heights using a normal distribution.</p>
+</div><div class="column" style="width:35%;">
+<p>&nbsp;</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-10-1.png" width="576"></p>
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-4-1.png" width="624"></p>
 </div>
 </div>
+<p><span class="math display">\[ \mu_{\overline{X}} = 65 \text{ inches}\]</span> <span class="math display">\[ SE = 0.424 \text{ inches}\]</span></p>
 </div>
 </div>
 </section>
-<section id="given-barx-what-are-plausible-values-of-mu" class="slide level2">
-<h2>Given <span class="math inline">\(\bar{x}\)</span>, what are plausible values of <span class="math inline">\(\mu\)</span>?</h2>
-
-<img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-11-1.png" width="1152" class="r-stretch"></section>
-<section id="confidence-interval-c-i-for-the-mean-mu" class="slide level2">
-<h2>Confidence interval (C I) for the mean <span class="math inline">\(\mu\)</span></h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><span class="math display">\[\overline{x}\ \pm\ z^*\times \text{SE}\]</span></p>
-<p>where</p>
-<ul>
-<li><span class="math inline">\(SE = \frac{\sigma}{\sqrt{n}}\)</span></li>
-</ul>
-</div><div class="column" style="width:60%;">
+<section id="last-time-point-estimates" class="slide level2">
+<h2>Last time: point estimates</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/choosingZForCI.jpg"></p>
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-5-1.png" width="1728"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/sample_point_est.png"></p>
+</figure>
+</div>
+</section>
+<section id="this-time-interval-estimates-of-population-parameter" class="slide level2">
+<h2>This time: Interval estimates of population parameter</h2>
 <ul>
-<li><span class="math inline">\(z^*\)</span> depends on the confidence level
+<li><p>A <strong>point estimate</strong> consists of a single value</p></li>
+<li><p>An <strong>interval estimate</strong> provides a <strong>plausible range of values for a parameter</strong></p>
 <ul>
-<li>For a 95% CI, <span class="math inline">\(z^*\)</span> is chosen such that 95% of the standard normal curve is between <span class="math inline">\(-z^*\)</span> and <span class="math inline">\(z^*\)</span></li>
+<li>Remember: parameters are from the population and estimates are from our sample</li>
+</ul></li>
+<li><p>We can create a plausible range of values for a population mean (<span class="math inline">\(\mu\)</span>) from a sample’s mean <span class="math inline">\(\overline{x}\)</span></p></li>
+<li><p>A <strong>confidence interval</strong> gives us a plausible range for <span class="math inline">\(\mu\)</span></p></li>
+<li><p>Confidence intervals take the general form: <span class="math display">\[\big(\overline{x} - m, \overline{x} + m \big) = \overline{x} \pm m\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(m\)</span> is the margin of error</li>
 </ul></li>
 </ul>
+</section>
+<section id="point-estimates-with-their-confidence-intervals-for-mu" class="slide level2">
+<h2>Point estimates with their confidence intervals for <span class="math inline">\(\mu\)</span></h2>
+<div class="columns">
+<div class="column" style="width:22%;">
+<p>&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/samp_point_est_vert.png"></p>
+</figure>
+</div>
 </div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-6-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:28%;">
+<p>Do these confidence intervals include <span class="math inline">\(\mu\)</span>?</p>
+</div>
+</div>
+</section>
+<section id="confidence-interval-ci-for-the-mean-mu" class="slide level2">
+<h2>Confidence interval (CI) for the mean <span class="math inline">\(\mu\)</span></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="green">
+<div class="green-ttl">
+<p>Confidence interval for <span class="math inline">\(\mu\)</span></p>
+</div>
+<div class="green-cont">
+<p><span class="math display">\[\overline{x}\ \pm\ z^*\times \text{SE}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(\text{SE} = \frac{\sigma}{\sqrt{n}}\)</span> if population sd is known</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<p>&nbsp;</p>
+<p><span style="color:#459B99">When can this be applied?</span></p>
+<ul>
+<li>When CLT can be applied!</li>
+<li>When we know the population standard deviation!</li>
+</ul>
+</div>
+</div>
+<ul>
+<li><span class="math inline">\(z^*\)</span> depends on the confidence level</li>
+<li>For a 95% CI, <span class="math inline">\(z^*\)</span> is chosen such that 95% of the standard normal curve is between <span class="math inline">\(-z^*\)</span> and <span class="math inline">\(z^*\)</span>
+<ul>
+<li>This corresponds to <span class="math inline">\(z^* = 1.96\)</span> for a 95% CI</li>
+</ul></li>
+<li>We can use <code>R</code> to calculate <span class="math inline">\(z^*\)</span> for any desired CI</li>
+<li>Below is how we calculate <span class="math inline">\(z^*\)</span> for the 95% CI</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">qnorm</span>(.<span class="dv">975</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">qnorm</span>(<span class="at">p =</span> <span class="fl">0.975</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.959964</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">qnorm</span>(.<span class="dv">995</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.575829</code></pre>
 </div>
-</div>
-</div>
-</div>
-<p><span style="color:green">When can this be applied?</span></p>
 </section>
-<section id="example-c-i-for-mean-height" class="slide level2">
-<h2>Example: C I for mean height</h2>
-<ul>
-<li>A random sample of 30 high schoolers has mean height 5.6 ft.</li>
-<li>Find the 95% confidence interval for the population mean, assuming that the population standard deviation is 0.34 ft.</li>
-</ul>
+<section id="example-ci-for-mean-height-mu-with-sigma" class="slide level2">
+<h2>Example: CI for mean height <span class="math inline">\(\mu\)</span> with <span class="math inline">\(\sigma\)</span></h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example 1: Using our green sample from previous plots</p>
+</div>
+<div class="ex-cont">
+<p>For a random sample of 50 people, the mean height is 66.1 inches. Assume the population standard deviation is 3 inches. Find the 95% confidence interval for the population mean.</p>
+</div>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{x} \pm \ &amp; z^* \times \text{SE} \\
+\overline{x} \pm \ &amp; z^* \times \dfrac{\sigma}{\sqrt{n}} \\
+66.1 \pm \ &amp; 1.96 \times \dfrac{3}{\sqrt{50}} \\
+66.1 \pm \ &amp; 0.8315576 \\
+(66.1 - 0.8315576, &amp; \ 66.1 + 0.8315576)\\
+(65.268, &amp; \ 66.932)\\
+\end{aligned}
+\]</span></p>
+<p>We are 95% confident that the mean height is between 65.268 and 66.932 inches.</p>
+</section></section>
+<section>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Calculate a confidence interval when we know the population standard deviation</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Interpret a confidence interval when we know the population standard deviation</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Calculate and interpret a confidence interval <em>using the t-distribution</em> when we do not know the population standard deviation</li>
+</ol>
 </section>
-<section id="how-to-interpret-a-c-i-12" class="slide level2">
-<h2>How to interpret a C I? (1/2)</h2>
+<section id="how-do-we-interpret-confidence-intervals-12" class="slide level2">
+<h2>How do we interpret confidence intervals? (1/2)</h2>
 <div class="columns">
-<div class="column" style="width:80%;">
-<p>Simulating Confidence Intervals:</p>
-<div style="font-size: 90%;">
-<p><a href="http://www.rossmanchance.com/applets/ConfSim.html">http://www.rossmanchance.com/applets/ConfSim.html</a></p>
-</div>
-<p>The figure shows CI’s from 100 simulations.</p>
+<div class="column" style="width:55%;">
+<p>Simulating Confidence Intervals: <a href="http://www.rossmanchance.com/applets/ConfSim.html" class="uri">http://www.rossmanchance.com/applets/ConfSim.html</a></p>
+<p>The figure shows CI’s from 100 simulations:</p>
 <ul>
-<li>The true value of <span class="math inline">\(\mu\)</span> = 5.55 is the vertical black line.</li>
-<li>The horizontal lines are 95% CI’s from 100 samples.
+<li>The true value of <span class="math inline">\(\mu =65\)</span> is the vertical black line</li>
+<li>The horizontal lines are 95% CI’s from 100 samples
 <ul>
-<li><span style="color:green"><strong>Green</strong></span>: the CI “captured” the true value of <span class="math inline">\(\mu\)</span></li>
-<li><span style="color:red"><strong>Red</strong></span>: the CI <em>did not</em> “capture” the true value of <span class="math inline">\(\mu\)</span></li>
+<li><span style="color:#3070BF"><strong>Blue</strong></span>: the CI “captured” the true value of <span class="math inline">\(\mu\)</span></li>
+<li><span style="color:#C83532"><strong>Red</strong></span>: the CI <em>did not</em> “capture” the true value of <span class="math inline">\(\mu\)</span></li>
 </ul></li>
 </ul>
 <p><br></p>
-<h3 id="question">Question:</h3>
-<p><strong>What percent of CI’s captured the true value of</strong> <span class="math inline">\(\mu\)</span> <strong>?</strong></p>
-</div><div class="column" style="width:20%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/simulating_CI_z_with_sigma_95_RossmanChance_onlyCIs.png" style="height:70.0%"></p>
-</figure>
+<div class="lob">
+<p>What percent of CI’s captured the true value of <span class="math inline">\(\mu\)</span>?</p>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-8-1.png" width="480"></p>
+</div>
 </div>
 </div>
 </div>
 </section>
-<section id="how-to-interpret-a-c-i-22" class="slide level2">
-<h2>How to interpret a C I? (2/2)</h2>
-<p><span style="color:darkorange">Actual interpretation:</span></p>
+<section id="how-do-we-interpret-confidence-intervals-22" class="slide level2">
+<h2>How do we interpret confidence intervals? (2/2)</h2>
+<p><span style="color:#459B99">Actual interpretation:</span></p>
 <ul>
 <li>If we were to
 <ul>
@@ -723,11 +678,11 @@ n = 30 from <code>yrbss2</code>:</p>
 <!-- "Real life": -->
 <!-- * We typically only take 1 random sample.   -->
 <!-- * How do we know if our CI is a lucky or unlucky one? -->
-<p><span style="color:darkorange">What we typically write as “shorthand”:</span></p>
+<p><span style="color:#459B99">What we typically write as “shorthand”:</span></p>
 <ul>
-<li>We are 95% <em>confident</em> that (the 95% confidence interval) captures the value of the population parameter.</li>
+<li>In general form: We are 95% <em>confident</em> that (the 95% confidence interval) captures the value of the population parameter.</li>
 </ul>
-<p><span style="color:red">WRONG interpretation:</span></p>
+<p><span style="color:#BF396F">WRONG interpretation:</span></p>
 <ul>
 <li>There is a 95% <em>chance</em> that (the 95% confidence interval) captures the value of the population parameter.
 <ul>
@@ -735,37 +690,47 @@ n = 30 from <code>yrbss2</code>:</p>
 </ul></li>
 </ul>
 </section>
-<section id="what-percent-c-i-was-being-simulated-in-this-figure" class="slide level2">
-<h2>What percent C I was being simulated in this figure?</h2>
+<section id="poll-everywhere-question" class="slide level2">
+<h2>Poll Everywhere Question</h2>
 <div class="columns">
-<div class="column" style="width:20%;">
+<div class="column" style="width:28%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/simulating_CI_z_with_sigma_85_RossmanChance_onlyCIs.png"></p>
+<p><img data-src="10_Confidence_intervals_files/figure-revealjs/unnamed-chunk-9-1.png" width="480"></p>
 </figure>
 </div>
-</div><div class="column" style="width:80%;">
+</div>
+</div>
+</div><div class="column" style="width:70%;">
+<p>&nbsp;</p>
+<p>What percent CI was being simulated in this figure?</p>
 <p>100 CI’s are shown in the figure.</p>
 </div>
 </div>
-</section>
-<section id="interpretation-of-the-mean-heights-c-i" class="slide level2">
-<h2>Interpretation of the mean heights C I</h2>
-<p>Correct interpretation:</p>
-<ul>
-<li>We are 95% <em>confident</em> that the mean height for high schoolers is between 5.43 and 5.67 feet.</li>
-</ul>
-<p><span style="color:red"><em>WRONG:</em></span></p>
-<ul>
-<li>There is a 95% <em>chance</em> that the mean height for high schoolers is between 5.43 and 5.67 feet.</li>
-</ul>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Calculate a confidence interval when we know the population standard deviation</li>
+<li>Interpret a confidence interval when we know the population standard deviation</li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Calculate and interpret a confidence interval <em>using the t-distribution</em> when we do not know the population standard deviation</li>
+</ol>
+</div>
 </section>
 <section id="what-if-we-dont-know-sigma-13" class="slide level2">
 <h2>What if we don’t know <span class="math inline">\(\sigma\)</span> ? (1/3)</h2>
-<p>Simulating Confidence Intervals: <a href="http://www.rossmanchance.com/applets/ConfSim.html">http://www.rossmanchance.com/applets/ConfSim.html</a></p>
+<p>Simulating Confidence Intervals: <a href="http://www.rossmanchance.com/applets/ConfSim.html" class="uri">http://www.rossmanchance.com/applets/ConfSim.html</a></p>
 
-<img data-src="../../img_slides/simulating_CI_RossmanChance.png" class="r-stretch quarto-figure-center"><p><em>The normal distribution doesn’t have a 95% “coverage rate”<br>
-when using <span class="math inline">\(s\)</span> instead of <span class="math inline">\(\sigma\)</span> </em></p>
+<img data-src="../img_slides/simulating_CI_RossmanChance.png" class="r-stretch quarto-figure-center"><ul>
+<li>The normal distribution doesn’t have a 95% “coverage rate” when using <span class="math inline">\(s\)</span> instead of <span class="math inline">\(\sigma\)</span></li>
+<li>There’s another distribution, called the t-distribution, that does have a 95% “coverage rate” when we use <span class="math inline">\(s\)</span></li>
+</ul>
 </section>
 <section id="what-if-we-dont-know-sigma-23" class="slide level2">
 <h2>What if we don’t know <span class="math inline">\(\sigma\)</span> ? (2/3)</h2>
@@ -774,21 +739,28 @@ when using <span class="math inline">\(s\)</span> instead of <span class="math i
 <li><p>If we replace <span class="math inline">\(\sigma\)</span> with <span class="math inline">\(s\)</span> in the SE formula, we add in additional variability to the SE! <span class="math display">\[\frac{\sigma}{\sqrt{n}} ~~~~\textrm{vs.} ~~~~ \frac{s}{\sqrt{n}}\]</span></p></li>
 <li><p>Thus when using <span class="math inline">\(s\)</span> instead of <span class="math inline">\(\sigma\)</span> when calculating the SE, we <strong>need a different probability distribution</strong> with thicker tails than the normal distribution.</p>
 <ul>
-<li><span style="color:green">In practice this will mean using a different value than 1.96 when calculating the CI.</span></li>
+<li><span style="color:#C83532">In practice this will mean using a different value than 1.96 when calculating the CI</span></li>
 </ul></li>
+<li><p>Instead, we use the <strong>Student’s t-distribution</strong></p></li>
 </ul>
 </section>
-<section id="what-if-we-dont-know-sigma-33" class="slide level2">
-<h2>What if we don’t know <span class="math inline">\(\sigma\)</span> ? (3/3)</h2>
+<section id="students-t-distribution" class="slide level2">
+<h2>Student’s t-distribution</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p>The <strong>Student’s t-distribution</strong>:</p>
+<div class="column" style="width:53%;">
 <ul>
-<li>Is bell shaped and symmetric with mean = 0.</li>
+<li>Is bell shaped and symmetric</li>
+<li>A “generalized” version of the normal distribution</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>Its tails are a thicker than that of a normal distribution
 <ul>
-<li>The “thickness” depends on its <strong>degrees of freedom</strong>: <span class="math inline">\(df = n–1\)</span> , where n = sample size.</li>
+<li>The “thickness” depends on its <strong>degrees of freedom</strong>: <span class="math inline">\(df = n–1\)</span> , where n = sample size</li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>As the degrees of freedom (sample size) increase,
 <ul>
 <li>the tails are less thick, and</li>
@@ -796,47 +768,71 @@ when using <span class="math inline">\(s\)</span> instead of <span class="math i
 <li>in theory, with an infinite sample size the <em>t</em>-distribution is a normal distribution.</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:47%;">
 <p><br> <br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/t_dist.png"></p>
+<p><img data-src="../img_slides/t_dist.png"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="calculating-the-c-i-for-the-population-mean-using-s" class="slide level2">
-<h2>Calculating the C I for the population mean using <span class="math inline">\(s\)</span></h2>
-<p>CI for <span class="math inline">\(\mu\)</span>:</p>
-<p><span class="math display">\[\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}\]</span></p>
-<p>where <span class="math inline">\(t^*\)</span> is determined by the t-distribution and dependent on the<br>
-<strong>df =</strong> <span class="math inline">\(n-1\)</span> and the confidence level</p>
+<section id="confidence-interval-ci-for-the-mean-mu-1" class="slide level2">
+<h2>Confidence interval (CI) for the mean <span class="math inline">\(\mu\)</span></h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:45%;">
+<div class="green">
+<div class="green-ttl">
+<p>Confidence interval for <span class="math inline">\(\mu\)</span></p>
+</div>
+<div class="green-cont">
+<p><span class="math display">\[\overline{x}\ \pm\ t^*\times \text{SE}\]</span></p>
 <ul>
+<li>with <span class="math inline">\(\text{SE} = \frac{s}{\sqrt{n}}\)</span> if population sd is not known</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<p>&nbsp;</p>
+<p><span style="color:#459B99">When can this be applied?</span></p>
+<ul>
+<li>When CLT can be applied!</li>
+<li>When we <strong>do not</strong> know the population standard deviation!</li>
+</ul>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:57%;">
+<ul>
+<li><span class="math inline">\(t^*\)</span> depends on the confidence level and degrees of freedom
+<ul>
+<li>degrees of freedom (df) is: <span class="math inline">\(df=n-1\)</span> (n is number of observations in sample)</li>
+</ul></li>
 <li><code>qt</code> gives the quartiles for a t-distribution. Need to specify
 <ul>
 <li>the percent under the curve to the left of the quartile</li>
-<li>the degrees of freedom = n-1</li>
+<li>the degrees of freedom = <span class="math inline">\(n-1\)</span></li>
 </ul></li>
-<li>Note in the R output to the right that <span class="math inline">\(t^*\)</span> gets closer to 1.96 as the sample size increases.</li>
+<li>Note in the R output to the right that <span class="math inline">\(t^*\)</span> gets closer to 1.96 as the sample size increases</li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:43%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">9</span>)  <span class="co"># df = n-1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.975</span>, <span class="at">df=</span><span class="dv">9</span>)  <span class="co">#df = n-1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.262157</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">49</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.975</span>, <span class="at">df=</span><span class="dv">49</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.009575</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">99</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.975</span>, <span class="at">df=</span><span class="dv">99</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.984217</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fl">0.975</span>, <span class="at">df=</span><span class="dv">999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.962341</code></pre>
 </div>
@@ -844,77 +840,114 @@ when using <span class="math inline">\(s\)</span> instead of <span class="math i
 </div>
 </div>
 </section>
-<section id="using-a-t-table-to-get-t" class="slide level2">
-<h2>Using a <span class="math inline">\(t\)</span>-table to get <span class="math inline">\(t^*\)</span></h2>
+<section id="example-ci-for-mean-height-mu-with-s" class="slide level2">
+<h2>Example: CI for mean height <span class="math inline">\(\mu\)</span> with <span class="math inline">\(s\)</span></h2>
+<div class="example">
+<div class="ex-ttl">
+<p>Example 2: Using our green sample from previous plots</p>
+</div>
+<div class="ex-cont">
+<p>For a random sample of 50 people, the mean height is 66.1 inches and the standard deviation is 3.5 inches. Find the 95% confidence interval for the population mean.</p>
+</div>
+</div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/t-table_appendix_part1.png"></p>
-</figure>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{x} \pm \ &amp; t^* \times \text{SE} \\
+\overline{x} \pm \ &amp; t^* \times \dfrac{s}{\sqrt{n}} \\
+66.1 \pm \ &amp; 2.0096 \times \dfrac{3.5}{\sqrt{50}} \\
+66.1 \pm \ &amp; 0.994689 \\
+(66.1 - 0.994689, &amp; \ 66.1 + 0.994689)\\
+(65.105, &amp; \ 67.095)\\
+\end{aligned}
+\]</span></p>
+</div><div class="column" style="width:50%;">
+<p>&nbsp;</p>
+<p>What is <span class="math inline">\(t^*\)</span>? <span class="math display">\[df = n-1 = 50-1=49\]</span> <span class="math inline">\(t^* =\)</span> <code>qt(p = 0.975, df = 49)</code> <span class="math inline">\(= 2.0096\)</span></p>
+</div>
+</div>
+<p>We are 95% confident that the mean height is between 65.105 and 67.095 inches.</p>
+</section>
+<section id="confidence-interval-ci-for-the-mean-mu-z-vs.-t" class="slide level2">
+<h2>Confidence interval (CI) for the mean <span class="math inline">\(\mu\)</span> (<span class="math inline">\(z\)</span> vs.&nbsp;<span class="math inline">\(t\)</span>)</h2>
+<ul>
+<li>In summary, we have two cases that lead to different ways to calculate the confidence interval</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="blue2">
+<div class="blue2-ttl">
+<p>Case 1: We know the population standard deviation</p>
+</div>
+<div class="blue2-cont">
+<p><span class="math display">\[\overline{x}\ \pm\ z^*\times \text{SE}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(\text{SE} = \frac{\sigma}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the population standard deviation</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>For 95% CI, we use:
+<ul>
+<li><span class="math inline">\(z^* =\)</span> <code>qnorm(p = 0.975)</code> <span class="math inline">\(=1.96\)</span></li>
+</ul></li>
+</ul>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/t-table_appendix_part2.png"></p>
-</figure>
+<div class="red">
+<div class="red-ttl">
+<p>Case 2: We <strong>do not</strong> know the population sd</p>
+</div>
+<div class="red-cont">
+<p><span class="math display">\[\overline{x}\ \pm\ t^*\times \text{SE}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(\text{SE} = \frac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(s\)</span> is the sample standard deviation</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>For 95% CI, we use:
+<ul>
+<li><span class="math inline">\(t^* =\)</span> <code>qt(p = 0.975, df = n-1)</code></li>
+</ul></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 </section>
-<section id="example-c-i-for-mean-height-revisited" class="slide level2">
-<h2>Example: C I for mean height (revisited)</h2>
+<section id="some-final-words-said-slightly-differently" class="slide level2">
+<h2>Some final words (said slightly differently?)</h2>
 <ul>
-<li>A random sample of 30 high schoolers has mean height 5.6 ft and standard deviation 0.34 ft.</li>
-<li>Find the 95% confidence interval for the population mean.</li>
-</ul>
-</section>
-<section id="z-vs-t-important-comment-about-chapter-4-of-textbook" class="slide level2">
-<h2><span class="math inline">\(z\)</span> vs <span class="math inline">\(t\)</span>?? <br> (<span style="color:green">&amp; important comment about Chapter 4 of textbook</span>)</h2>
-<div class="columns">
-<div class="column" style="width:43%;">
-<p><strong>Textbook’s rule of thumb</strong></p>
-<div style="font-size: 90%;">
+<li>Rule of thumb:
 <ul>
-<li>(Ch 4) If <span class="math inline">\(n \geq 30\)</span> and population distribution not strongly skewed:
-<ul>
-<li><strong>Use normal distribution</strong></li>
-<li><strong>No matter if using <span class="math inline">\(\sigma\)</span> or <span class="math inline">\(s\)</span> for the <span class="math inline">\(SE\)</span></strong></li>
-<li>If there is skew or some large outliers, then need <span class="math inline">\(n \geq 50\)</span></li>
-</ul></li>
-<li>(Ch 5) If <span class="math inline">\(n &lt; 30\)</span> and data approximately symmetric with no large outliers:
-<ul>
-<li>Use Student’s t-distribution</li>
+<li>Use <span style="color:#3070BF">normal distribution ONLY if you know the population standard deviation <span class="math inline">\(\sigma\)</span></span></li>
+<li>If <span style="color:#C83532">using <span class="math inline">\(s\)</span> for the <span class="math inline">\(SE\)</span>, then use the Student’s t-distribution</span></li>
 </ul></li>
 </ul>
-</div>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:55%;">
-<p><strong>BSTA 511 rule of thumb</strong></p>
+<p>&nbsp;</p>
 <ul>
-<li>Use <span style="color:darkorange">normal distribution ONLY if know <span class="math inline">\(\sigma\)</span></span>
+<li>For either case, we need to remember when we can calculate the confidence interval:
 <ul>
-<li>If <span style="color:purple">using <span class="math inline">\(s\)</span> for the <span class="math inline">\(SE\)</span>, then use the Student’s t-distribution</span></li>
-</ul></li>
-</ul>
-<p>For either case, can apply if either</p>
-<ul>
-<li><span class="math inline">\(n \geq 30\)</span> and population distribution not strongly skewed
+<li><span class="math inline">\(n \geq 30\)</span> and population distribution not strongly skewed (using Central Limit Theorem)
 <ul>
 <li>If there is skew or some large outliers, then <span class="math inline">\(n \geq 50\)</span> gives better estimates</li>
 </ul></li>
 <li><span class="math inline">\(n &lt; 30\)</span> and data approximately symmetric with no large outliers</li>
+</ul></li>
 </ul>
-<p><em>If do not know population distribution, then check the distribution of the data.</em></p>
-</div>
-</div>
+<p>&nbsp;</p>
+<ul>
+<li><em>If do not know population distribution, then check the distribution of the data.</em>
+<ul>
+<li>Aka, use what we learned in datavisualization to see what the data look like</li>
+</ul></li>
+</ul>
 
 <div class="footer footer-default">
 <p>Lesson 10 Slides</p>
 </div>
-</section>
-
+</section></section>
     </div>
   </div>
 

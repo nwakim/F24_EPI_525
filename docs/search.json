@@ -9720,49 +9720,49 @@
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#is-98.6f-really-the-mean-healthy-body-temperature",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Is 98.6°F really the mean “healthy” body temperature?",
-    "text": "Is 98.6°F really the mean “healthy” body temperature?\n\nWhere did the 98.6°F value come from?\n\nGerman physician Carl Reinhold August Wunderlich determined 98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.\n\n1992 JAMA article by Mackowiak, Wasserman, & Levine\n\nThey claim that 98.2°F (36.8°C) is a more accurate average body temp\nSample: n = 148 healthy men and women aged 18 - 40 years\n\nIn January 2020, a group from Stanford published Decreasing human body temperature in the United States since the Industrial Revolution in eLIFE.\n\n“determined that mean body temperature in men and women, after adjusting for age, height, weight and, in some models date and time of day, has decreased monotonically by 0.03°C (0.05°F) per birth decade”\nSeptember 2023 update: Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm in JAMA Internal Medicine\n\nAverage is 36.64 °C (97.95 °F); “range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C” (97.23 to 98.40 °F); based 2008-2017 data\n“findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges.”\n\n\nNYT article The Average Human Body Temperature Is Not 98.6 Degrees, Oct 12, 2023, by Dana G. Smith\n\nQuestion: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?"
+    "text": "Is 98.6°F really the mean “healthy” body temperature?\n\nWhere did the 98.6°F value come from?\n\nGerman physician Carl Reinhold August Wunderlich determined 98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.\n\n1992 JAMA article by Mackowiak, Wasserman, & Levine\n\nThey claim that 98.2°F (36.8°C) is a more accurate average body temp\nSample: n = 148 healthy individuals aged 18 - 40 years\n\nOther research indicating that the human body temperature is lower\n\nIn January 2020: Decreasing human body temperature in the United States since the Industrial Revolution\nSeptember 2023 update: Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm in JAMA Internal Medicine\n\nNYT article The Average Human Body Temperature Is Not 98.6 Degrees, Oct 12, 2023, by Dana G. Smith\n\n\nQuestion: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?",
-    "text": "Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?\nTwo approaches to answer this question:\n\nCreate a confidence interval (CI) for the population mean \\(\\mu\\) and determine whether 98.6°F is inside the CI or not.\n\nis 98.6°F a plausible value?\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not.\n\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\n\nto see how likely we are to observe the sample mean \\(\\bar{x}\\)\nor a more extreme sample mean\nassuming that the population mean \\(\\mu\\) is 98.6°F."
+    "text": "Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?\nTwo approaches to answer this question:\n\n\n\n\nConfidence interval\n\n\n\nCreate a confidence interval (CI) for the population mean \\(\\mu\\) and determine whether 98.6°F is inside the CI or not.\nAnswering the question: is 98.6°F a plausible value?\n\n\n\n\n\n\n\n\nHypothesis test\n\n\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\nSee how likely we are to observe the sample mean \\(\\overline{x}\\) or a more extreme sample mean assuming that the population mean \\(\\mu\\) is 98.6°F"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-1-create-a-95-c-i-for-the-population-mean-body-temperature",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-1-create-a-95-c-i-for-the-population-mean-body-temperature",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Approach 1: Create a 95% C I for the population mean body temperature",
-    "text": "Approach 1: Create a 95% C I for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\bar{x} = 98.25,~s=0.733,~n=130\\] CI for \\(\\mu\\):\n\n\n\\[\\begin{align}\n\\bar{x} &\\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 &\\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 &\\pm 0.127\\\\\n(98.123&, 98.377)\n\\end{align}\\]\n\nUsed \\(t^*\\) = qt(.975, df=129)\nConclusion:\nWe are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F.\n\nHow does the CI compare to 98.6°F?"
+    "text": "Approach 1: Create a 95% C I for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\overline{x} = 98.25,~s=0.733,~n=130\\] CI for \\(\\mu\\):\n\n\n\\[\\begin{align}\n\\overline{x} &\\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 &\\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 &\\pm 0.127\\\\\n(98.123&, 98.377)\n\\end{align}\\]\n\nUsed \\(t^*\\) = qt(.975, df=129)\nConclusion:\nWe are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F.\n\nHow does the CI compare to 98.6°F?"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-2-hypothesis-test",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-2-hypothesis-test",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Approach 2: Hypothesis Test",
-    "text": "Approach 2: Hypothesis Test\nFrom before:\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not.\n\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\n\nto see how likely we are to observe the sample mean \\(\\bar{x}\\)\nor a more extreme sample mean\nassuming that the population mean \\(\\mu\\) is 98.6°F.\n\n\n\nHow do we calculate a test statistic and p-value?"
+    "text": "Approach 2: Hypothesis Test\nFrom before:\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not.\n\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\n\nto see how likely we are to observe the sample mean \\(\\overline{x}\\)\nor a more extreme sample mean\nassuming that the population mean \\(\\mu\\) is 98.6°F.\n\n\n\nHow do we calculate a test statistic and p-value?\n\nUse the sampling distribution and central limit theorem!!\nTwo cases\n\nCase 1: suppose we know the population sd \\(\\sigma\\)\nCase 2: we don’t know the population sd \\(\\sigma\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#recall-the-sampling-distribution-of-the-mean",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#recall-the-sampling-distribution-of-the-mean",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Recall the sampling distribution of the mean",
-    "text": "Recall the sampling distribution of the mean\nFrom the Central Limit Theorem (CLT), we know that\n\nFor “large” sample sizes ( \\(n\\geq 30\\) ),\n\nthe sampling distribution of the sample mean\ncan be approximated by a normal distribution,with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\\[\\bar{X}\\sim N\\Big(\\mu_{\\bar{X}} = \\mu, \\sigma_{\\bar{X}}= \\frac{\\sigma}{\\sqrt{n}}\\Big)\\]\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe same result holds"
+    "text": "Recall the sampling distribution of the mean\nFrom the Central Limit Theorem (CLT), we know that\n\nFor “large” sample sizes ( \\(n\\geq 30\\) ),\n\nthe sampling distribution of the sample mean\ncan be approximated by a normal distribution,with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\\[\\overline{X}\\sim N\\Big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= \\frac{\\sigma}{\\sqrt{n}}\\Big)\\]\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe same result holds"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-1-suppose-we-know-the-population-sd-sigma",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-1-suppose-we-know-the-population-sd-sigma",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Case 1: suppose we know the population sd \\(\\sigma\\)",
-    "text": "Case 1: suppose we know the population sd \\(\\sigma\\)\n\nHow likely we are to observe the sample mean \\(\\bar{x}\\) ,\n\nor a more extreme sample mean,\nassuming that the population mean \\(\\mu\\) is 98.6°F?\n\nUse \\(\\bar{x} = 98.25\\), \\(\\sigma=0.733\\), and \\(n=130\\)"
+    "text": "Case 1: suppose we know the population sd \\(\\sigma\\)\n\nHow likely we are to observe the sample mean \\(\\overline{x}\\) ,\n\nor a more extreme sample mean,\nassuming that the population mean \\(\\mu\\) is 98.6°F?\n\nUse \\(\\overline{x} = 98.25\\), \\(\\sigma=0.733\\), and \\(n=130\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-2-we-dont-know-the-population-sd-sigma",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-2-we-dont-know-the-population-sd-sigma",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Case 2: we don’t know the population sd \\(\\sigma\\)",
-    "text": "Case 2: we don’t know the population sd \\(\\sigma\\)\n\n\n\nThis is usually the case in real life\nWe estimate \\(\\sigma\\) with the sample standard deviation \\(s\\)\nFrom last time, we know that in this case we need to use the t-distribution with d.f. = n-1, instead of the normal distribution\nQuestion: How likely we are to observe the sample mean \\(\\bar{x}\\) or a more extreme sample mean, assuming that the population mean \\(\\mu\\) is 98.6°F?\nUse \\(\\bar{x} = 98.25\\), \\(s=0.733\\), and \\(n=130\\)"
+    "text": "Case 2: we don’t know the population sd \\(\\sigma\\)\n\n\n\nThis is usually the case in real life\nWe estimate \\(\\sigma\\) with the sample standard deviation \\(s\\)\nFrom last time, we know that in this case we need to use the t-distribution with d.f. = n-1, instead of the normal distribution\nQuestion: How likely we are to observe the sample mean \\(\\overline{x}\\) or a more extreme sample mean, assuming that the population mean \\(\\mu\\) is 98.6°F?\nUse \\(\\overline{x} = 98.25\\), \\(s=0.733\\), and \\(n=130\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#steps-in-a-hypothesis-test",
@@ -9790,14 +9790,14 @@
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-its-distribution",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Step 3: Test statistic (& its distribution)",
-    "text": "Step 3: Test statistic (& its distribution)\n\n\nCase 1: know population sd \\(\\sigma\\)\n\\[\n\\text{test statistic} = z_{\\bar{x}} = \\frac{\\bar{x} - \\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\\]\n\nStatistical theory tells us that \\(z_{\\bar{x}}\\) follows a Standard Normal distribution \\(N(0,1)\\)\n\n\nCase 2: don’t know population sd \\(\\sigma\\)\n\\[\n\\text{test statistic} = t_{\\bar{x}} = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n\\]\n\nStatistical theory tells us that \\(t_{\\bar{x}}\\) follows a Student’s t distribution with degrees of freedom (df) = \\(n-1\\)\n\n\n\n\n\\(\\bar{x}\\) = sample mean, \\(\\mu_0\\) = hypothesized population mean from \\(H_0\\),\n\\(\\sigma\\) = population standard deviation, \\(s\\) = sample standard deviation,\n\\(n\\) = sample size\n\nAssumptions: same as CLT\n\nIndependent observations: the observations were collected independently.\nApproximately normal sample or big n: the distribution of the sample should be approximately normal, or the sample size should be at least 30."
+    "text": "Step 3: Test statistic (& its distribution)\n\n\nCase 1: know population sd \\(\\sigma\\)\n\\[\n\\text{test statistic} = z_{\\overline{x}} = \\frac{\\overline{x} - \\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\\]\n\nStatistical theory tells us that \\(z_{\\overline{x}}\\) follows a Standard Normal distribution \\(N(0,1)\\)\n\n\nCase 2: don’t know population sd \\(\\sigma\\)\n\\[\n\\text{test statistic} = t_{\\overline{x}} = \\frac{\\overline{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n\\]\n\nStatistical theory tells us that \\(t_{\\overline{x}}\\) follows a Student’s t distribution with degrees of freedom (df) = \\(n-1\\)\n\n\n\n\n\\(\\overline{x}\\) = sample mean, \\(\\mu_0\\) = hypothesized population mean from \\(H_0\\),\n\\(\\sigma\\) = population standard deviation, \\(s\\) = sample standard deviation,\n\\(n\\) = sample size\n\nAssumptions: same as CLT\n\nIndependent observations: the observations were collected independently.\nApproximately normal sample or big n: the distribution of the sample should be approximately normal, or the sample size should be at least 30."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-calculation",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-calculation",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "Step 3: Test statistic calculation",
-    "text": "Step 3: Test statistic calculation\nRecall that \\(\\bar{x} = 98.25\\), \\(s=0.733\\), and \\(n=130.\\)\nThe test statistic is:\n\\[t_{\\bar{x}} = \\frac{\\bar{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n= \\frac{98.25 - 98.6}{\\frac{0.73}{\\sqrt{130}}}\n= -5.45\\]\n\nStatistical theory tells us that \\(t_{\\bar{x}}\\) follows a Student’s t-distribution with \\(d.f. = n-1 = 129\\).\n\n\n\n\n\n\n\n\n\nAssumptions met?"
+    "text": "Step 3: Test statistic calculation\nRecall that \\(\\overline{x} = 98.25\\), \\(s=0.733\\), and \\(n=130.\\)\nThe test statistic is:\n\\[t_{\\overline{x}} = \\frac{\\overline{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n= \\frac{98.25 - 98.6}{\\frac{0.73}{\\sqrt{130}}}\n= -5.45\\]\n\nStatistical theory tells us that \\(t_{\\overline{x}}\\) follows a Student’s t-distribution with \\(d.f. = n-1 = 129\\).\n\n\n\n\n\n\n\n\n\nAssumptions met?"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value",
@@ -9895,14 +9895,14 @@
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#tidy-the-t.test-output",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "tidy() the t.test output",
-    "text": "tidy() the t.test output\n\nUse the tidy() function from the broom package for briefer output in table format that’s stored as a tibble\nCombined with the gt() function from the gt package, we get a nice table\n\n\ntidy(temps_ttest) %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nSince the tidy() output is a tibble, we can easily pull() specific values from it:\n\n\n\nUsing base R’s $\n\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07\n\n\nAdvantage: quick and easy\n\nOr the tidyverse way: using pull() from dplyr package\n\ntidy(temps_ttest) %&gt;% pull(p.value)\n\n[1] 2.410632e-07\n\n\nAdvantage: can use together with piping (%&gt;%) other functions"
+    "text": "tidy() the t.test output\n\nUse the tidy() function from the broom package for briefer output in table format that’s stored as a tibble\nCombined with the gt() function from the gt package, we get a nice table\n\n\ntidy(temps_ttest) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 40) # use a different size in your HW\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nSince the tidy() output is a tibble, we can easily pull() specific values from it:\n\n\n\nUsing base R’s $\n\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07\n\n\nAdvantage: quick and easy\n\nOr the tidyverse way: using pull() from dplyr package\n\ntidy(temps_ttest) %&gt;% pull(p.value)\n\n[1] 2.410632e-07\n\n\nAdvantage: can use together with piping (%&gt;%) other functions"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#whats-next",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#whats-next",
     "title": "Lesson 11: Hypothesis testing for mean from one-sample",
     "section": "What’s next?",
-    "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nDay\nSection\nPopulation parameter\nSymbol\nPoint estimate\nSymbol\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\n\n11\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n12\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n\n\n\n\n\nLesson 11 Slides"
+    "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nDay\nSection\nPopulation parameter\nSymbol\nPoint estimate\nSymbol\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\n\n11\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n12\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n\n\n\n\n\nLesson 11 Slides"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time---goals-for-today",
@@ -9930,14 +9930,14 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#our-hypothetical-population-yrbss",
     "title": "Lesson 10: Confidence intervals",
     "section": "Our hypothetical population: YRBSS",
-    "text": "Our hypothetical population: YRBSS\nYouth Risk Behavior Surveillance System (YRBSS)\n\nYearly survey conducted by the US Centers for Disease Control (CDC)\n“A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12.”1\nDataset yrbss from oibiostat pacakge contains responses from n = 13,583 participants in 2013 for a subset of the variables included in the complete survey data\n\n\n\n\nlibrary(oibiostat)\ndata(\"yrbss\")  #load the data\n# ?yrbss\n\n\n\ndim(yrbss)\n\n[1] 13583    13\n\n\n\n\n\nnames(yrbss)\n\n [1] \"age\"                      \"gender\"                  \n [3] \"grade\"                    \"hispanic\"                \n [5] \"race\"                     \"height\"                  \n [7] \"weight\"                   \"helmet.12m\"              \n [9] \"text.while.driving.30d\"   \"physically.active.7d\"    \n[11] \"hours.tv.per.school.day\"  \"strength.training.7d\"    \n[13] \"school.night.hours.sleep\"\n\n\nYouth Risk Behavior Surveillance System https://www.cdc.gov/healthyyouth/data/yrbs/index.htm (YRBSS)"
+    "text": "Our hypothetical population: YRBSS\nYouth Risk Behavior Surveillance System (YRBSS)\n\nYearly survey conducted by the US Centers for Disease Control (CDC)\n“A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12.”1\nDataset yrbss from oibiostat pacakge contains responses from n = 13,583 participants in 2013 for a subset of the variables included in the complete survey data\n\n\n\n\nlibrary(oibiostat)\ndata(\"yrbss\")  #load the data\n# ?yrbss\n\n\n\ndim(yrbss)\n\n[1] 13583    13\n\n\n\n\n\nnames(yrbss)\n\n [1] \"age\"                      \"gender\"                  \n [3] \"grade\"                    \"hispanic\"                \n [5] \"race\"                     \"height\"                  \n [7] \"weight\"                   \"helmet_12m\"              \n [9] \"text_while_driving_30d\"   \"physically_active_7d\"    \n[11] \"hours_tv_per_school_day\"  \"strength_training_7d\"    \n[13] \"school_night_hours_sleep\"\n\n\nYouth Risk Behavior Surveillance System https://www.cdc.gov/healthyyouth/data/yrbs/index.htm (YRBSS)"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#transform-height-weight-from-metric-to-to-standard",
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#transform-height-weight-from-metric-to-to-standard",
     "title": "Lesson 10: Confidence intervals",
     "section": "Transform height & weight from metric to to standard",
-    "text": "Transform height & weight from metric to to standard\nAlso, drop missing values and add a column of id values\n\nyrbss2 &lt;- yrbss %&gt;%                 # save new dataset with new name\n  mutate(                           # add variables for \n    height.ft = 3.28084*height,     #     height in feet\n    weight.lb = 2.20462*weight      #     weight in pounds\n  ) %&gt;% \n  drop_na(height.ft, weight.lb) %&gt;% # drop rows w/ missing height/weight values\n  mutate(id = 1:nrow(.)) %&gt;%        # add id column\n  select(id, height.ft, weight.lb)  # restrict dataset to columns of interest\n\nhead(yrbss2)  \n\n  id height.ft weight.lb\n1  1  5.675853  186.0038\n2  2  5.249344  122.9957\n3  3  4.921260  102.9998\n4  4  5.150919  147.9961\n5  5  5.413386  289.9957\n6  6  6.167979  157.0130\n\ndim(yrbss2)\n\n[1] 12579     3\n\n# number of rows deleted that had missing values for height and/or weight:\nnrow(yrbss) - nrow(yrbss2) \n\n[1] 1004"
+    "text": "Transform height & weight from metric to to standard\nAlso, drop missing values and add a column of id values\n\nyrbss2 &lt;- yrbss %&gt;%                 # save new dataset with new name\n  mutate(                           # add variables for \n    height.ft = 3.28084*height,     #     height in feet\n    weight.lb = 2.20462*weight      #     weight in pounds\n  ) %&gt;% \n  drop_na(height.ft, weight.lb) %&gt;% # drop rows w/ missing height/weight values\n  mutate(id = 1:nrow(.)) %&gt;%        # add id column\n  select(id, height.ft, weight.lb)  # restrict dataset to columns of interest\n\nhead(yrbss2)  \n\n# A tibble: 6 × 3\n     id height.ft weight.lb\n  &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1     1      5.68      186.\n2     2      5.25      123.\n3     3      4.92      103.\n4     4      5.15      148.\n5     5      5.41      290.\n6     6      6.17      157.\n\ndim(yrbss2)\n\n[1] 12579     3\n\n# number of rows deleted that had missing values for height and/or weight:\nnrow(yrbss) - nrow(yrbss2) \n\n[1] 1004"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#yrbss2-stats-for-height-in-feet",
@@ -9951,7 +9951,7 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#samples-of-size-n-30-from-yrbss2",
     "title": "Lesson 10: Confidence intervals",
     "section": "10,000 samples of size n = 30 from yrbss2",
-    "text": "10,000 samples of size n = 30 from yrbss2\n\n\nTake 10,000 random samples of size\nn = 30 from yrbss2:\n\nsamp_n30_rep10000 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 30, \n               reps = 10000,\n               replace = FALSE)\nsamp_n30_rep10000\n\n# A tibble: 300,000 × 4\n# Groups:   replicate [10,000]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  5869      5.15      145.\n 2         1  6694      5.41      127.\n 3         1  2517      5.74      130.\n 4         1  5372      6.07      180.\n 5         1  5403      6.07      163.\n 6         1  2329      6.07      182.\n 7         1  8863      5.25      125.\n 8         1  8058      5.84      135.\n 9         1   335      6.17      235.\n10         1  4698      5.58      124.\n# ℹ 299,990 more rows\n\n\n\nCalculate the mean for each of the 10,000 random samples:\n\nmeans_hght_samp_n30_rep10000 &lt;- \n  samp_n30_rep10000 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(mean_height = \n            mean(height.ft))\n\nmeans_hght_samp_n30_rep10000\n\n# A tibble: 10,000 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.59\n 2         2        5.59\n 3         3        5.51\n 4         4        5.65\n 5         5        5.64\n 6         6        5.57\n 7         7        5.61\n 8         8        5.60\n 9         9        5.52\n10        10        5.64\n# ℹ 9,990 more rows\n\n\n\n\nHow close are the mean heights for each of the 10,000 random samples?"
+    "text": "10,000 samples of size n = 30 from yrbss2\n\n\nTake 10,000 random samples of size\nn = 30 from yrbss2:\n\nsamp_n30_rep10000 &lt;- yrbss2 %&gt;%\n  rep_sample_n(size = 30, \n               reps = 10000,\n               replace = FALSE)\nsamp_n30_rep10000\n\n# A tibble: 300,000 × 4\n# Groups:   replicate [10,000]\n   replicate    id height.ft weight.lb\n       &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1         1  7696      5.35      134.\n 2         1  1032      5.91      185.\n 3         1  1364      5.25      115.\n 4         1  8190      5.51      132.\n 5         1  9779      5.68      145.\n 6         1  9247      5.58      132.\n 7         1  4071      5.58      125.\n 8         1  1079      5.91      164.\n 9         1  6297      5.15      145.\n10         1  1551      5.74      100.\n# ℹ 299,990 more rows\n\n\n\nCalculate the mean for each of the 10,000 random samples:\n\nmeans_hght_samp_n30_rep10000 &lt;- \n  samp_n30_rep10000 %&gt;% \n  group_by(replicate) %&gt;% \n  summarise(mean_height = \n            mean(height.ft))\n\nmeans_hght_samp_n30_rep10000\n\n# A tibble: 10,000 × 2\n   replicate mean_height\n       &lt;int&gt;       &lt;dbl&gt;\n 1         1        5.63\n 2         2        5.56\n 3         3        5.61\n 4         4        5.49\n 5         5        5.48\n 6         6        5.52\n 7         7        5.68\n 8         8        5.51\n 9         9        5.53\n10        10        5.58\n# ℹ 9,990 more rows\n\n\n\n\nHow close are the mean heights for each of the 10,000 random samples?"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#simulated-sampling-distribution-for-n-30-using-10000-sample-mean-heights",
@@ -10014,14 +10014,14 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-13",
     "title": "Lesson 10: Confidence intervals",
     "section": "What if we don’t know \\(\\sigma\\) ? (1/3)",
-    "text": "What if we don’t know \\(\\sigma\\) ? (1/3)\nSimulating Confidence Intervals: http://www.rossmanchance.com/applets/ConfSim.html\n\nThe normal distribution doesn’t have a 95% “coverage rate”\nwhen using \\(s\\) instead of \\(\\sigma\\)"
+    "text": "What if we don’t know \\(\\sigma\\) ? (1/3)\nSimulating Confidence Intervals: http://www.rossmanchance.com/applets/ConfSim.html\n\n\nThe normal distribution doesn’t have a 95% “coverage rate” when using \\(s\\) instead of \\(\\sigma\\)\nThere’s another distribution, called the t-distribution, that does have a 95% “coverage rate” when we use \\(s\\)"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-23",
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-23",
     "title": "Lesson 10: Confidence intervals",
     "section": "What if we don’t know \\(\\sigma\\) ? (2/3)",
-    "text": "What if we don’t know \\(\\sigma\\) ? (2/3)\n\nIn real life, we don’t know what the population sd is ( \\(\\sigma\\) )\nIf we replace \\(\\sigma\\) with \\(s\\) in the SE formula, we add in additional variability to the SE! \\[\\frac{\\sigma}{\\sqrt{n}} ~~~~\\textrm{vs.} ~~~~ \\frac{s}{\\sqrt{n}}\\]\nThus when using \\(s\\) instead of \\(\\sigma\\) when calculating the SE, we need a different probability distribution with thicker tails than the normal distribution.\n\nIn practice this will mean using a different value than 1.96 when calculating the CI."
+    "text": "What if we don’t know \\(\\sigma\\) ? (2/3)\n\nIn real life, we don’t know what the population sd is ( \\(\\sigma\\) )\nIf we replace \\(\\sigma\\) with \\(s\\) in the SE formula, we add in additional variability to the SE! \\[\\frac{\\sigma}{\\sqrt{n}} ~~~~\\textrm{vs.} ~~~~ \\frac{s}{\\sqrt{n}}\\]\nThus when using \\(s\\) instead of \\(\\sigma\\) when calculating the SE, we need a different probability distribution with thicker tails than the normal distribution.\n\nIn practice this will mean using a different value than 1.96 when calculating the CI\n\nInstead, we use the Student’s t-distribution"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-33",
@@ -10035,7 +10035,7 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#calculating-the-c-i-for-the-population-mean-using-s",
     "title": "Lesson 10: Confidence intervals",
     "section": "Calculating the C I for the population mean using \\(s\\)",
-    "text": "Calculating the C I for the population mean using \\(s\\)\nCI for \\(\\mu\\):\n\\[\\bar{x} \\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\]\nwhere \\(t^*\\) is determined by the t-distribution and dependent on the\ndf = \\(n-1\\) and the confidence level\n\n\n\nqt gives the quartiles for a t-distribution. Need to specify\n\nthe percent under the curve to the left of the quartile\nthe degrees of freedom = n-1\n\nNote in the R output to the right that \\(t^*\\) gets closer to 1.96 as the sample size increases.\n\n\n\nqt(.975, df=9)  # df = n-1\n\n[1] 2.262157\n\nqt(.975, df=49)\n\n[1] 2.009575\n\nqt(.975, df=99)\n\n[1] 1.984217\n\nqt(.975, df=999)\n\n[1] 1.962341"
+    "text": "Calculating the C I for the population mean using \\(s\\)"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#using-a-t-table-to-get-t",
@@ -10056,7 +10056,7 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#z-vs-t-important-comment-about-chapter-4-of-textbook",
     "title": "Lesson 10: Confidence intervals",
     "section": "\\(z\\) vs \\(t\\)??  (& important comment about Chapter 4 of textbook)",
-    "text": "\\(z\\) vs \\(t\\)??  (& important comment about Chapter 4 of textbook)\n\n\nTextbook’s rule of thumb\n\n\n(Ch 4) If \\(n \\geq 30\\) and population distribution not strongly skewed:\n\nUse normal distribution\nNo matter if using \\(\\sigma\\) or \\(s\\) for the \\(SE\\)\nIf there is skew or some large outliers, then need \\(n \\geq 50\\)\n\n(Ch 5) If \\(n &lt; 30\\) and data approximately symmetric with no large outliers:\n\nUse Student’s t-distribution\n\n\n\n\n\n\nBSTA 511 rule of thumb\n\nUse normal distribution ONLY if know \\(\\sigma\\)\n\nIf using \\(s\\) for the \\(SE\\), then use the Student’s t-distribution\n\n\nFor either case, can apply if either\n\n\\(n \\geq 30\\) and population distribution not strongly skewed\n\nIf there is skew or some large outliers, then \\(n \\geq 50\\) gives better estimates\n\n\\(n &lt; 30\\) and data approximately symmetric with no large outliers\n\nIf do not know population distribution, then check the distribution of the data.\n\n\n\n\nLesson 10 Slides"
+    "text": "\\(z\\) vs \\(t\\)??  (& important comment about Chapter 4 of textbook)\nBSTA 511 rule of thumb\n\nUse normal distribution ONLY if know \\(\\sigma\\)\n\nIf using \\(s\\) for the \\(SE\\), then use the Student’s t-distribution\n\n\nFor either case, we need to remember when we can calculate the confidence interval:\n\n\\(n \\geq 30\\) and population distribution not strongly skewed (using Central Limit Theorem)\n\nIf there is skew or some large outliers, then \\(n \\geq 50\\) gives better estimates\n\n\\(n &lt; 30\\) and data approximately symmetric with no large outliers\n\nIf do not know population distribution, then check the distribution of the data.\n\n\nLesson 10 Slides"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#where-are-we",
@@ -17840,7 +17840,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling Distribution of Sample Means",
-    "text": "Sampling Distribution of Sample Means\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
+    "text": "Sampling Distribution of Sample Means\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 65.002 \\text{ inches}\\] \\[ SE = 0.421 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#what-happens-if-we-have-10000-samples",
@@ -17952,7 +17952,7 @@
     "href": "lessons/09_Variability/09_Variability.html#more-concrete-example-with-height-33",
     "title": "Lesson 9: Variability in estimates",
     "section": "More concrete example with height (3/3)",
-    "text": "More concrete example with height (3/3)\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(s\\)):\n\n\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.975 \\text{ inches}\\] \\[ SE = 0.414 \\text{ inches}\\]"
+    "text": "More concrete example with height (3/3)\n\n\nVariation in population (\\(\\sigma\\)):\n \n\n\n\n\n\n\\[ \\mu = 65 \\text{ inches}\\] \\[ \\sigma = 3 \\text{ inches}\\]\n\nVariation within samples (\\(s\\)):\n\n\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 65.002 \\text{ inches}\\] \\[ SE = 0.421 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#okay-but-in-real-life-we-only-have-one-sample",
@@ -17994,7 +17994,7 @@
     "href": "lessons/09_Variability/09_Variability.html#sampling-distribution-of-sample-means-with-the-clt",
     "title": "Lesson 9: Variability in estimates",
     "section": "Sampling Distribution of Sample Means (with the CLT)",
-    "text": "Sampling Distribution of Sample Means (with the CLT)\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\n\nWith CLT and \\(\\overline{X}\\) as the RV for the sampling distribution\n\n\n\nTheoretically (using only population values): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{\\sigma}{\\sqrt{n}} \\big)\\)\nIn real use (using sample values for SE): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\big)\\)\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.99 \\text{ inches}\\] \\[ SE = 0.304 \\text{ inches}\\]"
+    "text": "Sampling Distribution of Sample Means (with the CLT)\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\n\nWith CLT and \\(\\overline{X}\\) as the RV for the sampling distribution\n\n\n\nTheoretically (using only population values): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{\\sigma}{\\sqrt{n}} \\big)\\)\nIn real use (using sample values for SE): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\big)\\)\n\n\n\n\nVariation between samples (\\(SE\\)):\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 64.996 \\text{ inches}\\] \\[ SE = 0.291 \\text{ inches}\\]"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#other-cases-for-normal-approximation",
@@ -18022,7 +18022,7 @@
     "href": "lessons/09_Variability/09_Variability.html#lets-apply-the-clt-to-our-sampling-distribution-when-n-50-22",
     "title": "Lesson 9: Variability in estimates",
     "section": "Let’s apply the CLT to our sampling distribution when n = 50 (2/2)",
-    "text": "Let’s apply the CLT to our sampling distribution when n = 50 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches} \\text{,  } \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the theoretical mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nI simulated the data, so I can calculate mean and SE of the sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.01157\n\n(sample_se = sd(means50$means))\n\n[1] 0.4254565"
+    "text": "Let’s apply the CLT to our sampling distribution when n = 50 (2/2)\n\n\nMean and SD of population: \\[ \\mu = 65 \\text{ inches} \\text{,  } \\sigma = 3 \\text{ inches}\\]\nFrom the CLT, we can figure out the theoretical mean and standard deviation of our sampling distribution:\n\\[ \\mu = 65 \\text{ inches}\\] \\[ SE = \\frac{\\sigma}{\\sqrt{n}} \\text{ inches} = \\frac{3}{\\sqrt{50}} \\text{ inches} = 0.424 \\text{ inches}\\]\nI simulated the data, so I can calculate mean and SE of the sampling distribution:\n\n(sample_mean = mean(means50$means))\n\n[1] 65.00198\n\n(sample_se = sd(means50$means))\n\n[1] 0.4212266"
   },
   {
     "objectID": "lessons/09_Variability/09_Variability.html#applying-the-clt-1",
@@ -19234,5 +19234,306 @@
     "title": "Muddy Points",
     "section": "",
     "text": "We will go over work in R on 11/4!"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#goals-for-today",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#goals-for-today",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Goals for today",
+    "text": "Goals for today\nWhat are Confidence Intervals?\n\nHow to calculate CI’s?\nHow to interpret & NOT interpret CI’s?\n\n\n\nWhat if we don’t know \\(\\sigma\\)?\nStudent’s t-distribution"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-sampling-distribution",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-sampling-distribution",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Last time: sampling distribution",
+    "text": "Last time: sampling distribution\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution:"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#interval-estimates-of-population-parameter",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#interval-estimates-of-population-parameter",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Interval estimates of population parameter",
+    "text": "Interval estimates of population parameter\n\nA point estimate consists of a single value\nAn interval estimate provides a plausible range of values for a parameter\n\nRemember: parameters are from the population and estimates are from our sample\n\nWe can create a plausible range of values for a population mean (\\(\\mu\\)) from a sample’s mean \\(\\overline{x}\\)\nA confidence interval gives us a plausible range for \\(\\mu\\)\nConfidence intervals take the general form: \\[\\big(\\overline{x} - m, \\overline{x} + m \\big) = \\overline{x} \\pm m\\]\n\nWhere \\(m\\) is the margin of error"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#changing-the-confidence-level",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#changing-the-confidence-level",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Changing the confidence level",
+    "text": "Changing the confidence level"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#one-sided-confidence-intervals",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#one-sided-confidence-intervals",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "One-sided confidence intervals",
+    "text": "One-sided confidence intervals"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#interpreting-confidence-intervals",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#interpreting-confidence-intervals",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Interpreting confidence intervals",
+    "text": "Interpreting confidence intervals"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-13-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-13-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "What if we don’t know \\(\\sigma\\) ? (1/3)",
+    "text": "What if we don’t know \\(\\sigma\\) ? (1/3)\nSimulating Confidence Intervals: http://www.rossmanchance.com/applets/ConfSim.html\n\nThe normal distribution doesn’t have a 95% “coverage rate”\nwhen using \\(s\\) instead of \\(\\sigma\\)"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-23-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-23-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "What if we don’t know \\(\\sigma\\) ? (2/3)",
+    "text": "What if we don’t know \\(\\sigma\\) ? (2/3)\n\nIn real life, we don’t know what the population sd is ( \\(\\sigma\\) )\nIf we replace \\(\\sigma\\) with \\(s\\) in the SE formula, we add in additional variability to the SE! \\[\\frac{\\sigma}{\\sqrt{n}} ~~~~\\textrm{vs.} ~~~~ \\frac{s}{\\sqrt{n}}\\]\nThus when using \\(s\\) instead of \\(\\sigma\\) when calculating the SE, we need a different probability distribution with thicker tails than the normal distribution.\n\nIn practice this will mean using a different value than 1.96 when calculating the CI."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-33-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-33-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "What if we don’t know \\(\\sigma\\) ? (3/3)",
+    "text": "What if we don’t know \\(\\sigma\\) ? (3/3)\n\n\nThe Student’s t-distribution:\n\nIs bell shaped and symmetric with mean = 0.\nIts tails are a thicker than that of a normal distribution\n\nThe “thickness” depends on its degrees of freedom: \\(df = n–1\\) , where n = sample size.\n\nAs the degrees of freedom (sample size) increase,\n\nthe tails are less thick, and\nthe t-distribution is more like a normal distribution\nin theory, with an infinite sample size the t-distribution is a normal distribution."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Example: CI for mean height",
+    "text": "Example: CI for mean height\n\n\nExample 1\n\n\nFor a random sample of 50 people, the mean height is 66.1 inches and the standard deviation is 3.5 inches. Find the 95% confidence interval for the population mean.\n\n\n\n\n\\[\n\\begin{aligned}\n\\overline{x} \\pm \\ & t^* \\times \\text{SE} \\\\\n\\overline{x} \\pm \\ & t^* \\times \\dfrac{s}{\\sqrt{n}} \\\\\n66.1 \\pm \\ & 2.0096 \\times \\dfrac{3.5}{\\sqrt{50}} \\\\\n66.1 \\pm \\ & 0.994689 \\\\\n(66.1 - 0.994689, & \\ 66.1 + 0.994689)\\\\\n(65.105, & \\ 67.095)\\\\\n\\end{aligned}\n\\]\n\nWhat is \\(t^*\\)? \\[df = n-1 = 50-1=49\\] \\(t^* =\\) qt(p = 0.975, df = 49) \\(= 2.0096\\)\n\n\nWe are 95% confident that the mean height is between 65.105 and 67.095 inches."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#z-vs.-t",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#z-vs.-t",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "\\(z\\) vs. \\(t\\)??",
+    "text": "\\(z\\) vs. \\(t\\)??\nCI for \\(\\mu\\):\n\\[\\bar{x} \\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\]\nwhere \\(t^*\\) is determined by the t-distribution and dependent on the\ndf = \\(n-1\\) and the confidence level\n\n\n\nqt gives the quartiles for a t-distribution. Need to specify\n\nthe percent under the curve to the left of the quartile\nthe degrees of freedom = n-1\n\nNote in the R output to the right that \\(t^*\\) gets closer to 1.96 as the sample size increases.\n\n\n\nqt(.975, df=9)  # df = n-1\n\n[1] 2.262157\n\nqt(.975, df=49)\n\n[1] 2.009575\n\nqt(.975, df=99)\n\n[1] 1.984217\n\nqt(.975, df=999)\n\n[1] 1.962341"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#calculating-the-c-i-for-the-population-mean-using-s-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#calculating-the-c-i-for-the-population-mean-using-s-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Calculating the C I for the population mean using \\(s\\)",
+    "text": "Calculating the C I for the population mean using \\(s\\)\nCI for \\(\\mu\\):\n\\[\\bar{x} \\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\]\nwhere \\(t^*\\) is determined by the t-distribution and dependent on the\ndf = \\(n-1\\) and the confidence level\n\n\n\nqt gives the quartiles for a t-distribution. Need to specify\n\nthe percent under the curve to the left of the quartile\nthe degrees of freedom = n-1\n\nNote in the R output to the right that \\(t^*\\) gets closer to 1.96 as the sample size increases.\n\n\n\nqt(.975, df=9)  # df = n-1\n\n[1] 2.262157\n\nqt(.975, df=49)\n\n[1] 2.009575\n\nqt(.975, df=99)\n\n[1] 1.984217\n\nqt(.975, df=999)\n\n[1] 1.962341"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-point-estimates",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-point-estimates",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Last time: point estimates",
+    "text": "Last time: point estimates"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-central-limit-theorem-applied-to-sampling-distribution",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-central-limit-theorem-applied-to-sampling-distribution",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Last time: Central Limit Theorem applied to sampling distribution",
+    "text": "Last time: Central Limit Theorem applied to sampling distribution\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\\overline{X} \\sim \\text{Normal}\\big(\\mu_{\\overline{X}}=65, SE = 0.424 \\big)\\]"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-sampling-distribution-of-sample-means-with-the-clt",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-sampling-distribution-of-sample-means-with-the-clt",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Last time: Sampling Distribution of Sample Means (with the CLT)",
+    "text": "Last time: Sampling Distribution of Sample Means (with the CLT)\n\n\n\nThe sampling distribution is the distribution of sample means calculated from repeated random samples of the same size from the same population\nIt is useful to think of a particular sample statistic as being drawn from a sampling distribution\n\nSo the red sample with \\(\\overline{x} = 65.1\\) is just one sample mean in the sampling distribution\n\n\n\n\nWith CLT and \\(\\overline{X}\\) as the RV for the sampling distribution\n\n\n\nTheoretically (using only population values): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{\\sigma}{\\sqrt{n}} \\big)\\)\nIn real use (using sample values for SE): \\(\\overline{X} \\sim \\text{Normal} \\big(\\mu_{\\overline{X}} = \\mu, \\sigma_{\\overline{X}}= SE = \\frac{s}{\\sqrt{n}} \\big)\\)\n\n\n\n\n \n\n\n\n\n\n\\[ \\mu_{\\overline{X}} = 65 \\text{ inches}\\] \\[ SE = 0.424 \\text{ inches}\\]"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-point-estimates-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-point-estimates-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Last time: point estimates",
+    "text": "Last time: point estimates"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#point-estimates-with-their-confidence-intervals",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#point-estimates-with-their-confidence-intervals",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Point estimates with their confidence intervals",
+    "text": "Point estimates with their confidence intervals"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#point-estimates-with-their-confidence-intervals-for-mu",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#point-estimates-with-their-confidence-intervals-for-mu",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Point estimates with their confidence intervals for \\(\\mu\\)",
+    "text": "Point estimates with their confidence intervals for \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo these confidence intervals include \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#confidence-interval-ci-for-the-mean-mu",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#confidence-interval-ci-for-the-mean-mu",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Confidence interval (CI) for the mean \\(\\mu\\)",
+    "text": "Confidence interval (CI) for the mean \\(\\mu\\)\n\n\n\n\nConfidence interval for \\(\\mu\\)\n\n\n\\[\\overline{x}\\ \\pm\\ z^*\\times \\text{SE}\\]\n\nwith \\(\\text{SE} = \\frac{\\sigma}{\\sqrt{n}}\\) if population sd is known\n\n\n\n\n\n\n \nWhen can this be applied?\n\nWhen CLT can be applied!\nWhen we know the population standard deviation!\n\n\n\n\n\\(z^*\\) depends on the confidence level\nFor a 95% CI, \\(z^*\\) is chosen such that 95% of the standard normal curve is between \\(-z^*\\) and \\(z^*\\)\n\nThis corresponds to \\(z^* = 1.96\\) for a 95% CI\n\nWe can use R to calculate \\(z^*\\) for any desired CI\nBelow is how we calculate \\(z^*\\) for the 95% CI\n\n\nqnorm(p = 0.975)\n\n[1] 1.959964"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#this-time-interval-estimates-of-population-parameter",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#this-time-interval-estimates-of-population-parameter",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "This time: Interval estimates of population parameter",
+    "text": "This time: Interval estimates of population parameter\n\nA point estimate consists of a single value\nAn interval estimate provides a plausible range of values for a parameter\n\nRemember: parameters are from the population and estimates are from our sample\n\nWe can create a plausible range of values for a population mean (\\(\\mu\\)) from a sample’s mean \\(\\overline{x}\\)\nA confidence interval gives us a plausible range for \\(\\mu\\)\nConfidence intervals take the general form: \\[\\big(\\overline{x} - m, \\overline{x} + m \\big) = \\overline{x} \\pm m\\]\n\nWhere \\(m\\) is the margin of error"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height-mu",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height-mu",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Example: CI for mean height \\(\\mu\\)",
+    "text": "Example: CI for mean height \\(\\mu\\)\n\n\nExample 1: Using our green sample from previous plots\n\n\nFor a random sample of 50 people, the mean height is 66.1 inches. Assume the population standard deviation is 3 inches. Find the 95% confidence interval for the population mean.\n\n\n\\[\n\\begin{aligned}\n\\overline{x} \\pm \\ & z^* \\times \\text{SE} \\\\\n\\overline{x} \\pm \\ & z^* \\times \\dfrac{\\sigma}{\\sqrt{n}} \\\\\n66.1 \\pm \\ & 1.96 \\times \\dfrac{3}{\\sqrt{50}} \\\\\n66.1 \\pm \\ & 0.8315576 \\\\\n(66.1 - 0.8315576, & \\ 66.1 + 0.8315576)\\\\\n(65.268, & \\ 66.932)\\\\\n\\end{aligned}\n\\]\nWe are 95% confident that the mean height is between 65.268 and 66.932 inches."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "How do we interpret confidence intervals?",
+    "text": "How do we interpret confidence intervals?\n\n\nSimulating Confidence Intervals: http://www.rossmanchance.com/applets/ConfSim.html\nThe figure shows CI’s from 100 simulations:\n\nThe true value of \\(\\mu =65\\) is the vertical black line\nThe horizontal lines are 95% CI’s from 100 samples\n\nBlue: the CI “captured” the true value of \\(\\mu\\)\nRed: the CI did not “capture” the true value of \\(\\mu\\)\n\n\n\n\nWhat percent of CI’s captured the true value of \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "How do we interpret confidence intervals?",
+    "text": "How do we interpret confidence intervals?\nActual interpretation:\n\nIf we were to\n\nrepeatedly take random samples from a population and\ncalculate a 95% CI for each random sample,\n\nthen we would expect 95% of our CI’s to contain the true population parameter \\(\\mu\\).\n\n\n\n\nWhat we typically write as “shorthand”:\n\nWe are 95% confident that (the 95% confidence interval) captures the value of the population parameter.\n\nWRONG interpretation:\n\nThere is a 95% chance that (the 95% confidence interval) captures the value of the population parameter.\n\nFor one CI on its own, it either does or doesn’t contain the population parameter with probability 0 or 1. We just don’t know which!"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-percent-ci-was-being-simulated-in-this-figure",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-percent-ci-was-being-simulated-in-this-figure",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "What percent CI was being simulated in this figure?",
+    "text": "What percent CI was being simulated in this figure?\n\n\n\n\n\n\n\n\n\n\n\n\n100 CI’s are shown in the figure."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Poll Everywhere Question",
+    "text": "Poll Everywhere Question\n\n\n\n\n\n\n\n\n\n\n\n\n \nWhat percent CI was being simulated in this figure?\n100 CI’s are shown in the figure."
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-1-create-a-95-ci-for-the-population-mean-body-temperature",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-1-create-a-95-ci-for-the-population-mean-body-temperature",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "Approach 1: Create a 95% CI for the population mean body temperature",
+    "text": "Approach 1: Create a 95% CI for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\overline{x} = 98.25,~s=0.733,~n=130\\]\n\n\nCI for \\(\\mu\\): \\[\\begin{align}\n\\overline{x} &\\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 &\\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 &\\pm 0.127\\\\\n(98.123&, 98.377)\n\\end{align}\\]\n\n \nUsed \\(t^*\\) = qt(.975, df=129) = 1.979\n \nConclusion:  We are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F, which is discernably different than 98.6°F."
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "Last time: point estimates",
+    "text": "Last time: point estimates"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#point-estimates-with-their-confidence-intervals-for-mu",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#point-estimates-with-their-confidence-intervals-for-mu",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "Point estimates with their confidence intervals for \\(\\mu\\)",
+    "text": "Point estimates with their confidence intervals for \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo these confidence intervals include \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates-with-their-confidence-intervals-for-mu",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates-with-their-confidence-intervals-for-mu",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "Last time: Point estimates with their confidence intervals for \\(\\mu\\)",
+    "text": "Last time: Point estimates with their confidence intervals for \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo these confidence intervals include \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-the-probability-given-they-are-from-distribution-with-mean-mu",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-the-probability-given-they-are-from-distribution-with-mean-mu",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "This time: Point estimates with the probability given they are from distribution with mean \\(\\mu\\)",
+    "text": "This time: Point estimates with the probability given they are from distribution with mean \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo these confidence intervals include \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-probability-given-they-are-from-distribution-with-mean-mu",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-probability-given-they-are-from-distribution-with-mean-mu",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "This time: Point estimates with probability given they are from distribution with mean \\(\\mu\\)",
+    "text": "This time: Point estimates with probability given they are from distribution with mean \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo these confidence intervals include \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-probability-assuming-population-mean-mu",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-probability-assuming-population-mean-mu",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "This time: Point estimates with probability assuming population mean \\(\\mu\\)",
+    "text": "This time: Point estimates with probability assuming population mean \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAssuming the population mean is \\(\\mu\\), what is the probability that we observe \\(\\overline{x}\\) or a more extreme sample mean?"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "Answering a research question",
+    "text": "Answering a research question\nResearch question is a generic form: Is there evidence to support that the population mean is different than \\(\\mu\\)?\nTwo approaches to answer this question:\n\n\n\n\nConfidence interval\n\n\n\nCreate a confidence interval (CI) for the population mean \\(\\mu\\) and determine whether 98.6°F is inside the CI or not.\nAnswering the question: is 98.6°F a plausible value?\n\n\n\n\n\n\n\n\nHypothesis test\n\n\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\nSee how likely we are to observe the sample mean \\(\\overline{x}\\) or a more extreme sample mean assuming that the population mean \\(\\mu\\) is 98.6°F"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question-1",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question-1",
+    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "section": "Answering a research question",
+    "text": "Answering a research question\nResearch question is a generic form: Is there evidence to support that the population mean is different than \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals-12",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals-12",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "How do we interpret confidence intervals? (1/2)",
+    "text": "How do we interpret confidence intervals? (1/2)\n\n\nSimulating Confidence Intervals: http://www.rossmanchance.com/applets/ConfSim.html\nThe figure shows CI’s from 100 simulations:\n\nThe true value of \\(\\mu =65\\) is the vertical black line\nThe horizontal lines are 95% CI’s from 100 samples\n\nBlue: the CI “captured” the true value of \\(\\mu\\)\nRed: the CI did not “capture” the true value of \\(\\mu\\)\n\n\n\n\nWhat percent of CI’s captured the true value of \\(\\mu\\)?"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals-22",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#how-do-we-interpret-confidence-intervals-22",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "How do we interpret confidence intervals? (2/2)",
+    "text": "How do we interpret confidence intervals? (2/2)\nActual interpretation:\n\nIf we were to\n\nrepeatedly take random samples from a population and\ncalculate a 95% CI for each random sample,\n\nthen we would expect 95% of our CI’s to contain the true population parameter \\(\\mu\\).\n\n\n\n\nWhat we typically write as “shorthand”:\n\nIn general form: We are 95% confident that (the 95% confidence interval) captures the value of the population parameter.\n\nWRONG interpretation:\n\nThere is a 95% chance that (the 95% confidence interval) captures the value of the population parameter.\n\nFor one CI on its own, it either does or doesn’t contain the population parameter with probability 0 or 1. We just don’t know which!"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-taking-samples-of-heights",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-taking-samples-of-heights",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Last time: Taking samples of heights",
+    "text": "Last time: Taking samples of heights\n\nPopulation mean (\\(\\mu\\)): 65 inches\nPopulation standard deviation (\\(\\sigma\\)): 3 inches"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#students-t-distribution",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#students-t-distribution",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Student’s t-distribution",
+    "text": "Student’s t-distribution\n\n\n\nIs bell shaped and symmetric\nA “generalized” version of the normal distribution\n\n \n\nIts tails are a thicker than that of a normal distribution\n\nThe “thickness” depends on its degrees of freedom: \\(df = n–1\\) , where n = sample size\n\n\n \n\nAs the degrees of freedom (sample size) increase,\n\nthe tails are less thick, and\nthe t-distribution is more like a normal distribution\nin theory, with an infinite sample size the t-distribution is a normal distribution."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#confidence-interval-ci-for-the-mean-mu-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#confidence-interval-ci-for-the-mean-mu-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Confidence interval (CI) for the mean \\(\\mu\\)",
+    "text": "Confidence interval (CI) for the mean \\(\\mu\\)\n\n\n\n\nConfidence interval for \\(\\mu\\)\n\n\n\\[\\overline{x}\\ \\pm\\ t^*\\times \\text{SE}\\]\n\nwith \\(\\text{SE} = \\frac{s}{\\sqrt{n}}\\) if population sd is not known\n\n\n\n\n\n\n \nWhen can this be applied?\n\nWhen CLT can be applied!\nWhen we do not know the population standard deviation!\n\n\n\n\n\n\n\\(t^*\\) depends on the confidence level and degrees of freedom\n\ndegrees of freedom (df) is: \\(df=n-1\\) (n is number of observations in sample)\n\nqt gives the quartiles for a t-distribution. Need to specify\n\nthe percent under the curve to the left of the quartile\nthe degrees of freedom = \\(n-1\\)\n\nNote in the R output to the right that \\(t^*\\) gets closer to 1.96 as the sample size increases\n\n\n\nqt(p = 0.975, df=9)  #df = n-1\n\n[1] 2.262157\n\nqt(p = 0.975, df=49)\n\n[1] 2.009575\n\nqt(p = 0.975, df=99)\n\n[1] 1.984217\n\nqt(p = 0.975, df=999)\n\n[1] 1.962341"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height-mu-with-sigma",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height-mu-with-sigma",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Example: CI for mean height \\(\\mu\\) with \\(\\sigma\\)",
+    "text": "Example: CI for mean height \\(\\mu\\) with \\(\\sigma\\)\n\n\nExample 1: Using our green sample from previous plots\n\n\nFor a random sample of 50 people, the mean height is 66.1 inches. Assume the population standard deviation is 3 inches. Find the 95% confidence interval for the population mean.\n\n\n\\[\n\\begin{aligned}\n\\overline{x} \\pm \\ & z^* \\times \\text{SE} \\\\\n\\overline{x} \\pm \\ & z^* \\times \\dfrac{\\sigma}{\\sqrt{n}} \\\\\n66.1 \\pm \\ & 1.96 \\times \\dfrac{3}{\\sqrt{50}} \\\\\n66.1 \\pm \\ & 0.8315576 \\\\\n(66.1 - 0.8315576, & \\ 66.1 + 0.8315576)\\\\\n(65.268, & \\ 66.932)\\\\\n\\end{aligned}\n\\]\nWe are 95% confident that the mean height is between 65.268 and 66.932 inches."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height-mu-with-s",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#example-ci-for-mean-height-mu-with-s",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Example: CI for mean height \\(\\mu\\) with \\(s\\)",
+    "text": "Example: CI for mean height \\(\\mu\\) with \\(s\\)\n\n\nExample 2: Using our green sample from previous plots\n\n\nFor a random sample of 50 people, the mean height is 66.1 inches and the standard deviation is 3.5 inches. Find the 95% confidence interval for the population mean.\n\n\n\n\n\\[\n\\begin{aligned}\n\\overline{x} \\pm \\ & t^* \\times \\text{SE} \\\\\n\\overline{x} \\pm \\ & t^* \\times \\dfrac{s}{\\sqrt{n}} \\\\\n66.1 \\pm \\ & 2.0096 \\times \\dfrac{3.5}{\\sqrt{50}} \\\\\n66.1 \\pm \\ & 0.994689 \\\\\n(66.1 - 0.994689, & \\ 66.1 + 0.994689)\\\\\n(65.105, & \\ 67.095)\\\\\n\\end{aligned}\n\\]\n\n \nWhat is \\(t^*\\)? \\[df = n-1 = 50-1=49\\] \\(t^* =\\) qt(p = 0.975, df = 49) \\(= 2.0096\\)\n\n\nWe are 95% confident that the mean height is between 65.105 and 67.095 inches."
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#confidence-interval-ci-for-the-mean-mu-z-vs.-t",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#confidence-interval-ci-for-the-mean-mu-z-vs.-t",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Confidence interval (CI) for the mean \\(\\mu\\) (\\(z\\) vs. \\(t\\))",
+    "text": "Confidence interval (CI) for the mean \\(\\mu\\) (\\(z\\) vs. \\(t\\))\n\nIn summary, we have two cases that lead to different ways to calculate the confidence interval\n\n\n\n\n\nCase 1: We know the population standard deviation\n\n\n\\[\\overline{x}\\ \\pm\\ z^*\\times \\text{SE}\\]\n\nwith \\(\\text{SE} = \\frac{\\sigma}{\\sqrt{n}}\\) and \\(\\sigma\\) is the population standard deviation\n\n \n\nFor 95% CI, we use:\n\n\\(z^* =\\) qnorm(p = 0.975) \\(=1.96\\)\n\n\n\n\n\n\n\nCase 2: We do not know the population sd\n\n\n\\[\\overline{x}\\ \\pm\\ t^*\\times \\text{SE}\\]\n\nwith \\(\\text{SE} = \\frac{s}{\\sqrt{n}}\\) and \\(s\\) is the sample standard deviation\n\n \n\nFor 95% CI, we use:\n\n\\(t^* =\\) qt(p = 0.975, df = n-1)"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#some-final-words-said-slightly-differently",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#some-final-words-said-slightly-differently",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Some final words (said slightly differently?)",
+    "text": "Some final words (said slightly differently?)\n\nRule of thumb:\n\nUse normal distribution ONLY if you know the population standard deviation \\(\\sigma\\)\nIf using \\(s\\) for the \\(SE\\), then use the Student’s t-distribution\n\n\n \n\nFor either case, we need to remember when we can calculate the confidence interval:\n\n\\(n \\geq 30\\) and population distribution not strongly skewed (using Central Limit Theorem)\n\nIf there is skew or some large outliers, then \\(n \\geq 50\\) gives better estimates\n\n\\(n &lt; 30\\) and data approximately symmetric with no large outliers\n\n\n \n\nIf do not know population distribution, then check the distribution of the data.\n\nAka, use what we learned in datavisualization to see what the data look like\n\n\n\n\nLesson 10 Slides"
   }
 ]

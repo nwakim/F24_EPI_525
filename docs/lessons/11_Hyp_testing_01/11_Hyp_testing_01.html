@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Meike Niederhausen and Nicky Wakim">
-  <meta name="dcterms.date" content="2024-11-04">
+  <meta name="dcterms.date" content="2024-11-06">
   <title>Biostatistics 1 - Lesson 11: Hypothesis testing for mean from one-sample</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -404,18 +404,13 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 
-  <p class="date">2024-11-04</p>
+  <p class="date">2024-11-06</p>
 </section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
-<p><br> <br></p>
 
-<img data-src="../img_slides/flowchart_511_continuous.png" class="r-stretch quarto-figure-center"></section>
-<section id="where-are-we-continuous-outcome-zoomed-in" class="slide level2">
-<h2>Where are we? Continuous outcome zoomed in</h2>
-<p><br> <br></p>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
 
-<img data-src="../img_slides/flowchart_only_continuous.jpg" class="r-stretch quarto-figure-center"></section>
 <section id="goals-for-today-part-1" class="slide level2">
 <h2>Goals for today: Part 1</h2>
 <h3 id="hypothesis-testing-for-mean-from-one-sample">(4.3, 5.1) Hypothesis testing for mean from one sample</h3>
@@ -448,50 +443,110 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <h3 id="confidence-intervals-cis-vs.-hypothesis-tests">(4.3.3) Confidence intervals (CIs) vs.&nbsp;hypothesis tests</h3>
 </section>
-<section id="goals-for-today-part-2---class-discussion" class="slide level2">
-<h2>Goals for today: Part 2 - Class discussion</h2>
-<h3 id="inference-for-mean-difference-from-dependentpaired-2-samples">(5.2) Inference for <strong>mean difference</strong> from dependent/paired 2 samples</h3>
-<ul>
-<li>Inference: CIs and hypothesis testing</li>
-<li>Exploratory data analysis (EDA) to visualize data</li>
-<li>Run paired t-test in R</li>
-</ul>
-<h3 id="one-sided-cis">One-sided CIs</h3>
-<h3 id="class-discussion">Class discussion</h3>
-<ul>
-<li>Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.</li>
-<li>Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.</li>
-<li>In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code.</li>
-</ul>
-</section>
-<section id="moritzs-tip-of-the-day-use-r-projects-to-organize-analyses" class="slide level2">
-<h2>MoRitz’s tip of the day: use <span style="color:darkorange"><strong>R projects</strong></span> to organize analyses</h2>
+<section id="answering-a-research-question" class="slide level2">
+<h2>Answering a research question</h2>
+<p>Research question is a generic form: Is there evidence to support that the population mean is different than <span class="math inline">\(\mu\)</span>?</p>
+<p>Two approaches to answer this question:</p>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:49%;">
+<div class="green2">
+<div class="green2-ttl">
+<p>Confidence interval</p>
+</div>
+<div class="green2-cont">
+<ul>
+<li>Create a <strong>confidence interval (CI)</strong> for the population mean <span class="math inline">\(\mu\)</span> and determine whether 98.6°F is inside the CI or not.</li>
+<li>Answering the question: is 98.6°F a plausible value?</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:49%;">
+<div class="pink">
+<div class="pink-ttl">
+<p>Hypothesis test</p>
+</div>
+<div class="pink-cont">
+<ul>
+<li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not</li>
+<li>This does not give us a range of plausible values for the population mean <span class="math inline">\(\mu\)</span>.</li>
+<li>Instead, we calculate a <em>test statistic</em> and <em>p-value</em></li>
+<li>See how likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="last-time-point-estimates" class="slide level2">
+<h2>Last time: point estimates</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img_slides/Moritz_tongue_IMG_1741.png"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-2-1.png" width="1728"></p>
 </figure>
 </div>
-</div><div class="column" style="width:70%;">
-<p>MoRitz loves using R projects to</p>
-<ul>
-<li>organize analyses and</li>
-<li>make it easier to load data files</li>
-<li>and also save output</li>
-</ul>
-<p>Other bonuses include</p>
-<ul>
-<li>making to it easier to collaborate with others,</li>
-<li>including yourself when accessing files from different computers.</li>
-</ul>
-<p><br></p>
-<p>We will discuss how to use projects later in today’s slides when loading a dataset.<br>
-See file <a href="../resources/Projects_in_R.html">Projects in RStudio</a> for more information.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/sample_point_est.png"></p>
+</figure>
+</div>
+</section>
+<section id="last-time-point-estimates-with-their-confidence-intervals-for-mu" class="slide level2">
+<h2>Last time: Point estimates with their confidence intervals for <span class="math inline">\(\mu\)</span></h2>
+<div class="columns">
+<div class="column" style="width:22%;">
+<p>&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/samp_point_est_vert.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-3-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:28%;">
+<p>Do these confidence intervals include <span class="math inline">\(\mu\)</span>?</p>
 </div>
 </div>
 </section>
-<section id="is-98.6f-really-the-mean-healthy-body-temperature" class="slide level2 smaller">
+<section id="this-time-point-estimates-with-probability-assuming-population-mean-mu" class="slide level2">
+<h2>This time: Point estimates with probability assuming population mean <span class="math inline">\(\mu\)</span></h2>
+<div class="columns">
+<div class="column" style="width:22%;">
+<p>&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/samp_point_est_vert.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:28%;">
+<p>Assuming the population mean is <span class="math inline">\(\mu\)</span>, what is the probability that we observe <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean?</p>
+</div>
+</div>
+</section>
+<section id="is-98.6f-really-the-mean-healthy-body-temperature" class="slide level2">
 <h2>Is 98.6°F really the mean “healthy” body temperature?</h2>
 <ul>
 <li><strong>Where did the 98.6°F value come from?</strong>
@@ -501,43 +556,56 @@ See file <a href="../resources/Projects_in_R.html">Projects in RStudio</a> for m
 <li><a href="https://jamanetwork.com/journals/jama/article-abstract/400116">1992 JAMA article</a> by Mackowiak, Wasserman, &amp; Levine
 <ul>
 <li>They claim that 98.2°F (36.8°C) is a more accurate average body temp</li>
-<li>Sample: n = 148 healthy men and women aged 18 - 40 years</li>
+<li>Sample: n = 148 healthy individuals aged 18 - 40 years</li>
 </ul></li>
-<li>In January 2020, a group from Stanford published <em><a href="https://elifesciences.org/articles/49555">Decreasing human body temperature in the United States since the Industrial Revolution</a></em> in eLIFE.
+<li>Other research indicating that the human body temperature is lower
 <ul>
-<li>“determined that mean body temperature in men and women, after adjusting for age, height, weight and, in some models date and time of day, has decreased monotonically by 0.03°C (0.05°F) per birth decade”</li>
-<li>September 2023 update: <em><a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098">Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm</a></em> in JAMA Internal Medicine
-<ul>
-<li>Average is 36.64 °C (97.95 °F); “range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C” (97.23 to 98.40 °F); based 2008-2017 data</li>
-<li>“findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges.”</li>
-</ul></li>
+<li>In January 2020: <em><a href="https://elifesciences.org/articles/49555">Decreasing human body temperature in the United States since the Industrial Revolution</a></em></li>
+<li>September 2023 update: <em><a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098">Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm</a></em> in JAMA Internal Medicine</li>
 </ul></li>
 <li>NYT article <a href="../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf">The Average Human Body Temperature Is Not 98.6 Degrees</a>, Oct 12, 2023, by Dana G. Smith</li>
 </ul>
-<p><strong><span style="color:darkorange">Question:</span> based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</strong></p>
+<div class="lob">
+<p><strong>Question:</strong> based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</p>
+</div>
 </section>
 <section id="question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" class="slide level2">
 <h2>Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</h2>
 <p>Two approaches to answer this question:</p>
-<ol type="1">
-<li>Create a <strong><span style="color:purple">confidence interval (CI)</span></strong> for the population mean <span class="math inline">\(\mu\)</span> and determine whether 98.6°F is inside the CI or not.
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="green2">
+<div class="green2-ttl">
+<p>Confidence interval</p>
+</div>
+<div class="green2-cont">
 <ul>
-<li>is 98.6°F a plausible value?</li>
-</ul></li>
-<li>Run a <strong><span style="color:green">hypothesis test</span></strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not.
+<li>Create a <strong>confidence interval (CI)</strong> for the population mean <span class="math inline">\(\mu\)</span> and determine whether 98.6°F is inside the CI or not.</li>
+<li>Answering the question: is 98.6°F a plausible value?</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:49%;">
+<div class="pink2">
+<div class="pink2-ttl">
+<p>Hypothesis test</p>
+</div>
+<div class="pink2-cont">
 <ul>
-<li><p>This does not give us a range of plausible values for the population mean <span class="math inline">\(\mu\)</span>.</p></li>
-<li><p>Instead, we calculate a <em>test statistic</em> and <em>p-value</em></p>
-<ul>
-<li>to see how likely we are to observe the sample mean <span class="math inline">\(\bar{x}\)</span></li>
-<li>or a more extreme sample mean</li>
-<li>assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F.</li>
-</ul></li>
-</ul></li>
-</ol>
+<li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not</li>
+<li>This does not give us a range of plausible values for the population mean <span class="math inline">\(\mu\)</span>.</li>
+<li>Instead, we calculate a <em>test statistic</em> and <em>p-value</em></li>
+<li>See how likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="approach-1-create-a-95-c-i-for-the-population-mean-body-temperature" class="slide level2">
-<h2>Approach 1: Create a <span style="color:purple">95% C I</span> for the population mean body temperature</h2>
+<section id="approach-1-create-a-95-ci-for-the-population-mean-body-temperature" class="slide level2">
+<h2><span style="color:#459B99">Approach 1: Create a 95% CI for the population mean body temperature</span></h2>
 <ul>
 <li>Use data based on the results from the 1992 JAMA study
 <ul>
@@ -545,27 +613,25 @@ See file <a href="../resources/Projects_in_R.html">Projects in RStudio</a> for m
 <li>However, Allen Shoemaker from Calvin College created a <a href="http://jse.amstat.org/datasets/normtemp.dat.txt">dataset</a> with the same summary statistics as in the JAMA article, which we will use:</li>
 </ul></li>
 </ul>
-<p><span class="math display">\[\bar{x} = 98.25,~s=0.733,~n=130\]</span> CI for <span class="math inline">\(\mu\)</span>:</p>
+<p><span class="math display">\[\overline{x} = 98.25,~s=0.733,~n=130\]</span></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="math display">\[\begin{align}
-\bar{x} &amp;\pm t^*\cdot\frac{s}{\sqrt{n}}\\
+<div class="column" style="width:40%;">
+<p>CI for <span class="math inline">\(\mu\)</span>: <span class="math display">\[\begin{align}
+\overline{x} &amp;\pm t^*\cdot\frac{s}{\sqrt{n}}\\
 98.25 &amp;\pm 1.979\cdot\frac{0.733}{\sqrt{130}}\\
 98.25 &amp;\pm 0.127\\
 (98.123&amp;, 98.377)
 \end{align}\]</span></p>
-</div><div class="column" style="width:50%;">
-<p>Used <span class="math inline">\(t^*\)</span> = <code>qt(.975, df=129)</code></p>
-<p>Conclusion:<br>
-We are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F.</p>
-<ul>
-<li><em>How does the CI compare to 98.6°F?</em></li>
-</ul>
+</div><div class="column" style="width:60%;">
+<p>&nbsp;</p>
+<p>Used <span class="math inline">\(t^*\)</span> = <code>qt(.975, df=129)</code> = 1.979</p>
+<p>&nbsp;</p>
+<p><strong>Conclusion: </strong> We are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F, which is discernably different than 98.6°F.</p>
 </div>
 </div>
 </section>
 <section id="approach-2-hypothesis-test" class="slide level2">
-<h2>Approach 2: <span style="color:green">Hypothesis Test</span></h2>
+<h2><span style="color:#BF396F">Approach 2: Hypothesis Test</span></h2>
 <p>From before:</p>
 <ul>
 <li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not.
@@ -573,51 +639,37 @@ We are 95% confident that the (population) mean body temperature is between 98.1
 <li><p>This does not give us a range of plausible values for the population mean <span class="math inline">\(\mu\)</span>.</p></li>
 <li><p>Instead, we calculate a <em>test statistic</em> and <em>p-value</em></p>
 <ul>
-<li>to see how likely we are to observe the sample mean <span class="math inline">\(\bar{x}\)</span></li>
+<li>to see how likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span></li>
 <li>or a more extreme sample mean</li>
 <li>assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F.</li>
 </ul></li>
 </ul></li>
 </ul>
 <p><strong>How do we calculate a <em>test statistic</em> and <em>p-value</em>?</strong></p>
-</section>
-<section id="recall-the-sampling-distribution-of-the-mean" class="slide level2">
-<h2>Recall the sampling distribution of the mean</h2>
-<p>From the <strong><span style="color:darkorange">Central Limit Theorem (CLT)</span></strong>, we know that</p>
 <ul>
-<li>For <strong><span style="color:cornflowerblue">“large” sample sizes</span></strong> ( <span class="math inline">\(n\geq 30\)</span> ),
+<li>Use the sampling distribution and central limit theorem!!</li>
+<li>Two cases
 <ul>
-<li>the <span style="color:green"><strong>sampling distribution</strong> of the sample mean</span></li>
-<li>can be approximated by a <strong>normal distribution</strong>,with
-<ul>
-<li><em>mean</em> equal to the <em>population mean</em> value <span class="math inline">\(\mu\)</span>, and</li>
-<li><em>standard deviation</em> <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<p><span class="math display">\[\bar{X}\sim N\Big(\mu_{\bar{X}} = \mu, \sigma_{\bar{X}}= \frac{\sigma}{\sqrt{n}}\Big)\]</span></p>
-<ul>
-<li>For <strong><span style="color:cornflowerblue">small sample sizes</span></strong>, if the population is known to be normally distributed, then
-<ul>
-<li>the same result holds</li>
+<li>Case 1: suppose we know the population sd <span class="math inline">\(\sigma\)</span></li>
+<li>Case 2: we don’t know the population sd <span class="math inline">\(\sigma\)</span></li>
 </ul></li>
 </ul>
 </section>
 <section id="case-1-suppose-we-know-the-population-sd-sigma" class="slide level2">
 <h2>Case 1: suppose we know the population sd <span class="math inline">\(\sigma\)</span></h2>
 <ul>
-<li><span style="color:green">How likely we are to observe the sample mean <span class="math inline">\(\bar{x}\)</span> ,</span>
+<li><span style="color:green">How likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> ,</span>
 <ul>
 <li><span style="color:green">or a more extreme sample mean,</span></li>
 <li><span style="color:green">assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
 </ul></li>
-<li>Use <span class="math inline">\(\bar{x} = 98.25\)</span>, <span class="math inline">\(\sigma=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
+<li>Use <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(\sigma=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -634,8 +686,8 @@ We are 95% confident that the (population) mean body temperature is between 98.1
 <li>This is usually the case in real life</li>
 <li>We estimate <span class="math inline">\(\sigma\)</span> with the sample standard deviation <span class="math inline">\(s\)</span></li>
 <li>From last time, we know that in this case we need to use the <strong>t-distribution with d.f. = n-1</strong>, instead of the normal distribution</li>
-<li><span style="color:green">Question: How likely we are to observe the sample mean <span class="math inline">\(\bar{x}\)</span> or a more extreme sample mean, assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
-<li>Use <span class="math inline">\(\bar{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
+<li><span style="color:green">Question: How likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean, assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
+<li>Use <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
 </ul>
 </div><div class="column" style="width:60%;">
 
@@ -726,23 +778,23 @@ H_0 &amp;: \mu = 98.6\\
 <div class="column" style="width:50%;">
 <p><strong><span style="color:purple">Case 1: know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
 <p><span class="math display">\[
-\text{test statistic} = z_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
+\text{test statistic} = z_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
 \]</span></p>
 <ul>
-<li>Statistical theory tells us that <span style="color:purple"><span class="math inline">\(z_{\bar{x}}\)</span></span> follows a <span style="color:purple"><strong>Standard Normal distribution</strong> <span class="math inline">\(N(0,1)\)</span></span></li>
+<li>Statistical theory tells us that <span style="color:purple"><span class="math inline">\(z_{\overline{x}}\)</span></span> follows a <span style="color:purple"><strong>Standard Normal distribution</strong> <span class="math inline">\(N(0,1)\)</span></span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong><span style="color:green">Case 2: don’t know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
 <p><span class="math display">\[
-\text{test statistic} = t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+\text{test statistic} = t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 \]</span></p>
 <ul>
-<li>Statistical theory tells us that <span style="color:green"><span class="math inline">\(t_{\bar{x}}\)</span></span> follows a <span style="color:green"><strong>Student’s t distribution</strong> with degrees of freedom (df) = <span class="math inline">\(n-1\)</span></span></li>
+<li>Statistical theory tells us that <span style="color:green"><span class="math inline">\(t_{\overline{x}}\)</span></span> follows a <span style="color:green"><strong>Student’s t distribution</strong> with degrees of freedom (df) = <span class="math inline">\(n-1\)</span></span></li>
 </ul>
 </div>
 </div>
 <div style="font-size: 90%;">
-<p><span class="math inline">\(\bar{x}\)</span> = sample mean, <span class="math inline">\(\mu_0\)</span> = hypothesized population mean from <span class="math inline">\(H_0\)</span>,<br>
+<p><span class="math inline">\(\overline{x}\)</span> = sample mean, <span class="math inline">\(\mu_0\)</span> = hypothesized population mean from <span class="math inline">\(H_0\)</span>,<br>
 <span class="math inline">\(\sigma\)</span> = <em>population</em> standard deviation, <span class="math inline">\(s\)</span> = <em>sample</em> standard deviation,<br>
 <span class="math inline">\(n\)</span> = sample size</p>
 </div>
@@ -754,19 +806,19 @@ H_0 &amp;: \mu = 98.6\\
 </section>
 <section id="step-3-test-statistic-calculation" class="slide level2">
 <h2>Step 3: Test statistic calculation</h2>
-<p>Recall that <span class="math inline">\(\bar{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130.\)</span></p>
+<p>Recall that <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130.\)</span></p>
 <p>The test statistic is:</p>
-<p><span class="math display">\[t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+<p><span class="math display">\[t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 = \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
 = -5.45\]</span></p>
 <ul>
-<li>Statistical theory tells us that <span class="math inline">\(t_{\bar{x}}\)</span> follows a <strong>Student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>.</li>
+<li>Statistical theory tells us that <span class="math inline">\(t_{\overline{x}}\)</span> follows a <strong>Student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:75%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:25%;">
@@ -790,7 +842,7 @@ H_0 &amp;: \mu = 98.6\\
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -809,7 +861,7 @@ H_0 &amp;: \mu = 98.6\\
 </div>
 </div>
 
-<img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
 <section id="step-4-p-value-estimation-using-t-table" class="slide level2">
 <h2>Step 4: p-value estimation using <span class="math inline">\(t\)</span>-table</h2>
 <ul>
@@ -828,24 +880,6 @@ H_0 &amp;: \mu = 98.6\\
 <li>For a 1-sided test ( <span class="math inline">\(H_A: \mu &lt; \textrm{or} &gt; \mu_0\)</span> ), use one-tail</li>
 </ul></li>
 </ul>
-</section>
-<section id="using-a-t-table-to-estimate-p-value" class="slide level2">
-<h2>Using a <span class="math inline">\(t\)</span>-table to estimate p-value</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/t-table_appendix_part1.png"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/t-table_appendix_part2.png"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
 <section id="step-1-significance-level-alpha" class="slide level2">
 <h2>Step 1: Significance Level <span class="math inline">\(\alpha\)</span></h2>
@@ -921,73 +955,6 @@ H_0 &amp;: \mu = 98.6\\
 <li><code>tidy()</code> the test output using <code>broom</code> package</li>
 </ul>
 </section>
-<section id="working-directory" class="slide level2">
-<h2>Working directory</h2>
-<ul>
-<li>In order to load a dataset from a file, you need to tell R where the dataset is located</li>
-<li>To do this you also need to know the location from which R is working, i.e.&nbsp;your <strong>working directory</strong></li>
-<li>You can figure out your working directory by running the <code>getwd()</code> function.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&amp;ScienceUniversity/Teaching/Classes/F24_EPI_525/F24_EPI_525_site"</code></pre>
-</div>
-</div>
-<ul>
-<li>Above is the working directory of this slides file
-<ul>
-<li><em>In this case, this is NOT the location of the actual qmd file though!</em></li>
-</ul></li>
-<li>To make it easier to juggle the working directory, the location of your qmd file, and the location of the data,
-<ul>
-<li><span style="color:darkred">I highly recommend using <strong>R Projects</strong>!</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="r-projects" class="slide level2">
-<h2>R projects</h2>
-<ul>
-<li>I <em>highly, highly, HIGHLY</em> recommend using R Projects to organize your analyses and make it easier to load data files and also save output.</li>
-<li>When you create an R Project on your computer, the Project is associated with the folder (directory) you created it in.
-<ul>
-<li>This folder becomes the “root” of your working directory, and RStudio’s point of reference from where to load files from and to.</li>
-</ul></li>
-<li>I create separate Projects for every analysis project and every class I teach.</li>
-<li>You can run multiple sessions of RStudio by opening different Projects, and the environments (or working directory) of each are working independently of each other.</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>Although we are using Quarto files,
-<ul>
-<li>I will show how to set up and use a <strong>“regular” R Project</strong></li>
-<li>instead of “Quarto Project”</li>
-</ul></li>
-<li>Quarto Projects include extra features and thus complexity. Once you are used to how regular R Projects work, you can try out a Quarto Project.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="how-to-create-an-r-project" class="slide level2">
-<h2>How to create an R Project</h2>
-<ul>
-<li>Demonstration in class recording</li>
-<li>Posit’s (RStudio’s) directions for creating Projects
-<ul>
-<li><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects">https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects</a></li>
-</ul></li>
-<li>See file <a href="../resources/Projects_in_R.html">Projects in RStudio</a> for more information on R Projects.</li>
-</ul>
-</section>
 <section id="load-the-dataset" class="slide level2">
 <h2>Load the dataset</h2>
 <ul>
@@ -1000,42 +967,20 @@ H_0 &amp;: \mu = 98.6\\
 <li>To make it easier to specify where the dataset is located, I recommend using the <code>here()</code> function from the <code>here</code> package: <code>here::here()</code>.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># read_csv() is a function from the readr package that is a part of the tidyverse</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(here)   <span class="co"># first install this package</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"BodyTemperatures.csv"</span>))</span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#                     location: look in "data" folder</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#                               for the file "BodyTemperatures.csv"</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># read_csv() is a function from the readr package that is a part of the tidyverse</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(here)   <span class="co"># first install this package</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"BodyTemperatures.csv"</span>))</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#                     location: look in "data" folder</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">#                               for the file "BodyTemperatures.csv"</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 130
 Columns: 3
 $ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…
 $ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
 $ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
-</div>
-</div>
-</section>
-<section id="herehere" class="slide level2">
-<h2><code>here::here()</code></h2>
-<p>General use of <code>here::here()</code></p>
-<p><code>here::here("folder_name", "filename")</code></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Resources for <code>here::here()</code>:</p>
-<ul>
-<li><a href="http://jenrichmond.rbind.io/post/how-to-use-the-here-package/">how to use the <code>here</code> package</a> (Jenny Richmond)</li>
-<li><a href="https://github.com/jennybc/here_here">Ode to the here package</a> (Jenny Bryan)</li>
-</ul>
-<p><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a> (Jenny Bryan)</p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/horst_here.png"></p>
-<figcaption><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
-</figure>
-</div>
 </div>
 </div>
 </section>
@@ -1046,7 +991,7 @@ $ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70
 <li>We called the dataset <code>BodyTemps</code> when we loaded it</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 130
 Columns: 3
@@ -1054,9 +999,9 @@ $ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 
 $ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
 $ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
-<span id="cb9-2"><a href="#cb9-2"></a>       <span class="co"># alternative = "two.sided",  # default</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>       <span class="at">mu =</span> <span class="fl">98.6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
+<span id="cb7-2"><a href="#cb7-2"></a>       <span class="co"># alternative = "two.sided",  # default</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>       <span class="at">mu =</span> <span class="fl">98.6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     One Sample t-test
@@ -1080,34 +1025,35 @@ mean of x
 <li>Combined with the <code>gt()</code> function from the <code>gt</code> package, we get a nice table</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>) <span class="co"># use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="mecfuynzio" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mecfuynzio table {
+<div id="ccavxmiduu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ccavxmiduu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mecfuynzio thead, #mecfuynzio tbody, #mecfuynzio tfoot, #mecfuynzio tr, #mecfuynzio td, #mecfuynzio th {
+#ccavxmiduu thead, #ccavxmiduu tbody, #ccavxmiduu tfoot, #ccavxmiduu tr, #ccavxmiduu td, #ccavxmiduu th {
   border-style: none;
 }
 
-#mecfuynzio p {
+#ccavxmiduu p {
   margin: 0;
   padding: 0;
 }
 
-#mecfuynzio .gt_table {
+#ccavxmiduu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 16px;
+  font-size: 40px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -1126,12 +1072,12 @@ mean of x
   border-left-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_caption {
+#ccavxmiduu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mecfuynzio .gt_title {
+#ccavxmiduu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1143,7 +1089,7 @@ mean of x
   border-bottom-width: 0;
 }
 
-#mecfuynzio .gt_subtitle {
+#ccavxmiduu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1155,7 +1101,7 @@ mean of x
   border-top-width: 0;
 }
 
-#mecfuynzio .gt_heading {
+#ccavxmiduu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1167,13 +1113,13 @@ mean of x
   border-right-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_bottom_border {
+#ccavxmiduu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_col_headings {
+#ccavxmiduu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1188,7 +1134,7 @@ mean of x
   border-right-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_col_heading {
+#ccavxmiduu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1208,7 +1154,7 @@ mean of x
   overflow-x: hidden;
 }
 
-#mecfuynzio .gt_column_spanner_outer {
+#ccavxmiduu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1220,15 +1166,15 @@ mean of x
   padding-right: 4px;
 }
 
-#mecfuynzio .gt_column_spanner_outer:first-child {
+#ccavxmiduu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mecfuynzio .gt_column_spanner_outer:last-child {
+#ccavxmiduu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mecfuynzio .gt_column_spanner {
+#ccavxmiduu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1240,11 +1186,11 @@ mean of x
   width: 100%;
 }
 
-#mecfuynzio .gt_spanner_row {
+#ccavxmiduu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mecfuynzio .gt_group_heading {
+#ccavxmiduu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1270,7 +1216,7 @@ mean of x
   text-align: left;
 }
 
-#mecfuynzio .gt_empty_group_heading {
+#ccavxmiduu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1285,15 +1231,15 @@ mean of x
   vertical-align: middle;
 }
 
-#mecfuynzio .gt_from_md > :first-child {
+#ccavxmiduu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mecfuynzio .gt_from_md > :last-child {
+#ccavxmiduu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mecfuynzio .gt_row {
+#ccavxmiduu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1312,7 +1258,7 @@ mean of x
   overflow-x: hidden;
 }
 
-#mecfuynzio .gt_stub {
+#ccavxmiduu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1325,7 +1271,7 @@ mean of x
   padding-right: 5px;
 }
 
-#mecfuynzio .gt_stub_row_group {
+#ccavxmiduu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1339,15 +1285,15 @@ mean of x
   vertical-align: top;
 }
 
-#mecfuynzio .gt_row_group_first td {
+#ccavxmiduu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mecfuynzio .gt_row_group_first th {
+#ccavxmiduu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mecfuynzio .gt_summary_row {
+#ccavxmiduu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1357,16 +1303,16 @@ mean of x
   padding-right: 5px;
 }
 
-#mecfuynzio .gt_first_summary_row {
+#ccavxmiduu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_first_summary_row.thick {
+#ccavxmiduu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mecfuynzio .gt_last_summary_row {
+#ccavxmiduu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1376,7 +1322,7 @@ mean of x
   border-bottom-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_grand_summary_row {
+#ccavxmiduu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1386,7 +1332,7 @@ mean of x
   padding-right: 5px;
 }
 
-#mecfuynzio .gt_first_grand_summary_row {
+#ccavxmiduu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1396,7 +1342,7 @@ mean of x
   border-top-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_last_grand_summary_row_top {
+#ccavxmiduu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1406,11 +1352,11 @@ mean of x
   border-bottom-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_striped {
+#ccavxmiduu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mecfuynzio .gt_table_body {
+#ccavxmiduu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1419,7 +1365,7 @@ mean of x
   border-bottom-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_footnotes {
+#ccavxmiduu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1433,7 +1379,7 @@ mean of x
   border-right-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_footnote {
+#ccavxmiduu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1442,7 +1388,7 @@ mean of x
   padding-right: 5px;
 }
 
-#mecfuynzio .gt_sourcenotes {
+#ccavxmiduu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1456,7 +1402,7 @@ mean of x
   border-right-color: #D3D3D3;
 }
 
-#mecfuynzio .gt_sourcenote {
+#ccavxmiduu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1464,72 +1410,72 @@ mean of x
   padding-right: 5px;
 }
 
-#mecfuynzio .gt_left {
+#ccavxmiduu .gt_left {
   text-align: left;
 }
 
-#mecfuynzio .gt_center {
+#ccavxmiduu .gt_center {
   text-align: center;
 }
 
-#mecfuynzio .gt_right {
+#ccavxmiduu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mecfuynzio .gt_font_normal {
+#ccavxmiduu .gt_font_normal {
   font-weight: normal;
 }
 
-#mecfuynzio .gt_font_bold {
+#ccavxmiduu .gt_font_bold {
   font-weight: bold;
 }
 
-#mecfuynzio .gt_font_italic {
+#ccavxmiduu .gt_font_italic {
   font-style: italic;
 }
 
-#mecfuynzio .gt_super {
+#ccavxmiduu .gt_super {
   font-size: 65%;
 }
 
-#mecfuynzio .gt_footnote_marks {
+#ccavxmiduu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mecfuynzio .gt_asterisk {
+#ccavxmiduu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mecfuynzio .gt_indent_1 {
+#ccavxmiduu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mecfuynzio .gt_indent_2 {
+#ccavxmiduu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mecfuynzio .gt_indent_3 {
+#ccavxmiduu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mecfuynzio .gt_indent_4 {
+#ccavxmiduu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mecfuynzio .gt_indent_5 {
+#ccavxmiduu .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mecfuynzio .katex-display {
+#ccavxmiduu .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mecfuynzio div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ccavxmiduu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1569,7 +1515,7 @@ mean of x
 <div class="column" style="width:50%;">
 <p>Using base R’s <code>$</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
@@ -1578,7 +1524,7 @@ mean of x
 </div><div class="column" style="width:50%;">
 <p>Or the <code>tidyverse</code> way: using <code>pull()</code> from <code>dplyr</code> package</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
@@ -1586,6 +1532,10 @@ mean of x
 <p>Advantage: can use together with piping (<code>%&gt;%</code>) other functions</p>
 </div>
 </div>
+</section>
+<section id="answering-a-research-question-1" class="slide level2">
+<h2>Answering a research question</h2>
+<p>Research question is a generic form: Is there evidence to support that the population mean is different than <span class="math inline">\(\mu\)</span>?</p>
 </section>
 <section id="whats-next" class="slide level2">
 <h2>What’s next?</h2>
@@ -1616,7 +1566,7 @@ mean of x
 <td style="text-align: center;">Pop mean</td>
 <td style="text-align: center;"><span class="math inline">\(\mu\)</span></td>
 <td style="text-align: center;">Sample mean</td>
-<td style="text-align: center;"><span class="math inline">\(\bar{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\overline{x}\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">10</td>
@@ -1624,7 +1574,7 @@ mean of x
 <td style="text-align: center;">Pop mean of paired diff</td>
 <td style="text-align: center;"><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
 <td style="text-align: center;">Sample mean of paired diff</td>
-<td style="text-align: center;"><span class="math inline">\(\bar{x}_{d}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\overline{x}_{d}\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">11</td>
@@ -1632,7 +1582,7 @@ mean of x
 <td style="text-align: center;">Diff in pop means</td>
 <td style="text-align: center;"><span class="math inline">\(\mu_1-\mu_2\)</span></td>
 <td style="text-align: center;">Diff in sample means</td>
-<td style="text-align: center;"><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\overline{x}_1 - \overline{x}_2\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">12</td>

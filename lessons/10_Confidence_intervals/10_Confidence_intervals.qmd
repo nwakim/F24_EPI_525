@@ -4,7 +4,7 @@ subtitle: "TB sections 4.2"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
-date: "10/30/2024"
+date: "11/04/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -48,167 +48,73 @@ set.seed(456)
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
-## Last time -> Goals for today
+# Learning Objectives
+1. Calculate a confidence interval when we know the population standard deviation
+2. Interpret a confidence interval when we know the population standard deviation
+3. Calculate and interpret a confidence interval *using the t-distribution* when we do not know the population standard deviation
 
-::: columns
-::: {.column width="47%"}
-### Day 8: Section 4.1
-* Sampling from a population
-  * population __parameters__ vs. __point estimates__
-  * sampling variation
+# Learning Objectives
 
-<br>
-
-* __Sampling distribution__ of a mean
-* __Central Limit Theorem__
-
-:::
-::: {.column width="4%"}
-:::
-::: {.column width="47%"}
-### Day 9: Section 4.2
-
-What are __Confidence Intervals__?
-
-* How to __calculate__ CI's?
-* How to __interpret__ & __NOT__ interpret CI's?
-
-<br>
-
-* What if we don't know $\sigma$?
-* Student's __t-distribution__
-:::
+::: lob
+1. Calculate a confidence interval when we know the population standard deviation
 :::
 
+2. Interpret a confidence interval when we know the population standard deviation
+3. Calculate and interpret a confidence interval *using the t-distribution* when we do not know the population standard deviation
 
-## Where are we? Continuous outcome zoomed in
+## Last time: Taking samples of heights
 
-<br>
-<br>
+- Population mean ($\mu$): 65 inches
+- Population standard deviation ($\sigma$): 3 inches
 
-![](../img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
-## Our hypothetical population: YRBSS
+## Last time: Central Limit Theorem applied to sampling distribution
 
-__[Youth Risk Behavior Surveillance System](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)__
+::::: columns
+::: {.column width="50%"}
+:::
 
-* Yearly survey conducted by the US Centers for Disease Control (CDC) 
-* "A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12."[^1]
-* Dataset `yrbss` from `oibiostat` pacakge contains responses from _n_ = 13,583 participants in 2013 for a subset of the variables included in the complete survey data
+::: {.column width="50%"}
+CLT tells us that we can model the sampling distribution of mean heights using a normal distribution:
+:::
+:::::
 
-[^1]: Youth Risk Behavior Surveillance System [https://www.cdc.gov/healthyyouth/data/yrbs/index.htm](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)
-
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{r}
-library(oibiostat)
-data("yrbss")  #load the data
-# ?yrbss
+#| echo: false  
+#| fig.height: 6
+#| fig.width: 8
+
+set.seed(4258)
+means=NULL;sds=NULL
+for(i in 1:1000){
+  height = rnorm(50, 65, 3)
+  means = c(means, mean(height))
+  sds = c(sds, sd(height))
+}
+means50 = as.data.frame(cbind(1:1000, means, sds))
+
+samp_dist50_plot = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60) +
+  labs(x="Mean height from samples (inches)", y="Frequency",  
+       title = "Sampling distribution of sample means") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 24))
+
+samp_dist50_plot
 ```
 :::
+
 ::: {.column width="50%"}
-
-```{r}
-dim(yrbss)
-```
-:::
-:::
-```{r}
-names(yrbss)
-```
-
-
-## Transform height & weight from metric to to standard
-
-Also, drop missing values and add a column of id values
-```{r}
-yrbss2 <- yrbss %>%                 # save new dataset with new name
-  mutate(                           # add variables for 
-    height.ft = 3.28084*height,     #     height in feet
-    weight.lb = 2.20462*weight      #     weight in pounds
-  ) %>% 
-  drop_na(height.ft, weight.lb) %>% # drop rows w/ missing height/weight values
-  mutate(id = 1:nrow(.)) %>%        # add id column
-  select(id, height.ft, weight.lb)  # restrict dataset to columns of interest
-
-head(yrbss2)  
-dim(yrbss2)
-# number of rows deleted that had missing values for height and/or weight:
-nrow(yrbss) - nrow(yrbss2) 
-```
-
-
-
-
-## `yrbss2`: stats for height in feet 
-
-```{r}
-summary(yrbss2)
-(mean_height.ft <- mean(yrbss2$height.ft))
-(sd_height.ft <- sd(yrbss2$height.ft))
-```
-
-
-
-
-## 10,000 samples of size n = 30 from `yrbss2`
-::: columns
-::: {.column width="50%"}
-Take 10,000 random samples of size  
-n = 30 from `yrbss2`:
-```{r}
-samp_n30_rep10000 <- yrbss2 %>%
-  rep_sample_n(size = 30, 
-               reps = 10000,
-               replace = FALSE)
-samp_n30_rep10000
-```
-
-:::
-::: {.column width="50"}
-Calculate the mean for each of the 10,000 random samples:
-```{r}
-means_hght_samp_n30_rep10000 <- 
-  samp_n30_rep10000 %>% 
-  group_by(replicate) %>% 
-  summarise(mean_height = 
-            mean(height.ft))
-
-means_hght_samp_n30_rep10000
-```
-:::
-:::
-
-[How close are the mean heights for each of the 10,000 random samples?]{style="color:purple"}
-
-
-
-
-## Simulated sampling distribution for n = 30 <br> using 10,000 sample mean heights
-
-::: columns
-::: {.column width="50%"}
-```{r}
-#| fig.height: 5
-#| fig.width: 5
-ggplot(
-  means_hght_samp_n30_rep10000, 
-  aes(x = mean_height)) + 
-  geom_histogram() +
-  labs(title = "Simulated \n sampling distribution")
-```
-
-:::
-::: {.column width="50%"}
-
-CLT tells us that we can model the sampling distribution of mean heights using a normal distribution.
-
 ```{r}
 #| echo: false
-#| fig.height: 5.5
-#| fig.width: 6
-mu <- 5.55
-SE <- 0.34/sqrt(30)
+#| fig.height: 6
+#| fig.width: 8
+mu <- 65
+SE <- 3/sqrt(50)
 sig <- round(SE, 2)
 
 # sig
@@ -219,311 +125,706 @@ sig <- round(SE, 2)
 
 gg_samp_dist_heights <- ggplot(data.frame(x = c(mu-4*sig, mu+4*sig)), aes(x = x)) + 
   stat_function(fun = dnorm, 
-                args = list(mean = mu, sd = sig)) + 
-  stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu-4*sig, mu-2*sig), 
-                geom = "area", fill = "darkblue") +
+                geom = "area", fill = "#C83532") +
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu+2*sig, mu+4*sig), 
-                geom = "area", fill = "darkblue") +
+                geom = "area", fill = "#C83532") +
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu-2*sig, mu-1*sig), 
-                geom = "area", fill = "darkgreen") +
+                geom = "area", fill = "#5BAFF8") +
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu+1*sig, mu+2*sig), 
-                geom = "area", fill = "darkgreen")+
+                geom = "area", fill = "#5BAFF8")+
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = sig), 
                 xlim = c(mu-1*sig, mu+1*sig), 
-                geom = "area", fill = "orange") +
-  scale_x_continuous(name ="mean height (ft)", 
+                geom = "area", fill = "#EF85B3") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 2) + 
+  scale_x_continuous(name ="Mean height from samples (inches)", 
                     breaks=c(mu-2*sig,mu-1*sig,mu, mu+1*sig, mu+2*sig)) +
-  labs(title = "Theoretical sampling distribution", y = "") +
-  scale_y_continuous(labels = NULL, breaks = NULL)
+  labs(title = "Approximate Normal distribution", y = "") +
+  scale_y_continuous(labels = NULL, breaks = NULL) +
+  theme(text = element_text(size = 24))
+
 
 gg_samp_dist_heights   
 ```
 
+$$\overline{X} \sim \text{Normal}\big(\mu_{\overline{X}}=65, SE = 0.424 \big)$$
 :::
+:::::
+
+## Last time: Sampling Distribution of Sample Means (with the CLT)
+
+:::::::: columns
+:::::: {.column width="65%"}
+-   The [**sampling distribution**]{style="color:#E75B5C"} is the distribution of sample means calculated from repeated random samples of *the same size* from the same population
+
+-   It is useful to think of a **particular sample statistic** as being **drawn from a** [**sampling distribution**]{style="color:#E75B5C"}
+
+    -   So the red sample with $\overline{x} = 65.1$ is **just one sample mean** in the **sampling distribution**
+
+::::: blue
+::: blue-ttl
+With CLT and $\overline{X}$ as the RV for the [**sampling distribution**]{style="color:#E75B5C"}
 :::
 
+::: blue-cont
+-   **Theoretically** (using only population values): $\overline{X} \sim \text{Normal} \big(\mu_{\overline{X}} = \mu, \sigma_{\overline{X}}= SE = \frac{\sigma}{\sqrt{n}} \big)$
+-   **In real use** (using sample values for SE): $\overline{X} \sim \text{Normal} \big(\mu_{\overline{X}} = \mu, \sigma_{\overline{X}}= SE = \frac{s}{\sqrt{n}} \big)$
+:::
+:::::
+::::::
 
-
-
-## Given $\bar{x}$, what are plausible values of $\mu$?
+::: {.column width="35%"}
+ 
 
 ```{r}
 #| echo: false
-#| fig.height: 4
-#| fig.width: 12
-gg_samp_dist_heights
+#| fig-width: 6.5
+#| fig-height: 5
+
+samp_dist50_plot2 = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60, 
+                 aes(y=..density..)) +
+  labs(x="Mean height from samples (inches)", y="Density") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 18)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 2, 
+                color = "#5BAFF8")
+
+samp_dist50_plot2
+
 ```
 
+$$ \mu_{\overline{X}} = 65 \text{ inches}$$ $$ SE = 0.424 \text{ inches}$$
+:::
+::::::::
 
-## Confidence interval (C I) for the mean $\mu$
+## Last time: point estimates
 
-::: columns
-::: {.column width="40%"}
+```{r}
+#| echo: false
+#| fig-width: 18
+#| fig-height: 5
+#| fig-align: center
+
+samp_dist50_plot2 = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60, 
+                 aes(y=..density..)) +
+  labs(x="Mean height from samples (inches)", y="Density") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 27)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 65.1, size = 3, color = "#C00000") +
+  geom_vline(xintercept = 64.7, size = 3, color = "#0070C0") +
+  geom_vline(xintercept = 64.9, size = 3, color = "#FFC000") +
+  geom_vline(xintercept = 66.1, size = 3, color = "#70AD47")
+  
+
+samp_dist50_plot2
+
+```
+
+![](../img_slides/sample_point_est.png){fig-align="center"}
+
+## This time: Interval estimates of population parameter
+
+-   A **point estimate** consists of a single value
+
+-   An **interval estimate** provides a **plausible range of values for a parameter**
+
+    -   Remember: parameters are from the population and estimates are from our sample
+
+-   We can create a plausible range of values for a population mean ($\mu$) from a sample's mean $\overline{x}$
+
+-   A **confidence interval** gives us a plausible range for $\mu$
+
+-   Confidence intervals take the general form: $$\big(\overline{x} - m, \overline{x} + m \big) = \overline{x} \pm m$$
+
+    -   Where $m$ is the margin of error
+
+## Point estimates with their confidence intervals for $\mu$
+
+:::::: columns
+::: {.column width="22%"}
+ 
+
+![](../img_slides/samp_point_est_vert.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| fig-width: 9
+#| fig-height: 10
+#| fig-align: center
+
+samp_dist_blue = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60, 
+                 aes(y=..density..)) +
+  labs(x="", y="Density") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 27), 
+        axis.title = element_blank()) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 65.1, size = 3, color = "#C00000") +
+  geom_vline(xintercept = 64.7, size = 3, color = "#0070C0") +
+  geom_vline(xintercept = 64.9, size = 3, color = "#FFC000") +
+  geom_vline(xintercept = 66.1, size = 3, color = "#70AD47") +
+  annotate("rect", xmin = 64.7 - 1.95*.424, 
+           xmax = 64.7 + 1.95*.424, 
+           ymin = 0, ymax = 1.1,
+           alpha = .3, fill = "#0070C0") +
+  ylim(0, 1.1)
+
+samp_dist_red = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60, 
+                 aes(y=..density..)) +
+  labs(x="Mean height from samples (inches)", y="Density") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 27), 
+        axis.title = element_blank()) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 65.1, size = 3, color = "#C00000") +
+  geom_vline(xintercept = 64.7, size = 3, color = "#0070C0") +
+  geom_vline(xintercept = 64.9, size = 3, color = "#FFC000") +
+  geom_vline(xintercept = 66.1, size = 3, color = "#70AD47") +
+  annotate("rect", xmin = 65.1 - 1.95*.424, 
+           xmax = 65.1 + 1.95*.424, 
+           ymin = 0, ymax = 1.1,
+           alpha = .3, fill = "#C00000") +
+  ylim(0, 1.1)
+
+samp_dist_yell = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60, 
+                 aes(y=..density..)) +
+  labs(x="Mean height from samples (inches)", y="Density") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 27), 
+        axis.title = element_blank()) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 65.1, size = 3, color = "#C00000") +
+  geom_vline(xintercept = 64.7, size = 3, color = "#0070C0") +
+  geom_vline(xintercept = 64.9, size = 3, color = "#FFC000") +
+  geom_vline(xintercept = 66.1, size = 3, color = "#70AD47") +
+  annotate("rect", xmin = 64.9 - 1.95*.424, 
+           xmax = 64.9 + 1.95*.424, 
+           ymin = 0, ymax = 1.1,
+           alpha = .3, fill = "#FFC000") +
+  ylim(0, 1.1)
+
+samp_dist_green = means50 %>% 
+  ggplot(aes(x=means)) + 
+  geom_histogram(color="black", fill="grey", bins=60, 
+                 aes(y=..density..)) +
+  labs(x="Mean height from samples (inches)", y="Density") +
+  scale_x_continuous(breaks = seq(60, 70, by = 1), 
+                     limits = c(63, 67)) +
+  theme(text = element_text(size = 27), 
+        axis.title = element_blank()) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu, sd = sig), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 65.1, size = 3, color = "#C00000") +
+  geom_vline(xintercept = 64.7, size = 3, color = "#0070C0") +
+  geom_vline(xintercept = 64.9, size = 3, color = "#FFC000") +
+  geom_vline(xintercept = 66.1, size = 3, color = "#70AD47") +
+  annotate("rect", xmin = 66.1 - 1.95*.424, 
+           xmax = 66.1 + 1.95*.424, 
+           ymin = 0, ymax = 1.1,
+           alpha = .3, fill = "#70AD47") +
+  ylim(0, 1.1)
+
+library(patchwork)
+
+samp_dist_blue / samp_dist_yell / samp_dist_red / samp_dist_green
+
+```
+:::
+
+::: {.column width="28%"}
+Do these confidence intervals include $\mu$?
+:::
+::::::
+
+## Confidence interval (CI) for the mean $\mu$
+
+::::::::: columns
+:::::: {.column width="45%"}
+::::: green
+::: green-ttl
+Confidence interval for $\mu$
+:::
+
+::: green-cont
 $$\overline{x}\ \pm\ z^*\times \text{SE}$$
 
-where 
+- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ if population sd is known
+:::
+:::::
+::::::
 
-* $SE = \frac{\sigma}{\sqrt{n}}$
+::: {.column width="5%"}
 :::
-::: {.column width="60%"}
-![](/img_slides/choosingZForCI.jpg){fig-align="center"}
+
+::: {.column width="50%"}
+ 
+
+[When can this be applied?]{style="color:#459B99"}
+
+-   When CLT can be applied!
+-   When we know the population standard deviation!
 :::
+:::::::::
+
+-   $z^*$ depends on the confidence level
+-   For a 95% CI, $z^*$ is chosen such that 95% of the standard normal curve is between $-z^*$ and $z^*$
+    -   This corresponds to $z^* = 1.96$ for a 95% CI
+-   We can use `R` to calculate $z^*$ for any desired CI
+-   Below is how we calculate $z^*$ for the 95% CI
+
+```{r}
+qnorm(p = 0.975)
+```
+
+## Example: CI for mean height $\mu$ with $\sigma$
+
+::::: example
+::: ex-ttl
+Example 1: Using our green sample from previous plots
 :::
+
+::: ex-cont
+For a random sample of 50 people, the mean height is 66.1 inches. Assume the population standard deviation is 3 inches. Find the 95% confidence interval for the population mean.
+:::
+:::::
+
+$$
+\begin{aligned}
+\overline{x} \pm \ & z^* \times \text{SE} \\
+\overline{x} \pm \ & z^* \times \dfrac{\sigma}{\sqrt{n}} \\
+66.1 \pm \ & 1.96 \times \dfrac{3}{\sqrt{50}} \\
+66.1 \pm \ & `r 1.96*3/sqrt(50)` \\
+(66.1 - `r 1.96*3/sqrt(50)`, & \ 66.1 + `r 1.96*3/sqrt(50)`)\\
+(`r round(66.1-1.96*3/sqrt(50), 3)`, & \ `r round(66.1+1.96*3/sqrt(50), 3)`)\\
+\end{aligned}
+$$
+
+We are 95% confident that the mean height is between `r round(66.1-1.96*3/sqrt(50), 3)` and `r round(66.1+1.96*3/sqrt(50), 3)` inches.
+
+# Learning Objectives
+1. Calculate a confidence interval when we know the population standard deviation
+
+::: lob
+2. Interpret a confidence interval when we know the population standard deviation
+:::
+
+3. Calculate and interpret a confidence interval *using the t-distribution* when we do not know the population standard deviation
+
+## How do we interpret confidence intervals? (1/2)
+
+::::::: columns
+:::: {.column width="55%"}
+Simulating Confidence Intervals: <http://www.rossmanchance.com/applets/ConfSim.html>
+
+The figure shows CI's from 100 simulations:
+
+-   The true value of $\mu =65$ is the vertical black line
+-   The horizontal lines are 95% CI's from 100 samples
+    -   [**Blue**]{style="color:#3070BF"}: the CI "captured" the true value of $\mu$
+    -   [**Red**]{style="color:#C83532"}: the CI *did not* "capture" the true value of $\mu$
 
 <br>
 
-::: columns
-::: {.column width="50%"}
-* $z^*$ depends on the confidence level
-  * For a 95% CI, $z^*$ is chosen such that 95% of the standard normal curve is between $-z^*$ and $z^*$
+::: lob
+What percent of CI's captured the true value of $\mu$?
 :::
-::: {.column width="50%"}
+::::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="25%"}
 ```{r}
-qnorm(.975)
-qnorm(.995)
-```
-:::
-:::
-
-[When can this be applied?]{style="color:green"}
-
-
-
-## Example: C I for mean height
-
-* A random sample of 30 high schoolers has mean height 5.6 ft. 
-* Find the 95% confidence interval for the population mean, assuming that the population standard deviation is 0.34 ft. 
-
-
-```{r}
-#| eval: false
 #| echo: false
-(se <- 0.34/sqrt(30))
-1.96*se
-5.6 - 1.96*se
-5.6 + 1.96*se
+#| fig-width: 5
+#| fig-height: 11
+
+library(openintro)
+data(COL)
+
+# myPDF('95PercentConfidenceInterval.pdf', 6, 3.4,
+#       mar = c(1.7, 1, 0, 1),
+#       mgp = c(2.7, 0.7, 0))
+mu <- 65
+sd <- 3
+n <- 50
+k <- 100
+SE <- sd/sqrt(n)
+
+set.seed(18)
+means <- c()
+SE    <- c()
+for(i in 1:k){
+  d <- rnorm(n, mu, sd)
+  means[i] <- mean(d, na.rm = TRUE)
+  SE[i]    <- sd/sqrt(n)
+}
+xR <- mu + 4 * c(-1, 1) * sd / sqrt(n)
+yR <- c(0.9, 110.1)
+plot(xR, yR,
+     type = 'n',
+     xlab = '',
+     ylab = '',
+     axes = FALSE)
+abline(v = mu, lty = 2, col = COL[5,2], lwd = 2)
+axis(1, at = mu, expression(mu*' = 65' ), cex.axis = 2)
+for(i in 1:k){
+  
+  ci <- means[i] + 1.96 * c(-1, 1) * SE[i]
+  if(abs(means[i] - mu) > 1.96 * SE[i]){
+    col <- "#C83532"
+    points(means[i], 1.1*i, cex = 1.4, col = col)
+    lines(ci, rep(1.1*i, 2), col = col, lwd = 4)
+  } else {
+    col <- "#3070BF"
+  }
+  points(means[i], 1.1*i, pch = 20, cex = 1.2, col = col)
+  lines(ci, rep(1.1*i, 2), col = col, lwd = 2)
+  }
+
 ```
-
-
-
-## How to interpret a C I? (1/2)
-
-::: columns
-::: {.column width="80%"}
-Simulating Confidence Intervals:  
-
-::: {style="font-size: 90%;"}
-[http://www.rossmanchance.com/applets/ConfSim.html](http://www.rossmanchance.com/applets/ConfSim.html)
 :::
+:::::::
 
-The figure shows CI's from 100 simulations.
+## How do we interpret confidence intervals? (2/2)
 
-* The true value of $\mu$ = 5.55 is the vertical black line.
-* The horizontal lines are 95% CI's from 100 samples. 
-    * [__Green__]{style="color:green"}: the CI “captured” the true value of $\mu$
-    * [__Red__]{style="color:red"}: the CI _did not_ “capture” the true value of $\mu$
+[Actual interpretation:]{style="color:#459B99"}
 
-<br>
-
-### Question:  
-
-__What percent of CI's captured the true value of__ $\mu$ __?__ 
-:::
-::: {.column width="20%"}
-
-![](/img_slides/simulating_CI_z_with_sigma_95_RossmanChance_onlyCIs.png){fig-align="center" height=70%}
-:::
-:::
-
-
-
-
-## How to interpret a C I? (2/2)
-
-[Actual interpretation:]{style="color:darkorange"}
-
-* If we were to 
-    * __repeatedly take random samples__ from a population and
-    * calculate a 95% CI for each random sample,
-* then we would __expect 95% of our CI's to contain the true population parameter__ $\mu$.
+-   If we were to
+    -   **repeatedly take random samples** from a population and
+    -   calculate a 95% CI for each random sample,
+-   then we would **expect 95% of our CI's to contain the true population parameter** $\mu$.
 
 <!-- "Real life": -->
 
 <!-- * We typically only take 1 random sample.   -->
+
 <!-- * How do we know if our CI is a lucky or unlucky one? -->
 
-[What we typically write as "shorthand":]{style="color:darkorange"}
+[What we typically write as "shorthand":]{style="color:#459B99"}
 
-* We are 95% _confident_  that (the 95% confidence interval) captures the value of the population parameter.
+-   In general form: We are 95% *confident* that (the 95% confidence interval) captures the value of the population parameter.
 
-[WRONG interpretation:]{style="color:red"}
+[WRONG interpretation:]{style="color:#BF396F"}
 
-* There is a 95% _chance_  that (the 95% confidence interval) captures the value of the population parameter.
-    * For one CI on its own, it either does or doesn't contain the population parameter with probability 0 or 1. We just don't know which!
+-   There is a 95% *chance* that (the 95% confidence interval) captures the value of the population parameter.
+    -   For one CI on its own, it either does or doesn't contain the population parameter with probability 0 or 1. We just don't know which!
 
+## Poll Everywhere Question 
 
+::::: columns
+::: {.column width="28%"}
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 11
+#| fig-align: center
 
-## What percent C I was being simulated in this figure?
+library(openintro)
+data(COL)
 
-::: columns
-::: {.column width="20%"}
-![](/img_slides/simulating_CI_z_with_sigma_85_RossmanChance_onlyCIs.png){fig-align="center"}
+# myPDF('95PercentConfidenceInterval.pdf', 6, 3.4,
+#       mar = c(1.7, 1, 0, 1),
+#       mgp = c(2.7, 0.7, 0))
+mu <- 65
+sd <- 3
+n <- 50
+k <- 100
+SE <- sd/sqrt(n)
+
+set.seed(25)
+means <- c()
+SE    <- c()
+for(i in 1:k){
+  d <- rnorm(n, mu, sd)
+  means[i] <- mean(d, na.rm = TRUE)
+  SE[i]    <- sd/sqrt(n)
+}
+xR <- mu + 4 * c(-1, 1) * sd / sqrt(n)
+yR <- c(0.9, 110.1)
+plot(xR, yR,
+     type = 'n',
+     xlab = '',
+     ylab = '',
+     axes = FALSE)
+abline(v = mu, lty = 2, col = COL[5,2], lwd = 2)
+axis(1, at = mu, expression(mu*' = 65' ), cex.axis = 2)
+for(i in 1:k){
+  
+  ci <- means[i] + 1.4395 * c(-1, 1) * SE[i]
+  if(abs(means[i] - mu) > 1.439 * SE[i]){
+    col <- "#C83532"
+    points(means[i], 1.1*i, cex = 1.4, col = col)
+    lines(ci, rep(1.1*i, 2), col = col, lwd = 4)
+  } else {
+    col <- "#3070BF"
+  }
+  points(means[i], 1.1*i, pch = 20, cex = 1.2, col = col)
+  lines(ci, rep(1.1*i, 2), col = col, lwd = 2)
+  }
+
+```
 :::
-::: {.column width="80%"}
+
+::: {.column width="70%"}
+
+ 
+
+What percent CI was being simulated in this figure?
+
 100 CI's are shown in the figure.
 :::
+:::::
+
+# Learning Objectives
+1. Calculate a confidence interval when we know the population standard deviation
+2. Interpret a confidence interval when we know the population standard deviation
+
+::: lob
+3. Calculate and interpret a confidence interval *using the t-distribution* when we do not know the population standard deviation
 :::
-
-
-## Interpretation of the mean heights C I
-
-
-Correct interpretation:
-
-* We are 95% _confident_ that the mean height for high schoolers is between 5.43 and 5.67 feet.
-
-[*WRONG:*]{style="color:red"}
-
-* There is a 95% _chance_ that the mean height for high schoolers is between 5.43 and 5.67 feet.
-
 
 ## What if we don't know $\sigma$ ? (1/3)
 
-Simulating Confidence Intervals: [http://www.rossmanchance.com/applets/ConfSim.html](http://www.rossmanchance.com/applets/ConfSim.html)
+Simulating Confidence Intervals: <http://www.rossmanchance.com/applets/ConfSim.html>
 
-![](/img_slides/simulating_CI_RossmanChance.png){fig-align="center"}
+![](../img_slides/simulating_CI_RossmanChance.png){fig-align="center"}
 
-*The normal distribution doesn't have a 95% "coverage rate"  
-when using $s$ instead of $\sigma$ *
-
-
+- The normal distribution doesn't have a 95% "coverage rate" when using $s$ instead of $\sigma$ 
+- There's another distribution, called the t-distribution, that does have a 95% "coverage rate" when we use $s$
 
 
 ## What if we don't know $\sigma$ ? (2/3)
 
-* In real life, we don't know what the population sd is ( $\sigma$ )
+-   In real life, we don't know what the population sd is ( $\sigma$ )
 
-* If we replace $\sigma$ with $s$ in the SE formula, we add in additional variability to the SE!
-$$\frac{\sigma}{\sqrt{n}} ~~~~\textrm{vs.} ~~~~ \frac{s}{\sqrt{n}}$$
+-   If we replace $\sigma$ with $s$ in the SE formula, we add in additional variability to the SE! $$\frac{\sigma}{\sqrt{n}} ~~~~\textrm{vs.} ~~~~ \frac{s}{\sqrt{n}}$$
 
+-   Thus when using $s$ instead of $\sigma$ when calculating the SE, we **need a different probability distribution** with thicker tails than the normal distribution.
 
+    -   [In practice this will mean using a different value than 1.96 when calculating the CI]{style="color:#C83532"}
     
-* Thus when using $s$ instead of $\sigma$ when calculating the SE, we __need a different probability distribution__ with thicker tails than the normal distribution.
+- Instead, we use the **Student's t-distribution**
 
-    * [In practice this will mean using a different value than 1.96 when calculating the CI.]{style="color:green"}
+## Student's t-distribution
 
+::::: columns
+::: {.column width="53%"}
 
-## What if we don't know $\sigma$ ? (3/3)
+-   Is bell shaped and symmetric
+-   A "generalized" version of the normal distribution
+
+ 
+
+-   Its tails are a thicker than that of a normal distribution
+    -   The "thickness" depends on its **degrees of freedom**: $df = n–1$ , where n = sample size
+    
+ 
+
+-   As the degrees of freedom (sample size) increase,
+    -   the tails are less thick, and
+    -   the t-distribution is more like a normal distribution
+    -   in theory, with an infinite sample size the *t*-distribution is a normal distribution.
+:::
+
+::: {.column width="47%"}
+<br> <br>
+
+![](../img_slides/t_dist.png){fig-align="center"}
+:::
+:::::
+
+## Confidence interval (CI) for the mean $\mu$
+
+::::::::: columns
+:::::: {.column width="45%"}
+::::: green
+::: green-ttl
+Confidence interval for $\mu$
+:::
+
+::: green-cont
+$$\overline{x}\ \pm\ t^*\times \text{SE}$$
+
+- with $\text{SE} = \frac{s}{\sqrt{n}}$ if population sd is not known
+
+:::
+:::::
+::::::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+ 
+
+[When can this be applied?]{style="color:#459B99"}
+
+-   When CLT can be applied!
+-   When we **do not** know the population standard deviation!
+:::
+:::::::::
 
 ::: columns
-::: {.column width="50%"}
-The __Student’s t-distribution__:
-
-* Is bell shaped and symmetric with mean = 0.
-* Its tails are a thicker than that of a normal distribution
-    * The "thickness" depends on its __degrees of freedom__: $df = n–1$ , where n = sample size.
-* As the degrees of freedom (sample size) increase, 
-    * the tails are less thick, and 
-    * the t-distribution is more like a normal distribution
-    * in theory, with an infinite sample size the _t_-distribution is a normal distribution.
-:::
-::: {.column width="50%"}
-<br>
-<br>
-
-![](/img_slides/t_dist.png){fig-align="center"}
-:::
+::: {.column width="57%"}
+-   $t^*$ depends on the confidence level and degrees of freedom    
+    - degrees of freedom (df) is: $df=n-1$ (n is number of observations in sample)
+-   `qt` gives the quartiles for a t-distribution. Need to specify
+    -   the percent under the curve to the left of the quartile
+    -   the degrees of freedom = $n-1$
+-   Note in the R output to the right that $t^*$ gets closer to 1.96 as the sample size increases
 :::
 
-
-## Calculating the C I for the population mean using $s$
-
-
-CI for $\mu$:
-
-$$\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}$$
-
-where $t^*$ is determined by the t-distribution and dependent on the  
-__df =__ $n-1$ and the confidence level
-
-::: columns
-::: {.column width="60%"}
-
-* `qt` gives the quartiles for a t-distribution. Need to specify 
-    * the percent under the curve to the left of the quartile 
-    * the degrees of freedom = n-1
-
-* Note in the R output to the right that $t^*$ gets closer to 1.96 as the sample size increases.
-:::
-
-::: {.column width="40%"}
+::: {.column width="43%"}
 ```{r}
-qt(.975, df=9)  # df = n-1
-qt(.975, df=49)
-qt(.975, df=99)
-qt(.975, df=999)
+qt(p = 0.975, df=9)  #df = n-1
+qt(p = 0.975, df=49)
+qt(p = 0.975, df=99)
+qt(p = 0.975, df=999)
 ```
 :::
 :::
 
+## Example:  CI for mean height $\mu$ with $s$
 
+::::: example
+::: ex-ttl
+Example 2: Using our green sample from previous plots
+:::
 
-## Using a $t$-table to get $t^*$
+::: ex-cont
+
+For a random sample of 50 people, the mean height is 66.1 inches and the standard deviation is 3.5 inches. Find the 95% confidence interval for the population mean.
+:::
+:::::
+
 ::: columns
 ::: {.column width="50%"}
-![](/img_slides/t-table_appendix_part1.png){fig-align="center"}
+$$
+\begin{aligned}
+\overline{x} \pm \ & t^* \times \text{SE} \\
+\overline{x} \pm \ & t^* \times \dfrac{s}{\sqrt{n}} \\
+66.1 \pm \ & 2.0096 \times \dfrac{3.5}{\sqrt{50}} \\
+66.1 \pm \ & `r qt(p = 0.975, df = 49)*3.5/sqrt(50)` \\
+(66.1 - `r qt(p = 0.975, df = 49)*3.5/sqrt(50)`, & \ 66.1 + `r qt(p = 0.975, df = 49)*3.5/sqrt(50)`)\\
+(`r round(66.1-qt(p = 0.975, df = 49)*3.5/sqrt(50), 3)`, & \ `r round(66.1+qt(p = 0.975, df = 49)*3.5/sqrt(50), 3)`)\\
+\end{aligned}
+$$
 :::
+
 ::: {.column width="50%"}
-![](/img_slides/t-table_appendix_part2.png){fig-align="center"}
-:::
-:::
 
-## Example: C I for mean height (revisited)
+ 
 
-* A random sample of 30 high schoolers has mean height 5.6 ft and standard deviation 0.34 ft. 
-* Find the 95% confidence interval for the population mean. 
-
-
-## $z$ vs $t$?? <br> ([& important comment about Chapter 4 of textbook]{style="color:green"})
-
-
-::: columns
-::: {.column width="43%"}
-__Textbook's rule of thumb__
-
-::: {style="font-size: 90%;"}
-* (Ch 4) If $n \geq 30$ and population distribution not strongly skewed:
-    * __Use normal distribution__
-    * __No matter if using $\sigma$ or $s$ for the $SE$__
-    * If there is skew or some large outliers, then need  $n \geq 50$
-* (Ch 5) If $n < 30$ and data approximately symmetric with no large outliers:
-    * Use Student's t-distribution
-:::
+What is $t^*$?
+$$df = n-1 = 50-1=49$$
+$t^* =$ `qt(p = 0.975, df = 49)` $= `r round(qt(p = 0.975, df = 49), 4)`$
 
 :::
-::: {.column width="2%"}
 :::
-::: {.column width="55%"}
-__BSTA 511 rule of thumb__
+We are 95% confident that the mean height is between `r round(66.1-qt(p = 0.975, df = 49)*3.5/sqrt(50), 3)` and `r round(66.1+qt(p = 0.975, df = 49)*3.5/sqrt(50), 3)` inches.
 
-* Use [normal distribution ONLY if know $\sigma$]{style="color:darkorange"}
-    * If [using $s$ for the $SE$, then use the Student's t-distribution]{style="color:purple"}
+## Confidence interval (CI) for the mean $\mu$ ($z$ vs. $t$)
 
-For either case, can apply if either
+- In summary, we have two cases that lead to different ways to calculate the confidence interval
 
-* $n \geq 30$ and population distribution not strongly skewed
-    * If there is skew or some large outliers, then $n \geq 50$ gives better estimates
-* $n < 30$ and data approximately symmetric with no large outliers
+::::: columns
+::: {.column width="50%"}
+::: blue2
+::: blue2-ttl
+Case 1: We know the population standard deviation
+:::
+::: blue2-cont
+$$\overline{x}\ \pm\ z^*\times \text{SE}$$
 
-_If do not know population distribution, then check the distribution of the data._
+- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ and $\sigma$ is the population standard deviation
+
+ 
+
+- For 95% CI, we use:
+  - $z^* =$ `qnorm(p = 0.975)` $=1.96$
 :::
 :::
+:::
+
+::: {.column width="50%"}
+::: red
+::: red-ttl
+Case 2: We **do not** know the population sd
+:::
+::: red-cont
+$$\overline{x}\ \pm\ t^*\times \text{SE}$$
+
+- with $\text{SE} = \frac{s}{\sqrt{n}}$ and $s$ is the sample standard deviation
+
+ 
+
+- For 95% CI, we use:
+  - $t^* =$ `qt(p = 0.975, df = n-1)`
+:::
+:::
+:::
+:::::
+
+## Some final words (said slightly differently?)
+
+- Rule of thumb:
+    - Use [normal distribution ONLY if you know the population standard deviation $\sigma$]{style="color:#3070BF"}
+    - If [using $s$ for the $SE$, then use the Student's t-distribution]{style="color:#C83532"}
+
+ 
+
+- For either case, we need to remember when we can calculate the confidence interval:
+  - $n \geq 30$ and population distribution not strongly skewed (using Central Limit Theorem)
+      - If there is skew or some large outliers, then $n \geq 50$ gives better estimates
+  - $n < 30$ and data approximately symmetric with no large outliers
+
+ 
+
+- *If do not know population distribution, then check the distribution of the data.*
+  - Aka, use what we learned in datavisualization to see what the data look like
+
