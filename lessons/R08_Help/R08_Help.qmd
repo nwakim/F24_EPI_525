@@ -1,0 +1,28 @@
+---
+title: "R08: Q&A Session"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "11/4/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R07 Slides
+    html-math-method: mathjax
+    highlight-style: arrow
+execute:
+  echo: true
+  freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+## A few issues I've noticed
+
+- Using your console vs. rendering a Quarto (file paths and the `here` package)
+- `Rproject`s: We only need one at our highest folder

@@ -2,9 +2,10 @@
 title: "Homework"
 format: 
   html:
-    toc: false
     page-layout: full
     link-external-newwindow: true
+    toc: true
+    toc-location: body
 ---
 
 ## Homeworks
@@ -70,11 +71,11 @@ Please note that you need to download the `.html` file to see the LaTeX math pro
 
 A total of 1 point will be given for a complete homework. The following rubric will be used:
 
-+----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                      | 1 point                                                                                                                                                                                                     | 0 points                                                                                                           |
-+======================+=============================================================================================================================================================================================================+====================================================================================================================+
-| Completeness         | All problems and parts (like a, b, c, etc.) are thoroughly attempted. Answers can be incorrect or correct. For parts with longer processes and calculations, solution set up and calculations are required. | Entire problems or parts are skipped. -OR- The full process of a problem is not completed through the calculation. |
-+----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+|              | 1 point                                                                                                                                                                                                     | 0 points                                                                                                           |
++==============+=============================================================================================================================================================================================================+====================================================================================================================+
+| Completeness | All problems and parts (like a, b, c, etc.) are thoroughly attempted. Answers can be incorrect or correct. For parts with longer processes and calculations, solution set up and calculations are required. | Entire problems or parts are skipped. -OR- The full process of a problem is not completed through the calculation. |
++--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 ## Solutions
 
@@ -91,6 +92,8 @@ A total of 12 points is given to the whole group, 3 points per question. For eac
 +---------------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
 
 ## Presentations
+
+Imagine that a fellow student is coming to you and does not know how to do a problem. Your presentation should serve as a guide for that student. They should be able to link key phrases or theorems that you mention to class and follow your clear and correct work from beginning to end. Finally, your final answer is contextualized given the original problem.
 
 Presentations will be graded out of 9 points with the following rubric:
 
