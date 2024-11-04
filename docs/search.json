@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample with t-distribution\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto?\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n\n12\nHypothesis Testing 2: Two-sample paired data\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/8\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/10\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR11\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\nR12\nMore Quarto?\n\n\n\n\n\n\n\n\n\n\n\n11/12\n\nGroup Eval 2 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/13\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR13\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR14\nJoining data\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR15\nSpecial topics\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -9683,7 +9683,7 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#where-are-we",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#where-are-we",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Where are we?",
     "text": "Where are we?"
   },
@@ -9697,7 +9697,7 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#goals-for-today-part-1",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#goals-for-today-part-1",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Goals for today: Part 1",
     "text": "Goals for today: Part 1\n(4.3, 5.1) Hypothesis testing for mean from one sample\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\n\n\n\n\nSteps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\n\n\n\nRun a hypothesis test in R\n\nLoad a dataset - need to specify location of dataset\nR projects\nRun a t-test in R\ntidy() the test output using broom package\n\n\n\n\n(4.3.3) Confidence intervals (CIs) vs. hypothesis tests"
   },
@@ -9718,14 +9718,14 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#is-98.6f-really-the-mean-healthy-body-temperature",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#is-98.6f-really-the-mean-healthy-body-temperature",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Is 98.6°F really the mean “healthy” body temperature?",
     "text": "Is 98.6°F really the mean “healthy” body temperature?\n\nWhere did the 98.6°F value come from?\n\nGerman physician Carl Reinhold August Wunderlich determined 98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.\n\n1992 JAMA article by Mackowiak, Wasserman, & Levine\n\nThey claim that 98.2°F (36.8°C) is a more accurate average body temp\nSample: n = 148 healthy individuals aged 18 - 40 years\n\nOther research indicating that the human body temperature is lower\n\nIn January 2020: Decreasing human body temperature in the United States since the Industrial Revolution\nSeptember 2023 update: Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm in JAMA Internal Medicine\n\nNYT article The Average Human Body Temperature Is Not 98.6 Degrees, Oct 12, 2023, by Dana G. Smith\n\n\nQuestion: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?",
     "text": "Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?\nTwo approaches to answer this question:\n\n\n\n\nConfidence interval\n\n\n\nCreate a confidence interval (CI) for the population mean \\(\\mu\\) and determine whether 98.6°F is inside the CI or not.\nAnswering the question: is 98.6°F a plausible value?\n\n\n\n\n\n\n\n\nHypothesis test\n\n\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\nSee how likely we are to observe the sample mean \\(\\overline{x}\\) or a more extreme sample mean assuming that the population mean \\(\\mu\\) is 98.6°F"
   },
@@ -9739,7 +9739,7 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-2-hypothesis-test",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-2-hypothesis-test",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Approach 2: Hypothesis Test",
     "text": "Approach 2: Hypothesis Test\nFrom before:\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not.\n\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\n\nto see how likely we are to observe the sample mean \\(\\overline{x}\\)\nor a more extreme sample mean\nassuming that the population mean \\(\\mu\\) is 98.6°F.\n\n\n\nHow do we calculate a test statistic and p-value?\n\nUse the sampling distribution and central limit theorem!!\nTwo cases\n\nCase 1: suppose we know the population sd \\(\\sigma\\)\nCase 2: we don’t know the population sd \\(\\sigma\\)"
   },
@@ -9753,70 +9753,70 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-1-suppose-we-know-the-population-sd-sigma",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-1-suppose-we-know-the-population-sd-sigma",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Case 1: suppose we know the population sd \\(\\sigma\\)",
     "text": "Case 1: suppose we know the population sd \\(\\sigma\\)\n\nHow likely we are to observe the sample mean \\(\\overline{x}\\) ,\n\nor a more extreme sample mean,\nassuming that the population mean \\(\\mu\\) is 98.6°F?\n\nUse \\(\\overline{x} = 98.25\\), \\(\\sigma=0.733\\), and \\(n=130\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-2-we-dont-know-the-population-sd-sigma",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#case-2-we-dont-know-the-population-sd-sigma",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Case 2: we don’t know the population sd \\(\\sigma\\)",
     "text": "Case 2: we don’t know the population sd \\(\\sigma\\)\n\n\n\nThis is usually the case in real life\nWe estimate \\(\\sigma\\) with the sample standard deviation \\(s\\)\nFrom last time, we know that in this case we need to use the t-distribution with d.f. = n-1, instead of the normal distribution\nQuestion: How likely we are to observe the sample mean \\(\\overline{x}\\) or a more extreme sample mean, assuming that the population mean \\(\\mu\\) is 98.6°F?\nUse \\(\\overline{x} = 98.25\\), \\(s=0.733\\), and \\(n=130\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#steps-in-a-hypothesis-test",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#steps-in-a-hypothesis-test",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Steps in a Hypothesis Test",
     "text": "Steps in a Hypothesis Test\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-null-alternative-hypotheses-12",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-null-alternative-hypotheses-12",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 2: Null & Alternative Hypotheses (1/2)",
     "text": "Step 2: Null & Alternative Hypotheses (1/2)\nIn statistics, a hypothesis is a statement about the value of an unknown population parameter.\nA hypothesis test consists of a test between two competing hypotheses:\n\na null hypothesis \\(H_0\\) (pronounced “H-naught”) vs. \nan alternative hypothesis \\(H_A\\) (also denoted \\(H_1\\))\n\nExample of hypotheses in words:\n\\[\\begin{aligned}\nH_0 &: \\text{The population mean body temperature is 98.6°F}\\\\\n\\text{vs. } H_A &: \\text{The population mean body temperature is not 98.6°F}\n\\end{aligned}\\]\n\n\\(H_0\\) is a claim that there is “no effect” or “no difference of interest.”\n\\(H_A\\) is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis \\(H_0\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-null-alternative-hypotheses-22",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-null-alternative-hypotheses-22",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 2: Null & Alternative Hypotheses (2/2)",
     "text": "Step 2: Null & Alternative Hypotheses (2/2)\nNotation for hypotheses:\n\\[\\begin{aligned}\nH_0 &: \\mu = \\mu_0\\\\\n\\text{vs. } H_A&: \\mu \\neq, &lt;, \\textrm{or}, &gt; \\mu_0\n\\end{aligned}\\]\nWe call \\(\\mu_0\\) the null value\n\n\n\\(H_A: \\mu \\neq \\mu_0\\)\n\n\nnot choosing a priori whether we believe the population mean is greater or less than the null value \\(\\mu_0\\)\n\n\n\n\\(H_A: \\mu &lt; \\mu_0\\)\n\n\nbelieve the population mean is less than the null value \\(\\mu_0\\)\n\n\n\n\\(H_A: \\mu &gt; \\mu_0\\)\n\n\nbelieve the population mean is greater than the null value \\(\\mu_0\\)\n\n\n\n\n\n\\(H_A: \\mu \\neq \\mu_0\\) is the most common option, since it’s the most conservative\n\nExample:\n\\[\\begin{aligned}\nH_0 &: \\mu = 98.6\\\\\n\\text{vs. } H_A&: \\mu \\neq 98.6\n\\end{aligned}\\]"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-its-distribution",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-its-distribution",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 3: Test statistic (& its distribution)",
     "text": "Step 3: Test statistic (& its distribution)\n\n\nCase 1: know population sd \\(\\sigma\\)\n\\[\n\\text{test statistic} = z_{\\overline{x}} = \\frac{\\overline{x} - \\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\\]\n\nStatistical theory tells us that \\(z_{\\overline{x}}\\) follows a Standard Normal distribution \\(N(0,1)\\)\n\n\nCase 2: don’t know population sd \\(\\sigma\\)\n\\[\n\\text{test statistic} = t_{\\overline{x}} = \\frac{\\overline{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n\\]\n\nStatistical theory tells us that \\(t_{\\overline{x}}\\) follows a Student’s t distribution with degrees of freedom (df) = \\(n-1\\)\n\n\n\n\n\\(\\overline{x}\\) = sample mean, \\(\\mu_0\\) = hypothesized population mean from \\(H_0\\),\n\\(\\sigma\\) = population standard deviation, \\(s\\) = sample standard deviation,\n\\(n\\) = sample size\n\nAssumptions: same as CLT\n\nIndependent observations: the observations were collected independently.\nApproximately normal sample or big n: the distribution of the sample should be approximately normal, or the sample size should be at least 30."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-calculation",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-test-statistic-calculation",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 3: Test statistic calculation",
     "text": "Step 3: Test statistic calculation\nRecall that \\(\\overline{x} = 98.25\\), \\(s=0.733\\), and \\(n=130.\\)\nThe test statistic is:\n\\[t_{\\overline{x}} = \\frac{\\overline{x} - \\mu_0}{\\frac{s}{\\sqrt{n}}}\n= \\frac{98.25 - 98.6}{\\frac{0.73}{\\sqrt{130}}}\n= -5.45\\]\n\nStatistical theory tells us that \\(t_{\\overline{x}}\\) follows a Student’s t-distribution with \\(d.f. = n-1 = 129\\).\n\n\n\n\n\n\n\n\n\nAssumptions met?"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 4: p-value",
     "text": "Step 4: p-value\nThe p-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true.\n\n\n\nThe \\(p\\)-value is a quantification of “surprise”\n\nAssuming \\(H_0\\) is true, how surprised are we with the observed results?\nEx: assuming that the true mean body temperature is 98.6°F, how surprised are we to get a sample mean of 98.25°F (or more extreme)?\n\nIf the \\(p\\)-value is “small,” it means there’s a small probability that we would get the observed statistic (or more extreme) when \\(H_0\\) is true."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value-calculation",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value-calculation",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 4: p-value calculation",
     "text": "Step 4: p-value calculation\nCalculate the p-value using the Student’s t-distribution with \\(d.f. = n-1 = 129\\):\n\\[p-value=P(T \\leq -5.45) + P(T \\geq 5.45) = 2.410889 \\times 10^{-07}\\]\n\n# use pt() instead of pnorm()\n# need to specify df\n2*pt(-5.4548, df = 130-1, lower.tail = TRUE)\n\n[1] 2.410889e-07"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value-estimation-using-t-table",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-4-p-value-estimation-using-t-table",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 4: p-value estimation using \\(t\\)-table",
     "text": "Step 4: p-value estimation using \\(t\\)-table\n\n\\(t\\)-table only gives us bounds on the p-value\nRecall from using the \\(t\\)-table for CIs, that the table gives us the cutoff values for varying tail probabilities (1-tail & 2-tail)\nFind the row with the appropriate degrees of freedom\n\nUse next smallest df in table if actual df not shown\nI.e., for df = 129, use df = 100 in table\n\nFigure out where the test statistic’s absolute value is in relation to the values in the columns, i.e. between which columns is the test statistic?\nThe header rows for those columns gives the lower & upper bounds for the p-value\n\nChoosing one-tail vs. two-tail test, depends on the alternative hypothesis \\(H_A\\).\nFor a 2-sided test ( \\(H_A: \\mu \\neq \\mu_0\\) ), use two-tails\nFor a 1-sided test ( \\(H_A: \\mu &lt; \\textrm{or} &gt; \\mu_0\\) ), use one-tail"
   },
@@ -9830,21 +9830,21 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-1-significance-level-alpha",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-1-significance-level-alpha",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 1: Significance Level \\(\\alpha\\)",
     "text": "Step 1: Significance Level \\(\\alpha\\)\n\nBefore doing a hypothesis test, we set a cut-off for how small the \\(p\\)-value should be in order to reject \\(H_0\\).\nWe call this the significance level, denoted by the Greek symbol alpha ( \\(\\alpha\\) )\nTypical \\(\\alpha\\) values are\n\n0.05 - most common by far!!\n0.01 and 0.1\n\nDecision rule:\n\nWhen \\(p\\)-value &lt; \\(\\alpha\\), we “reject the null hypothesis \\(H_0\\).”\nWhen \\(p\\)-value \\(\\geq \\alpha\\), we “fail to reject the null hypothesis \\(H_0\\).”\n\n\n\n\n\n\n\n\nImportant\n\n\n\n“Failing to reject” \\(H_0\\) is NOT the same as “accepting” \\(H_0\\)!\nBy failing to reject \\(H_0\\) we are just saying that we don’t have sufficient evidence to support the alternative \\(H_A\\).\nThis does not imply that \\(H_0\\) is true!!"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-5-conclusion-to-hypothesis-test",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-5-conclusion-to-hypothesis-test",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 5: Conclusion to hypothesis test",
     "text": "Step 5: Conclusion to hypothesis test\n\\[\\begin{aligned}\nH_0 &: \\mu = 98.6\\\\\n\\text{vs. } H_A&: \\mu \\neq 98.6\n\\end{aligned}\\]\n\nRecall the \\(p\\)-value = \\(2.410889 \\times 10^{-07}\\)\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nBasic: (“stats class” conclusion)\n\nThere is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( \\(p\\)-value &lt; 0.001).\n\nBetter: (“manuscript style” conclusion)\n\nThe average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( \\(p\\)-value &lt; 0.001)."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#confidence-intervals-vs.-hypothesis-testing",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#confidence-intervals-vs.-hypothesis-testing",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Confidence Intervals vs. Hypothesis Testing",
     "text": "Confidence Intervals vs. Hypothesis Testing\n\nSee also V&H Section 4.3.3"
   },
@@ -9872,7 +9872,7 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#load-the-dataset",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#load-the-dataset",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Load the dataset",
     "text": "Load the dataset\n\nThe data are in a csv file called BodyTemperatures.csv\nYou need to tell R where the dataset is located!\nI recommend saving all datasets in a folder called data.\n\nThe code I will be providing you will be set up this way.\n\nTo make it easier to specify where the dataset is located, I recommend using the here() function from the here package: here::here().\n\n\n# read_csv() is a function from the readr package that is a part of the tidyverse\nlibrary(here)   # first install this package\n\nBodyTemps &lt;- read_csv(here::here(\"data\", \"BodyTemperatures.csv\"))\n#                     location: look in \"data\" folder\n#                               for the file \"BodyTemperatures.csv\"\n\nglimpse(BodyTemps)\n\nRows: 130\nColumns: 3\n$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…\n$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…"
   },
@@ -9886,21 +9886,21 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#t.test-base-rs-function-for-testing-one-mean",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#t.test-base-rs-function-for-testing-one-mean",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "t.test: base R’s function for testing one mean",
     "text": "t.test: base R’s function for testing one mean\n\nUse the body temperature example with \\(H_A: \\mu \\neq 98.6\\)\nWe called the dataset BodyTemps when we loaded it\n\n\nglimpse(BodyTemps)\n\nRows: 130\nColumns: 3\n$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…\n$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…\n\n(temps_ttest &lt;- t.test(x = BodyTemps$Temperature,\n       # alternative = \"two.sided\",  # default\n       mu = 98.6))\n\n\n    One Sample t-test\n\ndata:  BodyTemps$Temperature\nt = -5.4548, df = 129, p-value = 2.411e-07\nalternative hypothesis: true mean is not equal to 98.6\n95 percent confidence interval:\n 98.12200 98.37646\nsample estimates:\nmean of x \n 98.24923 \n\n\nNote that the test output also gives the 95% CI using the t-distribution."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#tidy-the-t.test-output",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#tidy-the-t.test-output",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "tidy() the t.test output",
     "text": "tidy() the t.test output\n\nUse the tidy() function from the broom package for briefer output in table format that’s stored as a tibble\nCombined with the gt() function from the gt package, we get a nice table\n\n\ntidy(temps_ttest) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 40) # use a different size in your HW\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nSince the tidy() output is a tibble, we can easily pull() specific values from it:\n\n\n\nUsing base R’s $\n\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07\n\n\nAdvantage: quick and easy\n\nOr the tidyverse way: using pull() from dplyr package\n\ntidy(temps_ttest) %&gt;% pull(p.value)\n\n[1] 2.410632e-07\n\n\nAdvantage: can use together with piping (%&gt;%) other functions"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#whats-next",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#whats-next",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "What’s next?",
     "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nDay\nSection\nPopulation parameter\nSymbol\nPoint estimate\nSymbol\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\n\n11\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n12\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n\n\n\n\n\nLesson 11 Slides"
   },
@@ -10973,14 +10973,14 @@
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#what-we-covered-in-day-10-part-1",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "What we covered in Day 10 Part 1",
-    "text": "What we covered in Day 10 Part 1\n(4.3, 5.1) Hypothesis testing for mean from one sample\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\n\n\n\n\nSteps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\n\n\n\nRun a hypothesis test in R\n\nLoad a dataset - need to specify location of dataset\nR projects\nRun a t-test in R\ntidy() the test output using broom package\n\n\n\n\n(4.3.3) Confidence intervals (CIs) vs. hypothesis tests"
+    "text": "What we covered in Day 10 Part 1\n\n(4.3, 5.1) Hypothesis testing for mean from one sample\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\n\n\n\n\nSteps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\n\n\n\nRun a hypothesis test in R\n\nLoad a dataset - need to specify location of dataset\nR projects\nRun a t-test in R\ntidy() the test output using broom package\n\n\n\n\n\n\n(4.3.3) Confidence intervals (CIs) vs. hypothesis tests"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#goals-for-today-part-2---class-discussion",
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#goals-for-today-part-2---class-discussion",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "Goals for today: Part 2 - Class discussion",
-    "text": "Goals for today: Part 2 - Class discussion\n(5.2) Inference for mean difference from dependent/paired 2 samples\n\nInference: CIs and hypothesis testing\nExploratory data analysis (EDA) to visualize data\nRun paired t-test in R\n\nOne-sided CIs\nClass discussion\n\nInference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.\nThus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.\nIn class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code."
+    "text": "Goals for today: Part 2 - Class discussion\n\n(5.2) Inference for mean difference from dependent/paired 2 samples\n\nInference: CIs and hypothesis testing\nExploratory data analysis (EDA) to visualize data\nRun paired t-test in R\n\n\n\nOne-sided CIs\n\n\nClass discussion\n\nInference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.\nThus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.\nIn class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code."
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#cis-and-hypothesis-tests-for-different-scenarios",
@@ -11015,7 +11015,7 @@
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#eda-explore-the-cholesterol-data",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "EDA: Explore the cholesterol data",
-    "text": "EDA: Explore the cholesterol data\n\nScenario:\n\n24 non-vegetarian people were enrolled in a study\nThey were instructed to adopt a vegetarian diet\nCholesterol levels were measured before and after the diet\n\n\n\nchol &lt;- read_csv(here::here(\"data\", \"chol213.csv\"))\nglimpse(chol)\n\nRows: 24\nColumns: 2\n$ Before &lt;dbl&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 169…\n$ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 182…\n\nchol %&gt;% \n  get_summary_stats(type = \"common\") %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n      variable\n      n\n      min\n      max\n      median\n      iqr\n      mean\n      sd\n      se\n      ci\n    \n  \n  \n    Before\n24\n137\n250\n179\n44.5\n187.792\n33.160\n6.769\n14.002\n    After\n24\n125\n215\n165\n38.0\n168.250\n26.796\n5.470\n11.315\n  \n  \n  \n\n\n\n\nMake sure you are able to load the data on your computer!"
+    "text": "EDA: Explore the cholesterol data\n\nScenario:\n\n24 non-vegetarian people were enrolled in a study\nThey were instructed to adopt a vegetarian diet\nCholesterol levels were measured before and after the diet\n\n\n\nchol &lt;- read_csv(here::here(\"data\", \"chol213.csv\"))\n\nRows: 24 Columns: 2\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (2): Before, After\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(chol)\n\nRows: 24\nColumns: 2\n$ Before &lt;dbl&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 169…\n$ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 182…\n\nchol %&gt;% \n  get_summary_stats(type = \"common\") %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n      variable\n      n\n      min\n      max\n      median\n      iqr\n      mean\n      sd\n      se\n      ci\n    \n  \n  \n    Before\n24\n137\n250\n179\n44.5\n187.792\n33.160\n6.769\n14.002\n    After\n24\n125\n215\n165\n38.0\n168.250\n26.796\n5.470\n11.315\n  \n  \n  \n\n\n\n\nMake sure you are able to load the data on your computer!"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#eda-cholesterol-levels-before-and-after-vegetarian-diet",
@@ -11029,7 +11029,7 @@
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#eda-spaghetti-plot-of-cholesterol-levels-before-after-diet",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "EDA: Spaghetti plot of cholesterol levels before & after diet",
-    "text": "EDA: Spaghetti plot of cholesterol levels before & after diet\n\nVisualize the individual before vs. after diet changes in cholesterol levels\n\nWhat does this figure tell us?\n\n\nSee code file for how to wrangle the data and create the figure - you will not be expected to do this yourself."
+    "text": "EDA: Spaghetti plot of cholesterol levels before & after diet\n\nVisualize the individual before vs. after diet changes in cholesterol levels\n\nWhat does this figure tell us?\n\n\n\n\n\n\nSee code file for how to wrangle the data and create the figure - you will not be expected to do this yourself."
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#eda-differences-in-cholesterol-levels-after---before-diet",
@@ -11148,7 +11148,7 @@
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#today-whats-next",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "Today & what’s next?",
-    "text": "Today & what’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n???\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n\n\n\n\n\n\n\nLesson 12 Slides"
+    "text": "Today & what’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n???\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   },
   {
     "objectID": "lessons/08_Data_visualization_02/08_Data_visualization_02_key_info.html",
@@ -19331,7 +19331,7 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-central-limit-theorem-applied-to-sampling-distribution",
     "title": "Lesson 10: Confidence intervals",
     "section": "Last time: Central Limit Theorem applied to sampling distribution",
-    "text": "Last time: Central Limit Theorem applied to sampling distribution\n\n\n\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\\overline{X} \\sim \\text{Normal}\\big(\\mu_{\\overline{X}}=65, SE = 0.424 \\big)\\]"
+    "text": "Last time: Central Limit Theorem applied to sampling distribution\n\nCLT tells us that we can model the sampling distribution of mean heights using a normal distribution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\\overline{X} \\sim \\text{Normal}\\big(\\mu_{\\overline{X}}=65, SE = 0.424 \\big)\\]"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time-sampling-distribution-of-sample-means-with-the-clt",
@@ -19408,19 +19408,19 @@
     "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question",
     "title": "Lesson 10: Confidence intervals",
     "section": "Poll Everywhere Question",
-    "text": "Poll Everywhere Question\n\n\n\n\n\n\n\n\n\n\n\n\n \nWhat percent CI was being simulated in this figure?\n100 CI’s are shown in the figure."
+    "text": "Poll Everywhere Question"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-1-create-a-95-ci-for-the-population-mean-body-temperature",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#approach-1-create-a-95-ci-for-the-population-mean-body-temperature",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Approach 1: Create a 95% CI for the population mean body temperature",
     "text": "Approach 1: Create a 95% CI for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\overline{x} = 98.25,~s=0.733,~n=130\\]\n\n\nCI for \\(\\mu\\): \\[\\begin{align}\n\\overline{x} &\\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 &\\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 &\\pm 0.127\\\\\n(98.123&, 98.377)\n\\end{align}\\]\n\n \nUsed \\(t^*\\) = qt(.975, df=129) = 1.979\n \nConclusion:  We are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F, which is discernably different than 98.6°F."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Last time: point estimates",
     "text": "Last time: point estimates"
   },
@@ -19434,7 +19434,7 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates-with-their-confidence-intervals-for-mu",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-time-point-estimates-with-their-confidence-intervals-for-mu",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Last time: Point estimates with their confidence intervals for \\(\\mu\\)",
     "text": "Last time: Point estimates with their confidence intervals for \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDo these confidence intervals include \\(\\mu\\)?"
   },
@@ -19455,21 +19455,21 @@
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-probability-assuming-population-mean-mu",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#this-time-point-estimates-with-probability-assuming-population-mean-mu",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "This time: Point estimates with probability assuming population mean \\(\\mu\\)",
     "text": "This time: Point estimates with probability assuming population mean \\(\\mu\\)\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAssuming the population mean is \\(\\mu\\), what is the probability that we observe \\(\\overline{x}\\) or a more extreme sample mean?"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Answering a research question",
     "text": "Answering a research question\nResearch question is a generic form: Is there evidence to support that the population mean is different than \\(\\mu\\)?\nTwo approaches to answer this question:\n\n\n\n\nConfidence interval\n\n\n\nCreate a confidence interval (CI) for the population mean \\(\\mu\\) and determine whether 98.6°F is inside the CI or not.\nAnswering the question: is 98.6°F a plausible value?\n\n\n\n\n\n\n\n\nHypothesis test\n\n\n\nRun a hypothesis test to see if there is evidence that the population mean \\(\\mu\\) is significantly different from 98.6°F or not\nThis does not give us a range of plausible values for the population mean \\(\\mu\\).\nInstead, we calculate a test statistic and p-value\nSee how likely we are to observe the sample mean \\(\\overline{x}\\) or a more extreme sample mean assuming that the population mean \\(\\mu\\) is 98.6°F"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question-1",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#answering-a-research-question-1",
-    "title": "Lesson 11: Hypothesis testing for mean from one-sample",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Answering a research question",
     "text": "Answering a research question\nResearch question is a generic form: Is there evidence to support that the population mean is different than \\(\\mu\\)?"
   },
@@ -19535,5 +19535,40 @@
     "title": "Lesson 10: Confidence intervals",
     "section": "Some final words (said slightly differently?)",
     "text": "Some final words (said slightly differently?)\n\nRule of thumb:\n\nUse normal distribution ONLY if you know the population standard deviation \\(\\sigma\\)\nIf using \\(s\\) for the \\(SE\\), then use the Student’s t-distribution\n\n\n \n\nFor either case, we need to remember when we can calculate the confidence interval:\n\n\\(n \\geq 30\\) and population distribution not strongly skewed (using Central Limit Theorem)\n\nIf there is skew or some large outliers, then \\(n \\geq 50\\) gives better estimates\n\n\\(n &lt; 30\\) and data approximately symmetric with no large outliers\n\n\n \n\nIf do not know population distribution, then check the distribution of the data.\n\nAka, use what we learned in datavisualization to see what the data look like\n\n\n\n\nLesson 10 Slides"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-12",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-12",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "What if we don’t know \\(\\sigma\\) ? (1/2)",
+    "text": "What if we don’t know \\(\\sigma\\) ? (1/2)\nSimulating Confidence Intervals: http://www.rossmanchance.com/applets/ConfSim.html\n\n\nThe normal distribution doesn’t have a 95% “coverage rate” when using \\(s\\) instead of \\(\\sigma\\)\nThere’s another distribution, called the t-distribution, that does have a 95% “coverage rate” when we use \\(s\\)"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-22",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#what-if-we-dont-know-sigma-22",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "What if we don’t know \\(\\sigma\\) ? (2/2)",
+    "text": "What if we don’t know \\(\\sigma\\) ? (2/2)\n\nIn real life, we don’t know what the population sd is ( \\(\\sigma\\) )\nIf we replace \\(\\sigma\\) with \\(s\\) in the SE formula, we add in additional variability to the SE! \\[\\frac{\\sigma}{\\sqrt{n}} ~~~~\\textrm{vs.} ~~~~ \\frac{s}{\\sqrt{n}}\\]\nThus when using \\(s\\) instead of \\(\\sigma\\) when calculating the SE, we need a different probability distribution with thicker tails than the normal distribution.\n\nIn practice this will mean using a different value than 1.96 when calculating the CI\n\nInstead, we use the Student’s t-distribution"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question-1",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question-1",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question-2",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question-2",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question-3",
+    "href": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#poll-everywhere-question-3",
+    "title": "Lesson 10: Confidence intervals",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
   }
 ]
