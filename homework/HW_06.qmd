@@ -66,230 +66,49 @@ It is a good idea to try rendering your document from time to time as you go alo
 ## 5.12 Auto exhaust and lead exposure {.unnumbered}
 
 
-
-## 5.16 Paired or not, Part II {.unnumbered}
-
-
-
-## 5.22 DDT exposure {.unnumbered}
-
-
 # R exercises 
 
-## Load all the packages you need below here. 
+## Load all the packages you need below here
 
-## R1: NHANES
+## R1: Are American adults getting enough sleep?
 
-* Below you will be using the dataset called NHANES from the `NHANES` R package. 
-* Install and load the NHANES package using the code below.
-    * This loads the dataset also called NHANES that is within the NHANES package.
+This lab uses data from the National Health and Nutrition Examination Survey (NHANES), a survey conducted annually by the US Centers for Disease Control (CDC). The complete \texttt{NHANES} dataset contains 10,000 observations, which will be the artificial target population. 
 
-```{r eval=FALSE}
-install.packages("NHANES")
-```
+A 2016 study from the CDC reported that more than a third of American adults are not getting enough sleep on a regular basis.\footnote{\url{https://www.cdc.gov/media/releases/2016/p0215-enough-sleep.html}} The National Sleep Foundation recommends that adults need between 7 to 9 hours of sleep per night to function well. Consistent sleep deprivation is known to increase risk of health problems, negatively affect cognitive processes, and contribute to depressive symptoms. 
+
+The dataset `nhanes.samp.adult` in the `oibiostat` package contains sleep information for 135 participants ages 21 years or older that were randomly sampled from the `NHANES` population. The variable `SleepHrsNight`  contains the self-reported number of hours a participant usually gets at night on weekdays or workdays. 
+
+Here is code to load the package and data:
 
 ```{r}
-library(NHANES)
-data("NHANES")
+library(oibiostat)
+data("nhanes.samp.adult")
 ```
 
+If the `oibiostat` package is giving you trouble, I have uploaded an `.RData` version of the dataset, which you can download then load with something like my following code:
 
-> The National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.
+```{r}
+#| warning: false
+#| message: false
 
-* To view the complete list of study variables and their descriptions, access the NHANES documentation page with `?NHANES`. 
-  * You must first install the `NHANES` package to see the help files.
-  
-:::{.callout-warning}
+library(here)
+load(here("data", "nhanes.samp.adult.RData"))
+```
 
-* For most of the summary statistic base R commands (such as `mean()`, `sd()`, `median()`, etc.), you will get `NA` as the result if there are missing values. 
-* In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
-:::
-:::{.callout-tip}
+### Explore the distribution of \texttt{SleepHrsNight} in `nhanes.samp.adult`
 
-### Tips
+#### Part a
 
-* Column names cannot start with a number or symbol
-* Names are case sensitive
-* It's easier to work with column names that don't have spaces in them. I usually use _ or . instead of spaces.
-:::
+Using numerical and graphical summaries, describe the distribution of nightly sleep hours in `nhanes.samp.adult`.
+    
+#### Part b
 
-### What proportion of Americans at least 25 years of age are college graduates?
-*Hint: First create a new dataset that is restricted to Americans at least 25 years old.*
+Based on the distribution of nightly sleep hours in the sample, does it seem that the population mean nightly sleep hours may be outside the range defined as adequate (7 - 9 hours)?
+    
+### Calculate a 95\% confidence interval for nightly sleep hours using `nhanes.samp.adult` and interpret the interval
 
+You can either use the math from class to calculate this OR the `t.test()` function.
 
+### Conduct a hypothesis test to assess whether on average, American adults are getting enough sleep. Let $\mu_0$ be 8 hours, the midpoint of the range defined as adequate.
 
-
-### What proportion of Americans at least 25 years of age with a high school degree are college graduates?
-
-
-## R1: Youth weights
-
-In this exercise you will use the YRBSS dataset again that we used in class on Days 8-9, to simulate the distribution of mean weights from repeated samples. 
-
-
-### Use the `set.seed()` command to set a randomization seed. Use whatever number you want for the seed.
-
-
-### CI 
-
-__Suppose you took a random sample of size 50 from the YRBSS data, that has mean weight 130 pounds. Calculate and interpret a 90% confidence interval using the standard deviation of weights from the YRBSS "population."__
-
-
-### Another CI 
-
-__Calculate and interpret a 90% confidence interval assuming the standard deviation of weights from the random sample is 40.__ 
-
-
-
-
-## R2: Swim times
-
-* In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook. 
-* The data are in the `oibiostats` package and called `swim`.
-
-
-### Mean & SD of differences 
-
-__Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?__ 
-
-
-### Dot plot of differences
-
-__Create a dot plot of the differences in swim times and comment on the distribution shape.__ 
-
-
-### Hypothesis test
-
-__Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
-
-
-
-
-
-
-# R exercises 
-
-## Load all the packages you need below here. 
-
-
-## R1: DDS expenditures by ethnicity
-
-* In these exercises you will use R to work through the discrimination in developmental disability support example from Section 5.3.4 (pg. 253) in the textbook. 
-* The data are in the `oibiostats` package and called `dds.discr`.
-
-
-
-### New dataset
-
-__Create a new dataset that only includes the White (non Hispanic) and Hispanic ethnicities. Use this new dataset for the following questions.__ 
-
-
-
-### Data viz
-
-__Create density plots and box plots of the expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?__ 
-
-
-
-### t-test conditions
-
-__Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied?__ 
-
-
-
-### Log-transformation
-
-__The book recommends log-transforming the expenditure values before testing. Create a new column in the dataset with the transformed values. The R command for the natural logarithm is `log()`. __ 
-
-
-
-### Data viz: log-transformed expenditures
-
-__Create density plots and box plots of the log-transformed expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?__ 
-
-
-
-### t-test conditions: log-transformed expenditures
-
-__Are the conditions for a t-test comparing the mean log-transformed expenditures of the two ethnicities satisfied?__ 
-
-
-
-### Summary stats: log-transformed expenditures
-
-__Calculate the means, standard deviations, and sample sizes for the log-transformed expenditures stratified by ethnicity, and compare them to the ones in the book. Which group had a larger mean?__ 
-
-
-
-### Test
-
-__Run the appropriate statistical test in R to verify the test statistic in the text and get the actual p-value. In which order was the difference in means calculated, and is this same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
-
-
-
-### df
-
-__How do the degrees of freedom (df) from the hypothesis test compare to the df used by the book? Why are they different? Which degrees df (book vs. test output) leads to a bigger p-value?__ 
-
-
-
-### CI
-
-__What is the 95% CI? Write an interpretation of the CI in the context of the research question. __ 
-
-
-
-### Test original expenditure values
-
-__Run the appropriate statistical test in R using the original expenditure values. What are the test statistic and p-value? Does the conclusion of the test change?__
-
-
-
-### CI using original expenditure values
-
-__What is the 95% CI? Write an interpretation of the CI in the context of the research question. Which of the CI's (log-transformed vs not) is easier to interpret?__ 
-
-
-
-### Age groups
-
-__The book's example goes on to analyze the data stratified by age groups, since age is a confounder in expenditure amounts. Create two new datasets restricted to the age groups 13-17 and 22-50, respectively.__ 
-
-
-
-### Data viz by age groups
-
-__Create density plots and box plots of the expenditures stratified by ethnicity for each of the age groups separately. Comment on the distribution shapes. Are there any outliers?__ 
-
-
-
-### t-test conditions: age groups
-
-__Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?__ 
-
-
-
-### Summary stats: age groups
-
-__Calculate the means, standard deviations, and sample sizes for the expenditures stratified by ethnicity and the age groups, and compare them to the ones in the book. Which group had a larger mean?__ 
-
- 
-
-### t-test: age groups
-
-__Run the appropriate statistical tests for both age groups in R to verify the test statistics, df's, and p-values in the text. In which order were the differences in means calculated, and are they the same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
-
-
-
-### CI: age groups
-
-__What are the 95% CI's for each of the age groups? Write interpretations of the CI's in the context of the research question. Does they suggest there are differences in expenditures between the two ethnicities? Why or why not?__ 
-
-
-
-### Discrimination in DDS expenditures?
-
-__Even though the p-values for the age-stratified tests were not significant, is it possible that there was discrimination in DDS expenditures?__ 
-
-
-
+Please make sure to include all hypothesis test steps and make sure conditions are met (think CLT). There is additional information on expectations of hypothesis tests in the directions.
