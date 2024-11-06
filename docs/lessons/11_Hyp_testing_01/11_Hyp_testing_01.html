@@ -411,6 +411,20 @@ Meike Niederhausen and Nicky Wakim
 
 <img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
 
+<section>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li></li>
+</ol>
+<div class="cell">
+<style type="text/css">
+.reveal code {
+  max-height: 100% !important;
+}
+</style>
+</div>
+</section>
 <section id="goals-for-today-part-1" class="slide level2">
 <h2>Goals for today: Part 1</h2>
 <h3 id="hypothesis-testing-for-mean-from-one-sample">(4.3, 5.1) Hypothesis testing for mean from one sample</h3>
@@ -445,7 +459,8 @@ Meike Niederhausen and Nicky Wakim
 </section>
 <section id="answering-a-research-question" class="slide level2">
 <h2>Answering a research question</h2>
-<p>Research question is a generic form: Is there evidence to support that the population mean is different than <span class="math inline">\(\mu\)</span>?</p>
+<p><strong>Research question is a generic form:</strong> Is there evidence to support that the population mean is different than <span class="math inline">\(\mu\)</span>?</p>
+<p>&nbsp;</p>
 <p>Two approaches to answer this question:</p>
 <div class="columns">
 <div class="column" style="width:49%;">
@@ -455,8 +470,8 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="green2-cont">
 <ul>
-<li>Create a <strong>confidence interval (CI)</strong> for the population mean <span class="math inline">\(\mu\)</span> and determine whether 98.6°F is inside the CI or not.</li>
-<li>Answering the question: is 98.6°F a plausible value?</li>
+<li>Create a <strong>confidence interval (CI)</strong> for the population mean <span class="math inline">\(\mu\)</span> from our sample data and determine whether a prescribed value is inside the CI or not.</li>
+<li>Answering the question: is <span class="math inline">\(\mu\)</span> a plausible value given our data?</li>
 </ul>
 </div>
 </div>
@@ -469,23 +484,23 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <div class="pink-cont">
 <ul>
-<li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not</li>
+<li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from a prescribed value</li>
 <li>This does not give us a range of plausible values for the population mean <span class="math inline">\(\mu\)</span>.</li>
 <li>Instead, we calculate a <em>test statistic</em> and <em>p-value</em></li>
-<li>See how likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F</li>
+<li>See how likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean assuming that the population mean <span class="math inline">\(\mu\)</span> is a prescribed value</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="last-time-point-estimates" class="slide level2">
-<h2>Last time: point estimates</h2>
+<section id="last-last-time-point-estimates" class="slide level2">
+<h2>Last last time: Point estimates</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-2-1.png" width="1728"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-3-1.png" width="1728"></p>
 </figure>
 </div>
 </div>
@@ -511,7 +526,7 @@ Meike Niederhausen and Nicky Wakim
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-3-1.png" width="864"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="864"></p>
 </figure>
 </div>
 </div>
@@ -536,7 +551,7 @@ Meike Niederhausen and Nicky Wakim
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-4-1.png" width="864"></p>
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-5-1.png" width="864"></p>
 </figure>
 </div>
 </div>
@@ -546,9 +561,94 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </div>
 </section>
+<section id="last-time-confidence-interval-ci-for-the-mean-mu-z-vs.-t" class="slide level2">
+<h2>Last time: Confidence interval (CI) for the mean <span class="math inline">\(\mu\)</span> (<span class="math inline">\(z\)</span> vs.&nbsp;<span class="math inline">\(t\)</span>)</h2>
+<ul>
+<li>In summary, we have two cases that lead to different ways to calculate the confidence interval</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="blue2">
+<div class="blue2-ttl">
+<p>Case 1: We know the population standard deviation</p>
+</div>
+<div class="blue2-cont">
+<p><span class="math display">\[\overline{x}\ \pm\ z^*\times \text{SE}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(\text{SE} = \frac{\sigma}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the population standard deviation</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>For 95% CI, we use:
+<ul>
+<li><span class="math inline">\(z^* =\)</span> <code>qnorm(p = 0.975)</code> <span class="math inline">\(=1.96\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="red">
+<div class="red-ttl">
+<p>Case 2: We <strong>do not</strong> know the population sd</p>
+</div>
+<div class="red-cont">
+<p><span class="math display">\[\overline{x}\ \pm\ t^*\times \text{SE}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(\text{SE} = \frac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(s\)</span> is the sample standard deviation</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>For 95% CI, we use:
+<ul>
+<li><span class="math inline">\(t^* =\)</span> <code>qt(p = 0.975, df = n-1)</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="this-time-hypothesis-test-z-vs.-t" class="slide level2">
+<h2>This time: Hypothesis test (<span class="math inline">\(z\)</span> vs.&nbsp;<span class="math inline">\(t\)</span>)</h2>
+<ul>
+<li>We have two different distributions from which we run a hypothesis test</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="blue2">
+<div class="blue2-ttl">
+<p>Case 1: We know the population standard deviation</p>
+</div>
+<div class="blue2-cont">
+<ul>
+<li><p>We use a test statistic from a Normal distribution: <span class="math display">\[z_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}\]</span></p></li>
+<li><p>with <span class="math inline">\(\text{SE} = \frac{\sigma}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the population standard deviation</p></li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="red">
+<div class="red-ttl">
+<p>Case 2: We <strong>do not</strong> know the population sd</p>
+</div>
+<div class="red-cont">
+<ul>
+<li><p>We use a test statistic from a Student’s t-distribution: <span class="math display">\[t_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}\]</span></p></li>
+<li><p>with <span class="math inline">\(\text{SE} = \frac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the sample standard deviation</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>This is usually the case in real life</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="is-98.6f-really-the-mean-healthy-body-temperature" class="slide level2">
 <h2>Is 98.6°F really the mean “healthy” body temperature?</h2>
 <ul>
+<li><span style="color:#5BAFF8"><strong>We will illustrate how to perform a hypothesis test as we work through this example</strong></span></li>
 <li><strong>Where did the 98.6°F value come from?</strong>
 <ul>
 <li>German physician Carl Reinhold August <a href="https://www.google.com/books/edition/_/a6UNq33GPfIC?hl=en&amp;gbpv=1&amp;pg=PP14">Wunderlich</a> determined 98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.</li>
@@ -560,10 +660,10 @@ Meike Niederhausen and Nicky Wakim
 </ul></li>
 <li>Other research indicating that the human body temperature is lower
 <ul>
-<li>In January 2020: <em><a href="https://elifesciences.org/articles/49555">Decreasing human body temperature in the United States since the Industrial Revolution</a></em></li>
-<li>September 2023 update: <em><a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098">Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm</a></em> in JAMA Internal Medicine</li>
+<li><a href="https://elifesciences.org/articles/49555"><em>Decreasing human body temperature in the United States since the Industrial Revolution</em></a></li>
+<li><a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098"><em>Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm</em></a></li>
+<li>NYT article <a href="../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf">The Average Human Body Temperature Is Not 98.6 Degrees</a></li>
 </ul></li>
-<li>NYT article <a href="../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf">The Average Human Body Temperature Is Not 98.6 Degrees</a>, Oct 12, 2023, by Dana G. Smith</li>
 </ul>
 <div class="lob">
 <p><strong>Question:</strong> based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</p>
@@ -626,7 +726,7 @@ Meike Niederhausen and Nicky Wakim
 <p>&nbsp;</p>
 <p>Used <span class="math inline">\(t^*\)</span> = <code>qt(.975, df=129)</code> = 1.979</p>
 <p>&nbsp;</p>
-<p><strong>Conclusion: </strong> We are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F, which is discernably different than 98.6°F.</p>
+<p><strong>Conclusion:</strong> We are 95% confident that the (population) mean body temperature is between 98.123°F and 98.377°F, which is discernably different than 98.6°F.</p>
 </div>
 </div>
 </section>
@@ -648,244 +748,71 @@ Meike Niederhausen and Nicky Wakim
 <p><strong>How do we calculate a <em>test statistic</em> and <em>p-value</em>?</strong></p>
 <ul>
 <li>Use the sampling distribution and central limit theorem!!</li>
-<li>Two cases
-<ul>
-<li>Case 1: suppose we know the population sd <span class="math inline">\(\sigma\)</span></li>
-<li>Case 2: we don’t know the population sd <span class="math inline">\(\sigma\)</span></li>
-</ul></li>
+<li>Focus on Case 2: we don’t know the population sd <span class="math inline">\(\sigma\)</span></li>
 </ul>
-</section>
-<section id="case-1-suppose-we-know-the-population-sd-sigma" class="slide level2">
-<h2>Case 1: suppose we know the population sd <span class="math inline">\(\sigma\)</span></h2>
-<ul>
-<li><span style="color:green">How likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> ,</span>
-<ul>
-<li><span style="color:green">or a more extreme sample mean,</span></li>
-<li><span style="color:green">assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
-</ul></li>
-<li>Use <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(\sigma=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-
-</div>
-</div>
-<!-- * Calculate a _test statistic_ and _p-value_  -->
-</section>
-<section id="case-2-we-dont-know-the-population-sd-sigma" class="slide level2">
-<h2>Case 2: we don’t know the population sd <span class="math inline">\(\sigma\)</span></h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>This is usually the case in real life</li>
-<li>We estimate <span class="math inline">\(\sigma\)</span> with the sample standard deviation <span class="math inline">\(s\)</span></li>
-<li>From last time, we know that in this case we need to use the <strong>t-distribution with d.f. = n-1</strong>, instead of the normal distribution</li>
-<li><span style="color:green">Question: How likely we are to observe the sample mean <span class="math inline">\(\overline{x}\)</span> or a more extreme sample mean, assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
-<li>Use <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
-</ul>
-</div><div class="column" style="width:60%;">
-
-</div>
-</div>
 </section>
 <section id="steps-in-a-hypothesis-test" class="slide level2">
 <h2>Steps in a Hypothesis Test</h2>
 <ol type="1">
-<li><p>Set the <strong><span style="color:darkorange">level of significance</span></strong> <span class="math inline">\(\alpha\)</span></p></li>
-<li><p>Specify the <strong><span style="color:darkorange">null</span></strong> ( <span class="math inline">\(H_0\)</span> ) and <strong><span style="color:darkorange">alternative</span></strong> ( <span class="math inline">\(H_A\)</span> ) <strong><span style="color:darkorange">hypotheses</span></strong></p>
+<li><p>Check the <span style="color:#3070BF"><strong>assumptions</strong></span></p></li>
+<li><p>Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
+<li><p>Specify the <span style="color:#3070BF"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#3070BF"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#3070BF"><strong>hypotheses</strong></span></p>
 <ol type="1">
 <li>In symbols</li>
 <li>In words</li>
 <li>Alternative: one- or two-sided?</li>
 </ol></li>
-<li><p>Calculate the <strong><span style="color:darkorange">test statistic</span></strong>.</p></li>
-<li><p>Calculate the <strong><span style="color:darkorange">p-value</span></strong> based on the observed test statistic and its sampling distribution</p></li>
-<li><p>Write a <strong><span style="color:darkorange">conclusion</span></strong> to the hypothesis test</p>
+<li><p>Calculate the <span style="color:#3070BF"><strong>test statistic</strong></span>.</p></li>
+<li><p>Calculate the <span style="color:#3070BF"><strong>p-value</strong></span> based on the observed test statistic and its sampling distribution</p></li>
+<li><p>Write a <span style="color:#3070BF"><strong>conclusion</strong></span> to the hypothesis test</p>
 <ol type="1">
 <li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
 <li>Write a conclusion in the context of the problem</li>
 </ol></li>
 </ol>
 </section>
-<section id="step-2-null-alternative-hypotheses-12" class="slide level2">
-<h2>Step 2: Null &amp; Alternative Hypotheses (1/2)</h2>
-<p>In statistics, a <strong>hypothesis</strong> is a statement about the value of an <strong>unknown population parameter</strong>.</p>
-<p>A <strong><span style="color:darkorange">hypothesis test</span></strong> consists of a test between two competing hypotheses:</p>
-<ol type="1">
-<li>a <strong><span style="color:darkorange">null</span></strong> hypothesis <span class="math inline">\(H_0\)</span> (pronounced “H-naught”) vs.&nbsp;</li>
-<li>an <strong><span style="color:darkorange">alternative</span></strong> hypothesis <span class="math inline">\(H_A\)</span> (also denoted <span class="math inline">\(H_1\)</span>)</li>
-</ol>
-<p>Example of hypotheses in words:</p>
-<span class="math display">\[\begin{aligned}
-H_0 &amp;: \text{The population mean body temperature is 98.6°F}\\
-\text{vs. } H_A &amp;: \text{The population mean body temperature is not 98.6°F}
-\end{aligned}\]</span>
-<ol type="1">
-<li><span class="math inline">\(H_0\)</span> is a claim that there is “no effect” or “no difference of interest.”</li>
-<li><span class="math inline">\(H_A\)</span> is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis <span class="math inline">\(H_0\)</span></li>
-</ol>
-</section>
-<section id="step-2-null-alternative-hypotheses-22" class="slide level2">
-<h2>Step 2: Null &amp; Alternative Hypotheses (2/2)</h2>
-<p><strong><span style="color:green">Notation for hypotheses:</span></strong></p>
-<span class="math display">\[\begin{aligned}
-H_0 &amp;: \mu = \mu_0\\
-\text{vs. } H_A&amp;: \mu \neq, &lt;, \textrm{or}, &gt; \mu_0
-\end{aligned}\]</span>
-<p>We call <span class="math inline">\(\mu_0\)</span> the <em>null value</em></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><span class="math inline">\(H_A: \mu \neq \mu_0\)</span></p>
-<div style="font-size: 90%;">
+<section id="step-1-check-the-assumptions" class="slide level2">
+<h2>Step 1: Check the assumptions</h2>
 <ul>
-<li>not choosing a priori whether we believe the population mean is greater or less than the null value <span class="math inline">\(\mu_0\)</span></li>
-</ul>
-</div>
-</div><div class="column" style="width:30%;">
-<p><span class="math inline">\(H_A: \mu &lt; \mu_0\)</span></p>
-<div style="font-size: 90%;">
-<ul>
-<li>believe the population mean is <strong>less</strong> than the null value <span class="math inline">\(\mu_0\)</span></li>
-</ul>
-</div>
-</div><div class="column" style="width:30%;">
-<p><span class="math inline">\(H_A: \mu &gt; \mu_0\)</span></p>
-<div style="font-size: 90%;">
-<ul>
-<li>believe the population mean is <strong>greater</strong> than the null value <span class="math inline">\(\mu_0\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-<ul>
-<li><span class="math inline">\(H_A: \mu \neq \mu_0\)</span> is the most common option, since it’s the most conservative</li>
-</ul>
-<p>Example:</p>
-<span class="math display">\[\begin{aligned}
-H_0 &amp;: \mu = 98.6\\
-\text{vs. } H_A&amp;: \mu \neq 98.6
-\end{aligned}\]</span>
-</section>
-<section id="step-3-test-statistic-its-distribution" class="slide level2">
-<h2>Step 3: <span style="color:darkorange">Test statistic</span> (&amp; its distribution)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong><span style="color:purple">Case 1: know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
-<p><span class="math display">\[
-\text{test statistic} = z_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
-\]</span></p>
-<ul>
-<li>Statistical theory tells us that <span style="color:purple"><span class="math inline">\(z_{\overline{x}}\)</span></span> follows a <span style="color:purple"><strong>Standard Normal distribution</strong> <span class="math inline">\(N(0,1)\)</span></span></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong><span style="color:green">Case 2: don’t know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
-<p><span class="math display">\[
-\text{test statistic} = t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
-\]</span></p>
-<ul>
-<li>Statistical theory tells us that <span style="color:green"><span class="math inline">\(t_{\overline{x}}\)</span></span> follows a <span style="color:green"><strong>Student’s t distribution</strong> with degrees of freedom (df) = <span class="math inline">\(n-1\)</span></span></li>
-</ul>
-</div>
-</div>
-<div style="font-size: 90%;">
-<p><span class="math inline">\(\overline{x}\)</span> = sample mean, <span class="math inline">\(\mu_0\)</span> = hypothesized population mean from <span class="math inline">\(H_0\)</span>,<br>
-<span class="math inline">\(\sigma\)</span> = <em>population</em> standard deviation, <span class="math inline">\(s\)</span> = <em>sample</em> standard deviation,<br>
-<span class="math inline">\(n\)</span> = sample size</p>
-</div>
-<p><strong><span style="color:darkorange">Assumptions</span></strong>: same as CLT</p>
+<li><p>The assumptions to run a hypothesis test on a sample are:</p>
 <ul>
 <li><strong>Independent observations</strong>: the observations were collected independently.</li>
-<li><strong>Approximately normal sample or big n</strong>: the distribution of the sample should be approximately normal, <em>or</em> the sample size should be at least 30.</li>
-</ul>
-</section>
-<section id="step-3-test-statistic-calculation" class="slide level2">
-<h2>Step 3: Test statistic calculation</h2>
-<p>Recall that <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130.\)</span></p>
-<p>The test statistic is:</p>
-<p><span class="math display">\[t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
-= \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
-= -5.45\]</span></p>
-<ul>
-<li>Statistical theory tells us that <span class="math inline">\(t_{\overline{x}}\)</span> follows a <strong>Student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>.</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:75%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:25%;">
-<p><strong>Assumptions met?</strong></p>
-</div>
-</div>
-</section>
-<section id="step-4-p-value" class="slide level2">
-<h2>Step 4: p-value</h2>
-<p>The <strong><span style="color:darkorange">p-value</span></strong> is the <span style="color:darkblue"><strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>The <span class="math inline">\(p\)</span>-value is a quantification of “surprise”
-<ul>
-<li>Assuming <span class="math inline">\(H_0\)</span> is true, <em>how surprised are we with the observed results</em>?</li>
-<li><em>Ex</em>: assuming that the true mean body temperature is 98.6°F, how surprised are we to get a sample mean of 98.25°F (or more extreme)?</li>
+<li><strong>Approximately normal sample or big n</strong>: the distribution of the sample should be approximately normal, <em>or</em> the sample size should be at least 30</li>
 </ul></li>
-<li>If the <span class="math inline">\(p\)</span>-value is “small,” it means there’s a small probability that we would get the observed statistic (or more extreme) when <span class="math inline">\(H_0\)</span> is true.</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="step-4-p-value-calculation" class="slide level2">
-<h2>Step 4: p-value calculation</h2>
-<p>Calculate the <em>p</em>-value using the <strong>Student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>:</p>
-<p><span class="math display">\[p-value=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}\]</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># use pt() instead of pnorm()</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># need to specify df</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pt</span>(<span class="sc">-</span><span class="fl">5.4548</span>, <span class="at">df =</span> <span class="dv">130-1</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.410889e-07</code></pre>
-</div>
-</div>
-
-<img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<section id="step-4-p-value-estimation-using-t-table" class="slide level2">
-<h2>Step 4: p-value estimation using <span class="math inline">\(t\)</span>-table</h2>
+<p>&nbsp;</p>
 <ul>
-<li><span class="math inline">\(t\)</span>-table only gives us <em>bounds</em> on the p-value</li>
-<li>Recall from using the <span class="math inline">\(t\)</span>-table for CIs, that the table gives us the cutoff values for varying tail probabilities (1-tail &amp; 2-tail)</li>
-<li>Find the row with the appropriate degrees of freedom
+<li>These are the criteria for the Central Limit Theorem in Lesson 09: Variability in estimates</li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>Use next smallest df in table if actual df not shown</li>
-<li>I.e., for df = 129, use df = 100 in table</li>
-</ul></li>
-<li>Figure out where the test statistic’s absolute value is in relation to the values in the columns, i.e.&nbsp;between which columns is the test statistic?</li>
-<li>The header rows for those columns gives the lower &amp; upper bounds for the p-value
+<li><p>In our example, we would check the assumptions with a statement:</p>
 <ul>
-<li>Choosing one-tail vs.&nbsp;two-tail test, depends on the alternative hypothesis <span class="math inline">\(H_A\)</span>.</li>
-<li>For a 2-sided test ( <span class="math inline">\(H_A: \mu \neq \mu_0\)</span> ), use two-tails</li>
-<li>For a 1-sided test ( <span class="math inline">\(H_A: \mu &lt; \textrm{or} &gt; \mu_0\)</span> ), use one-tail</li>
+<li>The individual observations are independent and the number of individuals in our sample is 130. Thus, we can use CLT to approximate the sampling distribution.</li>
 </ul></li>
 </ul>
 </section>
-<section id="step-1-significance-level-alpha" class="slide level2">
-<h2>Step 1: Significance Level <span class="math inline">\(\alpha\)</span></h2>
+<section id="step-2-set-the-level-of-significance-alpha" class="slide level2">
+<h2>Step 2: Set the level of significance <span class="math inline">\(\alpha\)</span></h2>
+<ul>
+<li><p>It is important to specify how rare or unlikely an event must be in order to represent sufficient evidence against the null hypothesis.</p></li>
+<li><p>When testing a statistical hypothesis, we specify a significance level, <span class="math inline">\(\alpha\)</span></p>
+<ul>
+<li>Typically choose <span class="math inline">\(\alpha = 0.05\)</span></li>
+</ul></li>
+<li><p>An <span class="math inline">\(\alpha\)</span> level of 0.05 implies that an event occurring with probability lower than 5% will be considered sufficient evidence against the null hypothesis</p></li>
+<li><p>This is parallel to our confidence interval</p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is the probability of rejecting the null hypothesis when it is true (it’s a measure of potential error)</li>
+<li>A (<span class="math inline">\(1-\alpha\)</span>)% confidence interval will have about <span class="math inline">\(\alpha\)</span>% confidence intervals that do not cover <span class="math inline">\(\mu\)</span> even though they come from the distribution with mean <span class="math inline">\(\mu\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="step-2-significance-level-alpha" class="slide level2">
+<h2>Step 2: Significance Level <span class="math inline">\(\alpha\)</span></h2>
 <ul>
 <li><strong>Before doing a hypothesis test</strong>, we set a cut-off for how small the <span class="math inline">\(p\)</span>-value should be in order to reject <span class="math inline">\(H_0\)</span>.</li>
-<li>We call this the <strong><span style="color:darkorange">significance level</span></strong>, denoted by the Greek symbol <span style="color:darkorange">alpha ( <span class="math inline">\(\alpha\)</span> )</span></li>
+<li>We call this the <span style="color:#3070BF"><strong>significance level</strong></span>, denoted by the Greek symbol <span style="color:#3070BF">alpha ( <span class="math inline">\(\alpha\)</span> )</span></li>
 <li><span style="color:darkblue">Typical <span class="math inline">\(\alpha\)</span></span> values are
 <ul>
 <li>0.05 - <em>most common by far!!</em></li>
@@ -893,8 +820,8 @@ H_0 &amp;: \mu = 98.6\\
 </ul></li>
 <li>Decision rule:
 <ul>
-<li>When <span style="color:green"><span class="math inline">\(p\)</span>-value &lt; <span class="math inline">\(\alpha\)</span></span>, we “<strong><span style="color:green">reject</span></strong> the null hypothesis <span style="color:green"><span class="math inline">\(H_0\)</span></span>.”</li>
-<li>When <span style="color:purple"><span class="math inline">\(p\)</span>-value <span class="math inline">\(\geq \alpha\)</span></span>, we “<strong><span style="color:purple">fail to reject</span></strong> the null hypothesis <span style="color:purple"><span class="math inline">\(H_0\)</span></span>.”</li>
+<li>When <span style="color:green"><span class="math inline">\(p\)</span>-value &lt; <span class="math inline">\(\alpha\)</span></span>, we “<span style="color:green"><strong>reject</strong></span> the null hypothesis <span style="color:green"><span class="math inline">\(H_0\)</span></span>.”</li>
+<li>When <span style="color:purple"><span class="math inline">\(p\)</span>-value <span class="math inline">\(\geq \alpha\)</span></span>, we “<span style="color:purple"><strong>fail to reject</strong></span> the null hypothesis <span style="color:purple"><span class="math inline">\(H_0\)</span></span>.”</li>
 </ul></li>
 </ul>
 <div class="callout callout-important callout-titled callout-style-default">
@@ -909,22 +836,223 @@ H_0 &amp;: \mu = 98.6\\
 <ul>
 <li>“Failing to reject” <span class="math inline">\(H_0\)</span> is <strong>NOT</strong> the same as “accepting” <span class="math inline">\(H_0\)</span>!</li>
 <li>By failing to reject <span class="math inline">\(H_0\)</span> we are just saying that we don’t have sufficient evidence to support the alternative <span class="math inline">\(H_A\)</span>.</li>
-<li><em>This does not imply that <span class="math inline">\(H_0\)</span> is true!!</em></li>
+<li><em>This does not imply that</em> <span class="math inline">\(H_0\)</span> is true!!</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="step-5-conclusion-to-hypothesis-test" class="slide level2">
-<h2>Step 5: Conclusion to hypothesis test</h2>
+<section id="step-3-null-alternative-hypotheses-12" class="slide level2">
+<h2>Step 3: Null &amp; Alternative Hypotheses (1/2)</h2>
+<p>In statistics, a <strong>hypothesis</strong> is a statement about the value of an <strong>unknown population parameter</strong>.</p>
+<p>A <span style="color:#3070BF"><strong>hypothesis test</strong></span> consists of a test between two competing hypotheses:</p>
+<ol type="1">
+<li>a <span style="color:#3070BF"><strong>null</strong></span> hypothesis <span class="math inline">\(H_0\)</span> (pronounced “H-naught”) vs.</li>
+<li>an <span style="color:#3070BF"><strong>alternative</strong></span> hypothesis <span class="math inline">\(H_A\)</span> (also denoted <span class="math inline">\(H_1\)</span>)</li>
+</ol>
+<p>Example of hypotheses in words:</p>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \text{The population mean body temperature is 98.6°F}\\
+\text{vs. } H_A &amp;: \text{The population mean body temperature is not 98.6°F}
+\end{aligned}\]</span>
+<ol type="1">
+<li><span class="math inline">\(H_0\)</span> is a claim that there is “no effect” or “no difference of interest.”</li>
+<li><span class="math inline">\(H_A\)</span> is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis <span class="math inline">\(H_0\)</span></li>
+</ol>
+</section>
+<section id="step-3-null-alternative-hypotheses-22" class="slide level2">
+<h2>Step 3: Null &amp; Alternative Hypotheses (2/2)</h2>
+<div class="columns">
+<div class="column">
+<div class="blue">
+<div class="blue-ttl">
+<p>Notation for hypotheses</p>
+</div>
+<div class="blue-cont">
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \mu = \mu_0\\
+\text{vs. } H_A&amp;: \mu \neq, &lt;, \textrm{or}, &gt; \mu_0
+\end{aligned}\]</span>
+</div>
+</div>
+</div><div class="column">
+<div class="pink">
+<div class="pink-ttl">
+<p>Hypotheses test for example</p>
+</div>
+<div class="pink-cont">
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \mu = 98.6\\
+\text{vs. } H_A&amp;: \mu \neq 98.6
+\end{aligned}\]</span>
+</div>
+</div>
+</div>
+</div>
+<p>We call <span class="math inline">\(\mu_0\)</span> the <em>null value</em> (hypothesized population mean from <span class="math inline">\(H_0\)</span>)</p>
+<div class="columns">
+<div class="column" style="width:32%;">
+<p><span class="math inline">\(H_A: \mu \neq \mu_0\)</span></p>
+<ul>
+<li>not choosing a priori whether we believe the population mean is greater or less than the null value <span class="math inline">\(\mu_0\)</span></li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:32%;">
+<p><span class="math inline">\(H_A: \mu &lt; \mu_0\)</span></p>
+<ul>
+<li>believe the population mean is <strong>less</strong> than the null value <span class="math inline">\(\mu_0\)</span></li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:32%;">
+<p><span class="math inline">\(H_A: \mu &gt; \mu_0\)</span></p>
+<ul>
+<li>believe the population mean is <strong>greater</strong> than the null value <span class="math inline">\(\mu_0\)</span></li>
+</ul>
+</div>
+</div>
+<ul>
+<li><span class="math inline">\(H_A: \mu \neq \mu_0\)</span> is the most common option, since it’s the most conservative</li>
+</ul>
+</section>
+<section id="step-4-test-statistic-its-distribution" class="slide level2">
+<h2>Step 4: <span style="color:#3070BF">Test statistic</span> (&amp; its distribution)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="blue2">
+<div class="blue2-ttl">
+<p>Case 1: We know the population standard deviation</p>
+</div>
+<div class="blue2-cont">
+<ul>
+<li><p>We use a test statistic from a Normal distribution: <span class="math display">\[z_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}\]</span></p></li>
+<li><p>with <span class="math inline">\(\text{SE} = \frac{\sigma}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the population standard deviation</p></li>
+<li><p>Statistical theory tells us that <span style="color:#3070BF"><span class="math inline">\(z_{\overline{x}}\)</span></span> follows a <span style="color:#3070BF"><strong>Standard Normal distribution</strong> <span class="math inline">\(N(0,1)\)</span></span></p></li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="red">
+<div class="red-ttl">
+<p>Case 2: We <strong>do not</strong> know the population sd</p>
+</div>
+<div class="red-cont">
+<ul>
+<li><p>We use test statistic from Student’s t-distribution: <span class="math display">\[t_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}\]</span></p></li>
+<li><p>with <span class="math inline">\(\text{SE} = \frac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the sample standard deviation</p></li>
+<li><p>Statistical theory tells us that <span style="color:#C83532"><span class="math inline">\(t_{\overline{x}}\)</span></span> follows a <span style="color:#C83532"><strong>Student’s t distribution</strong> with degrees of freedom (df) = <span class="math inline">\(n-1\)</span></span></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(\overline{x}\)</span> = sample mean, <span class="math inline">\(\mu_0\)</span> = hypothesized population mean from <span class="math inline">\(H_0\)</span>,<br>
+<span class="math inline">\(\sigma\)</span> = <em>population</em> standard deviation, <span class="math inline">\(s\)</span> = <em>sample</em> standard deviation,<br>
+<span class="math inline">\(n\)</span> = sample size</p>
+</section>
+<section id="step-4-test-statistic-calculation" class="slide level2">
+<h2>Step 4: Test statistic calculation</h2>
+<p>From our example: Recall that <span class="math inline">\(\overline{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130\)</span></p>
+<p>The test statistic is:</p>
+<p><span class="math display">\[t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+= \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
+= -5.45\]</span></p>
+<ul>
+<li>Statistical theory tells us that <span class="math inline">\(t_{\overline{x}}\)</span> follows a <strong>Student’s t-distribution</strong> with <span class="math inline">\(df = n-1 = 129\)</span></li>
+</ul>
+
+<img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="step-5-p-value" class="slide level2">
+<h2>Step 5: p-value</h2>
+<p>The <span style="color:#3070BF"><strong>p-value</strong></span> is the <span style="color:#3070BF"><strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>&nbsp;</p>
+<ul>
+<li>The <span class="math inline">\(p\)</span>-value is a quantification of “surprise”
+<ul>
+<li>Assuming <span class="math inline">\(H_0\)</span> is true, <em>how surprised are we with the observed results</em>?</li>
+<li><em>Ex</em>: assuming that the true mean body temperature is 98.6°F, how surprised are we to get a sample mean of 98.25°F (or more extreme)?</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>If the <span class="math inline">\(p\)</span>-value is “small,” it means there’s a small probability that we would get the observed statistic (or more extreme) when <span class="math inline">\(H_0\)</span> is true.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-p-value-calculation" class="slide level2">
+<h2>Step 5: p-value calculation</h2>
+<p>Calculate the <em>p</em>-value using the <strong>Student’s t-distribution</strong> with <span class="math inline">\(df = n-1 = 130-1=129\)</span>:</p>
+<p><span class="math display">\[\text{p-value}=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># use pt() instead of pnorm()</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># need to specify df</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pt</span>(<span class="sc">-</span><span class="fl">5.4548</span>, <span class="at">df =</span> <span class="dv">130-1</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.410889e-07</code></pre>
+</div>
+</div>
+
+<img data-src="11_Hyp_testing_01_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="step-6-conclusion-to-hypothesis-test" class="slide level2">
+<h2>Step 6: Conclusion to hypothesis test</h2>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \mu = \mu_0\\
+\text{vs. } H_A&amp;: \mu \neq \mu_0
+\end{aligned}\]</span>
+<ul>
+<li>Need to compare p-value to our selected <span class="math inline">\(\alpha = 0.05\)</span></li>
+<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+</ul>
+<p><br>
+</p>
+<div class="columns">
+<div class="column">
+<div class="pink2">
+<div class="pink2-ttl">
+<p>If <span class="math inline">\(\text{p-value} &lt; \alpha\)</span>, reject the null hypothesis</p>
+</div>
+<div class="pink2-cont">
+<ul>
+<li>There is sufficient evidence that the (population) mean body temperature is discernibly different from <span class="math inline">\(\mu_0\)</span> ( <span class="math inline">\(p\)</span>-value = ___)</li>
+<li>The average (insert measure) in the sample was <span class="math inline">\(\overline{x}\)</span> (95% CI <strong><em>, </em></strong>), which is discernibly different from <span class="math inline">\(\mu_0\)</span> ( <span class="math inline">\(p\)</span>-value = ____).</li>
+</ul>
+</div>
+</div>
+</div><div class="column">
+<div class="green2">
+<div class="green2-ttl">
+<p>If <span class="math inline">\(\text{p-value} \geq \alpha\)</span>, fail to reject the null hypothesis</p>
+</div>
+<div class="green2-cont">
+<ul>
+<li>There is insufficient evidence that the (population) mean body temperature is discernibly different from <span class="math inline">\(\mu_0\)</span> ( <span class="math inline">\(p\)</span>-value = ___)</li>
+<li>The average (insert measure) in the sample was <span class="math inline">\(\overline{x}\)</span> (95% CI <strong><em>, </em></strong>), which is not discernibly different from <span class="math inline">\(\mu_0\)</span> ( <span class="math inline">\(p\)</span>-value = ____).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-conclusion-to-hypothesis-test-1" class="slide level2">
+<h2>Step 6: Conclusion to hypothesis test</h2>
 <span class="math display">\[\begin{aligned}
 H_0 &amp;: \mu = 98.6\\
 \text{vs. } H_A&amp;: \mu \neq 98.6
 \end{aligned}\]</span>
 <ul>
-<li>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(2.410889 \times 10^{-07}\)</span></li>
-<li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
-<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+<li><p>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(2.410889 \times 10^{-07}\)</span></p></li>
+<li><p>Need to compare back to our selected <span class="math inline">\(\alpha = 0.05\)</span></p></li>
+<li><p>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</p></li>
 </ul>
 <p><strong>Conclusion statement</strong>:</p>
 <ul>
@@ -943,14 +1071,12 @@ H_0 &amp;: \mu = 98.6\\
 <ul>
 <li>See also V&amp;H Section 4.3.3</li>
 </ul>
-</section>
+</section></section>
 <section>
 <section id="running-a-t-test-in-r" class="title-slide slide level1 center">
 <h1>Running a t-test in R</h1>
 <ul>
-<li>Working directory</li>
-<li>Load a dataset - need to specify location of dataset</li>
-<li>R projects</li>
+<li>Replace hand calculation in step 4 and 5 with R!!</li>
 <li>Run a t-test in R</li>
 <li><code>tidy()</code> the test output using <code>broom</code> package</li>
 </ul>
@@ -959,28 +1085,21 @@ H_0 &amp;: \mu = 98.6\\
 <h2>Load the dataset</h2>
 <ul>
 <li>The data are in a csv file called <code>BodyTemperatures.csv</code></li>
-<li>You need to tell R where the dataset is located!</li>
-<li>I recommend saving all datasets in a folder called data.
-<ul>
-<li>The code I will be providing you will be set up this way.</li>
-</ul></li>
-<li>To make it easier to specify where the dataset is located, I recommend using the <code>here()</code> function from the <code>here</code> package: <code>here::here()</code>.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># read_csv() is a function from the readr package that is a part of the tidyverse</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(here)   <span class="co"># first install this package</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"BodyTemperatures.csv"</span>))</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#                     location: look in "data" folder</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co">#                               for the file "BodyTemperatures.csv"</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(here)   <span class="co"># first install this package</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"BodyTemperatures.csv"</span>))</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#                     location: look in "data" folder</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#                               for the file "BodyTemperatures.csv"</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 130
 Columns: 3
 $ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…
-$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
-$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
+$ Gender      &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ HeartRate   &lt;int&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
 </div>
 </div>
 </section>
@@ -991,17 +1110,9 @@ $ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70
 <li>We called the dataset <code>BodyTemps</code> when we loaded it</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 130
-Columns: 3
-$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…
-$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
-$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
-<span id="cb7-2"><a href="#cb7-2"></a>       <span class="co"># alternative = "two.sided",  # default</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>       <span class="at">mu =</span> <span class="fl">98.6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="co"># default setting</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>       <span class="at">mu =</span> <span class="fl">98.6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     One Sample t-test
@@ -1025,9 +1136,9 @@ mean of x
 <li>Combined with the <code>gt()</code> function from the <code>gt</code> package, we get a nice table</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>) <span class="co"># use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>) <span class="co"># use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="ccavxmiduu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -1515,53 +1626,82 @@ mean of x
 <div class="column" style="width:50%;">
 <p>Using base R’s <code>$</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
 </div>
 <p>Advantage: quick and easy</p>
-</div><div class="column" style="width:50%;">
-<p>Or the <code>tidyverse</code> way: using <code>pull()</code> from <code>dplyr</code> package</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.410632e-07</code></pre>
-</div>
-</div>
-<p>Advantage: can use together with piping (<code>%&gt;%</code>) other functions</p>
 </div>
 </div>
 </section>
-<section id="answering-a-research-question-1" class="slide level2">
-<h2>Answering a research question</h2>
-<p>Research question is a generic form: Is there evidence to support that the population mean is different than <span class="math inline">\(\mu\)</span>?</p>
+<section id="this-time-hypothesis-test-z-vs.-t-1" class="slide level2">
+<h2>This time: Hypothesis test (<span class="math inline">\(z\)</span> vs.&nbsp;<span class="math inline">\(t\)</span>)</h2>
+<ul>
+<li>We have two different distributions from which we run a hypothesis test</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="blue2">
+<div class="blue2-ttl">
+<p>Case 1: We know the population standard deviation</p>
+</div>
+<div class="blue2-cont">
+<ul>
+<li><p>We use a test statistic from a Normal distribution: <span class="math display">\[z_{\overline{X}} = \dfrac{\overline{x} - \mu}{SE}\]</span></p></li>
+<li><p>with <span class="math inline">\(\text{SE} = \frac{\sigma}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the population standard deviation</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>We calculate <span class="math inline">\(P(Z \geq |{z_{\overline{X}}}|)\)</span> = <code>pnorm($z_{\overline{X}}$)</code></li>
+<li>OR: We calculate <span class="math inline">\(P(X \geq |\overline{x}|)\)</span> = <code>pnorm($\overline{x}$, $\mu$, $SE$)</code></li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="red">
+<div class="red-ttl">
+<p>Case 2: We <strong>do not</strong> know the population sd</p>
+</div>
+<div class="red-cont">
+<ul>
+<li><p>We use a test statistic from a Student’s t-distribution: <span class="math display">\[t_{\overline{X}} = \dfrac{\overline{x} - \mu}{SE}\]</span></p></li>
+<li><p>with <span class="math inline">\(\text{SE} = \frac{s}{\sqrt{n}}\)</span> and <span class="math inline">\(\sigma\)</span> is the sample standard deviation</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>This is usually the case in real life</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="whats-next" class="slide level2">
 <h2>What’s next?</h2>
 <p>CI’s and hypothesis testing for different scenarios:</p>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 14%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 21%">
-<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Day</th>
+<th style="text-align: center;">Lesson</th>
 <th style="text-align: center;">Section</th>
 <th style="text-align: center;">Population parameter</th>
-<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Symbol (pop)</th>
 <th style="text-align: center;">Point estimate</th>
-<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Symbol (sample)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
 <td style="text-align: center;">5.1</td>
 <td style="text-align: center;">Pop mean</td>
 <td style="text-align: center;"><span class="math inline">\(\mu\)</span></td>
@@ -1569,7 +1709,7 @@ mean of x
 <td style="text-align: center;"><span class="math inline">\(\overline{x}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">10</td>
+<td style="text-align: center;">12</td>
 <td style="text-align: center;">5.2</td>
 <td style="text-align: center;">Pop mean of paired diff</td>
 <td style="text-align: center;"><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
@@ -1577,7 +1717,7 @@ mean of x
 <td style="text-align: center;"><span class="math inline">\(\overline{x}_{d}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">11</td>
+<td style="text-align: center;">13</td>
 <td style="text-align: center;">5.3</td>
 <td style="text-align: center;">Diff in pop means</td>
 <td style="text-align: center;"><span class="math inline">\(\mu_1-\mu_2\)</span></td>
@@ -1585,7 +1725,7 @@ mean of x
 <td style="text-align: center;"><span class="math inline">\(\overline{x}_1 - \overline{x}_2\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">12</td>
+<td style="text-align: center;">15</td>
 <td style="text-align: center;">8.1</td>
 <td style="text-align: center;">Pop proportion</td>
 <td style="text-align: center;"><span class="math inline">\(p\)</span></td>
@@ -1593,7 +1733,7 @@ mean of x
 <td style="text-align: center;"><span class="math inline">\(\widehat{p}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">12</td>
+<td style="text-align: center;">15</td>
 <td style="text-align: center;">8.2</td>
 <td style="text-align: center;">Diff in pop prop’s</td>
 <td style="text-align: center;"><span class="math inline">\(p_1-p_2\)</span></td>

@@ -53,76 +53,89 @@ set.seed(456)
 
 ## Where are we? Continuous outcome zoomed in {visibility="hidden"}
 
-<br>
-<br>
+<br> <br>
 
 ![](../img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
+# Learning Objectives
 
-## Goals for today: Part 1 
+1.  
 
-### (4.3, 5.1) Hypothesis testing for mean from one sample  
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+```
 
-* Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
+## Goals for today: Part 1
 
-::: columns
+### (4.3, 5.1) Hypothesis testing for mean from one sample
+
+-   Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
+
+::::: columns
 ::: {.column width="50%"}
-* [Steps of a hypothesis test:]{style="color:purple"}
-    1. level of significance
-    1. null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
-    1. test statistic
-    1. p-value
-    1. conclusion
+-   [Steps of a hypothesis test:]{style="color:purple"}
+    1.  level of significance
+    2.  null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
+    3.  test statistic
+    4.  p-value
+    5.  conclusion
 :::
+
 ::: {.column width="50%"}
-* [Run a hypothesis test in R]{style="color:green"}
-    * Load a dataset - need to specify location of dataset
-    * R projects
-    * Run a t-test in R
-    * `tidy()` the test output using `broom` package
+-   [Run a hypothesis test in R]{style="color:green"}
+    -   Load a dataset - need to specify location of dataset
+    -   R projects
+    -   Run a t-test in R
+    -   `tidy()` the test output using `broom` package
 :::
-:::
+:::::
 
-### (4.3.3) Confidence intervals (CIs) vs. hypothesis tests 
-
+### (4.3.3) Confidence intervals (CIs) vs. hypothesis tests
 
 ## Answering a research question
 
-Research question is a generic form: Is there evidence to support that the population mean is different than $\mu$?
+**Research question is a generic form:** Is there evidence to support that the population mean is different than $\mu$?
+
+ 
 
 Two approaches to answer this question:
 
-::: columns
-::: {.column width="49%"}
-::: green2
+:::::::::::: columns
+:::::: {.column width="49%"}
+::::: green2
 ::: green2-ttl
 Confidence interval
 :::
+
 ::: green2-cont
-- Create a __confidence interval (CI)__ for the population mean $\mu$ and determine whether 98.6°F is inside the CI or not.
-- Answering the question: is 98.6°F a plausible value?
+-   Create a **confidence interval (CI)** for the population mean $\mu$ from our sample data and determine whether a prescribed value is inside the CI or not.
+-   Answering the question: is $\mu$ a plausible value given our data?
 :::
-:::
-:::
+:::::
+::::::
 
 ::: {.column width="2%"}
 :::
-::: {.column width="49%"}
-::: pink
+
+:::::: {.column width="49%"}
+::::: pink
 ::: pink-ttl
 Hypothesis test
 :::
-::: pink-cont
-- Run a __hypothesis test__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not
-- This does not give us a range of plausible values for the population mean $\mu$.
-- Instead, we calculate a _test statistic_ and _p-value_ 
-- See how likely we are to observe the sample mean $\overline{x}$ or a more extreme sample mean assuming that the population mean $\mu$ is 98.6°F
-:::
-:::
-:::
-:::
 
-## Last time: point estimates
+::: pink-cont
+-   Run a **hypothesis test** to see if there is evidence that the population mean $\mu$ is *significantly different* from a prescribed value
+-   This does not give us a range of plausible values for the population mean $\mu$.
+-   Instead, we calculate a *test statistic* and *p-value*
+-   See how likely we are to observe the sample mean $\overline{x}$ or a more extreme sample mean assuming that the population mean $\mu$ is a prescribed value
+:::
+:::::
+::::::
+::::::::::::
+
+## Last last time: Point estimates
 
 ```{r}
 #| echo: false
@@ -286,9 +299,6 @@ Do these confidence intervals include $\mu$?
 :::
 ::::::
 
-
-
-
 ## This time: Point estimates with probability assuming population mean $\mu$
 
 :::::: columns
@@ -413,21 +423,102 @@ Assuming the population mean is $\mu$, what is the probability that we observe $
 :::
 ::::::
 
+## Last time: Confidence interval (CI) for the mean $\mu$ ($z$ vs. $t$)
 
-## Is 98.6°F  really the mean "healthy" body temperature?
+- In summary, we have two cases that lead to different ways to calculate the confidence interval
 
-* __Where did the 98.6°F value come from?__
-    * German physician Carl Reinhold August [Wunderlich](https://www.google.com/books/edition/_/a6UNq33GPfIC?hl=en&gbpv=1&pg=PP14) determined  98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.
+::::: columns
+::: {.column width="50%"}
+::: blue2
+::: blue2-ttl
+Case 1: We know the population standard deviation
+:::
+::: blue2-cont
+$$\overline{x}\ \pm\ z^*\times \text{SE}$$
 
-* [1992 JAMA article](https://jamanetwork.com/journals/jama/article-abstract/400116) by Mackowiak, Wasserman, & Levine
-    * They claim that 98.2°F (36.8°C) is a more accurate average body temp
-    * Sample: n = 148 healthy individuals aged 18 - 40 years
+- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ and $\sigma$ is the population standard deviation
 
-* Other research indicating that the human body temperature is lower
-    * In January 2020: _[Decreasing human body temperature in the United States since the Industrial Revolution](https://elifesciences.org/articles/49555)_
-    * September 2023 update: _[Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm](https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098)_ in JAMA Internal Medicine
+ 
 
-* NYT article [The Average Human Body Temperature Is Not 98.6 Degrees](../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf), Oct 12, 2023, by Dana G. Smith
+- For 95% CI, we use:
+  - $z^* =$ `qnorm(p = 0.975)` $=1.96$
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: red
+::: red-ttl
+Case 2: We **do not** know the population sd
+:::
+::: red-cont
+$$\overline{x}\ \pm\ t^*\times \text{SE}$$
+
+- with $\text{SE} = \frac{s}{\sqrt{n}}$ and $s$ is the sample standard deviation
+
+ 
+
+- For 95% CI, we use:
+  - $t^* =$ `qt(p = 0.975, df = n-1)`
+:::
+:::
+:::
+:::::
+
+## This time: Hypothesis test ($z$ vs. $t$)
+
+- We have two different distributions from which we run a hypothesis test
+
+::::: columns
+::: {.column width="50%"}
+::: blue2
+::: blue2-ttl
+Case 1: We know the population standard deviation
+:::
+::: blue2-cont
+
+- We use a test statistic from a Normal distribution: 
+$$z_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}$$
+
+- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ and $\sigma$ is the population standard deviation
+
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: red
+::: red-ttl
+Case 2: We **do not** know the population sd
+:::
+::: red-cont
+- We use a test statistic from a Student's t-distribution: 
+$$t_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}$$
+
+- with $\text{SE} = \frac{s}{\sqrt{n}}$ and $\sigma$ is the sample standard deviation
+
+ 
+
+-   This is usually the case in real life
+
+:::
+:::
+:::
+:::::
+
+
+## Is 98.6°F really the mean "healthy" body temperature?
+
+-   [**We will illustrate how to perform a hypothesis test as we work through this example**]{style="color:#5BAFF8"}
+-   **Where did the 98.6°F value come from?**
+    -   German physician Carl Reinhold August [Wunderlich](https://www.google.com/books/edition/_/a6UNq33GPfIC?hl=en&gbpv=1&pg=PP14) determined 98.6°F (or 37°C) based on temperatures from 25,000 patients in Leipzig in 1851.
+-   [1992 JAMA article](https://jamanetwork.com/journals/jama/article-abstract/400116) by Mackowiak, Wasserman, & Levine
+    -   They claim that 98.2°F (36.8°C) is a more accurate average body temp
+    -   Sample: n = 148 healthy individuals aged 18 - 40 years
+-   Other research indicating that the human body temperature is lower
+    -    [*Decreasing human body temperature in the United States since the Industrial Revolution*](https://elifesciences.org/articles/49555)
+    -    [*Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm*](https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098)
+    -   NYT article [The Average Human Body Temperature Is Not 98.6 Degrees](../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf)
 
 ::: lob
 **Question:** based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?
@@ -435,46 +526,46 @@ Assuming the population mean is $\mu$, what is the probability that we observe $
 
 ## Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?
 
-
 Two approaches to answer this question:
 
-::: columns
-::: {.column width="49%"}
-::: green2
+:::::::::::: columns
+:::::: {.column width="49%"}
+::::: green2
 ::: green2-ttl
 Confidence interval
 :::
+
 ::: green2-cont
-- Create a __confidence interval (CI)__ for the population mean $\mu$ and determine whether 98.6°F is inside the CI or not.
-- Answering the question: is 98.6°F a plausible value?
+-   Create a **confidence interval (CI)** for the population mean $\mu$ and determine whether 98.6°F is inside the CI or not.
+-   Answering the question: is 98.6°F a plausible value?
 :::
-:::
-:::
+:::::
+::::::
 
 ::: {.column width="2%"}
 :::
-::: {.column width="49%"}
-::: pink2
+
+:::::: {.column width="49%"}
+::::: pink2
 ::: pink2-ttl
 Hypothesis test
 :::
+
 ::: pink2-cont
-- Run a __hypothesis test__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not
-- This does not give us a range of plausible values for the population mean $\mu$.
-- Instead, we calculate a _test statistic_ and _p-value_ 
-- See how likely we are to observe the sample mean $\overline{x}$ or a more extreme sample mean assuming that the population mean $\mu$ is 98.6°F
+-   Run a **hypothesis test** to see if there is evidence that the population mean $\mu$ is *significantly different* from 98.6°F or not
+-   This does not give us a range of plausible values for the population mean $\mu$.
+-   Instead, we calculate a *test statistic* and *p-value*
+-   See how likely we are to observe the sample mean $\overline{x}$ or a more extreme sample mean assuming that the population mean $\mu$ is 98.6°F
 :::
-:::
-:::
-:::
-
-
+:::::
+::::::
+::::::::::::
 
 ## [Approach 1: Create a 95% CI for the population mean body temperature]{style="color:#459B99"}
 
-* Use data based on the results from the 1992 JAMA study
-    * The original dataset used in the JAMA article is not available
-    * However, Allen Shoemaker from Calvin College created a [dataset](http://jse.amstat.org/datasets/normtemp.dat.txt) with the same summary statistics as in the JAMA article, which we will use:
+-   Use data based on the results from the 1992 JAMA study
+    -   The original dataset used in the JAMA article is not available
+    -   However, Allen Shoemaker from Calvin College created a [dataset](http://jse.amstat.org/datasets/normtemp.dat.txt) with the same summary statistics as in the JAMA article, which we will use:
 
 $$\overline{x} = 98.25,~s=0.733,~n=130$$
 
@@ -489,280 +580,241 @@ sd <- 0.733
 (LB <- xbar - moe)
 (UB <- xbar + moe)
 ```
-::: columns
+
+::::: columns
 ::: {.column width="40%"}
-CI for $\mu$:
-\begin{align}
+CI for $\mu$: \begin{align}
 \overline{x} &\pm t^*\cdot\frac{s}{\sqrt{n}}\\
 98.25 &\pm `r round(tstar,3)`\cdot\frac{0.733}{\sqrt{130}}\\
 98.25 &\pm `r round(moe,3)`\\
 (`r round(LB, 3)`&, `r round(UB, 3)`)
 \end{align}
-
 :::
 
 ::: {.column width="60%"}
-
  
 
 Used $t^*$ = `qt(.975, df=129)` = `r round(qt(.975, df=129),3)`
 
  
 
-**Conclusion:  **
-We are 95% confident that the (population) mean body temperature is between `r round(LB, 3)`°F and `r round(UB, 3)`°F, which is discernably different than 98.6°F.
-
+**Conclusion:** We are 95% confident that the (population) mean body temperature is between `r round(LB, 3)`°F and `r round(UB, 3)`°F, which is discernably different than 98.6°F.
 :::
-:::
+:::::
 
+## [Approach 2: Hypothesis Test]{style="color:#BF396F"}
 
+From before:
 
-## [Approach 2: Hypothesis Test]{style="color:#BF396F"} 
+-   Run a **hypothesis test** to see if there is evidence that the population mean $\mu$ is *significantly different* from 98.6°F or not.
+    -   This does not give us a range of plausible values for the population mean $\mu$.
 
-From before: 
+    -   Instead, we calculate a *test statistic* and *p-value*
 
-* Run a __hypothesis test__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not.
-    * This does not give us a range of plausible values for the population mean $\mu$.
-    
-    * Instead, we calculate a _test statistic_ and _p-value_ 
-        * to see how likely we are to observe the sample mean $\overline{x}$
-        * or a more extreme sample mean 
-        * assuming that the population mean $\mu$ is 98.6°F.
+        -   to see how likely we are to observe the sample mean $\overline{x}$
+        -   or a more extreme sample mean
+        -   assuming that the population mean $\mu$ is 98.6°F.
 
-__How do we calculate a _test statistic_ and _p-value_?__
+**How do we calculate a *test statistic* and *p-value*?**
 
-- Use the sampling distribution and central limit theorem!!
-- Two cases
-  - Case 1: suppose we know the population sd $\sigma$
-  - Case 2: we don't know the population sd $\sigma$ 
-
-
-
-## Case 1: suppose we know the population sd $\sigma$
-
-* [How likely we are to observe the sample mean $\overline{x}$ ,]{style="color:green"}
-    * [or a more extreme sample mean, ]{style="color:green"}
-    * [assuming that the population mean $\mu$ is 98.6°F?]{style="color:green"}
-* Use $\overline{x} = 98.25$, $\sigma=0.733$, and $n=130$
-
-```{r}
-#| include: false
-n <- 130
-xbar <- 98.25
-sd <- 0.733
-(tstar <- qt(.975, df=n-1))  # df = n-1
-(se <- sd/sqrt(n))
-mu <- 98.6
-mu + 0.06*(1:3)
-mu - 0.06*(1:3)
-
-(tstat <- (xbar - mu)/se)
-pnorm(tstat)
-
-# right tail cutoff
-(mu-xbar) + mu
-```
-::: columns
-::: {.column width="50%"}
-
-```{r}
-#| fig.width: 10
-#| fig.height: 6
-#| echo: false
-# specify upper and lower bounds of shaded region below
-mu <- 98.6
-std <- se
-
-ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) + 
-  stat_function(fun = dnorm, 
-                args = list(mean = mu, sd = std)) + 
-  # stat_function(fun = dnorm, 
-  #               args = list(mean = mu, sd = std), 
-  #         # specify the upper and lower bounds of the shaded region:
-  #               xlim = c(mu-4*std, xbar),             
-  #               geom = "area", fill = "darkblue") +
-  # the breaks values below might need to be adjusted 
-  # if there are too many values showing on the x-axis
-  # scale_x_continuous(breaks=(mu-4*std):(mu+4*std)) +
-  scale_y_continuous(breaks = NULL) +
-  scale_x_continuous(breaks=c(mu, mu - 0.06*(1:5), mu + 0.06*(1:5))) +
-  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
-  labs(y = "", 
-       x = "sample mean",
-       title = "Sampling distribution of mean body temperatures") 
-```
-
-:::
-::: {.column width="50%"}
-
-:::
-:::
-
-<!-- * Calculate a _test statistic_ and _p-value_  -->
-
-
-## Case 2: we don't know the population sd $\sigma$ 
-
-::: columns
-::: {.column width="40%"}
-
-* This is usually the case in real life
-* We estimate $\sigma$ with the sample standard deviation $s$
-* From last time, we know that in this case we need to use the __t-distribution with d.f. = n-1__, instead of the normal distribution 
-* [Question: How likely we are to observe the sample mean $\overline{x}$ or a more extreme sample mean, assuming that the population mean $\mu$ is 98.6°F?]{style="color:green"}
-* Use $\overline{x} = 98.25$, $s=0.733$, and $n=130$
-
-:::
-
-::: {.column width="60%"}
-```{r}
-#| include: false
-n <- 130
-xbar <- 98.25
-sd <- 0.733
-(tstar <- qt(.975, df=n-1))  # df = n-1
-(se <- sd/sqrt(n))
-mu <- 98.6
-mu + 0.06*(1:3)
-mu - 0.06*(1:3)
-
-(tstat <- (xbar - mu)/se)
-pnorm(tstat)
-pt(tstat, df=n-1)
-2*pt(tstat, df=n-1)
-
-
-```
-
-:::
-:::
-
+-   Use the sampling distribution and central limit theorem!!
+-   Focus on Case 2: we don't know the population sd $\sigma$
 
 ## Steps in a Hypothesis Test
 
-1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
+1. Check the [**assumptions**]{style="color:#3070BF"}
 
-1. Specify the __[null]{style="color:darkorange"}__ ( $H_0$ ) and __[alternative]{style="color:darkorange"}__ ( $H_A$ ) __[hypotheses]{style="color:darkorange"}__
-    1. In symbols
-    1. In words
-    1. Alternative: one- or two-sided?
+1.  Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
 
-1. Calculate the __[test statistic]{style="color:darkorange"}__. 
+2.  Specify the [**null**]{style="color:#3070BF"} ( $H_0$ ) and [**alternative**]{style="color:#3070BF"} ( $H_A$ ) [**hypotheses**]{style="color:#3070BF"}
 
-1. Calculate the __[p-value]{style="color:darkorange"}__ based on the observed test statistic and its sampling distribution
+    1.  In symbols
+    2.  In words
+    3.  Alternative: one- or two-sided?
 
-1. Write a __[conclusion]{style="color:darkorange"}__ to the hypothesis test
-    1. Do we reject or fail to reject $H_0$?
-    1. Write a conclusion in the context of the problem
+3.  Calculate the [**test statistic**]{style="color:#3070BF"}.
 
+4.  Calculate the [**p-value**]{style="color:#3070BF"} based on the observed test statistic and its sampling distribution
 
-## Step 2: Null & Alternative Hypotheses (1/2)
+5.  Write a [**conclusion**]{style="color:#3070BF"} to the hypothesis test
 
-In statistics, a __hypothesis__ is a statement about the value of an __unknown population parameter__.
+    1.  Do we reject or fail to reject $H_0$?
+    2.  Write a conclusion in the context of the problem
 
+## Step 1: Check the assumptions
 
-A __[hypothesis test]{style="color:darkorange"}__ consists of a test between two competing hypotheses: 
+- The assumptions to run a hypothesis test on a sample are:
 
-1. a __[null]{style="color:darkorange"}__ hypothesis $H_0$ (pronounced “H-naught”) vs. 
-1. an __[alternative]{style="color:darkorange"}__ hypothesis $H_A$ (also denoted $H_1$)
+    -   **Independent observations**: the observations were collected independently.
+    -   **Approximately normal sample or big n**: the distribution of the sample should be approximately normal, *or* the sample size should be at least 30
 
-Example of hypotheses in words: 
+ 
+
+- These are the criteria for the Central Limit Theorem in Lesson 09: Variability in estimates
+
+ 
+
+- In our example, we would check the assumptions with a statement:
+
+  - The individual observations are independent and the number of individuals in our sample is 130. Thus, we can use CLT to approximate the sampling distribution.
+
+## Step 2: Set the level of significance $\alpha$
+
+- It is important to specify how rare or unlikely an event must be in order to represent sufficient
+evidence against the null hypothesis. 
+
+- When testing a statistical hypothesis, we specify a significance level, $\alpha$
+  - Typically choose $\alpha = 0.05$
+- An $\alpha$ level of 0.05 implies that an event occurring with probability lower than 5% will be considered sufficient evidence against the null hypothesis
+- This is parallel to our confidence interval
+  - $\alpha$ is the probability of rejecting the null hypothesis when it is true (it's a measure of potential error)
+  - A ($1-\alpha$)% confidence interval will have about $\alpha$% confidence intervals that do not cover $\mu$ even though they come from the distribution with mean $\mu$
+  
+## Step 2: Significance Level $\alpha$
+
+-   **Before doing a hypothesis test**, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
+-   We call this the [**significance level**]{style="color:#3070BF"}, denoted by the Greek symbol [alpha ( $\alpha$ )]{style="color:#3070BF"}
+-   [Typical $\alpha$]{style="color:darkblue"} values are
+    -   0.05 - *most common by far!!*
+    -   0.01 and 0.1
+-   Decision rule:
+    -   When [$p$-value \< $\alpha$]{style="color:green"}, we "[**reject**]{style="color:green"} the null hypothesis [$H_0$]{style="color:green"}."
+    -   When [$p$-value $\geq \alpha$]{style="color:purple"}, we "[**fail to reject**]{style="color:purple"} the null hypothesis [$H_0$]{style="color:purple"}."
+
+::: callout-important
+-   "Failing to reject" $H_0$ is **NOT** the same as "accepting" $H_0$!
+-   By failing to reject $H_0$ we are just saying that we don't have sufficient evidence to support the alternative $H_A$.
+-   *This does not imply that* $H_0$ is true!!
+:::
+
+## Step 3: Null & Alternative Hypotheses (1/2)
+
+In statistics, a **hypothesis** is a statement about the value of an **unknown population parameter**.
+
+A [**hypothesis test**]{style="color:#3070BF"} consists of a test between two competing hypotheses:
+
+1.  a [**null**]{style="color:#3070BF"} hypothesis $H_0$ (pronounced “H-naught”) vs.
+2.  an [**alternative**]{style="color:#3070BF"} hypothesis $H_A$ (also denoted $H_1$)
+
+Example of hypotheses in words:
 
 \begin{aligned}
 H_0 &: \text{The population mean body temperature is 98.6°F}\\
 \text{vs. } H_A &: \text{The population mean body temperature is not 98.6°F}
 \end{aligned}
 
-1. $H_0$ is a claim that there is “no effect” or “no difference of interest.”
-1. $H_A$ is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis $H_0$
+1.  $H_0$ is a claim that there is “no effect” or “no difference of interest.”
+2.  $H_A$ is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis $H_0$
 
-## Step 2: Null & Alternative Hypotheses (2/2)
+## Step 3: Null & Alternative Hypotheses (2/2)
 
-__[Notation for hypotheses:]{style="color:green"}__
-
+::: columns
+::: column
+::: blue
+::: blue-ttl
+Notation for hypotheses
+:::
+::: blue-cont
 \begin{aligned}
 H_0 &: \mu = \mu_0\\
 \text{vs. } H_A&: \mu \neq, <, \textrm{or}, > \mu_0
 \end{aligned}
-
-We call $\mu_0$ the *null value*
-
-::: columns
-::: {.column width="40%"}
-$H_A: \mu \neq \mu_0$
-
-::: {style="font-size: 90%;"}
-* not choosing a priori whether we believe the population mean is greater or less than the null value $\mu_0$
-:::
-:::
-
-::: {.column width="30%"}
-$H_A: \mu < \mu_0$
-
-::: {style="font-size: 90%;"}
-* believe the population mean is **less** than the null value $\mu_0$
-:::
-:::
-
-::: {.column width="30%"}
-$H_A: \mu > \mu_0$
-
-::: {style="font-size: 90%;"}
-* believe the population mean is **greater** than the null value $\mu_0$
 :::
 :::
 :::
-
-* $H_A: \mu \neq \mu_0$ is the most common option, since it's the most conservative
-
-Example: 
-
+::: column
+::: pink
+::: pink-ttl
+Hypotheses test for example
+:::
+::: pink-cont
 \begin{aligned}
 H_0 &: \mu = 98.6\\
 \text{vs. } H_A&: \mu \neq 98.6
 \end{aligned}
+:::
+:::
+:::
+:::
+We call $\mu_0$ the *null value* (hypothesized population mean from $H_0$)
+
+::::::::: columns
+:::: {.column width="32%"}
+$H_A: \mu \neq \mu_0$
+
+-   not choosing a priori whether we believe the population mean is greater or less than the null value $\mu_0$
+::::
+
+:::: {.column width="2%"}
+::::
+
+:::: {.column width="32%"}
+$H_A: \mu < \mu_0$
+
+-   believe the population mean is **less** than the null value $\mu_0$
+::::
+
+:::: {.column width="2%"}
+::::
+
+:::: {.column width="32%"}
+$H_A: \mu > \mu_0$
+
+-   believe the population mean is **greater** than the null value $\mu_0$
+
+::::
+:::::::::
+
+-   $H_A: \mu \neq \mu_0$ is the most common option, since it's the most conservative
 
 
-## Step 3: [Test statistic]{style="color:darkorange"} (& its distribution)
-::: columns
+## Step 4: [Test statistic]{style="color:#3070BF"} (& its distribution)
+
+::::: columns
 ::: {.column width="50%"}
-__[Case 1: know population sd $\sigma$]{style="color:purple"}__
+::: blue2
+::: blue2-ttl
+Case 1: We know the population standard deviation
+:::
+::: blue2-cont
 
-$$
-\text{test statistic} = z_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
-$$
+- We use a test statistic from a Normal distribution: 
+$$z_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}$$
 
-* Statistical theory tells us that [$z_{\overline{x}}$]{style="color:purple"} follows a [__Standard Normal distribution__ $N(0,1)$]{style="color:purple"}
+- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ and $\sigma$ is the population standard deviation
+
+- Statistical theory tells us that [$z_{\overline{x}}$]{style="color:#3070BF"} follows a [**Standard Normal distribution** $N(0,1)$]{style="color:#3070BF"}
+:::
+:::
 :::
 
 ::: {.column width="50%"}
+::: red
+::: red-ttl
+Case 2: We **do not** know the population sd
+:::
+::: red-cont
+- We use test statistic from Student's t-distribution: 
+$$t_{\overline{x}} = \dfrac{\overline{x} - \mu}{SE}$$
 
-__[Case 2: don't know population sd $\sigma$]{style="color:green"}__
+- with $\text{SE} = \frac{s}{\sqrt{n}}$ and $\sigma$ is the sample standard deviation
 
-$$
-\text{test statistic} = t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
-$$
-
-* Statistical theory tells us that [$t_{\overline{x}}$]{style="color:green"} follows a [__Student's t distribution__ with degrees of freedom (df) = $n-1$]{style="color:green"}
-
+-   Statistical theory tells us that [$t_{\overline{x}}$]{style="color:#C83532"} follows a [**Student's t distribution** with degrees of freedom (df) = $n-1$]{style="color:#C83532"}
 :::
 :::
+:::
+:::::
 
-::: {style="font-size: 90%;"}
-$\overline{x}$ = sample mean, $\mu_0$ = hypothesized population mean from $H_0$,  
-$\sigma$ = _population_ standard deviation, $s$ = _sample_ standard deviation,  
+
+$\overline{x}$ = sample mean, $\mu_0$ = hypothesized population mean from $H_0$,\
+$\sigma$ = *population* standard deviation, $s$ = *sample* standard deviation,\
 $n$ = sample size
-:::
-
-__[Assumptions]{style="color:darkorange"}__: same as CLT
-
-* __Independent observations__: the observations were collected independently.
-* __Approximately normal sample or big n__: the distribution of the sample should be approximately normal, _or_ the sample size should be at least 30.
 
 
-## Step 3: Test statistic calculation
 
-Recall that $\overline{x} = 98.25$, $s=0.733$, and $n=130.$
+## Step 4: Test statistic calculation
+
+From our example: Recall that $\overline{x} = 98.25$, $s=0.733$, and $n=130$
 
 The test statistic is:
 
@@ -770,13 +822,14 @@ $$t_{\overline{x}} = \frac{\overline{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 = \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
 = -5.45$$
 
-* Statistical theory tells us that $t_{\overline{x}}$ follows a __Student's t-distribution__ with $d.f. = n-1 = 129$.
+-   Statistical theory tells us that $t_{\overline{x}}$ follows a **Student's t-distribution** with $df = n-1 = 129$
 
-::: columns
-::: {.column width="75%"}
+
+
 ```{r}
 #| fig.height: 4
 #| fig.width: 10
+#| fig-align: center
 #| echo: false
 ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
   stat_function(fun = dt, args = list(df = 129)) + 
@@ -787,35 +840,35 @@ ggplot(data = data.frame(x = c(-6, 6)), aes(x)) +
              color = "red")
 ```
 
-:::
-::: {.column width="25%"}
-__Assumptions met?__
-:::
-:::
 
-## Step 4: p-value
+## Step 5: p-value
 
-The __[p-value]{style="color:darkorange"}__ is the [__probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true.]{style="color:darkblue"} 
+The [**p-value**]{style="color:#3070BF"} is the [**probability** of obtaining a test statistic *just as extreme or more extreme* than the observed test statistic assuming the null hypothesis $H_0$ is true.]{style="color:#3070BF"}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-* The $p$-value is a quantification of "surprise"
-    * Assuming $H_0$ is true, _how surprised are we with the observed results_?
-    * _Ex_: assuming that the true mean body temperature is 98.6°F, how surprised are we to get a sample mean of 98.25°F  (or more extreme)?
+
+ 
+
+-   The $p$-value is a quantification of "surprise"
+    -   Assuming $H_0$ is true, *how surprised are we with the observed results*?
+    -   *Ex*: assuming that the true mean body temperature is 98.6°F, how surprised are we to get a sample mean of 98.25°F (or more extreme)?
+  
+ 
     
-* If the $p$-value is "small," it means there's a small probability that we would get the observed statistic (or more extreme) when $H_0$ is true.
+-   If the $p$-value is "small," it means there's a small probability that we would get the observed statistic (or more extreme) when $H_0$ is true.
 :::
 
 ::: {.column width="50%"}
 ```{r}
 #| fig.width: 10
-#| fig.height: 6
+#| fig.height: 7
 #| echo: false
 # specify upper and lower bounds of shaded region below
 mu <- 98.6
 std <- se
 
-ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) + 
+ggplot(data.frame(x = c(mu-5*std, mu+5*std)), aes(x = x)) + 
   stat_function(fun = dnorm, 
                 args = list(mean = mu, sd = std)) + 
   # stat_function(fun = dnorm, 
@@ -828,31 +881,30 @@ ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) +
   # scale_x_continuous(breaks=(mu-4*std):(mu+4*std)) +
   scale_y_continuous(breaks = NULL) +
   scale_x_continuous(breaks=c(mu, mu - 0.06*(1:5), mu + 0.06*(1:5))) +
-  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
+  theme(axis.text.x=element_text(angle = -30, hjust = 0, size=22)) +
   labs(y = "", 
-       x = "sample mean",
-       title = "Sampling distribution of mean body temperatures") 
+       x = "Sample means",
+       title = "Sampling distribution of mean body temperatures")
 ```
 :::
-:::
+:::::
 
+## Step 5: p-value calculation
 
+Calculate the *p*-value using the **Student's t-distribution** with $df = n-1 = 130-1=129$:
 
-## Step 4: p-value calculation 
-
-Calculate the _p_-value using the __Student's t-distribution__ with $d.f. = n-1 = 129$:
-
-$$p-value=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}$$
+$$\text{p-value}=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}$$
 
 ```{r}
 # use pt() instead of pnorm()
 # need to specify df
 2*pt(-5.4548, df = 130-1, lower.tail = TRUE)
-```  
+```
 
 ```{r}
 #| fig.height: 4
 #| fig.width: 10
+#| fig-align: center
 #| echo: false
 ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
   stat_function(fun = dt, args = list(df = 129)) + 
@@ -863,113 +915,107 @@ ggplot(data = data.frame(x = c(-6, 6)), aes(x)) +
              color = "red")
 ```
 
-## Step 4: p-value estimation using $t$-table
+## Step 6: Conclusion to hypothesis test
 
-* $t$-table only gives us *bounds* on the p-value
-* Recall from using the $t$-table for CIs, that the table gives us the cutoff values for varying tail probabilities (1-tail & 2-tail)
-* Find the row with the appropriate degrees of freedom
-    * Use next smallest df in table if actual df not shown
-    * I.e., for df = 129, use df = 100 in table
-* Figure out where the test statistic's absolute value is in relation to the values in the columns, i.e. between which columns is the test statistic?
-* The header rows for those columns gives the lower & upper bounds for the p-value
-    * Choosing one-tail vs. two-tail test, depends on the alternative hypothesis $H_A$.
-    * For a 2-sided test ( $H_A: \mu \neq \mu_0$ ), use two-tails 
-    * For a 1-sided test ( $H_A: \mu < \textrm{or} > \mu_0$ ), use one-tail 
+\begin{aligned}
+H_0 &: \mu = \mu_0\\
+\text{vs. } H_A&: \mu \neq \mu_0
+\end{aligned}
 
+-   Need to compare p-value to our selected $\alpha = 0.05$
+-   Do we reject or fail to reject $H_0$? 
 
+\
 
-## Step 1: Significance Level $\alpha$
+::: columns
+::: column
 
-* __Before doing a hypothesis test__, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
-* We call this the __[significance level]{style="color:darkorange"}__, denoted by the Greek symbol [alpha ( $\alpha$ )]{style="color:darkorange"}
-* [Typical $\alpha$]{style="color:darkblue"} values are 
-    * 0.05 - _most common by far!!_
-    * 0.01 and 0.1
-* Decision rule:    
-    * When [$p$-value < $\alpha$]{style="color:green"}, we "__[reject]{style="color:green"}__ the null hypothesis [$H_0$]{style="color:green"}."
-    * When [$p$-value $\geq \alpha$]{style="color:purple"}, we "__[fail to reject]{style="color:purple"}__ the null hypothesis [$H_0$]{style="color:purple"}."
-
-:::{.callout-important}
-* "Failing to reject" $H_0$ is __NOT__ the same as "accepting" $H_0$! 
-* By failing to reject $H_0$ we are just saying that we don't have sufficient evidence to support the alternative $H_A$.
-* _This does not imply that $H_0$ is true!!_
+::: pink2
+::: pink2-ttl
+If $\text{p-value} < \alpha$, reject the null hypothesis
+:::
+::: pink2-cont
+- There is sufficient evidence that the (population) mean body temperature is discernibly different from $\mu_0$ ( $p$-value = ___)
+- The average (insert measure) in the sample was $\overline{x}$ (95% CI ___, ___), which is discernibly different from $\mu_0$ ( $p$-value = ____).
+:::
 :::
 
+:::
+::: column
 
+::: green2
+::: green2-ttl
+If $\text{p-value} \geq \alpha$, fail to reject the null hypothesis
+:::
+::: green2-cont
+- There is insufficient evidence that the (population) mean body temperature is discernibly different from $\mu_0$ ( $p$-value = ___)
+- The average (insert measure) in the sample was $\overline{x}$ (95% CI ___, ___), which is not discernibly different from $\mu_0$ ( $p$-value = ____).
+:::
+:::
 
+:::
+:::
 
-## Step 5: Conclusion to hypothesis test
+## Step 6: Conclusion to hypothesis test
 
 \begin{aligned}
 H_0 &: \mu = 98.6\\
 \text{vs. } H_A&: \mu \neq 98.6
 \end{aligned}
 
-* Recall the $p$-value = $2.410889 \times 10^{-07}$ 
-* Use $\alpha$ = 0.05.
-* Do we reject or fail to reject $H_0$?
+-   Recall the $p$-value = $2.410889 \times 10^{-07}$
+-   Need to compare back to our selected $\alpha = 0.05$
 
-__Conclusion statement__:
+-   Do we reject or fail to reject $H_0$?
 
-* Basic: ("stats class" conclusion)
-    * There is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( $p$-value < 0.001).
+**Conclusion statement**:
 
-* Better: ("manuscript style" conclusion)
-    * The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value < 0.001).
-
+-   Basic: ("stats class" conclusion)
+    -   There is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( $p$-value \< 0.001).
+-   Better: ("manuscript style" conclusion)
+    -   The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value \< 0.001).
 
 ## Confidence Intervals vs. Hypothesis Testing
 
-* See also V&H Section 4.3.3
+-   See also V&H Section 4.3.3
 
 # Running a t-test in R
 
-* Working directory
-* Load a dataset - need to specify location of dataset
-* R projects
-* Run a t-test in R
-* `tidy()` the test output using `broom` package
+-   Replace hand calculation in step 4 and 5 with R!!
+-   Run a t-test in R
+-   `tidy()` the test output using `broom` package
 
 ## Load the dataset
 
-* The data are in a csv file called `BodyTemperatures.csv`
-* You need to tell R where the dataset is located!
-* I recommend saving all datasets in a folder called data. 
-    * The code I will be providing you will be set up this way.
-
-* To make it easier to specify where the dataset is located, I recommend using the `here()` function from the `here` package: `here::here()`.
+-   The data are in a csv file called `BodyTemperatures.csv`
 
 ```{r}
-# read_csv() is a function from the readr package that is a part of the tidyverse
 library(here)   # first install this package
 
-BodyTemps <- read_csv(here::here("data", "BodyTemperatures.csv"))
+BodyTemps <- read.csv(here::here("data", "BodyTemperatures.csv"))
 #                     location: look in "data" folder
 #                               for the file "BodyTemperatures.csv"
 
 glimpse(BodyTemps)
 ```
 
-## `t.test`: base R's function for testing one mean 
+## `t.test`: base R's function for testing one mean
 
-* Use the body temperature example with $H_A: \mu \neq 98.6$
-* We called the dataset `BodyTemps` when we loaded it
+-   Use the body temperature example with $H_A: \mu \neq 98.6$
+-   We called the dataset `BodyTemps` when we loaded it
 
 ```{r}
-glimpse(BodyTemps)
-
 (temps_ttest <- t.test(x = BodyTemps$Temperature,
-       # alternative = "two.sided",  # default
+       alternative = "two.sided", # default setting
        mu = 98.6))
 ```
 
 Note that the test output also gives the 95% CI using the t-distribution.
 
-
 ## `tidy()` the `t.test` output
 
-* Use the `tidy()` function from the `broom` package for briefer output in table format that's stored as a `tibble`
-* Combined with the `gt()` function from the `gt` package, we get a nice table 
+-   Use the `tidy()` function from the `broom` package for briefer output in table format that's stored as a `tibble`
+-   Combined with the `gt()` function from the `gt` package, we get a nice table
 
 ```{r}
 tidy(temps_ttest) %>% 
@@ -977,46 +1023,76 @@ tidy(temps_ttest) %>%
   tab_options(table.font.size = 40) # use a different size in your HW
 ```
 
-* Since the `tidy()` output is a tibble, we can easily `pull()` specific values from it:
+-   Since the `tidy()` output is a tibble, we can easily `pull()` specific values from it:
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-
 Using base R's `$`
+
 ```{r}
 tidy(temps_ttest)$p.value  
 ```
 
 Advantage: quick and easy
 :::
+:::::
+
+## This time: Hypothesis test ($z$ vs. $t$)
+
+- We have two different distributions from which we run a hypothesis test
+
+::::: columns
+::: {.column width="50%"}
+::: blue2
+::: blue2-ttl
+Case 1: We know the population standard deviation
+:::
+::: blue2-cont
+
+- We use a test statistic from a Normal distribution: 
+$$z_{\overline{X}} = \dfrac{\overline{x} - \mu}{SE}$$
+
+- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ and $\sigma$ is the population standard deviation
+
+ 
+
+- We calculate $P(Z \geq |{z_{\overline{X}}}|)$ = `pnorm($z_{\overline{X}}$)`
+- OR: We calculate $P(X \geq |\overline{x}|)$ = `pnorm($\overline{x}$, $\mu$, $SE$)`
+
+:::
+:::
+:::
 
 ::: {.column width="50%"}
-Or the `tidyverse` way: using `pull()` from `dplyr` package 
-```{r}
-tidy(temps_ttest) %>% pull(p.value)
-```
+::: red
+::: red-ttl
+Case 2: We **do not** know the population sd
+:::
+::: red-cont
+- We use a test statistic from a Student's t-distribution: 
+$$t_{\overline{X}} = \dfrac{\overline{x} - \mu}{SE}$$
 
-Advantage: can use together with piping (`%>%`) other functions
+- with $\text{SE} = \frac{s}{\sqrt{n}}$ and $\sigma$ is the sample standard deviation
+
+ 
+
+-   This is usually the case in real life
+
 :::
 :::
-
-## Answering a research question
-
-Research question is a generic form: Is there evidence to support that the population mean is different than $\mu$?
+:::
+:::::
 
 
 
-## What's next? 
+## What's next?
 
 CI's and hypothesis testing for different scenarios:
 
-
-| Day | Section |  Population parameter   |       Symbol        |       Point estimate       |            Symbol             |
-|:----:|:------:|:----------:|:--------:|:----------:|:-------:|
-| 10  |   5.1   |        Pop mean         |        $\mu$        |        Sample mean         |           $\overline{x}$           |
-| 10  |   5.2   | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff |         $\overline{x}_{d}$         |
-| 11  |   5.3   |    Diff in pop means    |    $\mu_1-\mu_2$    |    Diff in sample means    |    $\overline{x}_1 - \overline{x}_2$    |
-| 12  |   8.1   |     Pop proportion      |         $p$         |        Sample prop         |         $\widehat{p}$         |
-| 12  |   8.2   |   Diff in pop prop's    |      $p_1-p_2$      |   Diff in sample prop's    | $\widehat{p}_1-\widehat{p}_2$ |
-
-
+| Lesson | Section | Population parameter | Symbol (pop) | Point estimate | Symbol (sample) |
+|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| 11 | 5.1 | Pop mean | $\mu$ | Sample mean | $\overline{x}$ |
+| 12 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\overline{x}_{d}$ |
+| 13 | 5.3 | Diff in pop means | $\mu_1-\mu_2$ | Diff in sample means | $\overline{x}_1 - \overline{x}_2$ |
+| 15 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$ |
+| 15 | 8.2 | Diff in pop prop's | $p_1-p_2$ | Diff in sample prop's | $\widehat{p}_1-\widehat{p}_2$ |
