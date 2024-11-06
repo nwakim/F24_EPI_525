@@ -1810,14 +1810,14 @@
     "href": "homework/HW_06.html",
     "title": "Homework 6",
     "section": "",
-    "text": "Due 11/16/24\nDownload the .qmd file for this assignment from Github."
+    "text": "Please turn in this homework on Sakai. This homework must be submitted using a Quarto document. Please keep it rendered as an html! I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!\nYou can download the .qmd file for this assignment from Github\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.\n\n\n\n\n\n\n\n\nHypothesis test & CI instructions\n\n\n\n\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test (or CI) conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed."
   },
   {
     "objectID": "homework/HW_06.html#directions",
     "href": "homework/HW_06.html#directions",
     "title": "Homework 6",
-    "section": "Directions",
-    "text": "Directions\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\nR & LaTeX code\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.\n\n\n\n\nHypothesis test & CI instructions\n\n\n\n\n\n\nImportant\n\n\n\n\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test (or CI) conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed."
+    "section": "",
+    "text": "Please turn in this homework on Sakai. This homework must be submitted using a Quarto document. Please keep it rendered as an html! I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!\nYou can download the .qmd file for this assignment from Github\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.\n\n\n\n\n\n\n\n\nHypothesis test & CI instructions\n\n\n\n\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test (or CI) conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed."
   },
   {
     "objectID": "homework/HW_06.html#egg-volume",

@@ -1,7 +1,8 @@
 ---
 title: "Homework 6"
+subtitle: "Due 11/17/24"
 author: "Your name here - update this!!!!"
-date: "Due 11/16/24"
+date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
@@ -11,7 +12,7 @@ format:
     number-sections: true
     number-depth: 3
     theme: lumen
-    self-contained: true
+    embed-resources: true
     html-math-method: mathjax
 ---
 
@@ -21,36 +22,23 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-**Due 11/16/24**
-
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_06.qmd).
-
-
 ## Directions {.unnumbered}
 
-* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
-* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) This homework must be submitted using a Quarto document. **Please keep it rendered as an html!** I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!
 
-
-### R & LaTeX code {.unnumbered}
-
-* See the .qmd files with the code from class notes for LaTeX and R code.
-* The LaTeX code will make it easier to show your work in computations.
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_06.qmd)
 
 :::{.callout-tip}
 It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
 :::
 
-
-### Hypothesis test & CI instructions{.unnumbered}
-
 :::{.callout-important}
+
+## Hypothesis test & CI instructions
 
 * For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
 
 * Do not forget to include a discussion on whether you think the test (or CI) conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed.
-
 :::
 
 
