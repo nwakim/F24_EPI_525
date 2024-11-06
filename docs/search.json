@@ -19773,5 +19773,68 @@
     "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Poll Everywhere Question 3",
     "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_key_info.html",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Calendly is up!\nHW 6 is up\n\nTime today to post the answers as well\n\nBIPOC STEAM may stop by today\n\nhttps://www.pdxstem.org/bipoc-steam-ecosystem\nCollaborating with Lisa Marriott (and me!!) on her Biomedical Workforce development project\n\nhttps://www.marriottlab.org/projects#h.babnuz70wlkl"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_key_info.html#announcements",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "Calendly is up!\nHW 6 is up\n\nTime today to post the answers as well\n\nBIPOC STEAM may stop by today\n\nhttps://www.pdxstem.org/bipoc-steam-ecosystem\nCollaborating with Lisa Marriott (and me!!) on her Biomedical Workforce development project\n\nhttps://www.marriottlab.org/projects#h.babnuz70wlkl"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_key_info.html#key-dates",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nFriday: HW 5 due at 11pm\nSunday: HW 4 solutions due at 11pm\nWeek of 11/11: HW 3 presentations!\n\nMake a meeting with me\n11/12: recordings due if you are making that"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "I’m sorry for those online (and those watching the recording) who can’t hear me for part of the Central Limit Theorem!\nThere’s a pretty good StatQuest video on the Central Limit Theorem!!\n\n\nStart the above StatQuest video here for an answer!"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#central-limit-theorem",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#central-limit-theorem",
+    "title": "Muddy Points",
+    "section": "",
+    "text": "I’m sorry for those online (and those watching the recording) who can’t hear me for part of the Central Limit Theorem!\nThere’s a pretty good StatQuest video on the Central Limit Theorem!!\n\n\nStart the above StatQuest video here for an answer!"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#why-is-clt-for-n-30-and-why-does-the-standard-error-decrease-as-n-increases",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#why-is-clt-for-n-30-and-why-does-the-standard-error-decrease-as-n-increases",
+    "title": "Muddy Points",
+    "section": "2. Why is CLT for n > 30? And why does the standard error decrease as n increases?",
+    "text": "2. Why is CLT for n &gt; 30? And why does the standard error decrease as n increases?\nOkay! We can start by simulating samples with different n’s. In this case, we need to use a different problem set up than heights. I am going to do coin flips with a 0.3 probability of heads. I am going to look at the proportion of heads I flip.\nFor a given \\(n\\), say \\(n=10\\), I have taken 1,000 samples with 10 coin flips in each sample. I take the mean proportion of heads from the 10 flips for each sample. So then each sample has a sample mean to represent its respective 10 flips. Thus, I have 1,000 sample means for \\(n=10\\).\nI do this process for different values of n. So for \\(n=40\\), I have done the same thing: I have taken 1,000 samples with 40 coin flips in each sample. I take the mean proportion of heads from the 40 flips for each sample. So then each sample has a sample mean to represent its respective 40 flips. Thus, I have 1,000 sample means for \\(n=40\\).\nBelow I have plotted the 1,000 sample means for different values of n: 10, 20, 30, 40, 50, and 100.\n\n\nIf you would like to see how I simulated this and plotted it\nlibrary(tidyverse)\nlibrary(ggplot2)\nset.seed(48151623)\n\nmeans=NULL;sds=NULL; n=NULL\nfor (j in c(10, 20, 30, 40, 50, 100)){\n  for(i in 1:1000){\n  heads = rbinom(n = j, size = 1, prob = 0.4)\n  n = c(n, j)\n  means = c(means, mean(heads))\n  sds = c(sds, sd(heads))\n}\n}\n\nmeans_all = as.data.frame(cbind(n, 1:1000, means, sds)) %&gt;%\n  mutate(mu = 0.5, SE = sqrt(0.5*0.5)/sqrt(n))\nn_labels = c(`10` = \"n = 10\", \n             `20` = \"n = 20\", \n             `30` = \"n = 30\", \n             `40` = \"n = 40\", \n             `50` = \"n = 50\", \n             `100` = \"n = 100\")\n\nsamp_dist_plots = means_all %&gt;% \n  ggplot(aes(x=means)) + \n  geom_histogram(color=\"black\", fill=\"grey\", bins=60) +\n  labs(x=\"Mean height from samples (inches)\", y=\"Frequency\", \n       title=\"Sampling distributions from samples with different values of n\") +\n  scale_x_continuous(breaks = seq(0, 1, by = 0.05), \n                     limits = c(0, 1)) +\n  facet_wrap( ~ n, ncol=2, labeller = as_labeller(n_labels)) +\n  theme_classic() +\n  theme(text = element_text(size = 12))\n\nsamp_dist_plots\n\n\n\n\n\n\n\n\n\nWe are left with the questions:\n\nAre all of these approximately normal with a mean of \\(\\mu\\) and a standard error or \\(\\dfrac{\\sigma}{\\sqrt{n}}\\)? (Asking if the CLT applies to all of them)\nWhy is the standard error smaller when n increases?\n\n\n1. Are all of these approximately normal with a mean of \\(\\mu\\) and a standard error or \\(\\dfrac{\\sigma}{\\sqrt{n}}\\)? (Asking if the CLT applies to all of them)\nYou can see that for \\(n=10\\) and \\(n=20\\), the distributions do not look normal. They have a right skewed tail. So the CLT would not work here!\n\n\n2. Why is the standard error smaller when n increases?\nThis is because the sample means become more precise when n increases.\nThe proportion of heads in a sample of 100 flips, can take on values like 34/100 or 32/100. While the proportion for 10 flips can only take 2/10 or 3/10 or 4/10. The more flips, the more precise a proportion we can get."
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#difference-between-standard-deviation-and-standard-error",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#difference-between-standard-deviation-and-standard-error",
+    "title": "Muddy Points",
+    "section": "3. Difference between standard deviation and standard error",
+    "text": "3. Difference between standard deviation and standard error\nStandard deviation is defined generically (and mathematically) for any data. We often refer to the population standard deviation simply as the standard deviation (\\(\\sigma\\)).\nThe standard deviation of a single sample is called \\(s\\)!!\nAnd the standard deviation of the sampling distribution (of sample means) is called the standard error!"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#why-wouldnt-the-10-blue-samples-mean-not-similar-to-the-red-sample",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#why-wouldnt-the-10-blue-samples-mean-not-similar-to-the-red-sample",
+    "title": "Muddy Points",
+    "section": "4. Why wouldn’t the 10 blue sample’s mean not similar to the red sample?",
+    "text": "4. Why wouldn’t the 10 blue sample’s mean not similar to the red sample?\nIt would be similar if it pulled from the same population! But because it is a random sample, we will just get 10 people with their own heights. And the 10 people in the blue group might just have different heights than the 10 people in the red group! Thus, they would have slightly similar, but likely not exactly the same, sample means."
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#central-limit-theorem-vs-sampling-distribution",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01_muddy_points.html#central-limit-theorem-vs-sampling-distribution",
+    "title": "Muddy Points",
+    "section": "5. Central limit theorem vs sampling distribution",
+    "text": "5. Central limit theorem vs sampling distribution\nThe Central Limit Theorem is a theory can we can apply to our sampling distribution! The sampling distribution is how sample means would be distributed if we took many, many samples. The Central Limit Theorem allows us to say that the sampling distribution is approximately normal. By saying it’s approximately normal, we can then use the properties of a normal distribution to do further analysis."
   }
 ]
