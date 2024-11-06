@@ -9895,14 +9895,14 @@
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#tidy-the-t.test-output",
     "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "tidy() the t.test output",
-    "text": "tidy() the t.test output\n\nUse the tidy() function from the broom package for briefer output in table format that’s stored as a tibble\nCombined with the gt() function from the gt package, we get a nice table\n\n\ntidy(temps_ttest) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 40) # use a different size in your HW\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nSince the tidy() output is a tibble, we can easily pull() specific values from it:\n\n\n\nUsing base R’s $\n\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07\n\n\nAdvantage: quick and easy"
+    "text": "tidy() the t.test output\n\nUse the tidy() function from the broom package for briefer output in table format that’s stored as a tibble\nCombined with the gt() function from the gt package, we get a nice table\n\n\ntidy(temps_ttest) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 40) # use a different size in your HW\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nSince the tidy() output is a tibble, we can easily pull() specific values from it:\n\n\n\nUsing base R’s $\n\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#whats-next",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#whats-next",
     "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "What’s next?",
-    "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nLesson\nSection\nPopulation parameter\nSymbol (pop)\nPoint estimate\nSymbol (sample)\n\n\n\n\n11\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\n\n12\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\n\n13\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n\n\n15\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n15\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n\n\n\n\n\nLesson 11 Slides"
+    "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nLesson\nSection\nPopulation parameter\nSymbol (pop)\nPoint estimate\nSymbol (sample)\n\n\n\n\n11\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\n\n12\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\n\n13\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n\n\n15\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n15\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   },
   {
     "objectID": "lessons/10_Confidence_intervals/10_Confidence_intervals.html#last-time---goals-for-today",
@@ -19681,14 +19681,14 @@
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-set-the-level-of-significance-alpha",
     "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 2: Set the level of significance \\(\\alpha\\)",
-    "text": "Step 2: Set the level of significance \\(\\alpha\\)\n\nIt is important to specify how rare or unlikely an event must be in order to represent sufficient evidence against the null hypothesis.\nWhen testing a statistical hypothesis, we specify a significance level, \\(\\alpha\\)\n\nTypically choose \\(\\alpha = 0.05\\)\n\nAn \\(\\alpha\\) level of 0.05 implies that an event occurring with probability lower than 5% will be considered sufficient evidence against the null hypothesis\nThis is parallel to our confidence interval\n\n\\(\\alpha\\) is the probability of rejecting the null hypothesis when it is true (it’s a measure of potential error)\nA (\\(1-\\alpha\\))% confidence interval will have about \\(\\alpha\\)% confidence intervals that do not cover \\(\\mu\\) even though they come from the distribution with mean \\(\\mu\\)"
+    "text": "Step 2: Set the level of significance \\(\\alpha\\)\n\nBefore doing a hypothesis test, we set a cut-off for how small the \\(p\\)-value should be in order to reject \\(H_0\\).\nIt is important to specify how rare or unlikely an event must be in order to represent sufficient evidence against the null hypothesis.\nWe call this the significance level, denoted by the Greek symbol alpha ( \\(\\alpha\\) )\n\nTypically choose \\(\\alpha = 0.05\\)\n\nThis is parallel to our confidence interval\n\n\\(\\alpha\\) is the probability of rejecting the null hypothesis when it is true (it’s a measure of potential error)\nFrom repeated (\\(1-\\alpha\\))% confidence intervals, we will have about \\(\\alpha\\)% intervals that do not cover \\(\\mu\\) even though they come from the distribution with mean \\(\\mu\\)"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-significance-level-alpha",
     "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-2-significance-level-alpha",
     "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 2: Significance Level \\(\\alpha\\)",
-    "text": "Step 2: Significance Level \\(\\alpha\\)\n\nBefore doing a hypothesis test, we set a cut-off for how small the \\(p\\)-value should be in order to reject \\(H_0\\).\nWe call this the significance level, denoted by the Greek symbol alpha ( \\(\\alpha\\) )\nTypical \\(\\alpha\\) values are\n\n0.05 - most common by far!!\n0.01 and 0.1\n\nDecision rule:\n\nWhen \\(p\\)-value &lt; \\(\\alpha\\), we “reject the null hypothesis \\(H_0\\).”\nWhen \\(p\\)-value \\(\\geq \\alpha\\), we “fail to reject the null hypothesis \\(H_0\\).”\n\n\n\n\n\n\n\n\nImportant\n\n\n\n“Failing to reject” \\(H_0\\) is NOT the same as “accepting” \\(H_0\\)!\nBy failing to reject \\(H_0\\) we are just saying that we don’t have sufficient evidence to support the alternative \\(H_A\\).\nThis does not imply that \\(H_0\\) is true!!"
+    "text": "Step 2: Significance Level \\(\\alpha\\)\n\nDecision rule:\n\nWhen \\(p\\)-value &lt; \\(\\alpha\\), we “reject the null hypothesis \\(H_0\\).”\nWhen \\(p\\)-value \\(\\geq \\alpha\\), we “fail to reject the null hypothesis \\(H_0\\).”\n\n\n\n\n\n\n\n\nImportant\n\n\n\n“Failing to reject” \\(H_0\\) is NOT the same as “accepting” \\(H_0\\)!\nBy failing to reject \\(H_0\\) we are just saying that we don’t have sufficient evidence to support the alternative \\(H_A\\).\nThis does not imply that \\(H_0\\) is true!!"
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#step-3-null-alternative-hypotheses-12",
@@ -19745,5 +19745,33 @@
     "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
     "section": "Step 6: Conclusion to hypothesis test",
     "text": "Step 6: Conclusion to hypothesis test\n\\[\\begin{aligned}\nH_0 &: \\mu = 98.6\\\\\n\\text{vs. } H_A&: \\mu \\neq 98.6\n\\end{aligned}\\]\n\nRecall the \\(p\\)-value = \\(2.410889 \\times 10^{-07}\\)\nNeed to compare back to our selected \\(\\alpha = 0.05\\)\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nBasic: (“stats class” conclusion)\n\nThere is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( \\(p\\)-value &lt; 0.001).\n\nBetter: (“manuscript style” conclusion)\n\nThe average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( \\(p\\)-value &lt; 0.001)."
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#reference-what-does-it-all-look-like-together",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#reference-what-does-it-all-look-like-together",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
+    "section": "Reference: what does it all look like together?",
+    "text": "Reference: what does it all look like together?\n\n\nExample of hypothesis test based on the 1992 JAMA data\n\n\nIs there evidence to support that the population mean body temperature is different from 98.6°F?\n\n\n\n\n\nAssumptions: The individual observations are independent and the number of individuals in our sample is 130. Thus, we can use CLT to approximate the sampling distribution.\n\n4-5.\n\n\nSet \\(\\alpha = 0.05\\)\n\n\n\nHypothesis:\n\\[\\begin{aligned}\nH_0 &: \\mu = 98.6\\\\\n\\text{vs. } H_A&: \\mu \\neq 98.6\n\\end{aligned}\\]\n\n\n\n\ntemps_ttest &lt;- t.test(x = BodyTemps$Temperature, mu = 98.6)\ntidy(temps_ttest) %&gt;% gt() %&gt;% tab_options(table.font.size = 36)\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nConclusion: We reject the null hypothesis. The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( \\(p\\)-value &lt; 0.001).\n\n\n\nLesson 11 Slides"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#poll-everywhere-question-1",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#poll-everywhere-question-1",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#poll-everywhere-question-2",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#poll-everywhere-question-2",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#poll-everywhere-question-3",
+    "href": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#poll-everywhere-question-3",
+    "title": "Lesson 11: Hypothesis Testing 1: Single-sample mean",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
   }
 ]

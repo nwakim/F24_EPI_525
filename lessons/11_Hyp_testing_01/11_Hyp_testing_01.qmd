@@ -59,7 +59,9 @@ set.seed(456)
 
 # Learning Objectives
 
-1.  
+1.  Understand the relationship between point estimates, confidence intervals, and hypothesis tests.
+2.  Determine if s single-sample mean is different than a population mean using a hypothesis test.
+3.  Use R to calculate the test statistic, p-value, and confidence interval for a single-sample mean.
 
 ```{css, echo=FALSE}
 .reveal code {
@@ -67,32 +69,14 @@ set.seed(456)
 }
 ```
 
-## Goals for today: Part 1
+# Learning Objectives
 
-### (4.3, 5.1) Hypothesis testing for mean from one sample
-
--   Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
-
-::::: columns
-::: {.column width="50%"}
--   [Steps of a hypothesis test:]{style="color:purple"}
-    1.  level of significance
-    2.  null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
-    3.  test statistic
-    4.  p-value
-    5.  conclusion
+::: lob
+1.  Understand the relationship between point estimates, confidence intervals, and hypothesis tests.
 :::
 
-::: {.column width="50%"}
--   [Run a hypothesis test in R]{style="color:green"}
-    -   Load a dataset - need to specify location of dataset
-    -   R projects
-    -   Run a t-test in R
-    -   `tidy()` the test output using `broom` package
-:::
-:::::
-
-### (4.3.3) Confidence intervals (CIs) vs. hypothesis tests
+2.  Determine if s single-sample mean is different than a population mean using a hypothesis test.
+3.  Use R to calculate the test statistic, p-value, and confidence interval for a single-sample mean.
 
 ## Answering a research question
 
@@ -465,6 +449,10 @@ $$\overline{x}\ \pm\ t^*\times \text{SE}$$
 :::
 :::::
 
+## Poll Everywhere Question 1
+
+
+
 ## This time: Hypothesis test ($z$ vs. $t$)
 
 - We have two different distributions from which we run a hypothesis test
@@ -620,23 +608,33 @@ From before:
 -   Use the sampling distribution and central limit theorem!!
 -   Focus on Case 2: we don't know the population sd $\sigma$
 
+# Learning Objectives
+
+1.  Understand the relationship between point estimates, confidence intervals, and hypothesis tests.
+
+::: lob
+2.  Determine if s single-sample mean is different than a population mean using a hypothesis test.
+:::
+
+3.  Use R to calculate the test statistic, p-value, and confidence interval for a single-sample mean.
+
 ## Steps in a Hypothesis Test
 
 1. Check the [**assumptions**]{style="color:#3070BF"}
 
-1.  Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
+2.  Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
 
-2.  Specify the [**null**]{style="color:#3070BF"} ( $H_0$ ) and [**alternative**]{style="color:#3070BF"} ( $H_A$ ) [**hypotheses**]{style="color:#3070BF"}
+3.  Specify the [**null**]{style="color:#3070BF"} ( $H_0$ ) and [**alternative**]{style="color:#3070BF"} ( $H_A$ ) [**hypotheses**]{style="color:#3070BF"}
 
     1.  In symbols
     2.  In words
     3.  Alternative: one- or two-sided?
 
-3.  Calculate the [**test statistic**]{style="color:#3070BF"}.
+4.  Calculate the [**test statistic**]{style="color:#3070BF"}.
 
-4.  Calculate the [**p-value**]{style="color:#3070BF"} based on the observed test statistic and its sampling distribution
+5.  Calculate the [**p-value**]{style="color:#3070BF"} based on the observed test statistic and its sampling distribution
 
-5.  Write a [**conclusion**]{style="color:#3070BF"} to the hypothesis test
+6.  Write a [**conclusion**]{style="color:#3070BF"} to the hypothesis test
 
     1.  Do we reject or fail to reject $H_0$?
     2.  Write a conclusion in the context of the problem
@@ -660,33 +658,18 @@ From before:
 
 ## Step 2: Set the level of significance $\alpha$
 
+-   **Before doing a hypothesis test**, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
 - It is important to specify how rare or unlikely an event must be in order to represent sufficient
 evidence against the null hypothesis. 
 
-- When testing a statistical hypothesis, we specify a significance level, $\alpha$
-  - Typically choose $\alpha = 0.05$
-- An $\alpha$ level of 0.05 implies that an event occurring with probability lower than 5% will be considered sufficient evidence against the null hypothesis
+-   We call this the [**significance level**]{style="color:#3070BF"}, denoted by the Greek symbol [alpha ( $\alpha$ )]{style="color:#3070BF"}
+
+      - Typically choose $\alpha = 0.05$
+      
 - This is parallel to our confidence interval
   - $\alpha$ is the probability of rejecting the null hypothesis when it is true (it's a measure of potential error)
-  - A ($1-\alpha$)% confidence interval will have about $\alpha$% confidence intervals that do not cover $\mu$ even though they come from the distribution with mean $\mu$
+  - From repeated ($1-\alpha$)% confidence intervals, we will have about $\alpha$% intervals that do not cover $\mu$ even though they come from the distribution with mean $\mu$
   
-## Step 2: Significance Level $\alpha$
-
--   **Before doing a hypothesis test**, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
--   We call this the [**significance level**]{style="color:#3070BF"}, denoted by the Greek symbol [alpha ( $\alpha$ )]{style="color:#3070BF"}
--   [Typical $\alpha$]{style="color:darkblue"} values are
-    -   0.05 - *most common by far!!*
-    -   0.01 and 0.1
--   Decision rule:
-    -   When [$p$-value \< $\alpha$]{style="color:green"}, we "[**reject**]{style="color:green"} the null hypothesis [$H_0$]{style="color:green"}."
-    -   When [$p$-value $\geq \alpha$]{style="color:purple"}, we "[**fail to reject**]{style="color:purple"} the null hypothesis [$H_0$]{style="color:purple"}."
-
-::: callout-important
--   "Failing to reject" $H_0$ is **NOT** the same as "accepting" $H_0$!
--   By failing to reject $H_0$ we are just saying that we don't have sufficient evidence to support the alternative $H_A$.
--   *This does not imply that* $H_0$ is true!!
-:::
-
 ## Step 3: Null & Alternative Hypotheses (1/2)
 
 In statistics, a **hypothesis** is a statement about the value of an **unknown population parameter**.
@@ -766,6 +749,9 @@ $H_A: \mu > \mu_0$
 :::::::::
 
 -   $H_A: \mu \neq \mu_0$ is the most common option, since it's the most conservative
+
+## Poll Everywhere Question 2
+
 
 
 ## Step 4: [Test statistic]{style="color:#3070BF"} (& its distribution)
@@ -974,16 +960,18 @@ H_0 &: \mu = 98.6\\
     -   There is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( $p$-value \< 0.001).
 -   Better: ("manuscript style" conclusion)
     -   The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value \< 0.001).
+    
+## Poll Everywhere Question 3
 
-## Confidence Intervals vs. Hypothesis Testing
 
--   See also V&H Section 4.3.3
+# Learning Objectives
 
-# Running a t-test in R
+1.  Understand the relationship between point estimates, confidence intervals, and hypothesis tests.
+2.  Determine if s single-sample mean is different than a population mean using a hypothesis test.
 
--   Replace hand calculation in step 4 and 5 with R!!
--   Run a t-test in R
--   `tidy()` the test output using `broom` package
+::: lob
+3.  Use R to calculate the test statistic, p-value, and confidence interval for a single-sample mean.
+:::
 
 ## Load the dataset
 
@@ -1033,57 +1021,8 @@ Using base R's `$`
 tidy(temps_ttest)$p.value  
 ```
 
-Advantage: quick and easy
 :::
 :::::
-
-## This time: Hypothesis test ($z$ vs. $t$)
-
-- We have two different distributions from which we run a hypothesis test
-
-::::: columns
-::: {.column width="50%"}
-::: blue2
-::: blue2-ttl
-Case 1: We know the population standard deviation
-:::
-::: blue2-cont
-
-- We use a test statistic from a Normal distribution: 
-$$z_{\overline{X}} = \dfrac{\overline{x} - \mu}{SE}$$
-
-- with $\text{SE} = \frac{\sigma}{\sqrt{n}}$ and $\sigma$ is the population standard deviation
-
- 
-
-- We calculate $P(Z \geq |{z_{\overline{X}}}|)$ = `pnorm($z_{\overline{X}}$)`
-- OR: We calculate $P(X \geq |\overline{x}|)$ = `pnorm($\overline{x}$, $\mu$, $SE$)`
-
-:::
-:::
-:::
-
-::: {.column width="50%"}
-::: red
-::: red-ttl
-Case 2: We **do not** know the population sd
-:::
-::: red-cont
-- We use a test statistic from a Student's t-distribution: 
-$$t_{\overline{X}} = \dfrac{\overline{x} - \mu}{SE}$$
-
-- with $\text{SE} = \frac{s}{\sqrt{n}}$ and $\sigma$ is the sample standard deviation
-
- 
-
--   This is usually the case in real life
-
-:::
-:::
-:::
-:::::
-
-
 
 ## What's next?
 
@@ -1096,3 +1035,44 @@ CI's and hypothesis testing for different scenarios:
 | 13 | 5.3 | Diff in pop means | $\mu_1-\mu_2$ | Diff in sample means | $\overline{x}_1 - \overline{x}_2$ |
 | 15 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$ |
 | 15 | 8.2 | Diff in pop prop's | $p_1-p_2$ | Diff in sample prop's | $\widehat{p}_1-\widehat{p}_2$ |
+
+## Reference: what does it all look like together?
+
+::: pink
+::: pink-ttl
+Example of hypothesis test based on the 1992 JAMA data
+:::
+::: pink-cont
+Is there evidence to support that the population mean body temperature is different from 98.6°F?
+:::
+:::
+
+::: columns
+::: {.column width="50%"}
+1.  **Assumptions:** The individual observations are independent and the number of individuals in our sample is 130. Thus, we can use CLT to approximate the sampling distribution.
+
+4-5. 
+:::
+::: {.column width="25%"}
+2.  Set $\alpha = 0.05$
+:::
+
+::: {.column width="25%"}
+
+3.  **Hypothesis:**
+
+    \begin{aligned}
+    H_0 &: \mu = 98.6\\
+    \text{vs. } H_A&: \mu \neq 98.6
+    \end{aligned}
+:::
+:::
+
+```{r}
+temps_ttest <- t.test(x = BodyTemps$Temperature, mu = 98.6)
+tidy(temps_ttest) %>% gt() %>% tab_options(table.font.size = 36)
+```
+
+6.  **Conclusion:** We reject the null hypothesis. The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value \< 0.001).
+
+
