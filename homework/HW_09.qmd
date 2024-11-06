@@ -15,6 +15,10 @@ format:
     html-math-method: mathjax
 ---
 
+::: callout-important
+This page is under construction. This homework may change! (11/5/24)
+:::
+
 ```{r}
 #| label: "setup"
 #| include: false

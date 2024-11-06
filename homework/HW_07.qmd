@@ -1,7 +1,7 @@
 ---
 title: "Homework 7"
 author: "Your name here - update this!!!!"
-date: "Due 11/21/24"
+date: "today"
 format: 
   html:
     link-external-newwindow: true
@@ -14,6 +14,12 @@ format:
     self-contained: true
     html-math-method: mathjax
 ---
+
+::: callout-important
+This page is under construction. This homework may change! (11/5/24)
+:::
+
+
 
 ```{r}
 #| label: "setup"
