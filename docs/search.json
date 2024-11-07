@@ -19842,7 +19842,7 @@
     "href": "hw_answers/HW_06_ans.html",
     "title": "Homework 6 Answers",
     "section": "",
-    "text": "The 2010 General Social Survey asked the question: “For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?” Based on responses from 1,151 US residents, the survey reported a 95% confidence interval of 3.40 to 4.24 days in 2010.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlarger\n\n\n\n\n\n\n\n\nFalse\n\n\n\n\n\nFalse\n\n\n\n\n\nFalse\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue\n\n\n\n\n\n\n95% CI: 23.32, 23.56\n\n\n\n\n\n\n\\(\\bar{x}= 71\\)\nmargin of error is 6\nsample standard deviation is 17.535\n\n\n\n\n\n\n\n\n\\[\\begin{align}\n&H_0: \\mu = 35\\\\\n&H_A: \\mu &gt; 35\n\\end{align}\\]\n\n\n\n\n\n\nIndependence\nSample size \\(n=52\\) is greater than 30\n\n\n\n\n\n\n\n\\(t_{\\overline{x}} = 17.06666\\)\n\\(p-value = 4.956975\\cdot 10^{-23}\\)\n\n\n\n\n\n\nNot contain 35\n\n\n\n\n\nNot contain 0"
+    "text": "Warning\n\n\n\nTo see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!"
   },
   {
     "objectID": "hw_answers/HW_06_ans.html#directions",
@@ -19855,29 +19855,29 @@
     "objectID": "hw_answers/HW_06_ans.html#mental-health-part-i",
     "href": "hw_answers/HW_06_ans.html#mental-health-part-i",
     "title": "Homework 6 Answers",
-    "section": "",
-    "text": "The 2010 General Social Survey asked the question: “For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?” Based on responses from 1,151 US residents, the survey reported a 95% confidence interval of 3.40 to 4.24 days in 2010.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlarger"
+    "section": "4.4 Mental health, Part I",
+    "text": "4.4 Mental health, Part I\nThe 2010 General Social Survey asked the question: “For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?” Based on responses from 1,151 US residents, the survey reported a 95% confidence interval of 3.40 to 4.24 days in 2010.\n\n(a)\n\n\n\n\n\n(b)\n\n\n\n\n\n(c)\n\nlarger"
   },
   {
     "objectID": "hw_answers/HW_06_ans.html#thanksgiving-spending-part-i",
     "href": "hw_answers/HW_06_ans.html#thanksgiving-spending-part-i",
     "title": "Homework 6 Answers",
-    "section": "",
-    "text": "False\n\n\n\n\n\nFalse\n\n\n\n\n\nFalse\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue"
+    "section": "4.6 Thanksgiving spending, Part I",
+    "text": "4.6 Thanksgiving spending, Part I\n\n(a)\n\nFalse\n\n\n\n(b)\n\nFalse\n\n\n\n(c)\n\nFalse\n\n\n\n(d)\n\nTrue\n\n\n\n(e)\n\nTrue\n\n\n\n(f)\n\nTrue"
   },
   {
     "objectID": "hw_answers/HW_06_ans.html#age-at-first-marriage-part-i",
     "href": "hw_answers/HW_06_ans.html#age-at-first-marriage-part-i",
     "title": "Homework 6 Answers",
-    "section": "",
-    "text": "95% CI: 23.32, 23.56"
+    "section": "4.8 Age at first marriage, Part I",
+    "text": "4.8 Age at first marriage, Part I\n\n95% CI: 23.32, 23.56"
   },
   {
     "objectID": "hw_answers/HW_06_ans.html#working-backwards-part-ii",
     "href": "hw_answers/HW_06_ans.html#working-backwards-part-ii",
     "title": "Homework 6 Answers",
-    "section": "",
-    "text": "\\(\\bar{x}= 71\\)\nmargin of error is 6\nsample standard deviation is 17.535"
+    "section": "5.6 Working backwards, Part II",
+    "text": "5.6 Working backwards, Part II\n\n\n\\(\\bar{x}= 71\\)\nmargin of error is 6\nsample standard deviation is 17.535"
   },
   {
     "objectID": "hw_answers/HW_06_ans.html#t-vs.-z",
@@ -19890,8 +19890,8 @@
     "objectID": "hw_answers/HW_06_ans.html#auto-exhaust-and-lead-exposure",
     "href": "hw_answers/HW_06_ans.html#auto-exhaust-and-lead-exposure",
     "title": "Homework 6 Answers",
-    "section": "",
-    "text": "\\[\\begin{align}\n&H_0: \\mu = 35\\\\\n&H_A: \\mu &gt; 35\n\\end{align}\\]\n\n\n\n\n\n\nIndependence\nSample size \\(n=52\\) is greater than 30\n\n\n\n\n\n\n\n\\(t_{\\overline{x}} = 17.06666\\)\n\\(p-value = 4.956975\\cdot 10^{-23}\\)\n\n\n\n\n\n\nNot contain 35\n\n\n\n\n\nNot contain 0"
+    "section": "5.12 Auto exhaust and lead exposure",
+    "text": "5.12 Auto exhaust and lead exposure\n\n(a)\n\n\\[\\begin{align}\n&H_0: \\mu = 35\\\\\n&H_A: \\mu &gt; 35\n\\end{align}\\]\n\n\n\n(b)\n\n\nIndependence\nSample size \\(n=52\\) is greater than 30\n\n\n\n\n(c)\n\n\n\\(t_{\\overline{x}} = 17.06666\\)\n\\(p-value = 4.956975\\cdot 10^{-23}\\)\n\n\n\n\n(d)\n\nNot contain 35\n\n\n\n(e)\n\nNot contain 0"
   },
   {
     "objectID": "hw_answers/HW_06_ans.html#load-all-the-packages-you-need-below-here",

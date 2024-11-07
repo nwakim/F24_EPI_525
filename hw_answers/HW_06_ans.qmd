@@ -16,6 +16,10 @@ format:
     html-math-method: mathjax
 ---
 
+::: callout-warning
+To see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!
+:::
+
 ```{r}
 #| label: "setup"
 #| include: false
