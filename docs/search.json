@@ -19632,7 +19632,7 @@
     "href": "homework/HW_06.html#r1-are-american-adults-getting-enough-sleep",
     "title": "Homework 6",
     "section": "1.2 R1: Are American adults getting enough sleep?",
-    "text": "1.2 R1: Are American adults getting enough sleep?\nThis lab uses data from the National Health and Nutrition Examination Survey (NHANES), a survey conducted annually by the US Centers for Disease Control (CDC). The complete dataset contains 10,000 observations, which will be the artificial target population.\nA 2016 study from the CDC reported that more than a third of American adults are not getting enough sleep on a regular basis. The National Sleep Foundation recommends that adults need between 7 to 9 hours of sleep per night to function well. Consistent sleep deprivation is known to increase risk of health problems, negatively affect cognitive processes, and contribute to depressive symptoms.\nThe dataset nhanes.samp.adult in the oibiostat package contains sleep information for 135 participants ages 21 years or older that were randomly sampled from the NHANES population. The variable SleepHrsNight contains the self-reported number of hours a participant usually gets at night on weekdays or workdays.\nHere is code to load the package and data:\n\nlibrary(oibiostat)\ndata(\"nhanes.samp.adult\")\n\nIf the oibiostat package is giving you trouble, I have uploaded an .RData version of the dataset, which you can download then load with something like my following code:\n\nlibrary(here)\nload(here(\"data\", \"nhanes.samp.adult.RData\"))\n\n\n1.2.1 Explore the distribution of in nhanes.samp.adult\n\nPart a\nUsing numerical and graphical summaries, describe the distribution of nightly sleep hours in nhanes.samp.adult.\n\n\nPart b\nBased on the distribution of nightly sleep hours in the sample, does it seem that the population mean nightly sleep hours may be outside the range defined as adequate (7 - 9 hours)?\n\n\n\n1.2.2 Calculate a 95% confidence interval for nightly sleep hours using nhanes.samp.adult and interpret the interval\nYou can either use the math from class to calculate this OR the t.test() function.\n\n\n1.2.3 Conduct a hypothesis test to assess whether on average, American adults are getting enough sleep. Let \\(\\mu_0\\) be 8 hours, the midpoint of the range defined as adequate.\nPlease make sure to include all hypothesis test steps and make sure conditions are met (think CLT). There is additional information on expectations of hypothesis tests in the directions."
+    "text": "1.2 R1: Are American adults getting enough sleep?\nThis problem uses data from the National Health and Nutrition Examination Survey (NHANES), a survey conducted annually by the US Centers for Disease Control (CDC). The complete NHANES dataset contains 10,000 observations, which will be the artificial target population.\nA 2016 study from the CDC reported that more than a third of American adults are not getting enough sleep on a regular basis. The National Sleep Foundation recommends that adults need between 7 to 9 hours of sleep per night to function well. Consistent sleep deprivation is known to increase risk of health problems, negatively affect cognitive processes, and contribute to depressive symptoms.\nThe dataset nhanes.samp.adult in the oibiostat package contains sleep information for 135 participants ages 21 years or older that were randomly sampled from the NHANES population. The variable SleepHrsNight contains the self-reported number of hours a participant usually gets at night on weekdays or workdays.\nHere is code to load the package and data:\n\nlibrary(oibiostat)\ndata(\"nhanes.samp.adult\")\n\nIf the oibiostat package is giving you trouble, I have uploaded an .RData version of the dataset, which you can download then load with something like my following code:\n\nlibrary(here)\nload(here(\"data\", \"nhanes.samp.adult.RData\"))\n\n\n1.2.1 Explore the distribution of in nhanes.samp.adult\n\nPart a\nUsing numerical and graphical summaries, describe the distribution of nightly sleep hours in nhanes.samp.adult.\n\n\nPart b\nBased on the distribution of nightly sleep hours in the sample, does it seem that the population mean nightly sleep hours may be outside the range defined as adequate (7 - 9 hours)?\n\n\n\n1.2.2 Calculate a 95% confidence interval for nightly sleep hours using nhanes.samp.adult and interpret the interval\nYou can either use the math from class to calculate this OR the t.test() function.\n\n\n1.2.3 Conduct a hypothesis test to assess whether on average, American adults are getting enough sleep. Let \\(\\mu_0\\) be 8 hours, the midpoint of the range defined as adequate.\nPlease make sure to include all hypothesis test steps and make sure conditions are met (think CLT). There is additional information on expectations of hypothesis tests in the directions."
   },
   {
     "objectID": "lessons/11_Hyp_testing_01/11_Hyp_testing_01.html#last-last-time-point-estimates",
@@ -19836,5 +19836,75 @@
     "title": "Muddy Points",
     "section": "5. Central limit theorem vs sampling distribution",
     "text": "5. Central limit theorem vs sampling distribution\nThe Central Limit Theorem is a theory can we can apply to our sampling distribution! The sampling distribution is how sample means would be distributed if we took many, many samples. The Central Limit Theorem allows us to say that the sampling distribution is approximately normal. By saying it’s approximately normal, we can then use the properties of a normal distribution to do further analysis."
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html",
+    "href": "hw_answers/HW_06_ans.html",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "The 2010 General Social Survey asked the question: “For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?” Based on responses from 1,151 US residents, the survey reported a 95% confidence interval of 3.40 to 4.24 days in 2010.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlarger\n\n\n\n\n\n\n\n\nFalse\n\n\n\n\n\nFalse\n\n\n\n\n\nFalse\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue\n\n\n\n\n\n\n95% CI: 23.32, 23.56\n\n\n\n\n\n\n\\(\\bar{x}= 71\\)\nmargin of error is 6\nsample standard deviation is 17.535\n\n\n\n\n\n\n\n\n\\[\\begin{align}\n&H_0: \\mu = 35\\\\\n&H_A: \\mu &gt; 35\n\\end{align}\\]\n\n\n\n\n\n\nIndependence\nSample size \\(n=52\\) is greater than 30\n\n\n\n\n\n\n\n\\(t_{\\overline{x}} = 17.06666\\)\n\\(p-value = 4.956975\\cdot 10^{-23}\\)\n\n\n\n\n\n\nNot contain 35\n\n\n\n\n\nNot contain 0"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#directions",
+    "href": "hw_answers/HW_06_ans.html#directions",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "Please turn in this homework on Sakai. This homework must be submitted using a Quarto document. Please keep it rendered as an html! I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!\nYou can download the .qmd file for this assignment from Github\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.\n\n\n\n\n\n\n\n\nHypothesis test & CI instructions\n\n\n\n\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test (or CI) conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed."
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#mental-health-part-i",
+    "href": "hw_answers/HW_06_ans.html#mental-health-part-i",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "The 2010 General Social Survey asked the question: “For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?” Based on responses from 1,151 US residents, the survey reported a 95% confidence interval of 3.40 to 4.24 days in 2010.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlarger"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#thanksgiving-spending-part-i",
+    "href": "hw_answers/HW_06_ans.html#thanksgiving-spending-part-i",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "False\n\n\n\n\n\nFalse\n\n\n\n\n\nFalse\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue\n\n\n\n\n\nTrue"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#age-at-first-marriage-part-i",
+    "href": "hw_answers/HW_06_ans.html#age-at-first-marriage-part-i",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "95% CI: 23.32, 23.56"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#working-backwards-part-ii",
+    "href": "hw_answers/HW_06_ans.html#working-backwards-part-ii",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "\\(\\bar{x}= 71\\)\nmargin of error is 6\nsample standard deviation is 17.535"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#t-vs.-z",
+    "href": "hw_answers/HW_06_ans.html#t-vs.-z",
+    "title": "Homework 6 Answers",
+    "section": "5.10 t⋆ vs. z⋆",
+    "text": "5.10 t⋆ vs. z⋆"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#auto-exhaust-and-lead-exposure",
+    "href": "hw_answers/HW_06_ans.html#auto-exhaust-and-lead-exposure",
+    "title": "Homework 6 Answers",
+    "section": "",
+    "text": "\\[\\begin{align}\n&H_0: \\mu = 35\\\\\n&H_A: \\mu &gt; 35\n\\end{align}\\]\n\n\n\n\n\n\nIndependence\nSample size \\(n=52\\) is greater than 30\n\n\n\n\n\n\n\n\\(t_{\\overline{x}} = 17.06666\\)\n\\(p-value = 4.956975\\cdot 10^{-23}\\)\n\n\n\n\n\n\nNot contain 35\n\n\n\n\n\nNot contain 0"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#load-all-the-packages-you-need-below-here",
+    "href": "hw_answers/HW_06_ans.html#load-all-the-packages-you-need-below-here",
+    "title": "Homework 6 Answers",
+    "section": "1.1 Load all the packages you need below here",
+    "text": "1.1 Load all the packages you need below here"
+  },
+  {
+    "objectID": "hw_answers/HW_06_ans.html#r1-are-american-adults-getting-enough-sleep",
+    "href": "hw_answers/HW_06_ans.html#r1-are-american-adults-getting-enough-sleep",
+    "title": "Homework 6 Answers",
+    "section": "1.2 R1: Are American adults getting enough sleep?",
+    "text": "1.2 R1: Are American adults getting enough sleep?\n\n1.2.1 Explore the distribution of in nhanes.samp.adult\n\nPart a\nUsing numerical and graphical summaries, describe the distribution of nightly sleep hours in nhanes.samp.adult.\n\nThe data are roughly symmetric around the mean at 6.9 hours. There is one very low outlier corresponding to one person who reported getting 2 hours of sleep on weekdays. The middle half of participants report getting between 6 and 8 hours of sleep on weekdays.\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  2.000   6.000   7.000   6.896   8.000  11.000 \n\n\nSample standard deviation:\n\n\n[1] 1.394414\n\n\n\n\n\n\n\n\n\n\n\nPart b\n\nYes\n\n\n\n\n1.2.2 Calculate a 95% confidence interval for nightly sleep hours using nhanes.samp.adult and interpret the interval\nYou can either use the math from class to calculate this OR the t.test() function.\n\n95% CI: 6.659, 7.134\n\n\n\n1.2.3 Conduct a hypothesis test to assess whether on average, American adults are getting enough sleep. Let \\(\\mu_0\\) be 8 hours, the midpoint of the range defined as adequate.\nPlease make sure to include all hypothesis test steps and make sure conditions are met (think CLT). There is additional information on expectations of hypothesis tests in the directions.\n\n\ntest statistic is \\(-9.19661\\)\np-value is \\(3.164\\times 10^{-16}\\)"
   }
 ]

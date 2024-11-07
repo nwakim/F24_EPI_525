@@ -1,13 +1,217 @@
 ---
 title: "Homework 6 Answers"
-subtitle: "EPI 525"
+subtitle: "Due 11/17/24"
+author: "Nicky Wakim"
 date-modified: "today"
 format: 
-  html: 
+  html:
     link-external-newwindow: true
     toc: true
-  pdf: default 
-editor_options: 
-  chunk_output_type: console
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    embed-resources: true
+    html-math-method: mathjax
 ---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+
+# Book exercises {.unnumbered}
+
+## 4.4 Mental health, Part I {.unnumbered}
+
+The 2010 General Social Survey asked the question: "For how many days during the past 30 days was your mental health, which includes stress, depression, and problems with emotions, not good?" Based on responses from 1,151 US residents, the survey reported a 95% confidence interval of 3.40 to 4.24 days in 2010.
+
+### (a)  {.unnumbered}
+
+::: blue
+:::
+
+### (b)  {.unnumbered}
+
+::: blue
+
+:::
+
+### (c)  {.unnumbered}
+
+::: blue
+larger
+:::
+
+
+## 4.6 Thanksgiving spending, Part I {.unnumbered}
+
+### (a) {.unnumbered}  
+
+::: blue
+False
+:::
+
+### (b) {.unnumbered}  
+
+::: blue
+False
+:::
+
+### (c) {.unnumbered}  
+
+::: blue
+False
+:::
+
+### (d) {.unnumbered}  
+
+::: blue
+True
+:::
+
+### (e)  {.unnumbered} 
+
+::: blue
+True
+:::
+
+### (f)  {.unnumbered} 
+
+::: blue
+True
+:::
+
+## 4.8 Age at first marriage, Part I {.unnumbered}
+
+::: blue
+95% CI: 23.32, 23.56
+:::
+
+## 5.6 Working backwards, Part II {.unnumbered}
+
+::: blue
+- $\bar{x}= 71$
+- margin of error is 6
+- sample standard deviation is 17.535
+:::
+
+## 5.12 Auto exhaust and lead exposure {.unnumbered}
+
+### (a)  {.unnumbered}
+
+::: blue
+\begin{align}
+&H_0: \mu = 35\\
+&H_A: \mu > 35
+\end{align}
+:::
+
+### (b)  {.unnumbered}
+
+::: blue
+- Independence
+- Sample size  $n=52$ is greater than 30
+:::
+
+### (c)  {.unnumbered}
+
+::: blue
+- $t_{\overline{x}} = 17.06666$
+- $p-value = 4.956975\cdot 10^{-23}$
+:::
+
+### (d)  {.unnumbered}
+
+::: blue
+Not contain 35
+:::
+
+### (e)  {.unnumbered}
+
+::: blue
+Not contain 0
+:::
+
+# R exercises 
+
+## Load all the packages you need below here
+
+## R1: Are American adults getting enough sleep?
+
+```{r}
+#| echo: false
+
+library(oibiostat)
+data("nhanes.samp.adult")
+```
+
+### Explore the distribution of \texttt{SleepHrsNight} in `nhanes.samp.adult`
+
+#### Part a
+
+Using numerical and graphical summaries, describe the distribution of nightly sleep hours in `nhanes.samp.adult`.
+
+::: blue
+The data are roughly symmetric around the mean at 6.9 hours. There is one very low outlier corresponding to one person who reported getting 2 hours of sleep on weekdays. The middle half of participants report getting between 6 and 8 hours of sleep on weekdays.
+    
+```{r}
+#| fig.width: 8
+#| fig.height: 4
+#| echo: false
+
+# numerical summaries
+summary(nhanes.samp.adult$SleepHrsNight)
+```
+
+Sample standard deviation:
+```{r}
+#| fig.width: 8
+#| fig.height: 4
+#| echo: false
+sd(nhanes.samp.adult$SleepHrsNight)
+
+# graphical summaries
+library(ggplot2)
+ggplot(data = nhanes.samp.adult, aes(x = SleepHrsNight)) +
+  geom_histogram(binwidth = 1, fill = "grey", color = "black") +
+  labs(x = "Sleep per night (hours)", 
+       y = "Number of individuals")
+
+ggplot(data = nhanes.samp.adult, aes(x = SleepHrsNight)) +
+  geom_boxplot() +
+  labs(x = "Sleep per night (hours)")
+```
+:::
+    
+#### Part b
+
+::: blue
+Yes
+:::
+    
+### Calculate a 95\% confidence interval for nightly sleep hours using `nhanes.samp.adult` and interpret the interval
+
+You can either use the math from class to calculate this OR the `t.test()` function.
+
+::: blue
+95\% CI: 6.659, 7.134
+:::
+
+### Conduct a hypothesis test to assess whether on average, American adults are getting enough sleep. Let $\mu_0$ be 8 hours, the midpoint of the range defined as adequate.
+
+Please make sure to include all hypothesis test steps and make sure conditions are met (think CLT). There is additional information on expectations of hypothesis tests in the directions.
+
+::: blue
+- test statistic is $-9.19661$
+- p-value is $3.164\times 10^{-16}$
+:::
 
