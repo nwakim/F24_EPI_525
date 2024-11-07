@@ -1,0 +1,20 @@
+---
+title: "Muddy Points"
+subtitle: "Lesson 10: Confidence intervals"
+date-modified: "today"
+format: 
+  html:
+    link-external-newwindow: true
+    page-layout: full
+    toc: false
+    code-fold: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## 1. For 95% confidence interval, why are we using p=0.975 rather than using p=0.95?
+
+## 2. Hard time wrapping my head around student's t-distribution, understand use just conceptually why we can use it when pop sd is unknown.
+
+## 3. "The normal distribution doesn’t have a 95% “coverage rate” when using s" I understand that this is the case, but I didn't really understand why.
+
