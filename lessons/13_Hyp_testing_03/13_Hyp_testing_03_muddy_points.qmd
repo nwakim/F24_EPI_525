@@ -1,0 +1,46 @@
+---
+title: "Muddy Points"
+subtitle: "Lesson 11: Hypothesis testing part 01"
+date-modified: "today"
+format: 
+  html:
+    link-external-newwindow: true
+    page-layout: full
+    toc: false
+    code-fold: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## 1. What is the test statistic? (Is it the same as a t-test?)
+
+The "t-test" is the shorthand that people use to refer to the process of calculating the test statistic and p-value.
+
+The test statistic measures how far our sample mean ($\overline{x}$) is from the mean when we assume the null (aka the mean is $\mu$).
+
+## 2. The specific language around and conclusions that can be drawn from p-values
+
+We basically have two options once we have a p-value:
+
+1. The p-value is less than $\alpha$, then we reject the null hypothesis.
+2. The p-value is greater than or equal to $\alpha$, then we fail to reject the null hypothesis.
+
+So let's get into it:
+
+1. The p-value is less than $\alpha$, then we reject the null hypothesis.
+    - When the p-value is less than $\alpha$, we've crossed into a range of probabilities that are very unlikely. 
+    - Remember, the p-value measures the probability of obtaining a sample mean just as extreme or more extreme than the observed sample mean ($\overline{x}$) assuming the null hypothesis is true (that the population mean is $\mu$).
+    - The smaller the p-value, the more evidence that we have that our sample mean ($\overline{x}$) is NOT from the distribution with the population mean is $\mu$
+    - There is a cutoff for when we decide that our sample mean ($\overline{x}$) is NOT from the distribution with the population mean is $\mu$. That cutoff is the significance level ($\alpha$). 
+    - So when the p-value is less than $\alpha$, we say we have sufficient evidence that our sample is not from the population distribution. This was our null hypothesis, so we **reject the null.** 
+2. The p-value is greater than or equal to $\alpha$, then we fail to reject the null hypothesis.
+    - When the p-value is greater than or equal to $\alpha$, we are still in the range of probabilities that are likely.
+    - Remember, the p-value measures the probability of obtaining a sample mean just as extreme or more extreme than the observed sample mean ($\overline{x}$) assuming the null hypothesis is true (that the population mean is $\mu$).
+    - When the p-value is pretty large, then it is likely that our sample comes from our assumed null distribution. 
+    - However, this is not what we're trying to prove in our hypothesis test, so we can't make any claims about "accepting the null." Instead, we fail to reject it. 
+    
+## 3. 	Help with the bigger picture of $H_0$ and $H_A$. In a real world example, would it only be notable to reject $H_0$? If a researcher fails to reject the null, would their findings not be believable?
+
+The idea behind the hypothesis test is usually that the null is the currently accepted value, and that we are presenting a "challenger" to the null. The challenger is only noteworthy if we reject the null and establish a new range of values for the population mean (from the confidence interval).
+
+Thus, if we fail to reject the null, it's not that we don't believe our findings, it just means that we are not presenting new information to the world.

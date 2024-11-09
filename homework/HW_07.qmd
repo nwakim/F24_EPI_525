@@ -27,16 +27,22 @@ This page is under construction. This homework may change! (11/5/24)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-**Due 11/21/24**
-
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_07.qmd).
-
-
 ## Directions {.unnumbered}
 
-* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
-* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) This homework must be submitted using a Quarto document. **Please keep it rendered as an html!** I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!
+
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_05.qmd)
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+## Complete the group evaluation
+
+Please complete the group evaluation form by the homework assignment due date.
+
+<https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQ0JOQjRaQkpPNFpPSlBKVjJUMDdMTkFRNi4u>
+
 
 
 ### R & LaTeX code {.unnumbered}

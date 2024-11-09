@@ -1,10 +1,10 @@
 ---
-title: "Lesson 13: Inference for difference in means from two independent samples and Power"
+title: "Lesson 13: Inference for difference in means from two independent samples"
 subtitle: "TB sections 5.3"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
-date: "10/2/2024"
+date: "11/13/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -49,247 +49,274 @@ theme_set(theme_bw(base_size = 22))
 set.seed(456)
 ```
 
-## MoRitz's tip of the day
-
-Add tabbed sections to your html file using `tabset`.
-
-::: panel-tabset
-
-### First tab
-
-* You can make subsections appear as different tabs in your html file.
-* This is the first tab.
-* It was created by adding `::: panel-tabset` right above the subsection `### First tab` ([see the code file]{style="color:green"}). 
-* Look up to the right of where it says "First tab," and you will see a second tab with the creative name "Second tab."
-* If you are viewing the html output of this file, you can click on the different tabs to see what's in them.
-* To stop new tabs from being created, close off the original `::: panel-tabset` command with `:::` at the end.
-    * In the source code file, you will see the `:::` at the end of the `### Read up on tabsets` tab.
-
-
-### Second tab
-
-* Welcome to the second tab! 
-
-
-![](/img_slides/mimi_normal_IMG_4244.png){fig-align="center"}
-
-### Read up on tabsets
-
-* You can read up more about creating tabs at
-  * <https://quarto.org/docs/interactive/layout.html#tabset-panel>
-
-```{=html}
-<iframe width="800" height="300" src="https://quarto.org/docs/interactive/layout.html#tabset-panel" title="Webpage example"></iframe>
-```
-
-If you are reading the source code file, the next line contains `:::`, which closes the tabsets. 
-:::
-
-
 ## Where are we?
 
-<br>
-<br>
-
-![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
+![](../img_slides/course_map.png){fig-align="center"}
 
 ## Where are we? Continuous outcome zoomed in
 
-<br>
-<br>
+<br> <br>
 
-![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+![](../img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
-
-## Where are we?
-
-::: {style="font-size: 90%;"}
-CI's and hypothesis tests for different scenarios:
-
-$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
-
-Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
---|--|--|--|--|--|--
-10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
-10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$  | **$\frac{s_d}{\sqrt{n}}$**
-11 | 5.3 | [Diff in pop <br> means]{style="color:green"} | [$\mu_1-\mu_2$]{style="color:green"} | [Diff in sample <br> means]{style="color:green"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:green"}  | [**???**]{style="color:red"}
-12 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$  |
-12 | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |
-
-:::
-
-
-## Goals for today 
+## Goals for today
 
 ### 2-sample t-test (Section 5.3)
 
-* Statistical inference for difference in means from 2 independent samples
-    1. What are $H_0$ and $H_a$?
-    
-    1. What is the SE for $\bar{x}_1 - \bar{x}_2$?
-    
-    1. Hypothesis test
-    
-    1. Confidence Interval
-    
-    1. Run test in R - using long vs. wide data
-    
-    1. Satterthwaite's df
-    
-    1. Pooled SD
+-   Statistical inference for difference in means from 2 independent samples
+    1.  What are $H_0$ and $H_a$?
+
+    2.  What is the SE for $\bar{x}_1 - \bar{x}_2$?
+
+    3.  Hypothesis test
+
+    4.  Confidence Interval
+
+    5.  Run test in R - using long vs. wide data
+
+    6.  Satterthwaite's df
+
+    7.  Pooled SD
 
 ### Power and sample size (4.3.4, 5.4, plus notes)
 
-* Critical values & rejection region
-* Type I & II errors
-* Power
-* How to calculate sample size needed for a study?
+-   Critical values & rejection region
+-   Type I & II errors
+-   Power
+-   How to calculate sample size needed for a study?
 
+# Learning Objectives
 
-## Examples of designs with two independent samples
+1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
+2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
+3.  Perform the appropriate hypothesis test for paired data.
 
-* Any study where participants are randomized to a control and treatment group
+# Learning Objective
 
-* Study where create two groups based on whether they were exposed or not to some condition (can be observational)
+## Different types of inference based on different data types
 
-*  Book: "Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?"
+| Lesson | Section | Population parameter | Symbol (pop) | Point estimate | Symbol (sample) | SE |
+|:----------|:----------|:----------|:----------|:----------|:----------|:----------|
+| 11 | 5.1 | Pop mean | $\mu$ | Sample mean | $\overline{x}$ | $\dfrac{s}{\sqrt{n}}$ |
+| 12 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\overline{x}_{d}$ | $\dfrac{s_d}{\sqrt{n}}$ |
+| 13 | 5.3 | Diff in pop means | $\mu_1-\mu_2$ | Diff in sample means | $\overline{x}_1 - \overline{x}_2$ | **????** |
+| 15 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$ |  |
+| 15 | 8.2 | Diff in pop prop's | $p_1-p_2$ | Diff in sample prop's | $\widehat{p}_1-\widehat{p}_2$ |  |
 
-*  Book: "Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?"
+## What are data from two independent sample?
 
+-   Two independent samples: Individuals between and within samples are independent
+    - Typically: measure the same outcome for each sample, but typically the two samples differ based on a single variable
 
-* _The key is that the data from the two groups are independent of each other._
+ 
 
+-   Examples
 
-## Steps in a Hypothesis Test
+    -   Any study where participants are randomized to a control and treatment group
+    -   Study where create two groups based on whether they were exposed or not to some condition (can be observational)
+    -   Book: "Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?"
+    -   Book: "Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?"
 
-1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
+## For two independent samples: Population parameters vs. sample statistics
 
-1. Specify the __[null]{style="color:darkorange"}__ ( $H_0$ ) and __[alternative]{style="color:darkorange"}__ ( $H_A$ ) __[hypotheses]{style="color:darkorange"}__
-    1. In symbols
-    1. In words
-    1. Alternative: one- or two-sided?
+::::: columns
+::: {.column width="50%"}
+[**Population parameter**]{style="color:#C83532;"}
 
-1. Calculate the __[test statistic]{style="color:darkorange"}__. 
+-   Population 1 mean: $\mu_1$
+-   Population 2 mean: $\mu_2$
 
-1. Calculate the __[p-value]{style="color:darkorange"}__ based on the observed test statistic and its sampling distribution
+ 
 
-1. Write a __[conclusion]{style="color:darkorange"}__ to the hypothesis test
-    1. Do we reject or fail to reject $H_0$?
-    1. Write a conclusion in the context of the problem
+-   Mean difference: $\mu_1 - \mu_2$
+
+ 
+
+-   Population 1 standard deviation: $\sigma_1$
+-   Population 2 standard deviation: $\sigma_2$
+:::
+
+::: {.column width="50%"}
+[**Sample statistic (point estimate)**]{style="color:#EF85B3;"}
+
+-   Sample 1 mean: $\overline{x}_1$
+-   Sample 2 mean: $\overline{x}_2$
+
+ 
+
+-   Mean difference between samples: $\overline{x}_1 - \overline{x}_2$
+
+ 
+
+-   Sample 1 standard deviation: $s_1$
+-   Sample 2 standard deviation: $s_2$
+:::
+:::::
+
+ 
 
 
 ## Does caffeine increase finger taps/min (on average)?
 
-__Study Design__:
+-   [**We will illustrate how to perform a hypothesis test for paired data as we work through this example**]{style="color:#5BAFF8"}
 
-::: {style="font-size: 85%;"}
-* 20 male college students students were trained to tap their fingers at a rapid rate.
-* Each then drank 2 cups of coffee (double-blind)
-    * __Control__ group: decaf
-    * __Caffeine__ group: ~ 200 mg caffeine 
-* After 2 hours, students were tested.
-* __Taps/minute__ recorded
-:::
+**Study Design**:[^1]
 
-::: {style="font-size: 70%;"}
-Hand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). [A handbook of small data sets](https://www.crcpress.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780412399206). London, U.K.: Chapman and Hall.
-:::
+[^1]: Based on following article with extra simulations by me: Hand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). [A handbook of small data sets](https://www.crcpress.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780412399206). London, U.K.: Chapman and Hall.
 
-::: {style="font-size: 85%;"}
-* Load the data from the csv file `CaffeineTaps.csv`
-* The code below is for when the data file is in a folder called `data` that is in your R project folder (your working directory)
-:::
+-   70 college students students were trained to tap their fingers at a rapid rate
+-   Each then drank 2 cups of coffee (double-blind)
+    -   **Control** group: decaf
+    -   **Caffeine** group: \~ 200 mg caffeine
+-   After 2 hours, students were tested.
+-   **Taps/minute** recorded
+
+## Does caffeine increase finger taps/min (on average)?
+
+-   Load the data from the csv file `CaffeineTaps.csv`
+-   The code below is for when the data file is in a folder called `data` that is in your R project folder (your working directory)
+
 
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
-CaffTaps <- read_csv(here::here("data", "CaffeineTaps.csv"))
+CaffTaps <- read_csv(here::here("data", "CaffeineTaps_n35.csv"))
 
 glimpse(CaffTaps)
 ```
 
-
-
 ## EDA: Explore the finger taps data
-::: columns
-::: {.column width="47%"}
-Dotplot of taps/minute stratified by group
 
+::::: columns
+::: {.column width="47%"}
 ```{r}
 #| fig.width: 10
-#| fig.height: 7
+#| fig.height: 8
+#| code-fold: true
+#| code-summary: Code to make these histograms
+
 ggplot(CaffTaps, aes(x=Taps)) +
-  geom_dotplot() +
-  facet_wrap(vars(Group), ncol=1)
+  geom_histogram() +
+  facet_wrap(vars(Group), ncol=1) +
+  labs(y = "Number of people", x = "Taps/minute") +
+  theme(text = element_text(size = 30))
 ```
 :::
 
 ::: {.column width="53%"}
-
-Summary statistics stratified by group
-
 ```{r}
-# get_summary_stats() from rstatix package
+#| code-fold: true
+#| code-summary: Summary statistics stratified by group
+
+# get_summary_stats() from 
+  # rstatix package
 sumstats <- CaffTaps %>% 
   group_by(Group) %>% 
   get_summary_stats(type = "mean_sd") 
-sumstats %>% gt()
-diff(sumstats$mean)
+
+sumstats %>% gt() %>% 
+  tab_options(table.font.size = 40)
 ```
 
+Then calculate the difference between the means:
+```{r}
+diff(sumstats$mean)
+```
 :::
-:::
+:::::
 
+# Learning Objectives
 
+## Reference: Steps in a Hypothesis Test
 
-## Step 2: Null & Alternative Hypotheses 
+1.  Check the [**assumptions**]{style="color:#3070BF"}
 
-* __Question__: Is there evidence to support that drinking caffeine increases the number of finger taps/min?
+2.  Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
 
-::: columns
+3.  Specify the [**null**]{style="color:#3070BF"} ( $H_0$ ) and [**alternative**]{style="color:#3070BF"} ( $H_A$ ) [**hypotheses**]{style="color:#3070BF"}
+
+    1.  In symbols
+    2.  In words
+    3.  Alternative: one- or two-sided?
+
+4.  Calculate the [**test statistic**]{style="color:#3070BF"}.
+
+5.  Calculate the [**p-value**]{style="color:#3070BF"} based on the observed test statistic and its sampling distribution
+
+6.  Write a [**conclusion**]{style="color:#3070BF"} to the hypothesis test
+
+    1.  Do we reject or fail to reject $H_0$?
+    2.  Write a conclusion in the context of the problem
+
+## Step 1: Check the assumptions
+
+-   The assumptions to run a hypothesis test on a sample are:
+
+    -   **Independent observations**: Each observation from both samples is independent from all other observations
+    -   **Approximately normal sample or big n**: the distribution of *each sample* should be approximately normal, *or* the sample size of *each sample* should be at least 30
+
+ 
+
+-   These are the criteria for the Central Limit Theorem in Lesson 09: Variability in estimates
+
+ 
+
+-   In our example, we would check the assumptions with a statement:
+
+    -   The observations are independent from each other. Each caffeine group (aka sample) has 35 individuals. Thus, we can use CLT to approximate the sampling distribution for each sample. 
+
+## Step 2: Set the level of significance
+
+-   **Before doing a hypothesis test**, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
+
+-   Typically choose $\alpha = 0.05$
+
+ 
+
+- See Lesson 11: Hypothesis Testing 1: Single-sample mean
+
+## Step 3: Null & Alternative Hypotheses
+
+-   **Question**: Is there evidence to support that drinking caffeine increases the number of finger taps/min?
+
+::::: columns
 ::: {.column width="60%"}
-Null and alternative hypotheses in __words__
+Null and alternative hypotheses in **words**
 
 *Include as much context as possible*
 
 <br>
 
-* $H_0$: The population difference in mean finger taps/min between the caffeine and control groups is ... 
+-   $H_0$: The population difference in mean finger taps/min between the caffeine and control groups is ...
 
-* $H_A$: The population difference in mean finger taps/min between the caffeine and control groups is ...
+-   $H_A$: The population difference in mean finger taps/min between the caffeine and control groups is ...
 :::
 
 ::: {.column width="40%"}
-Null and alternative hypotheses in __symbols__
+Null and alternative hypotheses in **symbols**
 
 \begin{align}
 H_0:& \mu_{caff} - \mu_{ctrl} = \\
 H_A:& \mu_{caff} - \mu_{ctrl} \\
 \end{align}
 :::
-:::
+:::::
 
-
-
-## Step 3: Test statistic (part 1)
+## Step 4: Test statistic (part 1)
 
 Recall that in general the test statistic has the form:
 
-
-$$\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
-Thus, for a two sample independent means test, we have:
+$$\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$ Thus, for a two sample independent means test, we have:
 
 $$\text{test statistic} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{SE_{\bar{x}_1 - \bar{x}_2}}$$
 
-* What is the formula for $SE_{\bar{x}_1 - \bar{x}_2}$?
-* What is the probability distribution of the test statistic?
-* What assumptions need to be satisfied?
-
-
-
+-   What is the formula for $SE_{\bar{x}_1 - \bar{x}_2}$?
+-   What is the probability distribution of the test statistic?
+-   What assumptions need to be satisfied?
 
 ## What distribution does $\bar{X}_1 - \bar{X}_2$ have?
-::: columns
+
+::::: columns
 ::: {.column width="50%"}
 Let $\bar{X}_1$ and $\bar{X}_2$ be the means of random samples from two independent groups, with parameters shown in table:
 :::
@@ -301,79 +328,71 @@ Let $\bar{X}_1$ and $\bar{X}_2$ be the means of random samples from two independ
 | pop mean    | $\mu_1$    | $\mu_2$    |
 | pop sd      | $\sigma_1$ | $\sigma_2$ |
 :::
-:::
+:::::
 
 ::: {style="font-size: 90%;"}
 Some theoretical statistics:
 
-* If $\bar{X}_1$ and $\bar{X}_2$ are independent normal r.v.'s, then $\bar{X}_1 - \bar{X}_2$ is also normal
-* What is the mean of $\bar{X}_1 - \bar{X}_2$? 
+-   If $\bar{X}_1$ and $\bar{X}_2$ are independent normal r.v.'s, then $\bar{X}_1 - \bar{X}_2$ is also normal
+-   What is the mean of $\bar{X}_1 - \bar{X}_2$?
 
 $$E[\bar{X}_1 - \bar{X}_2] = E[\bar{X}_1] - E[\bar{X}_2] = \mu_1-\mu_2$$
 
-* What is the standard deviation of $\bar{X}_1 - \bar{X}_2$?
+-   What is the standard deviation of $\bar{X}_1 - \bar{X}_2$?
 
 \begin{align}
 Var(\bar{X}_1 - \bar{X}_2) &= Var(\bar{X}_1) + Var(\bar{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
 SD(\bar{X}_1 - \bar{X}_2) &= \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
 \end{align}
-
 :::
 
+## Step 4: Test statistic (part 2)
 
-## Step 3: Test statistic (part 2)
-
-::: {style="font-size: 90%;"}
-::: columns
+:::::: {style="font-size: 90%;"}
+::::: columns
 ::: {.column width="50%"}
 $$
 t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
 $$
-
 :::
 
 ::: {.column width="50%"}
-* $\bar{x}_1, \bar{x}_2$ are the sample means
-* $\mu_0=0$ is the mean value specified in $H_0$
-* $s_1, s_2$ are the sample SD's
-* $n_1, n_2$ are the sample sizes
-
+-   $\bar{x}_1, \bar{x}_2$ are the sample means
+-   $\mu_0=0$ is the mean value specified in $H_0$
+-   $s_1, s_2$ are the sample SD's
+-   $n_1, n_2$ are the sample sizes
 :::
-:::
+:::::
 
+-   Statistical theory tells us that $t_{\bar{x}_1 - \bar{x}_2}$ follows a **student's t-distribution** with
+    -   $df \approx$ smaller of $n_1-1$ and $n_2-1$
+    -   this is a conservative estimate (smaller than actual $df$ )
 
-* Statistical theory tells us that $t_{\bar{x}_1 - \bar{x}_2}$ follows a __student's t-distribution__ with 
-    * $df \approx$ smaller of $n_1-1$ and $n_2-1$
-    * this is a conservative estimate (smaller than actual $df$ )
+**Assumptions**:
 
-__Assumptions__:
+-   **Independent observations & samples**
+    -   The observations were collected independently.
+    -   In particular, the observations from the two groups were not paired in any meaningful way.
+-   **Approximately normal samples or big n's**
+    -   The distributions of the samples should be approximately normal
+    -   *or* *both* their sample sizes should be at least 30.
+::::::
 
-* __Independent observations & samples__
-    * The observations were collected independently. 
-    * In particular, the observations from the two groups were not paired in any meaningful way.
-* __Approximately normal samples or big n's__ 
-    * The distributions of the samples should be approximately normal 
-    * _or_ _both_ their sample sizes should be at least 30.
-:::
+## Step 4: Test statistic (part 3)
 
-
-
-## Step 3: Test statistic (part 3)
-
-::: columns
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| echo: false
-CaffTaps %>% group_by(Group) %>% get_summary_stats(type = "mean_sd") %>% gt()
+CaffTaps %>% group_by(Group) %>% get_summary_stats(type = "mean_sd") %>% gt() %>% tab_options(table.font.size = 40)
 ```
 
 $$
 \text{test statistic} = t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
 $$
-
 :::
-::: {.column width="60%"}
 
+::: {.column width="60%"}
 ```{r}
 #| include: false
 # 1: caffeine
@@ -398,9 +417,8 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 
 2*(1-pt(tstat, df=min(n1 -1, n2-1)))
 ```
-
 :::
-:::
+:::::
 
 <br>
 
@@ -410,41 +428,11 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 
 Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?
 
+## Step 5: p-value
 
+The [**p-value**]{style="color:darkorange"} is the **probability** of obtaining a test statistic *just as extreme or more extreme* than the observed test statistic assuming the null hypothesis $H_0$ is true.
 
-## Step "3b": Assumptions satisfied?
-::: columns
-::: {.column width="50%"}
-__Assumptions__:
-
-* __Independent observations & samples__
-    * The observations were collected independently. 
-    * In particular, the observations from the two groups were not paired in any meaningful way.
-
-* __Approximately normal samples or big n's__ 
-    * The distributions of the samples should be approximately normal 
-    * _or_ _both_ their sample sizes should be at least 30.
-
-:::
-
-::: {.column width="50%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 6
-#| echo: false
-ggplot(CaffTaps, aes(x=Taps)) +
-  geom_dotplot() +
-  facet_wrap(vars(Group), ncol=1)
-```
-:::
-:::
-
-
-## Step 4: p-value
-
-The __[p-value]{style="color:darkorange"}__ is the __probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true. 
-
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{r}
 #| fig.width: 10
@@ -484,13 +472,10 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   geom_vline(xintercept = c(tstat), 
              color = "red")
 ```
-
-
 :::
 
 ::: {.column width="50%"}
-
-Calculate the _p_-value:
+Calculate the *p*-value:
 
 ```{r}
 #| include: false
@@ -516,37 +501,34 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 
 2*(1-pt(tstat, df=min(n1 -1, n2-1)))
 ```
-
 :::
-:::
+:::::
 
-
-
-## Step 5: Conclusion to hypothesis test
+## Step 6: Conclusion to hypothesis test
 
 \begin{align}
 H_0:& \mu_{caff} - \mu_{ctrl} = 0\\
 H_A:& \mu_{caff} - \mu_{ctrl} > 0\\
 \end{align}
 
-* Recall the $p$-value = 0.00397
-* Use $\alpha$ = 0.05.
-* Do we reject or fail to reject $H_0$?
+-   Recall the $p$-value = 0.00397
+-   Use $\alpha$ = 0.05.
+-   Do we reject or fail to reject $H_0$?
 
-__Conclusion statement__:
+**Conclusion statement**:
 
-* Stats class conclusion
-    * There is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( $p$-value = 0.004).
+-   Stats class conclusion
+    -   There is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( $p$-value = 0.004).
+-   More realistic manuscript conclusion:
+    -   The mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically discrenible ( $p$-value = 0.004).
 
-* More realistic manuscript conclusion: 
-    * The mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically discrenible ( $p$-value = 0.004).
-
+# Learning Objectives
 
 ## 95% CI for the mean difference in cholesterol levels
 
 ```{r}
 #| echo: false
-CaffTaps %>% group_by(Group) %>% get_summary_stats(type = "mean_sd") %>% gt()
+CaffTaps %>% group_by(Group) %>% get_summary_stats(type = "mean_sd") %>% gt() %>% tab_options(table.font.size = 40)
 ```
 
 ```{r}
@@ -579,38 +561,32 @@ alpha <- 0.05
 (UB <- diff_x + moe)
 ```
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 CI for $\mu_{caff} - \mu_{ctrl}$:
 
 $$\bar{x}_{caff} - \bar{x}_{ctrl} \pm t^* \cdot \sqrt{\frac{s_{caff}^2}{n_{caff}}+\frac{s_{ctrl}^2}{n_{ctrl}}}$$
-
 :::
 
 ::: {.column width="50%"}
-
 :::
-:::
+:::::
 
-<br>
-<br>
-<br>
+<br> <br> <br>
 
 ::: {style="font-size: 90%;"}
-__Interpretation__:  
+**Interpretation**:\
 We are 95% confident that the (population) difference in mean finger taps/min between the caffeine and control groups is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
 
-* _Based on the CI, is there evidence that drinking caffeine made a difference in finger taps/min? Why or why not?_
+-   *Based on the CI, is there evidence that drinking caffeine made a difference in finger taps/min? Why or why not?*
 :::
-
-
 
 ## R: 2-sample t-test (with long data)
 
-* The `CaffTaps` data are in a *long* format, meaning that 
-    * all of the outcome values are in one column and 
-    * another column indicates which group the values are from
-* This is a common format for data from multiple samples, especially if the sample sizes are different.
+-   The `CaffTaps` data are in a *long* format, meaning that
+    -   all of the outcome values are in one column and
+    -   another column indicates which group the values are from
+-   This is a common format for data from multiple samples, especially if the sample sizes are different.
 
 <!-- Using the caffeine induced finger tapping example with $H_A: \mu_{caff} - \mu_{ctrl} > 0$: -->
 
@@ -622,22 +598,18 @@ We are 95% confident that the (population) difference in mean finger taps/min be
 
 <!-- * The test output gives the 1-sided 95% CI since we ran a 1-sided test -->
 
-
-
 ## `tidy` the `t.test` output
-
 
 ```{r}
 # use tidy command from broom package for briefer output that's a tibble
-tidy(Taps_2ttest) %>% gt()
+tidy(Taps_2ttest) %>% gt() %>% tab_options(table.font.size = 40)
 ```
 
-* Pull the p-value:
+-   Pull the p-value:
 
 ```{r}
 tidy(Taps_2ttest)$p.value  # we can pull specific values from the tidy output
 ```
-
 
 ## R: 2-sample t-test (with wide data)
 
@@ -647,27 +619,25 @@ tidy(Taps_2ttest)$p.value  # we can pull specific values from the tidy output
 # make CaffTaps data wide: pivot_wider needs an ID column so that it 
 # knows how to "match" values from the Caffeine and NoCaffeine groups
 CaffTaps_wide <- CaffTaps %>% 
-  mutate(id = rep(1:10, 2)) %>% #  "fake" IDs for pivot_wider step
+  mutate(id = c(rep(1:10, 2), rep(11:35, 2))) %>% #  "fake" IDs for pivot_wider step
   pivot_wider(names_from = "Group",
               values_from = "Taps")
 
 glimpse(CaffTaps_wide)
 
 t.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = "greater") %>% 
-  tidy() %>% gt()
+  tidy() %>% gt() %>% tab_options(table.font.size = 40)
 ```
-
-
 
 ## Why are the df's in the R output different?
 
 From many slides ago:
 
-* Statistical theory tells us that $t_{\bar{x}_1 - \bar{x}_2}$ follows a __student's t-distribution__ with 
-    * $df \approx$ smaller of $n_1-1$ and $n_2-1$
-    * this is a __conservative__ estimate (smaller than actual $df$ )
+-   Statistical theory tells us that $t_{\bar{x}_1 - \bar{x}_2}$ follows a **student's t-distribution** with
+    -   $df \approx$ smaller of $n_1-1$ and $n_2-1$
+    -   this is a **conservative** estimate (smaller than actual $df$ )
 
-The actual degrees of freedom are calculated using  Satterthwaite's method:
+The actual degrees of freedom are calculated using Satterthwaite's method:
 
 $$\nu = \frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}
 {(s_1^2/n_1)^2/(n_1 - 1) + (s_2^2/n_2)^2/(n_2-1) }
@@ -675,55 +645,51 @@ $$\nu = \frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}
 
 <hr>
 
-Verify the _p_-value in the R output using $\nu$ = 17.89012:
+Verify the *p*-value in the R output using $\nu$ = 17.89012:
 
 ```{r}
 pt(3.3942, df = 17.89012, lower.tail = FALSE)
-``` 
-
+```
 
 ## Pooled standard deviation estimate {.smaller}
 
-* Sometimes we have reasons to believe that the population SD's from the two groups are equal, such as when randomizing participants to two groups
+-   Sometimes we have reasons to believe that the population SD's from the two groups are equal, such as when randomizing participants to two groups
 
-::: columns
+::::: columns
 ::: {.column width="60%"}
-* In this case we can use a __pooled SD__:
+-   In this case we can use a **pooled SD**:
 
 $$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
 :::
 
 ::: {.column width="40%"}
-* $n_1$, $n_2$ are the sample sizes, and
-* $s_1$, $s_2$ are the sample standard deviations 
-* of the two groups 
+-   $n_1$, $n_2$ are the sample sizes, and
+-   $s_1$, $s_2$ are the sample standard deviations
+-   of the two groups
 :::
-:::
+:::::
 
-* We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error 
+-   We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error
 
 $$SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-
-__Test statistic__ with pooled SD:
+**Test statistic** with pooled SD:
 
 $$t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
-
 :::
 
 ::: {.column width="50%"}
-__CI__  with pooled SD:
+**CI** with pooled SD:
 
 $$(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
 :::
-:::
+:::::
 
-* The $t$ distribution degrees of freedom are now:
+-   The $t$ distribution degrees of freedom are now:
 
 $$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
-
 
 ```{r}
 #| echo: false
@@ -732,9 +698,7 @@ $$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
 sqrt(sp)
 ```
 
-
-
-## R: 2-sample t-test with pooled SD 
+## R: 2-sample t-test with pooled SD
 
 ```{r}
 # t-test with pooled SD
@@ -743,7 +707,7 @@ t.test(formula = Taps ~ Group,
        var.equal = TRUE,  # pooled SD 
        data = CaffTaps) %>% 
   tidy() %>% 
-  gt()
+  gt() %>% tab_options(table.font.size = 40)
 
 # t-test without pooled SD
 t.test(formula = Taps ~ Group, 
@@ -751,27 +715,23 @@ t.test(formula = Taps ~ Group,
        var.equal = FALSE,  # default, NOT pooled SD 
        data = CaffTaps) %>% 
   tidy() %>% 
-  gt()
+  gt() %>% tab_options(table.font.size = 40)
 ```
 
 Similar output in this case - why??
 
-
-
-
-## What's next? 
+## What's next?
 
 ::: {style="font-size: 90%;"}
 CI's and hypothesis tests for different scenarios:
 
 $$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
 
-Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
---|--|--|--|--|--|--
-10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
-10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$  | **$\frac{s_d}{\sqrt{n}}$**
-11 | 5.3 | [Diff in pop <br> means]{style="color:green"} | [$\mu_1-\mu_2$]{style="color:green"} | [Diff in sample <br> means]{style="color:green"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:green"}  | [**$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled**]{style="color:red"}
-12 | 8.1 | [Pop proportion]{style="color:darkblue"} | [$p$]{style="color:darkblue"} | [Sample prop]{style="color:darkblue"} | [$\widehat{p}$]{style="color:darkblue"}  | [**???**]{style="color:red"}
-12 | 8.2 | [Diff in pop <br> proportions]{style="color:darkblue"} | [$p_1-p_2$]{style="color:darkblue"} | [Diff in sample <br> proportions]{style="color:darkblue"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:darkblue"} | [**???**]{style="color:red"}
-
+| Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| 10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$ |
+| 10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$ | $\frac{s_d}{\sqrt{n}}$ |
+| 11 | 5.3 | [Diff in pop <br> means]{style="color:green"} | [$\mu_1-\mu_2$]{style="color:green"} | [Diff in sample <br> means]{style="color:green"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:green"} | [$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled]{style="color:red"} |
+| 12 | 8.1 | [Pop proportion]{style="color:darkblue"} | [$p$]{style="color:darkblue"} | [Sample prop]{style="color:darkblue"} | [$\widehat{p}$]{style="color:darkblue"} | [**???**]{style="color:red"} |
+| 12 | 8.2 | [Diff in pop <br> proportions]{style="color:darkblue"} | [$p_1-p_2$]{style="color:darkblue"} | [Diff in sample <br> proportions]{style="color:darkblue"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:darkblue"} | [**???**]{style="color:red"} |
 :::
