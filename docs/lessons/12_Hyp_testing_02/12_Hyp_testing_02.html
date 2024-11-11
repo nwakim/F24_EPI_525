@@ -406,16 +406,57 @@ Meike Niederhausen and Nicky Wakim
 
   <p class="date">2024-11-11</p>
 </section>
+<section>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define paired data and explain how it differs from independent samples in the context of statistical analysis.</li>
+<li>Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.</li>
+<li>Perform the appropriate hypothesis test for paired data and interpret the results.</li>
+</ol>
+</section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
 
 <img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
-<section id="last-time-inference-for-a-single-sample-mean" class="slide level2">
-<h2>Last time: Inference for a single-sample mean</h2>
+<section id="last-2-times-inference-for-a-single-sample-mean" class="slide level2">
+<h2>Last 2 times: Inference for a single-sample mean</h2>
+<div class="columns">
+<div class="column">
 <ul>
-<li><p>Inference for a single-sample mean includes confidence intervals and hypothesis testing</p></li>
-<li><p>More on the intuition of this!!</p></li>
+<li><p>Inference for a single-sample mean includes:</p>
+<ul>
+<li>Confidence intervals (Lesson 10)</li>
+<li>Hypothesis testing (Lesson 11)</li>
+</ul></li>
 </ul>
+</div><div class="column">
+<p>Single-sample mean:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-2-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-2-2.png" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-2-3.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="cell">
 <style type="text/css">
 .reveal code {
@@ -423,26 +464,6 @@ Meike Niederhausen and Nicky Wakim
 }
 </style>
 </div>
-</section>
-<section id="reference-steps-in-a-hypothesis-test" class="slide level2">
-<h2>Reference: Steps in a Hypothesis Test</h2>
-<ol type="1">
-<li><p>Check the <span style="color:#3070BF"><strong>assumptions</strong></span></p></li>
-<li><p>Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
-<li><p>Specify the <span style="color:#3070BF"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#3070BF"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#3070BF"><strong>hypotheses</strong></span></p>
-<ol type="1">
-<li>In symbols</li>
-<li>In words</li>
-<li>Alternative: one- or two-sided?</li>
-</ol></li>
-<li><p>Calculate the <span style="color:#3070BF"><strong>test statistic</strong></span>.</p></li>
-<li><p>Calculate the <span style="color:#3070BF"><strong>p-value</strong></span> based on the observed test statistic and its sampling distribution</p></li>
-<li><p>Write a <span style="color:#3070BF"><strong>conclusion</strong></span> to the hypothesis test</p>
-<ol type="1">
-<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
-<li>Write a conclusion in the context of the problem</li>
-</ol></li>
-</ol>
 </section>
 <section id="last-time-example-of-a-hypothesis-test-for-a-single-sample-mean" class="slide level2">
 <h2>Last time: example of a hypothesis test for a single-sample mean</h2>
@@ -961,20 +982,6 @@ H_0 &amp;: \mu = 98.6\\
 <li><strong>Conclusion:</strong> We reject the null hypothesis. The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
 </ol>
 </section>
-<section id="learning-objectives" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li>Define paired data and explain how it differs from independent samples in the context of statistical analysis.</li>
-<li>Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.</li>
-<li>Perform the appropriate hypothesis test for paired data.</li>
-</ol>
-</section>
-
-<section>
-<section id="learning-objective" class="title-slide slide level1 center">
-<h1>Learning Objective</h1>
-
-</section>
 <section id="different-types-of-inference-based-on-different-data-types" class="slide level2">
 <h2>Different types of inference based on different data types</h2>
 <table>
@@ -1046,20 +1053,37 @@ H_0 &amp;: \mu = 98.6\\
 </tr>
 </tbody>
 </table>
+</section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Define paired data and explain how it differs from independent samples in the context of statistical analysis.</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.</li>
+<li>Perform the appropriate hypothesis test for paired data and interpret the results.</li>
+</ol>
 </section>
 <section id="what-are-paired-data" class="slide level2">
 <h2>What are paired data?</h2>
 <ul>
-<li><p>Paired data: two sets of observations are uniquely paired so that an observation in one set matches an observation in the other</p></li>
-<li><p>Examples</p>
+<li><strong>Paired data:</strong> two sets of observations are uniquely paired so that an observation in one set matches an observation in the other</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Examples
 <ul>
 <li>Enroll pairs of identical twins to study a disease</li>
-<li>Enroll parent and child pairs to study cholesterol levels</li>
 <li>Enroll people and collect data before &amp; after an intervention (longitudinal data)</li>
-<li><span style="color:green">Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs.&nbsp;wearing a regular swimsuit</span></li>
-<li>Will use these data on homework</li>
+<li>Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs.&nbsp;wearing a regular swimsuit</li>
 </ul></li>
-<li><p>The paired data result in a natural measure of difference</p>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Paired data result in a <strong>natural measure of difference</strong>
 <ul>
 <li>Example: Enroll parent and child pairs to study cholesterol levels
 <ul>
@@ -1070,6 +1094,7 @@ H_0 &amp;: \mu = 98.6\\
 </section>
 <section id="for-paired-data-population-parameters-vs.-sample-statistics" class="slide level2">
 <h2>For paired data: Population parameters vs.&nbsp;sample statistics</h2>
+<p>&nbsp;</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span style="color:#C83532;"><strong>Population parameter</strong></span></p>
@@ -1095,63 +1120,55 @@ H_0 &amp;: \mu = 98.6\\
 <section id="can-a-vegetarian-diet-change-cholesterol-levels" class="slide level2">
 <h2>Can a vegetarian diet change cholesterol levels?</h2>
 <ul>
-<li><span style="color:#5BAFF8"><strong>We will illustrate how to perform a hypothesis test for paired data as we work through this example</strong></span></li>
+<li><span style="color:#5BAFF8"><strong>We will illustrate how to perform a hypothesis test and calculate a confidence interval for paired data as we work through this example</strong></span></li>
 <li><strong>Scenario</strong>:
 <ul>
 <li>43 non-vegetarian people were enrolled in a study and were instructed to adopt a vegetarian diet</li>
-<li>Cholesterol levels were measured before and after the diet</li>
+<li>Cholesterol levels were measured before and after the vegetarian diet</li>
 </ul></li>
-<li><strong>Question</strong>: <span style="color:purple">Is there evidence to support that cholesterol levels changed after the vegetarian diet?</span></li>
-<li>How to answer the question?
+</ul>
+<p>&nbsp;</p>
+<div class="lob">
+<p><strong>Question</strong>: Is there evidence to support that cholesterol levels changed after the vegetarian diet?</p>
+</div>
+<ul>
+<li>How do we answer this question?
 <ul>
 <li>First, calculate changes (differences) in cholesterol levels
 <ul>
 <li>We usually do after - before if the data are longitudinal</li>
 </ul></li>
+<li>Then find CI or perform hypothesis test</li>
 </ul></li>
 </ul>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p>Calculate <strong>CI for the<br>
-mean difference</strong> <span class="math inline">\(\delta\)</span>:</p>
-<p><span class="math display">\[\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\]</span></p>
-</div><div class="column" style="width:35%;">
-<p>Run a <strong>hypothesis test</strong></p>
-<p>Hypotheses</p>
-<p><span class="math display">\[\begin{align}
-H_0:&amp; \delta = \delta_0 \\
-H_A:&amp; \delta \neq \delta_0 \\
-(or&amp;~ &lt;, &gt;)
-\end{align}\]</span></p>
-</div><div class="column" style="width:35%;">
-<p><br> Test statistic</p>
-<p><span class="math display">\[
-t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
-\]</span></p>
-</div>
-</div>
 </section>
 <section id="eda-explore-the-cholesterol-data" class="slide level2">
 <h2>EDA: Explore the cholesterol data</h2>
 <ul>
-<li>Scenario:
-<ul>
-<li>43 non-vegetarian people were enrolled in a study</li>
-<li>They were instructed to adopt a vegetarian diet</li>
-<li>Cholesterol levels were measured before and after the diet</li>
-</ul></li>
+<li>Read in the data with <code>read.csv()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>chol <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"chol213_n40.csv"</span>))</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">glimpse</span>(chol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>chol <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"chol213_n40.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Take a look at the variables with <code>glimpse()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">glimpse</span>(chol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 43
 Columns: 2
-$ Before &lt;dbl&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 169…
-$ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 182…</code></pre>
+$ Before &lt;int&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 169…
+$ After  &lt;int&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 182…</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>chol <span class="sc">%&gt;%</span> <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>Get summary statistics with <code>get_summary_stats()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>chol <span class="sc">%&gt;%</span> <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="zskwhnmeto" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -1649,241 +1666,40 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 </section>
 <section id="eda-cholesterol-levels-before-and-after-vegetarian-diet" class="slide level2">
 <h2>EDA: Cholesterol levels before and after vegetarian diet</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Before:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-5-2.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>After:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After)) <span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After)) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-6-2.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="eda-spaghetti-plot-of-cholesterol-levels-before-after-diet" class="slide level2">
-<h2>EDA: Spaghetti plot of cholesterol levels before &amp; after diet</h2>
 <ul>
-<li>Visualize the individual before vs.&nbsp;after diet changes in cholesterol levels</li>
+<li>Behind the scenes: I changed the data from wide to long format to make this plot (to be covered in R08)</li>
 </ul>
-<p><span style="color:#BF396F"><em>What does this figure tell us?</em></span></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(chol_long, <span class="fu">aes</span>(<span class="at">x =</span> Cholesterol)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Time, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of individuals"</span>, <span class="at">x =</span> <span class="st">"Cholesterol level (mg/dL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-9-1.png" width="768" class="r-stretch quarto-figure-center"></section>
 <section id="eda-differences-in-cholesterol-levels-after---before-diet" class="slide level2">
 <h2>EDA: Differences in cholesterol levels: After - Before diet</h2>
 <ul>
-<li>How do we calculate the difference in cholesterol levels?</li>
+<li><p>How do we calculate the difference in cholesterol levels?</p></li>
+<li><p>I can create a new variable called “DiffChol” using the <code>mutate()</code> function (look more closely at this in R08)</p></li>
 </ul>
+<p>&nbsp;</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>chol <span class="ot">&lt;-</span> chol <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">mutate</span>(<span class="at">DiffChol =</span> After <span class="sc">-</span> Before) </span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">glimpse</span>(chol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>chol <span class="ot">&lt;-</span> chol <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(<span class="at">DiffChol =</span> After <span class="sc">-</span> Before) </span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">glimpse</span>(chol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 43
 Columns: 3
-$ Before   &lt;dbl&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 1…
-$ After    &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 1…
-$ DiffChol &lt;dbl&gt; -49, 10, -27, -13, -36, -19, -48, -21, -8, -16, -32, -28, 13,…</code></pre>
+$ Before   &lt;int&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 1…
+$ After    &lt;int&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 1…
+$ DiffChol &lt;int&gt; -49, 10, -27, -13, -36, -19, -48, -21, -8, -16, -32, -28, 13,…</code></pre>
 </div>
 </div>
 </section>
-<section id="poll-everywhere-question" class="slide level2">
-<h2>Poll Everywhere Question</h2>
-</section>
-<section id="eda-differences-in-cholesterol-levels-after---before-diet-1" class="slide level2">
-<h2>EDA: Differences in cholesterol levels: After - Before diet</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Before:</p>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
+<p>Summary stats including difference in cholesterol:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
-</div>
-</div>
-<p>After:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After)) <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>Difference:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>DiffChol)) <span class="sc">+</span> </span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="use-the-same-building-blocks-as-the-single-sample-mean-on-the-difference" class="slide level2">
-<h2>Use the same building blocks as the single-sample mean on the difference</h2>
-<ul>
-<li>Establish this</li>
-<li>Then can talk about how the hypothesis test is basically the same after that</li>
-</ul>
-</section></section>
-<section>
-<section id="learning-objective-1" class="title-slide slide level1 center">
-<h1>Learning Objective</h1>
-
-</section>
-<section id="reference-steps-in-a-hypothesis-test-1" class="slide level2">
-<h2>Reference: Steps in a Hypothesis Test</h2>
-<ol type="1">
-<li><p>Check the <span style="color:#3070BF"><strong>assumptions</strong></span></p></li>
-<li><p>Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
-<li><p>Specify the <span style="color:#3070BF"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#3070BF"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#3070BF"><strong>hypotheses</strong></span></p>
-<ol type="1">
-<li>In symbols</li>
-<li>In words</li>
-<li>Alternative: one- or two-sided?</li>
-</ol></li>
-<li><p>Calculate the <span style="color:#3070BF"><strong>test statistic</strong></span>.</p></li>
-<li><p>Calculate the <span style="color:#3070BF"><strong>p-value</strong></span> based on the observed test statistic and its sampling distribution</p></li>
-<li><p>Write a <span style="color:#3070BF"><strong>conclusion</strong></span> to the hypothesis test</p>
-<ol type="1">
-<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
-<li>Write a conclusion in the context of the problem</li>
-</ol></li>
-</ol>
-</section>
-<section id="step-1-check-the-assumptions" class="slide level2">
-<h2>Step 1: Check the <span style="color:#3070BF"><strong>assumptions</strong></span></h2>
-<ul>
-<li><p>The assumptions to run a hypothesis test on a sample are:</p>
-<ul>
-<li><strong>Independent pairs</strong>: Each pair is independent from all other pairs,</li>
-<li><strong>Approximately normal sample or big n</strong>: the distribution of the sample should be approximately normal, <em>or</em> the sample size should be at least 30</li>
-</ul></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>These are the criteria for the Central Limit Theorem in Lesson 09: Variability in estimates</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><p>In our example, we would check the assumptions with a statement:</p>
-<ul>
-<li>The pairs of observations are independent from each other and the number of pairs in our sample is 40. Thus, we can use CLT to approximate the sampling distribution.</li>
-</ul></li>
-</ul>
-</section>
-<section id="step-2-set-the-level-of-significance-alpha" class="slide level2">
-<h2>Step 2: Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></h2>
-<ul>
-<li><p><strong>Before doing a hypothesis test</strong>, we set a cut-off for how small the <span class="math inline">\(p\)</span>-value should be in order to reject <span class="math inline">\(H_0\)</span>.</p></li>
-<li><p>Typically choose <span class="math inline">\(\alpha = 0.05\)</span></p></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>See Lesson 11: Hypothesis Testing 1: Single-sample mean</li>
-</ul>
-</section>
-<section id="step-3-null-alternative-hypotheses-12" class="slide level2">
-<h2>Step 3: Null &amp; Alternative Hypotheses (1/2)</h2>
-<p>In statistics, a <strong>hypothesis</strong> is a statement about the value of an <strong>unknown population parameter</strong>.</p>
-<p>A <span style="color:#3070BF"><strong>hypothesis test</strong></span> consists of a test between two competing hypotheses:</p>
-<ol type="1">
-<li>a <span style="color:#3070BF"><strong>null</strong></span> hypothesis <span class="math inline">\(H_0\)</span> (pronounced “H-naught”) vs.</li>
-<li>an <span style="color:#3070BF"><strong>alternative</strong></span> hypothesis <span class="math inline">\(H_A\)</span> (also denoted <span class="math inline">\(H_1\)</span>)</li>
-</ol>
-<p>Example of hypotheses in words:</p>
-<span class="math display">\[\begin{aligned}
-H_0 &amp;: \text{The population mean difference in cholesterol levels after a vegetarian diet is zero}\\
-\text{vs. } H_A &amp;: \text{The population mean difference in cholesterol levels after a vegetarian diet is different than zero}
-\end{aligned}\]</span>
-<ol type="1">
-<li><span class="math inline">\(H_0\)</span> is a claim that there is “no effect” or “no difference of interest.”</li>
-<li><span class="math inline">\(H_A\)</span> is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis <span class="math inline">\(H_0\)</span></li>
-</ol>
-</section>
-<section id="step-3-null-alternative-hypotheses-22" class="slide level2">
-<h2>Step 3: Null &amp; Alternative Hypotheses (2/2)</h2>
-<div class="columns">
-<div class="column">
-<div class="blue">
-<div class="blue-ttl">
-<p>Notation for hypotheses (for paired data)</p>
-</div>
-<div class="blue-cont">
-<span class="math display">\[\begin{aligned}
-H_0 &amp;: \delta = \delta_0\\
-\text{vs. } H_A&amp;: \delta \neq, &lt;, \textrm{or}, &gt; \delta_0
-\end{aligned}\]</span>
-</div>
-</div>
-</div><div class="column">
-<div class="pink">
-<div class="pink-ttl">
-<p>Hypotheses test for example</p>
-</div>
-<div class="pink-cont">
-<span class="math display">\[\begin{aligned}
-H_0 &amp;: \delta = 0\\
-\text{vs. } H_A&amp;: \delta \neq 0
-\end{aligned}\]</span>
-</div>
-</div>
-</div>
-</div>
-<p>We call <span class="math inline">\(\delta_0\)</span> the <em>null value</em> (hypothesized population mean from <span class="math inline">\(H_0\)</span>)</p>
-<div class="columns">
-<div class="column" style="width:32%;">
-<p><span class="math inline">\(H_A: \delta \neq \delta_0\)</span></p>
-<ul>
-<li>not choosing a priori whether we believe the population mean is greater or less than the null value <span class="math inline">\(\delta_0\)</span></li>
-</ul>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:32%;">
-<p><span class="math inline">\(H_A: \delta &lt; \delta_0\)</span></p>
-<ul>
-<li>believe the population mean is <strong>less</strong> than the null value <span class="math inline">\(\delta_0\)</span></li>
-</ul>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:32%;">
-<p><span class="math inline">\(H_A: \delta &gt; \delta_0\)</span></p>
-<ul>
-<li>believe the population mean is <strong>greater</strong> than the null value <span class="math inline">\(\delta_0\)</span></li>
-</ul>
-</div>
-</div>
-<ul>
-<li><span class="math inline">\(H_A: \delta \neq \delta_0\)</span> is the most common option, since it’s the most conservative</li>
-</ul>
-</section>
-<section id="step-4-test-statistic" class="slide level2">
-<h2>Step 4: Test statistic</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>chol <span class="sc">%&gt;%</span> <span class="fu">select</span>(DiffChol) <span class="sc">%&gt;%</span> <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="yqfheibtzd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -2351,14 +2167,34 @@ H_0 &amp;: \delta = 0\\
     </tr>
   </thead>
   <tbody class="gt_table_body">
+    <tr><td headers="variable" class="gt_row gt_center">Before</td>
+<td headers="n" class="gt_row gt_right">43</td>
+<td headers="min" class="gt_row gt_right">132</td>
+<td headers="max" class="gt_row gt_right">250</td>
+<td headers="median" class="gt_row gt_right">197</td>
+<td headers="iqr" class="gt_row gt_right">56.5</td>
+<td headers="mean" class="gt_row gt_right">193.977</td>
+<td headers="sd" class="gt_row gt_right">34.098</td>
+<td headers="se" class="gt_row gt_right">5.200</td>
+<td headers="ci" class="gt_row gt_right">10.494</td></tr>
+    <tr><td headers="variable" class="gt_row gt_center">After</td>
+<td headers="n" class="gt_row gt_right">43</td>
+<td headers="min" class="gt_row gt_right">101</td>
+<td headers="max" class="gt_row gt_right">227</td>
+<td headers="median" class="gt_row gt_right">176</td>
+<td headers="iqr" class="gt_row gt_right">50.5</td>
+<td headers="mean" class="gt_row gt_right">172.209</td>
+<td headers="sd" class="gt_row gt_right">31.112</td>
+<td headers="se" class="gt_row gt_right">4.744</td>
+<td headers="ci" class="gt_row gt_right">9.575</td></tr>
     <tr><td headers="variable" class="gt_row gt_center">DiffChol</td>
 <td headers="n" class="gt_row gt_right">43</td>
 <td headers="min" class="gt_row gt_right">-49</td>
 <td headers="max" class="gt_row gt_right">13</td>
 <td headers="median" class="gt_row gt_right">-23</td>
-<td headers="iqr" class="gt_row gt_right">16</td>
+<td headers="iqr" class="gt_row gt_right">16.0</td>
 <td headers="mean" class="gt_row gt_right">-21.767</td>
-<td headers="sd" class="gt_row gt_right">13.89</td>
+<td headers="sd" class="gt_row gt_right">13.890</td>
 <td headers="se" class="gt_row gt_right">2.118</td>
 <td headers="ci" class="gt_row gt_right">4.275</td></tr>
   </tbody>
@@ -2368,77 +2204,205 @@ H_0 &amp;: \delta = 0\\
 </div>
 </div>
 </div>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><span class="math display">\[
-t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
-\]</span></p>
-<ul>
-<li><span style="color:#BF396F"><em>Calculate the test statistic.</em></span></li>
-<li><span style="color:#BF396F">Based on the value of the test statistic, do you think we are going to reject or fail to reject <span class="math inline">\(H_0\)</span>?</span></li>
-<li><span style="color:#BF396F">What probability distribution does the test statistic have?</span></li>
-<li><span style="color:#BF396F">Are the <strong>assumptions</strong> for a paired t-test satisfied so that we can use the probability distribution to calculate the <span class="math inline">\(p\)</span>-value??</span></li>
-</ul>
-</div><div class="column" style="width:40%;">
-
-</div>
-</div>
 </section>
-<section id="step-5-p-value" class="slide level2">
-<h2>Step 5: p-value</h2>
-<p>The <span style="color:#BF396F"><strong>p-value</strong></span> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</p>
+<section id="eda-differences-in-cholesterol-levels-after---before-diet-1" class="slide level2">
+<h2>EDA: Differences in cholesterol levels: After - Before diet</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="cell">
+<div class="cell" data-layout-align="center">
+<details>
+<summary>Code for below plot</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(chol_long, <span class="fu">aes</span>(<span class="at">x =</span> Cholesterol)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Time, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of individuals"</span>, <span class="at">x =</span> <span class="st">"Cholesterol level (mg/dL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-12-1.png" width="768"></p>
+</figure>
 </div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<p><span style="color:#BF396F">Calculate the <em>p</em>-value and shade in the area representing the p-value:</span></p>
+<p>Difference:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>DiffChol)) <span class="sc">+</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of individuals"</span>, </span>
+<span id="cb10-4"><a href="#cb10-4"></a>       <span class="at">x =</span> <span class="st">"Difference in cholesterol level (mg/dL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-13-1.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="step-6-conclusion-to-hypothesis-test" class="slide level2">
-<h2>Step 6: Conclusion to hypothesis test</h2>
+<section id="same-distribution-single-sample-mean-paired-mean-difference-12" class="slide level2">
+<h2>Same distribution: single-sample mean &amp; paired mean difference (1/2)</h2>
+<ul>
+<li>Even though we are looking at a difference, we have a single sample mean to represent the difference
+<ul>
+<li>Before, we had single sample mean <span class="math inline">\(\overline{x}\)</span></li>
+<li>Now we have a sample mean difference <span class="math inline">\(\overline{x}_d\)</span></li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Distribution for the mean difference for paired data is the same as the distribution for a single mean
+<ul>
+<li>Use the t-distribution to build our inference</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>We can use the same procedure for confidence intervals and hypothesis testing as we did for the single-sample mean</li>
+</ul>
+</section>
+<section id="same-distribution-single-sample-mean-paired-mean-difference-22" class="slide level2">
+<h2>Same distribution: single-sample mean &amp; paired mean difference (2/2)</h2>
+<div class="columns">
+<div class="column">
+<p>Single-sample mean:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-14-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-14-2.png" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-14-3.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<p>Paired mean difference:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-15-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-15-2.png" width="576"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-15-3.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="approaches-to-answer-a-research-question" class="slide level2">
+<h2>Approaches to answer a research question</h2>
+<ul>
+<li><strong>Research question is a generic form for paired data:</strong> Is there evidence to support that the population mean difference is different than <span class="math inline">\(\delta_0\)</span>?</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="green2">
+<div class="green2-ttl">
+<p>Calculate <strong>CI for the mean difference</strong> <span class="math inline">\(\delta\)</span>:</p>
+</div>
+<div class="green2-cont">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-16-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math display">\[\overline{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(t^*\)</span> = t-score that aligns with specific confidence interval</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="pink">
+<div class="pink-ttl">
+<p>Run a <strong>hypothesis test</strong>:</p>
+</div>
+<div class="pink-cont">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-17-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<p>Hypotheses</p>
 <p><span class="math display">\[\begin{align}
-H_0:&amp; \delta = 0 \\
-H_A:&amp; \delta \neq 0 \\
+H_0:&amp; \delta = \delta_0 \\
+H_A:&amp; \delta \neq \delta_0 \\
+(or&amp;~ &lt;, &gt;)
 \end{align}\]</span></p>
-<ul>
-<li>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(8.434775 \cdot 10 ^{-6}\)</span></li>
-<li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
-<li><span style="color:#BF396F">Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</span></li>
-</ul>
-<p><strong>Conclusion statement</strong>:</p>
-<ul>
-<li>Stats class conclusion
-<ul>
-<li>There is sufficient evidence that the (population) mean difference in cholesterol levels after a vegetarian diet is different from 0 mg/dL ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
-</ul></li>
-<li>More realistic manuscript conclusion:
-<ul>
-<li>After a vegetarian diet, cholesterol levels decreased by on average 19.54 mg/dL (SE = 3.43 mg/dL, 2-sided <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
-</ul></li>
-</ul>
+</div><div class="column">
+<p>Test statistic</p>
+<p><span class="math display">\[
+t_{\overline{x}_d} = \frac{\overline{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
-<section id="learning-ocjective" class="title-slide slide level1 center">
-<h1>Learning Ocjective</h1>
-
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define paired data and explain how it differs from independent samples in the context of statistical analysis.</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li>Perform the appropriate hypothesis test for paired data and interpret the results.</li>
+</ol>
 </section>
 <section id="ci-for-the-mean-difference-in-cholesterol-levels" class="slide level2">
 <h2>95% CI for the mean difference in cholesterol levels</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>chol <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">select</span>(DiffChol) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>chol <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">select</span>(DiffChol) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="jajxyktkxb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -2923,35 +2887,31 @@ H_A:&amp; \delta \neq 0 \\
 </div>
 </div>
 </div>
-<p>CI for <span class="math inline">\(\mu_d\)</span> (or <span class="math inline">\(\delta\)</span>): <span style="color:#BF396F"><em>How was</em> <span class="math inline">\(t^*\)</span> calculated?</span></p>
+<p>95% CI for population mean difference <span class="math inline">\(\delta\)</span>:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="math display">\[\begin{align}
-\bar{x}_d &amp;\pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
+\overline{x}_d &amp;\pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
 -21.767 &amp;\pm 2.018\cdot\frac{13.89}{\sqrt{43}}\\
 -21.767 &amp;\pm 2.018\cdot 2.118\\
 -21.767 &amp;\pm 4.275\\
 (-26.042&amp;, -17.493)
 \end{align}\]</span></p>
 </div><div class="column" style="width:50%;">
+<p>Used <span class="math inline">\(t^*\)</span> = <code>qt(0.975, df=42)</code> = 2.018</p>
+<p>&nbsp;</p>
 <p>Conclusion:<br>
-We are 95% that the (population) mean difference in cholesterol levels after a vegetarian diet is between -26.042 mg/dL and -17.493 mg/dL.</p>
-<ul>
-<li><span style="color:#BF396F"><em>Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?</em></span></li>
-</ul>
+We are 95% confident that the (population) mean difference in cholesterol levels after a vegetarian diet is between -26.042 mg/dL and -17.493 mg/dL.</p>
 </div>
 </div>
-</section></section>
-<section>
-<section id="running-a-paired-t-test-in-r" class="title-slide slide level1 center">
-<h1>Running a paired t-test in R</h1>
-
 </section>
-<section id="r-option-1-run-a-1-sample-t.test-using-the-paired-differences" class="slide level2">
-<h2>R option 1: Run a 1-sample <code>t.test</code> using the paired differences</h2>
-<p><span class="math inline">\(H_A: \delta \neq 0\)</span></p>
+<section id="ci-for-the-mean-difference-in-cholesterol-levels-using-r" class="slide level2">
+<h2>95% CI for the mean difference in cholesterol levels (using R)</h2>
+<ul>
+<li>We can use R to get those same values</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     One Sample t-test
@@ -2966,114 +2926,12 @@ mean of x
 -21.76744 </code></pre>
 </div>
 </div>
-<p><span style="color:#BF396F"><em>Run the code without <code>mu = 0</code>. Do the results change? Why or why not?</em></span></p>
-</section>
-<section id="r-option-2-run-a-2-sample-t.test-with-paired-true-option" class="slide level2">
-<h2>R option 2: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option</h2>
-<p><span class="math inline">\(H_A: \delta \neq 0\)</span></p>
-<ul>
-<li>For a 2-sample t-test we specify both <code>x=</code> and <code>y=</code></li>
-<li>Note: <code>mu = 0</code> is the default value and doesn’t need to be specified</li>
-</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>Before, <span class="at">y =</span> chol<span class="sc">$</span>After, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Paired t-test
-
-data:  chol$Before and chol$After
-t = 10.276, df = 42, p-value = 4.946e-13
-alternative hypothesis: true mean difference is not equal to 0
-95 percent confidence interval:
- 17.49259 26.04229
-sample estimates:
-mean difference 
-       21.76744 </code></pre>
-</div>
-</div>
-<p><span style="color:#BF396F"><em>What is different in the output compared to option 1?</em></span></p>
-</section>
-<section id="r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula-12" class="slide level2">
-<h2>R option 3: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option, but using the long data and a “formula” (1/2)</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li>The data have to be in a <code>long</code> format for option 3, where each person has 2 rows: one for Before and one for After.
-<ul>
-<li>The long dataset <code>chol_long</code> was created for the slide “EDA: Spaghetti plot of cholesterol levels before &amp; after diet”.</li>
-<li>See the code to create it there.</li>
-</ul></li>
-<li><span style="color:#BF396F"><em>What information is being stored in each of the columns?</em></span></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># first 16 rows of long data:</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="fu">head</span>(chol_long, <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 16 × 3
-   ID    Time   Cholesterol
-   &lt;fct&gt; &lt;fct&gt;        &lt;dbl&gt;
- 1 1     Before         195
- 2 1     After          146
- 3 2     Before         145
- 4 2     After          155
- 5 3     Before         205
- 6 3     After          178
- 7 4     Before         159
- 8 4     After          146
- 9 5     Before         244
-10 5     After          208
-11 6     Before         166
-12 6     After          147
-13 7     Before         250
-14 7     After          202
-15 8     Before         236
-16 8     After          215</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula-22" class="slide level2">
-<h2>R option 3: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option, but using the long data and a “formula” (2/2)</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div style="font-size: 90%;">
-<ul>
-<li>Use the usual <code>t.test</code></li>
-<li>What’s different is that
-<ul>
-<li>instead of specifying the variables with <code>x=</code> and <code>y=</code>,</li>
-<li>we give a <strong>formula</strong> of the form <code>y ~ x</code> using <em>just the variable names</em>,</li>
-<li>and then specify the name of the dataset using <code>data =</code></li>
-</ul></li>
-<li>This method is often used in practice, and more similar to the coding style of running a regression model (BSTA 512 &amp; 513)</li>
-</ul>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># using long data </span></span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="co"># with columns Cholesterol &amp; Time</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a><span class="co"># t.test(Cholesterol ~ Time, </span></span>
-<span id="cb22-4"><a href="#cb22-4"></a><span class="co">#        paired = TRUE, </span></span>
-<span id="cb22-5"><a href="#cb22-5"></a><span class="co">#        data = chol_long)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><span style="color:#BF396F"><em>What is different in the output compared to option 1?</em></span></li>
-<li><span style="color:#BF396F"><em>Rerun the test using <code>Time ~ Cholesterol</code> (switch the variables). What do you get?</em></span></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="compare-the-3-options" class="slide level2">
-<h2>Compare the 3 options</h2>
-<ul>
-<li><span style="color:#BF396F"><em>How is the code similar and different for the 3 options?</em></span></li>
-<li><span style="color:#BF396F"><em>Given a dataset, how would you choose which of the 3 options to use?</em></span></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># option 1</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)<span class="co"># tidy from broom package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>We can tidy the output</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">35</span>) <span class="co"># use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 
 <div id="fkcopadtpi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -3099,7 +2957,7 @@ mean difference
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -3553,8 +3411,227 @@ mean difference
 </table>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># option 2</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>Before, <span class="at">y =</span> chol<span class="sc">$</span>After, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">paired =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Conclusion:<br>
+We are 95% confident that the (population) mean difference in cholesterol levels after a vegetarian diet is between -26.042 mg/dL and -17.493 mg/dL.</p>
+</section>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
+</section></section>
+<section>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Define paired data and explain how it differs from independent samples in the context of statistical analysis.</li>
+<li>Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.</li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Perform the appropriate hypothesis test for paired data and interpret the results.</li>
+</ol>
+</div>
+</section>
+<section id="reference-steps-in-a-hypothesis-test" class="slide level2">
+<h2>Reference: Steps in a Hypothesis Test</h2>
+<ol type="1">
+<li><p>Check the <span style="color:#3070BF"><strong>assumptions</strong></span></p></li>
+<li><p>Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
+<li><p>Specify the <span style="color:#3070BF"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#3070BF"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#3070BF"><strong>hypotheses</strong></span></p>
+<ol type="1">
+<li>In symbols</li>
+<li>In words</li>
+<li>Alternative: one- or two-sided?</li>
+</ol></li>
+<li><p>Calculate the <span style="color:#3070BF"><strong>test statistic</strong></span>.</p></li>
+<li><p>Calculate the <span style="color:#3070BF"><strong>p-value</strong></span> based on the observed test statistic and its sampling distribution</p></li>
+<li><p>Write a <span style="color:#3070BF"><strong>conclusion</strong></span> to the hypothesis test</p>
+<ol type="1">
+<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+<li>Write a conclusion in the context of the problem</li>
+</ol></li>
+</ol>
+</section>
+<section id="step-1-check-the-assumptions" class="slide level2">
+<h2>Step 1: Check the <span style="color:#3070BF"><strong>assumptions</strong></span></h2>
+<ul>
+<li><p>The assumptions to run a hypothesis test on a sample are:</p>
+<ul>
+<li><strong>Independent pairs</strong>: Each pair is independent from all other pairs,</li>
+<li><strong>Approximately normal sample or big n</strong>: the distribution of the sample should be approximately normal, <em>or</em> the sample size should be at least 30</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>These are the criteria for the Central Limit Theorem in Lesson 09: Variability in estimates</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>In our example, we would check the assumptions with a statement:</p>
+<ul>
+<li>The pairs of observations are independent from each other and the number of pairs in our sample is 43. Thus, we can use CLT to approximate the sampling distribution.</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-2-set-the-level-of-significance-alpha" class="slide level2">
+<h2>Step 2: Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></h2>
+<ul>
+<li><p><strong>Before doing a hypothesis test</strong>, we set a cut-off for how small the <span class="math inline">\(p\)</span>-value should be in order to reject <span class="math inline">\(H_0\)</span>.</p></li>
+<li><p>Typically choose <span class="math inline">\(\alpha = 0.05\)</span></p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>See Lesson 11: Hypothesis Testing 1: Single-sample mean</li>
+</ul>
+</section>
+<section id="step-3-null-alternative-hypotheses-12" class="slide level2">
+<h2>Step 3: Null &amp; Alternative Hypotheses (1/2)</h2>
+<p>In statistics, a <strong>hypothesis</strong> is a statement about the value of an <strong>unknown population parameter</strong>.</p>
+<p>A <span style="color:#3070BF"><strong>hypothesis test</strong></span> consists of a test between two competing hypotheses:</p>
+<ol type="1">
+<li>a <span style="color:#3070BF"><strong>null</strong></span> hypothesis <span class="math inline">\(H_0\)</span> (pronounced “H-naught”) vs.</li>
+<li>an <span style="color:#3070BF"><strong>alternative</strong></span> hypothesis <span class="math inline">\(H_A\)</span> (also denoted <span class="math inline">\(H_1\)</span>)</li>
+</ol>
+<p>Example of hypotheses in words:</p>
+<span class="math display">\[\begin{aligned}
+H_0 :&amp; \text{The population mean difference in cholesterol levels after a vegetarian diet is zero}\\
+\text{vs. } H_A :&amp; \text{The population mean difference in cholesterol levels after a vegetarian diet is} \\
+&amp; \text{ different than zero}
+\end{aligned}\]</span>
+<ol type="1">
+<li><span class="math inline">\(H_0\)</span> is a claim that there is “no effect” or “no difference of interest.”</li>
+<li><span class="math inline">\(H_A\)</span> is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis <span class="math inline">\(H_0\)</span></li>
+</ol>
+</section>
+<section id="step-3-null-alternative-hypotheses-22" class="slide level2">
+<h2>Step 3: Null &amp; Alternative Hypotheses (2/2)</h2>
+<div class="columns">
+<div class="column">
+<div class="blue">
+<div class="blue-ttl">
+<p>Notation for hypotheses (for paired data)</p>
+</div>
+<div class="blue-cont">
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \delta = \delta_0\\
+\text{vs. } H_A&amp;: \delta \neq, &lt;, \textrm{or}, &gt; \delta_0
+\end{aligned}\]</span>
+</div>
+</div>
+</div><div class="column">
+<div class="pink">
+<div class="pink-ttl">
+<p>Hypotheses test for example</p>
+</div>
+<div class="pink-cont">
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \delta = 0\\
+\text{vs. } H_A&amp;: \delta \neq 0
+\end{aligned}\]</span>
+</div>
+</div>
+</div>
+</div>
+<p>We call <span class="math inline">\(\delta_0\)</span> the <em>null value</em> (hypothesized population mean difference from <span class="math inline">\(H_0\)</span>)</p>
+<div class="columns">
+<div class="column" style="width:32%;">
+<p><span class="math inline">\(H_A: \delta \neq \delta_0\)</span></p>
+<ul>
+<li>not choosing a priori whether we believe the population mean difference is greater or less than the null value <span class="math inline">\(\delta_0\)</span></li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:32%;">
+<p><span class="math inline">\(H_A: \delta &lt; \delta_0\)</span></p>
+<ul>
+<li>believe the population mean difference is <strong>less</strong> than the null value <span class="math inline">\(\delta_0\)</span></li>
+</ul>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:32%;">
+<p><span class="math inline">\(H_A: \delta &gt; \delta_0\)</span></p>
+<ul>
+<li>believe the population mean difference is <strong>greater</strong> than the null value <span class="math inline">\(\delta_0\)</span></li>
+</ul>
+</div>
+</div>
+<ul>
+<li><span class="math inline">\(H_A: \delta \neq \delta_0\)</span> is the most common option, since it’s the most conservative</li>
+</ul>
+</section>
+<section id="step-4-test-statistic-where-we-do-not-know-population-sd" class="slide level2">
+<h2>Step 4: Test statistic (where we do not know population sd)</h2>
+<p>From our example: Recall that <span class="math inline">\(\overline{x}_d = -21.767\)</span>, <span class="math inline">\(s_d=13.89\)</span>, and <span class="math inline">\(n=43\)</span></p>
+<p>The test statistic is:</p>
+<p><span class="math display">\[
+t_{\overline{x}_d} = \frac{\overline{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
+= \frac{-21.767 - 0}{\frac{13.89}{\sqrt{43}}}
+= -10.276
+\]</span></p>
+<ul>
+<li>Statistical theory tells us that <span class="math inline">\(t_{\overline{x}}\)</span> follows a <strong>Student’s t-distribution</strong> with <span class="math inline">\(df = n-1 = 42\)</span></li>
+</ul>
+
+<img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="step-5-p-value" class="slide level2">
+<h2>Step 5: p-value</h2>
+<p>The <span style="color:#BF396F"><strong>p-value</strong></span> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-24-1.png" width="864"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="12_Hyp_testing_02_files/figure-revealjs/unnamed-chunk-25-1.png" width="864"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Calculate the <em>p</em>-value using the <strong>Student’s t-distribution</strong> with <span class="math inline">\(df = n-1 = 43-1=42\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{p-value} &amp;=P(T \leq -10.276) + P(T \geq 10.276)\\
+&amp;= 4.946032 \times 10^{-13} &lt; 0.001
+\end{aligned}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pt</span>(<span class="sc">-</span><span class="fl">10.276</span>, <span class="at">df =</span> <span class="dv">43-1</span>, </span>
+<span id="cb15-2"><a href="#cb15-2"></a>     <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.946032e-13</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-5-test-statistic-and-p-value-together-using-t.test" class="slide level2">
+<h2>Step 4-5: test statistic and p-value together using <code>t.test()</code></h2>
+<ul>
+<li>I will have reference slides at the end of this lesson to show other options</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  chol$DiffChol
+t = -10.276, df = 42, p-value = 4.946e-13
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ -26.04229 -17.49259
+sample estimates:
+mean of x 
+-21.76744 </code></pre>
+</div>
+</div>
+<ul>
+<li>We can “tidy” the results</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>) <span class="co"># use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="ybwppxvyco" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -4020,13 +4097,13 @@ mean difference
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td headers="estimate" class="gt_row gt_right">21.76744</td>
-<td headers="statistic" class="gt_row gt_right">10.27603</td>
+    <tr><td headers="estimate" class="gt_row gt_right">-21.76744</td>
+<td headers="statistic" class="gt_row gt_right">-10.27603</td>
 <td headers="p.value" class="gt_row gt_right">4.945625e-13</td>
 <td headers="parameter" class="gt_row gt_right">42</td>
-<td headers="conf.low" class="gt_row gt_right">17.49259</td>
-<td headers="conf.high" class="gt_row gt_right">26.04229</td>
-<td headers="method" class="gt_row gt_left">Paired t-test</td>
+<td headers="conf.low" class="gt_row gt_right">-26.04229</td>
+<td headers="conf.high" class="gt_row gt_right">-17.49259</td>
+<td headers="method" class="gt_row gt_left">One Sample t-test</td>
 <td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
   </tbody>
   
@@ -4034,42 +4111,107 @@ mean difference
 </table>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># option 3</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="co">#t.test(Cholesterol ~ Time, paired = TRUE, data = chol_long) %&gt;% tidy() %&gt;% gt() %&gt;% tab_options(table.font.size = 40)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="poll-everywhere-question-3" class="slide level2">
+<h2>Poll Everywhere Question 3</h2>
+</section>
+<section id="step-6-conclusion-to-hypothesis-test" class="slide level2">
+<h2>Step 6: Conclusion to hypothesis test</h2>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \delta = \delta_0\\
+\text{vs. } H_A&amp;: \delta \neq \delta_0
+\end{aligned}\]</span>
+<ul>
+<li>Need to compare p-value to our selected <span class="math inline">\(\alpha = 0.05\)</span></li>
+<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+</ul>
+<p><br>
+</p>
+<div class="columns">
+<div class="column">
+<div class="pink2">
+<div class="pink2-ttl">
+<p>If <span class="math inline">\(\text{p-value} &lt; \alpha\)</span>, reject the null hypothesis</p>
+</div>
+<div class="pink2-cont">
+<ul>
+<li>There is sufficient evidence that the (population) mean difference is discernibly different from <span class="math inline">\(\delta_0\)</span> ( <span class="math inline">\(p\)</span>-value = ___)</li>
+<li>The mean difference (insert measure) in the sample was <span class="math inline">\(\overline{x}_d\)</span> (95% CI ___,___ ), which is discernibly different from <span class="math inline">\(\delta_0\)</span> ( <span class="math inline">\(p\)</span>-value = ____).</li>
+</ul>
+</div>
+</div>
+</div><div class="column">
+<div class="green2">
+<div class="green2-ttl">
+<p>If <span class="math inline">\(\text{p-value} \geq \alpha\)</span>, fail to reject the null hypothesis</p>
+</div>
+<div class="green2-cont">
+<ul>
+<li>There is insufficient evidence that the (population) mean difference of (insert measure) is discernibly different from <span class="math inline">\(\delta_0\)</span> ( <span class="math inline">\(p\)</span>-value = ___)</li>
+<li>The average (insert measure) in the sample was <span class="math inline">\(\overline{x}_d\)</span> (95% CI ___,___), which is not discernibly different from <span class="math inline">\(\delta_0\)</span> ( <span class="math inline">\(p\)</span>-value = ____).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-conclusion-to-hypothesis-test-1" class="slide level2">
+<h2>Step 6: Conclusion to hypothesis test</h2>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \delta = 0\\
+\text{vs. } H_A&amp;: \delta \neq 0
+\end{aligned}\]</span>
+<ul>
+<li>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(4.9456253\times 10^{-13}\)</span></li>
+<li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
+<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+</ul>
+<p><strong>Conclusion statement</strong>:</p>
+<ul>
+<li>Stats class conclusion (and good enough for our class!)
+<ul>
+<li>There is sufficient evidence that the (population) mean difference in cholesterol levels after a vegetarian diet is different from 0 mg/dL ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
+</ul></li>
+<li>More realistic manuscript conclusion:
+<ul>
+<li>After a vegetarian diet, cholesterol levels decreased by on average 21.77 mg/dL (95% CI: 17.49, 26.04), which is discernably different than 0 (<span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
+</ul></li>
+</ul>
 </section>
 <section id="what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="slide level2">
 <h2>What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</h2>
+<div class="pink">
+<div class="pink-ttl">
+<p>Example of hypothesis test</p>
+</div>
+<div class="pink-cont">
+<p>Is there evidence to support that cholesterol levels decreased after the vegetarian diet?</p>
+</div>
+</div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span style="color:#BF396F">What changes in each of the steps?</span></p>
 <ol type="1">
-<li><p>Set the <span style="color:#BF396F"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
-<li><p>Specify the <span style="color:#BF396F"><strong>hypotheses</strong></span> <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span></p>
-<ul>
-<li>Alternative: one- or two-sided?</li>
-</ul></li>
-<li><p>Calculate the <span style="color:#BF396F"><strong>test statistic</strong></span>.</p></li>
-<li><p>Calculate the <span style="color:#BF396F"><strong>p-value</strong></span> based on the observed test statistic and its sampling distribution</p></li>
-<li><p>Write a <span style="color:#BF396F"><strong>conclusion</strong></span> to the hypothesis test</p></li>
+<li><strong>Assumptions:</strong> The pairs of observations are independent from each other and the number of pairs in our sample is 43. Thus, we can use CLT to approximate the sampling distribution.</li>
 </ol>
-</div><div class="column" style="width:50%;">
-
+<p>4-5.</p>
+</div><div class="column" style="width:25%;">
+<ol start="2" type="1">
+<li>Set <span class="math inline">\(\alpha = 0.05\)</span></li>
+</ol>
+</div><div class="column" style="width:25%;">
+<ol start="3" type="1">
+<li><p><strong>Hypothesis:</strong></p>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \delta = 0\\
+\text{vs. } H_A&amp;: \delta &lt; 0
+\end{aligned}\]</span></li>
+</ol>
 </div>
 </div>
-</section>
-<section id="r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="slide level2">
-<h2>R: What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</h2>
-<ul>
-<li><span style="color:#BF396F"><em>Which of the 3 options to run a paired t-test in R is being used below?</em></span></li>
-<li><span style="color:#BF396F"><em>How did the code change to account for testing a decrease in cholesterol levels?</em></span></li>
-<li><span style="color:#BF396F"><em>Which values in the output changed compared to testing for a change in cholesterol levels? How did they change?</em></span></li>
-</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># alternative = c("two.sided", "less", "greater")</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">alternative =</span> <span class="st">"less"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb26-4"><a href="#cb26-4"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>chol_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">alternative =</span> <span class="st">"less"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="fu">tidy</span>(chol_ttest) <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">36</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="zcwalwlqbq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -4095,7 +4237,7 @@ mean difference
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -4550,110 +4692,60 @@ mean difference
 </div>
 </div>
 </div>
-</section>
-<section id="one-sided-confidence-intervals" class="slide level2">
-<h2>One-sided confidence intervals</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>Formula for a <strong>2-sided</strong> (1- <span class="math inline">\(\alpha\)</span> )% <strong>CI</strong>:</p>
-<p><span class="math display">\[\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}\]</span></p>
-<ul>
-<li><span class="math inline">\(t^*\)</span> = <code>qt(1-alpha/2, df = n-1)</code></li>
-<li><span class="math inline">\(\alpha\)</span> is split over both tails of the distribution</li>
-</ul>
-</div><div class="column" style="width:3%;">
+<ol start="6" type="1">
+<li><strong>Conclusion:</strong> We reject the null hypothesis. There is sufficient evidence that cholesterol levels decreased with the vegetarian diet ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
+</ol>
+</section></section>
+<section>
+<section id="reference-ways-to-run-a-paired-t-test-in-r" class="title-slide slide level1 center">
+<h1>Reference: Ways to run a paired t-test in R</h1>
 
-</div><div class="column" style="width:57%;">
-<p>A <strong>one-sided</strong> (1- <span class="math inline">\(\alpha\)</span> )% <strong>CI</strong> has all (1- <span class="math inline">\(\alpha\)</span> )% on just the left or the right tail of the distribution:</p>
-<p><span class="math display">\[\begin{align}
-(\bar{x} - t^*\cdot\frac{s}{\sqrt{n}},~\infty) \\
-(\infty,~\bar{x} + t^*\cdot\frac{s}{\sqrt{n}})
-\end{align}\]</span></p>
-<ul>
-<li><span class="math inline">\(t^*\)</span> = <code>qt(1-alpha, df = n-1)</code> for a<br>
-1-sided lower (1- <span class="math inline">\(\alpha\)</span> )% CI</li>
-<li><span class="math inline">\(t^*\)</span> = <code>qt(alpha, df = n-1)</code> for a 1-sided upper (1- <span class="math inline">\(\alpha\)</span> )% CI</li>
-<li>A 1-sided CI gives estimates for a lower or upper bound of the population mean.</li>
-<li>See Section 4.2.3 of the V&amp;H book for more</li>
-</ul>
-</div>
-</div>
 </section>
-<section id="today-whats-next" class="slide level2">
-<h2><span style="color:green">Today</span> &amp; <span style="color:darkblue">what’s next?</span></h2>
-<div style="font-size: 90%;">
-<p>CI’s and hypothesis tests for different scenarios:</p>
-<p><span class="math display">\[\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}\]</span></p>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Day</th>
-<th>Book</th>
-<th>Population <br> parameter</th>
-<th>Symbol</th>
-<th>Point estimate</th>
-<th>Symbol</th>
-<th>SE</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10</td>
-<td>5.1</td>
-<td><span style="color:green">Pop mean</span></td>
-<td><span style="color:green"><span class="math inline">\(\mu\)</span></span></td>
-<td><span style="color:green">Sample mean</span></td>
-<td><span style="color:green"><span class="math inline">\(\bar{x}\)</span></span></td>
-<td><span style="color:red"><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></span></td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>5.2</td>
-<td><span style="color:green">Pop mean of paired diff</span></td>
-<td><span style="color:green"><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></span></td>
-<td><span style="color:green">Sample mean of paired diff</span></td>
-<td><span style="color:green"><span class="math inline">\(\bar{x}_{d}\)</span></span></td>
-<td><span style="color:red"><span class="math inline">\(\frac{s_d}{\sqrt{n}}\)</span></span></td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>5.3</td>
-<td><span style="color:darkblue">Diff in pop <br> means</span></td>
-<td><span style="color:darkblue"><span class="math inline">\(\mu_1-\mu_2\)</span></span></td>
-<td><span style="color:darkblue">Diff in sample <br> means</span></td>
-<td><span style="color:darkblue"><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></span></td>
-<td><span style="color:red"><strong>???</strong></span></td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>8.1</td>
-<td>Pop proportion</td>
-<td><span class="math inline">\(p\)</span></td>
-<td>Sample prop</td>
-<td><span class="math inline">\(\widehat{p}\)</span></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>12</td>
-<td>8.2</td>
-<td>Diff in pop <br> proportions</td>
-<td><span class="math inline">\(p_1-p_2\)</span></td>
-<td>Diff in sample <br> proportions</td>
-<td><span class="math inline">\(\widehat{p}_1-\widehat{p}_2\)</span></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="r-option-1-run-a-1-sample-t.test-using-the-paired-differences" class="slide level2">
+<h2>R option 1: Run a 1-sample <code>t.test</code> using the paired differences</h2>
+<p><span class="math inline">\(H_A: \delta \neq 0\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  chol$DiffChol
+t = -10.276, df = 42, p-value = 4.946e-13
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ -26.04229 -17.49259
+sample estimates:
+mean of x 
+-21.76744 </code></pre>
 </div>
+</div>
+<p><span style="color:#BF396F"><em>Run the code without <code>mu = 0</code>. Do the results change? Why or why not?</em></span></p>
+</section>
+<section id="r-option-2-run-a-2-sample-t.test-with-paired-true-option" class="slide level2">
+<h2>R option 2: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option</h2>
+<p><span class="math inline">\(H_A: \delta \neq 0\)</span></p>
+<ul>
+<li>For a 2-sample t-test we specify both <code>x=</code> and <code>y=</code></li>
+<li>Note: <code>mu = 0</code> is the default value and doesn’t need to be specified</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>Before, <span class="at">y =</span> chol<span class="sc">$</span>After, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  chol$Before and chol$After
+t = 10.276, df = 42, p-value = 4.946e-13
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 17.49259 26.04229
+sample estimates:
+mean difference 
+       21.76744 </code></pre>
+</div>
+</div>
+<p><span style="color:#BF396F"><em>What is different in the output compared to option 1?</em></span></p>
 
 <div class="footer footer-default">
 <p>Lesson 12 Slides</p>

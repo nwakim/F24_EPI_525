@@ -53,45 +53,79 @@ BodyTemps <- read.csv(here::here("data", "BodyTemperatures.csv"))
 set.seed(456)
 ```
 
+# Learning Objectives
 
+1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
+2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
+3.  Perform the appropriate hypothesis test for paired data and interpret the results.
 
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
-## Last time: Inference for a single-sample mean
+## Last 2 times: Inference for a single-sample mean
 
-- Inference for a single-sample mean includes confidence intervals and hypothesis testing
+::: columns
+::: column
+- Inference for a single-sample mean includes:
 
-- More on the intuition of this!!
+  - Confidence intervals (Lesson 10)
+  - Hypothesis testing (Lesson 11)
+:::
+::: column
+Single-sample mean:
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+#| 
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(expression(mu[0]), expression(bar(x))))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+:::
+:::
 
 ```{css, echo=FALSE}
 .reveal code {
   max-height: 100% !important;
 }
 ```
-
-## Reference: Steps in a Hypothesis Test
-
-1.  Check the [**assumptions**]{style="color:#3070BF"}
-
-2.  Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
-
-3.  Specify the [**null**]{style="color:#3070BF"} ( $H_0$ ) and [**alternative**]{style="color:#3070BF"} ( $H_A$ ) [**hypotheses**]{style="color:#3070BF"}
-
-    1.  In symbols
-    2.  In words
-    3.  Alternative: one- or two-sided?
-
-4.  Calculate the [**test statistic**]{style="color:#3070BF"}.
-
-5.  Calculate the [**p-value**]{style="color:#3070BF"} based on the observed test statistic and its sampling distribution
-
-6.  Write a [**conclusion**]{style="color:#3070BF"} to the hypothesis test
-
-    1.  Do we reject or fail to reject $H_0$?
-    2.  Write a conclusion in the context of the problem
-
 
 ## Last time: example of a hypothesis test for a single-sample mean
 
@@ -133,15 +167,6 @@ tidy(temps_ttest) %>% gt() %>% tab_options(table.font.size = 36)
 
 6.  **Conclusion:** We reject the null hypothesis. The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value \< 0.001).
 
-
-# Learning Objectives
-
-1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
-2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
-3.  Perform the appropriate hypothesis test for paired data.
-
-# Learning Objective
-
 ## Different types of inference based on different data types
 
 | Lesson | Section | Population parameter | Symbol (pop) | Point estimate | Symbol (sample) | SE |
@@ -152,22 +177,35 @@ tidy(temps_ttest) %>% gt() %>% tab_options(table.font.size = 36)
 | 15 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$ |  |
 | 15 | 8.2 | Diff in pop prop's | $p_1-p_2$ | Diff in sample prop's | $\widehat{p}_1-\widehat{p}_2$ |  |
 
+# Learning Objectives
+
+::: lob
+1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
+:::
+
+2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
+3.  Perform the appropriate hypothesis test for paired data and interpret the results.
+
 ## What are paired data?
 
-- Paired data: two sets of observations are uniquely paired so that an observation in one set matches an observation in the other
+- **Paired data:** two sets of observations are uniquely paired so that an observation in one set matches an observation in the other
+
+ 
 
 - Examples
   -   Enroll pairs of identical twins to study a disease
-  -   Enroll parent and child pairs to study cholesterol levels
   -   Enroll people and collect data before & after an intervention (longitudinal data)
-  -   [Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit]{style="color:green"}
-    -   Will use these data on homework
+  -   Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit
 
-- The paired data result in a natural measure of difference
+ 
+
+- Paired data result in a **natural measure of difference**
   - Example: Enroll parent and child pairs to study cholesterol levels
     - We can look at the difference in cholesterol levels between parent and child
     
 ## For paired data: Population parameters vs. sample statistics
+
+ 
 
 ::: columns
 ::: {.column width="50%"}
@@ -200,96 +238,45 @@ tidy(temps_ttest) %>% gt() %>% tab_options(table.font.size = 36)
 
 ## Can a vegetarian diet change cholesterol levels?
 
--   [**We will illustrate how to perform a hypothesis test for paired data as we work through this example**]{style="color:#5BAFF8"}
+-   [**We will illustrate how to perform a hypothesis test and calculate a confidence interval for paired data as we work through this example**]{style="color:#5BAFF8"}
 -   **Scenario**:
     -   43 non-vegetarian people were enrolled in a study and were instructed to adopt a vegetarian diet
-    -   Cholesterol levels were measured before and after the diet
--   **Question**: [Is there evidence to support that cholesterol levels changed after the vegetarian diet?]{style="color:purple"}
--   How to answer the question?
+    -   Cholesterol levels were measured before and after the vegetarian diet
+    
+ 
+    
+::: lob
+**Question**: Is there evidence to support that cholesterol levels changed after the vegetarian diet?
+:::
+
+-   How do we answer this question?
     -   First, calculate changes (differences) in cholesterol levels
         -   We usually do after - before if the data are longitudinal
-
-:::::: columns
-::: {.column width="30%"}
-Calculate **CI for the\
-mean difference** $\delta$:
-
-$$\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}$$
-:::
-
-::: {.column width="35%"}
-Run a **hypothesis test**
-
-Hypotheses
-
-\begin{align}
-H_0:& \delta = \delta_0 \\
-H_A:& \delta \neq \delta_0 \\
-(or&~ <, >)
-\end{align}
-:::
-
-::: {.column width="35%"}
-<br> Test statistic
-
-$$
-t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
-$$
-:::
-::::::
-
+    - Then find CI or perform hypothesis test 
+        
 ## EDA: Explore the cholesterol data
 
--   Scenario:
-    -   43 non-vegetarian people were enrolled in a study
-    -   They were instructed to adopt a vegetarian diet
-    -   Cholesterol levels were measured before and after the diet
-
+- Read in the data with `read.csv()`
 ```{r}
-chol <- read_csv(here::here("data", "chol213_n40.csv"))
+chol <- read.csv(here::here("data", "chol213_n40.csv"))
+```
+
+- Take a look at the variables with `glimpse()`
+```{r}
 glimpse(chol)
-chol %>% get_summary_stats(type = "common") %>% gt() %>% 
-  tab_options(table.font.size = 40)
 ```
 
-## EDA: Cholesterol levels before and after vegetarian diet
+ 
 
-::::: columns
-::: {.column width="50%"}
-Before:
+- Get summary statistics with `get_summary_stats()`
 ```{r}
-#| fig.width: 10
-#| fig.height: 3
-ggplot(chol, aes(x=Before)) +
-  geom_histogram()
-ggplot(chol, aes(x=Before)) +
-  geom_boxplot()
+chol %>% get_summary_stats(type = "common") %>% 
+  gt() %>% tab_options(table.font.size = 40)
 ```
-:::
-
-::: {.column width="50%"}
-After:
-```{r}
-#| fig.width: 10
-#| fig.height: 3
-ggplot(chol, aes(x=After)) +
-  geom_histogram()
-ggplot(chol, aes(x=After)) +
-  geom_boxplot()
-```
-:::
-:::::
-
-## EDA: Spaghetti plot of cholesterol levels before & after diet
-
--   Visualize the individual before vs. after diet changes in cholesterol levels
-
-[*What does this figure tell us?*]{style="color:#BF396F"}
 
 ```{r}
-#| fig.width: 10
-#| fig.height: 6
 #| echo: false
+
 chol_long <- chol %>% 
   # need an ID column for the plot
   # make it factor so that coloring is not on continuous scale
@@ -304,19 +291,29 @@ chol_long <- chol %>%
     # levels so that Before is before After
     Time = factor(Time, levels = c("Before", "After"))
     )
-  
-ggplot(chol_long, 
-       aes(x=Time, y = Cholesterol, 
-           # need to include group = ID 
-           # to create a line for each ID
-           color = ID, group = ID)) + 
-  geom_line(show.legend = FALSE)
 ```
 
+## EDA: Cholesterol levels before and after vegetarian diet
+
+- Behind the scenes: I changed the data from wide to long format to make this plot (to be covered in R08)
+
+```{r}
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+ggplot(chol_long, aes(x = Cholesterol)) + geom_histogram() +
+  facet_wrap(~ Time, ncol = 1) +
+  labs(y = "Number of individuals", x = "Cholesterol level (mg/dL)")
+```
 
 ## EDA: Differences in cholesterol levels: After - Before diet
 
 - How do we calculate the difference in cholesterol levels?
+
+- I can create a new variable called "DiffChol" using the `mutate()` function (look more closely at this in R08)
+
+ 
 
 ```{r}
 #| fig.width: 10
@@ -327,14 +324,14 @@ glimpse(chol)
 ```
 
 
-## Poll Everywhere Question 
+## Poll Everywhere Question 1
+
+Summary stats including difference in cholesterol:
 
 ```{r}
 #| fig.width: 10
 #| fig.height: 3
 #| echo: false
-#| eval: false
-
 
 chol %>% get_summary_stats(type = "common") %>% 
   gt() %>% tab_options(table.font.size = 40)
@@ -344,21 +341,16 @@ chol %>% get_summary_stats(type = "common") %>%
 
 ::::: columns
 ::: {.column width="50%"}
-Before: 
-
 ```{r}
-#| fig.width: 10
-#| fig.height: 3
-ggplot(chol, aes(x=Before)) +
-  geom_histogram()
-```
+#| fig.width: 8
+#| fig.height: 8
+#| fig-align: center
+#| code-fold: true
+#| code-summary: Code for below plot
 
-After:
-```{r}
-#| fig.width: 10
-#| fig.height: 3
-ggplot(chol, aes(x=After)) +
-  geom_histogram()
+ggplot(chol_long, aes(x = Cholesterol)) + geom_histogram() +
+  facet_wrap(~ Time, ncol = 1) +
+  labs(y = "Number of individuals", x = "Cholesterol level (mg/dL)")
 ```
 :::
 
@@ -366,20 +358,307 @@ ggplot(chol, aes(x=After)) +
 Difference: 
 
 ```{r}
-#| fig.width: 10
-#| fig.height: 3
+#| fig.width: 8
+#| fig.height: 4
+#| fig-align: center
+
 ggplot(chol, aes(x=DiffChol)) + 
-  geom_histogram()
+  geom_histogram() +
+  labs(y = "Number of individuals", 
+       x = "Difference in cholesterol level (mg/dL)")
 ```
 :::
 :::::
 
-## Use the same building blocks as the single-sample mean on the difference
+## Same distribution: single-sample mean & paired mean difference (1/2)
 
-- Establish this
-- Then can talk about how the hypothesis test is basically the same after that
+- Even though we are looking at a difference, we have a single sample mean to represent the difference
+  - Before, we had single sample mean $\overline{x}$
+  - Now we have a sample mean difference $\overline{x}_d$ 
 
-# Learning Objective
+ 
+
+- Distribution for the mean difference for paired data is the same as the distribution for a single mean 
+  - Use the t-distribution to build our inference
+
+ 
+
+- We can use the same procedure for confidence intervals and hypothesis testing as we did for the single-sample mean 
+
+## Same distribution: single-sample mean & paired mean difference (2/2)
+
+::: columns
+::: column
+Single-sample mean:
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+#| 
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(expression(mu[0]), expression(bar(x))))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+:::
+::: column
+Paired mean difference:
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#EF85B3") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(expression(delta[0]), expression(bar(x)[d])))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+
+::: 
+:::
+
+## Approaches to answer a research question
+
+- **Research question is a generic form for paired data:** Is there evidence to support that the population mean difference is different than $\delta_0$?
+
+:::::: columns
+::: {.column width="50%"}
+
+::: green2
+::: green2-ttl
+Calculate **CI for the mean difference** $\delta$:
+:::
+::: green2-cont
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+```
+$$\overline{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}$$
+
+- with $t^*$ = t-score that aligns with specific confidence interval 
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: pink
+::: pink-ttl
+Run a **hypothesis test**:
+:::
+::: pink-cont
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+```
+
+::: columns
+::: column
+Hypotheses
+
+\begin{align}
+H_0:& \delta = \delta_0 \\
+H_A:& \delta \neq \delta_0 \\
+(or&~ <, >)
+\end{align}
+:::
+::: column
+Test statistic
+
+$$
+t_{\overline{x}_d} = \frac{\overline{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
+$$
+:::
+:::
+:::
+:::
+:::
+::::::
+
+
+# Learning Objectives
+
+1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
+
+::: lob
+2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
+:::
+
+3.  Perform the appropriate hypothesis test for paired data and interpret the results.
+
+
+## 95% CI for the mean difference in cholesterol levels
+
+```{r}
+chol %>% 
+  select(DiffChol) %>% 
+  get_summary_stats(type = "common") %>% 
+  gt() %>% tab_options(table.font.size = 40)
+```
+
+95% CI for population mean difference $\delta$:
+
+```{r}
+#| include: false
+n <- 43
+alpha <- 0.05
+(p_area <- 1-alpha/2)
+(xbar <- mean(chol$DiffChol))
+(sd <- sd(chol$DiffChol))
+(tstar <- qt(p_area, df=n-1))  # df = n-1
+(se <- sd/sqrt(n))
+(moe <- tstar * se) 
+(LB <- xbar - moe)
+(UB <- xbar + moe)
+```
+
+::::: columns
+::: {.column width="50%"}
+\begin{align}
+\overline{x}_d &\pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
+`r round(xbar,3)` &\pm `r round(tstar,3)`\cdot\frac{`r round(sd,3)`}{\sqrt{`r n`}}\\
+`r round(xbar,3)` &\pm `r round(tstar,3)`\cdot `r round(se,3)`\\
+`r round(xbar,3)` &\pm `r round(moe,3)`\\
+(`r round(LB, 3)`&, `r round(UB, 3)`)
+\end{align}
+:::
+
+::: {.column width="50%"}
+
+Used $t^*$ = `qt(0.975, df=42)` = `r round(qt(0.975, df=42),3)`
+
+ 
+
+Conclusion:\
+We are 95% confident that the (population) mean difference in cholesterol levels after a vegetarian diet is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
+
+:::
+:::::
+
+
+## 95% CI for the mean difference in cholesterol levels (using R)
+
+- We can use R to get those same values 
+
+```{r}
+t.test(x = chol$DiffChol, mu = 0)
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: We can tidy the output
+t.test(x = chol$DiffChol, mu = 0) %>% tidy() %>% gt() %>% 
+  tab_options(table.font.size = 35) # use a different size in your HW
+```
+
+Conclusion:\
+We are 95% confident that the (population) mean difference in cholesterol levels after a vegetarian diet is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
+
+
+
+## Poll Everywhere Question 2
+
+# Learning Objectives
+
+1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
+2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
+
+::: lob
+3.  Perform the appropriate hypothesis test for paired data and interpret the results.
+:::
 
 ## Reference: Steps in a Hypothesis Test
 
@@ -417,7 +696,7 @@ ggplot(chol, aes(x=DiffChol)) +
 
 -   In our example, we would check the assumptions with a statement:
 
-    -   The pairs of observations are independent from each other and the number of pairs in our sample is 40. Thus, we can use CLT to approximate the sampling distribution.
+    -   The pairs of observations are independent from each other and the number of pairs in our sample is 43. Thus, we can use CLT to approximate the sampling distribution.
 
 ## Step 2: Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
 
@@ -441,8 +720,9 @@ A [**hypothesis test**]{style="color:#3070BF"} consists of a test between two co
 Example of hypotheses in words:
 
 \begin{aligned}
-H_0 &: \text{The population mean difference in cholesterol levels after a vegetarian diet is zero}\\
-\text{vs. } H_A &: \text{The population mean difference in cholesterol levels after a vegetarian diet is different than zero}
+H_0 :& \text{The population mean difference in cholesterol levels after a vegetarian diet is zero}\\
+\text{vs. } H_A :& \text{The population mean difference in cholesterol levels after a vegetarian diet is} \\
+& \text{ different than zero}
 \end{aligned}
 
 1.  $H_0$ is a claim that there is "no effect" or "no difference of interest."
@@ -482,13 +762,13 @@ H_0 &: \delta = 0\\
 ::::::
 :::::::::::
 
-We call $\delta_0$ the *null value* (hypothesized population mean from $H_0$)
+We call $\delta_0$ the *null value* (hypothesized population mean difference from $H_0$)
 
 :::::::: columns
 ::: {.column width="32%"}
 $H_A: \delta \neq \delta_0$
 
--   not choosing a priori whether we believe the population mean is greater or less than the null value $\delta_0$
+-   not choosing a priori whether we believe the population mean difference is greater or less than the null value $\delta_0$
 :::
 
 ::: {.column width="2%"}
@@ -497,7 +777,7 @@ $H_A: \delta \neq \delta_0$
 ::: {.column width="32%"}
 $H_A: \delta < \delta_0$
 
--   believe the population mean is **less** than the null value $\delta_0$
+-   believe the population mean difference is **less** than the null value $\delta_0$
 :::
 
 ::: {.column width="2%"}
@@ -506,47 +786,55 @@ $H_A: \delta < \delta_0$
 ::: {.column width="32%"}
 $H_A: \delta > \delta_0$
 
--   believe the population mean is **greater** than the null value $\delta_0$
+-   believe the population mean difference is **greater** than the null value $\delta_0$
 :::
 ::::::::
 
 -   $H_A: \delta \neq \delta_0$ is the most common option, since it's the most conservative
 
-## Step 4: Test statistic
+## Step 4: Test statistic (where we do not know population sd)
 
-```{r}
-chol %>% select(DiffChol) %>% get_summary_stats(type = "common") %>% gt() %>% tab_options(table.font.size = 40)
-```
+From our example: Recall that $\overline{x}_d = -21.767$, $s_d=13.89$, and $n=43$
 
-::::: columns
-::: {.column width="60%"}
-$$
-t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
-$$
-
--   [*Calculate the test statistic.*]{style="color:#BF396F"}
--   [Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?]{style="color:#BF396F"}
--   [What probability distribution does the test statistic have?]{style="color:#BF396F"}
--   [Are the **assumptions** for a paired t-test satisfied so that we can use the probability distribution to calculate the $p$-value??]{style="color:#BF396F"}
-:::
-
-::: {.column width="40%"}
 ```{r}
 #| include: false
 n <- 43
 alpha <- 0.05
 mu <- 0
 (p_area <- 1-alpha/2)
-(xbar <- mean(chol$DiffChol))
+xbar <- mean(chol$DiffChol)
 (sd <- sd(chol$DiffChol))
 (se <- sd/sqrt(n))
 
-(tstat <- (xbar - mu)/se)
-1-pt(tstat, df=n-1)
-2*(1-pt(tstat, df=n-1))
+tstat <- (xbar - mu)/se
+pt(tstat, df=n-1)
+2*(pt(tstat, df=n-1))
 ```
-:::
-:::::
+
+The test statistic is:
+
+$$
+t_{\overline{x}_d} = \frac{\overline{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
+= \frac{`r round(xbar, 3)` - 0}{\frac{`r round(sd, 3)`}{\sqrt{`r n`}}}
+= `r round(tstat, 3)`
+$$
+
+-   Statistical theory tells us that $t_{\overline{x}}$ follows a **Student's t-distribution** with $df = n-1 = 42$
+
+```{r}
+#| fig.height: 4
+#| fig.width: 10
+#| fig-align: center
+#| echo: false
+ggplot(data = data.frame(x = c(-12, 12)), aes(x)) + 
+  stat_function(fun = dt, args = list(df = 42)) + 
+  ylab("") + 
+  xlab("t-dist with df = 42") +
+  scale_y_continuous(breaks = NULL) + 
+  geom_vline(xintercept = c(-10.276,10.276), 
+             color = "red")
+```
+
 
 ## Step 5: p-value
 
@@ -555,8 +843,8 @@ The [**p-value**]{style="color:#BF396F"} is the **probability** of obtaining a t
 ::::: columns
 ::: {.column width="50%"}
 ```{r}
-#| fig.width: 10
-#| fig.height: 4
+#| fig.width: 9
+#| fig.height: 4.5
 #| echo: false
 # specify upper and lower bounds of shaded region below
 mu <- 0
@@ -571,111 +859,164 @@ ggplot(data.frame(x = c(mu-6*std, mu+6*std)), aes(x = x)) +
                 args = list(mean = mu, sd = std)) + 
   scale_y_continuous(breaks = NULL) +
   scale_x_continuous(breaks=c(mu, mu - 3.4*(1:6), mu + 3.4*(1:6))) +
-  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
+  theme(axis.text.x=element_text(angle = -30, hjust = 0), 
+        axis.title.y = element_blank()) +
   labs(y = "", 
-       x = "sample mean difference",
+       x = "Sample mean difference",
        title = "Sampling distribution of mean difference") +
   geom_vline(xintercept = c(-xbar, xbar), 
              color = "red")
 ```
 
 ```{r}
-#| fig.height: 3
-#| fig.width: 10
+#| fig.height: 3.6
+#| fig.width: 9
 #| echo: false
-ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
+ggplot(data = data.frame(x = c(-12, 12)), aes(x)) + 
   stat_function(fun = dt, args = list(df = n-1)) + 
-  ylab("") + 
-  xlab("t-dist with df = 23") +
+  theme(axis.title.y = element_blank()) +
+  xlab("t-dist with df = 42") +
   scale_y_continuous(breaks = NULL) + 
-  scale_x_continuous(breaks=c(mu, mu - (1:5), mu + (1:5))) +
+  scale_x_continuous(breaks=c(mu, mu - (1:12), mu + (1:12))) +
   geom_vline(xintercept = c(-tstat,tstat), 
              color = "red")
 ```
 :::
 
 ::: {.column width="50%"}
-[Calculate the *p*-value and shade in the area representing the p-value:]{style="color:#BF396F"}
+Calculate the *p*-value using the **Student's t-distribution** with $df = n-1 = 43-1=42$:
+
+$$ 
+\begin{aligned}
+\text{p-value} &=P(T \leq -10.276) + P(T \geq 10.276)\\
+&= 4.946032 \times 10^{-13} < 0.001
+\end{aligned}
+$$
+
 
 ```{r}
-#| include: false
-2*pt(-5.4548, df = 130-1, 
+2*pt(-10.276, df = 43-1, 
      lower.tail = TRUE)
-
-(tstat <- (xbar - mu)/se)
-1-pt(tstat, df=n-1)
-(pv <- 2*(1-pt(tstat, df=n-1)))
-2*(pt(-tstat, df=n-1))
 ```
 :::
 :::::
+
+## Step 4-5: test statistic and p-value together using `t.test()`
+
+- I will have reference slides at the end of this lesson to show other options
+
+```{r}
+t.test(x = chol$DiffChol, mu = 0)
+```
+
+- We can "tidy" the results
+```{r}
+t.test(x = chol$DiffChol, mu = 0) %>% tidy() %>% gt() %>% 
+  tab_options(table.font.size = 40) # use a different size in your HW
+```
+
+## Poll Everywhere Question 3
+
 
 ## Step 6: Conclusion to hypothesis test
 
-\begin{align}
-H_0:& \delta = 0 \\
-H_A:& \delta \neq 0 \\
-\end{align}
+\begin{aligned}
+H_0 &: \delta = \delta_0\\
+\text{vs. } H_A&: \delta \neq \delta_0
+\end{aligned}
 
--   Recall the $p$-value = $8.434775 \cdot 10 ^{-6}$
+-   Need to compare p-value to our selected $\alpha = 0.05$
+-   Do we reject or fail to reject $H_0$?
+
+\
+
+::::::::::: columns
+:::::: column
+::::: pink2
+::: pink2-ttl
+If $\text{p-value} < \alpha$, reject the null hypothesis
+:::
+
+::: pink2-cont
+-   There is sufficient evidence that the (population) mean difference is discernibly different from $\delta_0$ ( $p$-value = \_\_\_)
+-   The mean difference (insert measure) in the sample was $\overline{x}_d$ (95% CI \_\_\_,\_\_\_ ), which is discernibly different from $\delta_0$ ( $p$-value = \_\_\_\_).
+:::
+:::::
+::::::
+
+:::::: column
+::::: green2
+::: green2-ttl
+If $\text{p-value} \geq \alpha$, fail to reject the null hypothesis
+:::
+
+::: green2-cont
+-   There is insufficient evidence that the (population) mean difference of (insert measure) is discernibly different from $\delta_0$ ( $p$-value = \_\_\_)
+-   The average (insert measure) in the sample was $\overline{x}_d$ (95% CI \_\_\_,\_\_\_), which is not discernibly different from $\delta_0$ ( $p$-value = \_\_\_\_).
+:::
+:::::
+::::::
+:::::::::::
+
+## Step 6: Conclusion to hypothesis test
+
+\begin{aligned}
+H_0 &: \delta = 0\\
+\text{vs. } H_A&: \delta \neq 0
+\end{aligned}
+
+-   Recall the $p$-value = $`r tidy(t.test(x = chol$DiffChol, mu = 0))$p.value`$
 -   Use $\alpha$ = 0.05.
--   [Do we reject or fail to reject $H_0$?]{style="color:#BF396F"}
+-   Do we reject or fail to reject $H_0$?
 
 **Conclusion statement**:
 
--   Stats class conclusion
+-   Stats class conclusion (and good enough for our class!)
     -   There is sufficient evidence that the (population) mean difference in cholesterol levels after a vegetarian diet is different from 0 mg/dL ( $p$-value \< 0.001).
 -   More realistic manuscript conclusion:
-    -   After a vegetarian diet, cholesterol levels decreased by on average 19.54 mg/dL (SE = 3.43 mg/dL, 2-sided $p$-value \< 0.001).
+    -   After a vegetarian diet, cholesterol levels decreased by on average `r round(abs(xbar), 2)` mg/dL (95% CI: `r round(abs(tidy(t.test(x = chol$DiffChol, mu = 0))$conf.high), 2)`, `r round(abs(tidy(t.test(x = chol$DiffChol, mu = 0))$conf.low), 2)`), which is discernably different than 0 ($p$-value \< 0.001).
 
-# Learning Ocjective
+## What if we wanted to test whether the diet *decreased* cholesterol levels?
 
-
-## 95% CI for the mean difference in cholesterol levels
-
-```{r}
-chol %>% 
-  select(DiffChol) %>% 
-  get_summary_stats(type = "common") %>% 
-  gt() %>% tab_options(table.font.size = 40)
-```
-
-CI for $\mu_d$ (or $\delta$): [*How was* $t^*$ calculated?]{style="color:#BF396F"}
-
-```{r}
-#| include: false
-n <- 43
-alpha <- 0.05
-(p_area <- 1-alpha/2)
-(xbar <- mean(chol$DiffChol))
-(sd <- sd(chol$DiffChol))
-(tstar <- qt(p_area, df=n-1))  # df = n-1
-(se <- sd/sqrt(n))
-(moe <- tstar * se) 
-(LB <- xbar - moe)
-(UB <- xbar + moe)
-```
-
-::::: columns
-::: {.column width="50%"}
-\begin{align}
-\bar{x}_d &\pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
-`r round(xbar,3)` &\pm `r round(tstar,3)`\cdot\frac{`r round(sd,3)`}{\sqrt{`r n`}}\\
-`r round(xbar,3)` &\pm `r round(tstar,3)`\cdot `r round(se,3)`\\
-`r round(xbar,3)` &\pm `r round(moe,3)`\\
-(`r round(LB, 3)`&, `r round(UB, 3)`)
-\end{align}
+::::: pink
+::: pink-ttl
+Example of hypothesis test
 :::
 
-::: {.column width="50%"}
-Conclusion:\
-We are 95% that the (population) mean difference in cholesterol levels after a vegetarian diet is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
-
--   [*Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?*]{style="color:#BF396F"}
+::: pink-cont
+Is there evidence to support that cholesterol levels decreased after the vegetarian diet?
 :::
 :::::
 
-# Running a paired t-test in R
+:::::: columns
+::: {.column width="50%"}
+1.  **Assumptions:** The pairs of observations are independent from each other and the number of pairs in our sample is 43. Thus, we can use CLT to approximate the sampling distribution.
+
+4-5.
+:::
+
+::: {.column width="25%"}
+2.  Set $\alpha = 0.05$
+:::
+
+::: {.column width="25%"}
+3.  **Hypothesis:**
+
+    \begin{aligned}
+    H_0 &: \delta = 0\\
+    \text{vs. } H_A&: \delta < 0
+    \end{aligned}
+:::
+::::::
+
+```{r}
+chol_ttest <- t.test(x = chol$DiffChol, mu = 0, alternative = "less")
+tidy(chol_ttest) %>% gt() %>% tab_options(table.font.size = 36)
+```
+
+6.  **Conclusion:** We reject the null hypothesis. There is sufficient evidence that cholesterol levels decreased with the vegetarian diet ( $p$-value \< 0.001).
+
+# Reference: Ways to run a paired t-test in R
 
 ## R option 1: Run a 1-sample `t.test` using the paired differences
 
@@ -699,146 +1040,3 @@ t.test(x = chol$Before, y = chol$After, mu = 0, paired = TRUE)
 ```
 
 [*What is different in the output compared to option 1?*]{style="color:#BF396F"}
-
-## R option 3: Run a 2-sample `t.test` with `paired = TRUE` option, but using the long data and a "formula" (1/2)
-
-::::: columns
-::: {.column width="60%"}
--   The data have to be in a `long` format for option 3, where each person has 2 rows: one for Before and one for After.
-    -   The long dataset `chol_long` was created for the slide "EDA: Spaghetti plot of cholesterol levels before & after diet".
-    -   See the code to create it there.
--   [*What information is being stored in each of the columns?*]{style="color:#BF396F"}
-:::
-
-::: {.column width="40%"}
-```{r}
-# first 16 rows of long data:
-head(chol_long, 16)
-```
-:::
-:::::
-
-## R option 3: Run a 2-sample `t.test` with `paired = TRUE` option, but using the long data and a "formula" (2/2)
-
-:::::: columns
-:::: {.column width="40%"}
-::: {style="font-size: 90%;"}
--   Use the usual `t.test`
--   What's different is that
-    -   instead of specifying the variables with `x=` and `y=`,
-    -   we give a **formula** of the form `y ~ x` using *just the variable names*,
-    -   and then specify the name of the dataset using `data =`
--   This method is often used in practice, and more similar to the coding style of running a regression model (BSTA 512 & 513)
-:::
-::::
-
-::: {.column width="60%"}
-```{r}
-# using long data 
-# with columns Cholesterol & Time
-# t.test(Cholesterol ~ Time, 
-#        paired = TRUE, 
-#        data = chol_long)
-```
-
--   [*What is different in the output compared to option 1?*]{style="color:#BF396F"}
--   [*Rerun the test using `Time ~ Cholesterol` (switch the variables). What do you get?*]{style="color:#BF396F"}
-:::
-::::::
-
-## Compare the 3 options
-
--   [*How is the code similar and different for the 3 options?*]{style="color:#BF396F"}
--   [*Given a dataset, how would you choose which of the 3 options to use?*]{style="color:#BF396F"}
-
-```{r}
-# option 1
-t.test(x = chol$DiffChol, mu = 0) %>% tidy() %>% gt() %>% tab_options(table.font.size = 40)# tidy from broom package
-# option 2
-t.test(x = chol$Before, y = chol$After, mu = 0, paired = TRUE) %>% tidy() %>% gt() %>% tab_options(table.font.size = 40)
-# option 3
-#t.test(Cholesterol ~ Time, paired = TRUE, data = chol_long) %>% tidy() %>% gt() %>% tab_options(table.font.size = 40)
-```
-
-## What if we wanted to test whether the diet *decreased* cholesterol levels?
-
-::::: columns
-::: {.column width="50%"}
-[What changes in each of the steps?]{style="color:#BF396F"}
-
-1.  Set the [**level of significance**]{style="color:#BF396F"} $\alpha$
-
-2.  Specify the [**hypotheses**]{style="color:#BF396F"} $H_0$ and $H_A$
-
-    -   Alternative: one- or two-sided?
-
-3.  Calculate the [**test statistic**]{style="color:#BF396F"}.
-
-4.  Calculate the [**p-value**]{style="color:#BF396F"} based on the observed test statistic and its sampling distribution
-
-5.  Write a [**conclusion**]{style="color:#BF396F"} to the hypothesis test
-:::
-
-::: {.column width="50%"}
-:::
-:::::
-
-## R: What if we wanted to test whether the diet *decreased* cholesterol levels?
-
--   [*Which of the 3 options to run a paired t-test in R is being used below?*]{style="color:#BF396F"}
--   [*How did the code change to account for testing a decrease in cholesterol levels?*]{style="color:#BF396F"}
--   [*Which values in the output changed compared to testing for a change in cholesterol levels? How did they change?*]{style="color:#BF396F"}
-
-```{r}
-# alternative = c("two.sided", "less", "greater")
-t.test(x = chol$DiffChol, mu = 0, alternative = "less") %>% 
-  tidy() %>% 
-  gt() %>% tab_options(table.font.size = 40)
-```
-
-## One-sided confidence intervals
-
-:::::: columns
-::: {.column width="40%"}
-Formula for a **2-sided** (1- $\alpha$ )% **CI**:
-
-$$\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}$$
-
--   $t^*$ = `qt(1-alpha/2, df = n-1)`
--   $\alpha$ is split over both tails of the distribution
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="57%"}
-A **one-sided** (1- $\alpha$ )% **CI** has all (1- $\alpha$ )% on just the left or the right tail of the distribution:
-
-\begin{align}
-(\bar{x} - t^*\cdot\frac{s}{\sqrt{n}},~\infty) \\
-(\infty,~\bar{x} + t^*\cdot\frac{s}{\sqrt{n}})
-\end{align}
-
--   $t^*$ = `qt(1-alpha, df = n-1)` for a\
-    1-sided lower (1- $\alpha$ )% CI
--   $t^*$ = `qt(alpha, df = n-1)` for a 1-sided upper (1- $\alpha$ )% CI
--   A 1-sided CI gives estimates for a lower or upper bound of the population mean.
--   See Section 4.2.3 of the V&H book for more
-:::
-::::::
-
-## [Today]{style="color:green"} & [what's next?]{style="color:darkblue"}
-
-::: {style="font-size: 90%;"}
-CI's and hypothesis tests for different scenarios:
-
-$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
-
-| Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| 10 | 5.1 | [Pop mean]{style="color:green"} | [$\mu$]{style="color:green"} | [Sample mean]{style="color:green"} | [$\bar{x}$]{style="color:green"} | [$\frac{s}{\sqrt{n}}$]{style="color:red"} |
-| 10 | 5.2 | [Pop mean of paired diff]{style="color:green"} | [$\mu_d$ or $\delta$]{style="color:green"} | [Sample mean of paired diff]{style="color:green"} | [$\bar{x}_{d}$]{style="color:green"} | [$\frac{s_d}{\sqrt{n}}$]{style="color:red"} |
-| 11 | 5.3 | [Diff in pop <br> means]{style="color:darkblue"} | [$\mu_1-\mu_2$]{style="color:darkblue"} | [Diff in sample <br> means]{style="color:darkblue"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:darkblue"} | [**???**]{style="color:red"} |
-| 12 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$ |  |
-| 12 | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |  |
-:::

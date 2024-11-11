@@ -530,12 +530,12 @@ Confidence interval
 :::
 
 :::::: {.column width="49%"}
-::::: pink2
-::: pink2-ttl
+::::: pink
+::: pink-ttl
 Hypothesis test
 :::
 
-::: pink2-cont
+::: pink-cont
 -   Run a **hypothesis test** to see if there is evidence that the population mean $\mu$ is *significantly different* from 98.6°F or not
 -   This does not give us a range of plausible values for the population mean $\mu$.
 -   Instead, we calculate a *test statistic* and *p-value*
