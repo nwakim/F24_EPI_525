@@ -11043,7 +11043,7 @@
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#eda-differences-in-cholesterol-levels-after---before-diet-1",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "EDA: Differences in cholesterol levels: After - Before diet",
-    "text": "EDA: Differences in cholesterol levels: After - Before diet\n\n\n\n\nCode for below plot\nggplot(chol_long, aes(x = Cholesterol)) + geom_histogram() +\n  facet_wrap(~ Time, ncol = 1) +\n  labs(y = \"Number of individuals\", x = \"Cholesterol level (mg/dL)\")\n\n\n\n\n\n\n\n\n\n\nDifference:\n\nggplot(chol, aes(x=DiffChol)) + \n  geom_histogram() +\n  labs(y = \"Number of individuals\", \n       x = \"Difference in cholesterol level (mg/dL)\")"
+    "text": "EDA: Differences in cholesterol levels: After - Before diet\n\n\n\n\nCode for below plot\nggplot(chol_long, aes(x = Cholesterol)) + geom_histogram() +\n  facet_wrap(~ Time, ncol = 1) +\n  labs(y = \"Number of individuals\", x = \"Cholesterol level (mg/dL)\")\n\n\n\n\n\n\n\n\n\n\nDifference:\n\nggplot(chol, aes(x=After - Before)) + \n  geom_histogram() +\n  labs(y = \"Number of individuals\", \n       x = \"Difference in cholesterol level (mg/dL)\")"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#steps-in-a-hypothesis-test-1",
