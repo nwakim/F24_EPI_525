@@ -2594,7 +2594,7 @@
     "href": "homework/HW_07.html",
     "title": "Homework 7",
     "section": "",
-    "text": "Important\n\n\n\nThis page is under construction. This homework may change! (11/5/24)"
+    "text": "Important\n\n\n\nHomework is ready to be worked on!! (11/13/24)"
   },
   {
     "objectID": "homework/HW_07.html#directions",
@@ -20632,8 +20632,8 @@
     "objectID": "homework/HW_08.html#pss3-legalize-marijuana-part-iii.",
     "href": "homework/HW_08.html#pss3-legalize-marijuana-part-iii.",
     "title": "Homework 8",
-    "section": "1.1 PSS3: Legalize Marijuana, Part III.",
-    "text": "1.1 PSS3: Legalize Marijuana, Part III.\n\n1.1.1 Power\nIn exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.1.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power?\n\n\n1.1.3 Effect size\nIf we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why?"
+    "section": "1.2 PSS3: Legalize Marijuana, Part III.",
+    "text": "1.2 PSS3: Legalize Marijuana, Part III.\n\n1.2.1 Power\nIn exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.2.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power?\n\n\n1.2.3 Effect size\nIf we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why?"
   },
   {
     "objectID": "homework/HW_07.html#testing-for-food-safety",
@@ -21152,5 +21152,12 @@
     "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Example calculating power: using pnorm()",
     "text": "Example calculating power: using pnorm()\n\n\n\n\n\n\n\n\n\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\):\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, \n      lower.tail=TRUE) + \n  pnorm(1.96, mean=3, sd=1, \n        lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\n \n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case.\nNote that this power calculation specified the value of the SE instead of the standard deviation and sample size \\(n\\) individually."
+  },
+  {
+    "objectID": "homework/HW_08.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "href": "homework/HW_08.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "title": "Homework 8",
+    "section": "1.1 Power and Sample size: Auto exhaust and lead exposure revisited",
+    "text": "1.1 Power and Sample size: Auto exhaust and lead exposure revisited\n\n1.1.1 Power\nIn exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.1.2 Sample size\nFor the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)\n\n\n1.1.3 Effect size\nSuppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use \\(\\alpha\\) = 0.05."
   }
 ]

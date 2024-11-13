@@ -16,7 +16,7 @@ format:
 ---
 
 ::: callout-important
-This page is under construction. This homework may change! (11/5/24)
+Homework is ready to be worked on!! (11/13/24)
 :::
 
 
@@ -111,25 +111,4 @@ Calculate the mean and standard deviation for HNR in the voice recordings of adu
 ### Hypothesis test
 
 Run the appropriate statistical test in R. Please include all steps in the hypothesis test! 
-
-
-## Power and Sample size: Auto exhaust and lead exposure revisited
-
-### Power
-
-In exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered? 
-
-
-
-### Sample size
-
-For the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)
-
-
-### Effect size
-
-Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
-
-
-
 
