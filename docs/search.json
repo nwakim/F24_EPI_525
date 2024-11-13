@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n11/11\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for mean difference from two-sample dependent/paired data (Hypothesis Testing 2)\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n13\nHypothesis Testing 3: Two-sample independent data\n5.3\n\n\n\n\n\n\n\n\n\n\n\n14\nPower and sample size calculations (from Hyp Test 3)\n5.4\n\n\n\n\n\n\n\n\n\n\n11/13\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm Potentially changing to 11/17\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm Potentially making optional\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR09\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR10\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n11/11\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for mean difference from two-sample dependent/paired data (Hypothesis Testing 2)\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n13\nInference for difference in means from two independent samples (Hypothesis Testing 3)\n5.3\n\n\n\n\n\n\n\n\n\n\n\n14\nPower and sample size calculations for difference of means\n5.4\n\n\n\n\n\n\n\n\n\n\n11/13\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 6 due @ 11 pm Potentially changing to 11/17\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm Potentially making optional\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR09\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR10\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -2202,7 +2202,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n2.8, 2.10, 2.18, Non-book problem\n10/27\n\n\n\n\n3*\n\n10/25\n\n3.22**\n11/3\n\n\n\n\n4\n\n11/1\n\n3.38, 3.40 (two people per problem)\n11/13\n\n\n\n\n5\n\n11/11\n\n\n11/17?\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\n**Indicates the problem for which the presentations will be on\nPlease note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework 5 solutions optional\n\n\n\nHomework 5 solutions will be optional. You will turn in your own work for question 4.2 (not splitting the problem within the group).\nIf you do the Homework 5 solutions, I will drop your lowest solution grade.\n\n\n\n\n\nHomework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n2.8, 2.10, 2.18, Non-book problem\n10/27\n\n\n\n\n3*\n\n10/25\n\n3.22**\n11/3\n\n\n\n\n4\n\n11/1\n\n3.38, 3.40 (two people per problem)\n11/13\n\n\n\n\n5\n\n11/11\n\n4.2 (Solns are optional!)\n11/17 (Optional!)\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\n**Indicates the problem for which the presentations will be on\nPlease note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#assignments",
@@ -5198,7 +5198,7 @@
     "href": "homework/HW_07.html#egg-volume",
     "title": "Homework 7",
     "section": "5.26 Egg volume",
-    "text": "5.26 Egg volume"
+    "text": "5.26 Egg volume\nMaybe skip this one"
   },
   {
     "objectID": "homework/HW_07.html#placebos-without-deception",
@@ -7116,7 +7116,7 @@
     "href": "homework.html#homeworks",
     "title": "Homework",
     "section": "",
-    "text": "Homework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n2.8, 2.10, 2.18, Non-book problem\n10/27\n\n\n\n\n3*\n\n10/25\n\n3.22**\n11/3\n\n\n\n\n4\n\n11/1\n\n3.38, 3.40 (two people per problem)\n11/13\n\n\n\n\n5\n\n11/11\n\n\n11/17?\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\n**Indicates the problem for which the presentations will be on\nPlease note that you need to download the .html file to see the LaTeX math properly."
+    "text": "Homework 5 solutions optional\n\n\n\nHomework 5 solutions will be optional. You will turn in your own work for question 4.2 (not splitting the problem within the group).\nIf you do the Homework 5 solutions, I will drop your lowest solution grade.\n\n\n\n\n\nHomework\nAssignment\nAssignment due (@11pm)\nAnswers\nSoln Q’s\nSoln due (@11pm)\nSolutions (.qmd)\nSolutions (.html)*\n\n\n\n\n0\n\n10/3\n\n\n\n\n\n\n\n1\n\n10/11\n\n1.8, 1.12, 1.20, 1.32\n10/20\n\n\n\n\n2\n\n10/18\n\n2.8, 2.10, 2.18, Non-book problem\n10/27\n\n\n\n\n3*\n\n10/25\n\n3.22**\n11/3\n\n\n\n\n4\n\n11/1\n\n3.38, 3.40 (two people per problem)\n11/13\n\n\n\n\n5\n\n11/11\n\n4.2 (Solns are optional!)\n11/17 (Optional!)\n\n\n\n\n6*\n\n11/17\n\n\n11/24\n\n\n\n\n7\n\n11/22\n\n\n12/1\n\n\n\n\n8\n\n11/29\n\n\n12/8\n\n\n\n\n9\n\n12/6\n\n\n12/13\n\n\n\n\n10 (optional)\n\n12/13\n\n\n\n\n\n\n\n\n*Indicates homeworks for which presentations are also due\n**Indicates the problem for which the presentations will be on\nPlease note that you need to download the .html file to see the LaTeX math properly."
   },
   {
     "objectID": "homework.html#structure",
@@ -7193,7 +7193,7 @@
     "href": "homework/HW_07.html#pss2-auto-exhaust-and-lead-exposure-revisited.",
     "title": "Homework 7",
     "section": "1.2 PSS2: Auto exhaust and lead exposure revisited.",
-    "text": "1.2 PSS2: Auto exhaust and lead exposure revisited.\n\n1.2.1 Power\nIn exercise 5.12, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.2.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not?\n\n\n1.2.3 Effect size\nSuppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use \\(\\alpha\\) = 0.05.\n\n\n1.2.4 2-sided vs. 1-sided\nContinuing with the previous question, what happens to the effect size they can detect if the test is two sided instead of one-sided?"
+    "text": "1.2 PSS2: Auto exhaust and lead exposure revisited.\n\n1.2.1 Power\nIn exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.2.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not?\n\n\n1.2.3 Effect size\nSuppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use \\(\\alpha\\) = 0.05.\n\n\n1.2.4 2-sided vs. 1-sided\nContinuing with the previous question, what happens to the effect size they can detect if the test is two sided instead of one-sided?"
   },
   {
     "objectID": "homework/HW_07.html#pss3-legalize-marijuana-part-iii.",
@@ -9321,14 +9321,14 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#does-caffeine-increase-finger-tapsmin-on-average",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Does caffeine increase finger taps/min (on average)?",
-    "text": "Does caffeine increase finger taps/min (on average)?\n\nWe will illustrate how to perform a hypothesis test for paired data as we work through this example\n\nStudy Design:1\n\n70 college students students were trained to tap their fingers at a rapid rate\nEach then drank 2 cups of coffee (double-blind)\n\nControl group: decaf\nCaffeine group: ~ 200 mg caffeine\n\nAfter 2 hours, students were tested.\nTaps/minute recorded"
+    "text": "Does caffeine increase finger taps/min (on average)?\n\nUse this example to illustrate how to calculate a confidence interval and perform a hypothesis test for two independent samples\n\nStudy Design:1\n\n70 college students students were trained to tap their fingers at a rapid rate\nEach then drank 2 cups of coffee (double-blind)\n\nControl group: decaf\nCaffeine group: ~ 200 mg caffeine\n\nAfter 2 hours, students were tested.\nTaps/minute recorded\n\nBased on following article with extra simulations by me: Hand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). A handbook of small data sets. London, U.K.: Chapman and Hall."
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#eda-explore-the-finger-taps-data",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#eda-explore-the-finger-taps-data",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "EDA: Explore the finger taps data",
-    "text": "EDA: Explore the finger taps data\n\n\n\n\nCode to make these histograms\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_histogram() +\n  facet_wrap(vars(Group), ncol=1) +\n  labs(y = \"Number of people\", x = \"Taps/minute\") +\n  theme(text = element_text(size = 30))\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\nSummary statistics stratified by group\n# get_summary_stats() from \n  # rstatix package\nsumstats &lt;- CaffTaps %&gt;% \n  group_by(Group) %&gt;% \n  get_summary_stats(type = \"mean_sd\") \n\nsumstats %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 40)\n\n\n\n\n\n\n  \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n35\n248.114\n2.621\n    NoCaffeine\nTaps\n35\n244.514\n2.318\n  \n  \n  \n\n\n\n\nThen calculate the difference between the means:\n\ndiff(sumstats$mean)\n\n[1] -3.6"
+    "text": "EDA: Explore the finger taps data\n\n\n\n\nCode to make these histograms\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_histogram() +\n  facet_wrap(vars(Group), ncol=1) +\n  labs(y = \"Number of people\", x = \"Taps/minute\") +\n  theme(text = element_text(size = 30))\n\n\n\n\n\n\n\n\nSummary statistics stratified by group\n# get_summary_stats() from \n  # rstatix package\nsumstats &lt;- CaffTaps %&gt;% \n  group_by(Group) %&gt;% \n  get_summary_stats(type = \"mean_sd\") \n\nsumstats %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 40)\n\n\n\n\n\n\n  \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n35\n248.114\n2.621\n    NoCaffeine\nTaps\n35\n244.514\n2.318\n  \n  \n  \n\n\n\n\nThen calculate the difference between the means:\n\ndiff(sumstats$mean)\n\n[1] -3.6\n\n\n \n\nNote that we cannot calculate 35 differences in taps because these data are not paired!!\nDifferent individuals receive caffeine vs. do not receive caffeine"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-2-null-alternative-hypotheses",
@@ -9412,14 +9412,14 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#r-2-sample-t-test-with-wide-data",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "R: 2-sample t-test (with wide data)",
-    "text": "R: 2-sample t-test (with wide data)\n\n\n# make CaffTaps data wide: pivot_wider needs an ID column so that it \n# knows how to \"match\" values from the Caffeine and NoCaffeine groups\nCaffTaps_wide &lt;- CaffTaps %&gt;% \n  mutate(id = c(rep(1:10, 2), rep(11:35, 2))) %&gt;% #  \"fake\" IDs for pivot_wider step\n  pivot_wider(names_from = \"Group\",\n              values_from = \"Taps\")\n\nglimpse(CaffTaps_wide)\n\nRows: 35\nColumns: 3\n$ id         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, …\n$ Caffeine   &lt;dbl&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 251, 251,…\n$ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242, 244, 245,…\n\nt.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = \"greater\") %&gt;% \n  tidy() %&gt;% gt() %&gt;% tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.6\n248.1143\n244.5143\n6.086677\n3.132816e-08\n67.00222\n2.613502\nInf\nWelch Two Sample t-test\ngreater"
+    "text": "R: 2-sample t-test (with wide data)\n\n\n# make CaffTaps data wide: pivot_wider needs an ID column so that it \n# knows how to \"match\" values from the Caffeine and NoCaffeine groups\nCaffTaps_wide &lt;- CaffTaps %&gt;% \n  mutate(id = c(rep(1:10, 2), rep(11:35, 2))) %&gt;% #  \"fake\" IDs for pivot_wider step\n  pivot_wider(names_from = \"Group\",\n              values_from = \"Taps\")\n\nglimpse(CaffTaps_wide)\n\nRows: 35\nColumns: 3\n$ id         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, …\n$ Caffeine   &lt;int&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 251, 251,…\n$ NoCaffeine &lt;int&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242, 244, 245,…\n\nt.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = \"greater\") %&gt;% \n  tidy() %&gt;% gt() %&gt;% tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.6\n248.1143\n244.5143\n6.086677\n3.132816e-08\n67.00222\n2.613502\nInf\nWelch Two Sample t-test\ngreater"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#why-are-the-dfs-in-the-r-output-different",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#why-are-the-dfs-in-the-r-output-different",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Why are the df’s in the R output different?",
-    "text": "Why are the df’s in the R output different?\nFrom many slides ago:\n\nStatistical theory tells us that \\(t_{\\overline{x}_1 - \\overline{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nThe actual degrees of freedom are calculated using Satterthwaite’s method:\n\\[\\nu = \\frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}\n{(s_1^2/n_1)^2/(n_1 - 1) + (s_2^2/n_2)^2/(n_2-1) }\n= \\frac{ [ SE_1^2 + SE_2^2 ]^2}{ SE_1^4/df_1 + SE_2^4/df_2 }\\]\n\nVerify the p-value in the R output using \\(\\nu\\) = 17.89012:\n\npt(3.3942, df = 17.89012, lower.tail = FALSE)\n\n[1] 0.001627588"
+    "text": "Why are the df’s in the R output different?\nFrom many slides ago:\n\nStatistical theory tells us that \\(t_{\\overline{x}_1 - \\overline{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nThe actual degrees of freedom are calculated using Satterthwaite’s method:\n\\[\\nu = \\frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}\n{(s_1^2/n_1)^2/(n_1 - 1) + (s_2^2/n_2)^2/(n_2-1) }\n= \\frac{ [ SE_1^2 + SE_2^2 ]^2}{ SE_1^4/df_1 + SE_2^4/df_2 }\\]\n\nVerify the p-value in the R output using \\(\\nu\\) = 17.89012:\n\npt(3.3942, df = 17.89012, lower.tail = FALSE)\n\n[1] 0.001627588\n\n\n\n\nLesson 13 Slides"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#pooled-standard-deviation-estimate",
@@ -9440,7 +9440,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#whats-next",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "What’s next?",
-    "text": "What’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n\\(\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}\\) or pooled\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n???\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n???"
+    "text": "What’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n\\(\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}\\) or pooled\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n???\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n???\n\n\n\n\n\n\nLesson 13 Slides"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#critical-values",
@@ -9564,119 +9564,119 @@
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#critical-values",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#critical-values",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Critical values",
     "text": "Critical values\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not.\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\n\n\n\n\n\n\n\n\n\n\n\n\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution).\n\nThe critical values in the figure should look very familiar!\n\nWhere have we used these before?\n\n\n\n\n\n\nHow can we calculate the critical values using R?"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#rejection-region",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#rejection-region",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Rejection region",
     "text": "Rejection region\n\nIf the absolute value of the test statistic is greater than the critical value, we reject \\(H_0\\)\n\nIn this case the test statistic is in the rejection region.\nOtherwise it’s in the nonrejection region.\n\n\n\n\n\n\n\nStats & Geospatial Analysis\n\n\n\n\nWhat do rejection regions look like for 1-sided tests?"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#justice-system-analogy",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#justice-system-analogy",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Justice system analogy",
     "text": "Justice system analogy\n\n\nType I and Type II Errors - Making Mistakes in the Justice System"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#type-i-ii-errors",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#type-i-ii-errors",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Type I & II Errors",
     "text": "Type I & II Errors\n\n\n\n\n\n\n\n\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nSet before study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#relationship-between-type-i-ii-errors",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#relationship-between-type-i-ii-errors",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Relationship between Type I & II errors",
     "text": "Relationship between Type I & II errors\n\nType I vs. Type II error\n\nDecreasing P(Type I error) leads to\n\nincreasing P(Type II error)\n\nWe typically keep P(Type I error) = \\(\\alpha\\) set to 0.05\n\n\nFrom the applet at https://rpsychologist.com/d3/NHST/"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#relationship-between-type-ii-errors-and-power",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#relationship-between-type-ii-errors-and-power",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Relationship between Type II errors and power",
     "text": "Relationship between Type II errors and power\n\nPower = P(correctly rejecting the null hypothesis)\n\n\n\n\n\nPower is also called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\n\n\n\n\n\n\n\n\n\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as \\(\\beta\\) = P(Type II error) decreases, the power increases\nP(Type II error) decreases as the mean of the alternative population shits further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Example calculating power",
     "text": "Example calculating power\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\):\n\n\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case.\n\n\n\nNote that this power calculation specified the value of the SE instead of the standard deviation and sample size \\(n\\) individually."
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#sample-size-calculation-for-testing-one-mean",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#sample-size-calculation-for-testing-one-mean",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Sample size calculation for testing one mean",
     "text": "Sample size calculation for testing one mean\n\n\nRecall in our body temperature example that \\(\\mu_0=98.6\\) °F and \\(\\bar{x}= 98.25\\) °F.\n\nThe p-value from the hypothesis test was highly significant (very small).\nWhat would the sample size \\(n\\) need to be for 80% power?\n\nCalculate \\(n\\),\n\ngiven \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution):\n\n\n\n\n\\[n=\\left(s\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{\\mu-\\mu_0}\\right)^2\\]\n\n\nmu &lt;- 98.25\nmu0 &lt;- 98.6\nsd &lt;- 0.73\nalpha &lt;- 0.05\nbeta &lt;- 0.20\nn &lt;- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2\nn\n\n[1] 34.14423\n\nceiling(n)  # always round UP to the next highest integer \n\n[1] 35\n\n\n\n\nWe would only need a sample size of 35 for 80% power!\nHowever, this is an under-estimate since we used the normal instead of t-distribution.\n\n\nSee http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality."
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#power-calculation-for-testing-one-mean",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#power-calculation-for-testing-one-mean",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Power calculation for testing one mean",
     "text": "Power calculation for testing one mean\n\nConversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.\n\nCalculate power,\n\ngiven \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution)\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad \\text{where } z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\\(\\Phi\\) is the probability for a standard normal distribution\n\nmu &lt;- 98.25; mu0 &lt;- 98.6; sd &lt;- 0.73; alpha &lt;- 0.05; n &lt;- 130\n(z &lt;- (mu-mu0) / (sd/sqrt(n)) )\n\n[1] -5.466595\n\n(Power &lt;- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2)))\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130."
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#r-package-pwr-for-power-analyses",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#r-package-pwr-for-power-analyses",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "R package pwr for power analyses",
     "text": "R package pwr for power analyses\n\n\nUse pwr.t.test for both one- and two-sample t-tests.\n\nSpecify all parameters except for the one being solved for.\n\npwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,\ntype = c(\"two.sample\", \"one.sample\", \"paired\"),\nalternative = c(\"two.sided\", \"less\", \"greater\"))\nd is Cohen’s d effect size: small = 0.2, medium = 0.5, large = 0.8\n\n\nOne-sample test (or paired t-test):\n\n\n\n\\[d = \\frac{\\mu-\\mu_0}{s}\\]\n\n\n\n\nTwo-sample test (independent):\n\n\n\n\\[d = \\frac{\\bar{x}_1 - \\bar{x}_2}{s_{pooled}}\\]\n\n\n\n\n\n\\(\\bar{x}_1 - \\bar{x}_2\\) is the difference in means between the two groups that one would want to be able to detect as being significant,\n\\(s_{pooled}\\) is the pooled SD between the two groups - often assume have same sd in each group\nR package pwr for basic statistical tests\n\nhttps://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-sample-size-for-one-mean-test",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-sample-size-for-one-mean-test",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "pwr: sample size for one mean test",
     "text": "pwr: sample size for one mean test\n\npwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,\ntype = c(\"two.sample\", \"one.sample\", \"paired\"), alternative = c(\"two.sided\", \"less\", \"greater\"))\n\n\nd is Cohen’s d effect size: \\(d = \\frac{\\mu-\\mu_0}{s}\\)\n\nSpecify all parameters except for the sample size:\n\n\n\nlibrary(pwr)\nt.n &lt;- pwr.t.test(\n  d = (98.6-98.25)/0.73, \n  sig.level = 0.05, \n  power = 0.80, \n  type = \"one.sample\")\n\nt.n\n\n\n     One-sample t test power calculation \n\n              n = 36.11196\n              d = 0.4794521\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\n\nplot(t.n)"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-power-for-one-mean-test",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-power-for-one-mean-test",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "pwr: power for one mean test",
     "text": "pwr: power for one mean test\n\npwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,\ntype = c(\"two.sample\", \"one.sample\", \"paired\"), alternative = c(\"two.sided\", \"less\", \"greater\"))\n\n\nd is Cohen’s d effect size: \\(d = \\frac{\\mu-\\mu_0}{s}\\)\n\nSpecify all parameters except for the power:\n\n\n\nt.power &lt;- pwr.t.test(\n  d = (98.6-98.25)/0.73, \n  sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"one.sample\")\n\nt.power\n\n\n     One-sample t test power calculation \n\n              n = 130\n              d = 0.4794521\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided\n\n\n\n\nplot(t.power)"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-two-sample-t-test-sample-size",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-two-sample-t-test-sample-size",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "pwr: Two-sample t-test: sample size",
     "text": "pwr: Two-sample t-test: sample size\n\npwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,\ntype = c(\"two.sample\", \"one.sample\", \"paired\"), alternative = c(\"two.sided\", \"less\", \"greater\"))\n\n\n\nd is Cohen’s d effect size: \\(d = \\frac{\\bar{x}_1 - \\bar{x}_2}{s_{pooled}}\\)\n\nExample: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3.\nSpecify all parameters except for the sample size:\n\n\n\n\n\nt2.n &lt;- pwr.t.test(\n  d = 2/2.3, \n  sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \n\nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 21.76365\n              d = 0.8695652\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.n)"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-two-sample-t-test-power",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#pwr-two-sample-t-test-power",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "pwr: Two-sample t-test: power",
     "text": "pwr: Two-sample t-test: power\n\npwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,\ntype = c(\"two.sample\", \"one.sample\", \"paired\"), alternative = c(\"two.sided\", \"less\", \"greater\"))\n\n\n\nd is Cohen’s d effect size: \\(d = \\frac{\\bar{x}_1 - \\bar{x}_2}{s_{pooled}}\\)\n\nExample: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3.\nSpecify all parameters except for the power:\n\n\n\n\n\nt2.power &lt;- pwr.t.test(\n  d = 2/2.3, \n  sig.level = 0.05, \n  # power = 0.80, \n  n = 22,\n  type = \"two.sample\") \n\nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 22\n              d = 0.8695652\n      sig.level = 0.05\n          power = 0.8044288\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.power)"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-information-do-we-need-for-a-power-or-sample-size-calculation",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-information-do-we-need-for-a-power-or-sample-size-calculation",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "What information do we need for a power (or sample size) calculation?",
     "text": "What information do we need for a power (or sample size) calculation?\n\n\nThere are 4 pieces of information:\n\nLevel of significance \\(\\alpha\\)\n\nUsually fixed to 0.05\n\nPower\n\nIdeally at least 0.80\n\nSample size\nEffect size (expected change)\n\nGiven any 3 pieces of information, we can solve for the 4th.\n\n\npwr.t.test(\n  d = (98.6-98.25)/0.73,\n  sig.level = 0.05, \n  # power = 0.80, \n  n=130,\n  type = \"one.sample\")\n\n\n     One-sample t test power calculation \n\n              n = 130\n              d = 0.4794521\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#more-software-for-power-and-sample-size-calculations-pass",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#more-software-for-power-and-sample-size-calculations-pass",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "More software for power and sample size calculations: PASS",
     "text": "More software for power and sample size calculations: PASS\n\nPASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.\n\nEven if you don’t have access to PASS, their documentation is very good and free online.\nDocumentation includes formulas and references.\nPASS documentation for powering means\n\nOne mean, paired means, two independent means\n\n\nOne-sample t-test documentation: https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#octri-berd-power-sample-size-presentations",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#octri-berd-power-sample-size-presentations",
-    "title": "Lesson 14: Power and sample size calculations for difference in means from two independent samples",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "OCTRI-BERD power & sample size presentations",
     "text": "OCTRI-BERD power & sample size presentations\n\n\nPower and Sample Size 101\n\nPresented by Meike Niederhausen; April 13, 2023\nSlides: http://bit.ly/PSS101-BERD-April2023\nRecording\n\nPower and Sample Size for Clinical Trials: An Introduction\n\nPresented by Yiyi Chen; Feb 18, 2021\nSlides: http://bit.ly/PSS-ClinicalTrials\nRecording\n\nPlanning a Study with Power and Sample Size Considerations in Mind\n\nPresented by David Yanez; May 29, 2019\nSlides\nRecording\n\nPower and Sample Size Simulations in R\n\nPresented by Robin Baudier; Sept 21, 2023\nSlides\nRecording\n\n\n\n\n\nLesson 14 Slides"
   },
@@ -11043,7 +11043,7 @@
     "href": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#eda-differences-in-cholesterol-levels-after---before-diet-1",
     "title": "Lesson 12: Inference for mean difference from two-sample dependent/paired data",
     "section": "EDA: Differences in cholesterol levels: After - Before diet",
-    "text": "EDA: Differences in cholesterol levels: After - Before diet\n\n\n\n\nCode for below plot\nggplot(chol_long, aes(x = Cholesterol)) + geom_histogram() +\n  facet_wrap(~ Time, ncol = 1) +\n  labs(y = \"Number of individuals\", x = \"Cholesterol level (mg/dL)\")\n\n\n\n\n\n\n\n\n\n\nDifference:\n\nggplot(chol, aes(x=After - Before)) + \n  geom_histogram() +\n  labs(y = \"Number of individuals\", \n       x = \"Difference in cholesterol level (mg/dL)\")"
+    "text": "EDA: Differences in cholesterol levels: After - Before diet\n\n\n\n\nCode for below plot\nggplot(chol_long, aes(x = Cholesterol)) + geom_histogram() +\n  facet_wrap(~ Time, ncol = 1) +\n  labs(y = \"Number of individuals\", x = \"Cholesterol level (mg/dL)\")\n\n\n\n\n\n\n\n\n\n\nDifference:\n\nggplot(chol, aes(x=DiffChol)) + \n  geom_histogram() +\n  labs(y = \"Number of individuals\", \n       x = \"Difference in cholesterol level (mg/dL)\")"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#steps-in-a-hypothesis-test-1",
@@ -19582,15 +19582,15 @@
     "objectID": "homework/HW_07.html#r2-swim-times",
     "href": "homework/HW_07.html#r2-swim-times",
     "title": "Homework 7",
-    "section": "1.4 R2: Swim times",
-    "text": "1.4 R2: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n1.4.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n1.4.2 Dot plot of differences\nCreate a dot plot of the differences in swim times and comment on the distribution shape.\n\n\n1.4.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
+    "section": "2.2 R2: Swim times",
+    "text": "2.2 R2: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n2.2.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n2.2.2 Dot plot of differences\nCreate a dot plot of the differences in swim times and comment on the distribution shape.\n\n\n2.2.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
   },
   {
     "objectID": "homework/HW_07.html#r1-dds-expenditures-by-ethnicity",
     "href": "homework/HW_07.html#r1-dds-expenditures-by-ethnicity",
     "title": "Homework 7",
-    "section": "1.5 R1: DDS expenditures by ethnicity",
-    "text": "1.5 R1: DDS expenditures by ethnicity\n\nIn these exercises you will use R to work through the discrimination in developmental disability support example from Section 5.3.4 (pg. 253) in the textbook.\nThe data are in the oibiostats package and called dds.discr.\n\n\n1.5.1 New dataset\nCreate a new dataset that only includes the White (non Hispanic) and Hispanic ethnicities. Use this new dataset for the following questions.\n\n\n1.5.2 Data viz\nCreate density plots and box plots of the expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?\n\n\n1.5.3 t-test conditions\nAre the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied?\n\n\n1.5.4 Log-transformation\nThe book recommends log-transforming the expenditure values before testing. Create a new column in the dataset with the transformed values. The R command for the natural logarithm is log(). \n\n\n1.5.5 Data viz: log-transformed expenditures\nCreate density plots and box plots of the log-transformed expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?\n\n\n1.5.6 t-test conditions: log-transformed expenditures\nAre the conditions for a t-test comparing the mean log-transformed expenditures of the two ethnicities satisfied?\n\n\n1.5.7 Summary stats: log-transformed expenditures\nCalculate the means, standard deviations, and sample sizes for the log-transformed expenditures stratified by ethnicity, and compare them to the ones in the book. Which group had a larger mean?\n\n\n1.5.8 Test\nRun the appropriate statistical test in R to verify the test statistic in the text and get the actual p-value. In which order was the difference in means calculated, and is this same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.\n\n\n1.5.9 df\nHow do the degrees of freedom (df) from the hypothesis test compare to the df used by the book? Why are they different? Which degrees df (book vs. test output) leads to a bigger p-value?\n\n\n1.5.10 CI\nWhat is the 95% CI? Write an interpretation of the CI in the context of the research question. \n\n\n1.5.11 Test original expenditure values\nRun the appropriate statistical test in R using the original expenditure values. What are the test statistic and p-value? Does the conclusion of the test change?\n\n\n1.5.12 CI using original expenditure values\nWhat is the 95% CI? Write an interpretation of the CI in the context of the research question. Which of the CI’s (log-transformed vs not) is easier to interpret?\n\n\n1.5.13 Age groups\nThe book’s example goes on to analyze the data stratified by age groups, since age is a confounder in expenditure amounts. Create two new datasets restricted to the age groups 13-17 and 22-50, respectively.\n\n\n1.5.14 Data viz by age groups\nCreate density plots and box plots of the expenditures stratified by ethnicity for each of the age groups separately. Comment on the distribution shapes. Are there any outliers?\n\n\n1.5.15 t-test conditions: age groups\nAre the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?\n\n\n1.5.16 Summary stats: age groups\nCalculate the means, standard deviations, and sample sizes for the expenditures stratified by ethnicity and the age groups, and compare them to the ones in the book. Which group had a larger mean?\n\n\n1.5.17 t-test: age groups\nRun the appropriate statistical tests for both age groups in R to verify the test statistics, df’s, and p-values in the text. In which order were the differences in means calculated, and are they the same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.\n\n\n1.5.18 CI: age groups\nWhat are the 95% CI’s for each of the age groups? Write interpretations of the CI’s in the context of the research question. Does they suggest there are differences in expenditures between the two ethnicities? Why or why not?\n\n\n1.5.19 Discrimination in DDS expenditures?\nEven though the p-values for the age-stratified tests were not significant, is it possible that there was discrimination in DDS expenditures?"
+    "section": "1.4 R1: DDS expenditures by ethnicity",
+    "text": "1.4 R1: DDS expenditures by ethnicity\n\nIn these exercises you will use R to work through the discrimination in developmental disability support example from Section 5.3.4 (pg. 253) in the textbook.\nThe data are in the oibiostats package and called dds.discr.\n\n\n1.4.1 New dataset\nCreate a new dataset that only includes the White (non Hispanic) and Hispanic ethnicities. Use this new dataset for the following questions.\n\n\n1.4.2 Data viz\nCreate density plots and box plots of the expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?\n\n\n1.4.3 t-test conditions\nAre the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied?\n\n\n1.4.4 Log-transformation\nThe book recommends log-transforming the expenditure values before testing. Create a new column in the dataset with the transformed values. The R command for the natural logarithm is log(). \n\n\n1.4.5 Data viz: log-transformed expenditures\nCreate density plots and box plots of the log-transformed expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?\n\n\n1.4.6 t-test conditions: log-transformed expenditures\nAre the conditions for a t-test comparing the mean log-transformed expenditures of the two ethnicities satisfied?\n\n\n1.4.7 Summary stats: log-transformed expenditures\nCalculate the means, standard deviations, and sample sizes for the log-transformed expenditures stratified by ethnicity, and compare them to the ones in the book. Which group had a larger mean?\n\n\n1.4.8 Test\nRun the appropriate statistical test in R to verify the test statistic in the text and get the actual p-value. In which order was the difference in means calculated, and is this same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.\n\n\n1.4.9 df\nHow do the degrees of freedom (df) from the hypothesis test compare to the df used by the book? Why are they different? Which degrees df (book vs. test output) leads to a bigger p-value?\n\n\n1.4.10 CI\nWhat is the 95% CI? Write an interpretation of the CI in the context of the research question. \n\n\n1.4.11 Test original expenditure values\nRun the appropriate statistical test in R using the original expenditure values. What are the test statistic and p-value? Does the conclusion of the test change?\n\n\n1.4.12 CI using original expenditure values\nWhat is the 95% CI? Write an interpretation of the CI in the context of the research question. Which of the CI’s (log-transformed vs not) is easier to interpret?\n\n\n1.4.13 Age groups\nThe book’s example goes on to analyze the data stratified by age groups, since age is a confounder in expenditure amounts. Create two new datasets restricted to the age groups 13-17 and 22-50, respectively.\n\n\n1.4.14 Data viz by age groups\nCreate density plots and box plots of the expenditures stratified by ethnicity for each of the age groups separately. Comment on the distribution shapes. Are there any outliers?\n\n\n1.4.15 t-test conditions: age groups\nAre the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?\n\n\n1.4.16 Summary stats: age groups\nCalculate the means, standard deviations, and sample sizes for the expenditures stratified by ethnicity and the age groups, and compare them to the ones in the book. Which group had a larger mean?\n\n\n1.4.17 t-test: age groups\nRun the appropriate statistical tests for both age groups in R to verify the test statistics, df’s, and p-values in the text. In which order were the differences in means calculated, and are they the same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values.\n\n\n1.4.18 CI: age groups\nWhat are the 95% CI’s for each of the age groups? Write interpretations of the CI’s in the context of the research question. Does they suggest there are differences in expenditures between the two ethnicities? Why or why not?\n\n\n1.4.19 Discrimination in DDS expenditures?\nEven though the p-values for the age-stratified tests were not significant, is it possible that there was discrimination in DDS expenditures?"
   },
   {
     "objectID": "homework/HW_07.html#paired-or-not-part-ii",
@@ -20142,8 +20142,8 @@
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#different-types-of-inference-based-on-different-data-types",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#different-types-of-inference-based-on-different-data-types",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
-    "section": "",
-    "text": "Lesson\nSection\nPopulation parameter\nSymbol (pop)\nPoint estimate\nSymbol (sample)\nSE\n\n\n\n\n11\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\\(\\dfrac{s}{\\sqrt{n}}\\)\n\n\n12\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\\(\\dfrac{s_d}{\\sqrt{n}}\\)\n\n\n13\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n????\n\n\n15\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n15\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+    "section": "Different types of inference based on different data types",
+    "text": "Different types of inference based on different data types\n\n\n\n\n\n\n\n\n\n\n\n\nLesson\nSection\nPopulation parameter\nSymbol (pop)\nPoint estimate\nSymbol (sample)\nSE\n\n\n\n\n11\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\\(\\dfrac{s}{\\sqrt{n}}\\)\n\n\n12\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\\(\\dfrac{s_d}{\\sqrt{n}}\\)\n\n\n13\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n????\n\n\n15\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n15\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-are-paired-data",
@@ -20178,7 +20178,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-are-data-from-two-independent-sample",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "What are data from two independent sample?",
-    "text": "What are data from two independent sample?\n\nTwo independent samples: Individuals between and within samples are independent\n\nTypically: measure the same outcome for each sample, but typically the two samples differ based on a single variable\n\n\n \n\nExamples\n\nAny study where participants are randomized to a control and treatment group\nStudy where create two groups based on whether they were exposed or not to some condition (can be observational)\nBook: “Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?”\nBook: “Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?”"
+    "text": "What are data from two independent sample?\n\nTwo independent samples: Individuals between and within samples are independent\n\nTypically: measure the same outcome for each sample, but typically the two samples differ based on a single variable\n\n\n \n\nExamples\n\nAny study where participants are randomized to a control and treatment group\nStudy with two groups based on their exposure to some condition (can be observational)\nBook: “Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?”\nBook: “Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?”\n\n\n \n\nPairing (like comparing before and after) may not be feasible"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-1",
@@ -20199,21 +20199,21 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Step 3: Null & Alternative Hypotheses",
-    "text": "Step 3: Null & Alternative Hypotheses\n\nQuestion: Is there evidence to support that drinking caffeine increases the number of finger taps/min?\n\n\n\nNull and alternative hypotheses in words\n\n\n\\(H_0\\): The population difference in mean finger taps/min between the caffeine and control groups is 0\n\\(H_A\\): The population difference in mean finger taps/min between the caffeine and control groups is greater than 0\n\n\nNull and alternative hypotheses in symbols\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = 0\\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} &gt; 0 \\\\\n\\end{align}\\]"
+    "text": "Step 3: Null & Alternative Hypotheses\n\n\n\n\nNotation for hypotheses (for two ind samples)\n\n\n\\[\\begin{aligned}\nH_0 &: \\mu_1 = \\mu_2\\\\\n\\text{vs. } H_A&: \\mu_1 \\neq, &lt;, \\textrm{or}, &gt; \\mu_2\n\\end{aligned}\\]\n\n\n\n\n\nHypotheses test for example\n\n\n\\[\\begin{aligned}\nH_0 &: \\mu_{caff} = \\mu_{ctrl}\\\\\n\\text{vs. } H_A&: \\mu_{caff} &gt; \\mu_{ctrl}\\\\\n\\end{aligned}\\]\n\n\n\n\n\nUnder the null hypothesis: \\(\\mu_1 = \\mu_2\\), so the difference in the means is \\(\\mu_1 - \\mu_2 = 0\\)\n\n\n\n\\(H_A: \\mu_1 \\neq \\mu_2\\)\n\nnot choosing a priori whether we believe the population mean of group 1 is different than the population mean of group 2\n\n\n\n\n\\(H_A: \\mu_1 &lt; \\mu_2\\)\n\nbelieve that population mean of group 1 is greater than population mean of group 2\n\n\n\n\n\\(H_A: \\mu_1 &gt; \\mu_2\\)\n\nbelieve that population mean of group 1 is less than population mean of group 2\n\n\n\n\n\\(H_A: \\mu_1 \\neq \\mu_2\\) is the most common option, since it’s the most conservative"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-part-1",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-part-1",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Step 4: Test statistic (part 1)",
-    "text": "Step 4: Test statistic (part 1)\nRecall that in general the test statistic has the form:\n\\[\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\] Thus, for a two sample independent means test, we have:\n\\[\\text{test statistic} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{SE_{\\overline{x}_1 - \\overline{x}_2}}\\]\n\nWhat is the formula for \\(SE_{\\overline{x}_1 - \\overline{x}_2}\\)?\nWhat is the probability distribution of the test statistic?\nWhat assumptions need to be satisfied?"
+    "text": "Step 4: Test statistic (part 1)\nRecall that in general the test statistic has the form:\n\\[\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\nThus, for a two sample independent means test, we have:\n\\[\\text{test statistic} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{SE_{\\overline{x}_1 - \\overline{x}_2}}\\]\n\nWhat is the formula for \\(SE_{\\overline{x}_1 - \\overline{x}_2}\\)?\nWhat is the probability distribution of the test statistic?\nWhat assumptions need to be satisfied?"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-part-2",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-part-2",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Step 4: Test statistic (part 2)",
-    "text": "Step 4: Test statistic (part 2)\n\n\n\\[\nt_{\\overline{x}_1 - \\overline{x}_2} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\n\\(\\overline{x}_1, \\overline{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\n\n\n\n \n\nStatistical theory tells us that \\(t_{\\overline{x}_1 - \\overline{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )"
+    "text": "Step 4: Test statistic (part 2)\nRecall that in general the test statistic has the form:\n\\[\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\nThus, for a two sample independent means test, we have:\n\n\n\\[\nt_{\\overline{x}_1 - \\overline{x}_2} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\n\\(\\overline{x}_1, \\overline{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\n\n\n\n \n\nStatistical theory tells us that \\(t_{\\overline{x}_1 - \\overline{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-part-3",
@@ -20227,21 +20227,21 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-5-p-value",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Step 5: p-value",
-    "text": "Step 5: p-value\nThe p-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true.\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalculate the p-value using the Student’s t-distribution with \\(df = n-1 = 35-1=34\\):\n\\[\n\\begin{aligned}\n\\text{p-value} &=P(T &gt; 3.25359)\\\\\n&= 0.00497\n\\end{aligned}\n\\]\n\npt(tstat, \n   df = min(n1 - 1, n2 - 1), \n   lower.tail = FALSE)\n\n[1] 0.004970063"
+    "text": "Step 5: p-value\nThe p-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true.\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalculate the p-value using the Student’s t-distribution with \\(df = n-1 = 35-1=34\\):\n\\[\n\\begin{aligned}\n\\text{p-value} &=P(T &gt; 6.08691)\\\\\n&= 3.3\\times 10^{-7}\n\\end{aligned}\n\\]\n\npt(tstat, \n   df = min(n1 - 1, n2 - 1), \n   lower.tail = FALSE)\n\n[1] 3.321969e-07"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-6-conclusion-to-hypothesis-test",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-6-conclusion-to-hypothesis-test",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Step 6: Conclusion to hypothesis test",
-    "text": "Step 6: Conclusion to hypothesis test\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = 0\\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} &gt; 0\\\\\n\\end{align}\\]\n\nRecall the \\(p\\)-value = 0.00497\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nStats class conclusion\n\nThere is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( \\(p\\)-value = 0.004).\n\nMore realistic manuscript conclusion:\n\nThe mean finger taps/min were 248.114 (SD = 2.621) and 244.514 (SD = 2.318) for the control and caffeine groups, and the increase of 3.6 taps/min was statistically discrenible ( \\(p\\)-value = 0.005)."
+    "text": "Step 6: Conclusion to hypothesis test\n\\[\\begin{aligned}\nH_0 &: \\mu_1 = \\mu_2\\\\\n\\text{vs. } H_A&: \\mu_1 &gt; \\mu_2\n\\end{aligned}\\]\n\nNeed to compare p-value to our selected \\(\\alpha = 0.05\\)\nDo we reject or fail to reject \\(H_0\\)?\n\n\n\n\n\n\n\nIf \\(\\text{p-value} &lt; \\alpha\\), reject the null hypothesis\n\n\n\nThere is sufficient evidence that the difference in population means is discernibly greater than 0 ( \\(p\\)-value = ___)\n\n\n\n\n\n\nIf \\(\\text{p-value} \\geq \\alpha\\), fail to reject the null hypothesis\n\n\n\nThere is insufficient evidence that the difference in population means is discernibly greater than 0 ( \\(p\\)-value = ___)"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#does-caffeine-increase-finger-tapsmin-on-average-1",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#does-caffeine-increase-finger-tapsmin-on-average-1",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Does caffeine increase finger taps/min (on average)?",
-    "text": "Does caffeine increase finger taps/min (on average)?\n\nLoad the data from the csv file CaffeineTaps.csv\nThe code below is for when the data file is in a folder called data that is in your R project folder (your working directory)\n\n\nCaffTaps &lt;- read_csv(here::here(\"data\", \"CaffeineTaps_n35.csv\"))\n\nRows: 70 Columns: 2\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): Group\ndbl (1): Taps\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(CaffTaps)\n\nRows: 70\nColumns: 2\n$ Taps  &lt;dbl&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 242, 245, 244,…\n$ Group &lt;chr&gt; \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caf…"
+    "text": "Does caffeine increase finger taps/min (on average)?\n\nLoad the data from the csv file CaffeineTaps.csv\nThe code below is for when the data file is in a folder called data that is in your R project folder (your working directory)\n\n\nCaffTaps &lt;- read.csv(here::here(\"data\", \"CaffeineTaps_n35.csv\"))\n\nglimpse(CaffTaps)\n\nRows: 70\nColumns: 2\n$ Taps  &lt;int&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 242, 245, 244,…\n$ Group &lt;chr&gt; \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caf…"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-1-check-the-assumptions",
@@ -20262,7 +20262,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#for-two-independent-samples-population-parameters-vs.-sample-statistics",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "For two independent samples: Population parameters vs. sample statistics",
-    "text": "For two independent samples: Population parameters vs. sample statistics\n\n\nPopulation parameter\n\nPopulation 1 mean: \\(\\mu_1\\)\nPopulation 2 mean: \\(\\mu_2\\)\n\n \n\nMean difference: \\(\\mu_1 - \\mu_2\\)\n\n \n\nPopulation 1 standard deviation: \\(\\sigma_1\\)\nPopulation 2 standard deviation: \\(\\sigma_2\\)\n\n\nSample statistic (point estimate)\n\nSample 1 mean: \\(\\overline{x}_1\\)\nSample 2 mean: \\(\\overline{x}_2\\)\n\n \n\nMean difference between samples: \\(\\overline{x}_1 - \\overline{x}_2\\)\n\n \n\nSample 1 standard deviation: \\(s_1\\)\nSample 2 standard deviation: \\(s_2\\)"
+    "text": "For two independent samples: Population parameters vs. sample statistics\n\n\nPopulation parameter\n\nPopulation 1 mean: \\(\\mu_1\\)\nPopulation 2 mean: \\(\\mu_2\\)\n\n \n\nDifference in means: \\(\\mu_1 - \\mu_2\\)\n\n \n\nPopulation 1 standard deviation: \\(\\sigma_1\\)\nPopulation 2 standard deviation: \\(\\sigma_2\\)\n\n\nSample statistic (point estimate)\n\nSample 1 mean: \\(\\overline{x}_1\\)\nSample 2 mean: \\(\\overline{x}_2\\)\n\n \n\nDifference in sample means: \\(\\overline{x}_1 - \\overline{x}_2\\)\n\n \n\nSample 1 standard deviation: \\(s_1\\)\nSample 2 standard deviation: \\(s_2\\)"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02_key_info.html",
@@ -20318,21 +20318,21 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Calendly is up!\nHW 6 is up\n\nTime today to post the answers as well\n\nGroup evals\n\nJust looked them over\n\nBIPOC STEAM may stop by today\n\nhttps://www.pdxstem.org/bipoc-steam-ecosystem\nCollaborating with Lisa Marriott (and me!!) on her Biomedical Workforce development project\n\nhttps://www.marriottlab.org/projects#h.babnuz70wlkl"
+    "text": "HW 5 solutions are optional! and due 11/17 at 11pm\n\nIf you do HW 5 solutions, then I will drop your lowest solution grade\n\nHW 6 is due 11/17 at 11pm as well\nCalendly is up!"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03_key_info.html#announcements",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "Calendly is up!\nHW 6 is up\n\nTime today to post the answers as well\n\nGroup evals\n\nJust looked them over\n\nBIPOC STEAM may stop by today\n\nhttps://www.pdxstem.org/bipoc-steam-ecosystem\nCollaborating with Lisa Marriott (and me!!) on her Biomedical Workforce development project\n\nhttps://www.marriottlab.org/projects#h.babnuz70wlkl"
+    "text": "HW 5 solutions are optional! and due 11/17 at 11pm\n\nIf you do HW 5 solutions, then I will drop your lowest solution grade\n\nHW 6 is due 11/17 at 11pm as well\nCalendly is up!"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03_key_info.html#key-dates",
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03_key_info.html#key-dates",
     "title": "Key Info and Announcements",
     "section": "Key Dates",
-    "text": "Key Dates\n\nFriday: HW 5 due at 11pm\nSunday: HW 4 solutions due at 11pm\nWeek of 11/11: HW 3 presentations!\n\nMake a meeting with me\n11/12: recordings due if you are making that"
+    "text": "Key Dates\n\nSunday 11/17: HW 5 solutions due at 11pm\nSunday 11/17: HW 6 assignment due at 11pm"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#footnotes",
@@ -20374,7 +20374,7 @@
     "href": "homework/HW_07.html#complete-the-group-evaluation",
     "title": "Homework 7",
     "section": "0.1 Complete the group evaluation",
-    "text": "0.1 Complete the group evaluation\nPlease complete the group evaluation form by the homework assignment due date.\nhttps://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQ0JOQjRaQkpPNFpPSlBKVjJUMDdMTkFRNi4u\n\nR & LaTeX code\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+    "text": "0.1 Complete the group evaluation\nPlease complete the group evaluation form by the homework assignment due date.\nhttps://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQ0JOQjRaQkpPNFpPSlBKVjJUMDdMTkFRNi4u"
   },
   {
     "objectID": "lessons/12_Hyp_testing_02/12_Hyp_testing_02.html#last-2-times-inference-for-a-single-sample-mean",
@@ -20556,7 +20556,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#approaches-to-answer-a-research-question",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "Approaches to answer a research question",
-    "text": "Approaches to answer a research question\n\nResearch question is a generic form for 2 independent samples: Is there evidence to support that the population means are different from each other?\n\n\n\n\n\nCalculate CI for the mean difference \\(\\delta\\):\n\n\n\n\n\n\n\n\n\n\n\n\\[\\overline{x}_d \\pm t^*\\cdot\\frac{s_d}{\\sqrt{n}}\\]\n\nwith \\(t^*\\) = t-score that aligns with specific confidence interval\n\n\n\n\n\n\nRun a hypothesis test:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHypotheses\n\\[\\begin{align}\nH_0:& \\delta = \\delta_0 \\\\\nH_A:& \\delta \\neq \\delta_0 \\\\\n(or&~ &lt;, &gt;)\n\\end{align}\\]\n\nTest statistic\n\\[\nt_{\\overline{x}_d} = \\frac{\\overline{x}_d - \\delta_0}{\\frac{s_d}{\\sqrt{n}}}\n\\]"
+    "text": "Approaches to answer a research question\n\nResearch question is a generic form for 2 independent samples: Is there evidence to support that the population means are different from each other?\n\n\n\n\n\nCalculate CI for the mean difference \\(\\delta\\):\n\n\n\n\n\n\n\n\n\n\n\n\\[\\overline{x}_1 - \\overline{x}_2 \\pm\\ t^*\\times  \\sqrt{\\frac{s_{1}^2}{n_{1}}+\\frac{s_{2}^2}{n_2}}\\]\n\nwith \\(t^*\\) = t-score that aligns with specific confidence interval\n\n\n\n\n\n\nRun a hypothesis test:\n\n\n\n\n\n\n\n\n\n\n\n\n\nHypotheses\n\\[\\begin{align}\nH_0:& \\mu_1 = \\mu_2\\\\\nH_A:& \\mu_1 \\neq \\mu_2\\\\\n(or&~ &lt;, &gt;)\n\\end{align}\\]\n\nTest statistic\n\\[\nt_{\\overline{x}_1 - \\overline{x}_2} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{\\sqrt{\\frac{s_{1}^2}{n_{1}}+\\frac{s_{2}^2}{n_2}}}\n\\]"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-mean-difference-in-cholesterol-levels-1",
@@ -20584,7 +20584,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-mean-difference-in-taps",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "95% CI for the mean difference in taps",
-    "text": "95% CI for the mean difference in taps\n\nCaffTaps %&gt;% group_by(Group) %&gt;% get_summary_stats(type = \"mean_sd\") %&gt;% \n  gt() %&gt;% tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n35\n248.114\n2.621\n    NoCaffeine\nTaps\n35\n244.514\n2.318\n  \n  \n  \n\n\n\n\n95% CI for \\(\\mu_{caff} - \\mu_{ctrl}\\):\n\n\n\\[\n\\begin{aligned}\n\\overline{x}_{\\text{caff}} - \\overline{x}_{\\text{ctrl}} & \\pm t^* \\cdot \\sqrt{\\frac{s_{\\text{caff}}^2}{n_{\\text{caff}}}+\\frac{s_{\\text{ctrl}}^2}{n_{\\text{ctrl}}}} \\\\\n248.114 - 244.514 & \\pm 2.032 \\cdot \\sqrt{\\frac{2.621^2}{35}+\\frac{2.318^2}{35}} \\\\\n3.6 & \\pm 2.032 \\cdot \\sqrt{0.196 + 0.154} \\\\\n(2.398, & 4.802)\n\\end{aligned}\n\\]\n\nUsed \\(t^*\\) = qt(0.975, df=34) = 2.032\n \nConclusion:\nWe are 95% confident that the (population) difference in mean finger taps/min between the caffeine and control groups is between 2.398 mg/dL and 4.802 mg/dL."
+    "text": "95% CI for the mean difference in taps\n\nCaffTaps %&gt;% group_by(Group) %&gt;% get_summary_stats(type = \"mean_sd\") %&gt;% \n  gt() %&gt;% tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n35\n248.114\n2.621\n    NoCaffeine\nTaps\n35\n244.514\n2.318\n  \n  \n  \n\n\n\n\n95% CI for \\(\\mu_{caff} - \\mu_{ctrl}\\):\n\n\n\\[\n\\begin{aligned}\n\\overline{x}_{\\text{caff}} - \\overline{x}_{\\text{ctrl}} & \\pm t^* \\cdot \\sqrt{\\frac{s_{\\text{caff}}^2}{n_{\\text{caff}}}+\\frac{s_{\\text{ctrl}}^2}{n_{\\text{ctrl}}}} \\\\\n248.114 - 244.514 & \\pm 2.032 \\cdot \\sqrt{\\frac{2.621^2}{35}+\\frac{2.318^2}{35}} \\\\\n3.6 & \\pm 2.032 \\cdot \\sqrt{0.196 + 0.154} \\\\\n(2.398, & 4.802)\n\\end{aligned}\n\\]\n\nUsed \\(t^*\\) = qt(0.975, df=34) = 2.032\n \nConclusion:\nWe are 95% confident that the difference in (population) mean finger taps/min between the caffeine and control groups is between 2.398 mg/dL and 4.802 mg/dL."
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-mean-difference-in-taps-1",
@@ -20598,7 +20598,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-mean-difference-in-taps-using-r",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "95% CI for the mean difference in taps (using R)",
-    "text": "95% CI for the mean difference in taps (using R)\n\nt.test(formula = Taps ~ Group, data = CaffTaps)\n\n\n    Welch Two Sample t-test\n\ndata:  Taps by Group\nt = 6.0867, df = 67.002, p-value = 6.266e-08\nalternative hypothesis: true difference in means between group Caffeine and group NoCaffeine is not equal to 0\n95 percent confidence interval:\n 2.41945 4.78055\nsample estimates:\n  mean in group Caffeine mean in group NoCaffeine \n                248.1143                 244.5143 \n\n\n\n\nWe can tidy the output\nt.test(formula = Taps ~ Group, data = CaffTaps) %&gt;% tidy() %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) # use a different size in your HW\n\n\n\n\n\n\n  \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.6\n248.1143\n244.5143\n6.086677\n6.265631e-08\n67.00222\n2.41945\n4.78055\nWelch Two Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\nConclusion:\nWe are 95% confident that the (population) mean difference in cholesterol levels after a vegetarian diet is between 2.398 mg/dL and 4.802 mg/dL."
+    "text": "95% CI for the mean difference in taps (using R)\n\nt.test(formula = Taps ~ Group, data = CaffTaps)\n\n\n    Welch Two Sample t-test\n\ndata:  Taps by Group\nt = 6.0867, df = 67.002, p-value = 6.266e-08\nalternative hypothesis: true difference in means between group Caffeine and group NoCaffeine is not equal to 0\n95 percent confidence interval:\n 2.41945 4.78055\nsample estimates:\n  mean in group Caffeine mean in group NoCaffeine \n                248.1143                 244.5143 \n\n\n\n\nWe can tidy the output\nt.test(formula = Taps ~ Group, data = CaffTaps) %&gt;% tidy() %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) # use a different size in your HW\n\n\n\n\n\n\n  \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.6\n248.1143\n244.5143\n6.086677\n6.265631e-08\n67.00222\n2.41945\n4.78055\nWelch Two Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\nConclusion:\nWe are 95% confident that the difference in (population) mean finger taps/min between the caffeine and control groups is between 2.398 mg/dL and 4.802 mg/dL."
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-population-mean-difference-in-taps-mu_1---mu_2",
@@ -20619,7 +20619,7 @@
     "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-distribution-does-overlinex_1---overlinex_2-have",
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "What distribution does \\(\\overline{X}_1 - \\overline{X}_2\\) have?",
-    "text": "What distribution does \\(\\overline{X}_1 - \\overline{X}_2\\) have?\n\n\n\nLet \\(\\overline{X}_1\\) and \\(\\overline{X}_2\\) be the means of random samples from two independent groups, with parameters shown in table:\n\n \nSome theoretical statistics:\n\nIf \\(\\overline{X}_1\\) and \\(\\overline{X}_2\\) are independent normal RVs, then \\(\\overline{X}_1 - \\overline{X}_2\\) is also normal\nWhat is the mean of \\(\\overline{X}_1 - \\overline{X}_2\\)?\n\n\n\n\n\n\nGroup 1\nGroup 2\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)\n\n\n\n\n\n\n\\[E[\\overline{X}_1 - \\overline{X}_2] = E[\\overline{X}_1] - E[\\overline{X}_2] = \\mu_1-\\mu_2\\]\n\nWhat is the standard deviation of \\(\\overline{X}_1 - \\overline{X}_2\\)?\n\n\\[\\begin{align}\nVar(\\overline{X}_1 - \\overline{X}_2) &= Var(\\overline{X}_1) + Var(\\overline{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\overline{X}_1 - \\overline{X}_2) &= \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\n\\end{align}\\]"
+    "text": "What distribution does \\(\\overline{X}_1 - \\overline{X}_2\\) have?\n\n\n\nLet \\(\\overline{X}_1\\) and \\(\\overline{X}_2\\) be the means of random samples from two independent groups, with parameters shown in table:\nSome theoretical statistics:\n\nIf \\(\\overline{X}_1\\) and \\(\\overline{X}_2\\) are independent normal RVs, then \\(\\overline{X}_1 - \\overline{X}_2\\) is also normal\nWhat is the mean of \\(\\overline{X}_1 - \\overline{X}_2\\)? \\[E[\\overline{X}_1 - \\overline{X}_2] = E[\\overline{X}_1] - E[\\overline{X}_2] = \\mu_1-\\mu_2\\]\nWhat is the standard deviation of \\(\\overline{X}_1 - \\overline{X}_2\\)?\n\n\n\\[\\begin{align}\nVar(\\overline{X}_1 - \\overline{X}_2) &= Var(\\overline{X}_1) + Var(\\overline{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\overline{X}_1 - \\overline{X}_2) &= \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\n\\end{align}\\]\n\n\n\n\n\nGp 1\nGp 2\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html",
@@ -20627,5 +20627,264 @@
     "title": "Lesson 13: Inference for difference in means from two independent samples",
     "section": "",
     "text": "Define paired data and explain how it differs from independent samples in the context of statistical analysis.\nConstruct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.\nPerform the appropriate hypothesis test for 2-sample independent data and interpret the results.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson\nSection\nPopulation parameter\nSymbol (pop)\nPoint estimate\nSymbol (sample)\nSE\n\n\n\n\n11\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\overline{x}\\)\n\\(\\dfrac{s}{\\sqrt{n}}\\)\n\n\n12\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\overline{x}_{d}\\)\n\\(\\dfrac{s_d}{\\sqrt{n}}\\)\n\n\n13\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\overline{x}_1 - \\overline{x}_2\\)\n????\n\n\n15\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n15\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+  },
+  {
+    "objectID": "homework/HW_08.html#pss3-legalize-marijuana-part-iii.",
+    "href": "homework/HW_08.html#pss3-legalize-marijuana-part-iii.",
+    "title": "Homework 8",
+    "section": "1.1 PSS3: Legalize Marijuana, Part III.",
+    "text": "1.1 PSS3: Legalize Marijuana, Part III.\n\n1.1.1 Power\nIn exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.1.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power?\n\n\n1.1.3 Effect size\nIf we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why?"
+  },
+  {
+    "objectID": "homework/HW_07.html#testing-for-food-safety",
+    "href": "homework/HW_07.html#testing-for-food-safety",
+    "title": "Homework 7",
+    "section": "4.22 Testing for food safety",
+    "text": "4.22 Testing for food safety"
+  },
+  {
+    "objectID": "homework/HW_07.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "href": "homework/HW_07.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "title": "Homework 7",
+    "section": "2.1 Power and Sample size: Auto exhaust and lead exposure revisited",
+    "text": "2.1 Power and Sample size: Auto exhaust and lead exposure revisited\n\n2.1.1 Power\nIn exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n2.1.2 Sample size\nFor the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)\n\n\n2.1.3 Effect size\nSuppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use \\(\\alpha\\) = 0.05."
+  },
+  {
+    "objectID": "homework/HW_07.html#r1-swim-times",
+    "href": "homework/HW_07.html#r1-swim-times",
+    "title": "Homework 7",
+    "section": "2.2 R1: Swim times",
+    "text": "2.2 R1: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n2.2.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n2.2.2 Dot plot of differences\nCreate a histogram of the differences in swim times and comment on the distribution shape.\n\n\n2.2.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
+  },
+  {
+    "objectID": "homework/HW_07.html#r2",
+    "href": "homework/HW_07.html#r2",
+    "title": "Homework 7",
+    "section": "2.3 R2:",
+    "text": "2.3 R2:"
+  },
+  {
+    "objectID": "homework/HW_07.html#r2-2-sample-independent-t-test",
+    "href": "homework/HW_07.html#r2-2-sample-independent-t-test",
+    "title": "Homework 7",
+    "section": "2.3 R2: 2-sample independent t-test",
+    "text": "2.3 R2: 2-sample independent t-test"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html",
+    "href": "hw_answers/HW_07_ans.html",
+    "title": "Homework 7 Answers",
+    "section": "",
+    "text": "Warning\n\n\n\nTo see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#paired-or-not-part-ii",
+    "href": "hw_answers/HW_07_ans.html#paired-or-not-part-ii",
+    "title": "Homework 7 Answers",
+    "section": "5.16 Paired or not, Part II",
+    "text": "5.16 Paired or not, Part II"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#ddt-exposure",
+    "href": "hw_answers/HW_07_ans.html#ddt-exposure",
+    "title": "Homework 7 Answers",
+    "section": "5.22 DDT exposure",
+    "text": "5.22 DDT exposure"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#egg-volume",
+    "href": "hw_answers/HW_07_ans.html#egg-volume",
+    "title": "Homework 7 Answers",
+    "section": "5.26 Egg volume",
+    "text": "5.26 Egg volume\nMaybe skip this one"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#placebos-without-deception",
+    "href": "hw_answers/HW_07_ans.html#placebos-without-deception",
+    "title": "Homework 7 Answers",
+    "section": "5.34 Placebos without deception",
+    "text": "5.34 Placebos without deception"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#testing-for-food-safety",
+    "href": "hw_answers/HW_07_ans.html#testing-for-food-safety",
+    "title": "Homework 7 Answers",
+    "section": "4.22 Testing for food safety",
+    "text": "4.22 Testing for food safety"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "href": "hw_answers/HW_07_ans.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "title": "Homework 7 Answers",
+    "section": "2.1 Power and Sample size: Auto exhaust and lead exposure revisited",
+    "text": "2.1 Power and Sample size: Auto exhaust and lead exposure revisited\n\n2.1.1 Power\nIn exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n2.1.2 Sample size\nFor the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)\n\n\n2.1.3 Effect size\nSuppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use \\(\\alpha\\) = 0.05."
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#r1-swim-times",
+    "href": "hw_answers/HW_07_ans.html#r1-swim-times",
+    "title": "Homework 7 Answers",
+    "section": "2.2 R1: Swim times",
+    "text": "2.2 R1: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n2.2.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n2.2.2 Dot plot of differences\nCreate a histogram of the differences in swim times and comment on the distribution shape.\n\n\n2.2.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#r2-2-sample-independent-t-test",
+    "href": "hw_answers/HW_07_ans.html#r2-2-sample-independent-t-test",
+    "title": "Homework 7 Answers",
+    "section": "2.3 R2: 2-sample independent t-test",
+    "text": "2.3 R2: 2-sample independent t-test"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-1",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-1",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-2-1",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-2-1",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#last-time-single-sample-mean-paired-mean-difference-22",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#last-time-single-sample-mean-paired-mean-difference-22",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Last time: single-sample mean & paired mean difference (2/2)",
+    "text": "Last time: single-sample mean & paired mean difference (2/2)\n\n\nSingle-sample mean:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaired mean difference:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaired mean difference:"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#last-time-single-sample-mean-paired-mean-difference-12",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#last-time-single-sample-mean-paired-mean-difference-12",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Last time: single-sample mean & paired mean difference (1/2)",
+    "text": "Last time: single-sample mean & paired mean difference (1/2)\n\n\nSingle-sample mean:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaired mean difference:"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#last-time-single-sample-mean-paired-mean-difference",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#last-time-single-sample-mean-paired-mean-difference",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Last time: single-sample mean & paired mean difference",
+    "text": "Last time: single-sample mean & paired mean difference\n\n\nSingle-sample mean:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaired mean difference:"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-would-the-distribution-look-like-for-2-independent-samples",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-would-the-distribution-look-like-for-2-independent-samples",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "What would the distribution look like for 2 independent samples?",
+    "text": "What would the distribution look like for 2 independent samples?\n\n\nSingle-sample mean:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaired mean difference:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiff in means of 2 ind samples:"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-would-the-distribution-look-like-for-2-independent-samples-1",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-would-the-distribution-look-like-for-2-independent-samples-1",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "What would the distribution look like for 2 independent samples?",
+    "text": "What would the distribution look like for 2 independent samples?\n\n\nSingle-sample mean:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPaired mean difference:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiff in means of 2 ind samples:"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-3",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-3",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-22",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-22",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 3: Null & Alternative Hypotheses (2/2)",
+    "text": "Step 3: Null & Alternative Hypotheses (2/2)\n\n\n\n\nNotation for hypotheses (for two independent samples)\n\n\n\\[\\begin{aligned}\nH_0 &: \\mu_1 = \\mu_2\\\\\n\\text{vs. } H_A&: \\mu_1 \\neq, &lt;, \\textrm{or}, &gt; \\mu_2\n\\end{aligned}\\]\n\n\n\n\n\nHypotheses test for example\n\n\n\\[\\begin{aligned}\nH_0 &: \\mu_{caff} = \\mu_{ctrl}\\\\\n\\text{vs. } H_A&: \\mu_{caff} &gt; \\mu_{ctrl}\\\\\n\\end{aligned}\\]\n\n\n\n\n\nUnder the null hypothesis: \\(\\mu_1 = \\mu_2\\), so the difference in the means is \\(\\mu_1 - \\mu_2 = 0\\)\n\n\n\n\\(H_A: \\delta \\neq \\delta_0\\)\n\nnot choosing a priori whether we believe the population mean difference is greater or less than the null value \\(\\delta_0\\)\n\n\n\n\n\\(H_A: \\delta &lt; \\delta_0\\)\n\nbelieve the population mean difference is less than the null value \\(\\delta_0\\)\n\n\n\n\n\\(H_A: \\delta &gt; \\delta_0\\)\n\nbelieve the population mean difference is greater than the null value \\(\\delta_0\\)\n\n\n\n\n\\(H_A: \\delta \\neq \\delta_0\\) is the most common option, since it’s the most conservative"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-1",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-1",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 3: Null & Alternative Hypotheses",
+    "text": "Step 3: Null & Alternative Hypotheses\n\nQuestion: Is there evidence to support that drinking caffeine increases the number of finger taps/min?\n\n\n\nNull and alternative hypotheses in words\n\n\n\\(H_0\\): The population difference in mean finger taps/min between the caffeine and control groups is 0\n\\(H_A\\): The population difference in mean finger taps/min between the caffeine and control groups is greater than 0\n\n\nNull and alternative hypotheses in symbols\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = 0\\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} &gt; 0 \\\\\n\\end{align}\\]"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-2",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-2",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 3: Null & Alternative Hypotheses",
+    "text": "Step 3: Null & Alternative Hypotheses\n\nQuestion: Is there evidence to support that drinking caffeine increases the number of finger taps/min?\n\n\n\nNull and alternative hypotheses in words\n\n\n\\(H_0\\): The population difference in mean finger taps/min between the caffeine and control groups is 0\n\\(H_A\\): The population difference in mean finger taps/min between the caffeine and control groups is greater than 0\n\n\nNull and alternative hypotheses in symbols\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = 0\\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} &gt; 0 \\\\\n\\end{align}\\]"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-another-way-to-write-it",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-3-null-alternative-hypotheses-another-way-to-write-it",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 3: Null & Alternative Hypotheses: another way to write it",
+    "text": "Step 3: Null & Alternative Hypotheses: another way to write it\n\nUnder the null hypothesis: \\(\\mu_1 = \\mu_2\\), so the difference in the means is \\(\\mu_1 - \\mu_2 = 0\\)\n\n\n\n\\(H_A: \\mu_1 \\neq \\mu_2\\)\n\nnot choosing a priori whether we believe the population mean of group 1 is different than the population mean of group 2\n\n\n\n\n\\(H_A: \\mu_1 &gt; \\mu_2\\)\n\nbelieve that population mean of group 1 is greater than population mean of group 2\n\n\n\n\n\\(H_A: \\mu_1 &lt; \\mu_2\\)\n\nbelieve that population mean of group 1 is less than population mean of group 2\n\n\n\n\n\n\\(H_A: \\mu_1 - \\mu_2 \\neq 0\\)\n\nnot choosing a priori whether we believe the difference in population means is greater or less than 0\n\n\n\n\n\\(H_A: \\mu_1 - \\mu_2 &gt; 0\\)\n\nbelieve that difference in population means (mean 1 - mean 2) is greater than 0\n\n\n\n\n\\(H_A: \\mu_1 - \\mu_2 &lt; 0\\)\n\nbelieve that difference in population means (mean 1 - mean 2) is less than 0"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 4: Test statistic",
+    "text": "Step 4: Test statistic\nRecall, for a two sample independent means test, we have the following test statistic:\n\n\n\\[\nt_{\\overline{x}_1 - \\overline{x}_2} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\n\\(\\overline{x}_1, \\overline{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\n\n\n\n \n\nStatistical theory tells us that \\(t_{\\overline{x}_1 - \\overline{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-where-we-do-not-know-population-sd",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-test-statistic-where-we-do-not-know-population-sd",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 4: Test statistic (where we do not know population sd)",
+    "text": "Step 4: Test statistic (where we do not know population sd)\nFrom our example: Recall that \\(\\overline{x}_1 = 248.114\\), \\(s_1=2.621\\), \\(n_1 = 35\\), \\(\\overline{x}_2 = 244.514\\), \\(s_2=2.318\\), and \\(n_2 = 35\\):\nThe test statistic is:\n\\[\n\\text{test statistic} = t_{\\overline{x}_1 - \\overline{x}_2} = \\frac{\\overline{x}_1 - \\overline{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n= \\frac{248.114 - 244.514 - 0}{\\sqrt{\\frac{2.621^2}{35}+\\frac{2.318^2}{35}}}\n= 6.0869\n\\]\n\nStatistical theory tells us that \\(t_{\\overline{x}}\\) follows a Student’s t-distribution with \\(df = n-1 = 34\\)"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-5-test-statistic-and-p-value-together-using-t.test",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-4-5-test-statistic-and-p-value-together-using-t.test",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 4-5: test statistic and p-value together using t.test()",
+    "text": "Step 4-5: test statistic and p-value together using t.test()\n\nI will have reference slides at the end of this lesson to show other options and how to “tidy” the results\n\n\nt.test(formula = Taps ~ Group, alternative = \"greater\", data = CaffTaps)\n\n\n    Welch Two Sample t-test\n\ndata:  Taps by Group\nt = 6.0867, df = 67.002, p-value = 3.133e-08\nalternative hypothesis: true difference in means between group Caffeine and group NoCaffeine is greater than 0\n95 percent confidence interval:\n 2.613502      Inf\nsample estimates:\n  mean in group Caffeine mean in group NoCaffeine \n                248.1143                 244.5143 \n\n\n \n\nWhy are the degrees of freedom different? (see Slide Section 5.4)\n\nDegrees of freedom in R is more accurate\nUsing our approximation in our calculation is okay, but conservative"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#sec-df",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#sec-df",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Why are the df’s in the R output different?",
+    "text": "Why are the df’s in the R output different?\nFrom many slides ago:\n\nStatistical theory tells us that \\(t_{\\overline{x}_1 - \\overline{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nThe actual degrees of freedom are calculated using Satterthwaite’s method:\n\\[\\nu = \\frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}\n{(s_1^2/n_1)^2/(n_1 - 1) + (s_2^2/n_2)^2/(n_2-1) }\n= \\frac{ [ SE_1^2 + SE_2^2 ]^2}{ SE_1^4/df_1 + SE_2^4/df_2 }\\]\n\nVerify the p-value in the R output using \\(\\nu\\) = 17.89012:\n\npt(3.3942, df = 17.89012, lower.tail = FALSE)\n\n[1] 0.001627588\n\n\n\n\nLesson 13 Slides"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-4",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-4",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-6-conclusion-to-hypothesis-test-1",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#step-6-conclusion-to-hypothesis-test-1",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "Step 6: Conclusion to hypothesis test",
+    "text": "Step 6: Conclusion to hypothesis test\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = 0\\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} &gt; 0\\\\\n\\end{align}\\]\n\nRecall the \\(p\\)-value = \\(3\\times 10^{-8}\\)\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nStats class conclusion\n\nThere is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( \\(p\\)-value &lt; 0.001).\n\nMore realistic manuscript conclusion:\n\nThe mean finger taps/min were 248.114 (SD = 2.621) and 244.514 (SD = 2.318) for the control and caffeine groups, and the increase of 3.6 taps/min was statistically discrenible ( \\(p\\)-value = 0)."
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-distribution-does-overlinex_1---overlinex_2-have-when-we-know-pop-sds",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#what-distribution-does-overlinex_1---overlinex_2-have-when-we-know-pop-sds",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "What distribution does \\(\\overline{X}_1 - \\overline{X}_2\\) have? (when we know pop sd’s)",
+    "text": "What distribution does \\(\\overline{X}_1 - \\overline{X}_2\\) have? (when we know pop sd’s)\n\n\n\nLet \\(\\overline{X}_1\\) and \\(\\overline{X}_2\\) be the means of random samples from two independent groups, with parameters shown in table:\nSome theoretical statistics:\n\nIf \\(\\overline{X}_1\\) and \\(\\overline{X}_2\\) are independent normal RVs, then \\(\\overline{X}_1 - \\overline{X}_2\\) is also normal\nWhat is the mean of \\(\\overline{X}_1 - \\overline{X}_2\\)? \\[E[\\overline{X}_1 - \\overline{X}_2] = E[\\overline{X}_1] - E[\\overline{X}_2] = \\mu_1-\\mu_2\\]\nWhat is the standard deviation of \\(\\overline{X}_1 - \\overline{X}_2\\)?\n\n\n\\[\\begin{align}\nVar(\\overline{X}_1 - \\overline{X}_2) &= Var(\\overline{X}_1) + Var(\\overline{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\overline{X}_1 - \\overline{X}_2) &= \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\n\\end{align}\\]\n\n\n\n\n\nGp 1\nGp 2\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)\n\n\n\n \n \n \n\\[\\overline{X}_1 - \\overline{X}_2 \\sim \\]"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-difference-in-population-mean-taps-mu_1---mu_2",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-difference-in-population-mean-taps-mu_1---mu_2",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "95% CI for the difference in population mean taps \\(\\mu_1 - \\mu_2\\)",
+    "text": "95% CI for the difference in population mean taps \\(\\mu_1 - \\mu_2\\)\n\n\n\n\n\n\nConfidence interval for \\(\\mu_1 - \\mu_2\\)\n\n\n\\[\\overline{x}_1 - \\overline{x}_2 \\pm\\ t^*\\times \\text{SE}\\]\n\nwith \\(\\text{SE} = \\sqrt{\\frac{s_{1}^2}{n_{1}}+\\frac{s_{2}^2}{n_2}}\\) if population sd is not known\n\n\n\n\n\n\n\n\n\\(t^*\\) depends on the confidence level and degrees of freedom\n\ndegrees of freedom (df) is: \\(df=n-1\\)\n\\(n\\) is minimum between \\(n_1\\) and \\(n_2\\)"
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-difference-in-population-mean-taps",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-difference-in-population-mean-taps",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "95% CI for the difference in population mean taps",
+    "text": "95% CI for the difference in population mean taps\n\nCaffTaps %&gt;% group_by(Group) %&gt;% get_summary_stats(type = \"mean_sd\") %&gt;% \n  gt() %&gt;% tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n35\n248.114\n2.621\n    NoCaffeine\nTaps\n35\n244.514\n2.318\n  \n  \n  \n\n\n\n\n95% CI for \\(\\mu_{caff} - \\mu_{ctrl}\\):\n\n\n\\[\n\\begin{aligned}\n\\overline{x}_{\\text{caff}} - \\overline{x}_{\\text{ctrl}} & \\pm t^* \\cdot \\sqrt{\\frac{s_{\\text{caff}}^2}{n_{\\text{caff}}}+\\frac{s_{\\text{ctrl}}^2}{n_{\\text{ctrl}}}} \\\\\n248.114 - 244.514 & \\pm 2.032 \\cdot \\sqrt{\\frac{2.621^2}{35}+\\frac{2.318^2}{35}} \\\\\n3.6 & \\pm 2.032 \\cdot \\sqrt{0.196 + 0.154} \\\\\n(2.398, & 4.802)\n\\end{aligned}\n\\]\n\nUsed \\(t^*\\) = qt(0.975, df=34) = 2.032\n \nConclusion:\nWe are 95% confident that the difference in (population) mean finger taps/min between the caffeine and control groups is between 2.398 mg/dL and 4.802 mg/dL."
+  },
+  {
+    "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-difference-in-population-mean-taps-using-r",
+    "href": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#ci-for-the-difference-in-population-mean-taps-using-r",
+    "title": "Lesson 13: Inference for difference in means from two independent samples",
+    "section": "95% CI for the difference in population mean taps (using R)",
+    "text": "95% CI for the difference in population mean taps (using R)\n\nt.test(formula = Taps ~ Group, data = CaffTaps)\n\n\n    Welch Two Sample t-test\n\ndata:  Taps by Group\nt = 6.0867, df = 67.002, p-value = 6.266e-08\nalternative hypothesis: true difference in means between group Caffeine and group NoCaffeine is not equal to 0\n95 percent confidence interval:\n 2.41945 4.78055\nsample estimates:\n  mean in group Caffeine mean in group NoCaffeine \n                248.1143                 244.5143 \n\n\n\n\nWe can tidy the output\nt.test(formula = Taps ~ Group, data = CaffTaps) %&gt;% tidy() %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 35) # use a different size in your HW\n\n\n\n\n\n\n  \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.6\n248.1143\n244.5143\n6.086677\n6.265631e-08\n67.00222\n2.41945\n4.78055\nWelch Two Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\nConclusion:\nWe are 95% confident that the difference in (population) mean finger taps/min between the caffeine and control groups is between 2.398 mg/dL and 4.802 mg/dL."
   }
 ]

@@ -51,9 +51,9 @@ set.seed(456)
 
 # Learning Objectives
 
-1.  Define paired data and explain how it differs from independent samples in the context of statistical analysis.
-2.  Construct confidence intervals for the mean difference in paired data and interpret these intervals in the context of the research question.
-3.  Perform the appropriate hypothesis test for 2-sample independent data and interpret the results.
+1.  Identify when a research question or dataset requires two independent sample inference.
+2.  Construct and interpret confidence intervals for difference in means of two independent samples.
+3.  Run a hypothesis test for two sample independent data and interpret the results.
 
 ## Where are we?
 
@@ -79,17 +79,23 @@ set.seed(456)
 
 ## What are data from two independent sample?
 
--   Two independent samples: Individuals between and within samples are independent
-    - Typically: measure the same outcome for each sample, but typically the two samples differ based on a single variable
+-   **Two independent samples:** Individuals between and within samples are independent
+    -   Typically: measure the same outcome for each sample, but typically the two samples differ based on a single variable
 
  
 
 -   Examples
 
     -   Any study where participants are randomized to a control and treatment group
-    -   Study where create two groups based on whether they were exposed or not to some condition (can be observational)
+    -   Study with two groups based on their exposure to some condition (can be observational)
     -   Book: "Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?"
     -   Book: "Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?"
+
+ 
+
+-   Pairing (like comparing before and after) may not be feasible
+
+## Poll Everywhere Question 1
 
 ## For two independent samples: Population parameters vs. sample statistics
 
@@ -102,7 +108,7 @@ set.seed(456)
 
  
 
--   Mean difference: $\mu_1 - \mu_2$
+-   Difference in means: $\mu_1 - \mu_2$
 
  
 
@@ -118,7 +124,7 @@ set.seed(456)
 
  
 
--   Mean difference between samples: $\overline{x}_1 - \overline{x}_2$
+-   Difference in sample means: $\overline{x}_1 - \overline{x}_2$
 
  
 
@@ -129,10 +135,9 @@ set.seed(456)
 
  
 
-
 ## Does caffeine increase finger taps/min (on average)?
 
--   [**We will illustrate how to perform a hypothesis test for paired data as we work through this example**]{style="color:#5BAFF8"}
+-   [**Use this example to illustrate how to calculate a confidence interval and perform a hypothesis test for two independent samples**]{style="color:#5BAFF8"}
 
 **Study Design**:[^1]
 
@@ -150,11 +155,10 @@ set.seed(456)
 -   Load the data from the csv file `CaffeineTaps.csv`
 -   The code below is for when the data file is in a folder called `data` that is in your R project folder (your working directory)
 
-
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
-CaffTaps <- read_csv(here::here("data", "CaffeineTaps_n35.csv"))
+CaffTaps <- read.csv(here::here("data", "CaffeineTaps_n35.csv"))
 
 glimpse(CaffTaps)
 ```
@@ -193,18 +197,24 @@ sumstats %>% gt() %>%
 ```
 
 Then calculate the difference between the means:
+
 ```{r}
 diff(sumstats$mean)
 ```
+
+ 
+
+-   Note that we cannot calculate 35 differences in taps because these data are not paired!!
+-   Different individuals receive caffeine vs. do not receive caffeine
 :::
 :::::
 
-## Same distribution: single-sample mean & paired mean difference (1/2)
+## Poll Everywhere Question 2
 
-## Same distribution: single-sample mean & paired mean difference (2/2)
+## What would the distribution look like for 2 independent samples?
 
-::: columns
-::: column
+::::: columns
+::: {.column width="33%"}
 Single-sample mean:
 
 ```{r}
@@ -251,8 +261,10 @@ sample_mean_plot +
 
 ```
 :::
-::: column
+
+::: {.column width="33%"}
 Paired mean difference:
+
 ```{r}
 #| echo: false
 #| fig-width: 6
@@ -296,21 +308,258 @@ sample_mean_plot +
                 alpha = 0.6)
 
 ```
-
-::: 
 :::
+
+::: {.column width="33%"}
+Diff in means of 2 ind samples:
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#459B99") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c("?", "??"))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+:::
+
+:::::
+
+
+## What distribution does $\overline{X}_1 - \overline{X}_2$ have? (when we know pop sd's)
+
+::::: columns
+::: {.column width="72%"}
+-   Let $\overline{X}_1$ and $\overline{X}_2$ be the means of random samples from two independent groups, with parameters shown in table:
+-   Some theoretical statistics:
+    -   If $\overline{X}_1$ and $\overline{X}_2$ are independent normal RVs, then $\overline{X}_1 - \overline{X}_2$ is also normal
+    -   What is the mean of $\overline{X}_1 - \overline{X}_2$? $$E[\overline{X}_1 - \overline{X}_2] = E[\overline{X}_1] - E[\overline{X}_2] = \mu_1-\mu_2$$
+
+    -   What is the standard deviation of $\overline{X}_1 - \overline{X}_2$?
+
+\begin{align}
+Var(\overline{X}_1 - \overline{X}_2) &= Var(\overline{X}_1) + Var(\overline{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
+SD(\overline{X}_1 - \overline{X}_2) &= \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
+\end{align}
+:::
+
+::: {.column width="28%"}
+|             | Gp 1       | Gp 2       |
+|-------------|------------|------------|
+| sample size | $n_1$      | $n_2$      |
+| pop mean    | $\mu_1$    | $\mu_2$    |
+| pop sd      | $\sigma_1$ | $\sigma_2$ |
+
+
+ 
+
+
+ 
+
+ 
+
+$$\overline{X}_1 - \overline{X}_2 \sim $$
+:::
+:::::
+
+## What would the distribution look like for 2 independent samples?
+
+::::: columns
+::: {.column width="33%"}
+Single-sample mean:
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+#| 
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#5BAFF8") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(expression(mu[0]), expression(bar(x))))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+:::
+
+::: {.column width="33%"}
+Paired mean difference:
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#EF85B3") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(expression(delta[0]), expression(bar(x)[d])))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+:::
+
+::: {.column width="33%"}
+Diff in means of 2 ind samples:
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+
+sample_mean_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#459B99") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(expression(0), expression(bar(x)[1] - bar(x)[2])))
+
+sample_mean_plot
+
+sample_mean_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+  
+sample_mean_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+
+```
+:::
+
+:::::
+
+
+
 
 ## Approaches to answer a research question
 
-- **Research question is a generic form for 2 independent samples:** Is there evidence to support that the population means are different from each other?
+-   **Research question is a generic form for 2 independent samples:** Is there evidence to support that the population means are different from each other?
 
-:::::: columns
-::: {.column width="50%"}
-
-::: green2
+:::::::::::::: columns
+:::::: {.column width="50%"}
+::::: green2
 ::: green2-ttl
 Calculate **CI for the mean difference** $\delta$:
 :::
+
 ::: green2-cont
 ```{r}
 #| echo: false
@@ -326,19 +575,21 @@ sample_mean_plot +
            ymin = 0, ymax =0.4,
            alpha = .3, fill = "#C00000")
 ```
-$$\overline{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}$$
 
-- with $t^*$ = t-score that aligns with specific confidence interval 
-:::
-:::
-:::
+$$\overline{x}_1 - \overline{x}_2 \pm\ t^*\times  \sqrt{\frac{s_{1}^2}{n_{1}}+\frac{s_{2}^2}{n_2}}$$
 
-::: {.column width="50%"}
-::: pink
+-   with $t^*$ = t-score that aligns with specific confidence interval
+:::
+:::::
+::::::
+
+::::::::: {.column width="50%"}
+:::::::: pink
 ::: pink-ttl
 Run a **hypothesis test**:
 :::
-::: pink-cont
+
+:::::: pink-cont
 ```{r}
 #| echo: false
 #| fig-width: 6
@@ -361,37 +612,35 @@ sample_mean_plot +
                 alpha = 0.6)
 ```
 
-::: columns
-::: column
+::::: columns
+::: {.column width="46%"}
 Hypotheses
 
 \begin{align}
-H_0:& \delta = \delta_0 \\
-H_A:& \delta \neq \delta_0 \\
+H_0:& \mu_1 = \mu_2\\
+H_A:& \mu_1 \neq \mu_2\\
 (or&~ <, >)
 \end{align}
 :::
-::: column
+
+::: {.column width="54%"}
 Test statistic
 
 $$
-t_{\overline{x}_d} = \frac{\overline{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
+t_{\overline{x}_1 - \overline{x}_2} = \frac{\overline{x}_1 - \overline{x}_2 - 0}{\sqrt{\frac{s_{1}^2}{n_{1}}+\frac{s_{2}^2}{n_2}}}
 $$
 :::
-:::
-:::
-:::
-:::
+:::::
 ::::::
-
-
+::::::::
+:::::::::
+::::::::::::::
 
 # Learning Objectives
 
-## 95% CI for the population mean difference in taps $\mu_1 - \mu_2$
+## 95% CI for the difference in population mean taps $\mu_1 - \mu_2$
 
 ::::::::: columns
-
 ::: {.column width="23%"}
 :::
 
@@ -404,22 +653,20 @@ Confidence interval for $\mu_1 - \mu_2$
 ::: green-cont
 $$\overline{x}_1 - \overline{x}_2 \pm\ t^*\times \text{SE}$$
 
-- with $\text{SE} = \sqrt{\frac{s_{1}^2}{n_{1}}+\frac{s_{2}^2}{n_2}}$ if population sd is not known
+-   with $\text{SE} = \sqrt{\frac{s_{1}^2}{n_{1}}+\frac{s_{2}^2}{n_2}}$ if population sd is not known
 :::
 :::::
 ::::::
 
 ::: {.column width="23%"}
 :::
-
 :::::::::
 
--   $t^*$ depends on the confidence level and degrees of freedom    
-    - degrees of freedom (df) is: $df=n-1$ 
-    - $n$ is minimum between $n_1$ and $n_2$
+-   $t^*$ depends on the confidence level and degrees of freedom
+    -   degrees of freedom (df) is: $df=n-1$
+    -   $n$ is minimum between $n_1$ and $n_2$
 
-## 95% CI for the mean difference in taps 
-
+## 95% CI for the difference in population mean taps
 
 ```{r}
 CaffTaps %>% group_by(Group) %>% get_summary_stats(type = "mean_sd") %>% 
@@ -468,23 +715,19 @@ $$
 (`r round(LB, 3)`, & `r round(UB, 3)`) 
 \end{aligned}
 $$
-
 :::
 
 ::: {.column width="47%"}
-
 Used $t^*$ = `qt(0.975, df=34)` = `r round(qt(0.975, df=34),3)`
 
  
 
-Conclusion:\
-We are 95% confident that the (population) difference in mean finger taps/min between the caffeine and control groups is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
-
+**Conclusion:**\
+We are 95% confident that the difference in (population) mean finger taps/min between the caffeine and control groups is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
 :::
 :::::
 
-
-## 95% CI for the mean difference in taps (using R)
+## 95% CI for the difference in population mean taps (using R)
 
 ```{r}
 t.test(formula = Taps ~ Group, data = CaffTaps)
@@ -497,13 +740,10 @@ t.test(formula = Taps ~ Group, data = CaffTaps) %>% tidy() %>% gt() %>%
   tab_options(table.font.size = 35) # use a different size in your HW
 ```
 
-Conclusion:\
-We are 95% confident that the (population) mean difference in cholesterol levels after a vegetarian diet is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
+**Conclusion:**\
+We are 95% confident that the difference in (population) mean finger taps/min between the caffeine and control groups is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
 
-
-
-## Poll Everywhere Question 2
-
+## Poll Everywhere Question 3
 
 # Learning Objectives
 
@@ -543,7 +783,7 @@ We are 95% confident that the (population) mean difference in cholesterol levels
 
 -   In our example, we would check the assumptions with a statement:
 
-    -   The observations are independent from each other. Each caffeine group (aka sample) has 35 individuals. Thus, we can use CLT to approximate the sampling distribution for each sample. 
+    -   The observations are independent from each other. Each caffeine group (aka sample) has 35 individuals. Thus, we can use CLT to approximate the sampling distribution for each sample.
 
 ## Step 2: Set the level of significance
 
@@ -553,7 +793,133 @@ We are 95% confident that the (population) mean difference in cholesterol levels
 
  
 
-- See Lesson 11: Hypothesis Testing 1: Single-sample mean
+-   See Lesson 11: Hypothesis Testing 1: Single-sample mean
+
+## Step 3: Null & Alternative Hypotheses
+
+::::::::::: columns
+:::::: column
+::::: blue
+::: blue-ttl
+Notation for hypotheses (for two ind samples)
+:::
+
+::: blue-cont
+\begin{aligned}
+H_0 &: \mu_1 = \mu_2\\
+\text{vs. } H_A&: \mu_1 \neq, <, \textrm{or}, > \mu_2
+\end{aligned}
+:::
+:::::
+::::::
+
+:::::: column
+::::: pink
+::: pink-ttl
+Hypotheses test for example
+:::
+
+::: pink-cont
+\begin{aligned}
+H_0 &: \mu_{caff} = \mu_{ctrl}\\
+\text{vs. } H_A&: \mu_{caff} > \mu_{ctrl}\\
+\end{aligned}
+:::
+:::::
+::::::
+:::::::::::
+
+- Under the null hypothesis: $\mu_1 = \mu_2$, so the difference in the means is $\mu_1 - \mu_2 = 0$
+
+:::::::: columns
+::: {.column width="32%"}
+$H_A: \mu_1 \neq \mu_2$
+
+-   not choosing a priori whether we believe the population mean of group 1 is different than the population mean of group 2
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="32%"}
+$H_A: \mu_1 < \mu_2$
+
+-   believe that population mean of group 1 is greater than population mean of group 2
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="32%"}
+$H_A: \mu_1 > \mu_2$
+
+-   believe that population mean of group 1 is less than population mean of group 2
+:::
+::::::::
+
+-   $H_A: \mu_1 \neq \mu_2$ is the most common option, since it's the most conservative
+
+
+
+
+## Step 3: Null & Alternative Hypotheses: another way to write it
+
+- Under the null hypothesis: $\mu_1 = \mu_2$, so the difference in the means is $\mu_1 - \mu_2 = 0$
+
+:::::::: columns
+::: {.column width="31%"}
+$H_A: \mu_1 \neq \mu_2$
+
+-   not choosing a priori whether we believe the population mean of group 1 is different than the population mean of group 2
+:::
+
+::: {.column width="3.5%"}
+:::
+
+::: {.column width="31%"}
+$H_A: \mu_1 > \mu_2$
+
+-   believe that population mean of group 1 is greater than population mean of group 2
+:::
+
+::: {.column width="3.5%"}
+:::
+
+::: {.column width="31%"}
+$H_A: \mu_1 < \mu_2$
+
+-   believe that population mean of group 1 is less than population mean of group 2
+:::
+::::::::
+
+:::::::: columns
+::: {.column width="31%"}
+$H_A: \mu_1 - \mu_2 \neq 0$
+
+-   not choosing a priori whether we believe the difference in population means is greater or less than 0
+:::
+
+::: {.column width="3.5%"}
+:::
+
+::: {.column width="31%"}
+$H_A: \mu_1 - \mu_2 > 0$
+
+-   believe that difference in population means (mean 1 - mean 2) is greater than 0
+:::
+
+::: {.column width="3.5%"}
+:::
+
+::: {.column width="31%"}
+$H_A: \mu_1 - \mu_2 < 0$
+
+-   believe that difference in population means (mean 1 - mean 2) is less than 0
+:::
+::::::::
+
+
+
 
 ## Step 3: Null & Alternative Hypotheses
 
@@ -580,53 +946,9 @@ H_A:& \mu_{caff} - \mu_{ctrl} > 0 \\
 :::
 :::::
 
-## Step 4: Test statistic (part 1)
+## Step 4: Test statistic
 
-Recall that in general the test statistic has the form:
-
-$$\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$ Thus, for a two sample independent means test, we have:
-
-$$\text{test statistic} = \frac{\overline{x}_1 - \overline{x}_2 - 0}{SE_{\overline{x}_1 - \overline{x}_2}}$$
-
--   What is the formula for $SE_{\overline{x}_1 - \overline{x}_2}$?
--   What is the probability distribution of the test statistic?
--   What assumptions need to be satisfied?
-
-## What distribution does $\overline{X}_1 - \overline{X}_2$ have?
-
-::::: columns
-::: {.column width="67%"}
-- Let $\overline{X}_1$ and $\overline{X}_2$ be the means of random samples from two independent groups, with parameters shown in table:
-
- 
-
-Some theoretical statistics:
-
--   If $\overline{X}_1$ and $\overline{X}_2$ are independent normal RVs, then $\overline{X}_1 - \overline{X}_2$ is also normal
--   What is the mean of $\overline{X}_1 - \overline{X}_2$?
-:::
-
-::: {.column width="33%"}
-|             | Group 1    | Group 2    |
-|-------------|------------|------------|
-| sample size | $n_1$      | $n_2$      |
-| pop mean    | $\mu_1$    | $\mu_2$    |
-| pop sd      | $\sigma_1$ | $\sigma_2$ |
-:::
-:::::
-
-::: {style="font-size: 95%;"}
-$$E[\overline{X}_1 - \overline{X}_2] = E[\overline{X}_1] - E[\overline{X}_2] = \mu_1-\mu_2$$
-
--   What is the standard deviation of $\overline{X}_1 - \overline{X}_2$?
-
-\begin{align}
-Var(\overline{X}_1 - \overline{X}_2) &= Var(\overline{X}_1) + Var(\overline{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
-SD(\overline{X}_1 - \overline{X}_2) &= \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
-\end{align}
-:::
-
-## Step 4: Test statistic (part 2)
+Recall, for a two sample independent means test, we have the following test statistic:
 
 ::::: columns
 ::: {.column width="50%"}
@@ -649,30 +971,16 @@ $$
     -   $df \approx$ smaller of $n_1-1$ and $n_2-1$
     -   this is a conservative estimate (smaller than actual $df$ )
 
+## Step 4: Test statistic (where we do not know population sd)
 
-## Step 4: Test statistic (part 3)
+From our example: Recall that $\overline{x}_1 = 248.114$, $s_1=2.621$, $n_1 = 35$, $\overline{x}_2 = 244.514$, $s_2=2.318$, and $n_2 = 35$:
 
-::::: columns
-::: {.column width="40%"}
-```{r}
-#| echo: false
-CaffTaps %>% group_by(Group) %>% get_summary_stats(type = "mean_sd") %>% gt() %>% tab_options(table.font.size = 40)
-```
-
-$$
-\text{test statistic} = t_{\overline{x}_1 - \overline{x}_2} = \frac{\overline{x}_1 - \overline{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} 
-= \frac{`r xbar1` - `r xbar2` - 0}{\sqrt{\frac{`r round(sd1,3)`^2}{`r n1`}+\frac{`r round(sd2,3)`^2}{`r n2`}}}
-= `r round(tstat, 4)`
-$$
-:::
-
-::: {.column width="60%"}
 ```{r}
 #| include: false
 # 1: caffeine
 # 2: no caffeine
-n1 <- 10
-n2 <- 10
+n1 <- 35
+n2 <- 35
 (xbar1 <- sumstats$mean[1])
 (xbar2 <- sumstats$mean[2])
 (diff_x <- xbar1 - xbar2)
@@ -691,20 +999,34 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 
 2*(1-pt(tstat, df=min(n1 -1, n2-1)))
 ```
-:::
-:::::
 
-<br>
+The test statistic is:
 
-<br>
+$$
+\text{test statistic} = t_{\overline{x}_1 - \overline{x}_2} = \frac{\overline{x}_1 - \overline{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} 
+= \frac{`r xbar1` - `r xbar2` - 0}{\sqrt{\frac{`r round(sd1,3)`^2}{`r n1`}+\frac{`r round(sd2,3)`^2}{`r n2`}}}
+= `r round(tstat, 4)`
+$$
 
-<hr>
+-   Statistical theory tells us that $t_{\overline{x}}$ follows a **Student's t-distribution** with $df = n-1 = 34$
 
-Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?
+```{r}
+#| fig.height: 4
+#| fig.width: 10
+#| fig-align: center
+#| echo: false
+ggplot(data = data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dt, args = list(df = 34)) + 
+  ylab("") + 
+  xlab("t-dist with df = 34") +
+  scale_y_continuous(breaks = NULL) + 
+  geom_vline(xintercept = c(3.2536), 
+             color = "red")
+```
 
 ## Step 5: p-value
 
-The [**p-value**]{style="color:darkorange"} is the **probability** of obtaining a test statistic *just as extreme or more extreme* than the observed test statistic assuming the null hypothesis $H_0$ is true.
+The [**p-value**]{style="color:#BF396F"} is the **probability** of obtaining a test statistic *just as extreme or more extreme* than the observed test statistic assuming the null hypothesis $H_0$ is true.
 
 ::::: columns
 ::: {.column width="50%"}
@@ -754,10 +1076,9 @@ Calculate the *p*-value using the **Student's t-distribution** with $df = n-1 = 
 $$ 
 \begin{aligned}
 \text{p-value} &=P(T > `r round(tstat,5)`)\\
-&= `r round(pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE), 5)`
+&= `r round(pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE), 8)`
 \end{aligned}
 $$
-
 
 ```{r}
 pt(tstat, 
@@ -792,6 +1113,67 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 :::
 :::::
 
+## Step 4-5: test statistic and p-value together using `t.test()`
+
+- I will have reference slides at the end of this lesson to show other options and how to "tidy" the results
+
+```{r}
+t.test(formula = Taps ~ Group, alternative = "greater", data = CaffTaps)
+```
+
+```{r}
+#| echo: false
+#| include: false
+Tap_2ttest = t.test(formula = Taps ~ Group, alternative = "greater", data = CaffTaps)
+```
+
+ 
+
+- Why are the degrees of freedom different? (see Slide @sec-df) 
+  - Degrees of freedom in R is more accurate
+  - Using our approximation in our calculation is okay, but conservative
+
+## Poll Everywhere Question 4
+
+
+## Step 6: Conclusion to hypothesis test
+
+\begin{aligned}
+H_0 &: \mu_1 = \mu_2\\
+\text{vs. } H_A&: \mu_1 > \mu_2
+\end{aligned}
+
+-   Need to compare p-value to our selected $\alpha = 0.05$
+-   Do we reject or fail to reject $H_0$?
+
+\
+
+::::::::::: columns
+:::::: column
+::::: pink2
+::: pink2-ttl
+If $\text{p-value} < \alpha$, reject the null hypothesis
+:::
+
+::: pink2-cont
+-   There is sufficient evidence that the difference in population means is discernibly greater than 0 ( $p$-value = \_\_\_)
+:::
+:::::
+::::::
+
+:::::: column
+::::: green2
+::: green2-ttl
+If $\text{p-value} \geq \alpha$, fail to reject the null hypothesis
+:::
+
+::: green2-cont
+-   There is insufficient evidence that the difference in population means is discernibly greater than 0 ( $p$-value = \_\_\_)
+:::
+:::::
+::::::
+:::::::::::
+
 ## Step 6: Conclusion to hypothesis test
 
 \begin{align}
@@ -799,14 +1181,14 @@ H_0:& \mu_{caff} - \mu_{ctrl} = 0\\
 H_A:& \mu_{caff} - \mu_{ctrl} > 0\\
 \end{align}
 
--   Recall the $p$-value = `r round(pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE), 5)`
+-   Recall the $p$-value = $`r round(Tap_2ttest$p.value, 8)`$
 -   Use $\alpha$ = 0.05.
 -   Do we reject or fail to reject $H_0$?
 
 **Conclusion statement**:
 
 -   Stats class conclusion
-    -   There is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( $p$-value = 0.004).
+    -   There is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( $p$-value < 0.001).
 -   More realistic manuscript conclusion:
     -   The mean finger taps/min were `r xbar1` (SD = `r sd1`) and `r xbar2` (SD = `r sd2`) for the control and caffeine groups, and the increase of `r xbar1 - xbar2` taps/min was statistically discrenible ( $p$-value = `r round(pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE), 3)`).
 
@@ -860,7 +1242,7 @@ t.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = "
   tidy() %>% gt() %>% tab_options(table.font.size = 40)
 ```
 
-## Why are the df's in the R output different?
+## Why are the df's in the R output different? {#sec-df}
 
 From many slides ago:
 
@@ -881,88 +1263,3 @@ Verify the *p*-value in the R output using $\nu$ = 17.89012:
 ```{r}
 pt(3.3942, df = 17.89012, lower.tail = FALSE)
 ```
-
-## Pooled standard deviation estimate {.smaller}
-
--   Sometimes we have reasons to believe that the population SD's from the two groups are equal, such as when randomizing participants to two groups
-
-::::: columns
-::: {.column width="60%"}
--   In this case we can use a **pooled SD**:
-
-$$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
-:::
-
-::: {.column width="40%"}
--   $n_1$, $n_2$ are the sample sizes, and
--   $s_1$, $s_2$ are the sample standard deviations
--   of the two groups
-:::
-:::::
-
--   We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error
-
-$$SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
-
-::::: columns
-::: {.column width="50%"}
-**Test statistic** with pooled SD:
-
-$$t_{\overline{x}_1 - \overline{x}_2} = \frac{\overline{x}_1 - \overline{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
-:::
-
-::: {.column width="50%"}
-**CI** with pooled SD:
-
-$$(\overline{x}_1 - \overline{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
-:::
-:::::
-
--   The $t$ distribution degrees of freedom are now:
-
-$$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
-
-```{r}
-#| echo: false
-#| eval: false
-(sp <- (2.214^2 + 2.394^2)/2)
-sqrt(sp)
-```
-
-## R: 2-sample t-test with pooled SD
-
-```{r}
-# t-test with pooled SD
-t.test(formula = Taps ~ Group, 
-       alternative = "greater", 
-       var.equal = TRUE,  # pooled SD 
-       data = CaffTaps) %>% 
-  tidy() %>% 
-  gt() %>% tab_options(table.font.size = 40)
-
-# t-test without pooled SD
-t.test(formula = Taps ~ Group, 
-       alternative = "greater", 
-       var.equal = FALSE,  # default, NOT pooled SD 
-       data = CaffTaps) %>% 
-  tidy() %>% 
-  gt() %>% tab_options(table.font.size = 40)
-```
-
-Similar output in this case - why??
-
-## What's next?
-
-::: {style="font-size: 90%;"}
-CI's and hypothesis tests for different scenarios:
-
-$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
-
-| Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| 10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\overline{x}$ | $\frac{s}{\sqrt{n}}$ |
-| 10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\overline{x}_{d}$ | $\frac{s_d}{\sqrt{n}}$ |
-| 11 | 5.3 | [Diff in pop <br> means]{style="color:green"} | [$\mu_1-\mu_2$]{style="color:green"} | [Diff in sample <br> means]{style="color:green"} | [$\overline{x}_1 - \overline{x}_2$]{style="color:green"} | [$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled]{style="color:red"} |
-| 12 | 8.1 | [Pop proportion]{style="color:darkblue"} | [$p$]{style="color:darkblue"} | [Sample prop]{style="color:darkblue"} | [$\widehat{p}$]{style="color:darkblue"} | [**???**]{style="color:red"} |
-| 12 | 8.2 | [Diff in pop <br> proportions]{style="color:darkblue"} | [$p_1-p_2$]{style="color:darkblue"} | [Diff in sample <br> proportions]{style="color:darkblue"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:darkblue"} | [**???**]{style="color:red"} |
-:::

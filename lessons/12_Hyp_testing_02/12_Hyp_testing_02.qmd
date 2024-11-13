@@ -362,7 +362,7 @@ Difference:
 #| fig.height: 4
 #| fig-align: center
 
-ggplot(chol, aes(x=After - Before)) + 
+ggplot(chol, aes(x=DiffChol)) + 
   geom_histogram() +
   labs(y = "Number of individuals", 
        x = "Difference in cholesterol level (mg/dL)")

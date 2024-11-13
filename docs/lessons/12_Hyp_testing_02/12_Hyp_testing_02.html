@@ -2227,7 +2227,7 @@ $ DiffChol &lt;int&gt; -49, 10, -27, -13, -36, -19, -48, -21, -8, -16, -32, -28,
 </div><div class="column" style="width:50%;">
 <p>Difference:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After <span class="sc">-</span> Before)) <span class="sc">+</span> </span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>DiffChol)) <span class="sc">+</span> </span>
 <span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Number of individuals"</span>, </span>
 <span id="cb10-4"><a href="#cb10-4"></a>       <span class="at">x =</span> <span class="st">"Difference in cholesterol level (mg/dL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

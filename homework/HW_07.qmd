@@ -43,88 +43,42 @@ Please complete the group evaluation form by the homework assignment due date.
 
 <https://forms.office.com/Pages/ResponsePage.aspx?id=V3lz4rj6fk2U9pvWr59xWFMopmPUjRtDiHLswhgacNhUQ0JOQjRaQkpPNFpPSlBKVjJUMDdMTkFRNi4u>
 
-
-
-### R & LaTeX code {.unnumbered}
-
-* See the .qmd files with the code from class notes for LaTeX and R code.
-* The LaTeX code will make it easier to show your work in computations.
-
-:::{.callout-tip}
-It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
-:::
-
-
-# Book exercises {.unnumbered}
+# Book exercises
 
 
 ## 5.16 Paired or not, Part II {.unnumbered}
-
-
 
 ## 5.22 DDT exposure {.unnumbered}
 
 ## 5.26 Egg volume {.unnumbered}
 
-
+Maybe skip this one
 
 ## 5.34 Placebos without deception {.unnumbered}
 
+## 4.22 Testing for food safety {.unnumbered}
 
-# PSS
+# Non-book exercises
 
-## PSS1: 4.22 Testing for food safety.
-
-Do exercise 4.22 from textbook.
-
-
-## PSS2: Auto exhaust and lead exposure revisited.
+## Power and Sample size: Auto exhaust and lead exposure revisited
 
 ### Power
 
-__In exercise 5.12, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?__ 
+In exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered? 
 
 
 
 ### Sample size
 
-__For the same test, what sample size would be needed for 80% power? How about 90% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not?__ 
-
-
-
-### Effect size
-
-__Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05.__ 
-
-
-
-### 2-sided vs. 1-sided 
-
-__Continuing with the previous question, what happens to the effect size they can detect if the test is two sided instead of one-sided?__ 
-
-
-
-## PSS3: Legalize Marijuana, Part III. 
-
-### Power
-
-__<font color="green">In exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?</font>__ 
-
-
-
-
-### Sample size
-
-__<font color="green">For the same test, what sample size would be needed for 80% power? How about 90% power?</font>__ 
-
-
+For the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)
 
 
 ### Effect size
-__<font color="green">If we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why? </font>__ 
+
+Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
 
 
-## R2: Swim times
+## R1: Swim times
 
 * In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook. 
 * The data are in the `oibiostats` package and called `swim`.
@@ -132,141 +86,16 @@ __<font color="green">If we increase the sample size, and keep the power and sig
 
 ### Mean & SD of differences 
 
-__Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?__ 
+Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive? 
 
 
 ### Dot plot of differences
 
-__Create a dot plot of the differences in swim times and comment on the distribution shape.__ 
+Create a histogram of the differences in swim times and comment on the distribution shape. 
 
 
 ### Hypothesis test
 
-__Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
+Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values. 
 
-
-## R1: DDS expenditures by ethnicity
-
-* In these exercises you will use R to work through the discrimination in developmental disability support example from Section 5.3.4 (pg. 253) in the textbook. 
-* The data are in the `oibiostats` package and called `dds.discr`.
-
-
-
-### New dataset
-
-__Create a new dataset that only includes the White (non Hispanic) and Hispanic ethnicities. Use this new dataset for the following questions.__ 
-
-
-
-### Data viz
-
-__Create density plots and box plots of the expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?__ 
-
-
-
-### t-test conditions
-
-__Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied?__ 
-
-
-
-### Log-transformation
-
-__The book recommends log-transforming the expenditure values before testing. Create a new column in the dataset with the transformed values. The R command for the natural logarithm is `log()`. __ 
-
-
-
-### Data viz: log-transformed expenditures
-
-__Create density plots and box plots of the log-transformed expenditures stratified by ethnicity. Comment on the distribution shapes. Are there any outliers?__ 
-
-
-
-### t-test conditions: log-transformed expenditures
-
-__Are the conditions for a t-test comparing the mean log-transformed expenditures of the two ethnicities satisfied?__ 
-
-
-
-### Summary stats: log-transformed expenditures
-
-__Calculate the means, standard deviations, and sample sizes for the log-transformed expenditures stratified by ethnicity, and compare them to the ones in the book. Which group had a larger mean?__ 
-
-
-
-### Test
-
-__Run the appropriate statistical test in R to verify the test statistic in the text and get the actual p-value. In which order was the difference in means calculated, and is this same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
-
-
-
-### df
-
-__How do the degrees of freedom (df) from the hypothesis test compare to the df used by the book? Why are they different? Which degrees df (book vs. test output) leads to a bigger p-value?__ 
-
-
-
-### CI
-
-__What is the 95% CI? Write an interpretation of the CI in the context of the research question. __ 
-
-
-
-### Test original expenditure values
-
-__Run the appropriate statistical test in R using the original expenditure values. What are the test statistic and p-value? Does the conclusion of the test change?__
-
-
-
-### CI using original expenditure values
-
-__What is the 95% CI? Write an interpretation of the CI in the context of the research question. Which of the CI's (log-transformed vs not) is easier to interpret?__ 
-
-
-
-### Age groups
-
-__The book's example goes on to analyze the data stratified by age groups, since age is a confounder in expenditure amounts. Create two new datasets restricted to the age groups 13-17 and 22-50, respectively.__ 
-
-
-
-### Data viz by age groups
-
-__Create density plots and box plots of the expenditures stratified by ethnicity for each of the age groups separately. Comment on the distribution shapes. Are there any outliers?__ 
-
-
-
-### t-test conditions: age groups
-
-__Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?__ 
-
-
-
-### Summary stats: age groups
-
-__Calculate the means, standard deviations, and sample sizes for the expenditures stratified by ethnicity and the age groups, and compare them to the ones in the book. Which group had a larger mean?__ 
-
- 
-
-### t-test: age groups
-
-__Run the appropriate statistical tests for both age groups in R to verify the test statistics, df's, and p-values in the text. In which order were the differences in means calculated, and are they the same as in the book? Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values.__ 
-
-
-
-### CI: age groups
-
-__What are the 95% CI's for each of the age groups? Write interpretations of the CI's in the context of the research question. Does they suggest there are differences in expenditures between the two ethnicities? Why or why not?__ 
-
-
-
-### Discrimination in DDS expenditures?
-
-__Even though the p-values for the age-stratified tests were not significant, is it possible that there was discrimination in DDS expenditures?__ 
-
-
-
-
-
-
-
+## R2: 2-sample independent t-test
