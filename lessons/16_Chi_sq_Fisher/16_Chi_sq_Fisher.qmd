@@ -1,5 +1,5 @@
 ---
-title: "Lesson 16: Chi-squared tests"
+title: "Lesson 16: Chi-squared tests & Fisher's Exact test"
 subtitle: "TB sections 8.3-8.4"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
@@ -774,3 +774,361 @@ H_A:&~ p_i \neq p_j \textrm{for at least one pair of } i, j
 <br>
 
 ![](/img_slides/flowchart_511_continuous_categorical.png){fig-align="center"}
+
+# Learning Objectives
+
+1.  Recognize the motivation for and focus of our course (categorical responses)
+
+2.  Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation
+
+3.  Determine if a single proportion differs from a population value
+
+4.  Determine if two proportions differ from each other
+
+::: lob
+5.  Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables
+:::
+
+6.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test
+
+7.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test
+
+8.  Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test
+
+9.  Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test
+
+## Contingency Tables (R x C)
+
+-   R X C contingency tables
+
+    -   Contains information for two discrete variables: one has R categories and the other has C categories.
+
+    -   Refers to the number of rows (R) and number of columns (C) in the table
+
+ 
+
+-   For two proportions: focused on 2 X 2 contingency tables
+
+    -   R = 2, C = 2
+
+ 
+
+-   Expand our contingency tables to variables with 2 or more categories
+
+    -   Categories can be ordinal or nominal
+
+## Contingency Table: Example
+
+Let's say we are interested in learning the association between the development of breast cancer and age at first birth. Our first step is typically to present the observed data:
+
+![](./images/Conting_tab_ex.png){fig-align="center" width="511"}
+
+-   This is a 2 x 5 contingency table
+
+## Test Association/Trend of R X C Contingency Table
+
+ 
+
+::: columns
+::: {.column width="46%"}
+
+If [both variables are nominal]{style="color:#4472C4; font-weight: bold;"}, a [test of general association]{style="color:#4472C4; font-style: italic;"} will be sufficient
+
+-   Test of general association is the same regardless of R and C
+-   Test used for 2x2 contingency table same as 5x3 contingency table
+-   We will cover:
+
+    -   Chi-squared test
+    -   Fisher Exact test
+
+:::
+::: {.column width="6%"}
+:::
+::: {.column width="48%"}
+
+If [one or both variables are ordinal]{style="color:#70AD47; font-weight: bold;"}, a [test of trend]{style="color:#70AD47; font-style: italic;"} may be of interest
+
+-   Treats ordinal variables as quantitative rather than qualitative (nominal scale)
+-   Test of trend has greater power than the test of general association
+-   We will cover:
+
+    -   Cochran-Armitage test
+    -   Mantel-Haenszel test
+
+:::
+:::
+
+## Poll Everywhere Question 4
+
+## Test of General Association
+
+-   **General research question:** Are two variables (both categorical, nominal) associated with each other?
+
+ 
+
+-   Translated to a hypothesis test:
+
+    -   $H_0$ : There is no association between the two variables / The variables are independent
+    -   $H_1$ : There is an association between the two variables / The variables are not independent
+
+   
+
+-   We have two options for testing general association:
+
+    1.  Chi-squared test
+    2.  Fisher’s Exact test
+
+## Test of General Association: SHS Example
+
+-   **Main question:** Do American Indians with impaired glucose tolerance have a different incidence of diabetes?
+
+    -   Is glucose tolerance associated with diabetes incidence among American Indians?
+
+-   We have two variables, and both variables have two nominal categories
+
+    -   Diabetes outcome: Not diabetic and Diabetic
+    -   Glucose tolerance: Normal or Impaired
+  
+ 
+
+-   Answer research question with a test of general association
+
+-   Hypothesis:
+
+    -   $H_0$ : There is no association between glucose tolerance and diabetes / Glucose tolerance and diabetes are independent
+    -   $H_1$ : There is an association between glucose tolerance and diabetes / Glucose tolerance and diabetes are not independent
+
+# Learning Objectives
+
+1.  Recognize the motivation for and focus of our course (categorical responses)
+
+2.  Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation
+
+3.  Determine if a single proportion differs from a population value
+
+4.  Determine if two proportions differ from each other
+
+5.  Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables
+
+::: lob
+6.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test
+:::
+
+7.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test
+
+8.  Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test
+
+9.  Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test
+
+## Chi-squared test
+
+-   Test to see how likely is it that we observe our data given the null hypothesis (no association)
+
+ 
+
+-   We use the null to calculate the expected cell counts and compare them to the observed cell counts
+
+ 
+
+-   Requirements to conduct Chi-squared test (expected cell counts)
+
+    -   For 2 x 2 contingency table:
+
+        -   No expected cell counts should be less than 10
+
+    -   For contingency table with 3x2, 3x3, 4x4, etc.:
+
+        -   No more than 20% of expected cell counts are less than 5
+        -   No expected cell counts are less than 1
+
+## Chi-squared test: Process
+
+1.  Check that the [**expected cell counts**]{style="color:#70AD47"} threshold is met
+
+2.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
+
+3.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
+
+    -   In symbols
+    -   In words
+    -   Alternative: one- or two-sided?
+
+4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Chi-squared test in R
+
+    -   We will not discuss the test statistic's equation
+
+5.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
+
+    -   Do we reject or fail to reject $H_0$?
+    -   Write a conclusion in the context of the problem
+
+## Chi-squared test: Expected Cell Counts
+
+-   Is the sample size big enough for the chi-square test to be adequate? What are the expected cell counts?
+
+ 
+
+-   If you want an explanation of how to calculate by hand, please see Vu and Harringtion TB (section 8.3.1, page 405)
+
+ 
+
+-   Too time consuming for this class, but R does it quickly using the `expected()` function in the `epitools` package
+
+## Chi-squared test: Expected Cell Counts
+
+-   In the Strong Heart Study...
+
+```{r}
+SHS = tibble(Diabetes = c(rep("Not diabetic", 
+                   1338), 
+                   rep("Diabetic", 326)),
+              Glucose = c(rep("Normal", 
+                  1004),#Not diabetic
+          rep("Impaired", 334),
+          rep("Normal", 
+              128), #Diabetic
+          rep("Impaired", 198)))
+SHS_table = table(SHS$Glucose, SHS$Diabetes)
+SHS_table
+library(epitools)
+expected(SHS_table)
+```
+
+ 
+
+::: columns
+::: {.column width="15%"}
+:::
+
+::: {.column width="28%"}
+::: hl3
+All expected counts \> 5
+:::
+:::
+
+::: {.column width="38%"}
+:::
+:::
+
+## Chi-squared test: SHS Example
+
+::: columns
+::: column
+1.  Check expected cell counts threshold
+
+```{r}
+expected(SHS_table)
+```
+
+All expected cells are greater than 5.
+
+2.  $\alpha = 0.05$
+
+3.  Hypothesis test:
+
+    -   $H_0$ : There is no association between glucose tolerance and diabetes
+    -   $H_1$ : There is an association between glucose tolerance and diabetes
+:::
+
+::: column
+4.  Calculate the test statistic and p-value for Chi-squared test in R
+
+```{r}
+chisq.test(x = SHS_table, correct = T)
+```
+
+5.  Conclusion to the hypothesis test
+
+We reject the null hypothesis that glucose tolerance and diabetes are not associated ($p<2.2\cdot10^{-16}$). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians.
+:::
+:::
+
+# Learning Objectives
+
+1.  Recognize the motivation for and focus of our course (categorical responses)
+
+2.  Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation
+
+3.  Determine if a single proportion differs from a population value
+
+4.  Determine if two proportions differ from each other
+
+5.  Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables
+
+6.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test
+
+::: lob
+7.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test
+:::
+
+8.  Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test
+
+9.  Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test
+
+## Fisher's Exact Test
+
+-   Only necessary when expected counts in one or more cells is less than 5
+-   Given row and column totals fixed, computes exact probability that we observe our data or more extreme data
+-   Consider a general 2 x 2 table:
+
+![](./images/fisher_tab.png){fig-align="center"}
+
+-   The exact probability of observing a table with cells (a, b, c, d) can be computed based on the hypergeometric distribution
+
+$$P(a, b, c, d) = \dfrac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{n!\cdot a!\cdot b!\cdot c!\cdot d!}$$
+
+-   Numerator is fixed and denominator changes
+
+## Fisher's Exact test: Process
+
+1.  Check the [**expected cell counts**]{style="color:#70AD47"}
+
+2.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
+
+3.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
+
+    -   In symbols
+    -   In words
+    -   Alternative: one- or two-sided?
+
+4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Fisher Exact test in R
+
+    -   We will not discuss the test statistic's equation
+
+5.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
+
+    -   Do we reject or fail to reject $H_0$?
+    -   Write a conclusion in the context of the problem
+
+## Fisher's Exact test: SHS Example (not appropriate use of Fisher's Exact)
+
+::: columns
+::: column
+1.  Check expected cell counts threshold
+
+```{r}
+expected(SHS_table)
+```
+
+We're going to pretend they are less than 5.
+
+2.  $\alpha = 0.05$
+
+3.  Hypothesis test:
+
+    -   $H_0$ : There is no association between glucose tolerance and diabetes
+    -   $H_1$ : There is an association between glucose tolerance and diabetes
+:::
+
+::: column
+4.  Calculate the test statistic and p-value for Chi-squared test in R
+
+```{r}
+fisher.test(x = SHS_table)
+```
+
+5.  Conclusion to the hypothesis test
+
+We reject the null hypothesis that glucose tolerance and diabetes are not associated ($p<2.2\cdot10^{-16}$). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians.
+:::
+:::

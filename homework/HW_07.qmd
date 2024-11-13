@@ -50,15 +50,68 @@ Please complete the group evaluation form by the homework assignment due date.
 
 ## 5.22 DDT exposure {.unnumbered}
 
-## 5.26 Egg volume {.unnumbered}
-
-Maybe skip this one
-
 ## 5.34 Placebos without deception {.unnumbered}
 
 ## 4.22 Testing for food safety {.unnumbered}
 
 # Non-book exercises
+
+## R1: Swim times
+
+* In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook. 
+* The data are in the `oibiostats` package and called `swim`.
+
+
+### Mean & SD of differences 
+
+Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive? 
+
+
+### Histogram of differences
+
+Create a histogram of the differences in swim times and comment on the distribution shape. 
+
+
+### Hypothesis test
+
+Run the appropriate statistical test in R to verify the test statistic, p-value, and CI in the textbook. 
+
+## R2: 2-sample independent t-test
+
+[This problem was adapted from Dr. Maria Tackett's Intro to Data Science homework.](https://sta199-fa21-003.netlify.app/hw/hw-04)
+
+The dataset is adapted from [Little et al. (2007)](https://biomedical-engineering-online.biomedcentral.com/articles/10.1186/1475-925X-6-23#Sec18), and contains voice measurements from individuals both with and without Parkinson’s Disease (PD), a progressive neurological disorder that affects the motor system. The aim of Little et al.’s study was to examine whether Parkinson's Disease could be diagnosed by examining the spectral (sound-wave) properties of patients’ voices.
+
+147 measurements were taken from patients with PD, and 48 measurements were taken from healthy patients who served as controls. For the purposes of this assignment, you may assume that measurements are representative of the underlying populations (PD vs. healthy).
+
+The variables in the dataset are as follows:
+
+- `clip`: ID of the recording number
+- `jitter`: a measure of variation in fundamental frequency
+- `shimmer`: a measure of variation in amplitude
+- `hnr`: a ratio of total components vs. noise in the voice recording
+- `status`: PD vs. Healthy
+- `avg.f.q`: 1, 2, or 3, corresponding to average vocal fundamental frequency 
+  - 1 = low, 
+  - 2 = mid 
+  - 3 = high
+
+The data are in `parkinsons.csv` located in the `Data` folder of the shared OneDrive folder. 
+
+We will be focusing on the variable HNR. We will see if there is evidence that the mean HNR is different for people with PD and people without PD. 
+
+### Histogram of HNR 
+
+Use histograms to visualize the distribution for HNR, comparing people with and without PD. 
+
+### Mean & SD of HNR 
+
+Calculate the mean and standard deviation for HNR in the voice recordings of adults with and without Parkinson’s disease.
+
+### Hypothesis test
+
+Run the appropriate statistical test in R. Please include all steps in the hypothesis test! 
+
 
 ## Power and Sample size: Auto exhaust and lead exposure revisited
 
@@ -78,24 +131,5 @@ For the same test, what sample size would be needed for 80% power? Would it be r
 Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
 
 
-## R1: Swim times
-
-* In these exercises you will use R to work through the swim times example from Section 5.2 in the textbook. 
-* The data are in the `oibiostats` package and called `swim`.
 
 
-### Mean & SD of differences 
-
-Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive? 
-
-
-### Dot plot of differences
-
-Create a histogram of the differences in swim times and comment on the distribution shape. 
-
-
-### Hypothesis test
-
-Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values. 
-
-## R2: 2-sample independent t-test

@@ -407,8 +407,8 @@ Meike Niederhausen and Nicky Wakim
   <p class="date">2024-11-13</p>
 </section>
 <section>
-<section id="power-and-sample-size-calculations" class="title-slide slide level1 center">
-<h1>Power and sample size calculations</h1>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
 <ul>
 <li><p>Critical values &amp; rejection region</p></li>
 <li><p>Type I &amp; II errors</p></li>
@@ -425,6 +425,15 @@ Meike Niederhausen and Nicky Wakim
 </ul></li>
 </ul>
 </section>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
+
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+
+</section>
 <section id="critical-values" class="slide level2">
 <h2>Critical values</h2>
 <div style="font-size: 90%;">
@@ -432,6 +441,7 @@ Meike Niederhausen and Nicky Wakim
 <li><strong>Critical values</strong> are the cutoff values that determine whether a test statistic is statistically significant or not.</li>
 <li>If a test statistic is greater in absolute value than the critical value, we reject <span class="math inline">\(H_0\)</span></li>
 </ul>
+<p>&nbsp;</p>
 <div class="columns">
 <div class="column" style="width:49%;">
 <div class="cell">
@@ -456,11 +466,16 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 </div>
 </div>
-<p><br></p>
 <ul>
-<li>How can we calculate the critical values using R?</li>
+<li>We have been referring to critical values from the t-distribution as <span class="math inline">\(t^*\)</span>
+<ul>
+<li>See how we calculate a specific confidence interval</li>
+</ul></li>
 </ul>
 </div>
+</section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
 </section>
 <section id="rejection-region" class="slide level2">
 <h2>Rejection region</h2>
@@ -475,7 +490,7 @@ Meike Niederhausen and Nicky Wakim
 <div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/RejectionRegion.png"></p>
+<p><img data-src="../img_slides/RejectionRegion.png"></p>
 <figcaption><a href="https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html">Stats &amp; Geospatial Analysis</a></figcaption>
 </figure>
 </div>
@@ -487,40 +502,47 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </section></section>
 <section>
-<section id="hypothesis-testing-errors" class="title-slide slide level1 center">
-<h1>Hypothesis Testing “Errors”</h1>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
 
-<img data-src="../../img_slides/rachnovblog-768x310.jpg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.statisticssolutions.com/to-err-is-human-what-are-type-i-and-ii-errors/">StatisticsSolutions</a></p></section>
+</section>
 <section id="justice-system-analogy" class="slide level2">
 <h2>Justice system analogy</h2>
 <p><br><br></p>
 
-<img data-src="../../img_slides/intuitor_charts.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="http://www.intuitor.com/statistics/T1T2Errors.html">Type I and Type II Errors - Making Mistakes in the Justice System</a></p></section>
+<img data-src="../img_slides/intuitor_charts.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="http://www.intuitor.com/statistics/T1T2Errors.html">Type I and Type II Errors - Making Mistakes in the Justice System</a></p></section>
+<section id="important-definitions-in-words" class="slide level2">
+<h2>Important definitions in words</h2>
+<ul>
+<li><strong>Type I error</strong> (<span class="math inline">\(\alpha\)</span>): Probability of rejecting the null hypothesis given that the null is true</li>
+<li><strong>Type II error</strong> (<span class="math inline">\(\beta\)</span>): Probability of failing to reject the null hypothesis given that the null hypothesis is false</li>
+<li><strong>Power</strong> (or sensitivity) (<span class="math inline">\(1 - \beta\)</span>): Probability of rejecting the null hypothesis given that the null is true</li>
+<li><strong>Specificity</strong> (<span class="math inline">\(1-\alpha\)</span>): Probability of failing to reject the null hypothesis given that the null is false</li>
+</ul>
+</section>
 <section id="type-i-ii-errors" class="slide level2">
 <h2>Type I &amp; II Errors</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:42%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/type-i-and-type-ii-errors_chart.png"></p>
+<p><img data-src="../img_slides/type-i-and-type-ii-errors_chart.png"></p>
 </figure>
 </div>
-<div style="font-size: 90%;">
 <ul>
 <li><span style="color:violet"><span class="math inline">\(\alpha\)</span></span> = probability of making a <span style="color:violet"><strong>Type I error</strong></span>
 <ul>
 <li>This is the significance level (usually 0.05)</li>
 <li>Set before study starts</li>
 </ul></li>
-<li><span style="color:green"><span class="math inline">\(\beta\)</span></span> = probability of making a <span style="color:green"><strong>Type II error</strong></span></li>
+<li><span style="color:#5DCA3B"><span class="math inline">\(\beta\)</span></span> = probability of making a <span style="color:#5DCA3B"><strong>Type II error</strong></span></li>
 <li>Ideally we want
 <ul>
 <li>small Type I &amp; II errors and</li>
 <li>big power</li>
 </ul></li>
 </ul>
-</div>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="cell">
 <div class="cell-output-display">
 <p><img data-src="14_Power_sample_size_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
@@ -549,13 +571,13 @@ Meike Niederhausen and Nicky Wakim
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/power_applet_screenshot_alpha05.png"></p>
+<p><img data-src="../img_slides/power_applet_screenshot_alpha05.png"></p>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/power_applet_screenshot_alpha01.png"></p>
+<p><img data-src="../img_slides/power_applet_screenshot_alpha01.png"></p>
 </figure>
 </div>
 </div>
@@ -579,7 +601,7 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/power_applet_screenshot_alpha05.png"></p>
+<p><img data-src="../img_slides/power_applet_screenshot_alpha05.png"></p>
 </figure>
 </div>
 </div><div class="column" style="width:2%;">
@@ -589,8 +611,8 @@ Meike Niederhausen and Nicky Wakim
 <li><p><strong>Power vs.&nbsp;Type II error</strong></p>
 <ul>
 <li><p>Power = 1 - P(Type II error) = 1 - <span class="math inline">\(\beta\)</span></p></li>
-<li><p>Thus as <span class="math inline">\(\beta\)</span> = P(Type II error) decreases, the power increases</p></li>
-<li><p>P(Type II error) decreases as the mean of the alternative population shits further away from the mean of the null population (effect size gets bigger).</p></li>
+<li><p>Thus as <span class="math inline">\(\beta\)</span> (which is P(Type II error)) decreases, the power increases</p></li>
+<li><p>P(Type II error) decreases as the mean of the alternative population shifts further away from the mean of the null population (effect size gets bigger).</p></li>
 <li><p>Typically want at least 80% power; 90% power is good</p></li>
 </ul></li>
 </ul>

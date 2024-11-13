@@ -50,7 +50,7 @@ set.seed(456)
 ```
 
 
-# Power and sample size calculations
+# Learning Objectives
 
 * Critical values & rejection region
 
@@ -67,7 +67,11 @@ set.seed(456)
     * __Section 5.4__ Power calculations for a difference of means
     * plus notes
 
+## Where are we?
 
+![](../img_slides/course_map.png){fig-align="center"}
+
+# Learning Objectives
 
 ## Critical values 
 
@@ -75,6 +79,8 @@ set.seed(456)
 
 * __Critical values__ are the cutoff values that determine whether a test statistic is statistically significant or not.
 * If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+
+ 
 
 ::: columns
 ::: {.column width="49%"}
@@ -88,25 +94,26 @@ cv95 <- 1.96
 cv99 <- 2.575
 
 ggplot(NULL, aes(c(-3,3))) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.8, xlim = c(-3, -cv99)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.6, xlim = c(-cv99, -cv95)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.4, xlim = c(-cv95, -cv90)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.1, xlim = c(-cv90, cv90)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.4, xlim = c(cv90, cv95)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.6, xlim = c(cv95, cv99)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#00998a", alpha =0.8, xlim = c(cv99, 3)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.8, xlim = c(-3, -cv99)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.6, xlim = c(-cv99, -cv95)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.4, xlim = c(-cv95, -cv90)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.1, xlim = c(-cv90, cv90)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.4, xlim = c(cv90, cv95)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.6, xlim = c(cv95, cv99)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#EF85B3", alpha =0.8, xlim = c(cv99, 3)) +
   labs(x = "z", y = "") +
   scale_y_continuous(breaks = NULL) +
   scale_x_continuous(breaks = c(-cv99, -cv95, -cv90, 0, cv90, cv95, cv99)) +
-  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +
-  annotate("text", x = -2.8, y = .1, label = ".005") +
-  annotate("text", x = -2.2, y = .1, label = ".025") +
-  annotate("text", x = -1.7, y = .1, label = ".05") +
-  annotate("text", x = 2.8, y = .1, label = ".005") +
-  annotate("text", x = 2.2, y = .1, label = ".025") +
-  annotate("text", x = 1.7, y = .1, label = ".05") +
+  theme(axis.text.x=element_text(angle = -35, hjust = 0)) +
+  annotate("text", x = -2.8, y = .1, label = "0.005", size = 6) +
+  annotate("text", x = -2.2, y = .1, label = "0.025", size = 6)  +
+  annotate("text", x = -1.7, y = .1, label = "0.05", size = 6)  +
+  annotate("text", x = 2.8, y = .1, label = "0.005", size = 6)  +
+  annotate("text", x = 2.2, y = .1, label = "0.025", size = 6)  +
+  annotate("text", x = 1.7, y = .1, label = "0.05", size = 6)  +
   labs(title="Critical Values for a Normal Distribution") +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), 
+        text = element_text(size=24))
 ```
 :::
 
@@ -124,10 +131,12 @@ ggplot(NULL, aes(c(-3,3))) +
 
 :::
 :::
-<br>
 
-* How can we calculate the critical values using R?
+* We have been referring to critical values from the t-distribution as $t^*$
+    - See how we calculate a specific confidence interval
 :::
+
+## Poll Everywhere Question 1
 
 
 ## Rejection region
@@ -139,7 +148,7 @@ ggplot(NULL, aes(c(-3,3))) +
 ::: columns
 ::: {.column width="60%"}
 
-![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](/img_slides/RejectionRegion.png){fig-align="center"}
+![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](../img_slides/RejectionRegion.png){fig-align="center"}
 
 :::
 ::: {.column width="40%"}
@@ -150,39 +159,42 @@ ggplot(NULL, aes(c(-3,3))) +
 :::
 
 
-# Hypothesis Testing "Errors" 
-
-![[StatisticsSolutions](https://www.statisticssolutions.com/to-err-is-human-what-are-type-i-and-ii-errors/)](/img_slides/rachnovblog-768x310.jpg){fig-align="center"}
+# Learning Objectives
 
 
 ## Justice system analogy 
 
 <br><br>
 
-![[Type I and Type II Errors - Making Mistakes in the Justice System](http://www.intuitor.com/statistics/T1T2Errors.html)](/img_slides/intuitor_charts.png){fig-align="center"}
+![[Type I and Type II Errors - Making Mistakes in the Justice System](http://www.intuitor.com/statistics/T1T2Errors.html)](../img_slides/intuitor_charts.png){fig-align="center"}
 
+
+## Important definitions in words
+
+- **Type I error** ($\alpha$): Probability of rejecting the null hypothesis given that the null is true
+- **Type II error** ($\beta$): Probability of failing to reject the null hypothesis given that the null hypothesis is false
+- **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is true
+- **Specificity** ($1-\alpha$): Probability of failing to reject the null hypothesis given that the null is false
 
 ## Type I & II Errors
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="42%"}
 
-![](/img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
+![](../img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
 
-::: {style="font-size: 90%;"}
 
 * [$\alpha$]{style="color:violet"} = probability of making a [__Type I error__]{style="color:violet"}
     * This is the significance level (usually 0.05)
     * Set before study starts
-* [$\beta$]{style="color:green"} = probability of making a [__Type II error__]{style="color:green"}
+* [$\beta$]{style="color:#5DCA3B"} = probability of making a [__Type II error__]{style="color:#5DCA3B"}
 * Ideally we want
     * small Type I & II errors and
     * big power
 
-::: 
 :::
 
-::: {.column width="60%"}
+::: {.column width="58%"}
 
 ```{r}
 #| fig.width: 10
@@ -232,13 +244,13 @@ From the applet at <https://rpsychologist.com/d3/NHST/>
 ::: columns
 ::: {.column width="50%"}
 
-![](/img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
+![](../img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
 
 :::
 
 ::: {.column width="50%"}
 
-![](/img_slides/power_applet_screenshot_alpha01.png){fig-align="center"}
+![](../img_slides/power_applet_screenshot_alpha01.png){fig-align="center"}
 :::
 :::
 
@@ -257,7 +269,7 @@ From the applet at <https://rpsychologist.com/d3/NHST/>
     * probability of detection, or 
     * the _sensitivity_ of a test
     
-![](/img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
+![](../img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
 
 :::
 ::: {.column width="2%"}
@@ -268,9 +280,9 @@ From the applet at <https://rpsychologist.com/d3/NHST/>
 
     * Power = 1 - P(Type II error) = 1 - $\beta$
 
-    * Thus as $\beta$ = P(Type II error) decreases, the power increases
+    * Thus as $\beta$ (which is P(Type II error)) decreases, the power increases
 
-    * P(Type II error) decreases as the mean of the alternative population shits further away from the mean of the null population (effect size gets bigger).
+    * P(Type II error) decreases as the mean of the alternative population shifts further away from the mean of the null population (effect size gets bigger).
 
     * Typically want at least 80% power; 90% power is good
 :::
