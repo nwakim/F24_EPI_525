@@ -52,32 +52,220 @@ set.seed(456)
 
 # Learning Objectives
 
-* Critical values & rejection region
-
-* Type I & II errors
-
-* Power
-
-* How to calculate sample size needed for a study?
-
-<hr>
-
-* Materials are from 
-    * __Section 4.3.4__ Decision errors
-    * __Section 5.4__ Power calculations for a difference of means
-    * plus notes
-
+1. Understand the 4 components in equilibrium in a hypothesis test
+2. Define the significance level, critical value, and rejection region.
+3. Define power.
+4. Calculate power 
+5. Calculate the sample size
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
+## From Lesson 13: Does caffeine increase finger taps/min (on average)?
+
+-   [**Use this example to illustrate how to calculate a confidence interval and perform a hypothesis test for two independent samples**]{style="color:#5BAFF8"}
+
+**Study Design**:[^1]
+
+[^1]: Based on following article with extra simulations by me: Hand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). [A handbook of small data sets](https://www.crcpress.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780412399206). London, U.K.: Chapman and Hall.
+
+-   70 college students students were trained to tap their fingers at a rapid rate
+-   Each then drank 2 cups of coffee (double-blind)
+    -   **Control** group: decaf
+    -   **Caffeine** group: \~ 200 mg caffeine
+-   After 2 hours, students were tested.
+-   **Taps/minute** recorded
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| include: false
+
+
+CaffTaps <- read.csv(here::here("data", "CaffeineTaps_n35.csv"))
+
+sumstats <- CaffTaps %>% 
+  group_by(Group) %>% 
+  get_summary_stats(type = "mean_sd") 
+n1 <- 35
+n2 <- 35
+(xbar1 <- sumstats$mean[1])
+(xbar2 <- sumstats$mean[2])
+(diff_x <- xbar1 - xbar2)
+(sd1 <- sumstats$sd[1])
+(sd2 <- sumstats$sd[2])
+mu <- 0
+
+(se <- sqrt(sd1^2/n1 + sd2^2/n2))
+```
+
+## We started looking at the taps/min for each group
+
+```{r}
+#| fig.width: 10
+#| fig.height: 8
+#| code-fold: true
+#| code-summary: Code to make these histograms
+#| fig-align: center
+
+ggplot(CaffTaps, aes(x=Taps)) +
+  geom_histogram() +
+  facet_wrap(vars(Group), ncol=1) +
+  labs(y = "Number of people", x = "Taps/minute") +
+  theme(text = element_text(size = 30))
+```
+
+## What if the following were the true population distributions? Case 1
+
+- Difference in population means is **5**
+- Both have a standard deviation of 2
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+mu1 = 250
+mu2 = 245
+sd = 2
+diff_mu = mu1-mu2
+
+two_sample_plot = ggplot(data.frame(x = c(238, 257)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu1, sd = sd), 
+                size = 1.5, 
+                color = "#5BAFF8") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mu2, sd = sd), 
+                size = 1.5, 
+                color = "#EF85B3") +
+  annotate("text", x = 240, y = 0.1, label = "No Caffeine", size = 5, color = "#EF85B3") +
+  annotate("text", x = 254, y = 0.1, label = "Caffeine", size = 5, color = "#5BAFF8") +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "Taps/min")
+two_sample_plot
+```
+
+- When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
+  - **Depends on the number of samples we get: we might need a lot**
+
+## What if the following were the true population distributions? Case 2
+
+- Difference in population means is **5**
+- Both have a standard deviation of 1
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+mu1 = 250
+mu2 = 245
+sd = 1
+diff_mu = mu1-mu2
+
+two_sample_plot = ggplot(data.frame(x = c(238, 257)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu1, sd = sd), 
+                size = 1.5, 
+                color = "#5BAFF8") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mu2, sd = sd), 
+                size = 1.5, 
+                color = "#EF85B3") +
+  annotate("text", x = 242, y = 0.3, label = "No Caffeine", size = 5, color = "#EF85B3") +
+  annotate("text", x = 253, y = 0.3, label = "Caffeine", size = 5, color = "#5BAFF8") +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "Taps/min")
+two_sample_plot
+```
+
+- When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
+  - **Seems easier to distinguish here.** How did the standard deviation decrease?
+
+## What if the following were the true population distributions? Case 3
+
+- Difference in population means is **10**
+- Both have a standard deviation of 2
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+mu1 = 255
+mu2 = 245
+sd = 2
+diff_mu = mu1-mu2
+
+two_sample_plot = ggplot(data.frame(x = c(238, 263)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = mu1, sd = sd), 
+                size = 1.5, 
+                color = "#5BAFF8") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mu2, sd = sd), 
+                size = 1.5, 
+                color = "#EF85B3") +
+  annotate("text", x = 240, y = 0.1, label = "No Caffeine", size = 5, color = "#EF85B3") +
+  annotate("text", x = 260, y = 0.1, label = "Caffeine", size = 5, color = "#5BAFF8") +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "Taps/min")
+two_sample_plot
+```
+
+- When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
+  - **Also seems easier to distinguish here**
+
+  
+## There are a few things at play here
+
+- There are several measurements that affect how easy it is to distinguish between two populations 
+- "Distinguish between two populations" = reject the null hypothesis that they are the same
+
+ 
+
+- What do we need?
+
+    1. **Difference** in population means
+    2. **Number of samples** from each population
+    3. The **significance level** that we use for a cut off
+    4. The **power** of our test
+    
+- More familiar with first two, but let's define #3 and #4 more
+
 # Learning Objectives
 
-## Critical values 
+## Significance levels and critical values 
 
 ::: {style="font-size: 90%;"}
 
-* __Critical values__ are the cutoff values that determine whether a test statistic is statistically significant or not.
+* __Critical values__ are the cutoff values that determine whether a test statistic is statistically significant or not
+    - Determined by the **significance level**
 * If a test statistic is greater in absolute value than the critical value, we reject $H_0$
 
  
@@ -125,9 +313,7 @@ ggplot(NULL, aes(c(-3,3))) +
 * Critical values are determined by 
     * the significance level $\alpha$, 
     * whether a test is 1- or 2-sided, &
-    * the probability distribution being used to calculate the p-value (such as normal or t-distribution).
-* The critical values in the figure should look very familiar! 
-    * Where have we used these before?
+    * the probability distribution being used to calculate the p-value (such as normal or t-distribution)
 
 :::
 :::
@@ -139,7 +325,7 @@ ggplot(NULL, aes(c(-3,3))) +
 ## Poll Everywhere Question 1
 
 
-## Rejection region
+## Significance levels and critical values and rejection region
 
 * If the absolute value of the test statistic is greater than the critical value, we reject $H_0$
     * In this case the test statistic is in the __rejection region__.
@@ -159,27 +345,25 @@ ggplot(NULL, aes(c(-3,3))) +
 :::
 
 
-# Learning Objectives
+# LOB
 
-
-## Justice system analogy 
-
-<br><br>
-
-![[Type I and Type II Errors - Making Mistakes in the Justice System](http://www.intuitor.com/statistics/T1T2Errors.html)](../img_slides/intuitor_charts.png){fig-align="center"}
-
-
-## Important definitions in words
+## Let's start with some important definitions in words
 
 - **Type I error** ($\alpha$): Probability of rejecting the null hypothesis given that the null is true
 - **Type II error** ($\beta$): Probability of failing to reject the null hypothesis given that the null hypothesis is false
-- **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is true
-- **Specificity** ($1-\alpha$): Probability of failing to reject the null hypothesis given that the null is false
+- **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
+- **Specificity** ($1-\alpha$): Probability of failing to reject the null hypothesis given that the null is true (correct)
 
-## Type I & II Errors
+ 
+
+![](../img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
+
+
+
+## What does that look like with our two populations?
 
 ::: columns
-::: {.column width="42%"}
+::: {.column width="45%"}
 
 ![](../img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
 
@@ -194,7 +378,10 @@ ggplot(NULL, aes(c(-3,3))) +
 
 :::
 
-::: {.column width="58%"}
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
 
 ```{r}
 #| fig.width: 10
@@ -202,42 +389,85 @@ ggplot(NULL, aes(c(-3,3))) +
 #| echo: false
 cv90 <- 1.645
 cv95 <- 1.96
-cv99 <- 2.575
+cv99 <- 2.57
 
-ggplot(NULL, aes(c(-3,7))) +
-  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(-3, -1.96)) +
-    geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "skyblue", alpha =0.4, xlim = c(-1.96, 1.96)) +
-  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(1.96,4)) +
-    geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "sienna1", alpha =0.7, xlim = c(-1, 1.96)) +
-  geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "green3", alpha =0.3, xlim = c(1.96, 6)) +
-  labs(x = "", y = "", title="Type I & II errors and power") +
-  scale_y_continuous(breaks = NULL) +
-  scale_x_continuous(breaks = c(-2, -1, 0, 1, 2, 3, 4)) +
-  annotate("text", x = -3, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
-  annotate("text", x = 2, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
-  annotate("text", x = 3, y = .15, label = "Power", hjust=0, size=6) +
-  annotate("text", x = .4, y = .05, label = "P(Type II error)", hjust=0, size=6) +
-  annotate("text", x = -1, y = .3, label = "Null Population", hjust=0, size=6) +
-  annotate("text", x = 2, y = .3, label = "Alternative Population", hjust=0, size=6) +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+mu1 = 250
+mu2 = 245
+sd = 2
+diff_mu = mu1-mu2
+
+two_sample_plot = ggplot(data.frame(x = c(238, 257)), aes(x)) + 
+  annotate("text", x = 240, y = 0.1, label = "No Caffeine", size = 7, color = "#EF85B3") +
+  annotate("text", x = 255, y = 0.1, label = "Caffeine", size = 7, color = "#5BAFF8") +
+  theme_classic() +
+  theme(text = element_text(size = 20), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "Taps/min") +
+  geom_area(stat = "function", fun = dnorm, args = list(mean = mu2, sd = sd),fill = "violet", alpha =0.9, xlim = c(mu2 - 3*sd, mu2 -1.96*sd)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean = mu2, sd = sd),fill = "skyblue", alpha =0.4, xlim = c(mu2 -1.96*sd, mu2 + 1.96*sd)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean = mu2, sd = sd),fill = "violet", alpha =0.9, xlim = c(mu2 + 1.96* sd, 256)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean = mu1, sd = sd),fill = "sienna1", alpha =0.7, xlim = c(238, mu2 + 1.96*sd)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean = mu1, sd = sd),fill = "green3", alpha =0.3, xlim = c(mu2 + 1.96*sd, 256)) +
+    stat_function(fun = dnorm, 
+                args = list(mean = mu1, sd = sd), 
+                size = 2, 
+                color = "#5BAFF8") +
+  stat_function(fun = dnorm, 
+                args = list(mean = mu2, sd = sd), 
+                size = 2, 
+                color = "#EF85B3") +
+    annotate("text", x = 237.5, y = .01, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 249, y = .01, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 250, y = .1, label = "Power", hjust=0, size=6) +
+  annotate("text", x = 245.3, y = .01, label = "P(Type II error)", hjust=0, size=6) 
+two_sample_plot
 ```
 
 ::: {style="font-size: 90%;"}
-Applet for visualizing Type I & II errors and power: 
-<https://rpsychologist.com/d3/NHST/>
+
+::: lob
+**Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
+:::
+
+- Power is the correct region that is usually **in line with our study design**: studies are often seeing if there is a distinction between two populations
 
 :::
 
 :::
 :::
 
+## Power
 
-## Relationship between Type I & II errors 
+::: columns
+::: column
+- **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
 
-* __Type I vs. Type II error__
-    * Decreasing P(Type I error) leads to 
-        * increasing P(Type II error)
-    * We typically keep P(Type I error) = $\alpha$ set to 0.05
+ 
+
+* Power is also called the
+    * true positive rate,
+    * probability of detection, or 
+    * the _sensitivity_ of a test
+
+ 
+
+- Typically, we aim for 80% or 90% power
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+two_sample_plot
+```
+:::
+:::
+
+## If you want to keep revisiting these concepts!
         
 From the applet at <https://rpsychologist.com/d3/NHST/>
 
@@ -254,45 +484,11 @@ From the applet at <https://rpsychologist.com/d3/NHST/>
 :::
 :::
 
+- Cohen's d is just a stanardized value to represent the difference in means: $$d = \dfrac{\overline{x}_1 - \overline{x}_2}{s}$$
 
-## Relationship between Type II errors and power
-
-<center>__Power__ = P(correctly rejecting the null hypothesis)</center>
-
-<br>
-
-::: columns
-::: {.column width="49%"}
-
-* Power is also called the
-    * true positive rate,
-    * probability of detection, or 
-    * the _sensitivity_ of a test
-    
-![](../img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
-
-:::
-::: {.column width="2%"}
-:::
-::: {.column width="49%"}
-
-* __Power vs. Type II error__
-
-    * Power = 1 - P(Type II error) = 1 - $\beta$
-
-    * Thus as $\beta$ (which is P(Type II error)) decreases, the power increases
-
-    * P(Type II error) decreases as the mean of the alternative population shifts further away from the mean of the null population (effect size gets bigger).
-
-    * Typically want at least 80% power; 90% power is good
-:::
-:::
-
-
+# LOB
 
 ## Example calculating power
-
-::: {style="font-size: 90%;"}
 
 * Suppose the mean of the null population is 0 ( $H_0: \mu=0$ ) with standard error 1
 * Find the power of a 2-sided test if the actual $\mu=3$, assuming the SE doesn't change.
@@ -329,28 +525,68 @@ ggplot(NULL, aes(c(-3,7))) +
 :::
 
 ::: {.column width="50%"}
-* Power = $P($Reject $H_0$ when alternative pop is $N(3,1))$
+* Power = $P$ (Reject $H_0$ when alternative pop is true)
+  - Correctly reject null
 * When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
-* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$:
+* We need to look at the rejection region under the null, then calculate the probability that we are in those regions given we are actually in the alternative population
+* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$
 :::
 :::
 
+## Example calculating power: using `pnorm()`
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| fig.width: 10
+#| fig.height: 6
+#| echo: false
+cv90 <- 1.645
+cv95 <- 1.96
+cv99 <- 2.575
+
+ggplot(NULL, aes(c(-3,7))) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(-3, -1.96)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "skyblue", alpha =0.4, xlim = c(-1.96, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=0,sd=1),fill = "violet", alpha =0.9, xlim = c(1.96,4)) +
+    geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "sienna1", alpha =0.7, xlim = c(-1, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, args = list(mean=3,sd=1),fill = "green3", alpha =0.3, xlim = c(1.96, 6)) +
+  theme(axis.title = element_blank()) +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = c(-2, -1, 0, 1, 2, 3, 4)) +
+  annotate("text", x = -3, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 2, y = .015, label = "P(Type I error)/2", hjust=0, size=6) +
+  annotate("text", x = 3, y = .15, label = "Power", hjust=0, size=6) +
+  annotate("text", x = .4, y = .05, label = "P(Type II error)", hjust=0, size=6) +
+  annotate("text", x = -1, y = .3, label = "Null Population", hjust=0, size=6) +
+  annotate("text", x = 2, y = .3, label = "Alternative Population", hjust=0, size=6) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+:::
+
+::: {.column width="50%"}
+
+* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$:
 
 ```{r}
 # left tail + right tail:
-pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)
+pnorm(-1.96, mean=3, sd=1, 
+      lower.tail=TRUE) + 
+  pnorm(1.96, mean=3, sd=1, 
+        lower.tail=FALSE)
 ```
 
 :::
 
-::: {style="font-size: 70%;"}
-The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
 :::
 
-::: {style="font-size: 90%;"}
-* Note that this power calculation specified the value of the SE instead of the standard deviation and sample size $n$ individually.
-:::
+ 
 
+- The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
+- Note that this power calculation specified the value of the SE instead of the standard deviation and sample size $n$ individually.
+
+# LOB
 
 ## __Sample size__ calculation for testing one mean
 
@@ -377,8 +613,7 @@ mu0 <- 98.6
 sd <- 0.73
 alpha <- 0.05
 beta <- 0.20
-n <- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2
-n
+(n <- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2)
 ceiling(n)  # always round UP to the next highest integer 
 ```
 :::
@@ -403,7 +638,7 @@ Conversely, we can calculate how much power we had in our body temperature one-s
     * _assuming_ the test statistic is normal (instead of t-distribution)
 
 $$1-\beta=
-		\Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
+		P\left(Z \leq z-z_{1-\alpha/2}\right)+P\left(Z \leq -z-z_{1-\alpha/2}\right)
 		\quad ,\quad \text{where } z=\frac{\mu-\mu_0}{s/\sqrt{n}}$$
 
 $\Phi$ is the probability for a standard normal distribution 

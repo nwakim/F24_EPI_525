@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n11/11\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for mean difference from two-sample dependent/paired data (Hypothesis Testing 2)\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n13\nInference for difference in means from two independent samples (Hypothesis Testing 3)\n5.3\n\n\n\n\n\n\n\n\n\n\n\n14\nPower and sample size calculations for difference of means\n5.4\n\n\n\n\n\n\n\n\n\n\n11/13\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm (OPTIONAL)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\nR09\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR10\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n11/11\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for mean difference from two-sample dependent/paired data (Hypothesis Testing 2)\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n13\nInference for difference in means from two independent samples (Hypothesis Testing 3)\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm (OPTIONAL)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\n14\nPower and sample size calculations for difference of means\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR09\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/20\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR10\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -9608,21 +9608,21 @@
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power",
     "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Example calculating power",
-    "text": "Example calculating power\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\):\n\n\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case.\n\n\n\nNote that this power calculation specified the value of the SE instead of the standard deviation and sample size \\(n\\) individually."
+    "text": "Example calculating power\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\n\n\nPower = \\(P\\) (Reject \\(H_0\\) when alternative pop is true)\n\nCorrectly reject null\n\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\nWe need to look at the rejection region under the null, then calculate the probability that we are in those regions given we are actually in the alternative population\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\)"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#sample-size-calculation-for-testing-one-mean",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#sample-size-calculation-for-testing-one-mean",
     "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Sample size calculation for testing one mean",
-    "text": "Sample size calculation for testing one mean\n\n\nRecall in our body temperature example that \\(\\mu_0=98.6\\) °F and \\(\\bar{x}= 98.25\\) °F.\n\nThe p-value from the hypothesis test was highly significant (very small).\nWhat would the sample size \\(n\\) need to be for 80% power?\n\nCalculate \\(n\\),\n\ngiven \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution):\n\n\n\n\n\\[n=\\left(s\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{\\mu-\\mu_0}\\right)^2\\]\n\n\nmu &lt;- 98.25\nmu0 &lt;- 98.6\nsd &lt;- 0.73\nalpha &lt;- 0.05\nbeta &lt;- 0.20\nn &lt;- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2\nn\n\n[1] 34.14423\n\nceiling(n)  # always round UP to the next highest integer \n\n[1] 35\n\n\n\n\nWe would only need a sample size of 35 for 80% power!\nHowever, this is an under-estimate since we used the normal instead of t-distribution.\n\n\nSee http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality."
+    "text": "Sample size calculation for testing one mean\n\n\nRecall in our body temperature example that \\(\\mu_0=98.6\\) °F and \\(\\bar{x}= 98.25\\) °F.\n\nThe p-value from the hypothesis test was highly significant (very small).\nWhat would the sample size \\(n\\) need to be for 80% power?\n\nCalculate \\(n\\),\n\ngiven \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution):\n\n\n\n\n\\[n=\\left(s\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{\\mu-\\mu_0}\\right)^2\\]\n\n\nmu &lt;- 98.25\nmu0 &lt;- 98.6\nsd &lt;- 0.73\nalpha &lt;- 0.05\nbeta &lt;- 0.20\n(n &lt;- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2)\n\n[1] 34.14423\n\nceiling(n)  # always round UP to the next highest integer \n\n[1] 35\n\n\n\n\nWe would only need a sample size of 35 for 80% power!\nHowever, this is an under-estimate since we used the normal instead of t-distribution.\n\n\nSee http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality."
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#power-calculation-for-testing-one-mean",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#power-calculation-for-testing-one-mean",
     "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Power calculation for testing one mean",
-    "text": "Power calculation for testing one mean\n\nConversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.\n\nCalculate power,\n\ngiven \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution)\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad \\text{where } z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\\(\\Phi\\) is the probability for a standard normal distribution\n\nmu &lt;- 98.25; mu0 &lt;- 98.6; sd &lt;- 0.73; alpha &lt;- 0.05; n &lt;- 130\n(z &lt;- (mu-mu0) / (sd/sqrt(n)) )\n\n[1] -5.466595\n\n(Power &lt;- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2)))\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130."
+    "text": "Power calculation for testing one mean\n\nConversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.\n\nCalculate power,\n\ngiven \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution)\n\n\n\\[1-\\beta=\n        P\\left(Z \\leq z-z_{1-\\alpha/2}\\right)+P\\left(Z \\leq -z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad \\text{where } z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\\(\\Phi\\) is the probability for a standard normal distribution\n\nmu &lt;- 98.25; mu0 &lt;- 98.6; sd &lt;- 0.73; alpha &lt;- 0.05; n &lt;- 130\n(z &lt;- (mu-mu0) / (sd/sqrt(n)) )\n\n[1] -5.466595\n\n(Power &lt;- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2)))\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130."
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#r-package-pwr-for-power-analyses",
@@ -20723,15 +20723,15 @@
     "objectID": "hw_answers/HW_07_ans.html#r1-swim-times",
     "href": "hw_answers/HW_07_ans.html#r1-swim-times",
     "title": "Homework 7 Answers",
-    "section": "2.2 R1: Swim times",
-    "text": "2.2 R1: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n2.2.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n2.2.2 Dot plot of differences\nCreate a histogram of the differences in swim times and comment on the distribution shape.\n\n\n2.2.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
+    "section": "3.2 R1: Swim times",
+    "text": "3.2 R1: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\n3.2.1 Mean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n3.2.2 Dot plot of differences\nCreate a histogram of the differences in swim times and comment on the distribution shape.\n\n\n3.2.3 Hypothesis test\nRun the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book’s values."
   },
   {
     "objectID": "hw_answers/HW_07_ans.html#r2-2-sample-independent-t-test",
     "href": "hw_answers/HW_07_ans.html#r2-2-sample-independent-t-test",
     "title": "Homework 7 Answers",
-    "section": "2.3 R2: 2-sample independent t-test",
-    "text": "2.3 R2: 2-sample independent t-test"
+    "section": "3.3 R2: 2-sample independent t-test",
+    "text": "3.3 R2: 2-sample independent t-test\n\npd = read.csv(here(\"data\", \"parkinsons.csv\"))"
   },
   {
     "objectID": "lessons/13_Hyp_testing_03/13_Hyp_testing_03.html#poll-everywhere-question-1",
@@ -21005,5 +21005,152 @@
     "title": "Lesson 14: Power and sample size calculations for difference of means",
     "section": "Important definitions in words",
     "text": "Important definitions in words\n\nType I error (\\(\\alpha\\)): Probability of rejecting the null hypothesis given that the null is true\nType II error (\\(\\beta\\)): Probability of failing to reject the null hypothesis given that the null hypothesis is false\nPower (or sensitivity) (\\(1 - \\beta\\)): Probability of rejecting the null hypothesis given that the null is true\nSpecificity (\\(1-\\alpha\\)): Probability of failing to reject the null hypothesis given that the null is false"
+  },
+  {
+    "objectID": "hw_answers/HW_07_ans.html#load-appropriate-packages-here",
+    "href": "hw_answers/HW_07_ans.html#load-appropriate-packages-here",
+    "title": "Homework 7 Answers",
+    "section": "3.1 Load appropriate packages here",
+    "text": "3.1 Load appropriate packages here\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nhere() starts at /Users/wakim/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/Teaching/Classes/F24_EPI_525/F24_EPI_525_site"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#from-lesson-13-does-caffeine-increase-finger-tapsmin-on-average",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#from-lesson-13-does-caffeine-increase-finger-tapsmin-on-average",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "From Lesson 13: Does caffeine increase finger taps/min (on average)?",
+    "text": "From Lesson 13: Does caffeine increase finger taps/min (on average)?\n\nUse this example to illustrate how to calculate a confidence interval and perform a hypothesis test for two independent samples\n\nStudy Design:1\n\n70 college students students were trained to tap their fingers at a rapid rate\nEach then drank 2 cups of coffee (double-blind)\n\nControl group: decaf\nCaffeine group: ~ 200 mg caffeine\n\nAfter 2 hours, students were tested.\nTaps/minute recorded\n\nBased on following article with extra simulations by me: Hand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). A handbook of small data sets. London, U.K.: Chapman and Hall."
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#does-caffeine-increase-finger-tapsmin-on-average",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#does-caffeine-increase-finger-tapsmin-on-average",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Does caffeine increase finger taps/min (on average)?",
+    "text": "Does caffeine increase finger taps/min (on average)?\n\nLoad the data from the csv file CaffeineTaps.csv\nThe code below is for when the data file is in a folder called data that is in your R project folder (your working directory)\n\n\nCaffTaps &lt;- read.csv(here::here(\"data\", \"CaffeineTaps_n35.csv\"))\n\nglimpse(CaffTaps)\n\nRows: 70\nColumns: 2\n$ Taps  &lt;int&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 242, 245, 244,…\n$ Group &lt;chr&gt; \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caf…"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#eda-explore-the-finger-taps-data",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#eda-explore-the-finger-taps-data",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "EDA: Explore the finger taps data",
+    "text": "EDA: Explore the finger taps data\n\n\n\n\nCode to make these histograms\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_histogram() +\n  facet_wrap(vars(Group), ncol=1) +\n  labs(y = \"Number of people\", x = \"Taps/minute\") +\n  theme(text = element_text(size = 30))\n\n\n\n\n\n\n\n\nSummary statistics stratified by group\n# get_summary_stats() from \n  # rstatix package\nsumstats &lt;- CaffTaps %&gt;% \n  group_by(Group) %&gt;% \n  get_summary_stats(type = \"mean_sd\") \n\nsumstats %&gt;% gt() %&gt;% \n  tab_options(table.font.size = 40)\n\n\n\n\n\n\n  \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n35\n248.114\n2.621\n    NoCaffeine\nTaps\n35\n244.514\n2.318\n  \n  \n  \n\n\n\n\nThen calculate the difference between the means:\n\ndiff(sumstats$mean)\n\n[1] -3.6\n\n\n \n\nNote that we cannot calculate 35 differences in taps because these data are not paired!!\nDifferent individuals receive caffeine vs. do not receive caffeine"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#we-started-looking-at-the-tapsmin-for-each-group",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#we-started-looking-at-the-tapsmin-for-each-group",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "We started looking at the taps/min for each group",
+    "text": "We started looking at the taps/min for each group\n\n\nCode to make these histograms\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_histogram() +\n  facet_wrap(vars(Group), ncol=1) +\n  labs(y = \"Number of people\", x = \"Taps/minute\") +\n  theme(text = element_text(size = 30))"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#we-can-compare-the-approximate-distributions-like",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#we-can-compare-the-approximate-distributions-like",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "We can compare the approximate distributions like…",
+    "text": "We can compare the approximate distributions like…"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What if the following were the true population distributions?",
+    "text": "What if the following were the true population distributions?\n\nDifference in population means is 10\nBoth have a standard deviation of 2\n\n\n\nWhen we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?\n\nSeems easier to distinguish here, maybe not so many samples"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-1",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-1",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What if the following were the true population distributions?",
+    "text": "What if the following were the true population distributions?\n\nDifference in population means is 10\nBoth have a standard deviation of 2\n\n\n\nWhen we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?\n\nSeems easier to distinguish here, maybe not so many samples"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-case-1",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-case-1",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What if the following were the true population distributions? Case 1",
+    "text": "What if the following were the true population distributions? Case 1\n\nDifference in population means is 5\nBoth have a standard deviation of 2\n\n\n\nWhen we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?\n\nDepends on the number of samples we get: we might need a lot"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-case-2",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-case-2",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What if the following were the true population distributions? Case 2",
+    "text": "What if the following were the true population distributions? Case 2\n\nDifference in population means is 5\nBoth have a standard deviation of 1\n\n\n\nWhen we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?\n\nSeems easier to distinguish here. How did the standard deviation decrease?"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-case-3",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-if-the-following-were-the-true-population-distributions-case-3",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What if the following were the true population distributions? Case 3",
+    "text": "What if the following were the true population distributions? Case 3\n\nDifference in population means is 10\nBoth have a standard deviation of 2\n\n\n\nWhen we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?\n\nAlso seems easier to distinguish here"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#there-are-a-few-things-at-play-here",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#there-are-a-few-things-at-play-here",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "There are a few things at play here",
+    "text": "There are a few things at play here\n\nThere are several measurements that affect how easy it is to distinguish between two populations\n“Distinguish between two populations” = reject the null hypothesis that they are the same\n\n \n\nWhat do we need?\n\nDifference in population means\nNumber of samples from each population\nThe significance level that we use for a cut off\nThe power of our test\n\nMore familiar with first two, but let’s define #3 and #4 more"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#significance-levels-and-critical-values",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#significance-levels-and-critical-values",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Significance levels and critical values",
+    "text": "Significance levels and critical values\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not\n\nDetermined by the significance level\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\n\n \n\n\n\n\n\n\n\n\n\n\n\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution)\n\n\n\n\n\nWe have been referring to critical values from the t-distribution as \\(t^*\\)\n\nSee how we calculate a specific confidence interval"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#significance-levels-and-critical-values-and-rejection-region",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#significance-levels-and-critical-values-and-rejection-region",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Significance levels and critical values and rejection region",
+    "text": "Significance levels and critical values and rejection region\n\nIf the absolute value of the test statistic is greater than the critical value, we reject \\(H_0\\)\n\nIn this case the test statistic is in the rejection region.\nOtherwise it’s in the nonrejection region.\n\n\n\n\n\n\n\nStats & Geospatial Analysis\n\n\n\n\nWhat do rejection regions look like for 1-sided tests?"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-is-power",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-is-power",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What is power??",
+    "text": "What is power??"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#lets-start-with-some-important-definitions-in-words",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#lets-start-with-some-important-definitions-in-words",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Let’s start with some important definitions in words",
+    "text": "Let’s start with some important definitions in words\n\nType I error (\\(\\alpha\\)): Probability of rejecting the null hypothesis given that the null is true\nType II error (\\(\\beta\\)): Probability of failing to reject the null hypothesis given that the null hypothesis is false\nPower (or sensitivity) (\\(1 - \\beta\\)): Probability of rejecting the null hypothesis given that the null is false (correct)\nSpecificity (\\(1-\\alpha\\)): Probability of failing to reject the null hypothesis given that the null is true (correct)"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-does-that-look-like-with-our-two-populations",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#what-does-that-look-like-with-our-two-populations",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "What does that look like with our two populations?",
+    "text": "What does that look like with our two populations?\n\n\n\n\n\n\n\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nSet before study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\n\n\n\n\n\nPower (or sensitivity) (\\(1 - \\beta\\)): Probability of rejecting the null hypothesis given that the null is false (correct)\n\n\nPower is the correct region that is usually in line with our study design: studies are often seeing if there is a distinction between two populations"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#power",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#power",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Power",
+    "text": "Power\n\n\n\nPower (or sensitivity) (\\(1 - \\beta\\)): Probability of rejecting the null hypothesis given that the null is false (correct)\n\n \n\nPower is also called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\n\n \n\nTypically, we aim for 80% or 90% power"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#if-you-want-to-keep-revisiting-these-concepts",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#if-you-want-to-keep-revisiting-these-concepts",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "If you want to keep revisiting these concepts!",
+    "text": "If you want to keep revisiting these concepts!\nFrom the applet at https://rpsychologist.com/d3/NHST/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCohen’s d is just a stanardized value to represent the difference in means: \\[d = \\dfrac{\\overline{x}_1 - \\overline{x}_2}{s}\\]"
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power-r",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power-r",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Example calculating power: R",
+    "text": "Example calculating power: R\n\n\n\n\n\n\n\n\n\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\):\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + \n  pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)\n\n[1] 0.8508304\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case.\n\n\n\nNote that this power calculation specified the value of the SE instead of the standard deviation and sample size \\(n\\) individually."
+  },
+  {
+    "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power-using-pnorm",
+    "href": "lessons/14_Power_sample_size/14_Power_sample_size.html#example-calculating-power-using-pnorm",
+    "title": "Lesson 14: Power and sample size calculations for difference of means",
+    "section": "Example calculating power: using pnorm()",
+    "text": "Example calculating power: using pnorm()\n\n\n\n\n\n\n\n\n\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\):\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, \n      lower.tail=TRUE) + \n  pnorm(1.96, mean=3, sd=1, \n        lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\n \n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case.\nNote that this power calculation specified the value of the SE instead of the standard deviation and sample size \\(n\\) individually."
   }
 ]

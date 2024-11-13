@@ -66,6 +66,16 @@ For the same test, what sample size would be needed for 80% power? Would it be r
 
 Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
 
+# R work
+
+## Load appropriate packages here
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(here)
+```
 
 ## R1: Swim times
 
@@ -88,3 +98,7 @@ Create a histogram of the differences in swim times and comment on the distribut
 Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values. 
 
 ## R2: 2-sample independent t-test
+
+```{r}
+pd = read.csv(here("data", "parkinsons.csv"))
+```
