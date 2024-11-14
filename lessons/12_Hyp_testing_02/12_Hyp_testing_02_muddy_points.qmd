@@ -1,46 +1,30 @@
 ---
 title: "Muddy Points"
-subtitle: "Lesson 11: Hypothesis testing part 01"
+subtitle: "Lesson 12: Hypothesis testing part 02"
 date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
     page-layout: full
     toc: false
-    code-fold: true
+    number-depth: 3
+    number-sections: true
 editor_options: 
   chunk_output_type: console
 ---
 
-## 1. What is the test statistic? (Is it the same as a t-test?)
+## Knowing when to use the t-test distribution
 
-The "t-test" is the shorthand that people use to refer to the process of calculating the test statistic and p-value.
+First, I wanted to take a second to nitpick the phrase "t-test distribution." I'm not trying to call this question out, but I think this is an important learning opportunity. The distribution is the t-distribution, and the t-test uses the t-distribution to implement a hypothesis test. However, there is no t-test distribution. We could say instead: "Knowing when to use the t-test" or "Knowing when to use the t-distribution in our hypothesis test." Okay, now that's Nicky...
 
-The test statistic measures how far our sample mean ($\overline{x}$) is from the mean when we assume the null (aka the mean is $\mu$).
+For our class, when we are constructing confidence intervals or running a hypothesis test, we will be using a t-distribution! We use a t-distribution when we do not know the population standard deviation, which is almost always the case for any data analysis. There are some problems specifically asking us to use the standard normal distribution, but for the most part, we use the t-distribution.
 
-## 2. The specific language around and conclusions that can be drawn from p-values
+The main distinction is the answer to this question: Do we know the population standard deviation? - If yes, use the standard normal distribution! - If no, use the t-distribution!
 
-We basically have two options once we have a p-value:
+## I had a hard time keeping track of the R functions that were shown today
 
-1. The p-value is less than $\alpha$, then we reject the null hypothesis.
-2. The p-value is greater than or equal to $\alpha$, then we fail to reject the null hypothesis.
+[See the muddy points for `tidyverse`!](/lessons/R08_tidyverse_01/R08_tidyverse_01_muddy_points.qmd)
 
-So let's get into it:
+## I am confused on whether we are using a one sample or two sample t-test when it comes to problems we are given
 
-1. The p-value is less than $\alpha$, then we reject the null hypothesis.
-    - When the p-value is less than $\alpha$, we've crossed into a range of probabilities that are very unlikely. 
-    - Remember, the p-value measures the probability of obtaining a sample mean just as extreme or more extreme than the observed sample mean ($\overline{x}$) assuming the null hypothesis is true (that the population mean is $\mu$).
-    - The smaller the p-value, the more evidence that we have that our sample mean ($\overline{x}$) is NOT from the distribution with the population mean is $\mu$
-    - There is a cutoff for when we decide that our sample mean ($\overline{x}$) is NOT from the distribution with the population mean is $\mu$. That cutoff is the significance level ($\alpha$). 
-    - So when the p-value is less than $\alpha$, we say we have sufficient evidence that our sample is not from the population distribution. This was our null hypothesis, so we **reject the null.** 
-2. The p-value is greater than or equal to $\alpha$, then we fail to reject the null hypothesis.
-    - When the p-value is greater than or equal to $\alpha$, we are still in the range of probabilities that are likely.
-    - Remember, the p-value measures the probability of obtaining a sample mean just as extreme or more extreme than the observed sample mean ($\overline{x}$) assuming the null hypothesis is true (that the population mean is $\mu$).
-    - When the p-value is pretty large, then it is likely that our sample comes from our assumed null distribution. 
-    - However, this is not what we're trying to prove in our hypothesis test, so we can't make any claims about "accepting the null." Instead, we fail to reject it. 
-    
-## 3. 	Help with the bigger picture of $H_0$ and $H_A$. In a real world example, would it only be notable to reject $H_0$? If a researcher fails to reject the null, would their findings not be believable?
-
-The idea behind the hypothesis test is usually that the null is the currently accepted value, and that we are presenting a "challenger" to the null. The challenger is only noteworthy if we reject the null and establish a new range of values for the population mean (from the confidence interval).
-
-Thus, if we fail to reject the null, it's not that we don't believe our findings, it just means that we are not presenting new information to the world.
+[Here's a pretty good video](https://www.youtube.com/watch?v=Q_pO9NzWxPY&ab_channel=DATAtab) that explains all three t-tests together. I think it does a pretty good job of bringing them together that allows us to distinguish between the tests.

@@ -1,19 +1,23 @@
 ---
 title: "Muddy Points for `tidyverse`"
-date: "11/4/2024"
+subtitle: "More on the functions and problems we had in class!"
+date: "11/13/2024"
 date-modified: "today"
 format: 
   html:
     link-external-newwindow: true
+    number-depth: 3
+    number-sections: true
 editor_options: 
   chunk_output_type: console
 ---
 
-
-## 1. More on the functions and problems we had in class!
+Feel free to check out a lesson I had on Data Management in another class:
+- [Slides](https://nwakim.github.io/W2024_BSTA_512/slides/02_Data_Management.html#/title-slide)
+- [Slides with my annotations](https://nwakim.github.io/W2024_BSTA_512/slides_annotated/02_Data_Management.pdf)
 
 ::: callout-important
-This section has some examples from [this YouTube video series](https://www.youtube.com/watch?v=THGFXV4RW8U&list=PLiC1doDIe9rC8RgWPAWqDETE-VbKOWfWl&ab_channel=DataDaft). There is a video on mutate, pipe, filter, select, rename, arrange, and summarize. Note that some of the function in the series is outdated. The use of `if_else()` in the video is outdated, and it is more common to use `case_when()` now. The use of `gather` and `spread` have been replaced by `pivot_longer` and `pivot_wider`.
+This section has some examples from [this YouTube video series](https://www.youtube.com/watch?v=THGFXV4RW8U&list=PLiC1doDIe9rC8RgWPAWqDETE-VbKOWfWl&ab_channel=DataDaft). There is a video on mutate, pipe, filter, select, rename, arrange, and summarize. Note that some of the functions in the series are outdated. The use of `if_else()` in the video is outdated, and it is more common to use `case_when()` now. The use of `gather` and `spread` have been replaced by `pivot_longer` and `pivot_wider`.
 :::
 
 To discuss these functions below, I want to use a different dataset than what we used for examples in class. I'm hoping this allows us to see each function from a different angle. I'll use the dataset that we used for some of the `ggplot` examples: `mtcars`. Let's load the tidyverse and take a look at the dataset:
@@ -25,7 +29,7 @@ library(tidyverse)
 glimpse(mtcars)
 ```
 
-### `mutate()`
+## `mutate()`
 
 For mutate, there are a few common uses:
 
@@ -33,7 +37,7 @@ For mutate, there are a few common uses:
 
 -   create a categorical variable by creating cases from other variables
 
-#### Create another numeric variable by manipulating other variables
+### Create another numeric variable by manipulating other variables
 
 The `wt` variable is the weight of the car in tons. Let's say we want the full weight in pounds (lbs). I'll create a new variable that is 1000 times (1 ton = 1000 lbs) the weight in the dataset.
 
@@ -64,7 +68,7 @@ mtcars3 = mtcars %>%
 glimpse(mtcars3)
 ```
 
-#### Create a categorical variable by creating cases from other variables
+### Create a categorical variable by creating cases from other variables
 
 Recall in class we used mutate to label the numeric values of `am` to a categorical variable `transmission`. We create a new categorical variable from a binary, numeric variable.
 
@@ -87,11 +91,11 @@ glimpse(mtcars5)
 
 Notice that I used `.default` in the last case. This means "for all other values of mpg, assign it to 'low'."
 
-### pipe `%>%`
+## pipe `%>%`
 
 [Check out the videos explanation!](https://www.youtube.com/watch?v=ui3VZeuN8QY&list=PLiC1doDIe9rC8RgWPAWqDETE-VbKOWfWl&index=2&ab_channel=DataDaft) I can't explain it much better!!
 
-### `select()` everything but a certain variable
+## `select()` everything but a certain variable
 
 It seems like we're mostly okay with the `select()` function, but want more information on selecting everything but a certain varaible.
 
@@ -136,9 +140,9 @@ glimpse(mtcars8)
 The vector above is: `c(hp, drat, wt, vs, am, gear, carb)` and the minus sign in front of the vector will be applied to each variable.
 :::
 
-### `pivot_longer()`
+## `pivot_longer()`
 
-I want to address the function with the faculty dataset from class.
+In a different lesson, we looked at a dataset on instructional staff employess over time. I will use that dataset to discuss `pivot_longer()`. You can find the dataset in the shared OneDrive. I also suggest following some of my notes that [starts here in an older lesson](https://nwakim.github.io/W2024_BSTA_512/slides/02_Data_Management.html#/data-manipulation). 
 
 ```{r}
 #| message: false
@@ -236,6 +240,6 @@ staff_long4 = staff %>%
 head(staff_long4, 20) # I'm asking R to show me the first 20 rows
 ```
 
-### `across()`
+## `across()`
 
 I really ran out of time before getting to this one. For now, you can look at the [examples from this site](https://dplyr.tidyverse.org/reference/across.html#ref-examples) to see the capabilities of `across()` . I invite you to try them out on the various datasets in our lecture.

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-11-04">
+<meta name="dcterms.date" content="2024-11-13">
 
 <title>Biostatistics 1 - Muddy Points for tidyverse</title>
 <style>
@@ -150,14 +150,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#more-on-the-functions-and-problems-we-had-in-class" id="toc-more-on-the-functions-and-problems-we-had-in-class" class="nav-link active" data-scroll-target="#more-on-the-functions-and-problems-we-had-in-class">1. More on the functions and problems we had in class!</a>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link active" data-scroll-target="#mutate"><span class="header-section-number">1</span> <code>mutate()</code></a>
   <ul class="collapse">
-  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><code>mutate()</code></a></li>
-  <li><a href="#pipe" id="toc-pipe" class="nav-link" data-scroll-target="#pipe">pipe <code>%&gt;%</code></a></li>
-  <li><a href="#select-everything-but-a-certain-variable" id="toc-select-everything-but-a-certain-variable" class="nav-link" data-scroll-target="#select-everything-but-a-certain-variable"><code>select()</code> everything but a certain variable</a></li>
-  <li><a href="#pivot_longer" id="toc-pivot_longer" class="nav-link" data-scroll-target="#pivot_longer"><code>pivot_longer()</code></a></li>
-  <li><a href="#across" id="toc-across" class="nav-link" data-scroll-target="#across"><code>across()</code></a></li>
+  <li><a href="#create-another-numeric-variable-by-manipulating-other-variables" id="toc-create-another-numeric-variable-by-manipulating-other-variables" class="nav-link" data-scroll-target="#create-another-numeric-variable-by-manipulating-other-variables"><span class="header-section-number">1.1</span> Create another numeric variable by manipulating other variables</a></li>
+  <li><a href="#create-a-categorical-variable-by-creating-cases-from-other-variables" id="toc-create-a-categorical-variable-by-creating-cases-from-other-variables" class="nav-link" data-scroll-target="#create-a-categorical-variable-by-creating-cases-from-other-variables"><span class="header-section-number">1.2</span> Create a categorical variable by creating cases from other variables</a></li>
   </ul></li>
+  <li><a href="#pipe" id="toc-pipe" class="nav-link" data-scroll-target="#pipe"><span class="header-section-number">2</span> pipe <code>%&gt;%</code></a></li>
+  <li><a href="#select-everything-but-a-certain-variable" id="toc-select-everything-but-a-certain-variable" class="nav-link" data-scroll-target="#select-everything-but-a-certain-variable"><span class="header-section-number">3</span> <code>select()</code> everything but a certain variable</a></li>
+  <li><a href="#pivot_longer" id="toc-pivot_longer" class="nav-link" data-scroll-target="#pivot_longer"><span class="header-section-number">4</span> <code>pivot_longer()</code></a></li>
+  <li><a href="#across" id="toc-across" class="nav-link" data-scroll-target="#across"><span class="header-section-number">5</span> <code>across()</code></a></li>
   </ul>
 </nav>
     </div>
@@ -167,6 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Muddy Points for <code>tidyverse</code></h1>
+<p class="subtitle lead">More on the functions and problems we had in class!</p>
 </div>
 
 
@@ -177,14 +179,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 4, 2024</p>
+      <p class="date">November 13, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 29, 2024</p>
+      <p class="date-modified">November 14, 2024</p>
     </div>
   </div>
     
@@ -193,8 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="more-on-the-functions-and-problems-we-had-in-class" class="level2">
-<h2 class="anchored" data-anchor-id="more-on-the-functions-and-problems-we-had-in-class">1. More on the functions and problems we had in class!</h2>
+<p>Feel free to check out a lesson I had on Data Management in another class: - <a href="https://nwakim.github.io/W2024_BSTA_512/slides/02_Data_Management.html#/title-slide">Slides</a> - <a href="https://nwakim.github.io/W2024_BSTA_512/slides_annotated/02_Data_Management.pdf">Slides with my annotations</a></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -205,7 +206,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This section has some examples from <a href="https://www.youtube.com/watch?v=THGFXV4RW8U&amp;list=PLiC1doDIe9rC8RgWPAWqDETE-VbKOWfWl&amp;ab_channel=DataDaft">this YouTube video series</a>. There is a video on mutate, pipe, filter, select, rename, arrange, and summarize. Note that some of the function in the series is outdated. The use of <code>if_else()</code> in the video is outdated, and it is more common to use <code>case_when()</code> now. The use of <code>gather</code> and <code>spread</code> have been replaced by <code>pivot_longer</code> and <code>pivot_wider</code>.</p>
+<p>This section has some examples from <a href="https://www.youtube.com/watch?v=THGFXV4RW8U&amp;list=PLiC1doDIe9rC8RgWPAWqDETE-VbKOWfWl&amp;ab_channel=DataDaft">this YouTube video series</a>. There is a video on mutate, pipe, filter, select, rename, arrange, and summarize. Note that some of the functions in the series are outdated. The use of <code>if_else()</code> in the video is outdated, and it is more common to use <code>case_when()</code> now. The use of <code>gather</code> and <code>spread</code> have been replaced by <code>pivot_longer</code> and <code>pivot_wider</code>.</p>
 </div>
 </div>
 <p>To discuss these functions below, I want to use a different dataset than what we used for examples in class. I’m hoping this allows us to see each function from a different angle. I’ll use the dataset that we used for some of the <code>ggplot</code> examples: <code>mtcars</code>. Let’s load the tidyverse and take a look at the dataset:</p>
@@ -228,15 +229,15 @@ $ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3
 $ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…</code></pre>
 </div>
 </div>
-<section id="mutate" class="level3">
-<h3 class="anchored" data-anchor-id="mutate"><code>mutate()</code></h3>
+<section id="mutate" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="mutate"><span class="header-section-number">1</span> <code>mutate()</code></h2>
 <p>For mutate, there are a few common uses:</p>
 <ul>
 <li><p>create another numeric variable by manipulating other variables</p></li>
 <li><p>create a categorical variable by creating cases from other variables</p></li>
 </ul>
-<section id="create-another-numeric-variable-by-manipulating-other-variables" class="level4">
-<h4 class="anchored" data-anchor-id="create-another-numeric-variable-by-manipulating-other-variables">Create another numeric variable by manipulating other variables</h4>
+<section id="create-another-numeric-variable-by-manipulating-other-variables" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="create-another-numeric-variable-by-manipulating-other-variables"><span class="header-section-number">1.1</span> Create another numeric variable by manipulating other variables</h3>
 <p>The <code>wt</code> variable is the weight of the car in tons. Let’s say we want the full weight in pounds (lbs). I’ll create a new variable that is 1000 times (1 ton = 1000 lbs) the weight in the dataset.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mtcars1 <span class="ot">=</span> mtcars <span class="sc">%&gt;%</span></span>
@@ -311,8 +312,8 @@ $ w_to_hp   &lt;dbl&gt; 23.81818, 26.13636, 24.94624, 29.22727, 19.65714, 32.952
 </div>
 </div>
 </section>
-<section id="create-a-categorical-variable-by-creating-cases-from-other-variables" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-categorical-variable-by-creating-cases-from-other-variables">Create a categorical variable by creating cases from other variables</h4>
+<section id="create-a-categorical-variable-by-creating-cases-from-other-variables" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="create-a-categorical-variable-by-creating-cases-from-other-variables"><span class="header-section-number">1.2</span> Create a categorical variable by creating cases from other variables</h3>
 <p>Recall in class we used mutate to label the numeric values of <code>am</code> to a categorical variable <code>transmission</code>. We create a new categorical variable from a binary, numeric variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mtcars4 <span class="ot">=</span> mtcars <span class="sc">%&gt;%</span></span>
@@ -363,12 +364,12 @@ $ mpg_cat &lt;chr&gt; "medium", "medium", "high", "medium", "medium", "medium", 
 <p>Notice that I used <code>.default</code> in the last case. This means “for all other values of mpg, assign it to ‘low’.”</p>
 </section>
 </section>
-<section id="pipe" class="level3">
-<h3 class="anchored" data-anchor-id="pipe">pipe <code>%&gt;%</code></h3>
+<section id="pipe" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="pipe"><span class="header-section-number">2</span> pipe <code>%&gt;%</code></h2>
 <p><a href="https://www.youtube.com/watch?v=ui3VZeuN8QY&amp;list=PLiC1doDIe9rC8RgWPAWqDETE-VbKOWfWl&amp;index=2&amp;ab_channel=DataDaft">Check out the videos explanation!</a> I can’t explain it much better!!</p>
 </section>
-<section id="select-everything-but-a-certain-variable" class="level3">
-<h3 class="anchored" data-anchor-id="select-everything-but-a-certain-variable"><code>select()</code> everything but a certain variable</h3>
+<section id="select-everything-but-a-certain-variable" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="select-everything-but-a-certain-variable"><span class="header-section-number">3</span> <code>select()</code> everything but a certain variable</h2>
 <p>It seems like we’re mostly okay with the <code>select()</code> function, but want more information on selecting everything but a certain varaible.</p>
 <p>When we select variables, we have the option to identify variables we want to keep or remove. If we want to keep a variable, we would just list the variable’s column name. If we want to remove a variable, we use the minus sign to let R know that we do NOT want that variable. We typically do not tell R to remove and keep variables within the same <code>select()</code> function. Let’s recall the variables within the original <code>mtcars</code> dataset:</p>
 <div class="cell">
@@ -447,9 +448,9 @@ $ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90
 </div>
 </div>
 </section>
-<section id="pivot_longer" class="level3">
-<h3 class="anchored" data-anchor-id="pivot_longer"><code>pivot_longer()</code></h3>
-<p>I want to address the function with the faculty dataset from class.</p>
+<section id="pivot_longer" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pivot_longer"><span class="header-section-number">4</span> <code>pivot_longer()</code></h2>
+<p>In a different lesson, we looked at a dataset on instructional staff employess over time. I will use that dataset to discuss <code>pivot_longer()</code>. You can find the dataset in the shared OneDrive. I also suggest following some of my notes that <a href="https://nwakim.github.io/W2024_BSTA_512/slides/02_Data_Management.html#/data-manipulation">starts here in an older lesson</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note, I've put the data in a folder "data" that is in the same folder as this page's file</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>staff <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"data/instructional-staff.csv"</span>)</span>
@@ -687,12 +688,11 @@ $ `2011`       &lt;dbl&gt; 16.7, 7.4, 15.4, 41.3, 19.3</code></pre>
 </div>
 </div>
 </section>
-<section id="across" class="level3">
-<h3 class="anchored" data-anchor-id="across"><code>across()</code></h3>
+<section id="across" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="across"><span class="header-section-number">5</span> <code>across()</code></h2>
 <p>I really ran out of time before getting to this one. For now, you can look at the <a href="https://dplyr.tidyverse.org/reference/across.html#ref-examples">examples from this site</a> to see the capabilities of <code>across()</code> . I invite you to try them out on the various datasets in our lecture.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

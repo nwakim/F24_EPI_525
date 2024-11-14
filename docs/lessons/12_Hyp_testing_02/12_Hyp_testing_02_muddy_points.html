@@ -60,8 +60,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -119,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Muddy Points</h1>
-<p class="subtitle lead">Lesson 11: Hypothesis testing part 01</p>
+<p class="subtitle lead">Lesson 12: Hypothesis testing part 02</p>
 </div>
 
 
@@ -131,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 8, 2024</p>
+      <p class="date-modified">November 14, 2024</p>
     </div>
   </div>
     
@@ -140,41 +138,19 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="what-is-the-test-statistic-is-it-the-same-as-a-t-test" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-test-statistic-is-it-the-same-as-a-t-test">1. What is the test statistic? (Is it the same as a t-test?)</h2>
-<p>The “t-test” is the shorthand that people use to refer to the process of calculating the test statistic and p-value.</p>
-<p>The test statistic measures how far our sample mean (<span class="math inline">\(\overline{x}\)</span>) is from the mean when we assume the null (aka the mean is <span class="math inline">\(\mu\)</span>).</p>
+<section id="knowing-when-to-use-the-t-test-distribution" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="knowing-when-to-use-the-t-test-distribution"><span class="header-section-number">1</span> Knowing when to use the t-test distribution</h2>
+<p>First, I wanted to take a second to nitpick the phrase “t-test distribution.” I’m not trying to call this question out, but I think this is an important learning opportunity. The distribution is the t-distribution, and the t-test uses the t-distribution to implement a hypothesis test. However, there is no t-test distribution. We could say instead: “Knowing when to use the t-test” or “Knowing when to use the t-distribution in our hypothesis test.” Okay, now that’s Nicky…</p>
+<p>For our class, when we are constructing confidence intervals or running a hypothesis test, we will be using a t-distribution! We use a t-distribution when we do not know the population standard deviation, which is almost always the case for any data analysis. There are some problems specifically asking us to use the standard normal distribution, but for the most part, we use the t-distribution.</p>
+<p>The main distinction is the answer to this question: Do we know the population standard deviation? - If yes, use the standard normal distribution! - If no, use the t-distribution!</p>
 </section>
-<section id="the-specific-language-around-and-conclusions-that-can-be-drawn-from-p-values" class="level2">
-<h2 class="anchored" data-anchor-id="the-specific-language-around-and-conclusions-that-can-be-drawn-from-p-values">2. The specific language around and conclusions that can be drawn from p-values</h2>
-<p>We basically have two options once we have a p-value:</p>
-<ol type="1">
-<li>The p-value is less than <span class="math inline">\(\alpha\)</span>, then we reject the null hypothesis.</li>
-<li>The p-value is greater than or equal to <span class="math inline">\(\alpha\)</span>, then we fail to reject the null hypothesis.</li>
-</ol>
-<p>So let’s get into it:</p>
-<ol type="1">
-<li>The p-value is less than <span class="math inline">\(\alpha\)</span>, then we reject the null hypothesis.
-<ul>
-<li>When the p-value is less than <span class="math inline">\(\alpha\)</span>, we’ve crossed into a range of probabilities that are very unlikely.</li>
-<li>Remember, the p-value measures the probability of obtaining a sample mean just as extreme or more extreme than the observed sample mean (<span class="math inline">\(\overline{x}\)</span>) assuming the null hypothesis is true (that the population mean is <span class="math inline">\(\mu\)</span>).</li>
-<li>The smaller the p-value, the more evidence that we have that our sample mean (<span class="math inline">\(\overline{x}\)</span>) is NOT from the distribution with the population mean is <span class="math inline">\(\mu\)</span></li>
-<li>There is a cutoff for when we decide that our sample mean (<span class="math inline">\(\overline{x}\)</span>) is NOT from the distribution with the population mean is <span class="math inline">\(\mu\)</span>. That cutoff is the significance level (<span class="math inline">\(\alpha\)</span>).</li>
-<li>So when the p-value is less than <span class="math inline">\(\alpha\)</span>, we say we have sufficient evidence that our sample is not from the population distribution. This was our null hypothesis, so we <strong>reject the null.</strong></li>
-</ul></li>
-<li>The p-value is greater than or equal to <span class="math inline">\(\alpha\)</span>, then we fail to reject the null hypothesis.
-<ul>
-<li>When the p-value is greater than or equal to <span class="math inline">\(\alpha\)</span>, we are still in the range of probabilities that are likely.</li>
-<li>Remember, the p-value measures the probability of obtaining a sample mean just as extreme or more extreme than the observed sample mean (<span class="math inline">\(\overline{x}\)</span>) assuming the null hypothesis is true (that the population mean is <span class="math inline">\(\mu\)</span>).</li>
-<li>When the p-value is pretty large, then it is likely that our sample comes from our assumed null distribution.</li>
-<li>However, this is not what we’re trying to prove in our hypothesis test, so we can’t make any claims about “accepting the null.” Instead, we fail to reject it.</li>
-</ul></li>
-</ol>
+<section id="i-had-a-hard-time-keeping-track-of-the-r-functions-that-were-shown-today" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="i-had-a-hard-time-keeping-track-of-the-r-functions-that-were-shown-today"><span class="header-section-number">2</span> I had a hard time keeping track of the R functions that were shown today</h2>
+<p><a href="../../lessons/R08_tidyverse_01/R08_tidyverse_01_muddy_points.html">See the muddy points for <code>tidyverse</code>!</a></p>
 </section>
-<section id="help-with-the-bigger-picture-of-h_0-and-h_a.-in-a-real-world-example-would-it-only-be-notable-to-reject-h_0-if-a-researcher-fails-to-reject-the-null-would-their-findings-not-be-believable" class="level2">
-<h2 class="anchored" data-anchor-id="help-with-the-bigger-picture-of-h_0-and-h_a.-in-a-real-world-example-would-it-only-be-notable-to-reject-h_0-if-a-researcher-fails-to-reject-the-null-would-their-findings-not-be-believable">3. Help with the bigger picture of <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>. In a real world example, would it only be notable to reject <span class="math inline">\(H_0\)</span>? If a researcher fails to reject the null, would their findings not be believable?</h2>
-<p>The idea behind the hypothesis test is usually that the null is the currently accepted value, and that we are presenting a “challenger” to the null. The challenger is only noteworthy if we reject the null and establish a new range of values for the population mean (from the confidence interval).</p>
-<p>Thus, if we fail to reject the null, it’s not that we don’t believe our findings, it just means that we are not presenting new information to the world.</p>
+<section id="i-am-confused-on-whether-we-are-using-a-one-sample-or-two-sample-t-test-when-it-comes-to-problems-we-are-given" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="i-am-confused-on-whether-we-are-using-a-one-sample-or-two-sample-t-test-when-it-comes-to-problems-we-are-given"><span class="header-section-number">3</span> I am confused on whether we are using a one sample or two sample t-test when it comes to problems we are given</h2>
+<p><a href="https://www.youtube.com/watch?v=Q_pO9NzWxPY&amp;ab_channel=DATAtab">Here’s a pretty good video</a> that explains all three t-tests together. I think it does a pretty good job of bringing them together that allows us to distinguish between the tests.</p>
 
 
 </section>
