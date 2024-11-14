@@ -1,0 +1,52 @@
+---
+title: "chol data"
+author: "Nicky Wakim"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+    highlight-style: tango
+editor_options: 
+  chunk_output_type: console
+---
+
+- Load my packages
+```{r}
+#| warning: false
+#| message: false
+
+library(here)
+library(tidyverse)
+```
+
+- Import the data
+```{r}
+chol = read.csv(here("Data", "chol213_n40.csv"))
+```
+
+- Take the difference in cholesterol levels then look at the data
+```{r}
+chol2 = chol %>% mutate(diff = After - Before)
+glimpse(chol2)
+head(chol2, 10)
+```
+
+- Pivot my dataset from wide to long
+```{r}
+chol3 = chol2 %>%
+  pivot_longer(
+    cols = c("Before", "After", "diff"), 
+    names_to = "Timepoint", 
+    values_to = "Cholesterol"
+  )
+
+head(chol3, 15)
+```
+

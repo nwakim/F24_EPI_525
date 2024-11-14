@@ -1,0 +1,14 @@
+{
+  "hash": "c45f865010bfdd3deb9f4d7d6966530d",
+  "result": {
+    "markdown": "---\ntitle: \"chol data\"\nauthor: \"Nicky Wakim\"\nformat: \n  html:\n    link-external-newwindow: true\n    toc: true\n    toc_float:\n      collapsed: false\n    number-sections: true\n    number-depth: 3\n    theme: lumen\n    self-contained: true\n    html-math-method: mathjax\n    highlight-style: tango\neditor_options: \n  chunk_output_type: console\n---\n\n\n- Load my packages\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(here)\nlibrary(tidyverse)\n```\n:::\n\n\n- Import the data\n\n::: {.cell}\n\n```{.r .cell-code}\nchol = read.csv(here(\"Data\", \"chol213_n40.csv\"))\n```\n:::\n\n\n- Take the difference in cholesterol levels then look at the data\n\n::: {.cell}\n\n```{.r .cell-code}\nchol2 = chol %>% mutate(diff = After - Before)\nglimpse(chol2)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nRows: 43\nColumns: 3\n$ Before <int> 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 169…\n$ After  <int> 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 182…\n$ diff   <int> -49, 10, -27, -13, -36, -19, -48, -21, -8, -16, -32, -28, 13, -…\n```\n:::\n\n```{.r .cell-code}\nhead(chol2, 10)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n   Before After diff\n1     195   146  -49\n2     145   155   10\n3     205   178  -27\n4     159   146  -13\n5     244   208  -36\n6     166   147  -19\n7     250   202  -48\n8     236   215  -21\n9     192   184   -8\n10    224   208  -16\n```\n:::\n:::\n\n\n- Pivot my dataset from wide to long\n\n::: {.cell}\n\n```{.r .cell-code}\nchol3 = chol2 %>%\n  pivot_longer(\n    cols = c(\"Before\", \"After\", \"diff\"), \n    names_to = \"Timepoint\", \n    values_to = \"Cholesterol\"\n  )\n\nhead(chol3, 15)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 15 × 2\n   Timepoint Cholesterol\n   <chr>           <int>\n 1 Before            195\n 2 After             146\n 3 diff              -49\n 4 Before            145\n 5 After             155\n 6 diff               10\n 7 Before            205\n 8 After             178\n 9 diff              -27\n10 Before            159\n11 After             146\n12 diff              -13\n13 Before            244\n14 After             208\n15 diff              -36\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
