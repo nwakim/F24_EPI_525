@@ -75,7 +75,14 @@ set.seed(456)
 }
 ```
 
-# Learning Objective
+# Learning Objectives
+
+::: lob
+1.  Identify when a research question or dataset requires two independent sample inference.
+:::
+
+2.  Construct and interpret confidence intervals for difference in means of two independent samples.
+3.  Run a hypothesis test for two sample independent data and interpret the results.
 
 ## What are data from two independent sample?
 
@@ -638,6 +645,14 @@ $$
 
 # Learning Objectives
 
+1.  Identify when a research question or dataset requires two independent sample inference.
+
+::: lob
+2.  Construct and interpret confidence intervals for difference in means of two independent samples.
+:::
+
+3.  Run a hypothesis test for two sample independent data and interpret the results.
+
 ## 95% CI for the difference in population mean taps $\mu_1 - \mu_2$
 
 ::::::::: columns
@@ -746,6 +761,13 @@ We are 95% confident that the difference in (population) mean finger taps/min be
 ## Poll Everywhere Question 3
 
 # Learning Objectives
+
+1.  Identify when a research question or dataset requires two independent sample inference.
+2.  Construct and interpret confidence intervals for difference in means of two independent samples.
+
+::: lob
+3.  Run a hypothesis test for two sample independent data and interpret the results.
+:::
 
 ## Reference: Steps in a Hypothesis Test
 
