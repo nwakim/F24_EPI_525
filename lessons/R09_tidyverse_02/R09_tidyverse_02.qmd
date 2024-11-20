@@ -1,0 +1,362 @@
+---
+title: "R09: Summarizing data with `tidyverse`"
+author: "Nicky Wakim"
+title-slide-attributes:
+    data-background-color: "#3070BF"
+date: "11/20/2024"
+format: 
+  revealjs:
+    theme: "../simple_NW.scss"
+    chalkboard: true
+    slide-number: true
+    show-slide-number: all
+    width: 1955
+    height: 1100
+    footer: R08 Slides
+    html-math-method: mathjax
+    highlight-style: ayu
+execute:
+  echo: true
+  freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(lubridate)
+library(janitor)
+library(here)
+library(oibiostat)
+library(knitr)
+library(scales)
+library(ggridges)
+library(rstatix)
+library(gtsummary)
+library(tidyverse)
+
+data(frog) 
+data(dds.discr)
+data("famuss")
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+
+dds.discr2 = dds.discr %>% 
+  rename(SAB = gender, 
+         R_E = ethnicity) %>%
+  mutate(exp_to_age = expenditures/age)
+
+```
+
+## Where are we?
+
+![](../img_slides/course_map.png){fig-align="center"}
+
+## What is the tidyverse? (revisited)
+
+The **tidyverse** is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
+
+::: columns
+::: {.column width="45%"}
+-   **ggplot2** - data visualisation
+-   **dplyr** - data manipulation
+-   **tidyr** - tidy data
+-   **readr** - read rectangular data
+-   **purrr** - functional programming
+-   **tibble** - modern data frames
+-   **stringr** - string manipulation
+-   **forcats** - factors
+-   and many more ...
+:::
+
+::: {.column width="55%"}
+![](../img_slides/tidyverse.png){fig-align="center" width="669"}
+:::
+:::
+
+## Tidy data[^1]
+
+[^1]: Source: R for Data Science. Grolemund and Wickham.
+
+![](../img_slides/tidy-data-frame.png)
+
+1.  Each variable must have its own column.
+
+2.  Each observation must have its own row.
+
+3.  Each value must have its own cell.
+
+
+## Pipe operator (`magrittr`)
+
+-   The pipe operator (`%>%`) allows us to step through sequential functions in the same way we follow if-then statements or steps from instructions
+
+ 
+
+::: lob
+I want to find my keys, then start my car, then drive to work, then park my car.
+:::
+
+ 
+
+::: columns
+::: {.column width="50%"}
+**Nested**
+
+```{r eval = FALSE}
+park(drive(start_car(find("keys")), 
+           to = "work"))
+```
+:::
+
+::: {.column width="50%"}
+**Piped**
+
+```{r eval = FALSE}
+find("keys") %>%
+  start_car() %>%
+  drive(to = "work") %>%
+  park()
+```
+:::
+:::
+
+
+# Using `summarize()`
+
+## `group_by()`: group by one or more variables
+
+-   What if I want to quickly look at group differences?
+-   It will not change how the data look, but changes the actions of following functions
+
+::: heq
+I want to group my data by sex assigned at birth.
+:::
+
+ 
+
+```{r}
+dds.discr5 = dds.discr2 %>%
+  group_by(SAB)
+glimpse(dds.discr5)
+```
+
+-   Let's see how the groups change something like the `summarize()` function in the next slide
+
+## `summarize()`: summarize your data or grouped data into one row
+
+-   What if I want to calculate specific descriptive statistics for my variables?
+-   This function is often best used with `group_by()`
+-   If only presenting the summaries, functions like `tbl_summary()` is better
+-   `summarize()` creates a new data frame, which means you can plot and manipulate the summarized data
+
+ 
+
+::: columns
+::: column
+Over whole sample:
+
+```{r}
+dds.discr2 %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+
+::: column
+Grouped by sex assigned at birth:
+
+```{r}
+dds.discr2 %>% 
+  group_by(SAB) %>% 
+  summarize(
+    ave = mean(expenditures),
+    SD = sd(expenditures),
+    med = median(expenditures))
+```
+:::
+:::
+
+# Using `get_summary_stats()`
+
+## `get_summary_stats()` from `rstatix` package
+
+```{r}
+dds.discr2 %>% get_summary_stats()
+
+dds.discr2 %>% 
+  group_by(R_E) %>%
+  get_summary_stats(expenditures, type = "common")
+```
+
+## How to force all output to be shown? (1/2) 
+
+Use `kable()` from the `knitr` package.
+
+```{r}
+dds.discr2 %>% get_summary_stats() %>% kable()
+```
+
+## How to force all output to be shown? `knitr` (2/2) 
+
+Use `kable()` from the `knitr` package.
+
+```{r}
+dds.discr2 %>% 
+  group_by(R_E) %>%
+  get_summary_stats(expenditures, type = "common") %>% 
+  kable()
+```
+
+# Making a Table 1
+
+## Table 1 example
+
+::: columns
+
+::: {.column width="52%"}
+- Often, research studies will show a table with all the summary statistics (lovingly called "Table 1")
+
+- Basic Table 1 will show all variables with:
+  - Mean and SD for the numeric variables
+  - $n (\%)$ for categorical variables
+
+ 
+
+ 
+
+
+*Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis*  
+J Barton et al.  
+Arthritis Care & Research.  
+2021 Sep 27
+[https://pubmed.ncbi.nlm.nih.gov/34569172/](https://pubmed.ncbi.nlm.nih.gov/34569172/) 
+:::
+
+::: {.column width="48%"}
+![](../img_slides/Table1_Barton.png){fig-align="center"}
+:::
+
+:::
+
+
+
+## `tbl_summary()` : table summary (1/2)
+
+-   What if I want one of those fancy summary tables that are at the top of most research articles?
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+
+library(gtsummary)
+tbl_summary(dds.discr2)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+
+library(gtsummary)
+tbl_summary(dds.discr2)
+```
+:::
+:::
+
+## `tbl_summary()` : table summary (2/2)
+
+-   Let's make this more presentable
+
+ 
+
+::: columns
+::: {.column width="70%"}
+```{r}
+#| eval: false
+
+dds.discr2 %>%
+  select(-id, -age.cohort, -exp_to_age) %>%
+  tbl_summary(label = c(age ~ "Age", 
+                        R_E ~ "Race/Ethnicity", 
+                        SAB ~ "Sex Assigned at Birth", 
+                        expenditures ~ "Expenditures"),
+              statistic = list(all_continuous() ~ 
+                                 "{mean} ({sd})"))
+```
+:::
+
+::: {.column width="30%"}
+```{r}
+#| echo: false
+
+dds.discr2 %>%
+  select(-id, -age.cohort, -exp_to_age) %>%
+  tbl_summary(label = c(age ~ "Age", 
+                        R_E ~ "Race/Ethnicity", 
+                        SAB ~ "Sex Assigned at Birth", 
+                        expenditures ~ "Expenditures") ,
+              statistic = list(all_continuous() ~ "{mean} ({sd})"))
+```
+:::
+:::
+
+# Resources
+
+## `dplyr` resources
+
+-   [More `dpylr` functions to reference!](https://dplyr.tidyverse.org/reference/index.html)
+
+Additional details and examples are available in the vignettes:
+
+-   [column-wise operations vignette](https://dplyr.tidyverse.org/articles/colwise.html)
+
+-   [row-wise operations vignette](https://dplyr.tidyverse.org/articles/rowwise.html)
+
+ 
+
+and the dplyr 1.0.0 release blog posts:
+
+-   [working across columns](https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-colwise/)
+-   [working within rows](https://www.tidyverse.org/blog/2020/04/dplyr-1-0-0-rowwise/)
+
+## R programming class at OHSU!
+
+You can check out [Dr. Jessica Minnier's R class page](https://sph-r-programming-2022.netlify.app/) if you want more notes, videos, etc.
+
+## The larger tidy ecosystem
+
+Just to name a few...
+
+-   [janitor](https://garthtarr.github.io/meatR/janitor.html)
+
+-   [kableExtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+
+-   [patchwork](https://patchwork.data-imaginist.com/)
+
+-   [gghighlight](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html)
+
+-   [tidybayes](https://mjskay.github.io/tidybayes/)
+
+## Credit to Mine Çetinkaya-Rundel
+
+-   These notes were built from Mine's notes
+
+    -   Most pages and code were left as she made them
+
+    -   I changed a few things to match our class
+
+-   Please see [her Github repository](https://github.com/mine-cetinkaya-rundel/teach-ds-wsc-2021/tree/main) for the original notes
+

@@ -11,7 +11,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n11/11\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for mean difference from two-sample dependent/paired data (Hypothesis Testing 2)\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n \n\n \n\n\n\n\n11/13\n13\nInference for difference in means from two independent samples (Hypothesis Testing 3)\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm (OPTIONAL)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n14\nPower and sample size calculations for difference of means\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR09\nSummarizing data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/20\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\nR10\nMaking Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n\nCatch up day\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
+    "text": "Week\nDate\nLes-son\nTopic\nTB sections\nKey Info\nSlides QMD\nSlides PDF\nSlides Notes\nExit tix\nRecord-ing\nMuddy Points\n\n\n\n\n1\n9/30\n0\nWelcome\n\n\n\n\n\n\n\n\n\n\n\n\n1\nData collection\n1.3\n\n\n\n\n\n\n\n\n\n\n10/2\n2\nIntro to Data, Summarizing numerical data\n1.2, 1.4\n\n\n\n\n\n\n\n\n\n\n\nR01\nDownload R and RStudio\n\n\n\n\n\n\n\n\n\n\n\n\nR02\nR Basics, part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nJamie on IP/PE\n\n\n\n\n\n\n\n\n\n\n\n10/3\n\nHW 0 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n10/7\n3\nDefining Probability\n2.1\n\n\n\n\n\n\n\n\n\n\n10/9\n4\nConditional Probability\n2.2\n\n\n\n\n\n\n\n\n\n\n\nR03\nR Basics, part 2\n\n\n\n\n\n\n \n\n\n\n\n10/11\n\nHW 1 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n10/14\n5\nRandom variables, Binomial distribution\n3.1-3.2\n\n\n\n\n\n\n\n\n\n\n\nR04\nReproducibility, File Organization, and Projects\n\n\n\n\n\n\n\n\n\n\n\n10/16\n6\nNormal and Poisson distributions\n3.3-3.4\n\n\n\n\n\n\n\n\n\n\n\nR05\nIntro to Quarto, packages, and importing data\n\n\n\n\n\n\n\n\n\n\n\n10/18\n\nHW 2 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/20\n\nHW 1 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n10/21\n6 & R05\nContinued lesson 6 and R05 from 10/16: see above links\n\n\n\n\n\n\n\n\n\n\n\n\nR06\nggplot , part 1\n\n\n\n\n\n\n\n\n\n\n\n10/23\n\nClass canceled\n\n\n\n\n\n\n\n\n\n\n\n10/25\n\nHW 3 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n10/27\n\nHW 2 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n10/28\n7\nData visualization of a single variable\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n\n8\nData visualization of two variables\n1.5-1.7\n\n\n\n\n\n\n\n\n\n\n10/30\n9\nVariability in estimates\n4.1\n\n\n\n\n\n\n\n\n\n\n\nR07\nLaTeX in Quarto\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nHW 4 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/3\n\nHW 3 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/1\n\nGroup Eval 1 due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n11/4\n10\nConfidence Intervals\n4.2\n\n\n\n\n\n\n\n\n\n\n\nR\nNo R lesson today: R troubleshooting after Lesson 10\n\n\n\n\n\n\n\n\n\n\n\n11/6\n11\nHypothesis Testing 1: Single-sample mean\n4.3, 5.1\n\n\n\n\n\n\n\n\n\n\n11/11\n\nHW 5 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n11/11\n12\nInference for mean difference from two-sample dependent/paired data (Hypothesis Testing 2)\n5.2\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n \n\n \n\n\n\n\n11/13\n13\nInference for difference in means from two independent samples (Hypothesis Testing 3)\n5.3\n\n\n\n\n\n\n\n\n\n\n\nR08\nTransforming and subetting data with tidyverse\n\n\n\n\n\n\n\n\n\n\n\n11/13\n\nHW 4 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n11/15\n\nHW 3 presentation due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 6 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/17\n\nHW 5 solutions due 11pm (OPTIONAL)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n11/18\n\nNo class, Nicky sick\n\n\n\n\n\n\n\n\n\n\n\n11/20\n14\nPower and sample size calculations for difference of means\n5.4\n\n\n\n\n\n\n\n\n\n\n\nR09\nSummarizing data with tidyverse and Table 1\n\n\n\n\n\n\n\n\n\n\n\n11/22\n\nHW 7 due @ 11 pm\n\n\n\n\n\n\n\n\n\n\n\n11/24\n\nHW 6 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n11/25\n15\nInference for a single proportion or difference in proportions\n8.1-8.2\n\n\n\n\n\n\n\n\n\n\n\n16\nChi-squared tests, Fishers exact test\n8.3-8.4\n\n\n\n\n\n\n\n\n\n\n11/28\n\nNo class\n\n\n\n\n\n\n\n\n\n\n\n11/29\n\nHW 8 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/1\n\nHW 7 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n12/2\n17\nComparing Means with ANOVA\n5.5\n\n\n\n\n\n\n\n\n\n\n12/4\n19\nNon-parametric tests (sign, signed-rank, rank-sum, Kruskal-Wallis)\nOther TB\n\n\n\n\n\n\n\n\n\n\n12/6\n\nHW 9 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/8\n\nHW 8 solutions due 11pm\n\n\n\n\n\n\n\n\n\n\n\n12/?\n\nHW 6 presentations due 11pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n12/9\n18\nSimple Linear Regression\n6.1-6.4\n\n\n\n\n\n\n\n\n\n\n12/13\n\nOptional HW 10 due 11 pm\n\n\n\n\n\n\n\n\n\n\n\n12/13\n\nHW 9 solutions due 11pm"
   },
   {
     "objectID": "lessons/12_Prop_inference/12_Prop_inference.html",
@@ -21312,21 +21312,21 @@
     "href": "lessons/14_Power_sample_size/14_Power_sample_size_key_info.html",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "HW 5 solutions are optional! and due 11/17 at 11pm\n\nIf you do HW 5 solutions, then I will drop your lowest solution grade\n\nHW 6 is due 11/17 at 11pm as well\nCalendly is up!"
+    "text": "Fixing HW 8/9"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size_key_info.html#announcements",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size_key_info.html#announcements",
     "title": "Key Info and Announcements",
     "section": "",
-    "text": "HW 5 solutions are optional! and due 11/17 at 11pm\n\nIf you do HW 5 solutions, then I will drop your lowest solution grade\n\nHW 6 is due 11/17 at 11pm as well\nCalendly is up!"
+    "text": "Fixing HW 8/9"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size_key_info.html#key-dates",
     "href": "lessons/14_Power_sample_size/14_Power_sample_size_key_info.html#key-dates",
     "title": "Key Info and Announcements",
     "section": "Key Dates",
-    "text": "Key Dates\n\nSunday 11/17: HW 5 solutions due at 11pm\nSunday 11/17: HW 6 assignment due at 11pm"
+    "text": "Key Dates"
   },
   {
     "objectID": "lessons/14_Power_sample_size/14_Power_sample_size.html#before-we-get-into-power-and-sample-size",
@@ -21334,5 +21334,607 @@
     "title": "Lesson 14: Power and sample size calculations for means",
     "section": "Before we get into power and sample size",
     "text": "Before we get into power and sample size\nLet’s watch this youtube video to jog our memory (remind us of what we learned):"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#table-1-example",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#table-1-example",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "Table 1 example",
+    "text": "Table 1 example\n\n\n\nOften, research studies will show a table with all the summary statistics (lovingly called “Table 1”)\nBasic Table 1 will show all variables with:\n\nMean and SD for the numeric variables\n\\(n (\\%)\\) for categorical variables\n\n\n \n \nAre We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#what-is-the-tidyverse",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#what-is-the-tidyverse",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "What is the tidyverse?",
+    "text": "What is the tidyverse?\nThe tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.\n\n\n\nggplot2 - data visualisation\ndplyr - data manipulation\ntidyr - tidy data\nreadr - read rectangular data\npurrr - functional programming\ntibble - modern data frames\nstringr - string manipulation\nforcats - factors\nand many more …"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tidy-data1",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tidy-data1",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "Tidy data1",
+    "text": "Tidy data1\n\n\nEach variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell.\n\nSource: R for Data Science. Grolemund and Wickham."
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#pipe-operator-magrittr",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#pipe-operator-magrittr",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "Pipe operator (magrittr)",
+    "text": "Pipe operator (magrittr)\n\nThe pipe operator (%&gt;%) allows us to step through sequential functions in the same way we follow if-then statements or steps from instructions\n\n \n\nI want to find my keys, then start my car, then drive to work, then park my car.\n\n \n\n\nNested\n\npark(drive(start_car(find(\"keys\")), \n           to = \"work\"))\n\n\nPiped\n\nfind(\"keys\") %&gt;%\n  start_car() %&gt;%\n  drive(to = \"work\") %&gt;%\n  park()"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-1",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-1",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Helpful functions for transforming and subsetting",
+    "text": "Helpful functions for transforming and subsetting\n \nData transformation\n\nrename()\nmutate()\npivot_longer() and pivot_wider()\n\nData subsetting\n\nfilter()\nselect()"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#new-dataset-dds.discr",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#new-dataset-dds.discr",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "New dataset: dds.discr",
+    "text": "New dataset: dds.discr\n\nIn the US, individuals with developmental disabilities typically receive services and support from state governments\n\nCalifornia allocates funds to developmentally disabled residents through the Department of Developmental Services (DDS)\n\nDataset dds.discr\n\nSample of 1,000 people who received DDS funds (out of a total of ~ 250,000)\nData include age, sex, race/ethnicity, and annual DDS financial support per consumer"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#lets-look-back-at-the-dds.discr-dataset",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#lets-look-back-at-the-dds.discr-dataset",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Let’s look back at the dds.discr dataset",
+    "text": "Let’s look back at the dds.discr dataset\n   \n\nWe will load the data (This is a special case! dds.discr is a built-in R dataset)\n\n\ndata(\"dds.discr\")\n\n\nNow, let’s take a glimpse at the dataset:\n\n\nglimpse(dds.discr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-2",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-2",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Helpful functions for transforming and subsetting",
+    "text": "Helpful functions for transforming and subsetting\n \nData transformation\n\n\nrename()\n\n\n\nmutate()\npivot_longer() and pivot_wider()\n\nData subsetting\n\nfilter()\nselect()"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#rename-one-of-the-first-things-i-usually-do",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#rename-one-of-the-first-things-i-usually-do",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "rename(): one of the first things I usually do",
+    "text": "rename(): one of the first things I usually do\n\nI notice that two variables have values that don’t necessarily match the variable name\n\nFemale and male are not genders (NIH page on sex and gender)\n“White not Hispanic” combines race and ethnicity into one category (APA page on race and ethnicity)\n\n\n \n\nI want to rename gender to sex (not sure if assigned at birth or current sex) and rename ethnicity to R_E (race and ethnicity)"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#rename-one-of-the-first-things-i-usually-do-1",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#rename-one-of-the-first-things-i-usually-do-1",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "rename(): one of the first things I usually do",
+    "text": "rename(): one of the first things I usually do\n\nrename() can change the name of a column\nWe use: data %&gt;% rename(new_col_name = old_col_name)\n\n\ndds.discr1 = dds.discr %&gt;% \n  rename(SAB = gender, \n         R_E = ethnicity)\n\nglimpse(dds.discr1)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-3",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-3",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Helpful functions for transforming and subsetting",
+    "text": "Helpful functions for transforming and subsetting\n \nData transformation\n\nrename()\n\n\n\nmutate()\n\n\n\npivot_longer() and pivot_wider()\n\nData subsetting\n\nfilter()\nselect()"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#mutate-constructing-new-variables-from-what-you-have",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#mutate-constructing-new-variables-from-what-you-have",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "mutate(): constructing new variables from what you have",
+    "text": "mutate(): constructing new variables from what you have\n\nWe can create a new variable from other variables\n\nAnother way to say it: creates new columns that are functions of existing variables\n\nWe often use it like:\n\n\ndata %&gt;% mutate(new_variable = some_transformation_of_another_variable)"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#mutate-create-a-new-variable-from-two-other-variables",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#mutate-create-a-new-variable-from-two-other-variables",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "mutate(): create a new variable from two other variables",
+    "text": "mutate(): create a new variable from two other variables\n\nI want to make a variable that is the ratio of expenditures over age\n\n \n\ndds.discr2 = dds.discr1 %&gt;%\n  mutate(exp_to_age = expenditures/age) \n\nglimpse(dds.discr2)\n\nRows: 1,000\nColumns: 7\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#recoding-a-numeric-variable-into-categorical",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#recoding-a-numeric-variable-into-categorical",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Recoding a numeric variable into categorical",
+    "text": "Recoding a numeric variable into categorical\n \n\nCan we recreate age.cohort using the age varible?\n\n \n\nsummary(dds.discr2)\n\n       id        age.cohort       age           SAB       expenditures  \n Min.   :10210   0-5  : 82   Min.   : 0.0   Female:503   Min.   :  222  \n 1st Qu.:31809   6-12 :175   1st Qu.:12.0   Male  :497   1st Qu.: 2899  \n Median :55384   13-17:212   Median :18.0                Median : 7026  \n Mean   :54663   18-21:199   Mean   :22.8                Mean   :18066  \n 3rd Qu.:76135   22-50:226   3rd Qu.:26.0                3rd Qu.:37713  \n Max.   :99898   51+  :106   Max.   :95.0                Max.   :75098  \n                                                                        \n                 R_E        exp_to_age    \n White not Hispanic:401   Min.   : 27.57  \n Hispanic          :376   1st Qu.:273.88  \n Asian             :129   Median :461.75  \n Black             : 59   Mean   :   Inf  \n Multi Race        : 26   3rd Qu.:938.12  \n American Indian   :  4   Max.   :   Inf  \n (Other)           :  5"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#recoding-a-numeric-variable-into-categorical-22",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#recoding-a-numeric-variable-into-categorical-22",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Recoding a numeric variable into categorical (2/2)",
+    "text": "Recoding a numeric variable into categorical (2/2)\n\n\n\nWe can integrate other functions into mutate()\nFor example, case_when() is a helpful function for mapping values to a category\n\n\nTidyverse:\n\ndds.discr3 &lt;- dds.discr2 %&gt;%\n  mutate(\n    age.cohort2 = case_when(\n          age &lt;= 5 ~ \"0-5\",\n          age &lt;= 12 ~ \"6-12\", \n          age &lt;= 17 ~ \"13-17\",\n          age &lt;= 21 ~ \"18-21\",\n          age &lt;= 50 ~ \"22-50\",\n          age &gt;= 51 ~ \"51+\"\n    )\n  )"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#have-you-noticed-that-i-change-the-number-on-dds.discr",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#have-you-noticed-that-i-change-the-number-on-dds.discr",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Have you noticed that I change the number on dds.discr?",
+    "text": "Have you noticed that I change the number on dds.discr?\n\nI change the number so that R saves a new dataset\nAnd I do not overwrite the previous dataset\nCan be annoying, but VERY helpful when you have to go back and change code\nWhen you run things in real time and troubleshoot, it will be helpful to have different versions of the same dataframe"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-4",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-4",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Helpful functions for transforming and subsetting",
+    "text": "Helpful functions for transforming and subsetting\n \nData transformation\n\nrename()\nmutate()\npivot_longer() and pivot_wider()\n\nData subsetting\n\n\nfilter()\n\n\n\nselect()"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#filter-keep-rows-that-match-a-condition",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#filter-keep-rows-that-match-a-condition",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "filter(): keep rows that match a condition",
+    "text": "filter(): keep rows that match a condition\n\nWhat if I want to subset the data frame? (keep certain rows of observations)\n\n\nI want to look at the data for people who between 50 and 60 years old\n\n \n\ndds.discr4 = dds.discr3 %&gt;%\n  filter(age &gt;= 50 & age &lt;= 60)\n\nglimpse(dds.discr4)\n\nRows: 23\nColumns: 8\n$ id           &lt;int&gt; 15970, 19412, 29506, 31658, 36123, 39287, 39672, 43455, 4…\n$ age.cohort   &lt;fct&gt; 51+, 51+, 51+, 51+, 51+, 51+, 51+, 51+, 51+, 51+, 51+, 51…\n$ age          &lt;int&gt; 51, 60, 56, 60, 59, 59, 54, 57, 52, 57, 55, 52, 59, 54, 5…\n$ SAB          &lt;fct&gt; Female, Female, Female, Female, Male, Female, Female, Mal…\n$ expenditures &lt;int&gt; 54267, 57702, 48215, 46873, 42739, 44734, 52833, 48363, 5…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, White not Hispani…\n$ exp_to_age   &lt;dbl&gt; 1064.0588, 961.7000, 860.9821, 781.2167, 724.3898, 758.20…\n$ age.cohort2  &lt;chr&gt; \"51+\", \"51+\", \"51+\", \"51+\", \"51+\", \"51+\", \"51+\", \"51+\", \"…"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-5",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#helpful-functions-for-transforming-and-subsetting-5",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Helpful functions for transforming and subsetting",
+    "text": "Helpful functions for transforming and subsetting\n \nData transformation\n\nrename()\nmutate()\npivot_longer() and pivot_wider()\n\nData subsetting\n\nfilter()\n\n\n\nselect()"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#select-keep-or-drop-columns-using-their-names-and-types",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#select-keep-or-drop-columns-using-their-names-and-types",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "select(): keep or drop columns using their names and types",
+    "text": "select(): keep or drop columns using their names and types\n\nWhat if I want to remove or keep certain variables?\n\n\nI want to only have age and expenditure in my data frame\n\n \n\ndds.discr5 = dds.discr2 %&gt;%\n  select(age, expenditures)\n\nglimpse(dds.discr5)\n\nRows: 1,000\nColumns: 2\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#dplyr-resources",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#dplyr-resources",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "dplyr resources",
+    "text": "dplyr resources\n\nMore dpylr functions to reference!\n\nAdditional details and examples are available in the vignettes:\n\ncolumn-wise operations vignette\nrow-wise operations vignette\n\n \nand the dplyr 1.0.0 release blog posts:\n\nworking across columns\nworking within rows"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#r-programming-class-at-ohsu",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#r-programming-class-at-ohsu",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "R programming class at OHSU!",
+    "text": "R programming class at OHSU!\nYou can check out Dr. Jessica Minnier’s R class page if you want more notes, videos, etc."
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#the-larger-tidy-ecosystem",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#the-larger-tidy-ecosystem",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "The larger tidy ecosystem",
+    "text": "The larger tidy ecosystem\nJust to name a few…\n\njanitor\nkableExtra\npatchwork\ngghighlight\ntidybayes"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#credit-to-mine-çetinkaya-rundel",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#credit-to-mine-çetinkaya-rundel",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "Credit to Mine Çetinkaya-Rundel",
+    "text": "Credit to Mine Çetinkaya-Rundel\n\nThese notes were built from Mine’s notes\n\nMost pages and code were left as she made them\nI changed a few things to match our class\n\nPlease see her Github repository for the original notes\n\n\n\nR08 Slides"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tidy-data1-1",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tidy-data1-1",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Tidy data1",
+    "text": "Tidy data1\n\n\nEach variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell.\n\nSource: R for Data Science. Grolemund and Wickham."
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#how-do-we-make-our-data-tidy",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#how-do-we-make-our-data-tidy",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "How do we make our data tidy??",
+    "text": "How do we make our data tidy??\n\nFrom a contingency table, we need to create the dataframe using the counts\n\n\n\n\nIn Lesson 4, we saw this contingency table:\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n8836\n112206\n\n\n40-59 yrs\n42109\n88663\n\n\n60+ yrs\n39917\n21589\n\n\n\n\n\n\n\n\n\nAnd then I magically had it in a new format so I could make this plot:\n\n\n\nCode\nggplot(data = hyp_data, \n       aes(x = Age_Group, \n       fill = Hypertension)) + \n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#pivot_-functions",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#pivot_-functions",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "pivot_*() functions",
+    "text": "pivot_*() functions"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#i-used-pivot_longer-to-create-tidy-data-12",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#i-used-pivot_longer-to-create-tidy-data-12",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "I used pivot_longer() to create tidy data (1/2)",
+    "text": "I used pivot_longer() to create tidy data (1/2)\n\nNote that you won’t be required to use pivot_longer()\n\nI will give you data in a tidy form\n\nHere’s the original data frame:\n\n\nhyp_cont &lt;- data.frame(\n  Age_Group = c(\"18-39 years\", \"40-59 years\", \"60+ years\"),\n  Hypertension = c(8836, 42109, 39917),\n  No_Hypertension = c(112206, 88663, 21589) )\n\n\nNote that I use use data.frame() to make a data frame\nThen I can name each column that we saw in the contingency table\nNote that information about hypertension vs no hypertension is split between columns\n\nAnd that we only have 3 rows of data to show all 313320 observations"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#i-used-pivot_longer-to-create-tidy-data-22",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#i-used-pivot_longer-to-create-tidy-data-22",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "I used pivot_longer() to create tidy data (2/2)",
+    "text": "I used pivot_longer() to create tidy data (2/2)\nWe need to tell pivot_longer():\n\nWhich column must be repeated (pivoted) (all other columns are not repeating)\nThe name of the new column that will contain the old variable names\nWhere the values in each cell under the old variables will go\n\n\nhyp_data1 = pivot_longer(\n              data = hyp_cont, \n              cols = -Age_Group,         # columns to pivot\n              names_to = \"Hypertension\", # name of new column for variable names\n              values_to = \"Counts\")     # name of new column for values\nhyp_data1\n\n# A tibble: 6 × 3\n  Age_Group   Hypertension    Counts\n  &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;\n1 18-39 years Hypertension      8836\n2 18-39 years No_Hypertension 112206\n3 40-59 years Hypertension     42109\n4 40-59 years No_Hypertension  88663\n5 60+ years   Hypertension     39917\n6 60+ years   No_Hypertension  21589"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#one-more-step-to-make-it-tidy",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#one-more-step-to-make-it-tidy",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "One more step to make it tidy",
+    "text": "One more step to make it tidy\n\nAka we need one more step to make it so every row is an observation\n\nIn this case, we want each row to represent data from one person\n\n\n\nhyp_data = hyp_data1 %&gt;% uncount(Counts)\nhead(hyp_data, 10)\n\n# A tibble: 10 × 2\n   Age_Group   Hypertension\n   &lt;chr&gt;       &lt;chr&gt;       \n 1 18-39 years Hypertension\n 2 18-39 years Hypertension\n 3 18-39 years Hypertension\n 4 18-39 years Hypertension\n 5 18-39 years Hypertension\n 6 18-39 years Hypertension\n 7 18-39 years Hypertension\n 8 18-39 years Hypertension\n 9 18-39 years Hypertension\n10 18-39 years Hypertension\n\n\n\n\nR08 Slides"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#where-are-we",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#where-are-we",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tbl_summary-table-summary-12",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tbl_summary-table-summary-12",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "tbl_summary() : table summary (1/2)",
+    "text": "tbl_summary() : table summary (1/2)\n\nWhat if I want one of those fancy summary tables that are at the top of most research articles?\n\n\n\n\nlibrary(gtsummary)\ntbl_summary(dds.discr2)\n\n\n\n\n\n\n\n\n  \n    \n      Characteristic\n      N = 1,0001\n    \n  \n  \n    id\n55,385 (31,759, 76,205)\n    age.cohort\n\n        0-5\n82 (8.2%)\n        6-12\n175 (18%)\n        13-17\n212 (21%)\n        18-21\n199 (20%)\n        22-50\n226 (23%)\n        51+\n106 (11%)\n    age\n18 (12, 26)\n    SAB\n\n        Female\n503 (50%)\n        Male\n497 (50%)\n    expenditures\n7,026 (2,898, 37,718)\n    R_E\n\n        American Indian\n4 (0.4%)\n        Asian\n129 (13%)\n        Black\n59 (5.9%)\n        Hispanic\n376 (38%)\n        Multi Race\n26 (2.6%)\n        Native Hawaiian\n3 (0.3%)\n        Other\n2 (0.2%)\n        White not Hispanic\n401 (40%)\n    exp_to_age\n462 (273, 938)\n  \n  \n  \n    \n      1 Median (Q1, Q3); n (%)"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tbl_summary-table-summary-22",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#tbl_summary-table-summary-22",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "tbl_summary() : table summary (2/2)",
+    "text": "tbl_summary() : table summary (2/2)\n\nLet’s make this more presentable\n\n \n\n\n\ndds.discr2 %&gt;%\n  select(-id, -age.cohort, -exp_to_age) %&gt;%\n  tbl_summary(label = c(age ~ \"Age\", \n                        R_E ~ \"Race/Ethnicity\", \n                        SAB ~ \"Sex Assigned at Birth\", \n                        expenditures ~ \"Expenditures\"),\n              statistic = list(all_continuous() ~ \n                                 \"{mean} ({sd})\"))\n\n\n\n\n\n\n\n\n  \n    \n      Characteristic\n      N = 1,0001\n    \n  \n  \n    Age\n23 (18)\n    Sex Assigned at Birth\n\n        Female\n503 (50%)\n        Male\n497 (50%)\n    Expenditures\n18,066 (19,543)\n    Race/Ethnicity\n\n        American Indian\n4 (0.4%)\n        Asian\n129 (13%)\n        Black\n59 (5.9%)\n        Hispanic\n376 (38%)\n        Multi Race\n26 (2.6%)\n        Native Hawaiian\n3 (0.3%)\n        Other\n2 (0.2%)\n        White not Hispanic\n401 (40%)\n  \n  \n  \n    \n      1 Mean (SD); n (%)"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#group_by-group-by-one-or-more-variables",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#group_by-group-by-one-or-more-variables",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "group_by(): group by one or more variables",
+    "text": "group_by(): group by one or more variables\n\nWhat if I want to quickly look at group differences?\nIt will not change how the data look, but changes the actions of following functions\n\n\nI want to group my data by sex assigned at birth.\n\n \n\ndds.discr5 = dds.discr2 %&gt;%\n  group_by(SAB)\nglimpse(dds.discr5)\n\nRows: 1,000\nColumns: 7\nGroups: SAB [2]\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…\n\n\n\nLet’s see how the groups change something like the summarize() function in the next slide"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#summarize-summarize-your-data-or-grouped-data-into-one-row",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#summarize-summarize-your-data-or-grouped-data-into-one-row",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "summarize(): summarize your data or grouped data into one row",
+    "text": "summarize(): summarize your data or grouped data into one row\n\nWhat if I want to calculate specific descriptive statistics for my variables?\nThis function is often best used with group_by()\nIf only presenting the summaries, functions like tbl_summary() is better\nsummarize() creates a new data frame, which means you can plot and manipulate the summarized data\n\n \n\n\nOver whole sample:\n\ndds.discr2 %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 1 × 3\n     ave     SD   med\n   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 18066. 19543.  7026\n\n\n\nGrouped by sex assigned at birth:\n\ndds.discr2 %&gt;% \n  group_by(SAB) %&gt;% \n  summarize(\n    ave = mean(expenditures),\n    SD = sd(expenditures),\n    med = median(expenditures))\n\n# A tibble: 2 × 4\n  SAB       ave     SD   med\n  &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;\n1 Female 18130. 20020.  6400\n2 Male   18001. 19068.  7219"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#across-apply-a-function-across-multiple-columns",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#across-apply-a-function-across-multiple-columns",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "across(): apply a function across multiple columns",
+    "text": "across(): apply a function across multiple columns\n\nLike group_by(), this function is often paired with another transformation function\n\n\nI want all my integer values to have two significant figures.\n\n \n\ndds.discr6 = dds.discr2 %&gt;%\n  mutate(across(where(is.integer), signif, digits = 2))\n\nglimpse(dds.discr6)\n\nRows: 1,000\nColumns: 7\n$ id           &lt;dbl&gt; 10000, 10000, 10000, 11000, 11000, 11000, 11000, 11000, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;dbl&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ SAB          &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;dbl&gt; 2100, 42000, 1500, 6400, 4400, 4600, 3900, 3900, 5000, 29…\n$ R_E          &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n$ exp_to_age   &lt;dbl&gt; 124.2941, 1133.0811, 484.6667, 336.8421, 339.3846, 304.40…"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#table-1-example-1",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#table-1-example-1",
+    "title": "R09: Transforming and subetting data with tidyverse",
+    "section": "Table 1 example",
+    "text": "Table 1 example\n\n\n\nOften, research studies will show a table with all the summary statistics (lovingly called “Table 1”)\nBasic Table 1 will show all variables with:\n\nMean and SD for the numeric variables\n\\(n (\\%)\\) for categorical variables\n\n\n \n \nAre We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#what-is-the-tidyverse-revisited",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#what-is-the-tidyverse-revisited",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "What is the tidyverse? (revisited)",
+    "text": "What is the tidyverse? (revisited)\nThe tidyverse is a collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.\n\n\n\nggplot2 - data visualisation\ndplyr - data manipulation\ntidyr - tidy data\nreadr - read rectangular data\npurrr - functional programming\ntibble - modern data frames\nstringr - string manipulation\nforcats - factors\nand many more …"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#inline-code",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#inline-code",
+    "title": "R4: Quarto Continued",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#formatting-text",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#formatting-text",
+    "title": "R4: Quarto Continued",
+    "section": "Formatting text",
+    "text": "Formatting text\n\nbold, italics, superscripts & subscripts, strikethrough, verbatim, etc.\n\n\nText is formatted through a markup language called Markdown (Wikipedia)\n\nOther markup languages include html (webapges) and LaTeX (math)\nAll text formatting is specified via code\n“Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read” 1\n\nNewer versions of RStudio include a Visual editor as well that makes formatting text similar to using a word processor."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#formatting-text-visual-editor",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#formatting-text-visual-editor",
+    "title": "R4: Quarto Continued",
+    "section": "Formatting text: Visual editor",
+    "text": "Formatting text: Visual editor\n\nUsing the Visual editor is similar to using a wordprocessor, such as Word\nKeyboard shortcuts usually work as well (shown for Mac below)"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#practice",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#practice",
+    "title": "R4: Quarto Continued",
+    "section": "Practice",
+    "text": "Practice\n\nPart 1\n\nUsing the visual editor, practice formatting text in your qmd file, such as making text bold, italicized, and in code format.\nAdd 1st, 2nd, and 3rd level headers\nAdd a list with a\n\nsub-list (bullet and/or numbered)\n\nAdd a table\nAdd whatever else you are interested in!\n\nPart 2\n\nSwitch back to the Source editor and examine the markdown code that was used for the formatting.\n\n\nQuestions:\n\nWhat went smoothly?\nWhat hurdles did you encounter?"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#formatting-text-markdown",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#formatting-text-markdown",
+    "title": "R4: Quarto Continued",
+    "section": "Formatting text: Markdown",
+    "text": "Formatting text: Markdown\n\n\n\n\n\n\n\nMarkdown:\nOutput:\n\n\n\n\n*This text is in italics*, but _so is this text_.\nThis text is in italics, but so is this text.\n\n\n**Bold** also has __2 options__\nBold also has 2 options\n\n\n~~Should this be deleted?~~\nShould this be deleted?\n\n\nNeed^super^ or~sub~ scripts?\nNeedsuper orsub scripts?\n\n\n`Code is often formatted as verbatim`\nCode is often formatted as verbatim\n\n\n&gt;This is a block quote.\n\nThis is a block quote."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#headers",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#headers",
+    "title": "R4: Quarto Continued",
+    "section": "Headers",
+    "text": "Headers\n\nOrganize your documents using headers to create sections and subsections\nUse # at the beginning of the line to create headers\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure there is no space before the #, and there IS a space after the # in order for the header to work properly."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#rstudio-tip",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#rstudio-tip",
+    "title": "R4: Quarto Continued",
+    "section": "RStudio tip",
+    "text": "RStudio tip\nYou can easily navigate through your .qmd file if you use headers to outline your text"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#code-chunks",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#code-chunks",
+    "title": "R4: Quarto Continued",
+    "section": "Code chunks",
+    "text": "Code chunks\n\n\n.qmd file \n\nhtml output"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#create-a-code-chunk",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#create-a-code-chunk",
+    "title": "R4: Quarto Continued",
+    "section": "Create a code chunk",
+    "text": "Create a code chunk\n3 options to create a code chunk\n\nClick on  at top right of the editor window, or\nKeyboard shortcut\n\n\n\n\nMac\nCommand + Option + I\n\n\nPC\nCtrl + Alt + I\n\n\n\n\nVisual editor: Select Insert -&gt; Executable Cell -&gt; R"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#what-does-a-code-chunk-look-like",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#what-does-a-code-chunk-look-like",
+    "title": "R4: Quarto Continued",
+    "section": "What does a code chunk look like?",
+    "text": "What does a code chunk look like?\nAn empty code chunk looks like this:\nVisual editor\n\nSource editor\n\n\n\n\n\n\n\nImportant\n\n\n\nNote that a code chunks start with ```{r} and ends with ```. Make sure there is no space before ```."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#enter-and-run-code-1n",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#enter-and-run-code-1n",
+    "title": "R4: Quarto Continued",
+    "section": "Enter and run code (1/n)",
+    "text": "Enter and run code (1/n)\n\nType R code inside code chunks\nSelect code you want to run, by\n\nplacing the cursor in the line of code you want to run,\nor highlighting the code you want to run\n\n\n\n\n\nRun selected code by\n\nclicking on the  button in the top right corner of the scripting window and choosing Run Selected Line(s),\nor typing one of the following key combinations:\n\n\n\n\n\nMac\nctrl + return\n\n\nPC\ncommand + return\n\n\n\n\nWhere does the output appear?"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#enter-and-run-code-2n",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#enter-and-run-code-2n",
+    "title": "R4: Quarto Continued",
+    "section": "Enter and run code (2/n)",
+    "text": "Enter and run code (2/n)\n\n\nRun all code in a chunk by\n\nby clicking the play button in the top right corner of the chunk\n\nThe code output appears below the code chunk\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe output should also appear in the Console.\nSettings can be changed so that the output appears only in the Console and not below the code chunk:\n\nSelect  (to right of Render button) and then Chunk Output in Console."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts",
+    "title": "R4: Quarto Continued",
+    "section": "Useful keyboard shortcuts",
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#yaml-metadata",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#yaml-metadata",
+    "title": "R4: Quarto Continued",
+    "section": "YAML metadata",
+    "text": "YAML metadata\nMany output options can be set in the YAML metadata, which is the first set of code in the file starting and ending with ---.\n\nIt sets the configuration specifications for the output file\nYAML is an acronym for\n\nyet another markup language, or\nYAML ain’t markup language"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#simple-yaml-example",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#simple-yaml-example",
+    "title": "R4: Quarto Continued",
+    "section": "Simple YAML example",
+    "text": "Simple YAML example\n\n\nThe default YAML includes a title and author that appear at the top of the output file. In the example below, I also added in a date option\n\n\n\n\nYAML:\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nThe YAML must start and end with 3 dashes ---.\nThe first set of --- must be on the very first line."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#change-the-output-file-type",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#change-the-output-file-type",
+    "title": "R4: Quarto Continued",
+    "section": "Change the output file type",
+    "text": "Change the output file type\n\n\n\nThe YAML specifies the format of the output file:\n\nhtml, Word, pdf, slides, website, book, etc.\n\nThis is done by changing the format: option\n\n\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio.\n\n\n\n\n\n\n\n---\ntitle: \"My first Quarto file\"\nauthor: \"Meike\"\ndate: \"9/25/2023\"\nformat: html\neditor: visual\n---\n\n\n\n\n\n\n\n\n\nOutput format\nYAML\n\n\n\n\nhtml\nformat: html\n\n\nWord\nformat: docx\n\n\npdf2\nformat: pdf\n\n\nhtml slides\nformat: revealjs\n\n\nPPT slides\nformat: pptx"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#section",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#section",
+    "title": "R4: Quarto Continued",
+    "section": "",
+    "text": "Artwork by @allison_horst"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#you-will-get-frustrated-while-learning-r",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#you-will-get-frustrated-while-learning-r",
+    "title": "R4: Quarto Continued",
+    "section": "You WILL get frustrated while learning R!",
+    "text": "You WILL get frustrated while learning R!\nFrom Garrett Grolemund’s Prologue of his book Hands-On Programming with R3:\n\nAs you learn to program, you are going to get frustrated. You are learning a new language, and it will take time to become fluent. But frustration is not just natural, it’s actually a positive sign that you should watch for. Frustration is your brain’s way of being lazy; it’s trying to get you to quit and go do something easy or fun. If you want to get physically fitter, you need to push your body even though it complains. If you want to get better at programming, you’ll need to push your brain. Recognize when you get frustrated and see it as a good thing: you’re now stretching yourself. Push yourself a little further every day, and you’ll soon be a confident programmer."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#resources",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#resources",
+    "title": "R4: Quarto Continued",
+    "section": "Resources",
+    "text": "Resources\n\nOfficial Quarto guide: https://quarto.org/docs/guide/\n\nMarkdown basics: https://quarto.org/docs/authoring/markdown-basics.html\n\nText formatting, headings, linnks, images, lists, tables, equations, diagrams, page breaks, keyboard shortcuts, and more!\n\nCode blocks: https://quarto.org/docs/computations/r.html#code-blocks\n\nChunk options: https://quarto.org/docs/computations/r.html#chunk-options\n\n\nMine Çetinkaya-Rundel’s Quarto tip a day: https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/\n\nHadley Wickham’s R for Data Science: https://r4ds.hadley.nz/ _ See Chapter 29 for Quarto"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#r-packages-1",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#r-packages-1",
+    "title": "R4: Quarto Continued",
+    "section": "R Packages",
+    "text": "R Packages\nA good analogy for R packages is that they\nare like apps you can download onto a mobile phone:\n\n\n\nModernDive Figure 1.4"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#installing-packages",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#installing-packages",
+    "title": "R4: Quarto Continued",
+    "section": "Installing packages",
+    "text": "Installing packages\n\n\nPackages contain additional functions and data\n\nTwo options to install packages:\n\ninstall.packages() or\nThe “Packages” tab in Files/Plots/Packages/Help/Viewer window\n\n\n\ninstall.packages(\"dplyr\")   # only do this ONCE, use quotes\n\n\n\n\n\nOnly install packages once (unless you want to update them)\nInstalled from Comprehensive R Archive Network (CRAN) = package mothership"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#video-on-installing-packages",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#video-on-installing-packages",
+    "title": "R4: Quarto Continued",
+    "section": "Video on installing packages",
+    "text": "Video on installing packages\n\nDanielle Navarro’s YouTube video on Installing and loading R packages: https://www.youtube.com/watch?v=kpHZVyDvEhQ"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#load-packages-with-library-command",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#load-packages-with-library-command",
+    "title": "R4: Quarto Continued",
+    "section": "Load packages with library() command",
+    "text": "Load packages with library() command\n\n\nTip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.\nUse the library() command to load each required package.\nPackages need to be reloaded every time you open Rstudio.\n\n\n\nlibrary(dplyr)    # run this every time you open Rstudio\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\nYou can use a function without loading the package with PackageName::CommandName\n\n\n\ndplyr::arrange(iris, Petal.Width)   # what does arrange do?\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species\n1            4.9         3.1          1.5         0.1     setosa\n2            4.8         3.0          1.4         0.1     setosa\n3            4.3         3.0          1.1         0.1     setosa\n4            5.2         4.1          1.5         0.1     setosa\n5            4.9         3.6          1.4         0.1     setosa\n6            5.1         3.5          1.4         0.2     setosa\n7            4.9         3.0          1.4         0.2     setosa\n8            4.7         3.2          1.3         0.2     setosa\n9            4.6         3.1          1.5         0.2     setosa\n10           5.0         3.6          1.4         0.2     setosa\n11           5.0         3.4          1.5         0.2     setosa\n12           4.4         2.9          1.4         0.2     setosa\n13           5.4         3.7          1.5         0.2     setosa\n14           4.8         3.4          1.6         0.2     setosa\n15           5.8         4.0          1.2         0.2     setosa\n16           5.4         3.4          1.7         0.2     setosa\n17           4.6         3.6          1.0         0.2     setosa\n18           4.8         3.4          1.9         0.2     setosa\n19           5.0         3.0          1.6         0.2     setosa\n20           5.2         3.5          1.5         0.2     setosa\n21           5.2         3.4          1.4         0.2     setosa\n22           4.7         3.2          1.6         0.2     setosa\n23           4.8         3.1          1.6         0.2     setosa\n24           5.5         4.2          1.4         0.2     setosa\n25           4.9         3.1          1.5         0.2     setosa\n26           5.0         3.2          1.2         0.2     setosa\n27           5.5         3.5          1.3         0.2     setosa\n28           4.4         3.0          1.3         0.2     setosa\n29           5.1         3.4          1.5         0.2     setosa\n30           4.4         3.2          1.3         0.2     setosa\n31           5.1         3.8          1.6         0.2     setosa\n32           4.6         3.2          1.4         0.2     setosa\n33           5.3         3.7          1.5         0.2     setosa\n34           5.0         3.3          1.4         0.2     setosa\n35           4.6         3.4          1.4         0.3     setosa\n36           5.1         3.5          1.4         0.3     setosa\n37           5.7         3.8          1.7         0.3     setosa\n38           5.1         3.8          1.5         0.3     setosa\n39           5.0         3.5          1.3         0.3     setosa\n40           4.5         2.3          1.3         0.3     setosa\n41           4.8         3.0          1.4         0.3     setosa\n42           5.4         3.9          1.7         0.4     setosa\n43           5.7         4.4          1.5         0.4     setosa\n44           5.4         3.9          1.3         0.4     setosa\n45           5.1         3.7          1.5         0.4     setosa\n46           5.0         3.4          1.6         0.4     setosa\n47           5.4         3.4          1.5         0.4     setosa\n48           5.1         3.8          1.9         0.4     setosa\n49           5.1         3.3          1.7         0.5     setosa\n50           5.0         3.5          1.6         0.6     setosa\n51           4.9         2.4          3.3         1.0 versicolor\n52           5.0         2.0          3.5         1.0 versicolor\n53           6.0         2.2          4.0         1.0 versicolor\n54           5.8         2.7          4.1         1.0 versicolor\n55           5.7         2.6          3.5         1.0 versicolor\n56           5.5         2.4          3.7         1.0 versicolor\n57           5.0         2.3          3.3         1.0 versicolor\n58           5.6         2.5          3.9         1.1 versicolor\n59           5.5         2.4          3.8         1.1 versicolor\n60           5.1         2.5          3.0         1.1 versicolor\n61           6.1         2.8          4.7         1.2 versicolor\n62           5.8         2.7          3.9         1.2 versicolor\n63           5.5         2.6          4.4         1.2 versicolor\n64           5.8         2.6          4.0         1.2 versicolor\n65           5.7         3.0          4.2         1.2 versicolor\n66           5.5         2.3          4.0         1.3 versicolor\n67           5.7         2.8          4.5         1.3 versicolor\n68           6.6         2.9          4.6         1.3 versicolor\n69           5.6         2.9          3.6         1.3 versicolor\n70           6.1         2.8          4.0         1.3 versicolor\n71           6.4         2.9          4.3         1.3 versicolor\n72           6.3         2.3          4.4         1.3 versicolor\n73           5.6         3.0          4.1         1.3 versicolor\n74           5.5         2.5          4.0         1.3 versicolor\n75           5.6         2.7          4.2         1.3 versicolor\n76           5.7         2.9          4.2         1.3 versicolor\n77           6.2         2.9          4.3         1.3 versicolor\n78           5.7         2.8          4.1         1.3 versicolor\n79           7.0         3.2          4.7         1.4 versicolor\n80           5.2         2.7          3.9         1.4 versicolor\n81           6.1         2.9          4.7         1.4 versicolor\n82           6.7         3.1          4.4         1.4 versicolor\n83           6.6         3.0          4.4         1.4 versicolor\n84           6.8         2.8          4.8         1.4 versicolor\n85           6.1         3.0          4.6         1.4 versicolor\n86           6.1         2.6          5.6         1.4  virginica\n87           6.4         3.2          4.5         1.5 versicolor\n88           6.9         3.1          4.9         1.5 versicolor\n89           6.5         2.8          4.6         1.5 versicolor\n90           5.9         3.0          4.2         1.5 versicolor\n91           5.6         3.0          4.5         1.5 versicolor\n92           6.2         2.2          4.5         1.5 versicolor\n93           6.3         2.5          4.9         1.5 versicolor\n94           6.0         2.9          4.5         1.5 versicolor\n95           5.4         3.0          4.5         1.5 versicolor\n96           6.7         3.1          4.7         1.5 versicolor\n97           6.0         2.2          5.0         1.5  virginica\n98           6.3         2.8          5.1         1.5  virginica\n99           6.3         3.3          4.7         1.6 versicolor\n100          6.0         2.7          5.1         1.6 versicolor\n101          6.0         3.4          4.5         1.6 versicolor\n102          7.2         3.0          5.8         1.6  virginica\n103          6.7         3.0          5.0         1.7 versicolor\n104          4.9         2.5          4.5         1.7  virginica\n105          5.9         3.2          4.8         1.8 versicolor\n106          6.3         2.9          5.6         1.8  virginica\n107          7.3         2.9          6.3         1.8  virginica\n108          6.7         2.5          5.8         1.8  virginica\n109          6.5         3.0          5.5         1.8  virginica\n110          6.3         2.7          4.9         1.8  virginica\n111          7.2         3.2          6.0         1.8  virginica\n112          6.2         2.8          4.8         1.8  virginica\n113          6.1         3.0          4.9         1.8  virginica\n114          6.4         3.1          5.5         1.8  virginica\n115          6.0         3.0          4.8         1.8  virginica\n116          5.9         3.0          5.1         1.8  virginica\n117          5.8         2.7          5.1         1.9  virginica\n118          6.4         2.7          5.3         1.9  virginica\n119          7.4         2.8          6.1         1.9  virginica\n120          5.8         2.7          5.1         1.9  virginica\n121          6.3         2.5          5.0         1.9  virginica\n122          6.5         3.2          5.1         2.0  virginica\n123          5.7         2.5          5.0         2.0  virginica\n124          5.6         2.8          4.9         2.0  virginica\n125          7.7         2.8          6.7         2.0  virginica\n126          7.9         3.8          6.4         2.0  virginica\n127          6.5         3.0          5.2         2.0  virginica\n128          7.1         3.0          5.9         2.1  virginica\n129          7.6         3.0          6.6         2.1  virginica\n130          6.8         3.0          5.5         2.1  virginica\n131          6.7         3.3          5.7         2.1  virginica\n132          6.4         2.8          5.6         2.1  virginica\n133          6.9         3.1          5.4         2.1  virginica\n134          6.5         3.0          5.8         2.2  virginica\n135          7.7         3.8          6.7         2.2  virginica\n136          6.4         2.8          5.6         2.2  virginica\n137          6.4         3.2          5.3         2.3  virginica\n138          7.7         2.6          6.9         2.3  virginica\n139          6.9         3.2          5.7         2.3  virginica\n140          7.7         3.0          6.1         2.3  virginica\n141          6.9         3.1          5.1         2.3  virginica\n142          6.8         3.2          5.9         2.3  virginica\n143          6.7         3.0          5.2         2.3  virginica\n144          6.2         3.4          5.4         2.3  virginica\n145          5.8         2.8          5.1         2.4  virginica\n146          6.3         3.4          5.6         2.4  virginica\n147          6.7         3.1          5.6         2.4  virginica\n148          6.3         3.3          6.0         2.5  virginica\n149          7.2         3.6          6.1         2.5  virginica\n150          6.7         3.3          5.7         2.5  virginica"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#install-the-packages-listed-below-before-day-3",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#install-the-packages-listed-below-before-day-3",
+    "title": "R4: Quarto Continued",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#directions-for-installing-package-oibiostat",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#directions-for-installing-package-oibiostat",
+    "title": "R4: Quarto Continued",
+    "section": "Directions for installing package oibiostat",
+    "text": "Directions for installing package oibiostat\n\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts-1",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#useful-keyboard-shortcuts-1",
+    "title": "R4: Quarto Continued",
+    "section": "Useful keyboard shortcuts",
+    "text": "Useful keyboard shortcuts\nFull list of keyboard shortcuts\n \n\n\n\n\n\n\n\n\naction\nmac\nwindows/linux\n\n\n\n\nRun code in qmd (or script)\ncmd + enter\nctrl + enter\n\n\n&lt;-\noption + -\nalt + -\n\n\ninterrupt currently running command\nesc\nesc\n\n\nin console, retrieve previously run code\nup/down\nup/down\n\n\nkeyboard shortcut help\noption + shift + k\nalt + shift + k\n\n\n\n\n\n\nPractice\nTry typing code below in your qmd (with shortcut) and evaluating it:\n\ny &lt;- 5\ny"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#another-resource-for-an-introduction-to-r",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#another-resource-for-an-introduction-to-r",
+    "title": "R4: Quarto Continued",
+    "section": "Another resource for an introduction to R",
+    "text": "Another resource for an introduction to R\n\nIf you would like another perspective on what we covered the first week, you might find Danielle Navarro’s online book Learning Statistics with R to be helpful.\nDownload free pdf: https://learningstatisticswithr.com/\nSee Sections 3.1-3.7.1 for some of the topics we covered on first day"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R4_Quarto_02.html#footnotes",
+    "href": "lessons/R11_Quarto_02/R4_Quarto_02.html#footnotes",
+    "title": "R4: Quarto Continued",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFrom Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html↩︎\nrequires LaTeX installation↩︎\nGrolemund, Garrett. 2014. Hands-on Programming with R. O’Reilly. https://rstudio-education.github.io/hopr/↩︎"
+  },
+  {
+    "objectID": "lessons/R10_Table_1/R13_Table_1.html",
+    "href": "lessons/R10_Table_1/R13_Table_1.html",
+    "title": "R13: Making Table 1",
+    "section": "",
+    "text": "Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/R10_Table_1/R13_Table_1.html#table-1-example",
+    "href": "lessons/R10_Table_1/R13_Table_1.html#table-1-example",
+    "title": "R13: Making Table 1",
+    "section": "",
+    "text": "Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis\nJ Barton et al.\nArthritis Care & Research.\n2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "",
+    "text": "Often, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\n\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#how-are-data-stored-how-do-we-use-them",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "",
+    "text": "Often, data are in an Excel sheet, or a plain text file (.csv, .txt)\n.csv files open in Excel automatically, but actually are plain text\nUsually, columns are variables/measures and rows are observations (i.e. a person’s measurements)\n\n\n\n\nWe can import data from many file types, including .csv, .txt., and .xlsx\n\nWe will cover this on a later date\n\nOnce imported, R typically stores data as data frames, or tibbles if using the tidyverse package (more on this later).\n\nFor our purposes, these are essentially the same, and I will tend to use the terms interchangeably.\nThese are examples of what we call object types in R."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-frame-example",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data frame example",
+    "text": "Data frame example\n\n\n\ndf &lt;- data.frame(\n  IDs=1:3, \n  gender=c(\"male\", \"female\", \"Male\"), \n  age=c(28, 35.5, 31),\n  trt = c(\"control\", \"1\", \"1\"),\n  Veteran = c(FALSE, TRUE, TRUE)\n  )\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\nVectors vs. data frames\n\na data frame is a collection (or array or table) of vectors\n\n\n\n\n\n\n\nDifferent columns can be of different data types (i.e. numeric vs. text)\nBoth numeric and text can be stored within a column (stored together as text).\nVectors and data frames are examples of objects in R.\n\nThere are other types of R objects to store data, such as matrices, lists."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#observations-variables",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Observations & variables",
+    "text": "Observations & variables\n\n\n\ndf\n\n  IDs gender  age     trt Veteran\n1   1   male 28.0 control   FALSE\n2   2 female 35.5       1    TRUE\n3   3   Male 31.0       1    TRUE\n\n\n\n\n\nISLBS\n\n\n\n\n\nBook refers to a dataset as a data matrix\nRows are usually observations\nColumns are usually variables\nHow many observations are in this dataset?\nWhat are the variable types in this dataset?"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#variable-column-types",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Variable (column) types",
+    "text": "Variable (column) types\n\n\n\n\n\n\n\n\n\nR type\nvariable type\ndescription\n\n\n\n\ninteger\ndiscrete\ninteger-valued numbers\n\n\ndouble or numeric\ncontinuous\nnumbers that are decimals\n\n\nfactor\ncategorical\ncategorical variables stored with levels (groups)\n\n\ncharacter\ncategorical\ntext, “strings”\n\n\nlogical\ncategorical\nboolean (TRUE, FALSE)\n\n\n\n\n\nView the structure of our data frame to see what the variable types are:\n\n\n\nstr(df)\n\n'data.frame':   3 obs. of  5 variables:\n $ IDs    : int  1 2 3\n $ gender : chr  \"male\" \"female\" \"Male\"\n $ age    : num  28 35.5 31\n $ trt    : chr  \"control\" \"1\" \"1\"\n $ Veteran: logi  FALSE TRUE TRUE"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#fishers-or-andersons-iris-data-set",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Fisher’s (or Anderson’s) Iris data set",
+    "text": "Fisher’s (or Anderson’s) Iris data set\nData description:\n\nn = 150\n3 species of Iris flowers (Setosa, Virginica, and Versicolour)\n\n50 measurements of each type of Iris\n\nvariables:\n\nsepal length, sepal width, petal length, petal width, and species\n\n\nCan the iris species be determined by these variables?\n\n\n\nGareth Duffy"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-iris-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the iris dataset",
+    "text": "View the iris dataset\n\n\nThe iris dataset is already pre-loaded in base R and ready to use.\nType the following command in the console window\n\nWarning: this command cannot be rendered. It will give an error.\n\n\n\n\n\n\n\n\nView(iris)\n\n\nA new tab in the scripting window should appear with the iris dataset."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-structure",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-structure",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data structure",
+    "text": "Data structure\n\nWhat are the different variable types in this data set?\n\n\n\n\nstr(iris)   # structure of data\n\n'data.frame':   150 obs. of  5 variables:\n $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...\n $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...\n $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...\n $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...\n $ Species     : Factor w/ 3 levels \"setosa\",\"versicolor\",..: 1 1 1 1 1 1 1 1 1 1 ..."
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-summary",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set summary",
+    "text": "Data set summary\n\nsummary(iris)\n\n  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   \n Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  \n 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  \n Median :5.800   Median :3.000   Median :4.350   Median :1.300  \n Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  \n 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  \n Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  \n       Species  \n setosa    :50  \n versicolor:50  \n virginica :50"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#data-set-info",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Data set info",
+    "text": "Data set info\n\ndim(iris)\n\n[1] 150   5\n\nnrow(iris)\n\n[1] 150\n\nncol(iris)\n\n[1] 5\n\nnames(iris)\n\n[1] \"Sepal.Length\" \"Sepal.Width\"  \"Petal.Length\" \"Petal.Width\"  \"Species\""
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#view-the-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "View the beginning or end of a dataset",
+    "text": "View the beginning or end of a dataset\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\ntail(iris)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n145          6.7         3.3          5.7         2.5 virginica\n146          6.7         3.0          5.2         2.3 virginica\n147          6.3         2.5          5.0         1.9 virginica\n148          6.5         3.0          5.2         2.0 virginica\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Specify how many rows to view at beginning or end of a dataset",
+    "text": "Specify how many rows to view at beginning or end of a dataset\n\nhead(iris, 3)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n\ntail(iris, 2)\n\n    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species\n149          6.2         3.4          5.4         2.3 virginica\n150          5.9         3.0          5.1         1.8 virginica"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#the",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "The $",
+    "text": "The $\n\nSuppose we want to single out the column of petal width values.\nOne way to do this is to use the $\n\nDatSetName$VariableName\n\n\n\niris$Petal.Width\n\n  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4 0.3\n [19] 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2 0.2 0.2\n [37] 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4 1.5 1.5 1.3\n [55] 1.5 1.3 1.6 1.0 1.3 1.4 1.0 1.5 1.0 1.4 1.3 1.4 1.5 1.0 1.5 1.1 1.8 1.3\n [73] 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1.0 1.1 1.0 1.2 1.6 1.5 1.6 1.5 1.3 1.3 1.3\n [91] 1.2 1.4 1.2 1.0 1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9 2.1 1.8 2.2 2.1 1.7 1.8\n[109] 1.8 2.5 2.0 1.9 2.1 2.0 2.4 2.3 1.8 2.2 2.3 1.5 2.3 2.0 2.0 1.8 2.1 1.8\n[127] 1.8 1.8 2.1 1.6 1.9 2.0 2.2 1.5 1.4 2.3 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3\n[145] 2.5 2.3 1.9 2.0 2.3 1.8"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#example-using-the",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Example using the $",
+    "text": "Example using the $\nThe $ is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.\n\n\n\nmean(iris$Petal.Width)\n\n[1] 1.199333\n\nsd(iris$Petal.Width)\n\n[1] 0.7622377\n\nmedian(iris$Petal.Width)\n\n[1] 1.3"
+  },
+  {
+    "objectID": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#inline-code",
+    "href": "lessons/R11_Quarto_02/R04_Quarto_pkgs_data_import.html#inline-code",
+    "title": "R04: Intro to Quarto doc, packages, and importing data",
+    "section": "Inline code",
+    "text": "Inline code\n\n\nWith markdown you can also report R code output inline with the text instead of using a chunk.\n\n\n\nText in editor:\n\n\n\n\n\n\nOutput:\nThe mean petal width for all 3 species combined is 1.2 (SD = 0.8) cm.\n\n\n\nReporting summary statistics this way in a report, makes the numbers computationally reproducible.\nFor example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values."
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#get_summary_stats-from-rstatix-package",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#get_summary_stats-from-rstatix-package",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "get_summary_stats() from rstatix package",
+    "text": "get_summary_stats() from rstatix package\n\ndds.discr2 %&gt;% get_summary_stats()\n\n# A tibble: 4 × 13\n  variable     n    min   max median     q1     q3    iqr    mad    mean      sd\n  &lt;fct&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 id        1000 1.02e4 99898 55384. 31809. 76135. 44326  3.27e4 54663.  25644. \n2 age       1000 0         95    18     12     26     14  1.04e1    22.8    18.5\n3 expendi…  1000 2.22e2 75098  7026   2899. 37713. 34814  7.76e3 18066.  19543. \n4 exp_to_…  1000 2.76e1   Inf   462.   274.   938.   664. 3.54e2   Inf     NaN  \n# ℹ 2 more variables: se &lt;dbl&gt;, ci &lt;dbl&gt;\n\ndds.discr2 %&gt;% \n  group_by(R_E) %&gt;%\n  get_summary_stats(expenditures, type = \"common\")\n\n# A tibble: 8 × 11\n  R_E       variable     n   min   max median    iqr   mean     sd     se     ci\n  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 American… expendi…     4  3726 58392 41818. 34085. 36438. 25694. 12847. 40885.\n2 Asian     expendi…   129   374 75098  9369  30892  18392. 19209.  1691.  3346.\n3 Black     expendi…    59   240 60808  8687  37987  20885. 20549.  2675.  5355.\n4 Hispanic  expendi…   376   222 65581  3952   7961. 11066. 15630.   806.  1585.\n5 Multi Ra… expendi…    26   669 38619  2622   2060.  4457.  7332.  1438.  2962.\n6 Native H… expendi…     3 37479 50141 40727   6331  42782.  6576.  3797. 16337.\n7 Other     expendi…     2  2018  4615  3316.  1298.  3316.  1836.  1298. 16499.\n8 White no… expendi…   401   340 68890 15718  39157  24698. 20604.  1029.  2023."
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#how-to-force-all-output-to-be-shown-12",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#how-to-force-all-output-to-be-shown-12",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "How to force all output to be shown? (1/2)",
+    "text": "How to force all output to be shown? (1/2)\nUse kable() from the knitr package.\n\ndds.discr2 %&gt;% get_summary_stats() %&gt;% kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvariable\nn\nmin\nmax\nmedian\nq1\nq3\niqr\nmad\nmean\nsd\nse\nci\n\n\n\n\nid\n1000\n10210.000\n99898\n55384.500\n31808.750\n76134.750\n44326.000\n32734.325\n54662.85\n25643.673\n810.924\n1591.310\n\n\nage\n1000\n0.000\n95\n18.000\n12.000\n26.000\n14.000\n10.378\n22.80\n18.462\n0.584\n1.146\n\n\nexpenditures\n1000\n222.000\n75098\n7026.000\n2898.750\n37712.750\n34814.000\n7760.670\n18065.79\n19542.831\n617.999\n1212.724\n\n\nexp_to_age\n1000\n27.571\nInf\n461.752\n273.881\n938.125\n664.244\n353.971\nInf\nNaN\nNaN\nNaN"
+  },
+  {
+    "objectID": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "href": "lessons/R09_tidyverse_02/R09_tidyverse_02.html#how-to-force-all-output-to-be-shown-knitr-22",
+    "title": "R09: Summarizing data with tidyverse",
+    "section": "How to force all output to be shown? knitr (2/2)",
+    "text": "How to force all output to be shown? knitr (2/2)\nUse kable() from the knitr package.\n\ndds.discr2 %&gt;% \n  group_by(R_E) %&gt;%\n  get_summary_stats(expenditures, type = \"common\") %&gt;% \n  kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR_E\nvariable\nn\nmin\nmax\nmedian\niqr\nmean\nsd\nse\nci\n\n\n\n\nAmerican Indian\nexpenditures\n4\n3726\n58392\n41817.5\n34085.25\n36438.250\n25693.912\n12846.956\n40884.748\n\n\nAsian\nexpenditures\n129\n374\n75098\n9369.0\n30892.00\n18392.372\n19209.225\n1691.278\n3346.482\n\n\nBlack\nexpenditures\n59\n240\n60808\n8687.0\n37987.00\n20884.593\n20549.274\n2675.288\n5355.170\n\n\nHispanic\nexpenditures\n376\n222\n65581\n3952.0\n7961.25\n11065.569\n15629.847\n806.048\n1584.940\n\n\nMulti Race\nexpenditures\n26\n669\n38619\n2622.0\n2059.75\n4456.731\n7332.135\n1437.950\n2961.514\n\n\nNative Hawaiian\nexpenditures\n3\n37479\n50141\n40727.0\n6331.00\n42782.333\n6576.462\n3796.922\n16336.838\n\n\nOther\nexpenditures\n2\n2018\n4615\n3316.5\n1298.50\n3316.500\n1836.356\n1298.500\n16499.007\n\n\nWhite not Hispanic\nexpenditures\n401\n340\n68890\n15718.0\n39157.00\n24697.549\n20604.376\n1028.933\n2022.793"
   }
 ]
