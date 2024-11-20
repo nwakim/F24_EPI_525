@@ -1,5 +1,5 @@
 ---
-title: "Lesson 14: Power and sample size calculations for difference of means"
+title: "Lesson 14: Power and sample size calculations for means"
 subtitle: "TB sections 5.4"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
@@ -49,17 +49,34 @@ theme_set(theme_bw(base_size = 22))
 set.seed(456)
 ```
 
-
 # Learning Objectives
 
-1. Understand the 4 components in equilibrium in a hypothesis test
-2. Define the significance level, critical value, and rejection region.
-3. Define power.
-4. Calculate power 
-5. Calculate the sample size
+1.  Understand the four components in equilibrium in a hypothesis test.
+2.  Define the significance level, critical value, and rejection region.
+3.  Define power and understand its role in a hypothesis test.
+4.  Understand how to calculate power for two independent samples. 
+5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
+
 ## Where are we?
 
 ![](../img_slides/course_map.png){fig-align="center"}
+
+## Before we get into power and sample size
+
+Let's watch this youtube video to jog our memory (remind us of what we learned):
+
+{{< video https://www.youtube.com/watch?v=Q_pO9NzWxPY&ab_channel=DATAtab width="1400" height="850">}}
+
+# Learning Objectives
+
+::: lob
+1.  Understand the four components in equilibrium in a hypothesis test.
+:::
+
+2.  Define the significance level, critical value, and rejection region.
+3.  Define power and understand its role in a hypothesis test.
+4.  Understand how to calculate power for two independent samples. 
+5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
 ## From Lesson 13: Does caffeine increase finger taps/min (on average)?
 
@@ -117,9 +134,8 @@ ggplot(CaffTaps, aes(x=Taps)) +
 
 ## What if the following were the true population distributions? Case 1
 
-- Difference in population means is **5**
-- Both have a standard deviation of 2
-
+-   Difference in population means is **5**
+-   Both have a standard deviation of 2
 
 ```{r}
 #| echo: false
@@ -154,14 +170,13 @@ two_sample_plot = ggplot(data.frame(x = c(238, 257)), aes(x)) +
 two_sample_plot
 ```
 
-- When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
-  - **Depends on the number of samples we get: we might need a lot**
+-   When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
+    -   **Depends on the number of samples we get: we might need a lot**
 
 ## What if the following were the true population distributions? Case 2
 
-- Difference in population means is **5**
-- Both have a standard deviation of 1
-
+-   Difference in population means is **5**
+-   Both have a standard deviation of 1
 
 ```{r}
 #| echo: false
@@ -196,14 +211,13 @@ two_sample_plot = ggplot(data.frame(x = c(238, 257)), aes(x)) +
 two_sample_plot
 ```
 
-- When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
-  - **Seems easier to distinguish here.** How did the standard deviation decrease?
+-   When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
+    -   **Seems easier to distinguish here.** How did the standard deviation decrease?
 
 ## What if the following were the true population distributions? Case 3
 
-- Difference in population means is **10**
-- Both have a standard deviation of 2
-
+-   Difference in population means is **10**
+-   Both have a standard deviation of 2
 
 ```{r}
 #| echo: false
@@ -238,41 +252,48 @@ two_sample_plot = ggplot(data.frame(x = c(238, 263)), aes(x)) +
 two_sample_plot
 ```
 
-- When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
-  - **Also seems easier to distinguish here**
+-   When we take two samples from these groups, do you think it would be easy to distinguish between the mean taps/min?
+    -   **Also seems easier to distinguish here**
 
-  
 ## There are a few things at play here
 
-- There are several measurements that affect how easy it is to distinguish between two populations 
-- "Distinguish between two populations" = reject the null hypothesis that they are the same
+-   There are several measurements that affect how easy it is to distinguish between two populations
+-   "Distinguish between two populations" = correctly reject the null hypothesis that they are the same
 
  
 
-- What do we need?
+-   What elements are at play?
 
-    1. **Difference** in population means
-    2. **Number of samples** from each population
-    3. The **significance level** that we use for a cut off
-    4. The **power** of our test
-    
-- More familiar with first two, but let's define #3 and #4 more
+    1.  **Difference** in population means
+    2.  **Number of samples** from each population
+    3.  The **significance level** that we use for a cut off
+    4.  The **power** of our test
+
+-   More familiar with first two, but let's define #3 and #4 more
 
 # Learning Objectives
 
-## Significance levels and critical values 
+1.  Understand the four components in equilibrium in a hypothesis test.
 
-::: {style="font-size: 90%;"}
+::: lob
+2.  Define the significance level, critical value, and rejection region.
+:::
 
-* __Critical values__ are the cutoff values that determine whether a test statistic is statistically significant or not
-    - Determined by the **significance level**
-* If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+3.  Define power and understand its role in a hypothesis test.
+4.  Understand how to calculate power for two independent samples. 
+5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
+
+## Significance levels and critical values
+
+::::::: {style="font-size: 90%;"}
+-   **Critical values** are the cutoff values that determine whether a test statistic is statistically significant or not
+    -   Determined by the **significance level**
+-   If a test statistic is greater in absolute value than the critical value, we reject $H_0$
 
  
 
-::: columns
+:::::: columns
 ::: {.column width="49%"}
-
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
@@ -309,80 +330,77 @@ ggplot(NULL, aes(c(-3,3))) +
 :::
 
 ::: {.column width="49%"}
-
-* Critical values are determined by 
-    * the significance level $\alpha$, 
-    * whether a test is 1- or 2-sided, &
-    * the probability distribution being used to calculate the p-value (such as normal or t-distribution)
-
+-   Critical values are determined by
+    -   the significance level $\alpha$,
+    -   whether a test is 1- or 2-sided, &
+    -   the probability distribution being used to calculate the p-value (such as normal or t-distribution)
 :::
-:::
+::::::
 
-* We have been referring to critical values from the t-distribution as $t^*$
-    - See how we calculate a specific confidence interval
-:::
+-   We have been referring to critical values from the t-distribution as $t^*$
+    -   See how we calculate a specific confidence interval in Lesson 10
+:::::::
 
 ## Poll Everywhere Question 1
 
+## Rejection region, significance levels, and critical values
 
-## Significance levels and critical values and rejection region
+-   If the absolute value of the test statistic is greater than the critical value, we reject $H_0$
+    -   In this case the test statistic is in the **rejection region**.
+    -   Otherwise it's in the non-rejection region.
 
-* If the absolute value of the test statistic is greater than the critical value, we reject $H_0$
-    * In this case the test statistic is in the __rejection region__.
-    * Otherwise it's in the nonrejection region.
-
-::: columns
+::::: columns
 ::: {.column width="60%"}
-
 ![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](../img_slides/RejectionRegion.png){fig-align="center"}
-
 :::
+
 ::: {.column width="40%"}
-
-* What do rejection regions look like for 1-sided tests?
-
+-   What do rejection regions look like for 1-sided tests?
 :::
+:::::
+
+# Learning Objectives
+
+1.  Understand the four components in equilibrium in a hypothesis test.
+2.  Define the significance level, critical value, and rejection region.
+
+::: lob
+3.  Define power and understand its role in a hypothesis test.
 :::
 
-
-# LOB
+4.  Understand how to calculate power for two independent samples. 
+5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
 ## Let's start with some important definitions in words
 
-- **Type I error** ($\alpha$): Probability of rejecting the null hypothesis given that the null is true
-- **Type II error** ($\beta$): Probability of failing to reject the null hypothesis given that the null hypothesis is false
-- **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
-- **Specificity** ($1-\alpha$): Probability of failing to reject the null hypothesis given that the null is true (correct)
+-   **Type I error** ($\alpha$): Probability of rejecting the null hypothesis given that the null is true
+-   **Type II error** ($\beta$): Probability of failing to reject the null hypothesis given that the null hypothesis is false
+-   **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
+-   **Specificity** ($1-\alpha$): Probability of failing to reject the null hypothesis given that the null is true (correct)
 
  
 
 ![](../img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
 
-
-
 ## What does that look like with our two populations?
 
-::: columns
+:::::::: columns
 ::: {.column width="45%"}
-
 ![](../img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
 
-
-* [$\alpha$]{style="color:violet"} = probability of making a [__Type I error__]{style="color:violet"}
-    * This is the significance level (usually 0.05)
-    * Set before study starts
-* [$\beta$]{style="color:#5DCA3B"} = probability of making a [__Type II error__]{style="color:#5DCA3B"}
-* Ideally we want
-    * small Type I & II errors and
-    * big power
-
+-   [$\alpha$]{style="color:violet"} = probability of making a [**Type I error**]{style="color:violet"}
+    -   This is the significance level (usually 0.05)
+    -   Set before study starts
+-   [$\beta$]{style="color:darkorange"} = probability of making a [**Type II error**]{style="color:darkorange"}
+-   Ideally we want
+    -   small Type I & II errors and
+    -   big power
 :::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="50%"}
-
+::::: {.column width="50%"}
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
@@ -425,39 +443,35 @@ two_sample_plot = ggplot(data.frame(x = c(238, 257)), aes(x)) +
 two_sample_plot
 ```
 
-::: {style="font-size: 90%;"}
-
+:::: {style="font-size: 90%;"}
 ::: lob
 **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
 :::
 
-- Power is the correct region that is usually **in line with our study design**: studies are often seeing if there is a distinction between two populations
-
-:::
-
-:::
-:::
+-   Power is the correct region that is usually **in line with our study design**: studies are often seeing if there is a distinction between two populations
+::::
+:::::
+::::::::
 
 ## Power
 
-::: columns
+::::: columns
 ::: column
-- **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
+-   **Power** (or sensitivity) ($1 - \beta$): Probability of rejecting the null hypothesis given that the null is false (correct)
 
  
 
-* Power is also called the
-    * true positive rate,
-    * probability of detection, or 
-    * the _sensitivity_ of a test
+-   Power is also called the
+    -   true positive rate,
+    -   probability of detection, or
+    -   the *sensitivity* of a test
 
  
 
-- Typically, we aim for 80% or 90% power
+-   Typically, we aim for 80% or 90% power
 :::
 
 ::: {.column width="50%"}
-
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
@@ -465,38 +479,108 @@ two_sample_plot
 two_sample_plot
 ```
 :::
-:::
+:::::
 
-## If you want to keep revisiting these concepts!
-        
+## Let's demonstrate the relationship between error and power
+
 From the applet at <https://rpsychologist.com/d3/NHST/>
 
-::: columns
+Let's look at the following scenarios:
+
+::::: columns
+::: column
+1.  Solve for power: decreasing type 1 error ($\alpha$)
+
+2.  Solve for power: increasing type 1 error ($\alpha$)
+
+ 
+
+3.  Solve for power: decrease sample size
+
+4.  Solve for power: increase sample size
+
+ 
+
+5.  Solve for power: increase difference of means
+
+6.  Solve for power: decrease difference of means
+:::
+
+::: column
+ 
+
+-   Takeaway: cannot minimize both type 1 and 2 error
+
+ 
+
+ 
+
+-   Takeaway: increasing sample size increases power
+
+ 
+
+ 
+
+-   Takeaway: increasing difference in means increases power
+:::
+:::::
+
+## If you want to keep revisiting these concepts!
+
+From the applet at <https://rpsychologist.com/d3/NHST/>
+
+::::: columns
 ::: {.column width="50%"}
-
 ![](../img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
-
 :::
 
 ::: {.column width="50%"}
-
 ![](../img_slides/power_applet_screenshot_alpha01.png){fig-align="center"}
 :::
+:::::
+
+-   Cohen's d is just a stanardized value to represent the difference in means: $$d = \dfrac{\overline{x}_1 - \overline{x}_2}{s}$$
+
+# Learning Objectives
+
+1.  Understand the four components in equilibrium in a hypothesis test.
+2.  Define the significance level, critical value, and rejection region.
+3.  Define power and understand its role in a hypothesis test.
+
+::: lob
+4.  Understand how to calculate power for two independent samples. 
 :::
 
-- Cohen's d is just a stanardized value to represent the difference in means: $$d = \dfrac{\overline{x}_1 - \overline{x}_2}{s}$$
+5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
-# LOB
+## Calculating power or sample size
 
-## Example calculating power
+-   Typically, before we set up a research study, we try to find the needed sample size to achieve 80% or 90% power
 
-* Suppose the mean of the null population is 0 ( $H_0: \mu=0$ ) with standard error 1
-* Find the power of a 2-sided test if the actual $\mu=3$, assuming the SE doesn't change.
+ 
 
+-   If we have already have data, then we typically calculate the power based on the sample we have
 
-::: columns
+## Example calculating power (1/3)
+
+Let's say we have:
+
+-   a null population with a normal distribution, centered at 0 with a standard deviation of 1 ($X_0 \sim Norm(0,1)$)
+-   an alternative population, centered at 3 with a standard deviation of 1 ($X_A \sim Norm(3,1)$)
+
+Find the power of a 2-sided test if the actual mean is $3$ and our significance level is 0.05.
+
+## Example calculating power (2/3)
+
+Let's say we have:
+
+-   a null population with a normal distribution, centered at 0 with a standard error of 1 ($X_0 \sim Norm(0,1)$)
+-   an alternative population, centered at 3 with a standard error of 1 ($X_A \sim Norm(3,1)$)
+
+Find the power of a 2-sided test if the actual mean is $3$ and our significance level is 0.05.
+
+::::: columns
 ::: {.column width="50%"}
-
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
@@ -525,19 +609,18 @@ ggplot(NULL, aes(c(-3,7))) +
 :::
 
 ::: {.column width="50%"}
-* Power = $P$ (Reject $H_0$ when alternative pop is true)
-  - Correctly reject null
-* When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
-* We need to look at the rejection region under the null, then calculate the probability that we are in those regions given we are actually in the alternative population
-* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$
+-   Power = $P$ (Reject $H_0$ when alternative pop is true)
+    -   Correctly reject null
+-   When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96 (critical value is 1.96 under the null distribution)
+-   Then we need to calculate the probability that we are in the rejection regions given we are **actually in the alternative population**
+-   Thus under the alternative population, we need to calculate $P(X_A \le -1.96) + P(X_A \ge 1.96)$
 :::
-:::
+:::::
 
-## Example calculating power: using `pnorm()`
+## Example calculating power (3/3)
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-
 ```{r}
 #| fig.width: 10
 #| fig.height: 6
@@ -566,8 +649,9 @@ ggplot(NULL, aes(c(-3,7))) +
 :::
 
 ::: {.column width="50%"}
+-   Thus under the alternative population, we need to calculate $P(X_A \le -1.96) + P(X_A \ge 1.96)$
 
-* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$:
+-   Under the alternative population we have $X_A \sim Norm(3,1)$
 
 ```{r}
 # left tail + right tail:
@@ -577,71 +661,105 @@ pnorm(-1.96, mean=3, sd=1,
         lower.tail=FALSE)
 ```
 
+Answer: The power is 85%
 :::
-
-:::
+:::::
 
  
 
-- The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
-- Note that this power calculation specified the value of the SE instead of the standard deviation and sample size $n$ individually.
+-   The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
+-   Note that this power calculation specified the value of the SE instead of the standard deviation and sample size $n$ individually.
 
-# LOB
+# Learning Objectives
 
-## __Sample size__ calculation for testing one mean
+1.  Understand the four components in equilibrium in a hypothesis test.
+2.  Define the significance level, critical value, and rejection region.
+3.  Define power and understand its role in a hypothesis test.
+4.  Understand how to calculate power for two independent samples. 
 
-::: {style="font-size: 90%;"}
-
-* Recall in our body temperature example that $\mu_0=98.6$ °F and $\bar{x}= 98.25$ °F. 
-    * The _p_-value from the hypothesis test was highly significant (very small).
-    * What would the sample size $n$ need to be for 80% power?
-
-* [__Calculate $n$__]{style="color:green"}, 
-    * given $\alpha$, power ( $1-\beta$ ), "true" alternative mean $\mu$, and null $\mu_0$, 
-    * _assuming_ the test statistic is normal (instead of t-distribution):
-
-::: columns
-::: {.column width="30%"}
-
-$$n=\left(s\frac{z_{1-\alpha/2}+z_{1-\beta}}{\mu-\mu_0}\right)^2$$
+::: lob
+5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 :::
 
-::: {.column width="70%"}
+## R package `pwr` for power analyses[^2]
+
+-   Use `pwr.t.test` for both one- and two-sample t-tests
+-   Specify all parameters *except for* the one being solved for
+
+[^2]: R package `pwr` for basic statistical tests: <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
+
 ```{r}
-mu <- 98.25
-mu0 <- 98.6
-sd <- 0.73
-alpha <- 0.05
-beta <- 0.20
-(n <- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2)
-ceiling(n)  # always round UP to the next highest integer 
+#| eval: false
+
+pwr.t.test(n = NULL, 
+           d = NULL, 
+           sig.level = 0.05, 
+           power = NULL,
+           type = c("two.sample", "one.sample", "paired"),
+           alternative = c("two.sided", "less", "greater"))
 ```
-:::
+
+- Leave out:
+
+  - `n`: returns sample size
+  - `d`: returns Cohen's d/effect size (next slide)
+  - `sig.level`: get significance level (not typical)
+  - `power`: returns power
+
+## What is Cohen's $d$?
+
+-   `d` is **Cohen's d** effect size
+      - Just a standardized way to measure the distance between the null mean and the alternative mean
+- Examples of values: small = 0.2, medium = 0.5, large = 0.8
+
+:::::: columns
+::: {.column width="33%"}
+One-sample test (or paired t-test):
 :::
 
-_We would only need a sample size of 35 for 80% power!_  
-However, this is an under-estimate since we used the normal instead of t-distribution.
+::: {.column width="2%"}
 :::
 
-::: {style="font-size: 70%;"}
-See <http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality>.
+::: {.column width="20%"}
+$$d = \frac{\mu-\mu_0}{s}$$
+:::
+::: {.column width="45%"}
+:::
+::::::
+
+:::::: columns
+::: {.column width="33%"}
+Two-sample test (independent):
 :::
 
+::: {.column width="2%"}
+:::
 
-## __Power__ calculation for testing one mean
+::: {.column width="20%"}
+$$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
+:::
+::: {.column width="45%"}
+:::
+::::::
+
+-   $\overline{x}_1 - \overline{x}_2$ is the difference in means between the two groups that one would want to be able to detect as being significant,
+-   $s_{pooled}$ is the pooled SD between the two groups - often assume have same sd in each group
+
+
+## **Power** calculation for testing one mean
 
 ::: {style="font-size: 90%;"}
 Conversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.
 
-* [__Calculate power__]{style="color:green"}, 
-    * given $\alpha$, $n$, "true" alternative mean $\mu$, and null $\mu_0$, 
-    * _assuming_ the test statistic is normal (instead of t-distribution)
+-   [**Calculate power**]{style="color:green"},
+    -   given $\alpha$, $n$, "true" alternative mean $\mu$, and null $\mu_0$,
+    -   *assuming* the test statistic is normal (instead of t-distribution)
 
 $$1-\beta=
-		P\left(Z \leq z-z_{1-\alpha/2}\right)+P\left(Z \leq -z-z_{1-\alpha/2}\right)
-		\quad ,\quad \text{where } z=\frac{\mu-\mu_0}{s/\sqrt{n}}$$
+        P\left(Z \leq z-z_{1-\alpha/2}\right)+P\left(Z \leq -z-z_{1-\alpha/2}\right)
+        \quad ,\quad \text{where } z=\frac{\mu-\mu_0}{s/\sqrt{n}}$$
 
-$\Phi$ is the probability for a standard normal distribution 
+$\Phi$ is the probability for a standard normal distribution
 
 ```{r}
 mu <- 98.25; mu0 <- 98.6; sd <- 0.73; alpha <- 0.05; n <- 130
@@ -650,77 +768,24 @@ mu <- 98.25; mu0 <- 98.6; sd <- 0.73; alpha <- 0.05; n <- 130
 (Power <- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2)))
 ```
 
-If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting $H_0$ when the sample size is 130.  
-
+If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting $H_0$ when the sample size is 130.
 :::
 
+## **Sample size** calculation for testing one mean
 
-## R package `pwr` for power analyses
+-   Recall in our body temperature example that $\mu_0=98.6$ °F and $\overline{x}= 98.25$ °F.
+    -   The *p*-value from the hypothesis test was highly significant (very small).
+    -   What would the sample size $n$ need to be for 80% power?
+-   **Calculate** $n$
+    -   given $\alpha$, power ( $1-\beta$ ), "true" alternative mean $\mu$, and null $\mu_0$
+    - Calculate `d`: $d = \frac{\mu-\mu_0}{s}$
 
-::: {style="font-size: 90%;"}
+## `pwr`: **sample size** for one mean test
 
-* Use `pwr.t.test` for both one- and two-sample t-tests.  
-* Specify all parameters _except for_ the one being solved for.
+Specify all parameters *except for* the sample size:
 
-`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
-`type = c("two.sample", "one.sample", "paired"),`  
-`alternative = c("two.sided", "less", "greater"))`
-
-`d` is __Cohen's d__ effect size: small = 0.2, medium = 0.5, large = 0.8
-
-::: columns
-::: {.column width="49%"}
-One-sample test (or paired t-test):
-:::
-::: {.column width="2%"}
-:::
-::: {.column width="49%"}
-
-$$d = \frac{\mu-\mu_0}{s}$$ 
-
-:::
-:::
-
-::: columns
-::: {.column width="49%"}
-Two-sample test (independent):
-:::
-::: {.column width="2%"}
-:::
-::: {.column width="49%"}
-
-$$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
-
-:::
-:::
-
-:::
-
-::: {style="font-size: 80%;"}
-* $\bar{x}_1 - \bar{x}_2$ is the difference in means between the two groups that one would want to be able to detect as being significant,
-* $s_{pooled}$ is the pooled SD between the two groups - often assume have same sd in each group
-
-
-* R package `pwr` for basic statistical tests
-    * <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
-:::
-
-
-## `pwr`: __sample size__ for one mean test 
-
-::: {style="font-size: 80%;"}
-`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
-`type = c("two.sample", "one.sample", "paired"),` 
-`alternative = c("two.sided", "less", "greater"))`
-:::
-
-* `d` is __Cohen's d__ effect size: $d = \frac{\mu-\mu_0}{s}$ 
-
-Specify all parameters _except for_ the sample size:
-
-::: columns
+::::: columns
 ::: {.column width="40%"}
-
 ```{r}
 library(pwr)
 t.n <- pwr.t.test(
@@ -731,7 +796,6 @@ t.n <- pwr.t.test(
 
 t.n
 ```
-
 :::
 
 ::: {.column width="60%"}
@@ -740,25 +804,17 @@ t.n
 #| fig.height: 5
 plot(t.n)
 ```
+
+We **need 37 individuals** to detect this difference with 80% power.
 :::
-:::
+:::::
 
+## `pwr`: **power** for one mean test
 
-## `pwr`: __power__ for one mean test 
+Specify all parameters *except for* the power:
 
-::: {style="font-size: 80%;"}
-`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
-`type = c("two.sample", "one.sample", "paired"),` 
-`alternative = c("two.sided", "less", "greater"))`
-:::
-
-* `d` is __Cohen's d__ effect size: $d = \frac{\mu-\mu_0}{s}$ 
-
-Specify all parameters _except for_ the power:
-
-::: columns
+::::: columns
 ::: {.column width="40%"}
-
 ```{r}
 t.power <- pwr.t.test(
   d = (98.6-98.25)/0.73, 
@@ -769,7 +825,6 @@ t.power <- pwr.t.test(
 
 t.power
 ```
-
 :::
 
 ::: {.column width="60%"}
@@ -778,164 +833,100 @@ t.power
 #| fig.height: 6
 plot(t.power)
 ```
+
+We have **99.97% power** to detect this difference with 130 individuals.
 :::
-:::
- 
+:::::
 
-## `pwr`: Two-sample t-test: __sample size__
+## `pwr`: Two-sample t-test: **sample size**
 
-::: {style="font-size: 70%;"}
-`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
-`type = c("two.sample", "one.sample", "paired"),` 
-`alternative = c("two.sided", "less", "greater"))`
-:::
+**Example**: Let's revisit our caffeine taps study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both group samples is 2.6.
 
-::: {style="font-size: 85%;"}
+Specify all parameters *except for* the sample size:
 
-* `d` is __Cohen's d__ effect size: $d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$
-
-__Example__: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3. 
-
-Specify all parameters _except for_ the sample size:
-:::
-
-::: {style="font-size: 90%;"}
-
-::: columns
-::: {.column width="40%"}
-
+::::: columns
+::: {.column width="45%"}
 ```{r}
 t2.n <- pwr.t.test(
-  d = 2/2.3, 
+  d = 2/2.6, 
   sig.level = 0.05, 
   power = 0.80, 
   type = "two.sample") 
 
 t2.n
 ```
-
 :::
 
-::: {.column width="60%"}
+::: {.column width="55%"}
 ```{r}
 #| fig.width: 10
 #| fig.height: 5
 plot(t2.n)
 ```
+
+We **need 28 individuals** to detect this difference with 80% power.
 :::
-:::
+:::::
+::::::
 
-:::
+## `pwr`: Two-sample t-test: **power**
 
-## `pwr`: Two-sample t-test: __power__
+**Example**: Let's revisit our caffeine taps study. Investigators want to know what power they have to detect a 2 point difference between the two groups. The two groups are both size 35 (like in our previous example). Assume the SD in both group samples is 2.6.
 
-::: {style="font-size: 70%;"}
-`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
-`type = c("two.sample", "one.sample", "paired"),` 
-`alternative = c("two.sided", "less", "greater"))`
-:::
+Specify all parameters *except for* the power:
 
-::: {style="font-size: 85%;"}
-
-* `d` is __Cohen's d__ effect size: $d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$
-
-__Example__: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3. 
-
-Specify all parameters _except for_ the power:
-:::
-
-::: {style="font-size: 90%;"}
-
-::: columns
-::: {.column width="40%"}
-
+::::: columns
+::: {.column width="45%"}
 ```{r}
 t2.power <- pwr.t.test(
   d = 2/2.3, 
   sig.level = 0.05, 
-  # power = 0.80, 
-  n = 22,
+  n = 35,
   type = "two.sample") 
 
 t2.power
 ```
-
 :::
 
-::: {.column width="60%"}
+::: {.column width="55%"}
 ```{r}
 #| fig.width: 10
 #| fig.height: 5
 plot(t2.power)
 ```
+
+We have **94.8% power** to detect this difference with 35 individuals in each group.
 :::
-:::
+:::::
 
-:::
+# Resources for power and sample size calculations
 
-## What information do we need for a power (or sample size) calculation?
+## More software for power and sample size calculations: PASS
 
-::: columns
-::: {.column width="40%"}
-There are 4 pieces of information:
-
-1. Level of significance $\alpha$
-    * Usually fixed to 0.05
-1. Power
-    * Ideally at least 0.80
-1. Sample size
-1. Effect size (expected change)
-
-Given any 3 pieces of information, we can solve for the 4th.
-:::
-
-::: {.column width="60%"}
-```{r}
-pwr.t.test(
-  d = (98.6-98.25)/0.73,
-  sig.level = 0.05, 
-  # power = 0.80, 
-  n=130,
-  type = "one.sample")
-```
-:::
-:::
-
-
-## More software for power and sample size calculations: PASS 
-
-* PASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.
-    * Even if you don't have access to PASS, their [documentation](https://www.ncss.com/software/pass/pass-documentation/) is very good and free online.
-    * Documentation includes formulas and references.
-    * PASS documentation for powering [means](https://www.ncss.com/software/pass/pass-documentation/#Means)
-        * One mean, paired means, two independent means
-
-* One-sample t-test documentation:
-<https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf>
-
+-   PASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.
+    -   Even if you don't have access to PASS, their [documentation](https://www.ncss.com/software/pass/pass-documentation/) is very good and free online.
+    -   Documentation includes formulas and references.
+    -   PASS documentation for powering [means](https://www.ncss.com/software/pass/pass-documentation/#Means)
+        -   One mean, paired means, two independent means
+-   One-sample t-test documentation: <https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf>
 
 ## OCTRI-BERD power & sample size presentations
 
 ::: {style="font-size: 90%;"}
-
-* __Power and Sample Size 101__
-  * Presented by Meike Niederhausen; April 13, 2023
-  * Slides: <http://bit.ly/PSS101-BERD-April2023>
-  * [Recording](https://echo360.org/media/10f37fa6-7196-4525-bd64-6b9fcca60ac0/public)
-
-* __Power and Sample Size for Clinical Trials: An Introduction__
-  * Presented by Yiyi Chen; Feb 18, 2021
-  * Slides: http://bit.ly/PSS-ClinicalTrials
-  * [Recording](https://echo360.org/lesson/9a21deb8-258d-4305-bdc9-7effdc35e719/classroom)
-
-* __Planning a Study with Power and Sample Size Considerations in Mind__
-  * Presented by David Yanez; May 29, 2019
-  * [Slides](https://www.ohsu.edu/sites/default/files/2019-12/PowerAndSampleSize_29MAY2019.pdf)
-  * [Recording](https://echo360.org/lesson/44c9a3e9-b8ec-4042-84d8-4758cc779a1f/classroom)
-
-* __Power and Sample Size Simulations in R__
-  * Presented by Robin Baudier; Sept 21, 2023
-  * [Slides](https://www.slideshare.net/ssuser84c78e/octri-pss-simulations-in-r-seminarpdf)
-  * [Recording](https://echo360.org/media/12e6e603-13f9-4b50-bf76-787185acdfce/public)
-
+-   **Power and Sample Size 101**
+    -   Presented by Meike Niederhausen; April 13, 2023
+    -   Slides: <http://bit.ly/PSS101-BERD-April2023>
+    -   [Recording](https://echo360.org/media/10f37fa6-7196-4525-bd64-6b9fcca60ac0/public)
+-   **Power and Sample Size for Clinical Trials: An Introduction**
+    -   Presented by Yiyi Chen; Feb 18, 2021
+    -   Slides: http://bit.ly/PSS-ClinicalTrials
+    -   [Recording](https://echo360.org/lesson/9a21deb8-258d-4305-bdc9-7effdc35e719/classroom)
+-   **Planning a Study with Power and Sample Size Considerations in Mind**
+    -   Presented by David Yanez; May 29, 2019
+    -   [Slides](https://www.ohsu.edu/sites/default/files/2019-12/PowerAndSampleSize_29MAY2019.pdf)
+    -   [Recording](https://echo360.org/lesson/44c9a3e9-b8ec-4042-84d8-4758cc779a1f/classroom)
+-   **Power and Sample Size Simulations in R**
+    -   Presented by Robin Baudier; Sept 21, 2023
+    -   [Slides](https://www.slideshare.net/ssuser84c78e/octri-pss-simulations-in-r-seminarpdf)
+    -   [Recording](https://echo360.org/media/12e6e603-13f9-4b50-bf76-787185acdfce/public)
 :::
