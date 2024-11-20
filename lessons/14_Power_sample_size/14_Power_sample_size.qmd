@@ -54,7 +54,7 @@ set.seed(456)
 1.  Understand the four components in equilibrium in a hypothesis test.
 2.  Define the significance level, critical value, and rejection region.
 3.  Define power and understand its role in a hypothesis test.
-4.  Understand how to calculate power for two independent samples. 
+4.  Understand how to calculate power for two independent samples.
 5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
 ## Where are we?
@@ -75,7 +75,7 @@ Let's watch this youtube video to jog our memory (remind us of what we learned):
 
 2.  Define the significance level, critical value, and rejection region.
 3.  Define power and understand its role in a hypothesis test.
-4.  Understand how to calculate power for two independent samples. 
+4.  Understand how to calculate power for two independent samples.
 5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
 ## From Lesson 13: Does caffeine increase finger taps/min (on average)?
@@ -280,7 +280,7 @@ two_sample_plot
 :::
 
 3.  Define power and understand its role in a hypothesis test.
-4.  Understand how to calculate power for two independent samples. 
+4.  Understand how to calculate power for two independent samples.
 5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
 ## Significance levels and critical values
@@ -350,11 +350,11 @@ ggplot(NULL, aes(c(-3,3))) +
     -   Otherwise it's in the non-rejection region.
 
 ::::: columns
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](../img_slides/RejectionRegion.png){fig-align="center"}
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 -   What do rejection regions look like for 1-sided tests?
 :::
 :::::
@@ -368,7 +368,7 @@ ggplot(NULL, aes(c(-3,3))) +
 3.  Define power and understand its role in a hypothesis test.
 :::
 
-4.  Understand how to calculate power for two independent samples. 
+4.  Understand how to calculate power for two independent samples.
 5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
 
 ## Let's start with some important definitions in words
@@ -548,7 +548,7 @@ From the applet at <https://rpsychologist.com/d3/NHST/>
 3.  Define power and understand its role in a hypothesis test.
 
 ::: lob
-4.  Understand how to calculate power for two independent samples. 
+4.  Understand how to calculate power for two independent samples.
 :::
 
 5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
@@ -675,7 +675,7 @@ Answer: The power is 85%
 1.  Understand the four components in equilibrium in a hypothesis test.
 2.  Define the significance level, critical value, and rejection region.
 3.  Define power and understand its role in a hypothesis test.
-4.  Understand how to calculate power for two independent samples. 
+4.  Understand how to calculate power for two independent samples.
 
 ::: lob
 5.  Using R, calculate power and sample size for a single mean t-test and two independent mean t-test.
@@ -683,10 +683,10 @@ Answer: The power is 85%
 
 ## R package `pwr` for power analyses[^2]
 
+[^2]: R package `pwr` for basic statistical tests: <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
+
 -   Use `pwr.t.test` for both one- and two-sample t-tests
 -   Specify all parameters *except for* the one being solved for
-
-[^2]: R package `pwr` for basic statistical tests: <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
 
 ```{r}
 #| eval: false
@@ -699,20 +699,20 @@ pwr.t.test(n = NULL,
            alternative = c("two.sided", "less", "greater"))
 ```
 
-- Leave out:
+-   Leave out:
 
-  - `n`: returns sample size
-  - `d`: returns Cohen's d/effect size (next slide)
-  - `sig.level`: get significance level (not typical)
-  - `power`: returns power
+    -   `n`: returns sample size
+    -   `d`: returns Cohen's d/effect size (next slide)
+    -   `sig.level`: get significance level (not typical)
+    -   `power`: returns power
 
 ## What is Cohen's $d$?
 
 -   `d` is **Cohen's d** effect size
-      - Just a standardized way to measure the distance between the null mean and the alternative mean
-- Examples of values: small = 0.2, medium = 0.5, large = 0.8
+    -   Just a standardized way to measure the distance between the null mean and the alternative mean
+-   Examples of values: small = 0.2, medium = 0.5, large = 0.8
 
-:::::: columns
+::::::: columns
 ::: {.column width="33%"}
 One-sample test (or paired t-test):
 :::
@@ -723,11 +723,12 @@ One-sample test (or paired t-test):
 ::: {.column width="20%"}
 $$d = \frac{\mu-\mu_0}{s}$$
 :::
+
 ::: {.column width="45%"}
 :::
-::::::
+:::::::
 
-:::::: columns
+::::::: columns
 ::: {.column width="33%"}
 Two-sample test (independent):
 :::
@@ -738,13 +739,13 @@ Two-sample test (independent):
 ::: {.column width="20%"}
 $$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
 :::
+
 ::: {.column width="45%"}
 :::
-::::::
+:::::::
 
 -   $\overline{x}_1 - \overline{x}_2$ is the difference in means between the two groups that one would want to be able to detect as being significant,
 -   $s_{pooled}$ is the pooled SD between the two groups - often assume have same sd in each group
-
 
 ## **Power** calculation for testing one mean
 
@@ -778,7 +779,7 @@ If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of corre
     -   What would the sample size $n$ need to be for 80% power?
 -   **Calculate** $n$
     -   given $\alpha$, power ( $1-\beta$ ), "true" alternative mean $\mu$, and null $\mu_0$
-    - Calculate `d`: $d = \frac{\mu-\mu_0}{s}$
+    -   Calculate `d`: $d = \frac{\mu-\mu_0}{s}$
 
 ## `pwr`: **sample size** for one mean test
 
@@ -867,6 +868,7 @@ plot(t2.n)
 We **need 28 individuals** to detect this difference with 80% power.
 :::
 :::::
+
 ::::::
 
 ## `pwr`: Two-sample t-test: **power**
