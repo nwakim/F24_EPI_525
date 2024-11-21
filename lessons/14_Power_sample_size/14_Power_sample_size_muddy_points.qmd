@@ -12,3 +12,193 @@ format:
 editor_options: 
   chunk_output_type: console
 ---
+
+## Do critical values dictate the rejection region? What helps to specify rejection region?
+
+I would say the significance level usually dictates the critical value and the rejection region.
+
+We usually set a significance level like 0.05, then we calculate the appropriate critical value that corresponds to the significance level. The critical value will determine the rejection region, but ultimately decided by the significance level. 
+
+For example, let's say I have a t-distribution with degrees of freedom equal to 49. 
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+df1 = 49
+
+t_dist_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dt, 
+                args = list(df = df1), 
+                size = 1.5) +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "t-values")
+t_dist_plot
+```
+
+If I decide I have a significance level of 0.1 with a two-sided test, that means I need to divide that $\alpha$ between the two tails of my t-distribution. Thus, the area for each tail will be $0.1/2 = 0.05$
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+df1 = 49
+
+t_dist_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) +
+  geom_area(stat = "function", 
+            fun = dt, args = list(df=df1),
+            fill = "violet", alpha =0.9, 
+            xlim = c(-4, qt(df=49, p=0.05))) +
+    geom_area(stat = "function", 
+            fun = dt, args = list(df=df1),
+            fill = "violet", alpha =0.9, 
+            xlim = c(qt(df=49, p=0.95), 4)) +
+  stat_function(fun = dt, 
+                args = list(df = df1), 
+                size = 1.5) +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "t-values")
+t_dist_plot
+```
+
+Recall, that the pink areas correspond to a probability that we get some value or smaller (for the left tail) and some value or greater (for the right tail). The significance level will determine what that value is. We call that value the "critical value." We can think of this mathematically as $P(T \leq -t^*) = \dfrac{\alpha}{2}$ (left tail) or $P(T \geq t^*) = \dfrac{\alpha}{2}$ (right tail). Both will give the same critical value. 
+
+We can also solve for $t^*$. In R, we solve for $t^*$ by using the `qt()` function for the t-distribution. For $\alpha=0.1$, a 2-sided test, and a t-distribution with df=49:
+
+```{r}
+# For the left tail:
+t_star_neg = qt(p = 0.05, df = 49)
+
+# For the right tail:
+t_star_pos = qt(p = 0.95, df = 49)
+t_star_pos = qt(p = 0.05, df = 49, lower.tail = F)
+t_star_pos
+```
+
+So our critical value is `r round(t_star_pos, 3)` for a t-distribution with 49 degrees of freedom, a two-sided test, and a significance level of 0.1.
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+df1 = 49
+
+t_dist_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) +
+  geom_area(stat = "function", 
+            fun = dt, args = list(df=df1),
+            fill = "violet", alpha =0.9, 
+            xlim = c(-4, qt(df=49, p=0.05))) +
+    geom_area(stat = "function", 
+            fun = dt, args = list(df=df1),
+            fill = "violet", alpha =0.9, 
+            xlim = c(qt(df=49, p=0.95), 4)) +
+  stat_function(fun = dt, 
+                args = list(df = df1), 
+                size = 1.5) +
+  geom_vline(xintercept = qt(df=49, p=0.05), 
+             size = 1.5, 
+             color = "#5BAFF8") +
+  geom_vline(xintercept = qt(df=49, p=0.95), 
+             size = 1.5, 
+             color = "#5BAFF8") +
+  annotate("text", x = qt(df=49, p=0.95) + 0.1, 
+           y = .2, label = expression(paste("t* = 1.677")), 
+           hjust=0, size=5, color = "#5BAFF8") +
+  annotate("text", x = qt(df=49, p=0.05) - 1.6, 
+           y = .2, label = expression(paste("-t* = -1.677")), 
+           hjust=0, size=5, color = "#5BAFF8") +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "t-values")
+t_dist_plot
+```
+
+The rejection region is the range of t-values that are more extreme values than our critical value. I say "more extreme" because in the left tail, it includes values less than the critical value, $t^*$, and in the right tail, it includes values greater than the critical value. 
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+#| fig-align: center
+#| warning: false
+#| message: false
+
+library(ggplot2)
+
+df1 = 49
+
+t_dist_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) +
+  geom_area(stat = "function", 
+            fun = dt, args = list(df=df1),
+            fill = "violet", alpha =0.9, 
+            xlim = c(-4, qt(df=49, p=0.05))) +
+    geom_area(stat = "function", 
+            fun = dt, args = list(df=df1),
+            fill = "violet", alpha =0.9, 
+            xlim = c(qt(df=49, p=0.95), 4)) +
+  stat_function(fun = dt, 
+                args = list(df = df1), 
+                size = 1.5) +
+  geom_vline(xintercept = qt(df=49, p=0.05), 
+             size = 1.5, 
+             color = "#5BAFF8") +
+  geom_vline(xintercept = qt(df=49, p=0.95), 
+             size = 1.5, 
+             color = "#5BAFF8") +
+  annotate("text", x = qt(df=49, p=0.95) + 0.1, 
+           y = .2, label = expression(paste("t* = 1.677")), 
+           hjust=0, size=5, color = "#5BAFF8") +
+  annotate("text", x = qt(df=49, p=0.05) - 1.6, 
+           y = .2, label = expression(paste("-t* = -1.677")), 
+           hjust=0, size=5, color = "#5BAFF8") +
+  geom_segment(aes(x = -4, xend = qt(df=49, p=0.05), y=0, yend=0), 
+               size = 1.5, 
+               color = "#E75B5C") +
+  geom_segment(aes(x = qt(df=49, p=0.95), xend = 4, y=0, yend=0), 
+               size = 1.5, 
+               color = "#E75B5C") +
+  theme_classic() +
+  theme(text = element_text(size = 15), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank()) +
+  labs(x = "t-values")
+t_dist_plot
+```
+
+So a t-value of 2 is in the rejection region because 2 is greater than 1.677. 
+
+## Some extra videos on power and power analysis
+
+Here are two videos from StatQuest that I like:
+- [Statistical Power](https://www.youtube.com/watch?v=Rsc5znwR5FA&t=199s&ab_channel=StatQuestwithJoshStarmer)
+- [Power Analysis](https://www.youtube.com/watch?v=VX_M3tIyiYk&t=45s&ab_channel=StatQuestwithJoshStarmer)
