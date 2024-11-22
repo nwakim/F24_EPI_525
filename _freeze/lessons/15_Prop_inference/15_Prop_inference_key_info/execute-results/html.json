@@ -1,0 +1,16 @@
+{
+  "hash": "616ed16718f37697eda33e18d07ab90a",
+  "result": {
+    "markdown": "---\ntitle: \"Key Info and Announcements\"\ndate: \"11/25/2024\"\ndate-modified: \"today\"\nformat: \n  html:\n    link-external-newwindow: true\neditor_options: \n  chunk_output_type: console\n---\n\n\n## Announcements\n\n-   Office hours today with me right after class: 2:50-3:15pm\n    -   I'm on a STEM panel at 3:20\n-   HW 3 presentations are graded!\n    -   I loved seeing all your personalities shine through the presentations\n    -   I saw some great connections between the 5% slowest and 90% slowest in part d\n        -   Great use of complements since the total probability is 1!\n    -   I was making sure that you hit certain explanations visually, verbally, or written\n        -   Visually: drawing a normal plot to show what area is our probability or what cutoff time corresponds to a percentile\n            -   For example, in part a, our goal was to find the percent of people in the men's group who finished in 4948 seconds or slower. I would include a figure like below with explanation \"The red line represents the time of 4948 seconds, and we are looking for the blue area, which represents the probability of finishing in 4948 seconds or slower.\"\n\n\n                ::: {.cell layout-align=\"center\"}\n                ::: {.cell-output-display}\n                ![](15_Prop_inference_key_info_files/figure-html/unnamed-chunk-1-1.png){fig-align='center' width=576}\n                :::\n                :::\n\n        -   Verbally: Saying a statement about the goal of the problem and the conclusion\n            -   For example, in part a, our goal was to find the percent of people in the men's group who finished in 4948 seconds or slower. I would say: \"We are calculating the probability that someone in the men's group finished in 4948 seconds or greater than that. Then we convert to percentage.\"\n        -   Written: writing out the math is also helpful!\n            -   For example, in part a, our goal was to find the percent of people in the men's group who finished in 4948 seconds or slower. I would write: $P(X > 4948) = ?$.\n            -   In part c and d, I would use math to show that we are looking for a value $k$ that completes the following statement $P(X > k ) = 0.10$ (for part d)\n-   I made quite a few changes to the homeworks\n    -   HW 10 is gone\n    -   HW 9 is optional\n    -   Instead of a HW assignment due over late November break\n        -   HW 8 will include material from Week 8 and 9 and be due 12/5\n-   HW 6 presentations\n    -   Meetings during 12/9-12/12\n    -   Videos due 12/10\n    -   Let me know if this interferes with any of your other classes' exams\n-   Anything else?\n\n## Key Dates\n\n-   Sunday (12/1): HW 7 solutions due\n",
+    "supporting": [
+      "15_Prop_inference_key_info_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

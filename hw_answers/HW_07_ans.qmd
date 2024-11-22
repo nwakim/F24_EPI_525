@@ -1,7 +1,6 @@
 ---
-title: "Homework 7 Answers"
-subtitle: "Assignment due 11/22/24"
-author: "Nicky Wakim"
+title: "Homework 7 Solutions"
+author: "Nicky Wakim, Meike Niederhausen, Mia Truman, Trisha Marsh"
 date-modified: "today"
 format: 
   html:
@@ -9,22 +8,16 @@ format:
     toc: true
     toc_float:
       collapsed: false
-    number-sections: true
-    number-depth: 3
-    theme: lumen
-    embed-resources: true
+    theme: sandstone
+    self-contained: true
     html-math-method: mathjax
+editor_options: 
+  chunk_output_type: console
 ---
 
 ::: callout-warning
 To see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!
 :::
-
-```{r}
-#| label: "setup"
-#| include: false
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ```{=html}
 <style>
@@ -32,50 +25,181 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 ```
 
-# Book exercises
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
 
+library(tidyverse)
+library(rstatix)
+library(broom)
+library(gt)
+library(janitor)
+library("oibiostat")
+library(pwr)
+library(here)
+```
+
+# Book exercises {.unnumbered}
 
 ## 5.16 Paired or not, Part II {.unnumbered}
 
+
+In each of the following scenarios, determine if the data are paired.
+
+
+### (a)  {.unnumbered}
+
+We would like to know if Intel's stock and Southwest Airlines' stock have similar rates of return. To find out, we take a random sample of 50 days, and record Intel's and Southwest's stock on those same days.
+
+::: blue
+Paired
+:::
+
+### (b)  {.unnumbered}
+
+We randomly sample 50 items from Target stores and note the price for each. Then we visit Walmart and collect the price for each of those same 50 items.
+
+::: blue
+Paired
+:::
+
+### (c)  {.unnumbered}
+
+A school board would like to determine whether there is a difference in average SAT scores for students at one high school versus another high school in the district. To check, they take a simple random sample of 100 students from each high school.
+
+::: blue
+Not paired
+:::
+
 ## 5.22 DDT exposure {.unnumbered}
 
-## 5.26 Egg volume {.unnumbered}
+Suppose that you are interested in determining whether exposure to the organochloride DDT, which has been used extensively as an insecticide for many years, is associated with breast cancer in women. As part of a study that investigated this issue, blood was drawn from a sample of women diagnosed with breast cancer over a six-year period and a sample of healthy control subjects matched to the cancer patients on age, menopausal status, and date of blood donation. Each woman's blood level of DDE (an important byproduct of DDT in the human body) was measured, and the difference in levels for each patient and her matched control calculated. A sample of 171 such differences has mean $\bar{d} = 2.7$ ng/mL and standard deviation $s_{d} = 15.9$ ng/mL. Differences were calculated as $DDE_{cancer} - DDE_{control}$.
+	
+### (a)  {.unnumbered}
 
-Maybe skip this one
+Test the null hypothesis that the mean blood levels of DDE are identical for women with breast cancer and for healthy control subjects. What do you conclude?
+
+::: blue
+```{r}
+#| echo: false
+
+xbar <- 2.7
+mu0 <- 0
+sd <- 15.9
+n <- 171
+t_stat <- (xbar - mu0)/(sd / sqrt(n))
+```
+
+$$t_{\bar{d}} = `r round(t_stat, 5)`$$
+
+$$p-value = 0.02770171$$
+
+Reject the null
+  
+:::  
+
+### (b)  {.unnumbered}
+
+Would you expect a 95% confidence interval for the true difference in population mean DDE levels to contain the value 0?	
+
+::: blue
+Does not contain 0
+:::
 
 ## 5.34 Placebos without deception {.unnumbered}
 
-## 4.22 Testing for food safety {.unnumbered}
+While placebo treatment can influence subjective symptoms, it is typically believed that patient response to placebo requires concealment or deception; in other words, a patient must believe that they are receiving an effective treatment in order to experience the benefits of being treated with an inert substance. Researchers recruited patients suffering from irritable bowel syndrome (IBS) to test whether placebo responses are neutralized by awareness that the treatment is a placebo.
 
-# Non-book exercises
+Patients were randomly assigned to either the treatment arm or control arm. Those in the treatment arm were given placebo pills, which were described as "something like sugar pills, which have been shown in rigorous clinical testing to produce significant mind-body self-healing processes". Those in the control arm did not receive treatment. At the end of the study, all participants answered a questionnaire called the IBS Global Improvement Scale (IBS-GIS) which measures whether IBS symptoms have improved; higher scores are indicative of more improvement.
 
-## Power and Sample size: Auto exhaust and lead exposure revisited
+At the end of the study, the 37 participants in the open placebo group had IBS-GIS scores with $\bar{x} = 5.0$ and $s = 1.5$, while the 43 participants in the no treatment group had IBS-GIS scores with $\bar{x} = 3.9$ and $s = 1.3$. 
 
-### Power
+Based on an analysis of the data, summarize whether the study demonstrates evidence that placebos administered without deception may be an effective treatment for IBS.
 
-In exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered? 
-
-
-
-### Sample size
-
-For the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)
-
-
-### Effect size
-
-Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
-
-# R work
-
-## Load appropriate packages here
+::: blue
 
 ```{r}
 #| echo: false
 
-library(tidyverse)
-library(here)
+n1 <- 37
+n2 <- 43
+xbar1 <- 5.0
+xbar2 <- 3.9
+diff_x <- xbar1 - xbar2
+sd1 <- 1.5
+sd2 <- 1.3
+mu <- 0
+
+se <- sqrt(sd1^2/n1 + sd2^2/n2)
+tstat <- (diff_x - mu)/se
 ```
+
+$$t_{\bar{d}} = `r round(tstat, 5)`$$
+
+$$p-value = `r round( 2*(1-pt(tstat, df=min(n1-1, n2-1))), 5)`$$
+
+Reject the null
+:::
+
+
+
+## 4.22 Testing for food safety {.unnumbered}
+
+A food safety inspector is called upon to investigate a restaurant with a few customer reports of poor sanitation practices. The food safety inspector uses a hypothesis testing framework to evaluate whether regulations are not being met. If he decides the restaurant is in gross violation, its license to serve food will be revoked.
+
+### (a)  {.unnumbered}
+
+Write the hypotheses in words.
+
+::: blue
+$H_0:$ The restaurant meets food safety and sanitation regulations.  
+$H_a:$ ???
+:::
+
+### (b)  {.unnumbered}
+
+What is a Type~1 Error in this context?
+
+::: blue
+
+:::
+
+### (c)  {.unnumbered}
+
+What is a Type~2 Error in this context?
+
+::: blue
+The food safety inspector concludes that the restaurant meets food safety and sanitation regulations and the restaurant stays open when the restaurant is actually not safe.
+:::
+
+### (d)  {.unnumbered}
+
+Which error is more problematic for the restaurant owner? Why?
+
+::: blue
+
+:::
+
+### (e)  {.unnumbered}
+
+Which error is more problematic for the diners? Why?
+
+::: blue
+
+:::
+
+### (f)  {.unnumbered}
+
+As a diner, would you prefer that the food safety inspector requires strong evidence or very strong evidence of health concerns before revoking a restaurant's license? Explain your reasoning.
+
+::: blue
+
+:::
+
+
+
+# Non-book exercises
 
 ## R1: Swim times
 
@@ -87,18 +211,153 @@ library(here)
 
 Calculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive? 
 
+::: blue
+```{r}
+#| echo: false
+data(swim)
 
-### Dot plot of differences
+swim_stats <- swim %>% 
+  select(velocity.diff) %>% 
+  get_summary_stats(type = "common")
+
+swim_stats %>% gt()
+```
+:::
+
+### Histogram of differences
 
 Create a histogram of the differences in swim times and comment on the distribution shape. 
 
+::: blue
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(swim, aes(x=velocity.diff)) +
+  geom_histogram()
+```
+
+:::
 
 ### Hypothesis test
 
-Run the appropriate statistical test in R as both a one-sample t-test and a paired t-test to verify the test statistic, p-value, and CI in the text. Use inline R code to pull these values from the test output when writing up your comparison of these values to the book's values. 
+Run the appropriate statistical test in R to verify the test statistic, p-value, and CI in the textbook. 
+
+::: blue
+```{r}
+#| echo: false
+
+ttest_swim <- t.test(x = swim$wet.suit.velocity, 
+                     y = swim$swim.suit.velocity, 
+                     paired = TRUE) 
+
+ttest_swim %>% 
+  tidy() %>%  # "tidy" output
+  gt()
+```
+
+:::
 
 ## R2: 2-sample independent t-test
 
+[This problem was adapted from Dr. Maria Tackett's Intro to Data Science homework.](https://sta199-fa21-003.netlify.app/hw/hw-04)
+
+The dataset is adapted from [Little et al. (2007)](https://biomedical-engineering-online.biomedcentral.com/articles/10.1186/1475-925X-6-23#Sec18), and contains voice measurements from individuals both with and without Parkinson’s Disease (PD), a progressive neurological disorder that affects the motor system. The aim of Little et al.’s study was to examine whether Parkinson's Disease could be diagnosed by examining the spectral (sound-wave) properties of patients’ voices.
+
+147 measurements were taken from patients with PD, and 48 measurements were taken from healthy patients who served as controls. For the purposes of this assignment, you may assume that measurements are representative of the underlying populations (PD vs. healthy).
+
+The variables in the dataset are as follows:
+
+- `clip`: ID of the recording number
+- `jitter`: a measure of variation in fundamental frequency
+- `shimmer`: a measure of variation in amplitude
+- `hnr`: a ratio of total components vs. noise in the voice recording
+- `status`: PD vs. Healthy
+- `avg.f.q`: 1, 2, or 3, corresponding to average vocal fundamental frequency 
+  - 1 = low, 
+  - 2 = mid 
+  - 3 = high
+
+The data are in `parkinsons.csv` located in the `Data` folder of the shared OneDrive folder. 
+
+We will be focusing on the variable HNR. We will see if there is evidence that the mean HNR is different for people with PD and people without PD. 
+
+::: blue
 ```{r}
-pd = read.csv(here("data", "parkinsons.csv"))
+park = read.csv(here("data", "parkinsons.csv"))
 ```
+:::
+
+### Histogram of HNR 
+
+Use histograms to visualize the distribution for HNR, comparing people with and without PD. 
+
+::: blue
+```{r}
+#| echo: false
+#| warning: false
+
+
+ggplot(park, aes(x=hnr)) +
+  geom_histogram() +
+  facet_wrap(vars(status), ncol=1) +
+  labs(y = "Number of people", x = "Harmonic to noise ratio") +
+  theme(text = element_text(size = 17))
+```
+
+:::
+
+### Mean & SD of HNR 
+
+Calculate the mean and standard deviation for HNR in the voice recordings of adults with and without Parkinson’s disease.
+
+::: blue
+```{r}
+#| echo: false
+#| warning: false
+
+park_stats <- park %>% 
+  group_by(status) %>%
+  select(hnr) %>% 
+  get_summary_stats(type = "common")
+
+park_stats %>% gt()
+```
+:::
+
+### Hypothesis test
+
+Run the appropriate statistical test in R. Please include all steps in the hypothesis test! 
+
+::: blue
+```{r}
+#| include: false
+# 1: NPD
+# 2: PD
+n1 <- 48
+n2 <- 147
+(xbar1 <- park_stats$mean[1])
+(xbar2 <- park_stats$mean[2])
+(diff_x <- xbar1 - xbar2)
+(sd1 <- park_stats$sd[1])
+(sd2 <- park_stats$sd[2])
+mu <- 0
+
+(se <- sqrt(sd1^2/n1 + sd2^2/n2))
+(tstat <- (diff_x - mu)/se)
+```
+
+```{r}
+#| include: false
+
+park_ttest = t.test(formula = hnr ~ status, data = park)
+```
+
+$$t_{\overline{x}_{PD} - \overline{x}_{NPD}} = 6.0592$$
+
+By hand, the p-value was $`r round(pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE), 8)`$. Using R, the p-value was $`r round(tidy(park_ttest)$p.value, 8)`$. 
+
+Reject the null
+
+:::

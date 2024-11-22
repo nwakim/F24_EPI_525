@@ -1,0 +1,67 @@
+---
+title: "Key Info and Announcements"
+date: "11/25/2024"
+date-modified: "today"
+format: 
+  html:
+    link-external-newwindow: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Announcements
+
+-   Office hours today with me right after class: 2:50-3:15pm
+    -   I'm on a STEM panel at 3:20
+-   HW 3 presentations are graded!
+    -   I loved seeing all your personalities shine through the presentations
+    -   I saw some great connections between the 5% slowest and 90% slowest in part d
+        -   Great use of complements since the total probability is 1!
+    -   I was making sure that you hit certain explanations visually, verbally, or written
+        -   Visually: drawing a normal plot to show what area is our probability or what cutoff time corresponds to a percentile
+            -   For example, in part a, our goal was to find the percent of people in the men's group who finished in 4948 seconds or slower. I would include a figure like below with explanation "The red line represents the time of 4948 seconds, and we are looking for the blue area, which represents the probability of finishing in 4948 seconds or slower."
+
+                ```{r}
+                #| echo: false
+                #| warning: false
+                #| fig-width: 6
+                #| fig-height: 4
+                #| fig-align: center
+                # specify upper and lower bounds of shaded region below
+                mu <- 4313
+                std <- 583
+                normal_curve = data.frame(x = c(mu - 4*std, mu + 4*std))
+                library(ggplot2)
+                # specify upper and lower bounds of shaded region below
+                ggplot(normal_curve, aes(x = x)) + 
+                  stat_function(fun = dnorm, 
+                                args = list(mean = mu, sd = std), 
+                          # specify the upper and lower bounds of the shaded region:
+                                xlim = c(4948, mu+4*std),             
+                                geom = "area", fill = "#5BAFF8") +
+                  stat_function(fun = dnorm, args = list(mean = mu, sd = std), size=2) + 
+                  geom_vline(xintercept = 4948, size = 1.5, color = "#C83532") +
+                  # the breaks values below might need to be adjusted 
+                  # if there are too many values showing on the x-axis
+                  labs(y = "") +
+                  labs(title = "P(X > 4948)")
+                ```
+        -   Verbally: Saying a statement about the goal of the problem and the conclusion
+            -   For example, in part a, our goal was to find the percent of people in the men's group who finished in 4948 seconds or slower. I would say: "We are calculating the probability that someone in the men's group finished in 4948 seconds or greater than that. Then we convert to percentage."
+        -   Written: writing out the math is also helpful!
+            -   For example, in part a, our goal was to find the percent of people in the men's group who finished in 4948 seconds or slower. I would write: $P(X > 4948) = ?$.
+            -   In part c and d, I would use math to show that we are looking for a value $k$ that completes the following statement $P(X > k ) = 0.10$ (for part d)
+-   I made quite a few changes to the homeworks
+    -   HW 10 is gone
+    -   HW 9 is optional
+    -   Instead of a HW assignment due over late November break
+        -   HW 8 will include material from Week 8 and 9 and be due 12/5
+-   HW 6 presentations
+    -   Meetings during 12/9-12/12
+    -   Videos due 12/10
+    -   Let me know if this interferes with any of your other classes' exams
+-   Anything else?
+
+## Key Dates
+
+-   Sunday (12/1): HW 7 solutions due
