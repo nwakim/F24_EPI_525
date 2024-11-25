@@ -179,6 +179,10 @@ If $X$ is a binomial r.v. with probability of success $p$, then $E(X) = np$ and 
     -   Adjust the binomial value (# of successes) by ±0.5 before calculating the normal probability.
     -   For $P(X \leq k)$ (Binomial), you would instead calculate $P(X \leq k + 0.5)$ (Normal approx)
     -   For $P(X \geq k)$ (Binomial), you would instead calculate $P(X \leq k - 0.5)$ (Normal approx)
+    
+## Poll Everywhere Question 1
+
+
 
 ## Sampling distribution of $\hat{p}$
 
@@ -566,6 +570,10 @@ ggplot(data = data.frame(x = c(-4, 4)), aes(x)) +
              color = "red")
 ```
 
+## Poll Everywhere Question 2
+
+
+
 ## Step 5: p-value
 
 The [**p-value**]{style="color:#C83532"} is the **probability** of obtaining a test statistic *just as extreme or more extreme* than the observed test statistic assuming the null hypothesis $H_0$ is true.
@@ -838,6 +846,8 @@ We are 95% confident that the (population) proportion of individuals with an imm
 
 - Note: We expect some differences between the confidence interval calculated by hand vs. by R. R uses a slightly different method to calculate. 
 
+# Break Time!
+
 # Learning Objectives
 
 1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
@@ -865,7 +875,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
 
 -   We will go from [*inferences on single sample proportion*]{style="color:#BF396F"} to [*inferences on difference in proportions from two independent samples*]{style="color:#367B79"}
 
-## Poll Everywhere question
+## Poll Everywhere Question 3
 
 ## For difference in proportions: Population parameters vs. sample statistics
 
@@ -1098,6 +1108,9 @@ $$\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of succe
 - In this example:
 
 $$\hat{p}_{pool} = \frac{x_1+x_2}{n_1+n_2} = \frac{500 + 505}{(500 + 44425) + (505 + 44405)} = `r round((500+505)/(500 + 44425+505 + 44405),5)`$$
+
+## Poll Everywhere Question 4
+
 
 ## Step 1: Check the assumptions
 
@@ -1376,6 +1389,8 @@ n*(1-p0)
 n*ph
 n*(1-ph)
 ```
+
+## Poll Everywhere Question 5
 
 ## 95% CI for population difference in proportions
 
