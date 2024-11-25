@@ -1,7 +1,6 @@
 ---
 title: "Homework 8"
 author: "Your name here - update this!!!!"
-date: "Due 11/26/24"
 format: 
   html:
     link-external-newwindow: true
@@ -26,9 +25,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-**Due Monday 11/26/24**
+**Due Monday 12/6/24**
 
-Download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_08.qmd).
+[Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) This homework must be submitted using a Quarto document. **Please keep it rendered as an html!** I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!
+
+You can download the .qmd file for this assignment from [Github](https://github.com/nwakim/F24_EPI_525/blob/main/homework/HW_08.qmd)
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
 
 
 ## Directions {.unnumbered}
