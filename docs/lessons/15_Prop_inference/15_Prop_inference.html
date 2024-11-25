@@ -410,9 +410,12 @@ Meike Niederhausen and Nicky Wakim
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li><p>Understand how CLT applies to a binomial random variable</p></li>
-<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+<li><p>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</p></li>
 <li><p>Run a hypothesis test for a single proportion and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+<li><p>Understand how CLT applies to a difference in binomial random variables</p></li>
+<li><p>Run a hypothesis test for a difference in proportions and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a difference in proportions.</p></li>
 </ol>
 <div class="cell">
 <style type="text/css">
@@ -425,7 +428,23 @@ Meike Niederhausen and Nicky Wakim
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
 
-<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Run a hypothesis test for a single proportion and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+<li><p>Understand how CLT applies to a difference in binomial random variables</p></li>
+<li><p>Run a hypothesis test for a difference in proportions and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a difference in proportions.</p></li>
+</ol>
+</section>
 <section id="moving-to-categorical-outcomes" class="slide level2">
 <h2>Moving to categorical outcomes</h2>
 <ul>
@@ -436,8 +455,18 @@ Meike Niederhausen and Nicky Wakim
 <li>We found confidence intervals for means</li>
 <li>We ran hypothesis tests for means</li>
 </ul></li>
-<li><p>The methods used can be extended to <strong>categorical data</strong>, such as binomial proportions or data in two-way tables</p></li>
-<li><p>Categorical data arise frequently in medical research because disease outcomes and patient characteristics are often recorded in natural categories such as types of treatment received, whether or not disease advanced to a later stage, or whether or not a patient responded initially to a treatment</p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Above methods used can be extended to <strong>categorical data</strong>, such as binomial <strong>proportions</strong> or data in two-way tables</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p><strong>Categorical data arise frequently in medical research</strong></p>
+<ul>
+<li>Disease outcomes and patient characteristics are often recorded in natural categories</li>
+<li><strong>Examples:</strong> types of treatment received, whether or not disease advanced to a later stage, or whether or not a patient responded initially to a treatment</li>
+</ul></li>
 </ul>
 </section>
 <section id="from-lesson-5-binomial-random-variable" class="slide level2">
@@ -479,7 +508,7 @@ Meike Niederhausen and Nicky Wakim
 </div>
 <ul>
 <li><p>The parameters of a binomial distribution are <span class="math inline">\(p\)</span> and <span class="math inline">\(n\)</span>.</p></li>
-<li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a binomial distribution, then we write in shorthand</p></li>
+<li><p>If a r.v. <span class="math inline">\(X\)</span> is modeled by a binomial distribution, then we write in shorthand <span class="math inline">\(X \sim \text{Binom}(n,p)\)</span></p></li>
 </ul>
 <div class="orange">
 <div class="orange-ttl">
@@ -524,7 +553,7 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 <p><span class="math display">\[\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)\]</span></p>
 <ul>
-<li>What is big enough? At least 10 successes and 10 failures are expected in the sample: <span class="math inline">\(np \geq 10\)</span> and <span class="math inline">\(n(1-p) \geq 10\)</span></li>
+<li>What is “big enough”? At least 10 successes and 10 failures are expected in the sample: <span class="math inline">\(np \geq 10\)</span> and <span class="math inline">\(n(1-p) \geq 10\)</span></li>
 </ul>
 </section>
 <section id="for-proportions-population-parameters-vs.-sample-statistics" class="slide level2">
@@ -535,100 +564,14 @@ Meike Niederhausen and Nicky Wakim
 <ul>
 <li>Proportion: <span class="math inline">\(p\)</span>, <span class="math inline">\(\pi\)</span> (“pi”)</li>
 </ul>
-<p>&nbsp;</p>
-<ul>
-<li>Standard deviation: <span class="math inline">\(\sqrt{n \cdot p \cdot (1-p)}\)</span></li>
-<li>Variance: <span class="math inline">\(n \cdot p \cdot (1-p)\)</span></li>
-</ul>
 </div><div class="column" style="width:50%;">
 <p><span style="color:#EF85B3;"><strong>Sample statistic (point estimate)</strong></span></p>
 <ul>
 <li>Sample proportion: <span class="math inline">\(\hat{p}\)</span> (“p-hat”)</li>
 </ul>
-<p>&nbsp;</p>
-<ul>
-<li>Standard deviation: <span class="math inline">\(\sqrt{n \cdot \hat{p} \cdot (1-\hat{p})}\)</span></li>
-<li>Variance: <span class="math inline">\(n \cdot \hat{p} \cdot (1-\hat{p})\)</span></li>
-</ul>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="where-are-we-1" class="slide level2">
-<h2>Where are we?</h2>
-<div style="font-size: 90%;">
-<p>CI’s and hypothesis tests for different scenarios:</p>
-<p><span class="math display">\[\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}\]</span></p>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Day</th>
-<th>Book</th>
-<th>Population <br> parameter</th>
-<th>Symbol</th>
-<th>Point estimate</th>
-<th>Symbol</th>
-<th>SE</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10</td>
-<td>5.1</td>
-<td>Pop mean</td>
-<td><span class="math inline">\(\mu\)</span></td>
-<td>Sample mean</td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>5.2</td>
-<td>Pop mean of paired diff</td>
-<td><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
-<td>Sample mean of paired diff</td>
-<td><span class="math inline">\(\bar{x}_{d}\)</span></td>
-<td><span class="math inline">\(\frac{s_d}{\sqrt{n}}\)</span></td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>5.3</td>
-<td><span style="color:black">Diff in pop <br> means</span></td>
-<td><span style="color:black"><span class="math inline">\(\mu_1-\mu_2\)</span></span></td>
-<td><span style="color:black">Diff in sample <br> means</span></td>
-<td><span style="color:black"><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></span></td>
-<td><span style="color:black"><span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> or pooled</span></td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>8.1</td>
-<td><span style="color:green">Pop proportion</span></td>
-<td><span style="color:green"><span class="math inline">\(p\)</span></span></td>
-<td><span style="color:green">Sample prop</span></td>
-<td><span style="color:green"><span class="math inline">\(\widehat{p}\)</span></span></td>
-<td><span style="color:red"><strong>???</strong></span></td>
-</tr>
-<tr class="odd">
-<td>12</td>
-<td>8.2</td>
-<td><span style="color:green">Diff in pop <br> proportions</span></td>
-<td><span style="color:green"><span class="math inline">\(p_1-p_2\)</span></span></td>
-<td><span style="color:green">Diff in sample <br> proportions</span></td>
-<td><span style="color:green"><span class="math inline">\(\widehat{p}_1-\widehat{p}_2\)</span></span></td>
-<td><span style="color:red"><strong>???</strong></span></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
 <section id="approaches-to-answer-a-research-question" class="slide level2">
 <h2>Approaches to answer a research question</h2>
@@ -691,24 +634,68 @@ z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
 </div>
 </div>
 </div>
+</section>
+<section id="r-code-1--and-2-sample-proportions-tests" class="slide level2">
+<h2>R code: 1- and 2-sample proportions tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">prop.test</span>(x, </span>
+<span id="cb1-2"><a href="#cb1-2"></a>          n, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>          <span class="at">p =</span> <span class="cn">NULL</span>, </span>
+<span id="cb1-4"><a href="#cb1-4"></a>          <span class="at">alternative =</span> <span class="fu">c</span>(<span class="st">"two.sided"</span>, <span class="st">"less"</span>, <span class="st">"greater"</span>), </span>
+<span id="cb1-5"><a href="#cb1-5"></a>          <span class="at">conf.level =</span> <span class="fl">0.95</span>, </span>
+<span id="cb1-6"><a href="#cb1-6"></a>          <span class="at">correct =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>x</code>: Counts of successes (can have one x or a vector of multiple x’s)</li>
+<li><code>n</code>: Number of trails (can have one n or a vector of multiple n’s)</li>
+<li><code>p</code>: Null value that we think the population proportion is</li>
+<li><code>alternative</code>: If alternative hypothesis is <span class="math inline">\(\neq\)</span>, <span class="math inline">\(&lt;\)</span>, or <span class="math inline">\(&gt;\)</span>
+<ul>
+<li>Default is “two.sided” (<span class="math inline">\(\neq\)</span>)</li>
+</ul></li>
+<li><code>conf.level</code> = Confidence level (<span class="math inline">\(1-\alpha\)</span>)
+<ul>
+<li>Default is <code>0.05</code></li>
+</ul></li>
+<li><code>correct</code>: Continuity correction, whether we should use it or not
+<ul>
+<li>Default is <code>TRUE</code> (Nicky says keep it this way!)</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
-<section id="lob" class="title-slide slide level1 center">
-<h1>LOB</h1>
-
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Run a hypothesis test for a single proportion and interpret the results.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+<li><p>Understand how CLT applies to a difference in binomial random variables</p></li>
+<li><p>Run a hypothesis test for a difference in proportions and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a difference in proportions.</p></li>
+</ol>
 </section>
 <section id="example-immune-response-to-advanced-melanoma" class="slide level2">
 <h2>Example: immune response to advanced melanoma</h2>
 <ul>
 <li><p>Looking for therapies that trigger an immune response to advanced melanoma</p></li>
-<li><p>In a study where 52 patients were treated concurrently with two new therapies, nivolumab and ipilimumab, 21 had an immune response.<sup>1</sup></p></li>
-<li><p>Our outcome that we are measuring is whether or not each person has an immune response</p></li>
+<li><p>In a study where 52 patients were treated concurrently with two new therapies, nivolumab and ipilimumab</p>
+<ul>
+<li>21 had an immune response.<sup>1</sup></li>
+</ul></li>
+<li><p><strong>Outcome:</strong> whether or not each person has an immune response</p></li>
 </ul>
 <p>Questions that can be addressed with inference…</p>
 <ul>
-<li><p>What is the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab?</p></li>
-<li><p>What is the 95% confidence interval for the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab?</p></li>
-<li><p>In previous studies, the proportion of patients responding to one of these agents was 30% or less. Do these results suggest that the probability of response to concurrent therapy is better than 0.30?</p></li>
+<li><p>What is the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab? (calculate <span class="math inline">\(\hat{p}\)</span>)</p></li>
+<li><p>What is the 95% confidence interval for the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab? (95% CI of <span class="math inline">\(p\)</span>)</p></li>
+<li><p>In previous studies, the proportion of patients responding to one of these agents was 30% or less. Do these results suggest that the probability of response to concurrent therapy is better than 0.30? (Hypothesis test of null of 0.3)</p></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Wolchok, et. al.&nbsp; (2013) 369(2): 122-33.</p></li></ol></aside></section>
 <section id="reference-steps-in-a-hypothesis-test" class="slide level2">
@@ -738,11 +725,15 @@ z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
 <li><p>The sample observations are independent, and</p></li>
 <li><p>At least 10 successes and 10 failures are expected in the sample: <span class="math inline">\(np_0 \geq 10\)</span> and <span class="math inline">\(n(1-p_0) \geq 10\)</span>.</p></li>
 </ol>
+<p>&nbsp;</p>
 <ul>
 <li>Since <span class="math inline">\(p\)</span> is unknown, it is necessary to substitute <span class="math inline">\(p_0\)</span> (the null value) for <span class="math inline">\(p\)</span> when using the standard error to conduct hypothesis tests
 <ul>
 <li>Because we are assuming the standard error of the null hypothesis!</li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>For the example, we have <span class="math inline">\(p_0 = 0.30\)</span>
 <ul>
 <li>We check: <span class="math inline">\(n p_0 = 52 \cdot 0.3 = 15.6 &gt; 10\)</span></li>
@@ -858,7 +849,7 @@ z_{\hat{p}} &amp;= \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}} = \fra
 <li>Let’s see the z-score on a Z-distribution (Standard Normal curve)</li>
 </ul>
 
-<img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="step-5-p-value" class="slide level2">
 <h2>Step 5: p-value</h2>
 <p>The <span style="color:#C83532"><strong>p-value</strong></span> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</p>
@@ -866,12 +857,12 @@ z_{\hat{p}} &amp;= \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}} = \fra
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -883,7 +874,7 @@ z_{\hat{p}} &amp;= \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}} = \fra
 &amp;= 0.1022348
 \end{align}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="fl">1.634</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="fl">1.634</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1022589</code></pre>
 </div>
@@ -891,17 +882,17 @@ z_{\hat{p}} &amp;= \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}} = \fra
 </div>
 </div>
 </section>
-<section id="step-4-5" class="slide level2">
-<h2>Step 4-5:</h2>
+<section id="step-4-5-test-statistic-and-p-value-together-using-prop.test" class="slide level2">
+<h2>Step 4-5: test statistic and p-value together using <code>prop.test()</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">21</span>, <span class="at">n =</span> <span class="dv">52</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">21</span>, <span class="at">n =</span> <span class="dv">52</span>, <span class="at">p =</span> <span class="fl">0.30</span>, <span class="at">correct =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     1-sample proportions test with continuity correction
 
-data:  21 out of 52, null probability 0.5
-X-squared = 1.5577, df = 1, p-value = 0.212
-alternative hypothesis: true p is not equal to 0.5
+data:  21 out of 52, null probability 0.3
+X-squared = 2.1987, df = 1, p-value = 0.1381
+alternative hypothesis: true p is not equal to 0.3
 95 percent confidence interval:
  0.2731269 0.5487141
 sample estimates:
@@ -909,6 +900,495 @@ sample estimates:
 0.4038462 </code></pre>
 </div>
 </div>
+<div class="cell">
+<details>
+<summary>Tidying the output of <code>prop.test()</code></summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">21</span>, <span class="at">n =</span> <span class="dv">52</span>, <span class="at">p =</span> <span class="fl">0.30</span>, <span class="at">correct =</span> T) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+
+<div id="goocygteqa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#goocygteqa table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#goocygteqa thead, #goocygteqa tbody, #goocygteqa tfoot, #goocygteqa tr, #goocygteqa td, #goocygteqa th {
+  border-style: none;
+}
+
+#goocygteqa p {
+  margin: 0;
+  padding: 0;
+}
+
+#goocygteqa .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#goocygteqa .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#goocygteqa .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#goocygteqa .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#goocygteqa .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#goocygteqa .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#goocygteqa .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#goocygteqa .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#goocygteqa .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#goocygteqa .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#goocygteqa .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#goocygteqa .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#goocygteqa .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#goocygteqa .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#goocygteqa .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#goocygteqa .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#goocygteqa .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#goocygteqa .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#goocygteqa .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#goocygteqa .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#goocygteqa .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#goocygteqa .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#goocygteqa .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#goocygteqa .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#goocygteqa .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#goocygteqa .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#goocygteqa .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#goocygteqa .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#goocygteqa .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#goocygteqa .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#goocygteqa .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#goocygteqa .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#goocygteqa .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#goocygteqa .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#goocygteqa .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#goocygteqa .gt_left {
+  text-align: left;
+}
+
+#goocygteqa .gt_center {
+  text-align: center;
+}
+
+#goocygteqa .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#goocygteqa .gt_font_normal {
+  font-weight: normal;
+}
+
+#goocygteqa .gt_font_bold {
+  font-weight: bold;
+}
+
+#goocygteqa .gt_font_italic {
+  font-style: italic;
+}
+
+#goocygteqa .gt_super {
+  font-size: 65%;
+}
+
+#goocygteqa .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#goocygteqa .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#goocygteqa .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#goocygteqa .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#goocygteqa .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#goocygteqa .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#goocygteqa .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#goocygteqa .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#goocygteqa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="estimate" class="gt_row gt_right">0.4038462</td>
+<td headers="statistic" class="gt_row gt_right">2.198718</td>
+<td headers="p.value" class="gt_row gt_right">0.1381256</td>
+<td headers="parameter" class="gt_row gt_right">1</td>
+<td headers="conf.low" class="gt_row gt_right">0.2731269</td>
+<td headers="conf.high" class="gt_row gt_right">0.5487141</td>
+<td headers="method" class="gt_row gt_left">1-sample proportions test with continuity correction</td>
+<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>Note: We expect some differences between the test statistic and p-value calculated by hand vs.&nbsp;by R. R uses a slightly different method to calculate.</li>
+</ul>
 </section>
 <section id="step-6-conclusion-to-hypothesis-test" class="slide level2">
 <h2>Step 6: Conclusion to hypothesis test</h2>
@@ -934,9 +1414,22 @@ H_A:&amp; p \neq 0.30\\
 </ul>
 </section></section>
 <section>
-<section id="lob-1" class="title-slide slide level1 center">
-<h1>LOB</h1>
-
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</li>
+<li>Run a hypothesis test for a single proportion and interpret the results.</li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Construct and interpret confidence intervals for a single proportion.</li>
+</ol>
+</div>
+<ol start="4" type="1">
+<li><p>Understand how CLT applies to a difference in binomial random variables</p></li>
+<li><p>Run a hypothesis test for a difference in proportions and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a difference in proportions.</p></li>
+</ol>
 </section>
 <section id="conditions-for-one-proportion-test-vs.-ci" class="slide level2">
 <h2>Conditions for one proportion: <strong>test vs.&nbsp;CI</strong></h2>
@@ -1001,14 +1494,21 @@ H_A:&amp; p \neq 0.30\\
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Problem: We don’t know what <span class="math inline">\(p\)</span> is - it’s what we’re estimating with the CI.<br>
-Solution: <span style="color:purple">approximate <span class="math inline">\(p\)</span> with <span class="math inline">\(\hat{p}\)</span></span>:</p>
+Solution: <span style="color:#5BAFF8">approximate <span class="math inline">\(p\)</span> with <span class="math inline">\(\hat{p}\)</span></span>:</p>
 </div><div class="column" style="width:50%;">
 <p><span class="math display">\[SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</span></p>
 </div>
 </div>
+<ul>
+<li>Note that I am not using a continuity correction here! This means our “by hand” calculation will be different than our R calculation
+<ul>
+<li>Using the continuity correction is more widely accepted</li>
+<li>So I would suggest using R to calculate the confidence intervals when you can!</li>
+</ul></li>
+</ul>
 </section>
-<section id="ci-for-the-population-proportion" class="slide level2">
-<h2>95% CI for the population proportion</h2>
+<section id="ci-for-population-proportion-of-immune-response-by-hand" class="slide level2">
+<h2>95% CI for population proportion of immune response by hand</h2>
 <p>95% CI for population mean difference <span class="math inline">\(p\)</span>:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1023,19 +1523,18 @@ Solution: <span style="color:purple">approximate <span class="math inline">\(p\)
 </div><div class="column" style="width:50%;">
 <p>Used <span class="math inline">\(z^*\)</span> = <code>qnorm(0.975)</code> = 1.96</p>
 <p>&nbsp;</p>
-<p>Conclusion:<br>
+<p><strong>“By hand” Conclusion:</strong><br>
 We are 95% confident that the (population) proportion of individuals with an immune response is between 0.27 and 0.537.</p>
 </div>
 </div>
 </section>
-<section id="ci-for-population-proportion-using-r" class="slide level2">
-<h2>95% CI for population proportion (using R)</h2>
-<p>NEED TO COMPLETE!!!</p>
+<section id="ci-for-population-proportion-of-immune-response-using-r" class="slide level2">
+<h2>95% CI for population proportion of immune response using R</h2>
 <ul>
-<li>We can use R to get those same values</li>
+<li>We can use R to get similar values</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">21</span>, <span class="at">n =</span> <span class="dv">52</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>, <span class="at">correct =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">21</span>, <span class="at">n =</span> <span class="dv">52</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>, <span class="at">correct =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     1-sample proportions test with continuity correction
@@ -1050,27 +1549,42 @@ sample estimates:
 0.4038462 </code></pre>
 </div>
 </div>
-<div class="cell">
-<details>
-<summary>We can tidy the output</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># t.test(x = chol$DiffChol, mu = 0) %&gt;% tidy() %&gt;% gt() %&gt;% </span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="co">#   tab_options(table.font.size = 35) # use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Conclusion:<br>
-We are 95% confident that the (population) proportion of individuals with an immune response is between 0.27 and 0.537.</p>
+<p><strong>R Conclusion:</strong><br>
+We are 95% confident that the (population) proportion of individuals with an immune response is between 0.273 and 0.549.</p>
+<ul>
+<li>Note: We expect some differences between the confidence interval calculated by hand vs.&nbsp;by R. R uses a slightly different method to calculate.</li>
+</ul>
 </section></section>
 <section>
-<section id="lob-2" class="title-slide slide level1 center">
-<h1>LOB</h1>
-
+<section id="learning-objectives-4" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</p></li>
+<li><p>Run a hypothesis test for a single proportion and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+</ol>
+<div class="lob">
+<ol start="4" type="1">
+<li>Understand how CLT applies to a difference in binomial random variables</li>
+</ol>
+</div>
+<ol start="5" type="1">
+<li><p>Run a hypothesis test for a difference in proportions and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a difference in proportions.</p></li>
+</ol>
 </section>
 <section id="inference-for-difference-of-two-independent-proportions-hatp_1-hatp_2" class="slide level2">
 <h2>Inference for difference of two independent proportions <br> <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span></h2>
 <ul>
-<li><p>For means, we went from <em>inferences on single sample mean</em> to <em>inferences on difference in means from two independent samples</em></p></li>
-<li><p>We can do the same thing for proportions</p></li>
-<li><p>We will go from <em>inferences on single sample proportion</em> to <em>inferences on difference in proportions from two independent samples</em></p></li>
+<li>For means, we went from <em>inferences on single sample mean</em> to <em>inferences on difference in means from two independent samples</em></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>We can do the same thing for proportions</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>We will go from <span style="color:#BF396F"><em>inferences on single sample proportion</em></span> to <span style="color:#367B79"><em>inferences on difference in proportions from two independent samples</em></span></li>
 </ul>
 </section>
 <section id="poll-everywhere-question" class="slide level2">
@@ -1084,14 +1598,20 @@ We are 95% confident that the (population) proportion of individuals with an imm
 <ul>
 <li><p>Population 1 proportion: <span class="math inline">\(p_1\)</span>, <span class="math inline">\(\pi_1\)</span> (“pi”)</p></li>
 <li><p>Population 2 proportion: <span class="math inline">\(p_2\)</span>, <span class="math inline">\(\pi_2\)</span> (“pi”) &nbsp;</p></li>
-<li><p>Difference in proportions: <span class="math inline">\(p_1 - p_2\)</span></p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Difference in proportions: <span class="math inline">\(p_1 - p_2\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><span style="color:#EF85B3;"><strong>Sample statistic (point estimate)</strong></span></p>
 <ul>
 <li><p>Sample 1 proportion: <span class="math inline">\(\hat{p}_1\)</span>, <span class="math inline">\(\hat{\pi}_1\)</span> (“pi”)</p></li>
 <li><p>Sample 1 proportion: <span class="math inline">\(\hat{p}_2\)</span>, <span class="math inline">\(\hat{\pi}_2\)</span> (“pi”) &nbsp;</p></li>
-<li><p>Difference in proportions: <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span></p></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Difference in proportions: <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span></li>
 </ul>
 </div>
 </div>
@@ -1119,11 +1639,86 @@ We are 95% confident that the (population) proportion of individuals with an imm
 <ul>
 <li>What is “big enough”? At least 10 successes and 10 failures are expected in the sample: <span class="math inline">\(n_1p \geq 10\)</span>, <span class="math inline">\(n_1(1-p) \geq 10\)</span>, <span class="math inline">\(n_2p \geq 10\)</span>, and <span class="math inline">\(n_2(1-p) \geq 10\)</span></li>
 </ul>
+</section>
+<section id="approaches-to-answer-a-research-question-1" class="slide level2">
+<h2>Approaches to answer a research question</h2>
+<ul>
+<li><strong>Research question is a generic form for a single proportion:</strong> Is there evidence to support that the population proportions are different from each other?</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="green2">
+<div class="green2-ttl">
+<p>Calculate <strong>CI for the proportion difference</strong> <span class="math inline">\(p_1 - p_2\)</span>:</p>
+</div>
+<div class="green2-cont">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-19-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math display">\[\hat{p}_1 - \hat{p}_2 \pm z^* \cdot SE_{\hat{p}_1 - \hat{p}_2}\]</span></p>
+<ul>
+<li>with <span class="math inline">\(z^*\)</span> = z-score that aligns with specific confidence interval</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="pink">
+<div class="pink-ttl">
+<p>Run a <strong>hypothesis test</strong>:</p>
+</div>
+<div class="pink-cont">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-20-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<p>Hypotheses</p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; p_1 - p_2 = 0 \\
+H_A:&amp; p_1 - p_2 \neq 0 \\
+(or&amp;~ &lt;, &gt;)
+\end{align}\]</span></p>
+</div><div class="column">
+<p>Test statistic</p>
+<p><span class="math display">\[
+z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2}{SE_{pool}}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
-<section id="lob-3" class="title-slide slide level1 center">
-<h1>LOB</h1>
-
+<section id="learning-objectives-5" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</p></li>
+<li><p>Run a hypothesis test for a single proportion and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+<li><p>Understand how CLT applies to a difference in binomial random variables</p></li>
+</ol>
+<div class="lob">
+<ol start="5" type="1">
+<li>Run a hypothesis test for a difference in proportions and interpret the results.</li>
+</ol>
+</div>
+<ol start="6" type="1">
+<li>Construct and interpret confidence intervals for a difference in proportions.</li>
+</ol>
 </section>
 <section id="motivating-example-effectiveness-of-mammograms" class="slide level2">
 <h2>Motivating example: effectiveness of mammograms</h2>
@@ -1132,33 +1727,33 @@ We are 95% confident that the (population) proportion of individuals with an imm
 <div class="cell">
 <details>
 <summary>Displaying the contingency table in R</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>BC <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Group, Death) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">adorn_totals</span>(<span class="at">where =</span> <span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">tab_stubhead</span>(<span class="at">label =</span> <span class="st">"Group"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">tab_spanner</span>(<span class="at">label =</span> <span class="st">"Death from breast cancer?"</span>, </span>
-<span id="cb8-6"><a href="#cb8-6"></a>              <span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>BC <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Group, Death) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">adorn_totals</span>(<span class="at">where =</span> <span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">tab_stubhead</span>(<span class="at">label =</span> <span class="st">"Group"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">tab_spanner</span>(<span class="at">label =</span> <span class="st">"Death from breast cancer?"</span>, </span>
+<span id="cb9-6"><a href="#cb9-6"></a>              <span class="at">columns =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
-<div id="ldqxsekkaz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ldqxsekkaz table {
+<div id="gkrgebunoz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gkrgebunoz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ldqxsekkaz thead, #ldqxsekkaz tbody, #ldqxsekkaz tfoot, #ldqxsekkaz tr, #ldqxsekkaz td, #ldqxsekkaz th {
+#gkrgebunoz thead, #gkrgebunoz tbody, #gkrgebunoz tfoot, #gkrgebunoz tr, #gkrgebunoz td, #gkrgebunoz th {
   border-style: none;
 }
 
-#ldqxsekkaz p {
+#gkrgebunoz p {
   margin: 0;
   padding: 0;
 }
 
-#ldqxsekkaz .gt_table {
+#gkrgebunoz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1184,12 +1779,12 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-left-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_caption {
+#gkrgebunoz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ldqxsekkaz .gt_title {
+#gkrgebunoz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1201,7 +1796,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-bottom-width: 0;
 }
 
-#ldqxsekkaz .gt_subtitle {
+#gkrgebunoz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1213,7 +1808,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-top-width: 0;
 }
 
-#ldqxsekkaz .gt_heading {
+#gkrgebunoz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1225,13 +1820,13 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-right-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_bottom_border {
+#gkrgebunoz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_col_headings {
+#gkrgebunoz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1246,7 +1841,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-right-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_col_heading {
+#gkrgebunoz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1266,7 +1861,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   overflow-x: hidden;
 }
 
-#ldqxsekkaz .gt_column_spanner_outer {
+#gkrgebunoz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1278,15 +1873,15 @@ We are 95% confident that the (population) proportion of individuals with an imm
   padding-right: 4px;
 }
 
-#ldqxsekkaz .gt_column_spanner_outer:first-child {
+#gkrgebunoz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ldqxsekkaz .gt_column_spanner_outer:last-child {
+#gkrgebunoz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ldqxsekkaz .gt_column_spanner {
+#gkrgebunoz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1298,11 +1893,11 @@ We are 95% confident that the (population) proportion of individuals with an imm
   width: 100%;
 }
 
-#ldqxsekkaz .gt_spanner_row {
+#gkrgebunoz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ldqxsekkaz .gt_group_heading {
+#gkrgebunoz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1328,7 +1923,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   text-align: left;
 }
 
-#ldqxsekkaz .gt_empty_group_heading {
+#gkrgebunoz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1343,15 +1938,15 @@ We are 95% confident that the (population) proportion of individuals with an imm
   vertical-align: middle;
 }
 
-#ldqxsekkaz .gt_from_md > :first-child {
+#gkrgebunoz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ldqxsekkaz .gt_from_md > :last-child {
+#gkrgebunoz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ldqxsekkaz .gt_row {
+#gkrgebunoz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1370,7 +1965,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   overflow-x: hidden;
 }
 
-#ldqxsekkaz .gt_stub {
+#gkrgebunoz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1383,7 +1978,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   padding-right: 5px;
 }
 
-#ldqxsekkaz .gt_stub_row_group {
+#gkrgebunoz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1397,15 +1992,15 @@ We are 95% confident that the (population) proportion of individuals with an imm
   vertical-align: top;
 }
 
-#ldqxsekkaz .gt_row_group_first td {
+#gkrgebunoz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ldqxsekkaz .gt_row_group_first th {
+#gkrgebunoz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ldqxsekkaz .gt_summary_row {
+#gkrgebunoz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1415,16 +2010,16 @@ We are 95% confident that the (population) proportion of individuals with an imm
   padding-right: 5px;
 }
 
-#ldqxsekkaz .gt_first_summary_row {
+#gkrgebunoz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_first_summary_row.thick {
+#gkrgebunoz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ldqxsekkaz .gt_last_summary_row {
+#gkrgebunoz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1434,7 +2029,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-bottom-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_grand_summary_row {
+#gkrgebunoz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1444,7 +2039,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   padding-right: 5px;
 }
 
-#ldqxsekkaz .gt_first_grand_summary_row {
+#gkrgebunoz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1454,7 +2049,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-top-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_last_grand_summary_row_top {
+#gkrgebunoz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1464,11 +2059,11 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-bottom-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_striped {
+#gkrgebunoz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ldqxsekkaz .gt_table_body {
+#gkrgebunoz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1477,7 +2072,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-bottom-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_footnotes {
+#gkrgebunoz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1491,7 +2086,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-right-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_footnote {
+#gkrgebunoz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1500,7 +2095,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   padding-right: 5px;
 }
 
-#ldqxsekkaz .gt_sourcenotes {
+#gkrgebunoz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1514,7 +2109,7 @@ We are 95% confident that the (population) proportion of individuals with an imm
   border-right-color: #D3D3D3;
 }
 
-#ldqxsekkaz .gt_sourcenote {
+#gkrgebunoz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1522,72 +2117,72 @@ We are 95% confident that the (population) proportion of individuals with an imm
   padding-right: 5px;
 }
 
-#ldqxsekkaz .gt_left {
+#gkrgebunoz .gt_left {
   text-align: left;
 }
 
-#ldqxsekkaz .gt_center {
+#gkrgebunoz .gt_center {
   text-align: center;
 }
 
-#ldqxsekkaz .gt_right {
+#gkrgebunoz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ldqxsekkaz .gt_font_normal {
+#gkrgebunoz .gt_font_normal {
   font-weight: normal;
 }
 
-#ldqxsekkaz .gt_font_bold {
+#gkrgebunoz .gt_font_bold {
   font-weight: bold;
 }
 
-#ldqxsekkaz .gt_font_italic {
+#gkrgebunoz .gt_font_italic {
   font-style: italic;
 }
 
-#ldqxsekkaz .gt_super {
+#gkrgebunoz .gt_super {
   font-size: 65%;
 }
 
-#ldqxsekkaz .gt_footnote_marks {
+#gkrgebunoz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ldqxsekkaz .gt_asterisk {
+#gkrgebunoz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ldqxsekkaz .gt_indent_1 {
+#gkrgebunoz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ldqxsekkaz .gt_indent_2 {
+#gkrgebunoz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ldqxsekkaz .gt_indent_3 {
+#gkrgebunoz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ldqxsekkaz .gt_indent_4 {
+#gkrgebunoz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ldqxsekkaz .gt_indent_5 {
+#gkrgebunoz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ldqxsekkaz .katex-display {
+#gkrgebunoz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ldqxsekkaz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gkrgebunoz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1623,26 +2218,6 @@ We are 95% confident that the (population) proportion of individuals with an imm
   
 </table>
 </div>
-</div>
-</div>
-</section>
-<section id="effectiveness-of-mammograms" class="slide level2">
-<h2>Effectiveness of mammograms…</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">#analyze the data</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">500</span>, <span class="dv">505</span>), <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">500</span> <span class="sc">+</span> <span class="dv">44425</span>, <span class="dv">505</span> <span class="sc">+</span> <span class="dv">44405</span>), <span class="at">correct=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    2-sample test for equality of proportions with continuity correction
-
-data:  c(500, 505) out of c(500 + 44425, 505 + 44405)
-X-squared = 0.01748, df = 1, p-value = 0.8948
-alternative hypothesis: two.sided
-95 percent confidence interval:
- -0.001512853  0.001282751
-sample estimates:
-    prop 1     prop 2 
-0.01112966 0.01124471 </code></pre>
 </div>
 </div>
 </section>
@@ -1695,6 +2270,9 @@ sample estimates:
 <li><span class="math inline">\(n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10\)</span></li>
 <li><span class="math inline">\(n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10\)</span></li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>In the example, we check:
 <ul>
 <li><span class="math inline">\(n_1\hat{p}_{pool}=44925 \cdot 0.0112 = 502.5839 \ge 10\)</span></li>
@@ -1727,11 +2305,11 @@ H_A:&amp; p_{mamm} - p_{ctrl} \neq 0\\
 <p><span class="math display">\[\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}\]</span></p>
 <p>Test statistic:</p>
 <p><span class="math display">\[
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}(1-\hat{p}_{pool})}{n_2}}}
 \]</span></p>
 </section>
-<section id="step-4-test-statistic-2" class="slide level2">
-<h2>Step 4: Test statistic</h2>
+<section id="step-4-test-statistic-22" class="slide level2">
+<h2>Step 4: Test statistic (2/2)</h2>
 <p>From our example: Recall that <span class="math inline">\(\hat{p}_1 = \dfrac{500}{44925}= 0.0111\)</span>, <span class="math inline">\(\hat{p}_2 = \dfrac{505}{44910}= 0.0112\)</span>, <span class="math inline">\(n_1=44925\)</span>, <span class="math inline">\(n_2=44910\)</span>, and <span class="math inline">\(\hat{p}_{pool} = 0.01119\)</span></p>
 <p>The test statistic is:</p>
 <p><span class="math display">\[
@@ -1743,7 +2321,7 @@ z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}
 <li>Let’s see the z-score on a Z-distribution (Standard Normal curve)</li>
 </ul>
 
-<img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="step-5-p-value-1" class="slide level2">
 <h2>Step 5: p-value</h2>
 <p>The <span style="color:#C83532"><strong>p-value</strong></span> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</p>
@@ -1751,12 +2329,12 @@ z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}
 <div class="column" style="width:45%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+<p><img data-src="15_Prop_inference_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:55%;">
@@ -1768,7 +2346,7 @@ z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}
 &amp;= 0.8697839
 \end{align}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.1639</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.1639</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8698099</code></pre>
 </div>
@@ -1776,8 +2354,518 @@ z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}
 </div>
 </div>
 </section>
-<section id="step-5-conclusion-to-hypothesis-test" class="slide level2">
-<h2>Step 5: Conclusion to hypothesis test</h2>
+<section id="step-4-5-test-statistic-and-p-value-together-using-prop.test-1" class="slide level2">
+<h2>Step 4-5: test statistic and p-value together using <code>prop.test()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">505</span>, <span class="dv">500</span>), <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">44910</span>, <span class="dv">44925</span>)) <span class="co"># no p needed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    2-sample test for equality of proportions with continuity correction
+
+data:  c(505, 500) out of c(44910, 44925)
+X-squared = 0.01748, df = 1, p-value = 0.8948
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.001282751  0.001512853
+sample estimates:
+    prop 1     prop 2 
+0.01124471 0.01112966 </code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Tidying the output of <code>prop.test()</code></summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">505</span>, <span class="dv">500</span>), <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">44910</span>, <span class="dv">44925</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span> <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="dv">33</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+
+<div id="tnzopaukgd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tnzopaukgd table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tnzopaukgd thead, #tnzopaukgd tbody, #tnzopaukgd tfoot, #tnzopaukgd tr, #tnzopaukgd td, #tnzopaukgd th {
+  border-style: none;
+}
+
+#tnzopaukgd p {
+  margin: 0;
+  padding: 0;
+}
+
+#tnzopaukgd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 33px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tnzopaukgd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tnzopaukgd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tnzopaukgd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tnzopaukgd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tnzopaukgd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tnzopaukgd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tnzopaukgd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tnzopaukgd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tnzopaukgd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tnzopaukgd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tnzopaukgd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tnzopaukgd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tnzopaukgd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tnzopaukgd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnzopaukgd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tnzopaukgd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tnzopaukgd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tnzopaukgd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnzopaukgd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tnzopaukgd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnzopaukgd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tnzopaukgd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnzopaukgd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tnzopaukgd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnzopaukgd .gt_left {
+  text-align: left;
+}
+
+#tnzopaukgd .gt_center {
+  text-align: center;
+}
+
+#tnzopaukgd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tnzopaukgd .gt_font_normal {
+  font-weight: normal;
+}
+
+#tnzopaukgd .gt_font_bold {
+  font-weight: bold;
+}
+
+#tnzopaukgd .gt_font_italic {
+  font-style: italic;
+}
+
+#tnzopaukgd .gt_super {
+  font-size: 65%;
+}
+
+#tnzopaukgd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tnzopaukgd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tnzopaukgd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tnzopaukgd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tnzopaukgd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tnzopaukgd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tnzopaukgd .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#tnzopaukgd .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#tnzopaukgd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate1">estimate1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate2">estimate2</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="estimate1" class="gt_row gt_right">0.01124471</td>
+<td headers="estimate2" class="gt_row gt_right">0.01112966</td>
+<td headers="statistic" class="gt_row gt_right">0.01747975</td>
+<td headers="p.value" class="gt_row gt_right">0.8948174</td>
+<td headers="parameter" class="gt_row gt_right">1</td>
+<td headers="conf.low" class="gt_row gt_right">-0.001282751</td>
+<td headers="conf.high" class="gt_row gt_right">0.001512853</td>
+<td headers="method" class="gt_row gt_left">2-sample test for equality of proportions with continuity correction</td>
+<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>Note: We expect some differences between the test statistic and p-value calculated by hand vs.&nbsp;by R. R uses a slightly different method to calculate.</li>
+</ul>
+</section>
+<section id="step-6-conclusion-to-hypothesis-test-1" class="slide level2">
+<h2>Step 6: Conclusion to hypothesis test</h2>
 <p><span class="math display">\[\begin{align}
 H_0:&amp; p_{mamm} - p_{ctrl} = 0\\
 H_A:&amp; p_{mamm} - p_{ctrl} \neq 0\\
@@ -1800,9 +2888,20 @@ H_A:&amp; p_{mamm} - p_{ctrl} \neq 0\\
 </ul>
 </section></section>
 <section>
-<section id="lob-4" class="title-slide slide level1 center">
-<h1>Lob</h1>
-
+<section id="learning-objectives-6" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion</p></li>
+<li><p>Run a hypothesis test for a single proportion and interpret the results.</p></li>
+<li><p>Construct and interpret confidence intervals for a single proportion.</p></li>
+<li><p>Understand how CLT applies to a difference in binomial random variables</p></li>
+<li><p>Run a hypothesis test for a difference in proportions and interpret the results.</p></li>
+</ol>
+<div class="lob">
+<ol start="6" type="1">
+<li>Construct and interpret confidence intervals for a difference in proportions.</li>
+</ol>
+</div>
 </section>
 <section id="conditions-for-difference-in-proportions-test-vs.-ci" class="slide level2">
 <h2>Conditions for difference in proportions: <strong>test vs.&nbsp;CI</strong></h2>
@@ -1877,7 +2976,7 @@ H_A:&amp; p_{mamm} - p_{ctrl} \neq 0\\
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Problem: We don’t know what <span class="math inline">\(p\)</span> is - it’s what we’re estimating with the CI.<br>
-Solution: <span style="color:purple">approximate <span class="math inline">\(p_1\)</span>, <span class="math inline">\(p_2\)</span> with <span class="math inline">\(\hat{p}_1\)</span>, <span class="math inline">\(\hat{p}_2\)</span></span>:</p>
+Solution: <span style="color:#5BAFF8">approximate <span class="math inline">\(p_1\)</span>, <span class="math inline">\(p_2\)</span> with <span class="math inline">\(\hat{p}_1\)</span>, <span class="math inline">\(\hat{p}_2\)</span></span>:</p>
 </div><div class="column" style="width:50%;">
 <p><span class="math display">\[SE_{\hat{p}_1 - \hat{p}_2} = \sqrt{
 \frac{\hat{p}_1\cdot(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2\cdot(1-\hat{p}_2)}{n_2}}\]</span></p>
@@ -1899,3711 +2998,34 @@ Solution: <span style="color:purple">approximate <span class="math inline">\(p_1
 <p>Used <span class="math inline">\(z^*\)</span> = <code>qnorm(0.975)</code> = 1.96</p>
 <p>&nbsp;</p>
 <p><strong>Interpretation</strong>:<br>
-We are 95% confident that the difference in (population) proportions of young male college and noncollege students that participated in sports betting in the previous year is in (-0.127, 0.106).</p>
+We are 95% confident that the difference in (population) proportions of deaths due to breast cancer comparing people who received annual mammograms to annual physical check-ups is between -0.002 and 0.002.</p>
 </section>
 <section id="ci-for-the-population-difference-in-proportions-1" class="slide level2">
 <h2>95% CI for the population difference in proportions</h2>
-<p>NEED TO COMPLETE!!!</p>
 <ul>
-<li>We can use R to get those same values</li>
+<li>We can use R to get similar values</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">21</span>, <span class="at">n =</span> <span class="dv">52</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>, <span class="at">correct =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">505</span>, <span class="dv">500</span>), <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">44910</span>, <span class="dv">44925</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    1-sample proportions test with continuity correction
+    2-sample test for equality of proportions with continuity correction
 
-data:  21 out of 52, null probability 0.5
-X-squared = 1.5577, df = 1, p-value = 0.212
-alternative hypothesis: true p is not equal to 0.5
-95 percent confidence interval:
- 0.2731269 0.5487141
-sample estimates:
-        p 
-0.4038462 </code></pre>
-</div>
-</div>
-<div class="cell">
-<details>
-<summary>We can tidy the output</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># t.test(x = chol$DiffChol, mu = 0) %&gt;% tidy() %&gt;% gt() %&gt;% </span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="co">#   tab_options(table.font.size = 35) # use a different size in your HW</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Conclusion:<br>
-We are 95% confident that the (population) proportion of individuals with an immune response is between -0.002 and 0.002.</p>
-</section></section>
-<section id="r-1--and-2-sample-proportions-tests" class="title-slide slide level1 center">
-<h1>R: 1- and 2-sample proportions tests</h1>
-<p><code>prop.test(x, n, p = NULL,</code><br>
-&nbsp; &nbsp; &nbsp; <code>alternative = c("two.sided", "less", "greater"),</code><br>
-&nbsp; &nbsp; &nbsp; <code>conf.level = 0.95,</code><br>
-&nbsp; &nbsp; &nbsp; <code>correct = TRUE)</code></p>
-<ul>
-<li>2 options for data input
-<ol type="1">
-<li>Summary counts
-<ul>
-<li><code>x</code> = vector with counts of “successes”</li>
-<li><code>n</code> = vector with sample size in each group</li>
-</ul></li>
-<li>Dataset
-<ul>
-<li><code>x = table()</code> of dataset</li>
-<li>Need to create a dataset based on the summary stats if do not already have one</li>
-</ul></li>
-</ol></li>
-<li>Continuity correction</li>
-</ul>
-</section>
-
-<section>
-<section id="r-1-sample-proportion-test" class="title-slide slide level1 center">
-<h1>R: 1-sample proportion test</h1>
-<p>“1-prop z-test”</p>
-</section>
-<section id="summary-stats-input-for-1-sample-proportion-test" class="slide level2">
-<h2>Summary stats input for 1-sample proportion test</h2>
-<p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.<br>
-Test <span class="math inline">\(H_0: p=0.36\)</span> vs.&nbsp;<span class="math inline">\(H_A: p \neq 0.36\)</span>?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes"; round this value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 94.15</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">94</span>, <span class="at">n =</span> <span class="dv">269</span>,              <span class="co"># x = # successes &amp; n = sample size</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>          <span class="at">p =</span> <span class="fl">0.36</span>,                     <span class="co"># null value p0</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a>          <span class="at">alternative =</span> <span class="st">"two.sided"</span>,    <span class="co"># 2-sided alternative</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>)              <span class="co"># no continuity correction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    1-sample proportions test without continuity correction
-
-data:  94 out of 269, null probability 0.36
-X-squared = 0.13014, df = 1, p-value = 0.7183
-alternative hypothesis: true p is not equal to 0.36
-95 percent confidence interval:
- 0.2949476 0.4081767
-sample estimates:
-        p 
-0.3494424 </code></pre>
-</div>
-</div>
-<p>Can <code>tidy()</code> test output:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">94</span>, <span class="at">n =</span> <span class="dv">269</span>, <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="jjqbcjfoxs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jjqbcjfoxs table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#jjqbcjfoxs thead, #jjqbcjfoxs tbody, #jjqbcjfoxs tfoot, #jjqbcjfoxs tr, #jjqbcjfoxs td, #jjqbcjfoxs th {
-  border-style: none;
-}
-
-#jjqbcjfoxs p {
-  margin: 0;
-  padding: 0;
-}
-
-#jjqbcjfoxs .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#jjqbcjfoxs .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#jjqbcjfoxs .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#jjqbcjfoxs .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#jjqbcjfoxs .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#jjqbcjfoxs .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#jjqbcjfoxs .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#jjqbcjfoxs .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#jjqbcjfoxs .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#jjqbcjfoxs .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#jjqbcjfoxs .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#jjqbcjfoxs .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#jjqbcjfoxs .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#jjqbcjfoxs .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#jjqbcjfoxs .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jjqbcjfoxs .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#jjqbcjfoxs .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#jjqbcjfoxs .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#jjqbcjfoxs .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jjqbcjfoxs .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#jjqbcjfoxs .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jjqbcjfoxs .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#jjqbcjfoxs .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jjqbcjfoxs .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#jjqbcjfoxs .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jjqbcjfoxs .gt_left {
-  text-align: left;
-}
-
-#jjqbcjfoxs .gt_center {
-  text-align: center;
-}
-
-#jjqbcjfoxs .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#jjqbcjfoxs .gt_font_normal {
-  font-weight: normal;
-}
-
-#jjqbcjfoxs .gt_font_bold {
-  font-weight: bold;
-}
-
-#jjqbcjfoxs .gt_font_italic {
-  font-style: italic;
-}
-
-#jjqbcjfoxs .gt_super {
-  font-size: 65%;
-}
-
-#jjqbcjfoxs .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#jjqbcjfoxs .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#jjqbcjfoxs .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#jjqbcjfoxs .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#jjqbcjfoxs .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#jjqbcjfoxs .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#jjqbcjfoxs .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#jjqbcjfoxs .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#jjqbcjfoxs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate" class="gt_row gt_right">0.3494424</td>
-<td headers="statistic" class="gt_row gt_right">0.1301373</td>
-<td headers="p.value" class="gt_row gt_right">0.7182897</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">0.2949476</td>
-<td headers="conf.high" class="gt_row gt_right">0.4081767</td>
-<td headers="method" class="gt_row gt_left">1-sample proportions test without continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="dataset-input-for-1-sample-proportion-test-12" class="slide level2">
-<h2>Dataset input for 1-sample proportion test (1/2)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Since we don’t have a dataset, we first need to create a dataset based on the results:</p>
-<blockquote>
-<p>“out of 269 male college students, 35% had participated in sports betting in the previous year”</p>
-</blockquote>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes"; round this value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 94.15</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>SportsBet1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb23-2"><a href="#cb23-2"></a>  <span class="at">Coll =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Bet"</span>, <span class="dv">94</span>),</span>
-<span id="cb23-3"><a href="#cb23-3"></a>           <span class="fu">rep</span>(<span class="st">"NotBet"</span>,<span class="dv">269-94</span>))</span>
-<span id="cb23-4"><a href="#cb23-4"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">glimpse</span>(SportsBet1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 269
-Columns: 1
-$ Coll &lt;chr&gt; "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "B…</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>SportsBet1 <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Coll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Coll   n   percent
-    Bet  94 0.3494424
- NotBet 175 0.6505576</code></pre>
-</div>
-</div>
-<p><br></p>
-<p>R code for proportions test requires input as a base R <code>table</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-   Bet NotBet 
-    94    175 </code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="dataset-input-for-1-sample-proportion-test-22" class="slide level2">
-<h2>Dataset input for 1-sample proportion test (2/2)</h2>
-<ul>
-<li>When using a dataset, <code>prop.test</code> requires the input <code>x</code> to be a table</li>
-<li>Note that we do not also specify <code>n</code> since the table already includes all needed information.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll),   <span class="co"># table() of data</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a>          <span class="at">p =</span> <span class="fl">0.36</span>,                     <span class="co"># null value p0</span></span>
-<span id="cb30-3"><a href="#cb30-3"></a>          <span class="at">alternative =</span> <span class="st">"two.sided"</span>,    <span class="co"># 2-sided alternative</span></span>
-<span id="cb30-4"><a href="#cb30-4"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>)              <span class="co"># no continuity correction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    1-sample proportions test without continuity correction
-
-data:  table(SportsBet1$Coll), null probability 0.36
-X-squared = 0.13014, df = 1, p-value = 0.7183
-alternative hypothesis: true p is not equal to 0.36
-95 percent confidence interval:
- 0.2949476 0.4081767
-sample estimates:
-        p 
-0.3494424 </code></pre>
-</div>
-</div>
-<p>Compare output with summary stats method:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">94</span>, <span class="at">n =</span> <span class="dv">269</span>,              <span class="co"># x = # successes &amp; n = sample size</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a>          <span class="at">p =</span> <span class="fl">0.36</span>,                     <span class="co"># null value p0</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a>          <span class="at">alternative =</span> <span class="st">"two.sided"</span>,    <span class="co"># 2-sided alternative</span></span>
-<span id="cb32-4"><a href="#cb32-4"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>)  <span class="sc">%&gt;%</span>         <span class="co"># no continuity correction</span></span>
-<span id="cb32-5"><a href="#cb32-5"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="tsyhthflte" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tsyhthflte table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#tsyhthflte thead, #tsyhthflte tbody, #tsyhthflte tfoot, #tsyhthflte tr, #tsyhthflte td, #tsyhthflte th {
-  border-style: none;
-}
-
-#tsyhthflte p {
-  margin: 0;
-  padding: 0;
-}
-
-#tsyhthflte .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#tsyhthflte .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#tsyhthflte .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#tsyhthflte .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#tsyhthflte .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#tsyhthflte .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#tsyhthflte .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#tsyhthflte .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#tsyhthflte .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#tsyhthflte .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#tsyhthflte .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#tsyhthflte .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#tsyhthflte .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#tsyhthflte .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#tsyhthflte .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#tsyhthflte .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#tsyhthflte .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#tsyhthflte .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#tsyhthflte .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#tsyhthflte .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#tsyhthflte .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#tsyhthflte .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#tsyhthflte .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#tsyhthflte .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#tsyhthflte .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#tsyhthflte .gt_left {
-  text-align: left;
-}
-
-#tsyhthflte .gt_center {
-  text-align: center;
-}
-
-#tsyhthflte .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#tsyhthflte .gt_font_normal {
-  font-weight: normal;
-}
-
-#tsyhthflte .gt_font_bold {
-  font-weight: bold;
-}
-
-#tsyhthflte .gt_font_italic {
-  font-style: italic;
-}
-
-#tsyhthflte .gt_super {
-  font-size: 65%;
-}
-
-#tsyhthflte .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#tsyhthflte .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#tsyhthflte .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#tsyhthflte .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#tsyhthflte .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#tsyhthflte .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#tsyhthflte .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#tsyhthflte .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#tsyhthflte div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate" class="gt_row gt_right">0.3494424</td>
-<td headers="statistic" class="gt_row gt_right">0.1301373</td>
-<td headers="p.value" class="gt_row gt_right">0.7182897</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">0.2949476</td>
-<td headers="conf.high" class="gt_row gt_right">0.4081767</td>
-<td headers="method" class="gt_row gt_left">1-sample proportions test without continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="continuity-correction-1-prop-z-test-with-vs.-without-cc" class="slide level2">
-<h2>Continuity correction: 1-prop z-test with vs.&nbsp;without CC</h2>
-<ul>
-<li>Recall that when we approximated the</li>
-<li>binomial distribution with a normal distribution to calculate a probability,</li>
-<li>that we included a continuity correction (CC)</li>
-<li>to account for approximating a discrete distribution with a continuous distribution.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">94</span>, <span class="at">n =</span> <span class="dv">269</span>, <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
-<span id="cb33-2"><a href="#cb33-2"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="kfnpngrrqn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kfnpngrrqn table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#kfnpngrrqn thead, #kfnpngrrqn tbody, #kfnpngrrqn tfoot, #kfnpngrrqn tr, #kfnpngrrqn td, #kfnpngrrqn th {
-  border-style: none;
-}
-
-#kfnpngrrqn p {
-  margin: 0;
-  padding: 0;
-}
-
-#kfnpngrrqn .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#kfnpngrrqn .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#kfnpngrrqn .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#kfnpngrrqn .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#kfnpngrrqn .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#kfnpngrrqn .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#kfnpngrrqn .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#kfnpngrrqn .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#kfnpngrrqn .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#kfnpngrrqn .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#kfnpngrrqn .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#kfnpngrrqn .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#kfnpngrrqn .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#kfnpngrrqn .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#kfnpngrrqn .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#kfnpngrrqn .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#kfnpngrrqn .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#kfnpngrrqn .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#kfnpngrrqn .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#kfnpngrrqn .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#kfnpngrrqn .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#kfnpngrrqn .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#kfnpngrrqn .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#kfnpngrrqn .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#kfnpngrrqn .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#kfnpngrrqn .gt_left {
-  text-align: left;
-}
-
-#kfnpngrrqn .gt_center {
-  text-align: center;
-}
-
-#kfnpngrrqn .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#kfnpngrrqn .gt_font_normal {
-  font-weight: normal;
-}
-
-#kfnpngrrqn .gt_font_bold {
-  font-weight: bold;
-}
-
-#kfnpngrrqn .gt_font_italic {
-  font-style: italic;
-}
-
-#kfnpngrrqn .gt_super {
-  font-size: 65%;
-}
-
-#kfnpngrrqn .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#kfnpngrrqn .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#kfnpngrrqn .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#kfnpngrrqn .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#kfnpngrrqn .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#kfnpngrrqn .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#kfnpngrrqn .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#kfnpngrrqn .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#kfnpngrrqn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate" class="gt_row gt_right">0.3494424</td>
-<td headers="statistic" class="gt_row gt_right">0.1301373</td>
-<td headers="p.value" class="gt_row gt_right">0.7182897</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">0.2949476</td>
-<td headers="conf.high" class="gt_row gt_right">0.4081767</td>
-<td headers="method" class="gt_row gt_left">1-sample proportions test without continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">94</span>, <span class="at">n =</span> <span class="dv">269</span>, <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
-<span id="cb34-2"><a href="#cb34-2"></a>          <span class="at">correct =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="uyptfprcak" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uyptfprcak table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#uyptfprcak thead, #uyptfprcak tbody, #uyptfprcak tfoot, #uyptfprcak tr, #uyptfprcak td, #uyptfprcak th {
-  border-style: none;
-}
-
-#uyptfprcak p {
-  margin: 0;
-  padding: 0;
-}
-
-#uyptfprcak .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#uyptfprcak .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#uyptfprcak .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#uyptfprcak .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#uyptfprcak .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#uyptfprcak .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#uyptfprcak .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#uyptfprcak .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#uyptfprcak .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#uyptfprcak .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#uyptfprcak .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#uyptfprcak .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#uyptfprcak .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#uyptfprcak .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#uyptfprcak .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uyptfprcak .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#uyptfprcak .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#uyptfprcak .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#uyptfprcak .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uyptfprcak .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#uyptfprcak .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uyptfprcak .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#uyptfprcak .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uyptfprcak .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#uyptfprcak .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uyptfprcak .gt_left {
-  text-align: left;
-}
-
-#uyptfprcak .gt_center {
-  text-align: center;
-}
-
-#uyptfprcak .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#uyptfprcak .gt_font_normal {
-  font-weight: normal;
-}
-
-#uyptfprcak .gt_font_bold {
-  font-weight: bold;
-}
-
-#uyptfprcak .gt_font_italic {
-  font-style: italic;
-}
-
-#uyptfprcak .gt_super {
-  font-size: 65%;
-}
-
-#uyptfprcak .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#uyptfprcak .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#uyptfprcak .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#uyptfprcak .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#uyptfprcak .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#uyptfprcak .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#uyptfprcak .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#uyptfprcak .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#uyptfprcak div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate" class="gt_row gt_right">0.3494424</td>
-<td headers="statistic" class="gt_row gt_right">0.08834805</td>
-<td headers="p.value" class="gt_row gt_right">0.7662879</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">0.2931841</td>
-<td headers="conf.high" class="gt_row gt_right">0.4100774</td>
-<td headers="method" class="gt_row gt_left">1-sample proportions test with continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<p>Differences are small when sample sizes are large.</p>
-</section></section>
-<section>
-<section id="r-2-samples-proportion-test" class="title-slide slide level1 center">
-<h1>R: 2-samples proportion test</h1>
-<p>“2-prop z-test”</p>
-</section>
-<section id="summary-stats-input-for-2-samples-proportion-test" class="slide level2">
-<h2>Summary stats input for 2-samples proportion test</h2>
-<p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had. Test <span class="math inline">\(H_0: p_{coll} - p_{noncoll} = 0\)</span> vs.&nbsp;<span class="math inline">\(H_A: p_{coll} - p_{noncoll} \neq 0\)</span>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># round the number of successes:</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes" in college students</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 94.15</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>.<span class="dv">36</span><span class="sc">*</span><span class="dv">214</span> <span class="co"># number of "successes" in noncollege students</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 77.04</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>NmbrBet <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">94</span>, <span class="dv">77</span>)                    <span class="co"># vector for # of successes in each group</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a>TotalNmbr <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">269</span>, <span class="dv">214</span>)                <span class="co"># vector for sample size in each group</span></span>
-<span id="cb39-3"><a href="#cb39-3"></a></span>
-<span id="cb39-4"><a href="#cb39-4"></a><span class="fu">prop.test</span>(<span class="at">x =</span> NmbrBet,                  <span class="co"># x is # of successes in each group </span></span>
-<span id="cb39-5"><a href="#cb39-5"></a>          <span class="at">n =</span> TotalNmbr,                <span class="co"># n is sample size in each group</span></span>
-<span id="cb39-6"><a href="#cb39-6"></a>          <span class="at">alternative =</span> <span class="st">"two.sided"</span>,    <span class="co"># 2-sided alternative</span></span>
-<span id="cb39-7"><a href="#cb39-7"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>)              <span class="co"># no continuity correction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    2-sample test for equality of proportions without continuity correction
-
-data:  NmbrBet out of TotalNmbr
-X-squared = 0.05605, df = 1, p-value = 0.8129
+data:  c(505, 500) out of c(44910, 44925)
+X-squared = 0.01748, df = 1, p-value = 0.8948
 alternative hypothesis: two.sided
 95 percent confidence interval:
- -0.09628540  0.07554399
+ -0.001282751  0.001512853
 sample estimates:
-   prop 1    prop 2 
-0.3494424 0.3598131 </code></pre>
+    prop 1     prop 2 
+0.01124471 0.01112966 </code></pre>
 </div>
 </div>
-</section>
-<section id="dataset-input-for-2-samples-proportion-test-12" class="slide level2">
-<h2>Dataset input for 2-samples proportion test (1/2)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Since we don’t have a dataset, we first need to create a dataset based on the results:</p>
-<blockquote>
-<p>“out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had”</p>
-</blockquote>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co"># round the number of successes:</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># college students</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 94.15</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>.<span class="dv">36</span><span class="sc">*</span><span class="dv">214</span> <span class="co"># noncollege students</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 77.04</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>SportsBet2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb45-2"><a href="#cb45-2"></a>  <span class="at">Group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"College"</span>, <span class="dv">269</span>), </span>
-<span id="cb45-3"><a href="#cb45-3"></a>         <span class="fu">rep</span>(<span class="st">"NonCollege"</span>, <span class="dv">214</span>)),</span>
-<span id="cb45-4"><a href="#cb45-4"></a>  <span class="at">Bet =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"yes"</span>, <span class="dv">94</span>), </span>
-<span id="cb45-5"><a href="#cb45-5"></a>          <span class="fu">rep</span>(<span class="st">"no"</span>, <span class="dv">269-94</span>),</span>
-<span id="cb45-6"><a href="#cb45-6"></a>          <span class="fu">rep</span>(<span class="st">"yes"</span>, <span class="dv">77</span>), </span>
-<span id="cb45-7"><a href="#cb45-7"></a>          <span class="fu">rep</span>(<span class="st">"no"</span>, <span class="dv">214-77</span>))</span>
-<span id="cb45-8"><a href="#cb45-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">glimpse</span>(SportsBet2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 483
-Columns: 2
-$ Group &lt;chr&gt; "College", "College", "College", "College", "College", "College"…
-$ Bet   &lt;chr&gt; "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "…</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>SportsBet2 <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Group, Bet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      Group  no yes
-    College 175  94
- NonCollege 137  77</code></pre>
-</div>
-</div>
-<p><br></p>
-<p>R code for proportions test requires input as a base R <code>table</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, </span>
-<span id="cb50-2"><a href="#cb50-2"></a>      SportsBet2<span class="sc">$</span>Bet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            
-              no yes
-  College    175  94
-  NonCollege 137  77</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="dataset-input-for-2-samples-proportion-test-22" class="slide level2">
-<h2>Dataset input for 2-samples proportion test (2/2)</h2>
+<p><strong>R Conclusion:</strong><br>
+We are 95% confident that the difference in (population) proportions of deaths due to breast cancer comparing people who received annual mammograms to annual physical check-ups is between -0.0013 and 0.0015.</p>
 <ul>
-<li>When using a dataset, <code>prop.test</code> requires the input <code>x</code> to be a table</li>
-<li>Note that we do not also specify <code>n</code> since the table already includes all needed information.</li>
+<li>Note: We expect some differences between the confidence interval calculated by hand vs.&nbsp;by R. R uses a slightly different method to calculate.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet),</span>
-<span id="cb52-2"><a href="#cb52-2"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb52-3"><a href="#cb52-3"></a>       <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    2-sample test for equality of proportions without continuity correction
-
-data:  table(SportsBet2$Group, SportsBet2$Bet)
-X-squared = 0.05605, df = 1, p-value = 0.8129
-alternative hypothesis: two.sided
-95 percent confidence interval:
- -0.07554399  0.09628540
-sample estimates:
-   prop 1    prop 2 
-0.6505576 0.6401869 </code></pre>
-</div>
-</div>
-<p>Compare output with summary stats method:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> NmbrBet,                  <span class="co"># x is # of successes in each group </span></span>
-<span id="cb54-2"><a href="#cb54-2"></a>          <span class="at">n =</span> TotalNmbr,                <span class="co"># n is sample size in each group</span></span>
-<span id="cb54-3"><a href="#cb54-3"></a>          <span class="at">alternative =</span> <span class="st">"two.sided"</span>,    <span class="co"># 2-sided alternative</span></span>
-<span id="cb54-4"><a href="#cb54-4"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span>          <span class="co"># no continuity correction</span></span>
-<span id="cb54-5"><a href="#cb54-5"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="hqyzmfdxqw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hqyzmfdxqw table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#hqyzmfdxqw thead, #hqyzmfdxqw tbody, #hqyzmfdxqw tfoot, #hqyzmfdxqw tr, #hqyzmfdxqw td, #hqyzmfdxqw th {
-  border-style: none;
-}
-
-#hqyzmfdxqw p {
-  margin: 0;
-  padding: 0;
-}
-
-#hqyzmfdxqw .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#hqyzmfdxqw .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#hqyzmfdxqw .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#hqyzmfdxqw .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#hqyzmfdxqw .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#hqyzmfdxqw .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#hqyzmfdxqw .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#hqyzmfdxqw .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#hqyzmfdxqw .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#hqyzmfdxqw .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#hqyzmfdxqw .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#hqyzmfdxqw .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#hqyzmfdxqw .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#hqyzmfdxqw .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#hqyzmfdxqw .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#hqyzmfdxqw .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#hqyzmfdxqw .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#hqyzmfdxqw .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#hqyzmfdxqw .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#hqyzmfdxqw .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#hqyzmfdxqw .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#hqyzmfdxqw .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#hqyzmfdxqw .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#hqyzmfdxqw .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#hqyzmfdxqw .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#hqyzmfdxqw .gt_left {
-  text-align: left;
-}
-
-#hqyzmfdxqw .gt_center {
-  text-align: center;
-}
-
-#hqyzmfdxqw .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#hqyzmfdxqw .gt_font_normal {
-  font-weight: normal;
-}
-
-#hqyzmfdxqw .gt_font_bold {
-  font-weight: bold;
-}
-
-#hqyzmfdxqw .gt_font_italic {
-  font-style: italic;
-}
-
-#hqyzmfdxqw .gt_super {
-  font-size: 65%;
-}
-
-#hqyzmfdxqw .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#hqyzmfdxqw .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#hqyzmfdxqw .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#hqyzmfdxqw .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#hqyzmfdxqw .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#hqyzmfdxqw .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#hqyzmfdxqw .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#hqyzmfdxqw .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#hqyzmfdxqw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate1">estimate1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate2">estimate2</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate1" class="gt_row gt_right">0.3494424</td>
-<td headers="estimate2" class="gt_row gt_right">0.3598131</td>
-<td headers="statistic" class="gt_row gt_right">0.05605044</td>
-<td headers="p.value" class="gt_row gt_right">0.8128509</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">-0.0962854</td>
-<td headers="conf.high" class="gt_row gt_right">0.07554399</td>
-<td headers="method" class="gt_row gt_left">2-sample test for equality of proportions without continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="continuity-correction-2-prop-z-test-with-vs.-without-cc" class="slide level2">
-<h2>Continuity correction: 2-prop z-test with vs.&nbsp;without CC</h2>
-<ul>
-<li>Recall that when we approximated the</li>
-<li>binomial distribution with a normal distribution to calculate a probability,</li>
-<li>that we included a continuity correction (CC)</li>
-<li>to account for approximating a discrete distribution with a continuous distribution.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> NmbrBet, <span class="at">n =</span> TotalNmbr, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
-<span id="cb55-2"><a href="#cb55-2"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="seapexzseb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#seapexzseb table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#seapexzseb thead, #seapexzseb tbody, #seapexzseb tfoot, #seapexzseb tr, #seapexzseb td, #seapexzseb th {
-  border-style: none;
-}
-
-#seapexzseb p {
-  margin: 0;
-  padding: 0;
-}
-
-#seapexzseb .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#seapexzseb .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#seapexzseb .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#seapexzseb .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#seapexzseb .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#seapexzseb .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#seapexzseb .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#seapexzseb .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#seapexzseb .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#seapexzseb .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#seapexzseb .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#seapexzseb .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#seapexzseb .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#seapexzseb .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#seapexzseb .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#seapexzseb .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#seapexzseb .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#seapexzseb .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#seapexzseb .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#seapexzseb .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#seapexzseb .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#seapexzseb .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#seapexzseb .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#seapexzseb .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#seapexzseb .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#seapexzseb .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#seapexzseb .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#seapexzseb .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#seapexzseb .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#seapexzseb .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#seapexzseb .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#seapexzseb .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#seapexzseb .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#seapexzseb .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#seapexzseb .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#seapexzseb .gt_left {
-  text-align: left;
-}
-
-#seapexzseb .gt_center {
-  text-align: center;
-}
-
-#seapexzseb .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#seapexzseb .gt_font_normal {
-  font-weight: normal;
-}
-
-#seapexzseb .gt_font_bold {
-  font-weight: bold;
-}
-
-#seapexzseb .gt_font_italic {
-  font-style: italic;
-}
-
-#seapexzseb .gt_super {
-  font-size: 65%;
-}
-
-#seapexzseb .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#seapexzseb .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#seapexzseb .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#seapexzseb .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#seapexzseb .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#seapexzseb .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#seapexzseb .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#seapexzseb .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#seapexzseb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate1">estimate1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate2">estimate2</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate1" class="gt_row gt_right">0.3494424</td>
-<td headers="estimate2" class="gt_row gt_right">0.3598131</td>
-<td headers="statistic" class="gt_row gt_right">0.05605044</td>
-<td headers="p.value" class="gt_row gt_right">0.8128509</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">-0.0962854</td>
-<td headers="conf.high" class="gt_row gt_right">0.07554399</td>
-<td headers="method" class="gt_row gt_left">2-sample test for equality of proportions without continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> NmbrBet, <span class="at">n =</span> TotalNmbr, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
-<span id="cb56-2"><a href="#cb56-2"></a>          <span class="at">correct =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="sotjnmlnpf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#sotjnmlnpf table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#sotjnmlnpf thead, #sotjnmlnpf tbody, #sotjnmlnpf tfoot, #sotjnmlnpf tr, #sotjnmlnpf td, #sotjnmlnpf th {
-  border-style: none;
-}
-
-#sotjnmlnpf p {
-  margin: 0;
-  padding: 0;
-}
-
-#sotjnmlnpf .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#sotjnmlnpf .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#sotjnmlnpf .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#sotjnmlnpf .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#sotjnmlnpf .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#sotjnmlnpf .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#sotjnmlnpf .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#sotjnmlnpf .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#sotjnmlnpf .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#sotjnmlnpf .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#sotjnmlnpf .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#sotjnmlnpf .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#sotjnmlnpf .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#sotjnmlnpf .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#sotjnmlnpf .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sotjnmlnpf .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#sotjnmlnpf .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#sotjnmlnpf .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#sotjnmlnpf .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sotjnmlnpf .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#sotjnmlnpf .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sotjnmlnpf .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#sotjnmlnpf .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sotjnmlnpf .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#sotjnmlnpf .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sotjnmlnpf .gt_left {
-  text-align: left;
-}
-
-#sotjnmlnpf .gt_center {
-  text-align: center;
-}
-
-#sotjnmlnpf .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#sotjnmlnpf .gt_font_normal {
-  font-weight: normal;
-}
-
-#sotjnmlnpf .gt_font_bold {
-  font-weight: bold;
-}
-
-#sotjnmlnpf .gt_font_italic {
-  font-style: italic;
-}
-
-#sotjnmlnpf .gt_super {
-  font-size: 65%;
-}
-
-#sotjnmlnpf .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#sotjnmlnpf .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#sotjnmlnpf .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#sotjnmlnpf .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#sotjnmlnpf .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#sotjnmlnpf .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#sotjnmlnpf .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#sotjnmlnpf .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#sotjnmlnpf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate1">estimate1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate2">estimate2</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate1" class="gt_row gt_right">0.3494424</td>
-<td headers="estimate2" class="gt_row gt_right">0.3598131</td>
-<td headers="statistic" class="gt_row gt_right">0.01987511</td>
-<td headers="p.value" class="gt_row gt_right">0.8878864</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">-0.1004806</td>
-<td headers="conf.high" class="gt_row gt_right">0.07973918</td>
-<td headers="method" class="gt_row gt_left">2-sample test for equality of proportions with continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<p>Differences are small when sample sizes are large.</p>
 
 <div class="footer footer-default">
 <p>Lesson 15 Slides</p>

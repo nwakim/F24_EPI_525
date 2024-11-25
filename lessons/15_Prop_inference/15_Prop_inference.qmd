@@ -50,11 +50,18 @@ theme_set(theme_bw(base_size = 22))
 
 # Learning Objectives
 
-1.  Understand how CLT applies to a binomial random variable
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
 
-2.  Construct and interpret confidence intervals for a single proportion.
+2.  Run a hypothesis test for a single proportion and interpret the results.
 
-3.  Run a hypothesis test for a single proportion and interpret the results.
+3.  Construct and interpret confidence intervals for a single proportion.
+
+4.  Understand how CLT applies to a difference in binomial random variables
+
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+
+6.  Construct and interpret confidence intervals for a difference in proportions.
+
 
 ```{css, echo=FALSE}
 .reveal code {
@@ -66,6 +73,22 @@ theme_set(theme_bw(base_size = 22))
 
 ![](../img_slides/course_map.png){fig-align="center"}
 
+# Learning Objectives
+
+::: lob
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
+:::
+
+2.  Run a hypothesis test for a single proportion and interpret the results.
+
+3.  Construct and interpret confidence intervals for a single proportion.
+
+4.  Understand how CLT applies to a difference in binomial random variables
+
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+
+6.  Construct and interpret confidence intervals for a difference in proportions.
+
 ## Moving to categorical outcomes
 
 -   Previously, we have discussed methods of inference for numerical data
@@ -74,10 +97,17 @@ theme_set(theme_bw(base_size = 22))
     -   We were doing inference of **means**
     -   We found confidence intervals for means
     -   We ran hypothesis tests for means
+    
+ 
 
--   The methods used can be extended to **categorical data**, such as binomial proportions or data in two-way tables
+-   Above methods used can be extended to **categorical data**, such as binomial **proportions** or data in two-way tables
 
--   Categorical data arise frequently in medical research because disease outcomes and patient characteristics are often recorded in natural categories such as types of treatment received, whether or not disease advanced to a later stage, or whether or not a patient responded initially to a treatment
+ 
+
+-   **Categorical data arise frequently in medical research**
+  
+    - Disease outcomes and patient characteristics are often recorded in natural categories 
+    - **Examples:** types of treatment received, whether or not disease advanced to a later stage, or whether or not a patient responded initially to a treatment
 
 ## From Lesson 5: Binomial random variable
 
@@ -119,7 +149,7 @@ $$P(X = x) = \binom{n}{x} p^x (1-p)^{n-x},  x= 0, 1, 2, \dots, n $$
 
 -   The parameters of a binomial distribution are $p$ and $n$.
 
--   If a r.v. $X$ is modeled by a binomial distribution, then we write in shorthand
+-   If a r.v. $X$ is modeled by a binomial distribution, then we write in shorthand $X \sim \text{Binom}(n,p)$
 
 ::::: orange
 ::: orange-ttl
@@ -162,7 +192,7 @@ $$X \sim N\Big(\mu = np, \sigma = \sqrt{np(1-p)} \Big)$$
 
 $$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
 
--   What is big enough? At least 10 successes and 10 failures are expected in the sample: $np \geq 10$ and $n(1-p) \geq 10$
+-   What is "big enough"? At least 10 successes and 10 failures are expected in the sample: $np \geq 10$ and $n(1-p) \geq 10$
 
 ## For proportions: Population parameters vs. sample statistics
 
@@ -171,42 +201,16 @@ $$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n
 [**Population parameter**]{style="color:#C83532;"}
 
 -   Proportion: $p$, $\pi$ ("pi")
-
- 
-
--   Standard deviation: $\sqrt{n \cdot p \cdot (1-p)}$
--   Variance: $n \cdot p \cdot (1-p)$
 :::
 
 ::: {.column width="50%"}
 [**Sample statistic (point estimate)**]{style="color:#EF85B3;"}
 
 -   Sample proportion: $\hat{p}$ ("p-hat")
-
- 
-
--   Standard deviation: $\sqrt{n \cdot \hat{p} \cdot (1-\hat{p})}$
--   Variance: $n \cdot \hat{p} \cdot (1-\hat{p})$
 :::
 :::::
 
  
-
-## Where are we?
-
-::: {style="font-size: 90%;"}
-CI's and hypothesis tests for different scenarios:
-
-$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
-
-| Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| 10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$ |
-| 10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$ | $\frac{s_d}{\sqrt{n}}$ |
-| 11 | 5.3 | [Diff in pop <br> means]{style="color:black"} | [$\mu_1-\mu_2$]{style="color:black"} | [Diff in sample <br> means]{style="color:black"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:black"} | [$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled]{style="color:black"} |
-| 12 | 8.1 | [Pop proportion]{style="color:green"} | [$p$]{style="color:green"} | [Sample prop]{style="color:green"} | [$\widehat{p}$]{style="color:green"} | [**???**]{style="color:red"} |
-| 12 | 8.2 | [Diff in pop <br> proportions]{style="color:green"} | [$p_1-p_2$]{style="color:green"} | [Diff in sample <br> proportions]{style="color:green"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:green"} | [**???**]{style="color:red"} |
-:::
 
 ## Approaches to answer a research question
 
@@ -308,25 +312,63 @@ $$
 :::::::::
 ::::::::::::::
 
-# LOB
+## R code: 1- and 2-sample proportions tests
+
+```{r}
+#| eval: false
+
+prop.test(x, 
+          n, 
+          p = NULL, 
+          alternative = c("two.sided", "less", "greater"), 
+          conf.level = 0.95, 
+          correct = TRUE)
+```
+
+- `x`: Counts of successes (can have one x or a vector of multiple x's)
+- `n`: Number of trails (can have one n or a vector of multiple n's)
+- `p`: Null value that we think the population proportion is
+- `alternative`: If alternative hypothesis is $\neq$, $<$, or $>$
+    - Default is "two.sided" ($\neq$)
+- `conf.level` = Confidence level ($1-\alpha$)
+    - Default is `0.05`
+- `correct`: Continuity correction, whether we should use it or not
+    - Default is `TRUE` (Nicky says keep it this way!)
+
+# Learning Objectives
+
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
+
+::: lob
+2.  Run a hypothesis test for a single proportion and interpret the results.
+:::
+
+3.  Construct and interpret confidence intervals for a single proportion.
+
+4.  Understand how CLT applies to a difference in binomial random variables
+
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+
+6.  Construct and interpret confidence intervals for a difference in proportions.
 
 ## Example: immune response to advanced melanoma
 
 -   Looking for therapies that trigger an immune response to advanced melanoma
 
--   In a study where 52 patients were treated concurrently with two new therapies, nivolumab and ipilimumab, 21 had an immune response.[^1]
+-   In a study where 52 patients were treated concurrently with two new therapies, nivolumab and ipilimumab
+    - 21 had an immune response.[^1]
 
--   Our outcome that we are measuring is whether or not each person has an immune response
+-   **Outcome:** whether or not each person has an immune response
 
 [^1]: Wolchok, et. al. \textit{NEJM} (2013) 369(2): 122-33.
 
 Questions that can be addressed with inference...
 
--   What is the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab?
+-   What is the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab? (calculate $\hat{p}$)
 
--   What is the 95% confidence interval for the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab?
+-   What is the 95% confidence interval for the estimated population probability of immune response following concurrent therapy with nivolumab and ipilimumab? (95% CI of $p$)
 
--   In previous studies, the proportion of patients responding to one of these agents was 30% or less. Do these results suggest that the probability of response to concurrent therapy is better than 0.30?
+-   In previous studies, the proportion of patients responding to one of these agents was 30% or less. Do these results suggest that the probability of response to concurrent therapy is better than 0.30? (Hypothesis test of null of 0.3)
 
 ## Reference: Steps in a Hypothesis Test
 
@@ -357,6 +399,8 @@ The sampling distribution of $\hat{p}$ is approximately normal when
 
 2.  At least 10 successes and 10 failures are expected in the sample: $np_0 \geq 10$ and $n(1-p_0) \geq 10$.\footnote{This condition is commonly referred to as the success-failure condition.}
 
+ 
+
 -   Since $p$ is unknown, it is necessary to substitute $p_0$ (the null value) for $p$ when using the standard error to conduct hypothesis tests
     -   Because we are assuming the standard error of the null hypothesis!
 
@@ -369,6 +413,8 @@ n <- 52
 n*p0
 n*(1-p0)
 ```
+
+ 
 
 -   For the example, we have $p_0 = 0.30$
     -   We check: $n p_0 = `r n` \cdot `r p0` = `r round(n*p0, 3)` > 10$
@@ -589,11 +635,20 @@ pnorm(zp)
 :::
 :::::
 
-## Step 4-5:
+## Step 4-5: test statistic and p-value together using `prop.test()`
 
 ```{r}
-prop.test(x = 21, n = 52, conf.level = 0.95)
+prop.test(x = 21, n = 52, p = 0.30, correct = T)
 ```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Tidying the output of `prop.test()`"
+prop.test(x = 21, n = 52, p = 0.30, correct = T) %>% 
+  tidy() %>% gt() %>% tab_options(table.font.size = 40)
+```
+
+- Note: We expect some differences between the test statistic and p-value calculated by hand vs. by R. R uses a slightly different method to calculate. 
 
 ## Step 6: Conclusion to hypothesis test
 
@@ -613,7 +668,20 @@ H_A:& p \neq 0.30\\
 -   More realistic manuscript conclusion:
     -   In a sample of 52 individuals receiving treatment, 40.4% had an immune response, which is not different from 30% ( $p$-value = 0.102).
 
-# LOB
+# Learning Objectives
+
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
+2.  Run a hypothesis test for a single proportion and interpret the results.
+
+::: lob
+3.  Construct and interpret confidence intervals for a single proportion.
+:::
+
+4.  Understand how CLT applies to a difference in binomial random variables
+
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+
+6.  Construct and interpret confidence intervals for a difference in proportions.
 
 ## Conditions for one proportion: **test vs. CI**
 
@@ -695,7 +763,7 @@ $$\hat{p} \sim N\left(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{
 ::::: columns
 ::: {.column width="50%"}
 Problem: We don't know what $p$ is - it's what we're estimating with the CI.\
-Solution: [approximate $p$ with $\hat{p}$]{style="color:purple"}:
+Solution: [approximate $p$ with $\hat{p}$]{style="color:#5BAFF8"}:
 :::
 
 ::: {.column width="50%"}
@@ -703,7 +771,11 @@ $$SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
 :::
 :::::
 
-## 95% CI for the population proportion
+- Note that I am not using a continuity correction here! This means our "by hand" calculation will be different than our R calculation
+  - Using the continuity correction is more widely accepted
+  - So I would suggest using R to calculate the confidence intervals when you can!
+
+## 95% CI for population proportion of immune response by hand
 
 95% CI for population mean difference $p$:
 
@@ -742,40 +814,56 @@ Used $z^*$ = `qnorm(0.975)` = `r round(qnorm(0.975),3)`
 
  
 
-Conclusion:\
+**"By hand" Conclusion:**\
 We are 95% confident that the (population) proportion of individuals with an immune response is between `r round(LB, 3)` and `r round(UB, 3)`.
 :::
 :::::
 
-## 95% CI for population proportion (using R)
+## 95% CI for population proportion of immune response using R
 
-NEED TO COMPLETE!!!
-
--   We can use R to get those same values
+-   We can use R to get similar values
 
 ```{r}
 prop.test(x = 21, n = 52, conf.level = 0.95, correct = T)
 ```
 
 ```{r}
-#| code-fold: true
-#| code-summary: We can tidy the output
-# t.test(x = chol$DiffChol, mu = 0) %>% tidy() %>% gt() %>% 
-#   tab_options(table.font.size = 35) # use a different size in your HW
+#| echo: false
+
+tidy_test = prop.test(x = 21, n = 52, conf.level = 0.95, correct = T) %>% tidy()
 ```
 
-Conclusion:\
-We are 95% confident that the (population) proportion of individuals with an immune response is between `r round(LB, 3)` and `r round(UB, 3)`.
+**R Conclusion:**\
+We are 95% confident that the (population) proportion of individuals with an immune response is between `r round(tidy_test$conf.low, 3)` and `r round(tidy_test$conf.high, 3)`.
 
-# LOB
+- Note: We expect some differences between the confidence interval calculated by hand vs. by R. R uses a slightly different method to calculate. 
+
+# Learning Objectives
+
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
+2.  Run a hypothesis test for a single proportion and interpret the results.
+
+3.  Construct and interpret confidence intervals for a single proportion.
+
+::: lob
+4.  Understand how CLT applies to a difference in binomial random variables
+:::
+
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+
+6.  Construct and interpret confidence intervals for a difference in proportions.
 
 ## Inference for difference of two independent proportions <br> $\hat{p}_1-\hat{p}_2$
 
 -   For means, we went from *inferences on single sample mean* to *inferences on difference in means from two independent samples*
 
+ 
+
 -   We can do the same thing for proportions
 
--   We will go from *inferences on single sample proportion* to *inferences on difference in proportions from two independent samples*
+ 
+
+-   We will go from [*inferences on single sample proportion*]{style="color:#BF396F"} to [*inferences on difference in proportions from two independent samples*]{style="color:#367B79"}
 
 ## Poll Everywhere question
 
@@ -789,6 +877,8 @@ We are 95% confident that the (population) proportion of individuals with an imm
 
 -   Population 2 proportion: $p_2$, $\pi_2$ ("pi")  
 
+ 
+
 -   Difference in proportions: $p_1 - p_2$
 :::
 
@@ -798,6 +888,8 @@ We are 95% confident that the (population) proportion of individuals with an imm
 -   Sample 1 proportion: $\hat{p}_1$, $\hat{\pi}_1$ ("pi")
 
 -   Sample 1 proportion: $\hat{p}_2$, $\hat{\pi}_2$ ("pi")  
+
+ 
 
 -   Difference in proportions: $\hat{p}_1 - \hat{p}_2$
 :::
@@ -824,7 +916,121 @@ $$\hat{p}_1 - \hat{p}_2 \sim N \left(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 
 -   What is "big enough"? At least 10 successes and 10 failures are expected in the sample: $n_1p \geq 10$, $n_1(1-p) \geq 10$, $n_2p \geq 10$, and $n_2(1-p) \geq 10$
 
-# LOB
+## Approaches to answer a research question
+
+-   **Research question is a generic form for a single proportion:** Is there evidence to support that the population proportions are different from each other?
+
+:::::::::::::: columns
+:::::: {.column width="50%"}
+::::: green2
+::: green2-ttl
+Calculate **CI for the proportion difference** $p_1 - p_2$:
+:::
+
+::: green2-cont
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+sample_prop_plot = ggplot(data.frame(x = c(-4, 4)), aes(x)) + 
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                size = 3, 
+                color = "#EF85B3") +
+  geom_vline(xintercept = 2, size = 3, color = "#C00000") +
+  theme_classic() +
+  theme(text = element_text(size = 35), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(), 
+        axis.title = element_blank()) +
+  scale_x_continuous(breaks=seq(0,2,2), labels=c(0, expression(hat(p)[1] - hat(p)[2] )))
+
+sample_prop_plot +
+    annotate("rect", xmin = 2 - 1.96*0.5, 
+           xmax = 2 + 1.96*0.5, 
+           ymin = 0, ymax =0.4,
+           alpha = .3, fill = "#C00000")
+```
+
+$$\hat{p}_1 - \hat{p}_2 \pm z^* \cdot SE_{\hat{p}_1 - \hat{p}_2}$$
+
+-   with $z^*$ = z-score that aligns with specific confidence interval
+:::
+:::::
+::::::
+
+::::::::: {.column width="50%"}
+:::::::: pink
+::: pink-ttl
+Run a **hypothesis test**:
+:::
+
+:::::: pink-cont
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 2.2
+#| fig-align: center
+#| warning: false
+#| message: false
+
+
+sample_prop_plot +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(2, 4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6) +
+  stat_function(fun = dnorm, 
+                args = list(mean = 0, sd = 1), 
+                xlim = c(-2, -4), 
+                geom = "area", fill = "#C00000", 
+                alpha = 0.6)
+```
+
+::::: columns
+::: column
+Hypotheses
+
+\begin{align}
+H_0:& p_1 - p_2 = 0 \\
+H_A:& p_1 - p_2 \neq 0 \\
+(or&~ <, >)
+\end{align}
+:::
+
+::: column
+Test statistic
+
+$$
+z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2}{SE_{pool}}
+$$
+:::
+:::::
+::::::
+::::::::
+:::::::::
+::::::::::::::
+
+
+# Learning Objectives
+
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
+2.  Run a hypothesis test for a single proportion and interpret the results.
+
+3.  Construct and interpret confidence intervals for a single proportion.
+
+4.  Understand how CLT applies to a difference in binomial random variables
+
+::: lob
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+:::
+
+6.  Construct and interpret confidence intervals for a difference in proportions.
 
 ## Motivating example: effectiveness of mammograms
 
@@ -857,15 +1063,6 @@ BC %>% tabyl(Group, Death) %>%
   tab_spanner(label = "Death from breast cancer?", 
               columns = c("Yes", "No")) %>%
   tab_options(table.font.size = 45)
-```
-
-## Effectiveness of mammograms...
-
-\scriptsize
-
-```{r}
-#analyze the data
-prop.test(x = c(500, 505), n = c(500 + 44425, 505 + 44405), correct=T)
 ```
 
 ## Reference: Steps in a Hypothesis Test
@@ -930,6 +1127,8 @@ n2*ppool
 n2*(1-ppool)
 ```
 
+ 
+
 - In the example, we check:
     -   $n_1\hat{p}_{pool}=`r format(n1, scientific=F)` \cdot `r round(ppool, 4)` = `r round(n1*ppool, 4)` \ge 10$
     -   $n_1(1-\hat{p}_{pool})=  `r format(n1, scientific=F)` (1-`r round(ppool, 4)`) = `r format(round(n1*(1-ppool), 4), scientific=F)` \ge 10$
@@ -964,10 +1163,10 @@ $$\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of succe
 Test statistic:
 
 $$
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}(1-\hat{p}_{pool})}{n_2}}}
 $$
 
-## Step 4: Test statistic
+## Step 4: Test statistic (2/2)
 
 From our example: Recall that $\hat{p}_1 = \dfrac{500}{44925}= `r round(p1, 4)`$, $\hat{p}_2 = \dfrac{505}{44910}= `r round(p2, 4)`$, $n_1=44925$, $n_2=44910$, and $\hat{p}_{pool} = 0.01119$
 
@@ -1045,7 +1244,7 @@ ggplot(data = data.frame(x = c(-3, 3)), aes(x)) +
   xlab("z-dist") +
   scale_y_continuous(breaks = NULL) + 
   scale_x_continuous(breaks=c(mu, mu - (1:5), mu + (1:5))) +
-  geom_vline(xintercept = c(zpool, zpool), 
+  geom_vline(xintercept = c(zpool, -zpool), 
              color = "red")
 ```
 :::
@@ -1073,7 +1272,22 @@ pnorm(zpool)
 :::
 :::::
 
-## Step 5: Conclusion to hypothesis test
+## Step 4-5: test statistic and p-value together using `prop.test()`
+
+```{r}
+prop.test(x = c(505, 500), n = c(44910, 44925)) # no p needed
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Tidying the output of `prop.test()`"
+prop.test(x = c(505, 500), n = c(44910, 44925)) %>% 
+  tidy() %>% gt() %>% tab_options(table.font.size = 33)
+```
+
+- Note: We expect some differences between the test statistic and p-value calculated by hand vs. by R. R uses a slightly different method to calculate. 
+
+## Step 6: Conclusion to hypothesis test
 
 \begin{align}
 H_0:& p_{mamm} - p_{ctrl} = 0\\
@@ -1091,7 +1305,20 @@ H_A:& p_{mamm} - p_{ctrl} \neq 0\\
 -   More realistic manuscript conclusion:
     -   `r round(p1*100, 2)`% of people receiving annual mammograms (n=`r format(n1, scientific=F)`) and `r round(p2*100, 2)`% of people receiving annual physical exams (n=`r format(n1, scientific=F)`) died from breast cancer ($p$-value = `r round(2*pnorm(-0.1639), 2)`).
 
-# Lob
+# Learning Objectives
+
+1.  Remind ourselves of the Normal approximation of the binomial distribution and define the sampling distribution of a sample proportion
+2.  Run a hypothesis test for a single proportion and interpret the results.
+
+3.  Construct and interpret confidence intervals for a single proportion.
+
+4.  Understand how CLT applies to a difference in binomial random variables
+
+5.  Run a hypothesis test for a difference in proportions and interpret the results.
+
+::: lob
+6.  Construct and interpret confidence intervals for a difference in proportions.
+:::
 
 ## Conditions for difference in proportions: **test vs. CI**
 
@@ -1177,7 +1404,7 @@ $$\sigma_{\hat{p}_1 - \hat{p}_2} =
 ::::: columns
 ::: {.column width="50%"}
 Problem: We don't know what $p$ is - it's what we're estimating with the CI.\
-Solution: [approximate $p_1$, $p_2$ with $\hat{p}_1$, $\hat{p}_2$]{style="color:purple"}:
+Solution: [approximate $p_1$, $p_2$ with $\hat{p}_1$, $\hat{p}_2$]{style="color:#5BAFF8"}:
 :::
 
 ::: {.column width="50%"}
@@ -1219,255 +1446,24 @@ Used $z^*$ = `qnorm(0.975)` = `r round(qnorm(0.975),3)`
  
 
 **Interpretation**:\
-We are 95% confident that the difference in (population) proportions of young male college and noncollege students that participated in sports betting in the previous year is in (-0.127, 0.106).
+We are 95% confident that the difference in (population) proportions of deaths due to breast cancer comparing people who received annual mammograms to annual physical check-ups is between `r round(LB, 3)` and `r round(UB, 3)`.
 
 
 ## 95% CI for the population difference in proportions
 
-NEED TO COMPLETE!!!
-
--   We can use R to get those same values
+-   We can use R to get similar values
 
 ```{r}
-prop.test(x = 21, n = 52, conf.level = 0.95, correct = T)
+prop.test(x = c(505, 500), n = c(44910, 44925))
 ```
 
 ```{r}
-#| code-fold: true
-#| code-summary: We can tidy the output
-# t.test(x = chol$DiffChol, mu = 0) %>% tidy() %>% gt() %>% 
-#   tab_options(table.font.size = 35) # use a different size in your HW
+#| echo: false
+
+tidy_2test = prop.test(x = c(505, 500), n = c(44910, 44925), conf.level = 0.95, correct = T) %>% tidy()
 ```
 
-Conclusion:\
-We are 95% confident that the (population) proportion of individuals with an immune response is between `r round(LB, 3)` and `r round(UB, 3)`.
+**R Conclusion:**\
+We are 95% confident that the difference in (population) proportions of deaths due to breast cancer comparing people who received annual mammograms to annual physical check-ups is between `r round(tidy_2test$conf.low, 4)` and `r round(tidy_2test$conf.high, 4)`.
 
-
-# R: 1- and 2-sample proportions tests
-
-`prop.test(x, n, p = NULL,`\
-      `alternative = c("two.sided", "less", "greater"),`\
-      `conf.level = 0.95,`\
-      `correct = TRUE)`
-
--   2 options for data input
-    1.  Summary counts
-        -   `x` = vector with counts of "successes"
-        -   `n` = vector with sample size in each group
-    2.  Dataset
-        -   `x = table()` of dataset
-        -   Need to create a dataset based on the summary stats if do not already have one
--   Continuity correction
-
-# R: 1-sample proportion test
-
-"1-prop z-test"
-
-## Summary stats input for 1-sample proportion test
-
-**Example:** A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.\
-Test $H_0: p=0.36$ vs. $H_A: p \neq 0.36$?
-
-```{r}
-.35*269 # number of "successes"; round this value
-
-prop.test(x = 94, n = 269,              # x = # successes & n = sample size
-          p = 0.36,                     # null value p0
-          alternative = "two.sided",    # 2-sided alternative
-          correct = FALSE)              # no continuity correction
-```
-
-Can `tidy()` test output:
-
-```{r}
-prop.test(x = 94, n = 269, p = 0.36, alternative = "two.sided", correct = FALSE) %>% 
-  tidy() %>% gt()
-```
-
-## Dataset input for 1-sample proportion test (1/2)
-
-::::: columns
-::: {.column width="50%"}
-Since we don't have a dataset, we first need to create a dataset based on the results:
-
-> "out of 269 male college students, 35% had participated in sports betting in the previous year"
-
-```{r}
-.35*269 # number of "successes"; round this value
-
-SportsBet1 <- tibble(
-  Coll = c(rep("Bet", 94),
-           rep("NotBet",269-94))
-  )
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-glimpse(SportsBet1)
-
-SportsBet1 %>% tabyl(Coll)
-```
-
-<br>
-
-R code for proportions test requires input as a base R `table`:
-
-```{r}
-table(SportsBet1$Coll)
-```
-:::
-:::::
-
-## Dataset input for 1-sample proportion test (2/2)
-
--   When using a dataset, `prop.test` requires the input `x` to be a table
--   Note that we do not also specify `n` since the table already includes all needed information.
-
-```{r}
-prop.test(x = table(SportsBet1$Coll),   # table() of data
-          p = 0.36,                     # null value p0
-          alternative = "two.sided",    # 2-sided alternative
-          correct = FALSE)              # no continuity correction
-
-
-```
-
-Compare output with summary stats method:
-
-```{r}
-prop.test(x = 94, n = 269,              # x = # successes & n = sample size
-          p = 0.36,                     # null value p0
-          alternative = "two.sided",    # 2-sided alternative
-          correct = FALSE)  %>%         # no continuity correction
-  tidy() %>% gt()
-```
-
-## Continuity correction: 1-prop z-test with vs. without CC
-
--   Recall that when we approximated the
--   binomial distribution with a normal distribution to calculate a probability,
--   that we included a continuity correction (CC)
--   to account for approximating a discrete distribution with a continuous distribution.
-
-```{r}
-prop.test(x = 94, n = 269, p = 0.36, alternative = "two.sided", 
-          correct = FALSE) %>% 
-  tidy() %>% gt()
-```
-
-<br>
-
-```{r}
-prop.test(x = 94, n = 269, p = 0.36, alternative = "two.sided", 
-          correct = TRUE) %>% 
-  tidy() %>% gt()
-```
-
-Differences are small when sample sizes are large.
-
-# R: 2-samples proportion test
-
-"2-prop z-test"
-
-## Summary stats input for 2-samples proportion test
-
-**Example:** A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had. Test $H_0: p_{coll} - p_{noncoll} = 0$ vs. $H_A: p_{coll} - p_{noncoll} \neq 0$.
-
-```{r}
-# round the number of successes:
-.35*269 # number of "successes" in college students
-.36*214 # number of "successes" in noncollege students
-
-NmbrBet <- c(94, 77)                    # vector for # of successes in each group
-TotalNmbr <- c(269, 214)                # vector for sample size in each group
-
-prop.test(x = NmbrBet,                  # x is # of successes in each group 
-          n = TotalNmbr,                # n is sample size in each group
-          alternative = "two.sided",    # 2-sided alternative
-          correct = FALSE)              # no continuity correction
-```
-
-## Dataset input for 2-samples proportion test (1/2)
-
-::::: columns
-::: {.column width="50%"}
-Since we don't have a dataset, we first need to create a dataset based on the results:
-
-> "out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had"
-
-```{r}
-# round the number of successes:
-.35*269 # college students
-.36*214 # noncollege students
-
-SportsBet2 <- tibble(
-  Group = c(rep("College", 269), 
-         rep("NonCollege", 214)),
-  Bet = c(rep("yes", 94), 
-          rep("no", 269-94),
-          rep("yes", 77), 
-          rep("no", 214-77))
-)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-glimpse(SportsBet2)
-
-SportsBet2 %>% tabyl(Group, Bet)
-```
-
-<br>
-
-R code for proportions test requires input as a base R `table`:
-
-```{r}
-table(SportsBet2$Group, 
-      SportsBet2$Bet)
-```
-:::
-:::::
-
-## Dataset input for 2-samples proportion test (2/2)
-
--   When using a dataset, `prop.test` requires the input `x` to be a table
--   Note that we do not also specify `n` since the table already includes all needed information.
-
-```{r}
-prop.test(x = table(SportsBet2$Group, SportsBet2$Bet),
-       alternative = "two.sided",
-       correct = FALSE)
-```
-
-Compare output with summary stats method:
-
-```{r}
-prop.test(x = NmbrBet,                  # x is # of successes in each group 
-          n = TotalNmbr,                # n is sample size in each group
-          alternative = "two.sided",    # 2-sided alternative
-          correct = FALSE) %>%          # no continuity correction
-  tidy() %>% gt()
-```
-
-## Continuity correction: 2-prop z-test with vs. without CC
-
--   Recall that when we approximated the
--   binomial distribution with a normal distribution to calculate a probability,
--   that we included a continuity correction (CC)
--   to account for approximating a discrete distribution with a continuous distribution.
-
-```{r}
-prop.test(x = NmbrBet, n = TotalNmbr, alternative = "two.sided", 
-          correct = FALSE) %>% tidy() %>% gt()
-```
-
-<br>
-
-```{r}
-prop.test(x = NmbrBet, n = TotalNmbr, alternative = "two.sided", 
-          correct = TRUE) %>% tidy() %>% gt()
-```
-
-Differences are small when sample sizes are large.
+- Note: We expect some differences between the confidence interval calculated by hand vs. by R. R uses a slightly different method to calculate. 

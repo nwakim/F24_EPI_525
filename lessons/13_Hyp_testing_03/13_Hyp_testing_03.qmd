@@ -564,7 +564,7 @@ sample_mean_plot +
 :::::: {.column width="50%"}
 ::::: green2
 ::: green2-ttl
-Calculate **CI for the mean difference** $\delta$:
+Calculate **CI for the mean difference** $\mu_1 - \mu_2$:
 :::
 
 ::: green2-cont
