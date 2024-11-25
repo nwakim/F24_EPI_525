@@ -15,17 +15,32 @@ format:
 ---
 
 ::: callout-important
-This page is under construction. This homework may change! (11/5/24)
+Homework is ready to be worked on!! (11/24/24)
 :::
 
 ```{r}
 #| label: "setup"
 #| include: false
+
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(gt)
+library(broom) 
+library(here) 
+library(pwr) # NEW!!
+
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-**Due Monday 12/6/24**
+**Due Friday 12/6/24**
+
+## Directions {.unnumbered}
 
 [Please turn in this homework on Sakai.](https://sakai.ohsu.edu/portal/site/EPI-525-1-15028-F24/tool/137d7c54-61a9-4727-9018-374c3773c508) This homework must be submitted using a Quarto document. **Please keep it rendered as an html!** I know past homeworks said pdf, but all Quarto docs should be rendered as html for this class!
 
@@ -35,35 +50,24 @@ You can download the .qmd file for this assignment from [Github](https://github.
 It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
 :::
 
-
-## Directions {.unnumbered}
-
-* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
-* For each question, make sure to include all code and resulting output in the html file to support your answers. 
-
-
-### R & LaTeX code {.unnumbered}
-
-* See the .qmd files with the code from class notes for LaTeX and R code.
-* The LaTeX code will make it easier to show your work in computations.
-
-:::{.callout-tip}
-It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
-:::
-
-
 # Book exercises {.unnumbered}
+
+## 4.22 Testing for food safety {.unnumbered}
+
+Note from Nicky: I'm sorry. This problem was not supposed to be in HW 7... If you already did it, you can paste it here. Try to reflect and see if this problem is clearer now that we've covered power and sample size. 
 
 ## 8.2 Young Americans, Part I {.unnumbered}
 
-
+Skip part a!
 
 ## 8.8 Legalization of marijuana, Part I {.unnumbered}
 
-[Additional instructions:]{style="color:green"}
+::: callout-important
+### Additional instructions
 
-* [(b): Calculate the CI both using the formula and using the appropriate R statistical test.]{style="color:green"} 
-* [Add parts (e) & (f) as instructed below.]{style="color:green"}
+* (b): Calculate the CI both using the formula and using the appropriate R statistical test.
+* Add parts (e) & (f) as instructed below.
+:::
 
 ### (a) {.unnumbered}
 
@@ -83,94 +87,16 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ### (e) {.unnumbered}
 
-[__Test whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Do the test using both the formulas and running it in R (without a continuity correction).__]{style="color:green"}
-
+Test whether the proportion of US residents who think marijuana should be made legal is different than 0.586. 
 
 ### (f) {.unnumbered}
 
-[__Are the results from CI and hypothesis test consistent? Why or why not?__]{style="color:green"}
+Are the results from CI and hypothesis test consistent? Why or why not?
 
-
-## 8.10 Legalize Marijuana, Part II {.unnumbered} 
-
-
- 
 
 ## 8.14 2010 Healthcare Law {.unnumbered}
 
-
-
-## 8.24 Prenatal vitamins and Autism {.unnumbered}
-
-[Additional instructions:]{style="color:green"}
-
-* [(b): Do the hypothesis test both using the formula and using the appropriate R statistical test.]{style="color:green"}
-* [Add part (d) as instructed below.]{style="color:green"}
-
-### (a) {.unnumbered}
-
-
-### (b) {.unnumbered}
-
-
-### (c) {.unnumbered}
-
-
-### (d) {.unnumbered}
-
-[__Calculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test? __]{style="color:green"}
-
-
-
-
 ## 8.26 An apple a day keeps the doctor away {.unnumbered}
-
-
-
-
-## 8.28 True or false, Part II {.unnumbered}
-
-
-
-
-## 8.32 Diabetes and unemployment {.unnumbered}
-
-
-### (a) {.unnumbered}
-
-### (b) {.unnumbered}
-
-### (c) {.unnumbered}
-
-[__In addition to answering the question in (c), run the 2 proportions test in R and calculated the "z" test statistic and p-value using the normal distribution based on the $\chi^2$ output in R's test.__]{style="color:green"}
-
-
-### (d) extra part {.unnumbered}
-
-[__Run the test as a $\chi^2$ as well, and compare your results to those in (c).__]{style="color:green"}
-
-
-
-## 8.34 Coffee and Depression {.unnumbered}
-
-* [__Do not create a dataset and run the test in R. Use just the information given in the problem.__]{style="color:green"}
-* [__For (e), calculate the p-value "directly" (not using $\chi^2$ test command in R). Also comment on whether you think the sample size condition would be met without computing the expected cell counts.__]{style="color:green"}
-
-
-## 8.38 (a) & (extra) Salt intake and CVD {.unnumbered}
-
-Do not do parts (b)-(c) in the book
-
-### (a) {.unnumbered}
-
-* [__You can use the expected cell counts from R's chi-squared test (you do not need to compute them using the formula).__]{style="color:green"} 
-* [__Comment on whether the sample size condition is met or not for these data.__]{style="color:green"}
-
-
-
-### (extra) {.unnumbered}
-
-[__Run a Fisher's Exact test. Include the hypotheses and a conclusion in the context of the problem.__]{style="color:green"}
 
 # PSS
 
@@ -179,8 +105,6 @@ Do not do parts (b)-(c) in the book
 ### Power
 
 In exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered? 
-
-
 
 ### Sample size
 
@@ -191,29 +115,47 @@ For the same test, what sample size would be needed for 80% power? Would it be r
 
 Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
 
+# R
 
+## R1: The Strong Heart Study
 
+The [Strong Heart Study](https://strongheartstudy.org/) is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND) to study prevalence and incidence of cardiovascular disease and to identify risk factors. We will be examining the 4-year cumulative incidence of diabetes with one risk factor, glucose tolerance. We are curious if the proportion of individuals diagnosed with diabetes is different between glucose tolerances.
 
+-   **Impaired glucose:** normal or impaired glucose tolerance at baseline visit (between 1988 and 1991)
 
+-   **Diabetes:** Indicator of diabetes at follow-up visit (roughly four years after baseline) according to two-hour oral glucose tolerance test
 
-## PSS3: Legalize Marijuana, Part III. 
+The data are in `SHS_data.csv` located in the `Data` folder of the shared OneDrive folder. The following table summarizes the data:
 
-### Power
+```{r}
+#| echo: false
 
-__<font color="green">In exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?</font>__ 
+SHS = tibble(Diabetes = c(rep("Not diabetic", 
+                   1338), 
+                   rep("Diabetic", 326)),
+              Glucose = c(rep("Normal", 
+                  1004),#Not diabetic
+          rep("Impaired", 334),
+          rep("Normal", 
+              128), #Diabetic
+          rep("Impaired", 198)))
 
+SHS %>% tabyl(Glucose, Diabetes) %>% 
+  adorn_totals(where = c("row", "col")) %>% 
+  gt() %>% 
+  tab_stubhead(label = "Glucose Impairment") %>%
+  tab_spanner(label = "Diabetes", 
+              columns = c("Not diabetic", "Diabetic")) %>%
+  tab_options(table.font.size = 15)
+```
 
+### Run a hypothesis test
 
+Complete the hypothesis test to see if the proportion of individuals diagnosed with diabetes is different between glucose tolerances.
+(Reminder: Follow all steps and put your conclusion in context of the Strong Heart Study)
 
-### Sample size
+### Calculate the confidence interval for the difference in proportions
 
-__<font color="green">For the same test, what sample size would be needed for 80% power? How about 90% power?</font>__ 
-
-
-
-
-### Effect size
-__<font color="green">If we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why? </font>__ 
-
+Calculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test? (Reminder: Make sure to check the assumptions!)
 
 
