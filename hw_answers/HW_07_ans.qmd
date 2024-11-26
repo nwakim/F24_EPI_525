@@ -1,6 +1,5 @@
 ---
-title: "Homework 7 Solutions"
-author: "Nicky Wakim, Meike Niederhausen, Mia Truman, Trisha Marsh"
+title: "Homework 7 Answers"
 date-modified: "today"
 format: 
   html:
@@ -38,6 +37,7 @@ library(janitor)
 library("oibiostat")
 library(pwr)
 library(here)
+library(tibble)
 ```
 
 # Book exercises {.unnumbered}

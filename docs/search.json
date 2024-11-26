@@ -20673,21 +20673,21 @@
   {
     "objectID": "hw_answers/HW_07_ans.html",
     "href": "hw_answers/HW_07_ans.html",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "",
     "text": "Warning\n\n\n\nTo see my math equations properly, you need to download the html file, then open it! One Drive does not show the math correctly!!"
   },
   {
     "objectID": "hw_answers/HW_07_ans.html#paired-or-not-part-ii",
     "href": "hw_answers/HW_07_ans.html#paired-or-not-part-ii",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "5.16 Paired or not, Part II",
     "text": "5.16 Paired or not, Part II\nIn each of the following scenarios, determine if the data are paired.\n\n(a)\nWe would like to know if Intel’s stock and Southwest Airlines’ stock have similar rates of return. To find out, we take a random sample of 50 days, and record Intel’s and Southwest’s stock on those same days.\n\nPaired\n\n\n\n(b)\nWe randomly sample 50 items from Target stores and note the price for each. Then we visit Walmart and collect the price for each of those same 50 items.\n\nPaired\n\n\n\n(c)\nA school board would like to determine whether there is a difference in average SAT scores for students at one high school versus another high school in the district. To check, they take a simple random sample of 100 students from each high school.\n\nNot paired"
   },
   {
     "objectID": "hw_answers/HW_07_ans.html#ddt-exposure",
     "href": "hw_answers/HW_07_ans.html#ddt-exposure",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "5.22 DDT exposure",
     "text": "5.22 DDT exposure\nSuppose that you are interested in determining whether exposure to the organochloride DDT, which has been used extensively as an insecticide for many years, is associated with breast cancer in women. As part of a study that investigated this issue, blood was drawn from a sample of women diagnosed with breast cancer over a six-year period and a sample of healthy control subjects matched to the cancer patients on age, menopausal status, and date of blood donation. Each woman’s blood level of DDE (an important byproduct of DDT in the human body) was measured, and the difference in levels for each patient and her matched control calculated. A sample of 171 such differences has mean \\(\\bar{d} = 2.7\\) ng/mL and standard deviation \\(s_{d} = 15.9\\) ng/mL. Differences were calculated as \\(DDE_{cancer} - DDE_{control}\\).\n\n(a)\nTest the null hypothesis that the mean blood levels of DDE are identical for women with breast cancer and for healthy control subjects. What do you conclude?\n\n\\[t_{\\bar{d}} = 2.22057\\]\n\\[p-value = 0.02770171\\]\nReject the null\n\n\n\n(b)\nWould you expect a 95% confidence interval for the true difference in population mean DDE levels to contain the value 0?\n\nDoes not contain 0"
   },
@@ -20701,14 +20701,14 @@
   {
     "objectID": "hw_answers/HW_07_ans.html#placebos-without-deception",
     "href": "hw_answers/HW_07_ans.html#placebos-without-deception",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "5.34 Placebos without deception",
     "text": "5.34 Placebos without deception\nWhile placebo treatment can influence subjective symptoms, it is typically believed that patient response to placebo requires concealment or deception; in other words, a patient must believe that they are receiving an effective treatment in order to experience the benefits of being treated with an inert substance. Researchers recruited patients suffering from irritable bowel syndrome (IBS) to test whether placebo responses are neutralized by awareness that the treatment is a placebo.\nPatients were randomly assigned to either the treatment arm or control arm. Those in the treatment arm were given placebo pills, which were described as “something like sugar pills, which have been shown in rigorous clinical testing to produce significant mind-body self-healing processes”. Those in the control arm did not receive treatment. At the end of the study, all participants answered a questionnaire called the IBS Global Improvement Scale (IBS-GIS) which measures whether IBS symptoms have improved; higher scores are indicative of more improvement.\nAt the end of the study, the 37 participants in the open placebo group had IBS-GIS scores with \\(\\bar{x} = 5.0\\) and \\(s = 1.5\\), while the 43 participants in the no treatment group had IBS-GIS scores with \\(\\bar{x} = 3.9\\) and \\(s = 1.3\\).\nBased on an analysis of the data, summarize whether the study demonstrates evidence that placebos administered without deception may be an effective treatment for IBS.\n\n\\[t_{\\bar{d}} = 3.47654\\]\n\\[p-value = 0.00134\\]\nReject the null"
   },
   {
     "objectID": "hw_answers/HW_07_ans.html#testing-for-food-safety",
     "href": "hw_answers/HW_07_ans.html#testing-for-food-safety",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "4.22 Testing for food safety",
     "text": "4.22 Testing for food safety\nA food safety inspector is called upon to investigate a restaurant with a few customer reports of poor sanitation practices. The food safety inspector uses a hypothesis testing framework to evaluate whether regulations are not being met. If he decides the restaurant is in gross violation, its license to serve food will be revoked.\n\n(a)\nWrite the hypotheses in words.\n\n\\(H_0:\\) The restaurant meets food safety and sanitation regulations.\n\\(H_a:\\) ???\n\n\n\n(b)\nWhat is a Type~1 Error in this context?\n\n\n\n\n\n(c)\nWhat is a Type~2 Error in this context?\n\nThe food safety inspector concludes that the restaurant meets food safety and sanitation regulations and the restaurant stays open when the restaurant is actually not safe.\n\n\n\n(d)\nWhich error is more problematic for the restaurant owner? Why?\n\n\n\n\n\n(e)\nWhich error is more problematic for the diners? Why?\n\n\n\n\n\n(f)\nAs a diner, would you prefer that the food safety inspector requires strong evidence or very strong evidence of health concerns before revoking a restaurant’s license? Explain your reasoning."
   },
@@ -20722,14 +20722,14 @@
   {
     "objectID": "hw_answers/HW_07_ans.html#r1-swim-times",
     "href": "hw_answers/HW_07_ans.html#r1-swim-times",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "R1: Swim times",
     "text": "R1: Swim times\n\nIn these exercises you will use R to work through the swim times example from Section 5.2 in the textbook.\nThe data are in the oibiostats package and called swim.\n\n\nMean & SD of differences\nCalculate the mean and standard deviation for the differences in swim times, and compare them to the ones in the book. Which order were the differences calculated, wet suit - swim suit or the opposite? Were all the differences positive?\n\n\n\n\n\n\n\n  \n    \n      variable\n      n\n      min\n      max\n      median\n      iqr\n      mean\n      sd\n      se\n      ci\n    \n  \n  \n    velocity.diff\n12\n0.05\n0.11\n0.08\n0.042\n0.078\n0.022\n0.006\n0.014\n  \n  \n  \n\n\n\n\n\n\n\nHistogram of differences\nCreate a histogram of the differences in swim times and comment on the distribution shape.\n\n\n\n\n\n\n\n\n\nHypothesis test\nRun the appropriate statistical test in R to verify the test statistic, p-value, and CI in the textbook.\n\n\n\n\n\n\n\n  \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    0.0775\n12.31815\n8.885414e-08\n11\n0.06365244\n0.09134756\nPaired t-test\ntwo.sided"
   },
   {
     "objectID": "hw_answers/HW_07_ans.html#r2-2-sample-independent-t-test",
     "href": "hw_answers/HW_07_ans.html#r2-2-sample-independent-t-test",
-    "title": "Homework 7 Solutions",
+    "title": "Homework 7 Answers",
     "section": "R2: 2-sample independent t-test",
     "text": "R2: 2-sample independent t-test\nThis problem was adapted from Dr. Maria Tackett’s Intro to Data Science homework.\nThe dataset is adapted from Little et al. (2007), and contains voice measurements from individuals both with and without Parkinson’s Disease (PD), a progressive neurological disorder that affects the motor system. The aim of Little et al.’s study was to examine whether Parkinson’s Disease could be diagnosed by examining the spectral (sound-wave) properties of patients’ voices.\n147 measurements were taken from patients with PD, and 48 measurements were taken from healthy patients who served as controls. For the purposes of this assignment, you may assume that measurements are representative of the underlying populations (PD vs. healthy).\nThe variables in the dataset are as follows:\n\nclip: ID of the recording number\njitter: a measure of variation in fundamental frequency\nshimmer: a measure of variation in amplitude\nhnr: a ratio of total components vs. noise in the voice recording\nstatus: PD vs. Healthy\navg.f.q: 1, 2, or 3, corresponding to average vocal fundamental frequency\n\n1 = low,\n2 = mid\n3 = high\n\n\nThe data are in parkinsons.csv located in the Data folder of the shared OneDrive folder.\nWe will be focusing on the variable HNR. We will see if there is evidence that the mean HNR is different for people with PD and people without PD.\n\n\npark = read.csv(here(\"data\", \"parkinsons.csv\"))\n\n\n\nHistogram of HNR\nUse histograms to visualize the distribution for HNR, comparing people with and without PD.\n\n\n\n\n\n\n\n\n\nMean & SD of HNR\nCalculate the mean and standard deviation for HNR in the voice recordings of adults with and without Parkinson’s disease.\n\n\n\n\n\n\n\n  \n    \n      status\n      variable\n      n\n      min\n      max\n      median\n      iqr\n      mean\n      sd\n      se\n      ci\n    \n  \n  \n    Healthy\nhnr\n48\n17.883\n33.047\n24.997\n3.146\n24.679\n3.435\n0.496\n0.997\n    PD\nhnr\n147\n8.441\n29.928\n21.414\n5.383\n20.974\n4.339\n0.358\n0.707\n  \n  \n  \n\n\n\n\n\n\n\nHypothesis test\nRun the appropriate statistical test in R. Please include all steps in the hypothesis test!\n\n\\[t_{\\overline{x}_{PD} - \\overline{x}_{NPD}} = 6.0592\\]\nBy hand, the p-value was \\(1.1\\times 10^{-7}\\). Using R, the p-value was \\(2\\times 10^{-8}\\).\nReject the null"
   },
@@ -22440,5 +22440,61 @@
     "title": "Homework 9",
     "section": "8.38 (a) & (extra) Salt intake and CVD",
     "text": "8.38 (a) & (extra) Salt intake and CVD\nDo not do parts (b)-(c) in the book\n\n(a)\n\nYou can use the expected cell counts from R’s chi-squared test (you do not need to compute them using the formula).\nComment on whether the sample size condition is met or not for these data.\n\n\n\n(extra)\nRun a Fisher’s Exact test. Include the hypotheses and a conclusion in the context of the problem."
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html",
+    "href": "hw_answers/HW_08_ans.html",
+    "title": "Homework 8 Answers",
+    "section": "",
+    "text": "A food safety inspector is called upon to investigate a restaurant with a few customer reports of poor sanitation practices. The food safety inspector uses a hypothesis testing framework to evaluate whether regulations are not being met. If he decides the restaurant is in gross violation, its license to serve food will be revoked.\n\n\nWrite the hypotheses in words.\n\n\\(H_0:\\) The restaurant meets food safety and sanitation regulations.\n\\(H_a:\\) ???\n\n\n\n\nWhat is a Type~1 Error in this context?\n\n\n\n\n\n\nWhat is a Type~2 Error in this context?\n\nThe food safety inspector concludes that the restaurant meets food safety and sanitation regulations and the restaurant stays open when the restaurant is actually not safe.\n\n\n\n\nWhich error is more problematic for the restaurant owner? Why?\n\n\n\n\n\n\nWhich error is more problematic for the diners? Why?\n\n\n\n\n\n\nAs a diner, would you prefer that the food safety inspector requires strong evidence or very strong evidence of health concerns before revoking a restaurant’s license? Explain your reasoning.\n\n\n\n\n\n\n\nSkip part a!\n\n\n\nFALSE.\n\n\n\n\n\nFALSE\n\n\n\n\n\nTRUE.\n\n\n\n\n\n\n\n\n\n\n\nAdditional instructions\n\n\n\n\n(b): Calculate the CI both using the formula and using the appropriate R statistical test.\nAdd parts (e) & (f) as instructed below.\n\n\n\n\n\n\nsample statistic\n\n\n\n\n\nBy hand: \\[(0.5862038, 0.6343285)\\]\nUsing R: \\[(0.5856442, 0.6343456)\\]\n\n\n\n\n\nYes, good approximation\n\n\n\n\n\nYes\n\n\n\n\nTest whether the proportion of US residents who think marijuana should be made legal is different than 0.586.\n\nBy hand: - \\(z = 1.957066\\) - \\(p-value = 0.05033966\\)\nUsing R: - \\(p-value = 0.05341977\\)\n\n\n\n\nAre the results from CI and hypothesis test consistent? Why or why not?\n\nYes!\n\n\n\n\n\n\n\n\nFALSE.\n\n\n\n\n\nTRUE.\n\n\n\n\n\nFALSE.\n\n\n\n\n\nFALSE.\n\n\n\n\n\n\nNo"
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#testing-for-food-safety",
+    "href": "hw_answers/HW_08_ans.html#testing-for-food-safety",
+    "title": "Homework 8 Answers",
+    "section": "",
+    "text": "A food safety inspector is called upon to investigate a restaurant with a few customer reports of poor sanitation practices. The food safety inspector uses a hypothesis testing framework to evaluate whether regulations are not being met. If he decides the restaurant is in gross violation, its license to serve food will be revoked.\n\n\nWrite the hypotheses in words.\n\n\\(H_0:\\) The restaurant meets food safety and sanitation regulations.\n\\(H_a:\\) ???\n\n\n\n\nWhat is a Type~1 Error in this context?\n\n\n\n\n\n\nWhat is a Type~2 Error in this context?\n\nThe food safety inspector concludes that the restaurant meets food safety and sanitation regulations and the restaurant stays open when the restaurant is actually not safe.\n\n\n\n\nWhich error is more problematic for the restaurant owner? Why?\n\n\n\n\n\n\nWhich error is more problematic for the diners? Why?\n\n\n\n\n\n\nAs a diner, would you prefer that the food safety inspector requires strong evidence or very strong evidence of health concerns before revoking a restaurant’s license? Explain your reasoning."
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#young-americans-part-i",
+    "href": "hw_answers/HW_08_ans.html#young-americans-part-i",
+    "title": "Homework 8 Answers",
+    "section": "",
+    "text": "Skip part a!\n\n\n\nFALSE.\n\n\n\n\n\nFALSE\n\n\n\n\n\nTRUE."
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#legalization-of-marijuana-part-i",
+    "href": "hw_answers/HW_08_ans.html#legalization-of-marijuana-part-i",
+    "title": "Homework 8 Answers",
+    "section": "",
+    "text": "Additional instructions\n\n\n\n\n(b): Calculate the CI both using the formula and using the appropriate R statistical test.\nAdd parts (e) & (f) as instructed below.\n\n\n\n\n\n\nsample statistic\n\n\n\n\n\nBy hand: \\[(0.5862038, 0.6343285)\\]\nUsing R: \\[(0.5856442, 0.6343456)\\]\n\n\n\n\n\nYes, good approximation\n\n\n\n\n\nYes\n\n\n\n\nTest whether the proportion of US residents who think marijuana should be made legal is different than 0.586.\n\nBy hand: - \\(z = 1.957066\\) - \\(p-value = 0.05033966\\)\nUsing R: - \\(p-value = 0.05341977\\)\n\n\n\n\nAre the results from CI and hypothesis test consistent? Why or why not?\n\nYes!"
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "href": "hw_answers/HW_08_ans.html#power-and-sample-size-auto-exhaust-and-lead-exposure-revisited",
+    "title": "Homework 8 Answers",
+    "section": "Power and Sample size: Auto exhaust and lead exposure revisited",
+    "text": "Power and Sample size: Auto exhaust and lead exposure revisited\n\nPower\nIn exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\nYes, power is ~1.\n\n\n\nSample size\nFor the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)\n\n3\n\n\n\nEffect size\nSuppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use \\(\\alpha\\) = 0.05.\n\n0.5013972"
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#r1-the-strong-heart-study",
+    "href": "hw_answers/HW_08_ans.html#r1-the-strong-heart-study",
+    "title": "Homework 8 Answers",
+    "section": "R1: The Strong Heart Study",
+    "text": "R1: The Strong Heart Study\nThe Strong Heart Study is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND) to study prevalence and incidence of cardiovascular disease and to identify risk factors. We will be examining the 4-year cumulative incidence of diabetes with one risk factor, glucose tolerance. We are curious if the proportion of individuals diagnosed with diabetes is different between glucose tolerances.\n\nImpaired glucose: normal or impaired glucose tolerance at baseline visit (between 1988 and 1991)\nDiabetes: Indicator of diabetes at follow-up visit (roughly four years after baseline) according to two-hour oral glucose tolerance test\n\nThe data are in SHS_data.csv located in the Data folder of the shared OneDrive folder. The following table summarizes the data:\n\n\n\n\n\n\n  \n    \n      Glucose\n      \n        Diabetes\n      \n      Total\n    \n    \n      Not diabetic\n      Diabetic\n    \n  \n  \n    Impaired\n334\n198\n532\n    Normal\n1004\n128\n1132\n    Total\n1338\n326\n1664\n  \n  \n  \n\n\n\n\n\nRun a hypothesis test\nComplete the hypothesis test to see if the proportion of individuals diagnosed with diabetes is different between glucose tolerances. (Reminder: Follow all steps and put your conclusion in context of the Strong Heart Study)\n\nBy hand: - \\(z = 12.4420859\\) - \\(p-value = 1.5441e-35\\)\nUsing R: - Not part of answer, but to check: X-squared = 153.16 - \\(p-value = &lt; 2.2e-16\\)\n\n\n\nCalculate the confidence interval for the difference in proportions\nCalculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test? (Reminder: Make sure to check the assumptions!)\n\nBy hand: \\[(0.196, 0.324)\\]\nUsing R: \\[(0.213, 0.306)\\]"
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#healthcare-law",
+    "href": "hw_answers/HW_08_ans.html#healthcare-law",
+    "title": "Homework 8 Answers",
+    "section": "",
+    "text": "FALSE.\n\n\n\n\n\nTRUE.\n\n\n\n\n\nFALSE.\n\n\n\n\n\nFALSE."
+  },
+  {
+    "objectID": "hw_answers/HW_08_ans.html#an-apple-a-day-keeps-the-doctor-away",
+    "href": "hw_answers/HW_08_ans.html#an-apple-a-day-keeps-the-doctor-away",
+    "title": "Homework 8 Answers",
+    "section": "",
+    "text": "No"
   }
 ]

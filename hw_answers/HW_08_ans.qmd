@@ -1,13 +1,299 @@
 ---
 title: "Homework 8 Answers"
-subtitle: "EPI 525"
 date-modified: "today"
 format: 
-  html: 
+  html:
     link-external-newwindow: true
     toc: true
-  pdf: default 
+    toc_float:
+      collapsed: false
+    theme: sandstone
+    self-contained: true
+    html-math-method: mathjax
 editor_options: 
   chunk_output_type: console
 ---
 
+
+```{=html}
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+```
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(rstatix)
+library(broom)
+library(gt)
+library(janitor)
+library("oibiostat")
+library(pwr)
+library(here)
+library(tibble)
+```
+
+# Book exercises {.unnumbered}
+
+## 4.22 Testing for food safety {.unnumbered}
+
+A food safety inspector is called upon to investigate a restaurant with a few customer reports of poor sanitation practices. The food safety inspector uses a hypothesis testing framework to evaluate whether regulations are not being met. If he decides the restaurant is in gross violation, its license to serve food will be revoked.
+
+### (a)  {.unnumbered}
+
+Write the hypotheses in words.
+
+::: blue
+$H_0:$ The restaurant meets food safety and sanitation regulations.  
+$H_a:$ ???
+:::
+
+### (b)  {.unnumbered}
+
+What is a Type~1 Error in this context?
+
+::: blue
+
+:::
+
+### (c)  {.unnumbered}
+
+What is a Type~2 Error in this context?
+
+::: blue
+The food safety inspector concludes that the restaurant meets food safety and sanitation regulations and the restaurant stays open when the restaurant is actually not safe.
+:::
+
+### (d)  {.unnumbered}
+
+Which error is more problematic for the restaurant owner? Why?
+
+::: blue
+
+:::
+
+### (e)  {.unnumbered}
+
+Which error is more problematic for the diners? Why?
+
+::: blue
+
+:::
+
+### (f)  {.unnumbered}
+
+As a diner, would you prefer that the food safety inspector requires strong evidence or very strong evidence of health concerns before revoking a restaurant's license? Explain your reasoning.
+
+::: blue
+
+:::
+
+
+## 8.2 Young Americans, Part I {.unnumbered}
+
+Skip part a!
+
+### (b) {.unnumbered}
+
+::: blue
+FALSE.  
+:::
+
+### (c) {.unnumbered}
+
+::: blue
+FALSE
+:::
+
+### (d) {.unnumbered}
+
+::: blue
+TRUE.
+:::
+
+
+## 8.8 Legalization of marijuana, Part I {.unnumbered}
+
+::: callout-important
+### Additional instructions
+
+* (b): Calculate the CI both using the formula and using the appropriate R statistical test.
+* Add parts (e) & (f) as instructed below.
+:::
+
+### (a) {.unnumbered}
+
+::: blue
+sample statistic
+:::
+
+### (b) {.unnumbered}
+
+::: blue
+
+By hand: 
+$$(0.5862038, 0.6343285)$$
+
+Using R:
+$$(0.5856442, 0.6343456)$$
+:::
+
+### (c) {.unnumbered}
+
+::: blue
+Yes, good approximation
+:::
+
+### (d) {.unnumbered}
+
+::: blue
+Yes
+:::
+
+### (e) {.unnumbered}
+
+Test whether the proportion of US residents who think marijuana should be made legal is different than 0.586. 
+
+::: blue
+By hand: 
+- $z = 1.957066$
+- $p-value = 0.05033966$
+
+Using R:
+- $p-value = 0.05341977$
+:::
+
+### (f) {.unnumbered}
+
+Are the results from CI and hypothesis test consistent? Why or why not?
+
+
+::: blue
+Yes!
+:::
+
+## 8.14 2010 Healthcare Law {.unnumbered}
+
+### (a) {.unnumbered}
+
+::: blue
+FALSE.
+:::
+
+### (b) {.unnumbered}
+
+::: blue
+TRUE. 
+:::
+
+### (c) {.unnumbered}
+
+::: blue
+FALSE.
+:::
+
+### (d) {.unnumbered}
+
+::: blue
+FALSE.
+:::
+
+## 8.26 An apple a day keeps the doctor away {.unnumbered}
+
+::: blue
+No
+:::
+
+# PSS
+
+## Power and Sample size: Auto exhaust and lead exposure revisited
+
+### Power
+
+In exercise 5.12 in Homework 6, we tested whether police officers appear to have been exposed to a higher concentration of lead than 35. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered? 
+
+::: blue
+Yes, power is ~1.
+:::
+
+### Sample size
+
+For the same test, what sample size would be needed for 80% power? Would it be reasonable to conduct the study with these sample sizes? Why or why not? (Hint: think about the assumptions of our distributions when using a t-test)
+
+::: blue
+3
+:::
+
+### Effect size
+
+Suppose the study has resources to include 30 people. What minimum effect size would they be able to detect with 85% power assuming the same sample mean and standard deviation. Use $\alpha$ = 0.05. 
+
+::: blue
+0.5013972
+:::
+
+# R
+
+## R1: The Strong Heart Study
+
+The [Strong Heart Study](https://strongheartstudy.org/) is an ongoing study of American Indians residing in 13 tribal communities in three geographic areas (AZ, OK, and SD/ND) to study prevalence and incidence of cardiovascular disease and to identify risk factors. We will be examining the 4-year cumulative incidence of diabetes with one risk factor, glucose tolerance. We are curious if the proportion of individuals diagnosed with diabetes is different between glucose tolerances.
+
+-   **Impaired glucose:** normal or impaired glucose tolerance at baseline visit (between 1988 and 1991)
+
+-   **Diabetes:** Indicator of diabetes at follow-up visit (roughly four years after baseline) according to two-hour oral glucose tolerance test
+
+The data are in `SHS_data.csv` located in the `Data` folder of the shared OneDrive folder. The following table summarizes the data:
+
+```{r}
+#| echo: false
+
+SHS = tibble(Diabetes = c(rep("Not diabetic", 
+                   1338), 
+                   rep("Diabetic", 326)),
+              Glucose = c(rep("Normal", 
+                  1004),#Not diabetic
+          rep("Impaired", 334),
+          rep("Normal", 
+              128), #Diabetic
+          rep("Impaired", 198)))
+
+SHS %>% tabyl(Glucose, Diabetes) %>% 
+  adorn_totals(where = c("row", "col")) %>% 
+  gt() %>% 
+  tab_stubhead(label = "Glucose Impairment") %>%
+  tab_spanner(label = "Diabetes", 
+              columns = c("Not diabetic", "Diabetic")) %>%
+  tab_options(table.font.size = 15)
+```
+
+### Run a hypothesis test
+
+Complete the hypothesis test to see if the proportion of individuals diagnosed with diabetes is different between glucose tolerances.
+(Reminder: Follow all steps and put your conclusion in context of the Strong Heart Study)
+
+::: blue
+By hand: 
+- $z = 12.4420859$
+- $p-value = 1.5441e-35$
+
+Using R:
+- Not part of answer, but to check: `X-squared = 153.16`
+- $p-value = < 2.2e-16$
+:::
+
+### Calculate the confidence interval for the difference in proportions
+
+Calculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test? (Reminder: Make sure to check the assumptions!)
+
+::: blue
+
+By hand: 
+$$(0.196, 0.324)$$
+
+Using R:
+$$(0.213, 0.306)$$
+:::
