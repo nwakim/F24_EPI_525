@@ -49,6 +49,52 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 # Book exercises {.unnumbered}
 
+
+## 8.28 True or false, Part II {.unnumbered}
+
+
+
+
+## 8.32 Diabetes and unemployment {.unnumbered}
+
+
+### (a) {.unnumbered}
+
+### (b) {.unnumbered}
+
+### (c) {.unnumbered}
+
+[__In addition to answering the question in (c), run the 2 proportions test in R and calculated the "z" test statistic and p-value using the normal distribution based on the $\chi^2$ output in R's test.__]{style="color:green"}
+
+
+### (d) extra part {.unnumbered}
+
+[__Run the test as a $\chi^2$ as well, and compare your results to those in (c).__]{style="color:green"}
+
+
+
+## 8.34 Coffee and Depression {.unnumbered}
+
+* [__Do not create a dataset and run the test in R. Use just the information given in the problem.__]{style="color:green"}
+* [__For (e), calculate the p-value "directly" (not using $\chi^2$ test command in R). Also comment on whether you think the sample size condition would be met without computing the expected cell counts.__]{style="color:green"}
+
+
+## 8.38 (a) & (extra) Salt intake and CVD {.unnumbered}
+
+Do not do parts (b)-(c) in the book
+
+### (a) {.unnumbered}
+
+* [__You can use the expected cell counts from R's chi-squared test (you do not need to compute them using the formula).__]{style="color:green"} 
+* [__Comment on whether the sample size condition is met or not for these data.__]{style="color:green"}
+
+
+
+### (extra) {.unnumbered}
+
+[__Run a Fisher's Exact test. Include the hypotheses and a conclusion in the context of the problem.__]{style="color:green"}
+
+
 ## 5.44 Work hours and education {.unnumbered}
 
 

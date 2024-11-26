@@ -4475,6 +4475,17 @@ vertical-align: -.125em;
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
 
 </head>
 
@@ -4536,6 +4547,20 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#book-exercises" id="toc-book-exercises" class="nav-link" data-scroll-target="#book-exercises">Book exercises</a>
   <ul class="collapse">
+  <li><a href="#true-or-false-part-ii" id="toc-true-or-false-part-ii" class="nav-link" data-scroll-target="#true-or-false-part-ii">8.28 True or false, Part II</a></li>
+  <li><a href="#diabetes-and-unemployment" id="toc-diabetes-and-unemployment" class="nav-link" data-scroll-target="#diabetes-and-unemployment">8.32 Diabetes and unemployment</a>
+  <ul class="collapse">
+  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
+  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">(c)</a></li>
+  <li><a href="#d-extra-part" id="toc-d-extra-part" class="nav-link" data-scroll-target="#d-extra-part">(d) extra part</a></li>
+  </ul></li>
+  <li><a href="#coffee-and-depression" id="toc-coffee-and-depression" class="nav-link" data-scroll-target="#coffee-and-depression">8.34 Coffee and Depression</a></li>
+  <li><a href="#a-extra-salt-intake-and-cvd" id="toc-a-extra-salt-intake-and-cvd" class="nav-link" data-scroll-target="#a-extra-salt-intake-and-cvd">8.38 (a) &amp; (extra) Salt intake and CVD</a>
+  <ul class="collapse">
+  <li><a href="#a-1" id="toc-a-1" class="nav-link" data-scroll-target="#a-1">(a)</a></li>
+  <li><a href="#extra" id="toc-extra" class="nav-link" data-scroll-target="#extra">(extra)</a></li>
+  </ul></li>
   <li><a href="#work-hours-and-education" id="toc-work-hours-and-education" class="nav-link" data-scroll-target="#work-hours-and-education">5.44 Work hours and education</a></li>
   <li><a href="#child-care-hours" id="toc-child-care-hours" class="nav-link" data-scroll-target="#child-care-hours">5.46 Child care hours</a></li>
   <li><a href="#truefalse-anova-part-ii" id="toc-truefalse-anova-part-ii" class="nav-link" data-scroll-target="#truefalse-anova-part-ii">5.48 True/False: ANOVA, Part II</a></li>
@@ -4643,6 +4668,48 @@ Tip
 </section>
 <section id="book-exercises" class="level1 unnumbered">
 <h1 class="unnumbered">Book exercises</h1>
+<section id="true-or-false-part-ii" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="true-or-false-part-ii">8.28 True or false, Part II</h2>
+</section>
+<section id="diabetes-and-unemployment" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="diabetes-and-unemployment">8.32 Diabetes and unemployment</h2>
+<section id="a" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="a">(a)</h3>
+</section>
+<section id="b" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="b">(b)</h3>
+</section>
+<section id="c" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c">(c)</h3>
+<p><span style="color:green"><strong>In addition to answering the question in (c), run the 2 proportions test in R and calculated the “z” test statistic and p-value using the normal distribution based on the <span class="math inline">\(\chi^2\)</span> output in R’s test.</strong></span></p>
+</section>
+<section id="d-extra-part" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="d-extra-part">(d) extra part</h3>
+<p><span style="color:green"><strong>Run the test as a <span class="math inline">\(\chi^2\)</span> as well, and compare your results to those in (c).</strong></span></p>
+</section>
+</section>
+<section id="coffee-and-depression" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="coffee-and-depression">8.34 Coffee and Depression</h2>
+<ul>
+<li><span style="color:green"><strong>Do not create a dataset and run the test in R. Use just the information given in the problem.</strong></span></li>
+<li><span style="color:green"><strong>For (e), calculate the p-value “directly” (not using <span class="math inline">\(\chi^2\)</span> test command in R). Also comment on whether you think the sample size condition would be met without computing the expected cell counts.</strong></span></li>
+</ul>
+</section>
+<section id="a-extra-salt-intake-and-cvd" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-extra-salt-intake-and-cvd">8.38 (a) &amp; (extra) Salt intake and CVD</h2>
+<p>Do not do parts (b)-(c) in the book</p>
+<section id="a-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="a-1">(a)</h3>
+<ul>
+<li><span style="color:green"><strong>You can use the expected cell counts from R’s chi-squared test (you do not need to compute them using the formula).</strong></span></li>
+<li><span style="color:green"><strong>Comment on whether the sample size condition is met or not for these data.</strong></span></li>
+</ul>
+</section>
+<section id="extra" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="extra">(extra)</h3>
+<p><span style="color:green"><strong>Run a Fisher’s Exact test. Include the hypotheses and a conclusion in the context of the problem.</strong></span></p>
+</section>
+</section>
 <section id="work-hours-and-education" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="work-hours-and-education">5.44 Work hours and education</h2>
 </section>
