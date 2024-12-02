@@ -52,11 +52,9 @@ theme_set(theme_bw(base_size = 22))
 
 # Learning Objectives
 
-1.  Understand when to use chi-squared
+1.  Understand the Chi-squared test and the expected cell counts under the null hypothesis distribution.
 
-2.  Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables
-
-3.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test
+2.  Determine if two categorical variables are associated with one another using the Chi-squared test.
 
 ```{css, echo=FALSE}
 .reveal code {
@@ -84,7 +82,13 @@ theme_set(theme_bw(base_size = 22))
     -   Can no longer rely on the difference in proportions
     -   Need a new method to make inference (Chi-squared test!)
 
-# Learning Objective
+# Learning Objectives
+
+::: lob
+1.  Understand the Chi-squared test and the expected cell counts under the null hypothesis distribution.
+:::
+
+2.  Determine if two categorical variables are associated with one another using the Chi-squared test.
 
 ## From Lesson 4: Example: hypertension prevalence (1/2)
 
@@ -329,6 +333,11 @@ expected(hyp_data2)
 
 # Learning Objectives
 
+1.  Understand the Chi-squared test and the expected cell counts under the null hypothesis distribution.
+
+::: lob
+2.  Determine if two categorical variables are associated with one another using the Chi-squared test.
+:::
 
 ## Reference: Steps in a Hypothesis Test
 
@@ -412,106 +421,141 @@ Test of "**independence**" wording
 :::
 :::::
 
-## Step 4: Calculate the $\chi^2$ test statistic
+## Step 4: Calculate the $\chi^2$ test statistic (1/2)
 
-::::: columns
-::: {.column width="45%"}
+
 Test statistic for a test of association (independence):
 
 $$\chi^2 = \sum_{\textrm{all cells}} \frac{(\textrm{observed} - \text{expected})^2}{\text{expected}}$$
 
 -   When the variables are independent, the observed and expected counts should be close to each other
-:::
 
+
+## Step 4: Calculate the $\chi^2$ test statistic (2/2)
+
+::: columns
 ::: {.column width="55%"}
-![](/img_slides/ChiSq_Table_Expected_brief_DepressionPA.png){fig-align="center"}
-:::
-:::::
-
-<hr>
-
-::: {style="font-size: 90%;"}
 \begin{align}
-\chi^2 &=  \sum\frac{(O-E)^2}{E} \\
-&= \frac{(199-177.41)^2}{177.41} + \frac{(26-32.77)^2}{32.77} + \ldots + \frac{(27-12.18)^2}{12.18} \\
-&=  41.2
+\chi^2 =&  \sum\frac{(O-E)^2}{E} \\
+=& \frac{(8836-35101.87)^2}{35101.87} + \frac{(112206-85940.13)^2}{85940.13} + \\
+& \ldots + \frac{(21589-43669.42)^2}{43669.42} \\
+=&  66831
 \end{align}
-:::
 
 Is this value big? Big enough to reject $H_0$?
+:::
+::: {.column width="45%"}
+Observed:
+```{r}
+#| echo: false
+
+hyp_data2 %>% # expected() %>%
+  kable(col.names = c("Age Group", "Hypertension", "No Hypertension")) %>%
+  kable_styling(font_size = 35)
+```
+
+ 
+
+Expected:
+```{r}
+#| echo: false
+
+hyp_data2 %>% expected() %>%
+  kable(col.names = c("Age Group", "Hypertension", "No Hypertension")) %>%
+  kable_styling(font_size = 35)
+```
+
+:::
+:::::
 
 ## Step 5: Calculate the *p*-value
 
 ::::: columns
-::: {.column width="60%"}
+::: {.column width="59%"}
 The $\chi^2$ distribution shape depends on its degrees of freedom
 
 -   It's skewed right for smaller df,
     -   gets more symmetric for larger df
--   [**df = (# rows-1) x (# columns-1)**]{style="color:green"}
+-   [**df = (# rows-1) x (# columns-1)**]{style="color:#C83532"}
 
-![](/img_slides/chisq_density.png){fig-align="center"}
+![](../img_slides/chisq_density.png){fig-align="center"}
+:::
+
+::: {.column width="1%"}
 :::
 
 ::: {.column width="40%"}
--   The [**p-value**]{style="color:darkorange"} is always the [**area to the right**]{style="color:darkorange"} of the test statistic for a $\chi^2$ test.
+-   The [**p-value**]{style="color:darkorange"} is always the [**area to the right**]{style="color:darkorange"} of the test statistic for a $\chi^2$ test
+
+ 
+
 -   We can use the `pchisq` function in R to calculate the probability of being at least as big as the $\chi^2$ test statistic:
 
 ```{r}
-pv <- pchisq(41.2, df = 2, 
+pv <- pchisq(66831, df = 2, 
        lower.tail = FALSE)
 pv
 ```
 
-What's the conclusion to the $\chi^2$ test?
 :::
 :::::
+
+## Step 4-5: Calculate the test statistic and p-value 
+
+::: columns
+::: column
+- Data need to be in a matrix or table: use `as.matrix()` or `table()`
+  - Use matrix if data already in contingency table form
+  - Use table if data are two columns with each row for each observation (tidy version)
+- Notice that age groups are rownames! Age does not have its own column
+:::
+
+::: column
+
+```{r}
+hyp_data2
+```
+:::
+:::
+
+- Run `chisq.test()` in R
+```{r}
+chisq.test(x = hyp_data2)
+```
 
 ## Step 6: Conclusion
 
 Recall the hypotheses to our $\chi^2$ test:
 
--   $H_0$: There is **no association** between depression and being physically activity
+-   $H_0$: There is **no association** between age and hypertension
 
--   $H_A$: There is **an association** between depression and being physically activity
+-   $H_A$: There is **an association** between age and hypertension
 
-::::: columns
-::: {.column width="50%"}
-```{r}
-#| fig.height: 3.5
-#| fig.width: 8
-#| echo: false
+ 
 
-ggplot(NULL, aes(c(0,50))) + # no dataset, create axes for x from 0 to 50
-  # Draw & fill in chi-squared distribution from 0 to 41.2 (test stat value)
-  geom_area(stat = "function", fun = dchisq, args = list(df=2),fill = "skyblue", alpha =0.9, xlim = c(0, 41.2)) +
-  # Draw & fill in chi-squared distribution from 41.2 to 50
-  geom_area(stat = "function", fun = dchisq, args = list(df=2),fill = "violet", alpha =0.4, xlim = c(41.2, 50)) +
-  labs(x = "", y = "", title="Chi-squared test p-value") +
-  scale_y_continuous(breaks = NULL) +
-  scale_x_continuous(breaks = seq(0, 50, by=10)) + # x-axis tick marks: 0,10,20,...,50
-  geom_vline(xintercept = 41.2) + # vertical line at x = 41.2 (test stat)
-  annotate("text", x = 30, y = .4, # add text at specified (x,y) coordinate
-           # label is text that will appear
-           label = "chi-squared = 41.2", hjust=0, size=6) +
-  annotate("text", x = 30, y = .1, label = "p-value < 0.001", hjust=0, size=6) +
-  theme(panel.grid.major = element_blank(), # remove the major grid lines
-        panel.grid.minor = element_blank()) # remove the minor grid lines
-```
+::: columns
+::: column
+-   Recall the $p$-value = `r round(0.04022, 4)`
+-   Use $\alpha$ = 0.05
+-   Do we reject or fail to reject $H_0$?
+:::
+::: column
+__Conclusion statement__:
+
+* There is sufficient evidence that there is an association between age group and hypertension (p-value < 0.0001`)
+:::
 :::
 
-::: {.column width="50%"}
-**Conclusion:**
-
-Based a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (*p*-value \< 0.001).
+::: blue
+::: blue-ttl
+Warning!!
 :::
-:::::
-
-::: callout-warning
-If we fail to reject, we DO NOT have evidence of no association.
+::: blue-cont
+If we fail to reject, we DO NOT say variables are independent! We **can** say that we have insufficient evidence that there is an association. 
+:::
 :::
 
-## Chi-squared test: Example
+## Chi-squared test: Example all together
 
 ::::: columns
 ::: column

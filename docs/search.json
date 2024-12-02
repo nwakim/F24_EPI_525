@@ -7674,280 +7674,280 @@
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#load-packages",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#load-packages",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Load packages",
-    "text": "Load packages\n\nPackages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) \nlibrary(here) \nlibrary(pwr) \nlibrary(BSDA)  # NEW package!!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+    "text": "Load packages\n\nPackages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) \nlibrary(here) \nlibrary(pwr) \nlibrary(BSDA)  # NEW package!!!\nlibrary(epitools)\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#additional-resource",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#additional-resource",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Additional resource",
     "text": "Additional resource\n\nChapter 13: Nonparametric tests of Pagano’s Principles of Biostatistics, 2022 edition\nCan download chapter from OHSU library eBook at https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&pq-origsite=primo"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#background-parametric-vs-nonparametric",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#background-parametric-vs-nonparametric",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Background: parametric vs nonparametric",
     "text": "Background: parametric vs nonparametric\n\nPrior inference of means methods had conditions assuming the underlying population(s) was (were) normal (or at least approximately normal).\nNormal distribution is completely described (parameterized) by two parameters: \\(\\mu\\) and \\(\\sigma\\).\nThe first was often the parameter of interest, while the latter was assumed known ( \\(Z\\)-test) or estimated ( \\(t\\)-tests).\nThe above are therefore described as parametric procedures.\nNonparametric procedures\n\nMake fewer assumptions about the structure of the underlying population from which the samples were collected.\nWork well when distributional assumptions are in doubt."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#the-good-and-the-bad-about-nonparametric-tests",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#the-good-and-the-bad-about-nonparametric-tests",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "The good and the bad about nonparametric tests",
     "text": "The good and the bad about nonparametric tests\nGood\n\nFewer assumptions\nTests are based on ranks\n\nTherefore outliers have no greater influence than non-outliers.\nSince tests are based on ranks we can apply these procedures to ordinal data\n\n(where means and standard deviations are not meaningful).\n\n\n\nDrawbacks\n\nLess powerful than parametric tests (due to loss of information when data are converted to ranks)\nWhile the test is easy, it may require substantial (computer) work to develop a confidence interval [by “inverting” the test].\nTheory was developed for continuous data (where ties are not possible); if population or data contain many ties, then a correction to the procedures must be implemented.\nSome procedures have “large” and “small” sample versions; the small sample versions require special tables or a computer."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example-intraocular-pressure-of-glaucoma-patients",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#example-intraocular-pressure-of-glaucoma-patients",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Example: Intraocular pressure of glaucoma patients",
     "text": "Example: Intraocular pressure of glaucoma patients\n\nIntraocular pressure of glaucoma patients is often reduced by treatment with adrenaline.\nA new synthetic drug is being considered, but it is more expensive than the current adrenaline alternative.\n7 glaucoma patients were treated with both drugs:\n\none eye with adrenaline and\nthe other with the synthetic drug\n\nReduction in pressure was recorded in each eye after following treatment (larger numbers indicate greater reduction)\n\n\nIOP_table &lt;- tibble(\n  Patient = 1:7,\n  Adren = c(3.5, 2.6, 3, 1.9, 2.9, 2.4, 2),\n  Synth = c(3.2, 3.1, 3.3, 2.4, 2.9, 2.8, 2.6)\n  ) %&gt;% \n  mutate(\n    d = Synth - Adren,\n    Sign = case_when(\n      d &lt; 0 ~ \"-\",\n      d &gt; 0 ~ \"+\"\n      )\n    )\nIOP_table %&gt;% gt()\n\n\n\n\n\n  \n    \n      Patient\n      Adren\n      Synth\n      d\n      Sign\n    \n  \n  \n    1\n3.5\n3.2\n-0.3\n-\n    2\n2.6\n3.1\n0.5\n+\n    3\n3.0\n3.3\n0.3\n+\n    4\n1.9\n2.4\n0.5\n+\n    5\n2.9\n2.9\n0.0\nNA\n    6\n2.4\n2.8\n0.4\n+\n    7\n2.0\n2.6\n0.6\n+\n  \n  \n  \n\n\n\n\n\nd is the difference in reduction of pressure: Synth - Adren\nSign is + if the difference is positive and - if the difference is negative\n\nVisualize the differences\nVisualize the differences in reduction of pressure \\(d\\) : Synth - Adren\n\nggplot(IOP_table, aes(x = d)) +\n  geom_dotplot()\n\n\n\n\n\nggplot(IOP_table, aes(x = d)) +\n  geom_density()"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#hypotheses-statistic-sign-test",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#hypotheses-statistic-sign-test",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Hypotheses & “statistic” (Sign test)",
     "text": "Hypotheses & “statistic” (Sign test)\nHypotheses\n\\(H_0:\\) The median difference in the population is 0\n\\(H_a:\\) The median difference in the population is NOT 0\n\n“Statistic”\n\\(D^+\\) = number of positive differences\n\\(D^-\\) = number of negative differences\n\nWhat are \\(D^+\\) and \\(D^-\\) for our example?\n\nIOP_table %&gt;% gt()\n\n\n\n\n\n  \n    \n      Patient\n      Adren\n      Synth\n      d\n      Sign\n    \n  \n  \n    1\n3.5\n3.2\n-0.3\n-\n    2\n2.6\n3.1\n0.5\n+\n    3\n3.0\n3.3\n0.3\n+\n    4\n1.9\n2.4\n0.5\n+\n    5\n2.9\n2.9\n0.0\nNA\n    6\n2.4\n2.8\n0.4\n+\n    7\n2.0\n2.6\n0.6\n+"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#exact-p-value-sign-test",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#exact-p-value-sign-test",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Exact p-value (Sign test)",
     "text": "Exact p-value (Sign test)\n\nIf the median difference is 0 ( \\(H_0\\) is true) , then * half the population consists of positive differences * while half have negative differences.\nLet \\(p=P(\\textrm{neg. diff.})=P(\\textrm{pos. diff.})= 0.5\\)\n\n\n\nIf the median difference is 0 ( \\(H_0\\) is true), * then a sample of \\(n\\) differences * behaves like \\(n\\) trials in a binomial experiment * where “success” is analogous to seeing a positive difference. * By symmetry ( \\(p=0.5\\) ), the same distribution applies to negative differences, i.e.,\n\n\\[D^+ \\textrm{ and } D^- \\sim \\textrm{Bin}(n,p=0.5)\\]\n\n\nThus the (exact) p-value is calculated using the Binomial distribution"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#glaucoma-example-exact-p-value",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#glaucoma-example-exact-p-value",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Glaucoma example (exact) p-value",
     "text": "Glaucoma example (exact) p-value\n\n7 differences:\n\n1 negative ( \\(D^-\\) )\n5 were positive ( \\(D^+\\) )\n1 difference is 0 and is discarded\n\nThus the effective sample size is \\(n=6\\).\n\n\nOne-sided p-value = probability that we would see 1 or fewer negative signs among the \\(n=6\\) differences, if the median difference is really 0\n\nTwo-sided p-value = 2 \\(\\times\\) One-sided p-value\n\n# 2-sided p-value: 2*P(D^- &lt;= 1)\n2*pbinom(1, size = 6, p = 0.5)\n\n[1] 0.21875\n\n\n\\[D^- \\sim \\textrm{Bin}(n=6,p=0.5)\\]\n\n\n\\[p-value = P(D^- \\leq 1) \\\\\n= P(D^-=0) + P(D^-=1) \\\\\n= \\frac{6!}{0!6!} (0.5)^6 + \\frac{6!}{1!5!} (0.5)^6 \\\\\n\\approx 0.1094\\]\n\n\\[p-value \\times 2 \\approx 0.2188\\]"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-in-r-glaucoma-example",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-in-r-glaucoma-example",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Sign test in R: Glaucoma example",
     "text": "Sign test in R: Glaucoma example\nBelow we create the dataset as a tibble (and add the signs):\n\nIOP &lt;- tibble(\n  Patient = 1:7,\n  Adren = c(3.5, 2.6, 3, 1.9, 2.9, 2.4, 2),\n  Synth = c(3.2, 3.1, 3.3, 2.4, 2.9, 2.8, 2.6)\n  ) %&gt;% \n  mutate(d = Synth - Adren,\n    Sign = case_when(\n      d &lt; 0 ~ \"-\",\n      d &gt; 0 ~ \"+\"))\n\nIOP %&gt;% gt()\n\n\n\n\n\n  \n    \n      Patient\n      Adren\n      Synth\n      d\n      Sign\n    \n  \n  \n    1\n3.5\n3.2\n-0.3\n-\n    2\n2.6\n3.1\n0.5\n+\n    3\n3.0\n3.3\n0.3\n+\n    4\n1.9\n2.4\n0.5\n+\n    5\n2.9\n2.9\n0.0\nNA\n    6\n2.4\n2.8\n0.4\n+\n    7\n2.0\n2.6\n0.6\n+\n  \n  \n  \n\n\n\n\nRecall we’re testing the population median.\nHere’s the sample median:\n\nmedian(IOP$d)\n\n[1] 0.4"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-in-r-glaucoma-example-specifying-both-columns",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-in-r-glaucoma-example-specifying-both-columns",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Sign test in R: Glaucoma example (specifying both columns)",
     "text": "Sign test in R: Glaucoma example (specifying both columns)\n\nlibrary(BSDA)  # new package!! Make sure to first install it\n# Can't \"tidy\" the output\nSIGN.test(x = IOP$Synth, y = IOP$Adren, alternative = \"two.sided\", conf.level = 0.95)\n\n\n    Dependent-samples Sign-Test\n\ndata:  IOP$Synth and IOP$Adren\nS = 5, p-value = 0.2187\nalternative hypothesis: true median difference is not equal to 0\n95 percent confidence interval:\n -0.2057143  0.5685714\nsample estimates:\nmedian of x-y \n          0.4 \n\nAchieved and Interpolated Confidence Intervals: \n\n                  Conf.Level  L.E.pt U.E.pt\nLower Achieved CI     0.8750  0.0000 0.5000\nInterpolated CI       0.9500 -0.2057 0.5686\nUpper Achieved CI     0.9844 -0.3000 0.6000\n\n\nSign test in R: Glaucoma example (specifying differences)\n\n# Note output calls this a \"One-sample Sign-Test\"\nSIGN.test(x = IOP$d, alternative = \"two.sided\", conf.level = 0.95)\n\n\n    One-sample Sign-Test\n\ndata:  IOP$d\ns = 5, p-value = 0.2187\nalternative hypothesis: true median is not equal to 0\n95 percent confidence interval:\n -0.2057143  0.5685714\nsample estimates:\nmedian of x \n        0.4 \n\nAchieved and Interpolated Confidence Intervals: \n\n                  Conf.Level  L.E.pt U.E.pt\nLower Achieved CI     0.8750  0.0000 0.5000\nInterpolated CI       0.9500 -0.2057 0.5686\nUpper Achieved CI     0.9844 -0.3000 0.6000"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#conclusion",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#conclusion",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Conclusion",
     "text": "Conclusion\nRecall the hypotheses to the sign test:\n\\(H_0:\\) The median population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is 0.\n\\(H_a:\\) The median population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is NOT 0.\n\nSignificance level: \\(\\alpha\\) = 0.05\np-value = 0.2188\n\nConclusion:\nThe median difference in reduction of intraocular pressure between eyes being treated with the synthetic drug and adrenaline for seven glaucoma patients was 0.4 (95% CI: -0.2, 0.6).\nThere is insufficient evidence the reduction in intraocular pressure differs when using the synthetic drug and adrenaline (2-sided sign test \\(p\\)-value = 0.219)."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-with-large-samples-p-value-normal-approximation",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-with-large-samples-p-value-normal-approximation",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Sign test with large samples: p-value normal approximation",
     "text": "Sign test with large samples: p-value normal approximation\n\nIf the sample size is large, say greater than 20,\n\nthen binomial probabilities can be approximated using normal probabilities\n\nNormal approximation:\n\n\\[\\mu = np =n(0.5)=n/2\\\\\n\\sigma=\\sqrt{np(1-p)}=\\sqrt{n(0.5)(0.5)}= \\sqrt{n}/2\\]\n\nThus we have the test statistic:\n\n\\[z=\\frac{D^- −n/2}{\\sqrt{n}/2}\\]\n\nWith access to a computer, it’s better to use the exact binomial probabilities instead of the normal approximation."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-with-one-sample",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#sign-test-with-one-sample",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Sign test with one sample",
     "text": "Sign test with one sample\n\nOne can use the sign test when testing just one sample.\nNote that we did this when in R, when running the sign test using just the differences.\nFor one sample, we can specify the null population median value:\n\n\\(H_0:\\) The population median is \\(m\\)\n\\(H_a:\\) The population median is NOT \\(m\\)\nExample: Run sign test for paired data with null \\(m = 0.7\\):\n\nSIGN.test(x = IOP$d, md = 0.7, alternative = \"two.sided\", conf.level = 0.95)\n\n\n    One-sample Sign-Test\n\ndata:  IOP$d\ns = 0, p-value = 0.01562\nalternative hypothesis: true median is not equal to 0.7\n95 percent confidence interval:\n -0.2057143  0.5685714\nsample estimates:\nmedian of x \n        0.4 \n\nAchieved and Interpolated Confidence Intervals: \n\n                  Conf.Level  L.E.pt U.E.pt\nLower Achieved CI     0.8750  0.0000 0.5000\nInterpolated CI       0.9500 -0.2057 0.5686\nUpper Achieved CI     0.9844 -0.3000 0.6000"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-1",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-1",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "(Wilcoxon) Signed-rank test",
     "text": "(Wilcoxon) Signed-rank test\n\nLike the sign test, the (Wilcoxon) signed-rank test is used for\n\npaired samples (i.e., a single set of differences) or\na one-sample comparison against a specified value\n\nHowever, this test does make use of information concerning the size of the differences.\n\n\nHypotheses\n\\(H_0:\\) the population is symmetric around some value \\(\\tilde{\\mu}_0\\)\n\\(H_a:\\) the population is not symmetric around some value \\(\\tilde{\\mu}_0\\)\n\nEven if the population has a mean/median equal to \\(\\tilde{\\mu}_0\\), the test may reject the null if the population isn’t symmetric, thus only use if the data (differences) are symmetric.\nIf the population is symmetric\n\nthen the mean and median coincide,\nthus often the null hypothesis is phrased in terms of the median difference being 0"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example-calculate-signed-ranks",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#example-calculate-signed-ranks",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Example: calculate signed ranks",
     "text": "Example: calculate signed ranks\n\nRank the absolute values of the differences from smallest to largest\nFor ties, take the average of the highest and lowest tied ranks\n\nI.e. if ranks 3-7 are tied, then assign (3+7)/2 = 5 as the rank\n\nThen calculate the signed ranks as +/- the rank depending on whether the sign is +/-\n\n\nIOP_ranks &lt;- IOP %&gt;% \n  mutate(\n    Rank = c(1.5, 4.5, 1.5, 4.5, NA, 3, 6),\n    Signed_rank = case_when(\n      d &lt; 0 ~ -Rank,\n      d &gt; 0 ~ Rank\n      )\n    )\nIOP_ranks %&gt;% gt()\n\n\n\n\n\n  \n    \n      Patient\n      Adren\n      Synth\n      d\n      Sign\n      Rank\n      Signed_rank\n    \n  \n  \n    1\n3.5\n3.2\n-0.3\n-\n1.5\n-1.5\n    2\n2.6\n3.1\n0.5\n+\n4.5\n4.5\n    3\n3.0\n3.3\n0.3\n+\n1.5\n1.5\n    4\n1.9\n2.4\n0.5\n+\n4.5\n4.5\n    5\n2.9\n2.9\n0.0\nNA\nNA\nNA\n    6\n2.4\n2.8\n0.4\n+\n3.0\n3.0\n    7\n2.0\n2.6\n0.6\n+\n6.0\n6.0\n  \n  \n  \n\n\n\n\nNew: Calculate ranks using R’s rank() function\n\nBelow I create the ranks using R’s rank() function that has an option ties.method to specify how to calculate ties.\nThis doesn’t require first sorting the data.\nHowever, it includes a difference of 0 in the ranking, and thus below I first remove the row with \\(d=0\\) from the data.\nIn the output below, I called this column Rank_R.\n\n\nIOP_Ranks_R &lt;- IOP_ranks %&gt;% \n  filter(d != 0) %&gt;% \n  mutate(\n    # create column with absolute values of differences\n    # it's the absolute values that get ranked\n    abs_d = abs(d), \n    # create column with ranks that accounts for ties using R's rank() function\n    # you don't need to first sort the data to use this command\n    Rank_R = rank(abs_d, ties.method = \"average\"),\n    Signed_Rank_R = case_when(\n      d &lt; 0 ~ -Rank_R,\n      d &gt; 0 ~ Rank_R\n      )\n    ) \n\nIOP_Ranks_R %&gt;% gt()\n\n\n\n\n\n  \n    \n      Patient\n      Adren\n      Synth\n      d\n      Sign\n      Rank\n      Signed_rank\n      abs_d\n      Rank_R\n      Signed_Rank_R\n    \n  \n  \n    1\n3.5\n3.2\n-0.3\n-\n1.5\n-1.5\n0.3\n1.5\n-1.5\n    2\n2.6\n3.1\n0.5\n+\n4.5\n4.5\n0.5\n4.5\n4.5\n    3\n3.0\n3.3\n0.3\n+\n1.5\n1.5\n0.3\n1.5\n1.5\n    4\n1.9\n2.4\n0.5\n+\n4.5\n4.5\n0.5\n4.5\n4.5\n    6\n2.4\n2.8\n0.4\n+\n3.0\n3.0\n0.4\n3.0\n3.0\n    7\n2.0\n2.6\n0.6\n+\n6.0\n6.0\n0.6\n6.0\n6.0"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#test-statistic-wilcoxon-signed-rank-test",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#test-statistic-wilcoxon-signed-rank-test",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Test statistic (Wilcoxon) Signed-rank test",
     "text": "Test statistic (Wilcoxon) Signed-rank test\nIf the null is true:\n\nThe population is symmetric around some point ( \\(\\tilde{\\mu}_0 = 0\\) , typically), and\nThe overall size of the positive ranks should be about the same as the overall size of negative ranks.\n\nNote:\n\nThe sum of the ranks \\(1,2,\\dotsc, n\\) is always \\(n(n+1)/2\\),\nwhich can be broken down as the\n\nsum of the positive ranks ( \\(T^+\\) )\nplus the sum of the negative ranks ( \\(T^-\\) )\n\n\nThus, any of the following can be used as a test statistic and will lead to the same conclusion:\n\n\\(T^+\\)\n\\(T^-\\)\n\\(T^+\\) - \\(T^-\\)\n\\(\\min(T^+,T^−) = T_0\\)"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example-calculate-sums-of-signed-ranks",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#example-calculate-sums-of-signed-ranks",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Example: calculate sums of signed ranks",
     "text": "Example: calculate sums of signed ranks\n\nIOP_ranks %&gt;% gt()\n\n\n\n\n\n  \n    \n      Patient\n      Adren\n      Synth\n      d\n      Sign\n      Rank\n      Signed_rank\n    \n  \n  \n    1\n3.5\n3.2\n-0.3\n-\n1.5\n-1.5\n    2\n2.6\n3.1\n0.5\n+\n4.5\n4.5\n    3\n3.0\n3.3\n0.3\n+\n1.5\n1.5\n    4\n1.9\n2.4\n0.5\n+\n4.5\n4.5\n    5\n2.9\n2.9\n0.0\nNA\nNA\nNA\n    6\n2.4\n2.8\n0.4\n+\n3.0\n3.0\n    7\n2.0\n2.6\n0.6\n+\n6.0\n6.0\n  \n  \n  \n\n\n\n\n\nSum of the positive ranks\n\n\\(T^+\\) = 1.5 + 3 + 4.5 + 4.5 + 6 = 19.5\n\nSum of the negative ranks\n\n\\(T^-\\) = -1.5\n\nThe sum of the ranks \\(1,2,\\dotsc, n\\) is always \\(n(n+1)/2\\):\n\n\\(n(n+1)/2 = 6(7)/2 = 21\\)\n\\(T^+ + |T^-| = 19.5 + |-1.5| = 21\\)"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#exact-p-value-wilcoxon-signed-rank-test-fyi-12",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#exact-p-value-wilcoxon-signed-rank-test-fyi-12",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Exact p-value (Wilcoxon) Signed-rank test (fyi) (1/2)",
     "text": "Exact p-value (Wilcoxon) Signed-rank test (fyi) (1/2)\n\nExact p-value is preferable\n\nThis is the default method in R’s wilcox.test()\n\nif the samples contain less than 50 finite values\nand there are no ties\n\nR will automatically use normal approximation method if there are ties\n\n\n\nWe will not be calculating the exact p-value “by hand.” We will be using R for this.\n\n\n\n\\[p-value = 2 * P(\\min(T^+,T^−) \\leq t)\\]\n\n\\(t\\) is the smaller of the calculated sums of the positive and negative ranks\nTo calculate the exact p-value, we need the probability of each possible sum of ranks.\n\nExact p-value (Wilcoxon) Signed-rank test (fyi) (2/2)\n\nTo calculate the exact p-value, we need the probability of each possible sum of ranks:\n\nlist all possible combinations of positive and negative ranks for the sample size,\ncalculate the sum of the positive ranks ( \\(T^+\\) ) for each possible combination (or \\(T^-\\) ), and\nthen figure out the probability of each possible \\(T^+\\) (assuming all combinations are equally likely)\n\n\nExample when \\(n=3\\) : (from https://online.stat.psu.edu/stat415/lesson/20/20.2)\n\n&lt;../img_slides src=“../img_slides/ExactW_n3.gif” width=“50%”&gt; &lt;../img_slides src=“../img_slides/ExactW_n3_prob.png” width=“40%”&gt;\n\nSee https://online.stat.psu.edu/stat415/lesson/20/20.2 for more details."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#normal-approximation-p-value-wilcoxon-signed-rank-test-fyi",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#normal-approximation-p-value-wilcoxon-signed-rank-test-fyi",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Normal approximation p-value (Wilcoxon) Signed-rank test (fyi)",
     "text": "Normal approximation p-value (Wilcoxon) Signed-rank test (fyi)\n\nNormal approximation method:\n\nIf the number of non-zero differences is at least 16, then a normal approximation can be used.\nHave the option to apply a continuity correct (default) or not\n\nWe will not be calculating the p-value “by hand.” We will be using R for this.\n\n\nTest statistic:\n\\[Z_{T_{min}} = \\frac{T_{min} - \\frac{n(n+1)}{4}}{\\sqrt{\\frac{n(n+1)(2n+1)}{24}}}\\]\n\n\\(T_{min} = \\min(T^+,T^−)\\)\n\\(n\\) = sample size\nTest statistic \\(Z_{T_{min}}\\) follows a standard normal distribution \\(N(0,1)\\)\nUse normal distribution to calculate p-value\n\nSee https://online.stat.psu.edu/stat415/lesson/20/20.2 for more details."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-in-r-glaucoma-example",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-in-r-glaucoma-example",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "(Wilcoxon) Signed-rank test in R: Glaucoma example",
     "text": "(Wilcoxon) Signed-rank test in R: Glaucoma example\n“Attempt” with exact p-value & specifying columns for paired data\n\n# Exact p-value\nwilcox.test(x = IOP$Synth, y = IOP$Adren, paired = TRUE, \n    alternative = c(\"two.sided\"), mu = 0, \n    exact = TRUE)\n\nWarning in wilcox.test.default(x = IOP$Synth, y = IOP$Adren, paired = TRUE, :\ncannot compute exact p-value with ties\n\n\nWarning in wilcox.test.default(x = IOP$Synth, y = IOP$Adren, paired = TRUE, :\ncannot compute exact p-value with zeroes\n\n\n\n    Wilcoxon signed rank test with continuity correction\n\ndata:  IOP$Synth and IOP$Adren\nV = 19.5, p-value = 0.07314\nalternative hypothesis: true location shift is not equal to 0"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-in-r-glaucoma-example-1",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-in-r-glaucoma-example-1",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "(Wilcoxon) Signed-rank test in R: Glaucoma example",
     "text": "(Wilcoxon) Signed-rank test in R: Glaucoma example\n“Attempt” with exact p-value & running one sample test with differences\n\n# Exact p-value\nwilcox.test(x = IOP$d, \n        alternative = c(\"two.sided\"), mu = 0, \n        exact = TRUE, correct = TRUE)\n\nWarning in wilcox.test.default(x = IOP$d, alternative = c(\"two.sided\"), :\ncannot compute exact p-value with ties\n\n\nWarning in wilcox.test.default(x = IOP$d, alternative = c(\"two.sided\"), :\ncannot compute exact p-value with zeroes\n\n\n\n    Wilcoxon signed rank test with continuity correction\n\ndata:  IOP$d\nV = 19.5, p-value = 0.07314\nalternative hypothesis: true location is not equal to 0"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-in-r-glaucoma-example-2",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-signed-rank-test-in-r-glaucoma-example-2",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "(Wilcoxon) Signed-rank test in R: Glaucoma example",
     "text": "(Wilcoxon) Signed-rank test in R: Glaucoma example\n“Attempt” with approximate p-value & specifying columns for paired data\n\n# Normal approximation with continuity correction\nwilcox.test(x = IOP$Synth, y = IOP$Adren, paired = TRUE, \n        alternative = c(\"two.sided\"), mu = 0, \n        exact = FALSE, correct = TRUE)\n\n\n    Wilcoxon signed rank test with continuity correction\n\ndata:  IOP$Synth and IOP$Adren\nV = 19.5, p-value = 0.07314\nalternative hypothesis: true location shift is not equal to 0\n\n\nNo more warnings!! However,… should we be using the normal approximation here?"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#conclusion-1",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#conclusion-1",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Conclusion",
     "text": "Conclusion\nRecall the hypotheses to the (Wilcoxon) Signed-rank test:\n\\(H_0:\\) the population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is symmetric around \\(\\tilde{\\mu}_0 =0\\)\n\\(H_a:\\) the population difference in reduction of intraocular pressure in treatment with adrenaline vs. new synthetic drug is not symmetric around \\(\\tilde{\\mu}_0 =0\\)\n\nSignificance level: \\(\\alpha\\) = 0.05\np-value = 0.07314\n\nConclusion:\nThere is insufficient evidence the differences in reduction in intraocular pressure differs between the synthetic drug and adrenaline are symmetric about 0 (2-sided Wilcoxon signed rank test \\(p\\)-value = 0.07314)\nHowever,…"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-1",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-1",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Wilcoxon rank-sum test",
     "text": "Wilcoxon rank-sum test\n\nThe nonparametric alternative to the two-sample \\(t\\)-test\n\nused to analyze two samples selected from separate (independent) populations\n\nAlso called the Mann-Whitney U test.\nUnlike the signed-rank test, there is no need to assume symmetry\nNecessary condition is that the two populations being compared\n\nhave the same shape (both right skewed, both left skewed, or both symmetric),\nso any noted difference is due to a shift in the median\n\nSince they have the same shape, when summarizing the test, we can describe the results in terms of a difference in medians.\n\nHypotheses:\n\\(H_0:\\) the two populations have the same median\n\\(H_a:\\) the two populations do NOT have the same median"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#example",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Example",
     "text": "Example\nDr. Priya Chaudhary (OHSU) examined the evoked membrane current of dental sensory neurons (in rats) under control conditions and a mixture of capsaicin plus capsazepine (CPZ). J. Dental Research} 80:1518–23, 2001.\n\nCPZdata &lt;- tibble(\n  control = c(3024, 2164, 864, 780, 125, 110),\n  cap_CPZ = c(426, 232, 130, 94, 75, 55)\n  ) \n\nCPZdata %&gt;% gt()\n\n\n\n\n\n  \n    \n      control\n      cap_CPZ\n    \n  \n  \n    3024\n426\n    2164\n232\n    864\n130\n    780\n94\n    125\n75\n    110\n55\n  \n  \n  \n\n\n\nCPZdata %&gt;% get_summary_stats(type = \"median\") %&gt;% gt()\n\n\n\n\n\n  \n    \n      variable\n      n\n      median\n    \n  \n  \n    control\n6\n822\n    cap_CPZ\n6\n112"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#visualize-the-data",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#visualize-the-data",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Visualize the data",
     "text": "Visualize the data\nDo the independent samples have the same distribution?\nControl group\n\nggplot(CPZdata, aes(x = control)) +\n  geom_dotplot()\n\n\n\nggplot(CPZdata, aes(x = control)) +\n  geom_boxplot()\n\n\n\nggplot(CPZdata, aes(x = control)) +\n  geom_density()\n\n\n\n\nCap + CPZ group\n\nggplot(CPZdata, aes(x = cap_CPZ)) +\n  geom_dotplot()\n\n\n\nggplot(CPZdata, aes(x = cap_CPZ)) +\n  geom_boxplot()\n\n\n\nggplot(CPZdata, aes(x = cap_CPZ)) +\n  geom_density()"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#calculating-ranks-and-test-statistic-w",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#calculating-ranks-and-test-statistic-w",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Calculating ranks and test statistic \\(W\\)",
     "text": "Calculating ranks and test statistic \\(W\\)\n\nCombine the two samples together (keep track of which observations came from each sample).\nRank the full set of \\(N=n_1 + n_2\\) observations.\n\nIf ties exist, assign average ranks to the tied values (as with the signed-rank test).\n\nSum the ranks corresponding to those observations from the smaller sample.\n\nThis is a time-saving step; you could also have used the larger sample.\nCall this sum \\(W\\).\n\nIf \\(n_1, n_2\\) are both less than 10, then use an exact test (can only be done if no ties are present)\n\notherwise use the large-sample normal approximation.\n\n\nIn our example, both groups have equal n; choose either for computing W.\n\\[W_{CPZ}=1+2+3+6+7+8 = 27\\]\n\\[W_{control}=4+5+9+10+11+12 = 51\\]\n\nCPZdata_long &lt;- CPZdata %&gt;% \n  pivot_longer(cols = c(control,cap_CPZ), \n               names_to = \"Group\",\n               values_to = \"Current\") %&gt;% \n  arrange(Current) %&gt;% \n  mutate(Rank = 1:12)\n\nCPZdata_long %&gt;% gt()\n\n\n\n\n\n  \n    \n      Group\n      Current\n      Rank\n    \n  \n  \n    cap_CPZ\n55\n1\n    cap_CPZ\n75\n2\n    cap_CPZ\n94\n3\n    control\n110\n4\n    control\n125\n5\n    cap_CPZ\n130\n6\n    cap_CPZ\n232\n7\n    cap_CPZ\n426\n8\n    control\n780\n9\n    control\n864\n10\n    control\n2164\n11\n    control\n3024\n12\n  \n  \n  \n\n\n\n\nNew: calculate ranks’s using rank()\n\nBelow I create the ranks using R’s rank() function that has an option ties.method to specify how to calculate ties.\nThis doesn’t require first sorting the data.\nIn the output below, I called this column Rank_R.\n\n\nCPZdata_long &lt;- CPZdata_long %&gt;% \n  mutate(\n    # create column with ranks that accounts for ties using R's rank() function\n    # you don't need to first sort the data to use this command\n    Rank_R = rank(Current, ties.method = \"average\")\n    ) \n\nCPZdata_long %&gt;% gt()\n\n\n\n\n\n  \n    \n      Group\n      Current\n      Rank\n      Rank_R\n    \n  \n  \n    cap_CPZ\n55\n1\n1\n    cap_CPZ\n75\n2\n2\n    cap_CPZ\n94\n3\n3\n    control\n110\n4\n4\n    control\n125\n5\n5\n    cap_CPZ\n130\n6\n6\n    cap_CPZ\n232\n7\n7\n    cap_CPZ\n426\n8\n8\n    control\n780\n9\n9\n    control\n864\n10\n10\n    control\n2164\n11\n11\n    control\n3024\n12\n12"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#exact-p-value-approach",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#exact-p-value-approach",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Exact p-value approach",
     "text": "Exact p-value approach\n\nIf \\(n_1, n_2\\) are both less than 10, then use an exact test,\n\notherwise use the large-sample normal approximation.\nHowever, exact method can only be done if no ties are present\n\np-value is the probability of getting a rank sum \\(W\\) as extreme or more extreme than the observed one.\n\nMultiply the 1-tail probability by 2 for the 2-tailed probability\n\n\n\\[p-value = 2 \\cdot P(W_{CPZ} \\leq 27)\\]\n\nTo calculate \\(P(W_{CPZ} \\leq 27)\\),\n\nwe need to enumerate all possible sets ranks for the sample size,\n\ncalculate the sum of ranks for each set of possible ranks,\nand then the probability for each sum (assuming each set of ranks is equally likely).\n\n\n\n\nWe will not be calculating the p-value “by hand.” We will be using R for this."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#normal-approximation-approach",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#normal-approximation-approach",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Normal approximation approach",
     "text": "Normal approximation approach\nIf the null hypothesis is true, then the mean of the sum of the ranks from the smaller-sized group will be\n\\[\\mu_W = \\dfrac{n_s \\cdot (n_s + n_l + 1)}{2},\\] with a standard deviation of\n\\[\\sigma_W = \\sqrt{ \\dfrac{n_s\\cdot n_l \\cdot (n_s + n_l + 1)}{12} }.\\] Provided both groups are large ( \\(\\geq 10\\) ),\n\\[Z = \\frac{W - \\mu_W}{\\sigma_W}  \\approx Normal(0,1)\\]\nExample:\nWe have \\(W=27\\) and \\(n_l = n_s = 6\\):\n\\[\\mu_W = \\dfrac{6 \\cdot (6 + 6 +1 )}{2} = 39 \\\\\n\\sigma_W  = \\sqrt{\\dfrac{6\\cdot 6 \\cdot (6+6+1)}{12}} = \\sqrt{39} \\approx 6.2450 \\\\\nz \\approx \\frac{27-39}{6.2450} = -1.921538\\]\nThe two-sided \\(p\\)-value is \\[p=2 \\cdot P(Z &lt; -1.921538)=0.05466394\\]\n\n2 * pnorm((27-39) / sqrt(39))\n\n[1] 0.05466394"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-in-r-with-wide-data",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-in-r-with-wide-data",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Wilcoxon rank-sum test in R: with wide data",
     "text": "Wilcoxon rank-sum test in R: with wide data\n\nglimpse(CPZdata)\n\nRows: 6\nColumns: 2\n$ control &lt;dbl&gt; 3024, 2164, 864, 780, 125, 110\n$ cap_CPZ &lt;dbl&gt; 426, 232, 130, 94, 75, 55\n\n\nExact p-value\n\nwilcox.test(x = CPZdata$cap_CPZ, y = CPZdata$control, \n            alternative = c(\"two.sided\"), mu = 0, \n            exact = TRUE) \n\n\n    Wilcoxon rank sum exact test\n\ndata:  CPZdata$cap_CPZ and CPZdata$control\nW = 6, p-value = 0.06494\nalternative hypothesis: true location shift is not equal to 0"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-in-r-with-wide-data-1",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-in-r-with-wide-data-1",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Wilcoxon rank-sum test in R: with wide data",
     "text": "Wilcoxon rank-sum test in R: with wide data\nNormal approximation p-value without CC\n\nwilcox.test(x = CPZdata$cap_CPZ, y = CPZdata$control, \n    alternative = c(\"two.sided\"), mu = 0, \n    exact = FALSE, correct = FALSE) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n      statistic\n      p.value\n      method\n      alternative\n    \n  \n  \n    6\n0.05466394\nWilcoxon rank sum test\ntwo.sided\n  \n  \n  \n\n\n\n\nNormal approximation p-value with CC\n\nwilcox.test(x = CPZdata$cap_CPZ, y = CPZdata$control, \n    alternative = c(\"two.sided\"), mu = 0, \n    exact = FALSE, correct = TRUE) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n      statistic\n      p.value\n      method\n      alternative\n    \n  \n  \n    6\n0.06555216\nWilcoxon rank sum test with continuity correction\ntwo.sided"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-in-r-with-long-data",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#wilcoxon-rank-sum-test-in-r-with-long-data",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Wilcoxon rank-sum test in R: with long data",
     "text": "Wilcoxon rank-sum test in R: with long data\nMake data long (if it’s not already long):\n\nCPZdata_long &lt;- CPZdata %&gt;% \n  pivot_longer(cols = c(control,cap_CPZ), \n               names_to = \"Group\",\n               values_to = \"Current\")\n\nhead(CPZdata_long)\n\n# A tibble: 6 × 2\n  Group   Current\n  &lt;chr&gt;     &lt;dbl&gt;\n1 control    3024\n2 cap_CPZ     426\n3 control    2164\n4 cap_CPZ     232\n5 control     864\n6 cap_CPZ     130\n\n\nExact p-value\n\nwilcox.test(Current ~ Group, \n            data = CPZdata_long, \n            alternative = c(\"two.sided\"), \n            mu = 0, \n            exact = TRUE) %&gt;% \n  tidy() %&gt;% gt() \n\n\n\n\n\n  \n    \n      statistic\n      p.value\n      method\n      alternative\n    \n  \n  \n    6\n0.06493506\nWilcoxon rank sum exact test\ntwo.sided"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#conclusion-2",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#conclusion-2",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Conclusion",
     "text": "Conclusion\nRecall the hypotheses to the (Wilcoxon) Signed-rank test:\n\\(H_0:\\) the control and treated populations have the same median\n\\(H_a:\\) the control and treated populations do NOT have the same median\n\nSignificance level: \\(\\alpha\\) = 0.05\np-value = 0.06494\n\nConclusion:\nThere is suggestive but inconclusive evidence that the evoked membrane current of dental sensory neurons (in rats) differs between the control group and the group exposed to a mixture of capsaicin plus capsazepine (2-sided Wilcoxon rank-sum test \\(p\\)-value = 0.06494)."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#kruskal-wallis-test-nonparametric-anova-test",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#kruskal-wallis-test-nonparametric-anova-test",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Kruskal-Wallis test: nonparametric ANOVA test",
     "text": "Kruskal-Wallis test: nonparametric ANOVA test\n\nRecall that an ANOVA tests means from more than 2 groups\nConditions for ANOVA include\n\nSample sizes in each group group are large (each \\(n \\ge 30\\)),\n\nOR the data are relatively normally distributed in each group\n\nVariability is “similar” in all group groups\n\nIf these conditions are in doubt, or if the response is ordinal, then the Kruskal-Wallis test is an alternative.\n\n\\[\\begin{align}\nH_0 &: \\text{pop median}_1 = \\text{pop median}_2 = ... = \\text{pop median}_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\text{pop median}_i \\neq \\text{pop median}_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nK-W test is an extension of the (Wilcoxon) rank-sum test to more than 2 groups\n\nWith \\(k=2\\) groups, the K-W test is the same as the rank-sum test"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#k-w-test-statistic-h-fyi",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#k-w-test-statistic-h-fyi",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "K-W test statistic: \\(H\\) (fyi)",
     "text": "K-W test statistic: \\(H\\) (fyi)\n\\[H = \\frac{12}{{N(N + 1)}} \\sum_{i=1}^{k} \\frac{R_i^2}{n_i} - 3(N + 1)\\]\n\n\\(k\\) is the number of groups,\n\\(n_i\\) is the number of observations in group \\(i\\)\n\\(N = n_1 + \\ldots + n_k\\) is the total number of observations across all groups,\n\\(R_i\\) is the sum of ranks for group \\(i\\)\n\nThe test statistic \\(H\\) has a Chi-squared distribution with \\(k-1\\) degrees of freedom:\n\\[H \\sim \\chi^2_{k-1}\\]\nRanks are calculated similarly to the (Wilcoxon) rank-sum test."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#ranks-for-the-k-w-test",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#ranks-for-the-k-w-test",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Ranks for the K-W test",
     "text": "Ranks for the K-W test\n\nCombine the \\(k\\) samples together (keep track of which observations came from each sample).\nRank the full set of \\(N = n_1 + \\ldots + n_k\\) observations.\n\nIf ties exist, assign average ranks to the tied values (as with the signed-rank test).\n\nThen sum the ranks within each of the \\(k\\) groups\n\nLabel the sums of the ranks for each group as \\(R_1, \\ldots + R_k\\).\n\n\nIf \\(H_0\\) is true, we expect the populations to have the same medians, and thus the ranks to be similar as well."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example-ozone-levels-by-month",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#example-ozone-levels-by-month",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Example: Ozone levels by month",
     "text": "Example: Ozone levels by month\n\nairquality data included in base R - no need to load it\nDaily air quality measurements in New York, May to September 1973.\nQuestion: do ozone levels differ by month?\n\n\nglimpse(airquality)\n\nRows: 153\nColumns: 6\n$ Ozone   &lt;int&gt; 41, 36, 12, 18, NA, 28, 23, 19, 8, NA, 7, 16, 11, 14, 18, 14, …\n$ Solar.R &lt;int&gt; 190, 118, 149, 313, NA, NA, 299, 99, 19, 194, NA, 256, 290, 27…\n$ Wind    &lt;dbl&gt; 7.4, 8.0, 12.6, 11.5, 14.3, 14.9, 8.6, 13.8, 20.1, 8.6, 6.9, 9…\n$ Temp    &lt;int&gt; 67, 72, 74, 62, 56, 66, 65, 59, 61, 69, 74, 69, 66, 68, 58, 64…\n$ Month   &lt;int&gt; 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,…\n$ Day     &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,…\n\n\n\nOz_mnth &lt;- airquality %&gt;% \n  group_by(Month) %&gt;% \n  get_summary_stats(Ozone, \n    show = c(\"n\", \"mean\", \"median\", \"sd\"))\nOz_mnth %&gt;% gt()\n\n\n\n\n\n  \n    \n      Month\n      variable\n      n\n      mean\n      median\n      sd\n    \n  \n  \n    5\nOzone\n26\n23.615\n18\n22.224\n    6\nOzone\n9\n29.444\n23\n18.208\n    7\nOzone\n26\n59.115\n60\n31.636\n    8\nOzone\n26\n59.962\n52\n39.681\n    9\nOzone\n29\n31.448\n23\n24.142\n  \n  \n  \n\n\n\nmax(Oz_mnth$sd) / min(Oz_mnth$sd)\n\n[1] 2.179317\n\n\n\nggplot(airquality,\n       aes(x = Ozone, y = factor(Month))) +\n  geom_boxplot()"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example-calculate-ranks-fyi",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#example-calculate-ranks-fyi",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Example: calculate ranks (fyi)",
     "text": "Example: calculate ranks (fyi)\n\nranks_Oz_mnth &lt;- airquality %&gt;% \n  select(Ozone, Month) \n\nsummary(ranks_Oz_mnth)\n\n     Ozone            Month      \n Min.   :  1.00   Min.   :5.000  \n 1st Qu.: 18.00   1st Qu.:6.000  \n Median : 31.50   Median :7.000  \n Mean   : 42.13   Mean   :6.993  \n 3rd Qu.: 63.25   3rd Qu.:8.000  \n Max.   :168.00   Max.   :9.000  \n NA's   :37                      \n\nranks_Oz_mnth &lt;- ranks_Oz_mnth %&gt;% \n  drop_na(Ozone) %&gt;% \n  arrange(Ozone) %&gt;% \n  mutate(Rank = 1:nrow(.))\n\nRanks below do not take into account ties!!\n\nhead(ranks_Oz_mnth, 20)\n\n   Ozone Month Rank\n1      1     5    1\n2      4     5    2\n3      6     5    3\n4      7     5    4\n5      7     7    5\n6      7     9    6\n7      8     5    7\n8      9     8    8\n9      9     8    9\n10     9     9   10\n11    10     7   11\n12    11     5   12\n13    11     5   13\n14    11     5   14\n15    12     5   15\n16    12     6   16\n17    13     6   17\n18    13     9   18\n19    13     9   19\n20    13     9   20\n\n\nSum of ranks for each group: (not taking into account ties!!)\n\nranks_Oz_mnth %&gt;% \n  group_by(Month) %&gt;% \n  summarise(sumRank = sum(Rank))\n\n# A tibble: 5 × 2\n  Month sumRank\n  &lt;int&gt;   &lt;int&gt;\n1     5     939\n2     6     434\n3     7    2023\n4     8    1956\n5     9    1434\n\n\nNew: calculate ranks’s using rank()\n\nBelow I create the ranks using R’s rank() function that has an option ties.method to specify how to calculate ties.\nThis doesn’t require first sorting the data.\nIn the output below, I called this column Rank_R.\n\n\nranks_Oz_mnth &lt;- ranks_Oz_mnth %&gt;% \n  mutate(\n    # create column with ranks that accounts for ties using R's rank() function\n    # you don't need to first sort the data to use this command\n    Rank_R = rank(Ozone, ties.method = \"average\")\n    ) \n\n# Compare \"simple\" ranks not including ties with tie-corrected ranks\nhead(ranks_Oz_mnth, 20)\n\n   Ozone Month Rank Rank_R\n1      1     5    1    1.0\n2      4     5    2    2.0\n3      6     5    3    3.0\n4      7     5    4    5.0\n5      7     7    5    5.0\n6      7     9    6    5.0\n7      8     5    7    7.0\n8      9     8    8    9.0\n9      9     8    9    9.0\n10     9     9   10    9.0\n11    10     7   11   11.0\n12    11     5   12   13.0\n13    11     5   13   13.0\n14    11     5   14   13.0\n15    12     5   15   15.5\n16    12     6   16   15.5\n17    13     6   17   18.5\n18    13     9   18   18.5\n19    13     9   19   18.5\n20    13     9   20   18.5"
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#k-w-test-in-r",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#k-w-test-in-r",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "K-W test in R",
     "text": "K-W test in R\n\nkruskal.test(Ozone ~ Month, data = airquality)\n\n\n    Kruskal-Wallis rank sum test\n\ndata:  Ozone by Month\nKruskal-Wallis chi-squared = 29.267, df = 4, p-value = 6.901e-06\n\nkruskal.test(Ozone ~ Month, data = airquality) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n      statistic\n      p.value\n      parameter\n      method\n    \n  \n  \n    29.26658\n6.900714e-06\n4\nKruskal-Wallis rank sum test\n  \n  \n  \n\n\n\n\nThere is sufficient evidence that the median ozone levels are different in at least two months from May - September, 1973 in New York City (p &lt; 0.001; Kruskal-Wallis test).\n\n(fyi) Since the K-W test is significant, follow-up with pairwise (Wilcoxon) rank-sum tests using a multiple comparison procedure to identify which months have different medians."
   },
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#permutation-tests-bootstrapping-1",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#permutation-tests-bootstrapping-1",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Permutation tests & bootstrapping",
     "text": "Permutation tests & bootstrapping\n\nIn some cases we saw that the conditions failed or the sample size was too small for a normal approximation and there were ties in ranks preventing us from using an exact method.\nAnother nonparametric option to consider is a permutation test or bootstrapping.\nIf you’re interested in learning more about this approach, check out the ModernDive Statistical Inference via Data Science book by Chester Ismay and Albert Kim.\n\nCh 7: Sampling\nCh 8: Bootstrapping and Confidence Intervals\nCh 9: Hypothesis Testing\n\n\n\n\nLesson 19 Slides"
   },
@@ -11272,7 +11272,7 @@
   {
     "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#time-for-final-course-evals",
     "href": "lessons/19_Non_parametric/19_Non_parametric.html#time-for-final-course-evals",
-    "title": "Lesson 19: Nonparametric tests - Supplemental material",
+    "title": "Lesson 19: Nonparametric tests",
     "section": "Time for final course evals!",
     "text": "Time for final course evals!"
   },
@@ -22621,21 +22621,21 @@
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic",
     "title": "Lesson 16: Chi-squared test",
     "section": "Step 4: Calculate the \\(\\chi^2\\) test statistic",
-    "text": "Step 4: Calculate the \\(\\chi^2\\) test statistic\n\n\nTest statistic for a test of association (independence):\n\\[\\chi^2 = \\sum_{\\textrm{all cells}} \\frac{(\\textrm{observed} - \\text{expected})^2}{\\text{expected}}\\]\n\nWhen the variables are independent, the observed and expected counts should be close to each other\n\n\n\n\n\n\n\n\n\n\n\n\\[\\begin{align}\n\\chi^2 &=  \\sum\\frac{(O-E)^2}{E} \\\\\n&= \\frac{(199-177.41)^2}{177.41} + \\frac{(26-32.77)^2}{32.77} + \\ldots + \\frac{(27-12.18)^2}{12.18} \\\\\n&=  41.2\n\\end{align}\\]\n\nIs this value big? Big enough to reject \\(H_0\\)?"
+    "text": "Step 4: Calculate the \\(\\chi^2\\) test statistic\n\n\nTest statistic for a test of association (independence):\n\\[\\chi^2 = \\sum_{\\textrm{all cells}} \\frac{(\\textrm{observed} - \\text{expected})^2}{\\text{expected}}\\]\n\nWhen the variables are independent, the observed and expected counts should be close to each other\n\n\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n8836\n112206\n\n\n40-59 yrs\n42109\n88663\n\n\n60+ yrs\n39917\n21589\n\n\n\n\n\n\n\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n35101.87\n85940.13\n\n\n40-59 yrs\n37923.55\n92848.45\n\n\n60+ yrs\n17836.58\n43669.42\n\n\n\n\n\n\n\n\n\n\n\n\\[\\begin{align}\n\\chi^2 &=  \\sum\\frac{(O-E)^2}{E} \\\\\n&= \\frac{(199-177.41)^2}{177.41} + \\frac{(26-32.77)^2}{32.77} + \\ldots + \\frac{(27-12.18)^2}{12.18} \\\\\n&=  41.2\n\\end{align}\\]\n\nIs this value big? Big enough to reject \\(H_0\\)?"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-5-calculate-the-p-value",
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-5-calculate-the-p-value",
     "title": "Lesson 16: Chi-squared test",
     "section": "Step 5: Calculate the p-value",
-    "text": "Step 5: Calculate the p-value\n\n\nThe \\(\\chi^2\\) distribution shape depends on its degrees of freedom\n\nIt’s skewed right for smaller df,\n\ngets more symmetric for larger df\n\ndf = (# rows-1) x (# columns-1)\n\n\n\n\n\n\n\n\nThe p-value is always the area to the right of the test statistic for a \\(\\chi^2\\) test.\nWe can use the pchisq function in R to calculate the probability of being at least as big as the \\(\\chi^2\\) test statistic:\n\n\npv &lt;- pchisq(41.2, df = 2, \n       lower.tail = FALSE)\npv\n\n[1] 1.131185e-09\n\n\nWhat’s the conclusion to the \\(\\chi^2\\) test?"
+    "text": "Step 5: Calculate the p-value\n\n\nThe \\(\\chi^2\\) distribution shape depends on its degrees of freedom\n\nIt’s skewed right for smaller df,\n\ngets more symmetric for larger df\n\ndf = (# rows-1) x (# columns-1)\n\n\n\n\n\n\n\n\n\n\nThe p-value is always the area to the right of the test statistic for a \\(\\chi^2\\) test\n\n \n\nWe can use the pchisq function in R to calculate the probability of being at least as big as the \\(\\chi^2\\) test statistic:\n\n\npv &lt;- pchisq(66831, df = 2, \n       lower.tail = FALSE)\npv\n\n[1] 0"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-6-conclusion",
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-6-conclusion",
     "title": "Lesson 16: Chi-squared test",
     "section": "Step 6: Conclusion",
-    "text": "Step 6: Conclusion\nRecall the hypotheses to our \\(\\chi^2\\) test:\n\n\\(H_0\\): There is no association between depression and being physically activity\n\\(H_A\\): There is an association between depression and being physically activity\n\n\n\n\n\n\n\n\n\nConclusion:\nBased a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (p-value &lt; 0.001).\n\n\n\n\n\n\n\n\nWarning\n\n\nIf we fail to reject, we DO NOT have evidence of no association."
+    "text": "Step 6: Conclusion\nRecall the hypotheses to our \\(\\chi^2\\) test:\n\n\\(H_0\\): There is no association between age and hypertension\n\\(H_A\\): There is an association between age and hypertension\n\n \n\n\n\nRecall the \\(p\\)-value = 0.0402\nUse \\(\\alpha\\) = 0.05\nDo we reject or fail to reject \\(H_0\\)?\n\n\nConclusion statement:\n\nThere is sufficient evidence that there is an association between age group and hypertension (p-value &lt; 0.0001`)\n\n\n\n\n\nWarning!!\n\n\nIf we fail to reject, we DO NOT say variables are independent! We can say that we have insufficient evidence that there is an association."
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-data-visualization",
@@ -22789,7 +22789,7 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#step-6-conclusion",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Step 6: Conclusion",
-    "text": "Step 6: Conclusion\n\\[\\begin{align}\nH_0 &: \\mu_{CC} = \\mu_{CT} = \\mu_{TT}\\\\\n\\text{vs. } H_A&: \\text{At least one pair} \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nRecall the \\(p\\)-value = 0.0402\nUse \\(\\alpha\\) = 0.05\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nThere is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( \\(p\\)-value =0.0402)\n\n\n\nLesson 17 Slides"
+    "text": "Step 6: Conclusion\n\\[\\begin{align}\nH_0 &: \\mu_{CC} = \\mu_{CT} = \\mu_{TT}\\\\\n\\text{vs. } H_A&: \\text{At least one pair} \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nRecall the \\(p\\)-value = 0.0402\nUse \\(\\alpha\\) = 0.05\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nThere is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( \\(p\\)-value =0.0402)"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-conditions-for-anova",
@@ -22825,5 +22825,89 @@
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "The F-statistic",
     "text": "The F-statistic\n\nF-statistic represents the standardized ratio of variability between groups to the variability within the groups\n\n\\[F_{stat} = \\dfrac{MSG}{MSE}\\]\n\nF is larger when the variability between groups is larger than variability within groups"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic-12",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic-12",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 4: Calculate the \\(\\chi^2\\) test statistic (1/2)",
+    "text": "Step 4: Calculate the \\(\\chi^2\\) test statistic (1/2)\nTest statistic for a test of association (independence):\n\\[\\chi^2 = \\sum_{\\textrm{all cells}} \\frac{(\\textrm{observed} - \\text{expected})^2}{\\text{expected}}\\]\n\nWhen the variables are independent, the observed and expected counts should be close to each other"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic-22",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic-22",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 4: Calculate the \\(\\chi^2\\) test statistic (2/2)",
+    "text": "Step 4: Calculate the \\(\\chi^2\\) test statistic (2/2)\n\n\n\\[\\begin{align}\n\\chi^2 =&  \\sum\\frac{(O-E)^2}{E} \\\\\n=& \\frac{(8836-35101.87)^2}{35101.87} + \\frac{(112206-85940.13)^2}{85940.13} + \\\\\n& \\ldots + \\frac{(21589-43669.42)^2}{43669.42} \\\\\n=&  66831\n\\end{align}\\]\nIs this value big? Big enough to reject \\(H_0\\)?\n\nObserved:\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n8836\n112206\n\n\n40-59 yrs\n42109\n88663\n\n\n60+ yrs\n39917\n21589\n\n\n\n\n\n\n\n \nExpected:\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n35101.87\n85940.13\n\n\n40-59 yrs\n37923.55\n92848.45\n\n\n60+ yrs\n17836.58\n43669.42"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-5-calculate-the-test-statistic-and-p-value",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-5-calculate-the-test-statistic-and-p-value",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 4-5: Calculate the test statistic and p-value",
+    "text": "Step 4-5: Calculate the test statistic and p-value\n\n\n\nData need to be in a matrix or table: use as.matrix() or table()\n\nUse matrix if data already in contingency table form\nUse table if data are two columns with each row for each observation (tidy version)\n\nNotice that age groups are rownames! Age does not have its own column\n\n\n\nhyp_data2\n\n          Hypertension No_Hypertension\n18-39 yrs         8836          112206\n40-59 yrs        42109           88663\n60+ yrs          39917           21589\n\n\n\n\n\nRun chisq.test() in R\n\n\nchisq.test(x = hyp_data2)\n\n\n    Pearson's Chi-squared test\n\ndata:  hyp_data2\nX-squared = 66831, df = 2, p-value &lt; 2.2e-16"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-example-all-together",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-example-all-together",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Chi-squared test: Example all together",
+    "text": "Chi-squared test: Example all together\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(hyp_data2)\n\n          Hypertension No_Hypertension\n18-39 yrs     35101.87        85940.13\n40-59 yrs     37923.55        92848.45\n60+ yrs       17836.58        43669.42\n\n\nAll expected cells are greater than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between age group and hypertension\n\\(H_1\\) : There is an association between age group and hypertension\n\n\n\n4-5. Calculate the test statistic and p-value for Chi-squared test in R\n\nchisq.test(x = hyp_data2)\n\n\n    Pearson's Chi-squared test\n\ndata:  hyp_data2\nX-squared = 66831, df = 2, p-value &lt; 2.2e-16\n\n\n\nConclusion\n\nWe reject the null hypothesis that age group and hypertension are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that age group and hypertension are associated.\n\n\n\n\nLesson 16 Slides"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#final-note",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#final-note",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Final note",
+    "text": "Final note\n\n\n\nRecall, visually the three looked pretty close\nThis is the case that I would also do some work to report the means and standard deviations of each genotype’s percent change in non-dominant arm strength.\n\n\n\nfamuss %&gt;% \n  group_by(actn3.r577x) %&gt;% \n  summarise(count = n(),\n            mean = mean(ndrm.ch),\n            SD = sd(ndrm.ch))\n\n# A tibble: 3 × 4\n  actn3.r577x count  mean    SD\n  &lt;fct&gt;       &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 CC            173  48.9  30.0\n2 CT            261  53.2  33.2\n3 TT            161  58.1  35.7\n\n\n\n\nRevised conclusion statement:\n\nFor people with CC genotype then mean percent change in arm non-dominant arm strength was 48.9% (SD = 30%). For CT, mean percent change was 53.2% (SD = 33.2%). For TT, mean percent change was 58.1% (SD = 35.7%). There is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( \\(p\\)-value =0.0402)\n\n\n\nLesson 17 Slides"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#example-with-smaller-sample-size",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#example-with-smaller-sample-size",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Example with smaller sample size",
+    "text": "Example with smaller sample size\n\nSuppose that instead of taking a random sample of 400 adults (from the NHANES data), a study takes a random sample of 100 such that\n\n50 people that are physically active and\n50 people that are not physically active\n\n\n\n(DepPA100_table &lt;- matrix(c(43, 5, 2, 40, 4, 6), nrow = 2, ncol = 3, byrow = T))\n\n     [,1] [,2] [,3]\n[1,]   43    5    2\n[2,]   40    4    6\n\ndimnames(DepPA100_table) &lt;- list(\"PA\" = c(\"Yes\", \"No\"),   # row names\n                              \"Depression\" = c(\"None\", \"Several\", \"Most\"))  # column names\n\nDepPA100_table\n\n     Depression\nPA    None Several Most\n  Yes   43       5    2\n  No    40       4    6"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#chi-squared-test-warning",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#chi-squared-test-warning",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Chi-squared test warning",
+    "text": "Chi-squared test warning\n\nchisq.test(DepPA100_table) \n\nWarning in stats::chisq.test(x, y, ...): Chi-squared approximation may be\nincorrect\n\n\n\n    Pearson's Chi-squared test\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = 2, p-value = 0.3296\n\nchisq.test(DepPA100_table)$expected\n\nWarning in stats::chisq.test(x, y, ...): Chi-squared approximation may be\nincorrect\n\n\n     Depression\nPA    None Several Most\n  Yes 41.5     4.5    4\n  No  41.5     4.5    4\n\n\n\nRecall the sample size condition\n\nIn order for the test statistic to be modeled by a chi-squared distribution we need\n2 \\(\\times\\) 2 table: expected counts are at least 10 for each cell\nlarger tables:\n\nno more than 1/5 of the expected counts are less than 5, and\nall expected counts are greater than 1"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Fisher’s Exact Test",
+    "text": "Fisher’s Exact Test\n\nCalled an exact test since it\n\ncalculates an exact probability for the p-value\n\ninstead of using an asymptotic approximation, such as the normal, t, or chi-squared distributions\n\nFor 2x2 tables the p-value is calculated using the hypergeometric probability distribution (see book for details)\n\n\n\nfisher.test(DepPA100_table)\n\n\n    Fisher's Exact Test for Count Data\n\ndata:  DepPA100_table\np-value = 0.3844\nalternative hypothesis: two.sided\n\n\n\n\n\nComments\n\n\n\nNote that there is no test statistic\nThere is also no CI\nThis is always a two-sided test\nThere is no continuity correction since the hypergeometric distribution is discrete"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#simulate-p-values-another-option-for-small-expected-counts",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#simulate-p-values-another-option-for-small-expected-counts",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Simulate p-values: another option for small expected counts",
+    "text": "Simulate p-values: another option for small expected counts\nFrom the chisq.test help file:\n\nSimulation is done by random sampling from the set of all contingency tables with the same margin totals\n\nworks only if the margin totals are strictly positive.\n\nFor each simulation, a \\(\\chi^2\\) test statistic is calculated\nP-value is the proportion of simulations that have a test statistic at least as big as the observed one.\nNo continuity correction\n\n\nset.seed(567)\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.3893"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test-1",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test-1",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Fisher’s Exact Test",
+    "text": "Fisher’s Exact Test\n\nOnly necessary when expected counts in one or more cells is less than 5\nGiven row and column totals fixed, computes exact probability that we observe our data or more extreme data\nConsider a general 2 x 2 table:\n\n\n\nThe exact probability of observing a table with cells (a, b, c, d) can be computed based on the hypergeometric distribution\n\n\\[P(a, b, c, d) = \\dfrac{(a+b)!\\cdot(c+d)!\\cdot(a+c)!\\cdot(b+d)!}{n!\\cdot a!\\cdot b!\\cdot c!\\cdot d!}\\]\n\nNumerator is fixed and denominator changes"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test-process",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test-process",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Fisher’s Exact test: Process",
+    "text": "Fisher’s Exact test: Process\n\nCheck the expected cell counts\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic and p-value for Fisher Exact test in R\n\nWe will not discuss the test statistic’s equation\n\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test-shs-example-not-appropriate-use-of-fishers-exact",
+    "href": "lessons/19_Non_parametric/19_Non_parametric.html#fishers-exact-test-shs-example-not-appropriate-use-of-fishers-exact",
+    "title": "Lesson 19: Nonparametric tests",
+    "section": "Fisher’s Exact test: SHS Example (not appropriate use of Fisher’s Exact)",
+    "text": "Fisher’s Exact test: SHS Example (not appropriate use of Fisher’s Exact)\n\n\n\nCheck expected cell counts threshold\n\n\n#expected(SHS_table)\n\nWe’re going to pretend they are less than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes\n\\(H_1\\) : There is an association between glucose tolerance and diabetes\n\n\n\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\n\n#fisher.test(x = SHS_table)\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that glucose tolerance and diabetes are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians."
   }
 ]

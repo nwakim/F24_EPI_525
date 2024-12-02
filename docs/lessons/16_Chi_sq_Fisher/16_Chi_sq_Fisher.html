@@ -413,9 +413,8 @@ Meike Niederhausen and Nicky Wakim
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li><p>Understand when to use chi-squared</p></li>
-<li><p>Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables</p></li>
-<li><p>Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test</p></li>
+<li><p>Understand the Chi-squared test and the expected cell counts under the null hypothesis distribution.</p></li>
+<li><p>Determine if two categorical variables are associated with one another using the Chi-squared test.</p></li>
 </ol>
 <div class="cell">
 <style type="text/css">
@@ -449,9 +448,16 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 </section></section>
 <section>
-<section id="learning-objective" class="title-slide slide level1 center">
-<h1>Learning Objective</h1>
-
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Understand the Chi-squared test and the expected cell counts under the null hypothesis distribution.</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li>Determine if two categorical variables are associated with one another using the Chi-squared test.</li>
+</ol>
 </section>
 <section id="from-lesson-4-example-hypertension-prevalence-12" class="slide level2">
 <h2>From Lesson 4: Example: hypertension prevalence (1/2)</h2>
@@ -843,9 +849,16 @@ P(60+ \cap \text{no hyp}) &amp;=\frac{61506}{313320}\cdot\frac{222458}{313320}
 </div>
 </section></section>
 <section>
-<section id="learning-objectives-1" class="title-slide slide level1 center">
+<section id="learning-objectives-2" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-
+<ol type="1">
+<li>Understand the Chi-squared test and the expected cell counts under the null hypothesis distribution.</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Determine if two categorical variables are associated with one another using the Chi-squared test.</li>
+</ol>
+</div>
 </section>
 <section id="reference-steps-in-a-hypothesis-test" class="slide level2">
 <h2>Reference: Steps in a Hypothesis Test</h2>
@@ -937,64 +950,169 @@ P(60+ \cap \text{no hyp}) &amp;=\frac{61506}{313320}\cdot\frac{222458}{313320}
 </div>
 </div>
 </section>
-<section id="step-4-calculate-the-chi2-test-statistic" class="slide level2">
-<h2>Step 4: Calculate the <span class="math inline">\(\chi^2\)</span> test statistic</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
+<section id="step-4-calculate-the-chi2-test-statistic-12" class="slide level2">
+<h2>Step 4: Calculate the <span class="math inline">\(\chi^2\)</span> test statistic (1/2)</h2>
 <p>Test statistic for a test of association (independence):</p>
 <p><span class="math display">\[\chi^2 = \sum_{\textrm{all cells}} \frac{(\textrm{observed} - \text{expected})^2}{\text{expected}}\]</span></p>
 <ul>
 <li>When the variables are independent, the observed and expected counts should be close to each other</li>
 </ul>
-</div><div class="column" style="width:55%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-<div style="font-size: 90%;">
+</section>
+<section id="step-4-calculate-the-chi2-test-statistic-22" class="slide level2">
+<h2>Step 4: Calculate the <span class="math inline">\(\chi^2\)</span> test statistic (2/2)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
 <p><span class="math display">\[\begin{align}
-\chi^2 &amp;=  \sum\frac{(O-E)^2}{E} \\
-&amp;= \frac{(199-177.41)^2}{177.41} + \frac{(26-32.77)^2}{32.77} + \ldots + \frac{(27-12.18)^2}{12.18} \\
-&amp;=  41.2
+\chi^2 =&amp;  \sum\frac{(O-E)^2}{E} \\
+=&amp; \frac{(8836-35101.87)^2}{35101.87} + \frac{(112206-85940.13)^2}{85940.13} + \\
+&amp; \ldots + \frac{(21589-43669.42)^2}{43669.42} \\
+=&amp;  66831
 \end{align}\]</span></p>
-</div>
 <p>Is this value big? Big enough to reject <span class="math inline">\(H_0\)</span>?</p>
+</div><div class="column" style="width:45%;">
+<p>Observed:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="font-size: 35px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age Group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">No Hypertension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Expected:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="font-size: 35px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age Group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">No Hypertension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">35101.87</td>
+<td style="text-align: right;">85940.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">37923.55</td>
+<td style="text-align: right;">92848.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">17836.58</td>
+<td style="text-align: right;">43669.42</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="step-5-calculate-the-p-value" class="slide level2">
 <h2>Step 5: Calculate the <em>p</em>-value</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:59%;">
 <p>The <span class="math inline">\(\chi^2\)</span> distribution shape depends on its degrees of freedom</p>
 <ul>
 <li>It’s skewed right for smaller df,
 <ul>
 <li>gets more symmetric for larger df</li>
 </ul></li>
-<li><span style="color:green"><strong>df = (# rows-1) x (# columns-1)</strong></span></li>
+<li><span style="color:#C83532"><strong>df = (# rows-1) x (# columns-1)</strong></span></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../../img_slides/chisq_density.png"></p>
+<p><img data-src="../img_slides/chisq_density.png"></p>
 </figure>
 </div>
+</div><div class="column" style="width:1%;">
+
 </div><div class="column" style="width:40%;">
 <ul>
-<li>The <span style="color:darkorange"><strong>p-value</strong></span> is always the <span style="color:darkorange"><strong>area to the right</strong></span> of the test statistic for a <span class="math inline">\(\chi^2\)</span> test.</li>
+<li>The <span style="color:darkorange"><strong>p-value</strong></span> is always the <span style="color:darkorange"><strong>area to the right</strong></span> of the test statistic for a <span class="math inline">\(\chi^2\)</span> test</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>We can use the <code>pchisq</code> function in R to calculate the probability of being at least as big as the <span class="math inline">\(\chi^2\)</span> test statistic:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pv <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="fl">41.2</span>, <span class="at">df =</span> <span class="dv">2</span>, </span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pv <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="dv">66831</span>, <span class="at">df =</span> <span class="dv">2</span>, </span>
 <span id="cb7-2"><a href="#cb7-2"></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb7-3"><a href="#cb7-3"></a>pv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.131185e-09</code></pre>
+<pre><code>[1] 0</code></pre>
 </div>
 </div>
-<p>What’s the conclusion to the <span class="math inline">\(\chi^2\)</span> test?</p>
+</div>
+</div>
+</section>
+<section id="step-4-5-calculate-the-test-statistic-and-p-value" class="slide level2">
+<h2>Step 4-5: Calculate the test statistic and p-value</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Data need to be in a matrix or table: use <code>as.matrix()</code> or <code>table()</code>
+<ul>
+<li>Use matrix if data already in contingency table form</li>
+<li>Use table if data are two columns with each row for each observation (tidy version)</li>
+</ul></li>
+<li>Notice that age groups are rownames! Age does not have its own column</li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>hyp_data2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          Hypertension No_Hypertension
+18-39 yrs         8836          112206
+40-59 yrs        42109           88663
+60+ yrs          39917           21589</code></pre>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Run <code>chisq.test()</code> in R</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">chisq.test</span>(<span class="at">x =</span> hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  hyp_data2
+X-squared = 66831, df = 2, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -1002,44 +1120,42 @@ P(60+ \cap \text{no hyp}) &amp;=\frac{61506}{313320}\cdot\frac{222458}{313320}
 <h2>Step 6: Conclusion</h2>
 <p>Recall the hypotheses to our <span class="math inline">\(\chi^2\)</span> test:</p>
 <ul>
-<li><p><span class="math inline">\(H_0\)</span>: There is <strong>no association</strong> between depression and being physically activity</p></li>
-<li><p><span class="math inline">\(H_A\)</span>: There is <strong>an association</strong> between depression and being physically activity</p></li>
+<li><p><span class="math inline">\(H_0\)</span>: There is <strong>no association</strong> between age and hypertension</p></li>
+<li><p><span class="math inline">\(H_A\)</span>: There is <strong>an association</strong> between age and hypertension</p></li>
 </ul>
+<p>&nbsp;</p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="16_Chi_sq_Fisher_files/figure-revealjs/unnamed-chunk-12-1.png" width="768"></p>
+<div class="column">
+<ul>
+<li>Recall the <span class="math inline">\(p\)</span>-value = 0.0402</li>
+<li>Use <span class="math inline">\(\alpha\)</span> = 0.05</li>
+<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+</ul>
+</div><div class="column">
+<p><strong>Conclusion statement</strong>:</p>
+<ul>
+<li>There is sufficient evidence that there is an association between age group and hypertension (p-value &lt; 0.0001`)</li>
+</ul>
 </div>
 </div>
-</div><div class="column" style="width:50%;">
-<p><strong>Conclusion:</strong></p>
-<p>Based a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (<em>p</em>-value &lt; 0.001).</p>
+<div class="blue">
+<div class="blue-ttl">
+<p>Warning!!</p>
 </div>
-</div>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>If we fail to reject, we DO NOT have evidence of no association.</p>
-</div>
+<div class="blue-cont">
+<p>If we fail to reject, we DO NOT say variables are independent! We <strong>can</strong> say that we have insufficient evidence that there is an association.</p>
 </div>
 </div>
 </section>
-<section id="chi-squared-test-example" class="slide level2">
-<h2>Chi-squared test: Example</h2>
+<section id="chi-squared-test-example-all-together" class="slide level2">
+<h2>Chi-squared test: Example all together</h2>
 <div class="columns">
 <div class="column">
 <ol type="1">
 <li>Check expected cell counts threshold</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">expected</span>(hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">expected</span>(hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          Hypertension No_Hypertension
 18-39 yrs     35101.87        85940.13
@@ -1059,7 +1175,7 @@ P(60+ \cap \text{no hyp}) &amp;=\frac{61506}{313320}\cdot\frac{222458}{313320}
 </div><div class="column">
 <p>4-5. Calculate the test statistic and p-value for Chi-squared test in R</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">chisq.test</span>(<span class="at">x =</span> hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">chisq.test</span>(<span class="at">x =</span> hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's Chi-squared test

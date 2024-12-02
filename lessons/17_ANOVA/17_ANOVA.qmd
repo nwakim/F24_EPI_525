@@ -52,13 +52,13 @@ theme_set(theme_bw(base_size = 22))
 
 # Learning Objectives
 
-1. Return to our visualizations
+1. Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).
 
-2. Learn about ANOVA and SST, SSE, SSG
+2. Understand the different measures of variability within an Analysis of Variance (ANOVA) table.
 
-3. Learn about the F-statistic and F-distribution
+3. Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability. 
 
-4. Run hypothesis test
+4.  Determine if groups of means are different from one another using a hypothesis test and F-distribution.
 
 ```{css, echo=FALSE}
 .reveal code {
@@ -89,6 +89,18 @@ theme_set(theme_bw(base_size = 22))
 
     -   Can no longer rely on the difference in means
     -   Need a new method to make inference (ANOVA or Linear Regression!)
+
+# Learning Objectives
+
+::: lob
+1. Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).
+:::
+
+2. Understand the different measures of variability within an Analysis of Variance (ANOVA) table.
+
+3. Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability. 
+
+4.  Determine if groups of means are different from one another using a hypothesis test and F-distribution.
 
 ## From Lesson 8: Data visualization
 
@@ -180,7 +192,17 @@ ggplot(data = famuss,
 ## Poll Everywhere Question 4
 
 
-# Learning
+# Learning Objectives
+
+1. Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).
+
+::: lob
+2. Understand the different measures of variability within an Analysis of Variance (ANOVA) table.
+:::
+
+3. Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability. 
+
+4.  Determine if groups of means are different from one another using a hypothesis test and F-distribution.
 
 ## Comparing means
 
@@ -221,16 +243,22 @@ __ANOVA__ compares the variability between groups to the variability within grou
 #| fig.width: 7
 #| fig.height: 8
 #| echo: false
+
 var_tot_plot = ggplot(famuss, aes(x = actn3.r577x, y=ndrm.ch, 
       fill = actn3.r577x, color = actn3.r577x)) +
-  geom_dotplot(binaxis = "y", alpha =.9) +
+  # geom_dotplot(binaxis = "y", alpha =.9) +
+  geom_jitter(aes(color = actn3.r577x), 
+    alpha = 0.7, size = 4,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4)) +  
   geom_hline(aes(yintercept = mean(ndrm.ch)), 
              lty = "dashed", size = 2) +
   # stat_summary(fun = "mean", geom = "point", 
   #      size = 3, color = "grey33", alpha =1)  +
   theme(legend.position = "none") +
   labs(y = "Percent Change in Non-Dominant Arm Strength",
-       x = "ACTN3 genotype")  
+       x = "ACTN3 genotype") + ylim(-1, 175)
 var_tot_plot
 ```
 :::
@@ -242,14 +270,18 @@ var_tot_plot
 #| echo: false
 var_bw_gp_plot = ggplot(famuss, aes(x = actn3.r577x, y=ndrm.ch, 
       fill = actn3.r577x, color = actn3.r577x)) +
-  geom_dotplot(binaxis = "y", alpha =.2) +
+  geom_jitter(aes(color = actn3.r577x), 
+    alpha = 0.2, size = 4,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4)) +  
   geom_hline(aes(yintercept = mean(ndrm.ch)), 
              lty = "dashed", size = 2) +
   stat_summary(fun = "mean", geom = "point", 
        size = 5, color = "grey33", alpha =1)  +
   theme(legend.position = "none") +
   labs(y = "Percent Change in Non-Dominant Arm Strength",
-       x = "ACTN3 genotype") 
+       x = "ACTN3 genotype") + ylim(-1, 175)
 var_bw_gp_plot
 ```
 :::
@@ -261,14 +293,17 @@ var_bw_gp_plot
 #| echo: false
 var_win_gp_plot = ggplot(famuss, aes(x = actn3.r577x, y=ndrm.ch, 
       fill = actn3.r577x, color = actn3.r577x)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +
-  # geom_hline(aes(yintercept = mean(ndrm.ch)), 
+  geom_jitter(aes(color = actn3.r577x), 
+    alpha = 0.5, size = 4,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4)) +    # geom_hline(aes(yintercept = mean(ndrm.ch)), 
   #            lty = "dashed", size = 2)
   stat_summary(fun = "mean", geom = "point", 
        size = 5, color = "grey33", alpha =1)  +
   theme(legend.position = "none") +
   labs(y = "Percent Change in Non-Dominant Arm Strength",
-       x = "ACTN3 genotype") 
+       x = "ACTN3 genotype") + ylim(-1, 175)
 var_win_gp_plot
 ```
 :::
@@ -415,7 +450,17 @@ where $s_{i}$ is the standard deviation of the $i^{th}$ group
 
 - Answer: We use the F-statistic in a hypothesis test!
 
-# Learning
+# Learning Objectives
+
+1. Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).
+
+2. Understand the different measures of variability within an Analysis of Variance (ANOVA) table.
+
+::: lob
+3. Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability. 
+:::
+
+4.  Determine if groups of means are different from one another using a hypothesis test and F-distribution.
 
 ## Thinking about the F-statistic
 
@@ -488,7 +533,17 @@ ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
 :::
 
 
-# Learning Objective 
+# Learning Objectives
+
+1. Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).
+
+2. Understand the different measures of variability within an Analysis of Variance (ANOVA) table.
+
+3. Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability. 
+
+::: lob
+4.  Determine if groups of means are different from one another using a hypothesis test and F-distribution.
+:::
 
 ## Reference: Steps in a Hypothesis Test
 
@@ -630,6 +685,26 @@ __Conclusion statement__:
 
 * There is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( $p$-value =`r round(0.04022, 4)`)
 
+## Final note
 
+::: columns
+::: column
+- Recall, visually the three looked pretty close
 
+- This is the case that I would also do some work to report the means and standard deviations of each genotype's percent change in non-dominant arm strength. 
+:::
+::: column
+```{r}
+famuss %>% 
+  group_by(actn3.r577x) %>% 
+  summarise(count = n(),
+            mean = mean(ndrm.ch),
+            SD = sd(ndrm.ch))
+```
+:::
+:::
+
+__Revised conclusion statement__:
+
+* For people with CC genotype then mean percent change in arm non-dominant arm strength was 48.9% (SD = 30%). For CT, mean percent change was 53.2% (SD = 33.2%). For TT, mean percent change was 58.1% (SD = 35.7%). There is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( $p$-value =`r round(0.04022, 4)`)
 

@@ -49,6 +49,7 @@ library(broom)
 library(here) 
 library(pwr) 
 library(BSDA)  # NEW package!!!
+library(epitools)
 ```
 
 
@@ -1201,7 +1202,7 @@ $$P(a, b, c, d) = \dfrac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{n!\cdot a!\cdo
 1.  Check expected cell counts threshold
 
 ```{r}
-expected(SHS_table)
+#expected(SHS_table)
 ```
 
 We're going to pretend they are less than 5.
@@ -1218,7 +1219,7 @@ We're going to pretend they are less than 5.
 4.  Calculate the test statistic and p-value for Chi-squared test in R
 
 ```{r}
-fisher.test(x = SHS_table)
+#fisher.test(x = SHS_table)
 ```
 
 5.  Conclusion to the hypothesis test

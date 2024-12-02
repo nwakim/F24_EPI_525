@@ -410,10 +410,10 @@ Meike Niederhausen and Nicky Wakim
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
 <ol type="1">
-<li><p>Return to our visualizations</p></li>
-<li><p>Learn about ANOVA and SST, SSE, SSG</p></li>
-<li><p>Learn about the F-statistic and F-distribution</p></li>
-<li><p>Run hypothesis test</p></li>
+<li><p>Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).</p></li>
+<li><p>Understand the different measures of variability within an Analysis of Variance (ANOVA) table.</p></li>
+<li><p>Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability.</p></li>
+<li><p>Determine if groups of means are different from one another using a hypothesis test and F-distribution.</p></li>
 </ol>
 <div class="cell">
 <style type="text/css">
@@ -448,6 +448,20 @@ Meike Niederhausen and Nicky Wakim
 <li>Need a new method to make inference (ANOVA or Linear Regression!)</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Understand the different measures of variability within an Analysis of Variance (ANOVA) table.</p></li>
+<li><p>Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability.</p></li>
+<li><p>Determine if groups of means are different from one another using a hypothesis test and F-distribution.</p></li>
+</ol>
 </section>
 <section id="from-lesson-8-data-visualization" class="slide level2">
 <h2>From Lesson 8: Data visualization</h2>
@@ -529,9 +543,20 @@ Meike Niederhausen and Nicky Wakim
 <h2>Poll Everywhere Question 4</h2>
 </section></section>
 <section>
-<section id="learning" class="title-slide slide level1 center">
-<h1>Learning</h1>
-
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Understand the different measures of variability within an Analysis of Variance (ANOVA) table.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li><p>Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability.</p></li>
+<li><p>Determine if groups of means are different from one another using a hypothesis test and F-distribution.</p></li>
+</ol>
 </section>
 <section id="comparing-means" class="slide level2">
 <h2>Comparing means</h2>
@@ -798,9 +823,20 @@ Meike Niederhausen and Nicky Wakim
 </ul>
 </section></section>
 <section>
-<section id="learning-1" class="title-slide slide level1 center">
-<h1>Learning</h1>
-
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).</p></li>
+<li><p>Understand the different measures of variability within an Analysis of Variance (ANOVA) table.</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability.</li>
+</ol>
+</div>
+<ol start="4" type="1">
+<li>Determine if groups of means are different from one another using a hypothesis test and F-distribution.</li>
+</ol>
 </section>
 <section id="thinking-about-the-f-statistic" class="slide level2">
 <h2>Thinking about the F-statistic</h2>
@@ -861,9 +897,18 @@ Meike Niederhausen and Nicky Wakim
 </div>
 </section></section>
 <section>
-<section id="learning-objective" class="title-slide slide level1 center">
-<h1>Learning Objective</h1>
-
+<section id="learning-objectives-4" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Revisit data visualization for a numeric outcome and categorical variable (from Lesson 8).</p></li>
+<li><p>Understand the different measures of variability within an Analysis of Variance (ANOVA) table.</p></li>
+<li><p>Understand the F-statistic and F-distribution that is used to measure the ratio of between group and within group variability.</p></li>
+</ol>
+<div class="lob">
+<ol start="4" type="1">
+<li>Determine if groups of means are different from one another using a hypothesis test and F-distribution.</li>
+</ol>
+</div>
 </section>
 <section id="reference-steps-in-a-hypothesis-test" class="slide level2">
 <h2>Reference: Steps in a Hypothesis Test</h2>
@@ -1038,6 +1083,37 @@ H_0 &amp;: \mu_{CC} = \mu_{CT} = \mu_{TT}\\
 <p><strong>Conclusion statement</strong>:</p>
 <ul>
 <li>There is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( <span class="math inline">\(p\)</span>-value =0.0402)</li>
+</ul>
+</section>
+<section id="final-note" class="slide level2">
+<h2>Final note</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>Recall, visually the three looked pretty close</p></li>
+<li><p>This is the case that I would also do some work to report the means and standard deviations of each genotype’s percent change in non-dominant arm strength.</p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>famuss <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">group_by</span>(actn3.r577x) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>(),</span>
+<span id="cb11-4"><a href="#cb11-4"></a>            <span class="at">mean =</span> <span class="fu">mean</span>(ndrm.ch),</span>
+<span id="cb11-5"><a href="#cb11-5"></a>            <span class="at">SD =</span> <span class="fu">sd</span>(ndrm.ch))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  actn3.r577x count  mean    SD
+  &lt;fct&gt;       &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 CC            173  48.9  30.0
+2 CT            261  53.2  33.2
+3 TT            161  58.1  35.7</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Revised conclusion statement</strong>:</p>
+<ul>
+<li>For people with CC genotype then mean percent change in arm non-dominant arm strength was 48.9% (SD = 30%). For CT, mean percent change was 53.2% (SD = 33.2%). For TT, mean percent change was 58.1% (SD = 35.7%). There is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( <span class="math inline">\(p\)</span>-value =0.0402)</li>
 </ul>
 
 <div class="footer footer-default">
