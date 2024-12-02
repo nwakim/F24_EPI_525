@@ -312,6 +312,8 @@ Expected count for cell $i,j$ :
 
 $$\textrm{Expected Count}_{\textrm{row } i,\textrm{ col }j}=\frac{(\textrm{row}~i~ \textrm{total})\cdot(\textrm{column}~j~ \textrm{total})}{\textrm{table total}}$$
 
+## Poll Everywhere Question 2
+
 ## Using R for expected cell counts
 
 -   R calculates expected cell counts using the `expected()` function in the `epitools` package
@@ -467,6 +469,8 @@ hyp_data2 %>% expected() %>%
 
 :::
 :::::
+
+## Poll Everywhere Question 2
 
 ## Step 5: Calculate the *p*-value
 

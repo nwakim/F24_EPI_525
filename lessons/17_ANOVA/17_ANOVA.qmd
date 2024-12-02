@@ -189,7 +189,7 @@ ggplot(data = famuss,
 :::
 :::
 
-## Poll Everywhere Question 4
+## Poll Everywhere Question 1
 
 
 # Learning Objectives
@@ -441,6 +441,8 @@ where $s_{i}$ is the standard deviation of the $i^{th}$ group
 :::
 :::
 
+## Poll Everywhere Question 2
+
 ## ANOVA table to hypothesis test?
 
 - Okay, so how do we use all these types of variability to run a test? 
@@ -531,6 +533,8 @@ ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
 
 :::
 :::
+
+## Poll Everywhere Question 3
 
 
 # Learning Objectives
