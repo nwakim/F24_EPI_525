@@ -1,5 +1,5 @@
 ---
-title: "Lesson 19: Nonparametric tests - Supplemental material"
+title: "Lesson 19: Nonparametric tests"
 subtitle: "Other TB"
 author: "Meike Niederhausen and Nicky Wakim"
 title-slide-attributes:
@@ -26,6 +26,8 @@ execute:
 #| include: false
 knitr::opts_chunk$set(echo = TRUE, fig.height=2.5, fig.width=4, message = FALSE, warning = FALSE)
 ```
+
+# Learning Objectives
 
 ## Time for final course evals!
 
@@ -1058,7 +1060,172 @@ There is sufficient evidence that the median ozone levels are different in at le
 * (fyi) Since the K-W test is significant, follow-up with pairwise (Wilcoxon) rank-sum tests using a multiple comparison procedure to identify which months have different medians.
 
 
+# Learning Objectives
 
+1.  Recognize the motivation for and focus of our course (categorical responses)
+
+2.  Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation
+
+3.  Determine if a single proportion differs from a population value
+
+4.  Determine if two proportions differ from each other
+
+5.  Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables
+
+6.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test
+
+::: lob
+7.  Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test
+:::
+
+8.  Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test
+
+9.  Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test
+
+# Fischer's Exact Test
+
+Use this if expected cell counts are too small
+
+
+## Example with smaller sample size 
+
+* Suppose that instead of taking a random sample of 400 adults (from the NHANES data), a study takes a random sample of 100 such that
+    * 50 people that are physically active and 
+    * 50 people that are not physically active 
+
+```{r}
+(DepPA100_table <- matrix(c(43, 5, 2, 40, 4, 6), nrow = 2, ncol = 3, byrow = T))
+
+dimnames(DepPA100_table) <- list("PA" = c("Yes", "No"),   # row names
+                              "Depression" = c("None", "Several", "Most"))  # column names
+
+DepPA100_table
+```
+
+
+## Chi-squared test warning 
+
+```{r}
+#| warning: true
+chisq.test(DepPA100_table) 
+
+chisq.test(DepPA100_table)$expected
+```
+
+* Recall the __sample size__ condition
+    * In order for the test statistic to be modeled by a chi-squared distribution we need
+    * __[ 2 $\times$ 2 table:]{style="color:darkorange"} expected counts are at least 10 for each cell__
+    * __[larger tables:   ]{style="color:darkorange"}__
+        * __no more than 1/5 of the expected counts are less than 5__, and 
+        * __all expected counts are greater than 1__
+
+
+## Fisher's Exact Test
+
+* Called an exact test since it 
+    * calculates an exact probability for the p-value 
+        * instead of using an asymptotic approximation, such as the normal, t, or chi-squared distributions
+    * For 2x2 tables the p-value is calculated using the __hypergeometric__ probability distribution (see book for details)  
+
+
+```{r}
+fisher.test(DepPA100_table)
+```
+
+::: {.callout-caution icon=false} 
+## Comments
+
+* Note that there is no test statistic
+* There is also no CI
+* This is always a two-sided test
+* There is no continuity correction since the hypergeometric distribution is discrete
+:::
+
+
+
+## __Simulate p-values__: another option for small expected counts
+
+From the `chisq.test` help file: 
+
+* Simulation is done by random sampling from the set of all contingency tables with the same margin totals
+    * works only if the margin totals are strictly positive. 
+* For each simulation, a $\chi^2$ test statistic is calculated
+* _P_-value is the proportion of simulations that have a test statistic at least as big as the observed one.
+* No continuity correction
+
+```{r}
+set.seed(567)
+chisq.test(DepPA100_table, simulate.p.value = TRUE) 
+```
+
+
+## Fisher's Exact Test
+
+-   Only necessary when expected counts in one or more cells is less than 5
+-   Given row and column totals fixed, computes exact probability that we observe our data or more extreme data
+-   Consider a general 2 x 2 table:
+
+![](./images/fisher_tab.png){fig-align="center"}
+
+-   The exact probability of observing a table with cells (a, b, c, d) can be computed based on the hypergeometric distribution
+
+$$P(a, b, c, d) = \dfrac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{n!\cdot a!\cdot b!\cdot c!\cdot d!}$$
+
+-   Numerator is fixed and denominator changes
+
+## Fisher's Exact test: Process
+
+1.  Check the [**expected cell counts**]{style="color:#70AD47"}
+
+2.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
+
+3.  Specify the [**null**]{style="color:#70AD47"} ( $H_0$ ) and [**alternative**]{style="color:#70AD47"} ( $H_A$ ) [**hypotheses**]{style="color:#70AD47"}
+
+    -   In symbols
+    -   In words
+    -   Alternative: one- or two-sided?
+
+4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Fisher Exact test in R
+
+    -   We will not discuss the test statistic's equation
+
+5.  Write a [**conclusion**]{style="color:#70AD47"} to the hypothesis test
+
+    -   Do we reject or fail to reject $H_0$?
+    -   Write a conclusion in the context of the problem
+
+## Fisher's Exact test: SHS Example (not appropriate use of Fisher's Exact)
+
+::: columns
+::: column
+1.  Check expected cell counts threshold
+
+```{r}
+expected(SHS_table)
+```
+
+We're going to pretend they are less than 5.
+
+2.  $\alpha = 0.05$
+
+3.  Hypothesis test:
+
+    -   $H_0$ : There is no association between glucose tolerance and diabetes
+    -   $H_1$ : There is an association between glucose tolerance and diabetes
+:::
+
+::: column
+4.  Calculate the test statistic and p-value for Chi-squared test in R
+
+```{r}
+fisher.test(x = SHS_table)
+```
+
+5.  Conclusion to the hypothesis test
+
+We reject the null hypothesis that glucose tolerance and diabetes are not associated ($p<2.2\cdot10^{-16}$). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians.
+:::
+:::
 
 # Permutation tests & bootstrapping
 

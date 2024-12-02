@@ -12,7 +12,7 @@
 
   <meta name="author" content="Meike Niederhausen and Nicky Wakim">
   <meta name="dcterms.date" content="2024-11-20">
-  <title>Biostatistics 1 - Lesson 16: Chi-squared tests &amp; Fisher’s Exact test</title>
+  <title>Biostatistics 1 - Lesson 16: Chi-squared test</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -387,13 +387,16 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-color="#3070BF" class="quarto-title-block center">
-  <h1 class="title">Lesson 16: Chi-squared tests &amp; Fisher’s Exact test</h1>
+  <h1 class="title">Lesson 16: Chi-squared test</h1>
   <p class="subtitle">TB sections 8.3-8.4</p>
 
 <div class="quarto-title-authors">
@@ -406,94 +409,151 @@ Meike Niederhausen and Nicky Wakim
 
   <p class="date">2024-11-20</p>
 </section>
-<section id="moritzs-tip-of-the-day" class="slide level2">
-<h2>MoRitz’s tip of the day</h2>
-<p><strong>Add text to a plot</strong> using <code>annotate()</code>:</p>
+<section>
+<section id="learning-objectives" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Understand when to use chi-squared</p></li>
+<li><p>Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables</p></li>
+<li><p>Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test</p></li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(<span class="cn">NULL</span>, <span class="fu">aes</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>))) <span class="sc">+</span>  <span class="co"># no dataset, create axes for x from 0 to 4</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_area</span>(<span class="at">stat =</span> <span class="st">"function"</span>, <span class="at">fun =</span> dchisq, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df=</span><span class="dv">2</span>), </span>
-<span id="cb1-3"><a href="#cb1-3"></a>            <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">1.0414</span>)) <span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">geom_area</span>(<span class="at">stat =</span> <span class="st">"function"</span>, <span class="at">fun =</span> dchisq, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">df=</span><span class="dv">2</span>),</span>
-<span id="cb1-5"><a href="#cb1-5"></a>            <span class="at">fill =</span> <span class="st">"violet"</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">1.0414</span>, <span class="dv">4</span>)) <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">1.0414</span>) <span class="sc">+</span>  <span class="co"># vertical line at x = 1.0414</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">1.1</span>, <span class="at">y =</span> .<span class="dv">4</span>, <span class="co"># add text at specified (x,y) coordinate</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>           <span class="at">label =</span> <span class="st">"chi-squared = 1.0414"</span>, <span class="at">hjust=</span><span class="dv">0</span>, <span class="at">size=</span><span class="dv">6</span>) <span class="sc">+</span> </span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">1.3</span>, <span class="at">y =</span> .<span class="dv">1</span>, </span>
-<span id="cb1-10"><a href="#cb1-10"></a>           <span class="at">label =</span> <span class="st">"p-value = 0.59"</span>, <span class="at">hjust=</span><span class="dv">0</span>, <span class="at">size=</span><span class="dv">6</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<style type="text/css">
+.reveal code {
+  max-height: 100% !important;
+}
+</style>
 </div>
-<img data-src="16_Chi_sq_Fisher_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+</section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
-<p><br> <br></p>
 
-<img data-src="../../img_slides/flowchart_511_continuous_categorical.png" class="r-stretch quarto-figure-center"></section>
-<section id="where-are-we-categorical-outcome-zoomed-in" class="slide level2">
-<h2>Where are we? Categorical outcome zoomed in</h2>
-<p><br> <br></p>
-
-<img data-src="../../img_slides/flowchart_only_categorical.png" class="r-stretch quarto-figure-center"></section>
-<section id="goals-for-today-sections-8.3-8.4" class="slide level2">
-<h2>Goals for today (Sections 8.3-8.4)</h2>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section>
+<section id="last-time" class="slide level2">
+<h2>Last time</h2>
 <ul>
-<li>Statistical inference for <strong>categorical data</strong> when either are
+<li>We looked at inference for a <strong>single proportion</strong></li>
+<li>We looked at inference for a difference in <strong>two independent proportions</strong></li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>comparing <strong>more than two groups</strong>,</li>
-<li>or have categorical outcomes that have <strong>more than 2 levels</strong>,</li>
-<li>or both</li>
-</ul></li>
-<li>Chi-squared tests of association (independence)
+<li>If there are two groups, we could see if they had different proportions by testing if the difference between the proportions were the same (null) or different (alternative, two-sided, <span class="math inline">\(\neq\)</span>)</li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>Hypotheses</li>
-<li>test statistic</li>
-<li>Chi-squared distribution</li>
-<li>p-value</li>
-<li>technical conditions (assumptions)</li>
-<li>conclusion</li>
-<li>R: <code>chisq.test()</code></li>
-</ul></li>
-<li>Fisher’s Exact Test</li>
-<li>Chi-squared test vs.&nbsp;testing difference in proportions
+<li><p>What happens when we want to compare two <strong>or more</strong> groups’ proportions?</p>
 <ul>
-<li>Test of Homogeneity</li>
+<li>Can no longer rely on the difference in proportions</li>
+<li>Need a new method to make inference (Chi-squared test!)</li>
 </ul></li>
 </ul>
-</section>
+</section></section>
 <section>
-<section id="chi-squared-tests-of-association-independence" class="title-slide slide level1 center">
-<h1>Chi-squared tests of association (independence)</h1>
-<p>Testing the association (independence) between two categorical variables</p>
+<section id="learning-objective" class="title-slide slide level1 center">
+<h1>Learning Objective</h1>
+
 </section>
-<section id="is-there-an-association-between-depression-and-being-physically-active" class="slide level2">
-<h2>Is there an association between depression and being physically active?</h2>
+<section id="from-lesson-4-example-hypertension-prevalence-12" class="slide level2">
+<h2>From Lesson 4: Example: hypertension prevalence (1/2)</h2>
 <ul>
-<li>Data sampled from the NHANES R package:
+<li>US CDC estimated that between 2011 and 2014<sup>1</sup>, 29% of the population in America had hypertension</li>
+</ul>
+<p>&nbsp;</p>
 <ul>
-<li>American National Health and Nutrition Examination Surveys</li>
-<li>Collected 2009-2012 by US National Center for Health Statistics (NCHS)</li>
-<li><code>NHANES</code> dataset: 10,000 rows, resampled from <code>NHANESraw</code> to undo oversampling effects
+<li>A health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension
 <ul>
-<li>Treat it as a simple random sample from the US population (for pedagogical purposes)</li>
-</ul></li>
-</ul></li>
-<li><strong><code>Depressed</code></strong>
-<ul>
-<li>Self-reported <em>number of days where participant felt down, depressed or hopeless</em>.</li>
-<li>One of None, Several, or Most (more than half the days).</li>
-<li>Reported for participants aged 18 years or older.</li>
-</ul></li>
-<li><strong><code>PhysActive</code></strong>
-<ul>
-<li><em>Participant does moderate or vigorous-intensity sports, fitness or recreational activities</em> (Yes or No).</li>
-<li>Reported for participants 12 years or older.</li>
+<li>However, this is <strong>only the case if nothing else is known about the patient</strong></li>
 </ul></li>
 </ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.cdc.gov/nchs/products/databriefs/db220.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db220.htm</a></p></li></ol></aside></section>
+<section id="from-lesson-4-example-hypertension-prevalence-22" class="slide level2">
+<h2>From Lesson 4: Example: hypertension prevalence (2/2)</h2>
+<ul>
+<li>Prevalence of <strong>hypertension varies significantly with age</strong>
+<ul>
+<li>Among adults aged 18-39, 7.3% have hypertension</li>
+<li>Adults aged 40-59, 32.2%</li>
+<li>Adults aged 60 or older, 64.9% have hypertension</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p>Knowing the age of a patient provides important information about the likelihood of hypertension</p>
+<ul>
+<li>Age and hypertension status are <strong>not independent</strong> - <strong>Can we back up this claim??</strong></li>
+</ul></li>
+<li><p>While the probability of hypertension of a randomly chosen adult is 0.29…</p>
+<ul>
+<li>The <strong>conditional probability</strong> of hypertension in a person known to be 60 or older is 0.649</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<div class="lob">
+<p><strong>Question:</strong> Is there an association between age group and hypertension?</p>
+</div>
 </section>
-<section id="hypotheses-for-a-chi-squared-test-of-association-independence" class="slide level2">
-<h2>Hypotheses for a Chi-squared test of association (independence)</h2>
+<section id="from-lesson-4-contingency-tables" class="slide level2">
+<h2>From Lesson 4: Contingency tables</h2>
+<ul>
+<li>We can start looking at the <strong>contingency table</strong> for hypertension for different age groups
+<ul>
+<li><strong>Contingency table:</strong> type of data table that displays the frequency distribution of two or more categorical variables</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Table: Contingency table showing hypertension status and age group, in thousands.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Age Group</th>
+<th style="text-align: right;">Hypertension</th>
+<th style="text-align: right;">No Hypertension</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">90862</td>
+<td style="text-align: right;">222458</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="test-of-general-association-hypotheses" class="slide level2">
+<h2>Test of General Association + Hypotheses</h2>
+<ul>
+<li><strong>General research question:</strong> Are two variables (both categorical, nominal) associated with each other?</li>
+</ul>
 <div class="columns">
-<div class="column" style="width:48.5%;">
-<p><strong>Generic wording:</strong></p>
+<div class="column">
+<div class="blue">
+<div class="blue-ttl">
+<p>General wording for hypotheses</p>
+</div>
+<div class="blue-cont">
 <p>Test of “<strong>association</strong>” wording</p>
 <ul>
 <li><p><span class="math inline">\(H_0\)</span>: There is no association between the two variables</p></li>
@@ -504,87 +564,98 @@ Meike Niederhausen and Nicky Wakim
 <li><p><span class="math inline">\(H_0\)</span>: The variables are independent</p></li>
 <li><p><span class="math inline">\(H_A\)</span>: The variables are not independent</p></li>
 </ul>
-</div><div class="column" style="width:3%;">
-
-</div><div class="column" style="width:48.5%;">
-<p><strong>For our example:</strong></p>
+</div>
+</div>
+</div><div class="column">
+<div class="pink">
+<div class="pink-ttl">
+<p>Hypotheses test for example</p>
+</div>
+<div class="pink-cont">
 <p>Test of “<strong>association</strong>” wording</p>
 <ul>
-<li><p><span class="math inline">\(H_0\)</span>: There is no association between depression and physical activity</p></li>
-<li><p><span class="math inline">\(H_A\)</span>: There is an association between depression and physical activity</p></li>
+<li><p><span class="math inline">\(H_0\)</span>: There is no association between age and hypertension</p></li>
+<li><p><span class="math inline">\(H_A\)</span>: There is an association between age and hypertension</p></li>
 </ul>
 <p>Test of “<strong>independence</strong>” wording</p>
 <ul>
-<li><p><span class="math inline">\(H_0\)</span>: The variables depression and physical activity are independent</p></li>
-<li><p><span class="math inline">\(H_A\)</span>: The variables depression and physical activity are not independent</p></li>
+<li><p><span class="math inline">\(H_0\)</span>: The variables age and hypertension are independent</p></li>
+<li><p><span class="math inline">\(H_A\)</span>: The variables age and hypertension are not independent</p></li>
 </ul>
 </div>
-</div>
-<div class="callout callout-warning no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>No symbols</strong></p>
-</div>
-<div class="callout-content">
-<p>For chi-squared test hypotheses we do not have versions using “symbols” like we do with tests of means or proportions.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="data-from-nhanes" class="slide level2 nostretch">
-<h2>Data from NHANES</h2>
-<ul>
-<li>Results below are from
-<ul>
-<li>a random sample of 400 adults (≥ 18 yrs old)</li>
-<li>with data for both the depression <code>Depressed</code> and physically active (<code>PhysActive</code>) variables.</li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Obs_DepressionPA.png" style="width:70.0%"></p>
-</figure>
-</div>
-<ul>
-<li>What does it mean for the variables to be independent?</li>
-</ul>
-</section>
-<section id="h_0-variables-are-independent" class="slide level2">
-<h2><span class="math inline">\(H_0\)</span>: Variables are Independent</h2>
+<section id="h_0-variables-are-independent-under-the-null" class="slide level2">
+<h2><span class="math inline">\(H_0\)</span>: Variables are Independent (under the null)</h2>
 <div class="columns">
 <div class="column" style="width:48.5%;">
 <ul>
 <li>Recall from Chapter 2, that events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if and only if</li>
 </ul>
-<p><span class="math display">\[P(A~and~B)=P(A)P(B)\]</span></p>
+<p><span class="math display">\[P(A \cap B)=P(A)P(B)\]</span></p>
 <ul>
-<li>If depression and being physically active are independent variables, then <em>theoretically</em> this condition needs to hold for <em>every combination of levels</em>, i.e.</li>
+<li>If age and hypertension are independent variables, then <em>theoretically</em> this condition needs to hold for <em>every combination of levels</em>, i.e.</li>
 </ul>
-<div style="font-size: 90%;">
 <p><span class="math display">\[\begin{align}
-P(None~and~Yes) &amp;= P(None)P(Yes)\\
-P(None~and~No) &amp;= P(None)P(No)\\
-P(Several~and~Yes) &amp;= P(Several)P(Yes)\\
-P(Several~and~No) &amp;= P(Several)P(No)\\
-P(Most~and~Yes) &amp;= P(Most)P(Yes)\\
-P(Most~and~No) &amp;= P(Most)P(No)
+P(18-39 \cap \text{hyp}) &amp;= P(18-39)P(\text{hyp})\\
+P(18-39 \cap \text{no hyp}) &amp;= P(18-39)P(\text{no hyp})\\
+P(40-59 \cap \text{hyp}) &amp;= P(40-59)P(\text{hyp})\\
+P(40-59 \cap \text{no hyp}) &amp;= P(40-59)P(\text{no hyp})\\
+P(60+ \cap \text{hyp}) &amp;= P(60+)P(\text{hyp})\\
+P(60+ \cap \text{no hyp}) &amp;= P(60+)P(\text{no hyp})\\
 \end{align}\]</span></p>
-</div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:38.5%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Obs_DepressionPA.png"></p>
-</figure>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="font-size: 28px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age Group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">No Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">90862</td>
+<td style="text-align: right;">222458</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
-<div style="font-size: 90%;">
+</div>
 <p><span class="math display">\[\begin{align}
-P(None~and~Yes) &amp;= \frac{314}{400}\cdot\frac{226}{400}\\
+P(18-39 \cap \text{hyp}) &amp;= \frac{121042}{313320}\cdot\frac{90862}{313320}\\
 &amp; ...\\
-P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
+P(60+ \cap \text{no hyp}) &amp;=\frac{61506}{313320}\cdot\frac{222458}{313320}
 \end{align}\]</span></p>
-</div>
 <p>With these probabilities, for each cell of the table we calculate the <strong>expected</strong> counts for each cell under the <span class="math inline">\(H_0\)</span> hypothesis that the variables are independent</p>
 </div>
 </div>
@@ -596,26 +667,62 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 <ul>
 <li>The expected counts (if <span class="math inline">\(H_0\)</span> is true &amp; the variables are independent) for each cell are
 <ul>
-<li><span class="math inline">\(np\)</span> = total table size <span class="math inline">\(\cdot\)</span> probability of cell</li>
+<li><span class="math inline">\(np = \text{total table size} \cdot \text{probability of cell}\)</span></li>
+<li><span class="math inline">\(\text{expected count} = \dfrac{\text{column total}\cdot \text{row total}}{\text{table total}}\)</span></li>
 </ul></li>
 </ul>
-<p>Expected count of Yes &amp; None:</p>
+<p>Expected count of 40-59 years old and hypertension:</p>
 <p><span class="math display">\[\begin{align}
-400 \cdot &amp; P(None~and~Yes)\\
-&amp;= 400 \cdot P(None)P(Yes)\\
-&amp;= 400 \cdot\frac{314}{400}\cdot\frac{226}{400}\\
-&amp;= \frac{314\cdot 226}{400} \\
-&amp;=  177.41\\
-&amp;= \frac{\text{column total}\cdot \text{row total}}{\text{table total}}
+\text{expected count} &amp;= \dfrac{\text{column total}\cdot \text{row total}}{\text{table total}} \\
+&amp;= \dfrac{\text{90862}\cdot \text{130772}}{\text{313320}} \\
+&amp;= 37923.55
 \end{align}\]</span></p>
 </div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Obs_DepressionPA.png"></p>
-</figure>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="font-size: 28px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age Group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">No Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+<td style="text-align: right;">121042</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+<td style="text-align: right;">130772</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+<td style="text-align: right;">61506</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: right;">90862</td>
+<td style="text-align: right;">222458</td>
+<td style="text-align: right;">313320</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
+</div>
+<p>&nbsp;</p>
 <ul>
-<li>If depression and being physically active are <strong>independent</strong> variables
+<li>If age group and hypertension are <strong>independent</strong> variables
 <ul>
 <li>(as assumed by <span class="math inline">\(H_0\)</span>),</li>
 </ul></li>
@@ -623,36 +730,215 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 </ul>
 </div>
 </div>
+<ul>
+<li>Test to see how likely is it that we observe our data given the null hypothesis (no association)</li>
+</ul>
 </section>
 <section id="observed-vs.-expected-counts" class="slide level2">
 <h2>Observed vs.&nbsp;Expected counts</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:50%;">
 <ul>
 <li>The <strong>observed</strong> counts are the counts in the 2-way table summarizing the data</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Obs_DepressionPA.png"></p>
-</figure>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="font-size: 40px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age Group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">No Hypertension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">8836</td>
+<td style="text-align: right;">112206</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">42109</td>
+<td style="text-align: right;">88663</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">39917</td>
+<td style="text-align: right;">21589</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
-<p><br></p>
-<p>Expected count for cell <span class="math inline">\(i,j\)</span> :</p>
-</div><div class="column" style="width:60%;">
+</div>
+</div><div class="column" style="width:50%;">
 <ul>
-<li>The <strong>expected</strong> counts are the counts the we would expect to see in the 2-way table if there was no association between depression and being physically activity</li>
+<li>The <strong>expected</strong> counts are the counts the we would expect to see in the 2-way table if there was no association between age group and hypertension</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Expected_DepressionPA.png"></p>
-</figure>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table" data-quarto-postprocess="true" style="font-size: 40px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Age Group</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Hypertension</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">No Hypertension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-39 yrs</td>
+<td style="text-align: right;">35101.87</td>
+<td style="text-align: right;">85940.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-59 yrs</td>
+<td style="text-align: right;">37923.55</td>
+<td style="text-align: right;">92848.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60+ yrs</td>
+<td style="text-align: right;">17836.58</td>
+<td style="text-align: right;">43669.42</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
 </div>
 </div>
+</div>
+<p>&nbsp;</p>
+<p>Expected count for cell <span class="math inline">\(i,j\)</span> :</p>
 <p><span class="math display">\[\textrm{Expected Count}_{\textrm{row } i,\textrm{ col }j}=\frac{(\textrm{row}~i~ \textrm{total})\cdot(\textrm{column}~j~ \textrm{total})}{\textrm{table total}}\]</span></p>
 </section>
-<section id="the-chi2-test-statistic" class="slide level2">
-<h2>The <span class="math inline">\(\chi^2\)</span> test statistic</h2>
+<section id="using-r-for-expected-cell-counts" class="slide level2">
+<h2>Using R for expected cell counts</h2>
+<ul>
+<li><p>R calculates expected cell counts using the <code>expected()</code> function in the <code>epitools</code> package</p></li>
+<li><p>Make sure dataset is in <code>matrix</code> form using <code>as.matrix()</code></p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>hyp_data2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          Hypertension No_Hypertension
+18-39 yrs         8836          112206
+40-59 yrs        42109           88663
+60+ yrs          39917           21589</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(epitools)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">expected</span>(hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          Hypertension No_Hypertension
+18-39 yrs     35101.87        85940.13
+40-59 yrs     37923.55        92848.45
+60+ yrs       17836.58        43669.42</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+
+</section>
+<section id="reference-steps-in-a-hypothesis-test" class="slide level2">
+<h2>Reference: Steps in a Hypothesis Test</h2>
+<ol type="1">
+<li><p>Check the <span style="color:#3070BF"><strong>assumptions</strong></span></p></li>
+<li><p>Set the <span style="color:#3070BF"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
+<li><p>Specify the <span style="color:#3070BF"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#3070BF"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#3070BF"><strong>hypotheses</strong></span></p>
+<ol type="1">
+<li><del>In symbols</del></li>
+<li>In words</li>
+<li><del>Alternative: one- or two-sided?</del></li>
+</ol></li>
+<li><p>Calculate the <span style="color:#3070BF"><strong>test statistic</strong></span>.</p></li>
+<li><p>Calculate the <span style="color:#3070BF"><strong>p-value</strong></span> based on the observed test statistic and its sampling distribution</p></li>
+<li><p>Write a <span style="color:#3070BF"><strong>conclusion</strong></span> to the hypothesis test</p>
+<ol type="1">
+<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+<li>Write a conclusion in the context of the problem</li>
+</ol></li>
+</ol>
+</section>
+<section id="step-1-check-assumptions" class="slide level2">
+<h2>Step 1: Check assumptions</h2>
+<ul>
+<li><strong>Independence</strong>
+<ul>
+<li>All individuals are independent from one another
+<ul>
+<li>In particular, observational units cannot be represented in more than one cell</li>
+<li>For example, someone cannot be in two differnt age groups</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><strong>Sample size</strong>
+<ul>
+<li>In order for the distribution of the test statistic to be appropriately modeled by a chi-squared distribution we need</li>
+<li><span style="color:#367B79">2 <span class="math inline">\(\times\)</span> 2 table</span>
+<ul>
+<li>expected counts are at least 10 for each cell</li>
+</ul></li>
+<li><span style="color:#367B79">Larger tables</span>
+<ul>
+<li>No more than 20% of expected counts are less than 5</li>
+<li>All expected counts are greater than 1</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">expected</span>(hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          Hypertension No_Hypertension
+18-39 yrs     35101.87        85940.13
+40-59 yrs     37923.55        92848.45
+60+ yrs       17836.58        43669.42</code></pre>
+</div>
+</div>
+<p>All expected counts &gt; 5</p>
+</div>
+</div>
+</section>
+<section id="step-2-and-3-significance-level-and-hypotheses" class="slide level2">
+<h2>Step 2 and 3: Significance level and Hypotheses</h2>
+<ul>
+<li>Set <span class="math inline">\(\alpha = 0.05\)</span></li>
+</ul>
+<p>&nbsp;</p>
+<div class="pink">
+<div class="pink-ttl">
+<p>Hypotheses test for example</p>
+</div>
+<div class="pink-cont">
+<p>Test of “<strong>association</strong>” wording</p>
+<ul>
+<li><p><span class="math inline">\(H_0\)</span>: There is no association between age and hypertension</p></li>
+<li><p><span class="math inline">\(H_A\)</span>: There is an association between age and hypertension</p></li>
+</ul>
+<p>Test of “<strong>independence</strong>” wording</p>
+<ul>
+<li><p><span class="math inline">\(H_0\)</span>: The variables age and hypertension are independent</p></li>
+<li><p><span class="math inline">\(H_A\)</span>: The variables age and hypertension are not independent</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="step-4-calculate-the-chi2-test-statistic" class="slide level2">
+<h2>Step 4: Calculate the <span class="math inline">\(\chi^2\)</span> test statistic</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <p>Test statistic for a test of association (independence):</p>
@@ -678,8 +964,8 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 </div>
 <p>Is this value big? Big enough to reject <span class="math inline">\(H_0\)</span>?</p>
 </section>
-<section id="the-chi2-distribution-calculating-the-p-value" class="slide level2">
-<h2>The <span class="math inline">\(\chi^2\)</span> distribution &amp; calculating the <em>p</em>-value</h2>
+<section id="step-5-calculate-the-p-value" class="slide level2">
+<h2>Step 5: Calculate the <em>p</em>-value</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <p>The <span class="math inline">\(\chi^2\)</span> distribution shape depends on its degrees of freedom</p>
@@ -688,7 +974,7 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 <ul>
 <li>gets more symmetric for larger df</li>
 </ul></li>
-<li><strong><span style="color:green">df = (# rows-1) x (# columns-1)</span></strong></li>
+<li><span style="color:green"><strong>df = (# rows-1) x (# columns-1)</strong></span></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -697,13 +983,13 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 </div>
 </div><div class="column" style="width:40%;">
 <ul>
-<li>The <strong><span style="color:darkorange">p-value</span></strong> is always the <strong><span style="color:darkorange">area to the right</span></strong> of the test statistic for a <span class="math inline">\(\chi^2\)</span> test.</li>
+<li>The <span style="color:darkorange"><strong>p-value</strong></span> is always the <span style="color:darkorange"><strong>area to the right</strong></span> of the test statistic for a <span class="math inline">\(\chi^2\)</span> test.</li>
 <li>We can use the <code>pchisq</code> function in R to calculate the probability of being at least as big as the <span class="math inline">\(\chi^2\)</span> test statistic:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>pv <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="fl">41.2</span>, <span class="at">df =</span> <span class="dv">2</span>, </span>
-<span id="cb2-2"><a href="#cb2-2"></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>pv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pv <span class="ot">&lt;-</span> <span class="fu">pchisq</span>(<span class="fl">41.2</span>, <span class="at">df =</span> <span class="dv">2</span>, </span>
+<span id="cb7-2"><a href="#cb7-2"></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>pv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.131185e-09</code></pre>
 </div>
@@ -712,8 +998,8 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 </div>
 </div>
 </section>
-<section id="conclusion" class="slide level2 nostretch">
-<h2>Conclusion</h2>
+<section id="step-6-conclusion" class="slide level2">
+<h2>Step 6: Conclusion</h2>
 <p>Recall the hypotheses to our <span class="math inline">\(\chi^2\)</span> test:</p>
 <ul>
 <li><p><span class="math inline">\(H_0\)</span>: There is <strong>no association</strong> between depression and being physically activity</p></li>
@@ -723,7 +1009,7 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="16_Chi_sq_Fisher_files/figure-revealjs/unnamed-chunk-4-1.png" width="768"></p>
+<p><img data-src="16_Chi_sq_Fisher_files/figure-revealjs/unnamed-chunk-12-1.png" width="768"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -745,2211 +1031,20 @@ P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
 </div>
 </div>
 </section>
-<section id="technical-conditions" class="slide level2">
-<h2>Technical conditions</h2>
-<ul>
-<li><strong>Independence</strong>
-<ul>
-<li>Each case (person) that contributes a count to the table must be independent of all the other cases in the table
-<ul>
-<li>In particular, observational units cannot be represented in more than one cell.</li>
-<li>For example, someone cannot choose both “Several” and “Most” for depression status. They have to choose exactly one option for each variable.</li>
-</ul></li>
-</ul></li>
-</ul>
-<hr>
-<div class="columns">
-<div class="column" style="width:65%;">
-<ul>
-<li><strong>Sample size</strong>
-<ul>
-<li>In order for the distribution of the test statistic to be appropriately modeled by a chi-squared distribution we need</li>
-<li><strong><span style="color:darkorange">2 <span class="math inline">\(\times\)</span> 2 table:</span></strong>
-<ul>
-<li><strong>expected counts are at least 10 for each cell</strong></li>
-</ul></li>
-<li><strong><span style="color:darkorange">larger tables:</span></strong>
-<ul>
-<li><strong>no more than 1/5 of the expected counts are less than 5</strong>, and</li>
-<li><strong>all expected counts are greater than 1</strong></li>
-</ul></li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:35%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="chi-squared-tests-in-r" class="title-slide slide level1 center">
-<h1>Chi-squared tests in R</h1>
-
-</section>
-<section id="depression-vs.-physical-activity-dataset" class="slide level2">
-<h2>Depression vs.&nbsp;physical activity dataset</h2>
-<p>Create dataset based on results table:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>DepPA <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="at">Depression =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"None"</span>, <span class="dv">314</span>), </span>
-<span id="cb4-3"><a href="#cb4-3"></a>         <span class="fu">rep</span>(<span class="st">"Several"</span>, <span class="dv">58</span>),</span>
-<span id="cb4-4"><a href="#cb4-4"></a>         <span class="fu">rep</span>(<span class="st">"Most"</span>, <span class="dv">28</span>)),</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="at">PA =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Yes"</span>, <span class="dv">199</span>),  <span class="co"># None</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>          <span class="fu">rep</span>(<span class="st">"No"</span>, <span class="dv">115</span>),</span>
-<span id="cb4-7"><a href="#cb4-7"></a>          <span class="fu">rep</span>(<span class="st">"Yes"</span>, <span class="dv">26</span>), <span class="co"># Several</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>          <span class="fu">rep</span>(<span class="st">"No"</span>, <span class="dv">32</span>),</span>
-<span id="cb4-9"><a href="#cb4-9"></a>          <span class="fu">rep</span>(<span class="st">"Yes"</span>, <span class="dv">1</span>), <span class="co"># Most</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>          <span class="fu">rep</span>(<span class="st">"No"</span>, <span class="dv">27</span>))</span>
-<span id="cb4-11"><a href="#cb4-11"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Summary table of data:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>DepPA <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">tabyl</span>(Depression, PA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> Depression  No Yes
-       Most  27   1
-       None 115 199
-    Several  32  26</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># base R:</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">table</span>(DepPA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          PA
-Depression  No Yes
-   Most     27   1
-   None    115 199
-   Several  32  26</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="chi2-test-in-r-using-dataset" class="slide level2">
-<h2><span class="math inline">\(\chi^2\)</span> test in R using dataset</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>If only have <span style="color:green">2 columns</span> in the dataset:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>(ChisqTest_DepPA <span class="ot">&lt;-</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>   <span class="fu">chisq.test</span>(<span class="fu">table</span>(DepPA)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  table(DepPA)
-X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
-</div>
-</div>
-<p>If have <span style="color:green">&gt;2 columns</span> in the dataset, we need to specify which columns to table:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>(ChisqTest_DepPA <span class="ot">&lt;-</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a>   <span class="fu">chisq.test</span>(<span class="fu">table</span>(</span>
-<span id="cb11-3"><a href="#cb11-3"></a>     DepPA<span class="sc">$</span>Depression, DepPA<span class="sc">$</span>PA)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  table(DepPA$Depression, DepPA$PA)
-X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>The tidyverse way (fewer parentheses)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">table</span>(DepPA<span class="sc">$</span>Depression, DepPA<span class="sc">$</span>PA) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">chisq.test</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  .
-X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
-</div>
-</div>
-<p><code>tidy()</code> the output (from <code>broom</code> package):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">table</span>(DepPA<span class="sc">$</span>Depression, DepPA<span class="sc">$</span>PA) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">chisq.test</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="cqspgikvce" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cqspgikvce table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#cqspgikvce thead, #cqspgikvce tbody, #cqspgikvce tfoot, #cqspgikvce tr, #cqspgikvce td, #cqspgikvce th {
-  border-style: none;
-}
-
-#cqspgikvce p {
-  margin: 0;
-  padding: 0;
-}
-
-#cqspgikvce .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#cqspgikvce .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#cqspgikvce .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#cqspgikvce .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#cqspgikvce .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#cqspgikvce .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#cqspgikvce .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#cqspgikvce .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#cqspgikvce .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#cqspgikvce .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#cqspgikvce .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#cqspgikvce .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#cqspgikvce .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#cqspgikvce .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#cqspgikvce .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cqspgikvce .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#cqspgikvce .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#cqspgikvce .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#cqspgikvce .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cqspgikvce .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#cqspgikvce .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cqspgikvce .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#cqspgikvce .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cqspgikvce .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cqspgikvce .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cqspgikvce .gt_left {
-  text-align: left;
-}
-
-#cqspgikvce .gt_center {
-  text-align: center;
-}
-
-#cqspgikvce .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#cqspgikvce .gt_font_normal {
-  font-weight: normal;
-}
-
-#cqspgikvce .gt_font_bold {
-  font-weight: bold;
-}
-
-#cqspgikvce .gt_font_italic {
-  font-style: italic;
-}
-
-#cqspgikvce .gt_super {
-  font-size: 65%;
-}
-
-#cqspgikvce .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#cqspgikvce .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#cqspgikvce .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#cqspgikvce .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#cqspgikvce .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#cqspgikvce .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#cqspgikvce .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#cqspgikvce .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#cqspgikvce div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="statistic" class="gt_row gt_right">41.17067</td>
-<td headers="p.value" class="gt_row gt_right">1.147897e-09</td>
-<td headers="parameter" class="gt_row gt_right">2</td>
-<td headers="method" class="gt_row gt_left">Pearson's Chi-squared test</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<p>Pull <em>p</em>-value</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">table</span>(DepPA<span class="sc">$</span>Depression, DepPA<span class="sc">$</span>PA) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">chisq.test</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.147897e-09</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="observed-expected-counts-in-r" class="slide level2">
-<h2>Observed &amp; expected counts in R</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>You can see what the <strong>observed</strong> and <strong>expected</strong> counts are from the saved chi-squared test results:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>ChisqTest_DepPA<span class="sc">$</span>observed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>         
-           No Yes
-  Most     27   1
-  None    115 199
-  Several  32  26</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>ChisqTest_DepPA<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>         
-              No    Yes
-  Most     12.18  15.82
-  None    136.59 177.41
-  Several  25.23  32.77</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
-</figure>
-</div>
-<ul>
-<li><p>Why is it important to look at the expected counts?</p></li>
-<li><p>What are we looking for in the expected counts?</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="chi2-test-in-r-with-2-way-table" class="slide level2">
-<h2><span class="math inline">\(\chi^2\)</span> test in R with 2-way table</h2>
-<p>Create a base R table of the results:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(DepPA_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">199</span>, <span class="dv">26</span>, <span class="dv">1</span>, <span class="dv">115</span>, <span class="dv">32</span>, <span class="dv">27</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3]
-[1,]  199   26    1
-[2,]  115   32   27</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">dimnames</span>(DepPA_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb24-3"><a href="#cb24-3"></a>DepPA_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     Depression
-PA    None Several Most
-  Yes  199      26    1
-  No   115      32   27</code></pre>
-</div>
-</div>
-<p>Run <span class="math inline">\(\chi^2\)</span> test with 2-way table:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">chisq.test</span>(DepPA_table) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  DepPA_table
-X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">chisq.test</span>(DepPA_table)<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     Depression
-PA      None Several  Most
-  Yes 177.41   32.77 15.82
-  No  136.59   25.23 12.18</code></pre>
-</div>
-</div>
-</section>
-<section id="yates-continuity-correction" class="slide level2">
-<h2>(Yates’) Continuity correction</h2>
-<ul>
-<li>For a <strong>2x2</strong> contingency table,
-<ul>
-<li>the <span class="math inline">\(\chi^2\)</span> test has the option of including a continuity correction</li>
-<li>just like with the proportions test</li>
-</ul></li>
-<li>The <strong>default includes a continuity correction</strong></li>
-<li>There is no CC for bigger tables</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>(DepPA_table2x2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">199</span>, <span class="dv">27</span>, <span class="dv">115</span>, <span class="dv">59</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2]
-[1,]  199   27
-[2,]  115   59</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">dimnames</span>(DepPA_table2x2) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several/Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a>DepPA_table2x2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     Depression
-PA    None Several/Most
-  Yes  199           27
-  No   115           59</code></pre>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p>Output <strong>without a CC</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">chisq.test</span>(DepPA_table2x2, <span class="at">correct =</span> <span class="cn">FALSE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  DepPA_table2x2
-X-squared = 28.093, df = 1, p-value = 1.156e-07</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<p>Compare to output <strong>with CC</strong>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">chisq.test</span>(DepPA_table2x2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test with Yates' continuity correction
-
-data:  DepPA_table2x2
-X-squared = 26.807, df = 1, p-value = 2.248e-07</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="fischers-exact-test" class="title-slide slide level1 center">
-<h1>Fischer’s Exact Test</h1>
-<p>Use this if expected cell counts are too small</p>
-</section>
-<section id="example-with-smaller-sample-size" class="slide level2">
-<h2>Example with smaller sample size</h2>
-<ul>
-<li>Suppose that instead of taking a random sample of 400 adults (from the NHANES data), a study takes a random sample of 100 such that
-<ul>
-<li>50 people that are physically active and</li>
-<li>50 people that are not physically active</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>(DepPA100_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">40</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3]
-[1,]   43    5    2
-[2,]   40    4    6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">dimnames</span>(DepPA100_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb40-2"><a href="#cb40-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb40-3"><a href="#cb40-3"></a></span>
-<span id="cb40-4"><a href="#cb40-4"></a>DepPA100_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     Depression
-PA    None Several Most
-  Yes   43       5    2
-  No    40       4    6</code></pre>
-</div>
-</div>
-</section>
-<section id="chi-squared-test-warning" class="slide level2">
-<h2>Chi-squared test warning</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">chisq.test</span>(DepPA100_table) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be
-incorrect</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
-
-data:  DepPA100_table
-X-squared = 2.2195, df = 2, p-value = 0.3296</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">chisq.test</span>(DepPA100_table)<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be
-incorrect</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     Depression
-PA    None Several Most
-  Yes 41.5     4.5    4
-  No  41.5     4.5    4</code></pre>
-</div>
-</div>
-<ul>
-<li>Recall the <strong>sample size</strong> condition
-<ul>
-<li>In order for the test statistic to be modeled by a chi-squared distribution we need</li>
-<li><strong><span style="color:darkorange">2 <span class="math inline">\(\times\)</span> 2 table:</span> expected counts are at least 10 for each cell</strong></li>
-<li><strong><span style="color:darkorange">larger tables:</span></strong>
-<ul>
-<li><strong>no more than 1/5 of the expected counts are less than 5</strong>, and</li>
-<li><strong>all expected counts are greater than 1</strong></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="fishers-exact-test" class="slide level2">
-<h2>Fisher’s Exact Test</h2>
-<ul>
-<li>Called an exact test since it
-<ul>
-<li>calculates an exact probability for the p-value
-<ul>
-<li>instead of using an asymptotic approximation, such as the normal, t, or chi-squared distributions</li>
-</ul></li>
-<li>For 2x2 tables the p-value is calculated using the <strong>hypergeometric</strong> probability distribution (see book for details)</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="fu">fisher.test</span>(DepPA100_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Fisher's Exact Test for Count Data
-
-data:  DepPA100_table
-p-value = 0.3844
-alternative hypothesis: two.sided</code></pre>
-</div>
-</div>
-<div class="callout callout-caution no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Comments</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>Note that there is no test statistic</li>
-<li>There is also no CI</li>
-<li>This is always a two-sided test</li>
-<li>There is no continuity correction since the hypergeometric distribution is discrete</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="simulate-p-values-another-option-for-small-expected-counts" class="slide level2">
-<h2><strong>Simulate p-values</strong>: another option for small expected counts</h2>
-<p>From the <code>chisq.test</code> help file:</p>
-<ul>
-<li>Simulation is done by random sampling from the set of all contingency tables with the same margin totals
-<ul>
-<li>works only if the margin totals are strictly positive.</li>
-</ul></li>
-<li>For each simulation, a <span class="math inline">\(\chi^2\)</span> test statistic is calculated</li>
-<li><em>P</em>-value is the proportion of simulations that have a test statistic at least as big as the observed one.</li>
-<li>No continuity correction</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">set.seed</span>(<span class="dv">567</span>)</span>
-<span id="cb50-2"><a href="#cb50-2"></a><span class="fu">chisq.test</span>(DepPA100_table, <span class="at">simulate.p.value =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test with simulated p-value (based on 2000
-    replicates)
-
-data:  DepPA100_table
-X-squared = 2.2195, df = NA, p-value = 0.3893</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="chi2-test-vs.-testing-proportions" class="title-slide slide level1 center">
-<h1><span class="math inline">\(\chi^2\)</span> test vs.&nbsp;testing proportions</h1>
-
-</section>
-<section id="chi2-test-vs.-testing-differences-in-proportions" class="slide level2">
-<h2><span class="math inline">\(\chi^2\)</span> test vs.&nbsp;testing differences in proportions</h2>
-<p>If there are only 2 levels in both of the categorical variables being tested, then the <em>p</em>-value from the <span class="math inline">\(\chi^2\)</span> test is equal to the <em>p</em>-value from the differences in proportions test.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Example:</strong> Previously we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:</p>
-<p><span class="math display">\[\begin{align}
-H_0:&amp; ~p_{coll} - p_{noncoll} = 0\\
-H_A:&amp; ~p_{coll} - p_{noncoll} \neq 0
-\end{align}\]</span></p>
-</div><div class="column" style="width:50%;">
-<div style="font-size: 90%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>SportsBet_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
-<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">c</span>(<span class="dv">175</span>, <span class="dv">94</span>, <span class="dv">137</span>, <span class="dv">77</span>), </span>
-<span id="cb52-3"><a href="#cb52-3"></a>  <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
-<span id="cb52-4"><a href="#cb52-4"></a></span>
-<span id="cb52-5"><a href="#cb52-5"></a><span class="fu">dimnames</span>(SportsBet_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb52-6"><a href="#cb52-6"></a>  <span class="st">"Group"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"College"</span>, <span class="st">"NonCollege"</span>), <span class="co"># row names</span></span>
-<span id="cb52-7"><a href="#cb52-7"></a>  <span class="st">"Bet"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))  <span class="co"># column names</span></span>
-<span id="cb52-8"><a href="#cb52-8"></a></span>
-<span id="cb52-9"><a href="#cb52-9"></a>SportsBet_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            Bet
-Group         No Yes
-  College    175  94
-  NonCollege 137  77</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">chisq.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="leuevwphzv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#leuevwphzv table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#leuevwphzv thead, #leuevwphzv tbody, #leuevwphzv tfoot, #leuevwphzv tr, #leuevwphzv td, #leuevwphzv th {
-  border-style: none;
-}
-
-#leuevwphzv p {
-  margin: 0;
-  padding: 0;
-}
-
-#leuevwphzv .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#leuevwphzv .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#leuevwphzv .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#leuevwphzv .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#leuevwphzv .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#leuevwphzv .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#leuevwphzv .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#leuevwphzv .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#leuevwphzv .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#leuevwphzv .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#leuevwphzv .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#leuevwphzv .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#leuevwphzv .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#leuevwphzv .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#leuevwphzv .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#leuevwphzv .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#leuevwphzv .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#leuevwphzv .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#leuevwphzv .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#leuevwphzv .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#leuevwphzv .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#leuevwphzv .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#leuevwphzv .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#leuevwphzv .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#leuevwphzv .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#leuevwphzv .gt_left {
-  text-align: left;
-}
-
-#leuevwphzv .gt_center {
-  text-align: center;
-}
-
-#leuevwphzv .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#leuevwphzv .gt_font_normal {
-  font-weight: normal;
-}
-
-#leuevwphzv .gt_font_bold {
-  font-weight: bold;
-}
-
-#leuevwphzv .gt_font_italic {
-  font-style: italic;
-}
-
-#leuevwphzv .gt_super {
-  font-size: 65%;
-}
-
-#leuevwphzv .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#leuevwphzv .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#leuevwphzv .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#leuevwphzv .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#leuevwphzv .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#leuevwphzv .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#leuevwphzv .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#leuevwphzv .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#leuevwphzv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="statistic" class="gt_row gt_right">0.01987511</td>
-<td headers="p.value" class="gt_row gt_right">0.8878864</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="method" class="gt_row gt_left">Pearson's Chi-squared test with Yates' continuity correction</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">prop.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div id="sfxoygwdrw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#sfxoygwdrw table {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#sfxoygwdrw thead, #sfxoygwdrw tbody, #sfxoygwdrw tfoot, #sfxoygwdrw tr, #sfxoygwdrw td, #sfxoygwdrw th {
-  border-style: none;
-}
-
-#sfxoygwdrw p {
-  margin: 0;
-  padding: 0;
-}
-
-#sfxoygwdrw .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#sfxoygwdrw .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#sfxoygwdrw .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#sfxoygwdrw .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#sfxoygwdrw .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#sfxoygwdrw .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#sfxoygwdrw .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#sfxoygwdrw .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#sfxoygwdrw .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#sfxoygwdrw .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#sfxoygwdrw .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#sfxoygwdrw .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#sfxoygwdrw .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#sfxoygwdrw .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#sfxoygwdrw .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sfxoygwdrw .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#sfxoygwdrw .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#sfxoygwdrw .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#sfxoygwdrw .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sfxoygwdrw .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#sfxoygwdrw .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sfxoygwdrw .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#sfxoygwdrw .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sfxoygwdrw .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#sfxoygwdrw .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#sfxoygwdrw .gt_left {
-  text-align: left;
-}
-
-#sfxoygwdrw .gt_center {
-  text-align: center;
-}
-
-#sfxoygwdrw .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#sfxoygwdrw .gt_font_normal {
-  font-weight: normal;
-}
-
-#sfxoygwdrw .gt_font_bold {
-  font-weight: bold;
-}
-
-#sfxoygwdrw .gt_font_italic {
-  font-style: italic;
-}
-
-#sfxoygwdrw .gt_super {
-  font-size: 65%;
-}
-
-#sfxoygwdrw .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#sfxoygwdrw .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#sfxoygwdrw .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#sfxoygwdrw .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#sfxoygwdrw .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#sfxoygwdrw .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#sfxoygwdrw .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#sfxoygwdrw .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#sfxoygwdrw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-</style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate1">estimate1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate2">estimate2</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="statistic">statistic</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p.value">p.value</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="parameter">parameter</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.low">conf.low</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="conf.high">conf.high</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="method">method</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="alternative">alternative</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="estimate1" class="gt_row gt_right">0.6505576</td>
-<td headers="estimate2" class="gt_row gt_right">0.6401869</td>
-<td headers="statistic" class="gt_row gt_right">0.01987511</td>
-<td headers="p.value" class="gt_row gt_right">0.8878864</td>
-<td headers="parameter" class="gt_row gt_right">1</td>
-<td headers="conf.low" class="gt_row gt_right">-0.07973918</td>
-<td headers="conf.high" class="gt_row gt_right">0.1004806</td>
-<td headers="method" class="gt_row gt_left">2-sample test for equality of proportions with continuity correction</td>
-<td headers="alternative" class="gt_row gt_left">two.sided</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="fu">sqrt</span>(<span class="fl">0.0199</span>), <span class="at">lower.tail=</span>F) <span class="co"># p-value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8878167</code></pre>
-</div>
-</div>
-</section>
-<section id="test-of-homogeneity" class="slide level2">
-<h2>Test of Homogeneity</h2>
-<ul>
-<li><p>Running the sports betting example as a chi-squared test is actually an example of a <strong>test of homogeneity</strong></p></li>
-<li><p>In a test of homogeneity, proportions can be compared between many groups</p></li>
-</ul>
-<p><span class="math display">\[\begin{align}
-H_0:&amp;~ p_1 = p_2 = p_2 = \ldots = p_n\\
-H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j
-\end{align}\]</span></p>
-<ul>
-<li><p>It’s an extension of a two proportions test.</p></li>
-<li><p>The test statistic &amp; p-value are calculated the same was as a chi-squared test of association (independence)</p></li>
-<li><p>When we fix the margins (whether row or columns) of one of the “variables” (such as in a cohort or case-control study)</p>
-<ul>
-<li>the chi-squared test is called a <strong>Test of Homogeneity</strong></li>
-</ul></li>
-</ul>
-</section>
-<section id="overview-of-tests-with-categorical-outcome" class="slide level2">
-<h2>Overview of tests with categorical outcome</h2>
-<p><br> <br></p>
-
-<img data-src="../../img_slides/flowchart_only_categorical.png" class="r-stretch quarto-figure-center"></section>
-<section id="chi-squared-tests-of-independence-vs.-homogeneity-vs.-goodness-of-fit" class="slide level2">
-<h2>Chi-squared Tests of Independence vs.&nbsp;Homogeneity vs.&nbsp;Goodness-of-fit</h2>
-
-<img data-src="../../img_slides/chisq_tests_different_types_TileStats.png" class="r-stretch quarto-figure-center"><ul>
-<li>See YouTube video from TileStats for a good explanation of how these three tests are different: <a href="https://www.youtube.com/watch?v=TyD-_1JUhxw" class="uri">https://www.youtube.com/watch?v=TyD-_1JUhxw</a></li>
-<li>UCLA’s INSPIRE website has a good summary too: <a href="http://inspire.stat.ucla.edu/unit_13/" class="uri">http://inspire.stat.ucla.edu/unit_13/</a></li>
-</ul>
-</section>
-<section id="whats-next" class="slide level2">
-<h2>What’s next?</h2>
-<p><br> <br></p>
-
-<img data-src="../../img_slides/flowchart_511_continuous_categorical.png" class="r-stretch quarto-figure-center"></section></section>
-<section>
-<section id="learning-objectives" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li><p>Recognize the motivation for and focus of our course (categorical responses)</p></li>
-<li><p>Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation</p></li>
-<li><p>Determine if a single proportion differs from a population value</p></li>
-<li><p>Determine if two proportions differ from each other</p></li>
-</ol>
-<div class="lob">
-<ol start="5" type="1">
-<li>Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables</li>
-</ol>
-</div>
-<ol start="6" type="1">
-<li><p>Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test</p></li>
-<li><p>Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test</p></li>
-<li><p>Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test</p></li>
-<li><p>Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test</p></li>
-</ol>
-</section>
-<section id="contingency-tables-r-x-c" class="slide level2">
-<h2>Contingency Tables (R x C)</h2>
-<ul>
-<li><p>R X C contingency tables</p>
-<ul>
-<li><p>Contains information for two discrete variables: one has R categories and the other has C categories.</p></li>
-<li><p>Refers to the number of rows (R) and number of columns (C) in the table</p></li>
-</ul></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><p>For two proportions: focused on 2 X 2 contingency tables</p>
-<ul>
-<li>R = 2, C = 2</li>
-</ul></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><p>Expand our contingency tables to variables with 2 or more categories</p>
-<ul>
-<li>Categories can be ordinal or nominal</li>
-</ul></li>
-</ul>
-</section>
-<section id="contingency-table-example" class="slide level2">
-<h2>Contingency Table: Example</h2>
-<p>Let’s say we are interested in learning the association between the development of breast cancer and age at first birth. Our first step is typically to present the observed data:</p>
-
-<img data-src="./images/Conting_tab_ex.png" width="511" class="r-stretch quarto-figure-center"><ul>
-<li>This is a 2 x 5 contingency table</li>
-</ul>
-</section>
-<section id="test-associationtrend-of-r-x-c-contingency-table" class="slide level2">
-<h2>Test Association/Trend of R X C Contingency Table</h2>
-<p>&nbsp;</p>
-<div class="columns">
-<div class="column" style="width:46%;">
-<p>If <span style="color:#4472C4; font-weight: bold;">both variables are nominal</span>, a <span style="color:#4472C4; font-style: italic;">test of general association</span> will be sufficient</p>
-<ul>
-<li><p>Test of general association is the same regardless of R and C</p></li>
-<li><p>Test used for 2x2 contingency table same as 5x3 contingency table</p></li>
-<li><p>We will cover:</p>
-<ul>
-<li>Chi-squared test</li>
-<li>Fisher Exact test</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:6%;">
-
-</div><div class="column" style="width:48%;">
-<p>If <span style="color:#70AD47; font-weight: bold;">one or both variables are ordinal</span>, a <span style="color:#70AD47; font-style: italic;">test of trend</span> may be of interest</p>
-<ul>
-<li><p>Treats ordinal variables as quantitative rather than qualitative (nominal scale)</p></li>
-<li><p>Test of trend has greater power than the test of general association</p></li>
-<li><p>We will cover:</p>
-<ul>
-<li>Cochran-Armitage test</li>
-<li>Mantel-Haenszel test</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="poll-everywhere-question-4" class="slide level2">
-<h2>Poll Everywhere Question 4</h2>
-</section>
-<section id="test-of-general-association" class="slide level2">
-<h2>Test of General Association</h2>
-<ul>
-<li><strong>General research question:</strong> Are two variables (both categorical, nominal) associated with each other?</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><p>Translated to a hypothesis test:</p>
-<ul>
-<li><span class="math inline">\(H_0\)</span> : There is no association between the two variables / The variables are independent</li>
-<li><span class="math inline">\(H_1\)</span> : There is an association between the two variables / The variables are not independent</li>
-</ul></li>
-</ul>
-<p>&nbsp; &nbsp;</p>
-<ul>
-<li><p>We have two options for testing general association:</p>
-<ol type="1">
-<li>Chi-squared test</li>
-<li>Fisher’s Exact test</li>
-</ol></li>
-</ul>
-</section>
-<section id="test-of-general-association-shs-example" class="slide level2">
-<h2>Test of General Association: SHS Example</h2>
-<ul>
-<li><p><strong>Main question:</strong> Do American Indians with impaired glucose tolerance have a different incidence of diabetes?</p>
-<ul>
-<li>Is glucose tolerance associated with diabetes incidence among American Indians?</li>
-</ul></li>
-<li><p>We have two variables, and both variables have two nominal categories</p>
-<ul>
-<li>Diabetes outcome: Not diabetic and Diabetic</li>
-<li>Glucose tolerance: Normal or Impaired</li>
-</ul></li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><p>Answer research question with a test of general association</p></li>
-<li><p>Hypothesis:</p>
-<ul>
-<li><span class="math inline">\(H_0\)</span> : There is no association between glucose tolerance and diabetes / Glucose tolerance and diabetes are independent</li>
-<li><span class="math inline">\(H_1\)</span> : There is an association between glucose tolerance and diabetes / Glucose tolerance and diabetes are not independent</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="learning-objectives-1" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li><p>Recognize the motivation for and focus of our course (categorical responses)</p></li>
-<li><p>Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation</p></li>
-<li><p>Determine if a single proportion differs from a population value</p></li>
-<li><p>Determine if two proportions differ from each other</p></li>
-<li><p>Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables</p></li>
-</ol>
-<div class="lob">
-<ol start="6" type="1">
-<li>Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test</li>
-</ol>
-</div>
-<ol start="7" type="1">
-<li><p>Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test</p></li>
-<li><p>Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test</p></li>
-<li><p>Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test</p></li>
-</ol>
-</section>
-<section id="chi-squared-test" class="slide level2">
-<h2>Chi-squared test</h2>
-<ul>
-<li>Test to see how likely is it that we observe our data given the null hypothesis (no association)</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>We use the null to calculate the expected cell counts and compare them to the observed cell counts</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li><p>Requirements to conduct Chi-squared test (expected cell counts)</p>
-<ul>
-<li><p>For 2 x 2 contingency table:</p>
-<ul>
-<li>No expected cell counts should be less than 10</li>
-</ul></li>
-<li><p>For contingency table with 3x2, 3x3, 4x4, etc.:</p>
-<ul>
-<li>No more than 20% of expected cell counts are less than 5</li>
-<li>No expected cell counts are less than 1</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="chi-squared-test-process" class="slide level2">
-<h2>Chi-squared test: Process</h2>
-<ol type="1">
-<li><p>Check that the <span style="color:#70AD47"><strong>expected cell counts</strong></span> threshold is met</p></li>
-<li><p>Set the <span style="color:#70AD47"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
-<li><p>Specify the <span style="color:#70AD47"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#70AD47"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#70AD47"><strong>hypotheses</strong></span></p>
-<ul>
-<li>In symbols</li>
-<li>In words</li>
-<li>Alternative: one- or two-sided?</li>
-</ul></li>
-<li><p>Calculate the <span style="color:#70AD47"><strong>test statistic</strong></span> and <span style="color:#70AD47"><strong>p-value</strong></span> for Chi-squared test in R</p>
-<ul>
-<li>We will not discuss the test statistic’s equation</li>
-</ul></li>
-<li><p>Write a <span style="color:#70AD47"><strong>conclusion</strong></span> to the hypothesis test</p>
-<ul>
-<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
-<li>Write a conclusion in the context of the problem</li>
-</ul></li>
-</ol>
-</section>
-<section id="chi-squared-test-expected-cell-counts" class="slide level2">
-<h2>Chi-squared test: Expected Cell Counts</h2>
-<ul>
-<li>Is the sample size big enough for the chi-square test to be adequate? What are the expected cell counts?</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>If you want an explanation of how to calculate by hand, please see Vu and Harringtion TB (section 8.3.1, page 405)</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
-<li>Too time consuming for this class, but R does it quickly using the <code>expected()</code> function in the <code>epitools</code> package</li>
-</ul>
-</section>
-<section id="chi-squared-test-expected-cell-counts-1" class="slide level2">
-<h2>Chi-squared test: Expected Cell Counts</h2>
-<ul>
-<li>In the Strong Heart Study…</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>SHS <span class="ot">=</span> <span class="fu">tibble</span>(<span class="at">Diabetes =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Not diabetic"</span>, </span>
-<span id="cb58-2"><a href="#cb58-2"></a>                   <span class="dv">1338</span>), </span>
-<span id="cb58-3"><a href="#cb58-3"></a>                   <span class="fu">rep</span>(<span class="st">"Diabetic"</span>, <span class="dv">326</span>)),</span>
-<span id="cb58-4"><a href="#cb58-4"></a>              <span class="at">Glucose =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Normal"</span>, </span>
-<span id="cb58-5"><a href="#cb58-5"></a>                  <span class="dv">1004</span>),<span class="co">#Not diabetic</span></span>
-<span id="cb58-6"><a href="#cb58-6"></a>          <span class="fu">rep</span>(<span class="st">"Impaired"</span>, <span class="dv">334</span>),</span>
-<span id="cb58-7"><a href="#cb58-7"></a>          <span class="fu">rep</span>(<span class="st">"Normal"</span>, </span>
-<span id="cb58-8"><a href="#cb58-8"></a>              <span class="dv">128</span>), <span class="co">#Diabetic</span></span>
-<span id="cb58-9"><a href="#cb58-9"></a>          <span class="fu">rep</span>(<span class="st">"Impaired"</span>, <span class="dv">198</span>)))</span>
-<span id="cb58-10"><a href="#cb58-10"></a>SHS_table <span class="ot">=</span> <span class="fu">table</span>(SHS<span class="sc">$</span>Glucose, SHS<span class="sc">$</span>Diabetes)</span>
-<span id="cb58-11"><a href="#cb58-11"></a>SHS_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          
-           Diabetic Not diabetic
-  Impaired      198          334
-  Normal        128         1004</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">library</span>(epitools)</span>
-<span id="cb60-2"><a href="#cb60-2"></a><span class="fu">expected</span>(SHS_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          
-           Diabetic Not diabetic
-  Impaired  104.226      427.774
-  Normal    221.774      910.226</code></pre>
-</div>
-</div>
-<p>&nbsp;</p>
-<div class="columns">
-<div class="column" style="width:15%;">
-
-</div><div class="column" style="width:28%;">
-<div class="hl3">
-<p>All expected counts &gt; 5</p>
-</div>
-</div><div class="column" style="width:38%;">
-
-</div>
-</div>
-</section>
-<section id="chi-squared-test-shs-example" class="slide level2">
-<h2>Chi-squared test: SHS Example</h2>
+<section id="chi-squared-test-example" class="slide level2">
+<h2>Chi-squared test: Example</h2>
 <div class="columns">
 <div class="column">
 <ol type="1">
 <li>Check expected cell counts threshold</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="fu">expected</span>(SHS_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">expected</span>(hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>          
-           Diabetic Not diabetic
-  Impaired  104.226      427.774
-  Normal    221.774      910.226</code></pre>
+<pre><code>          Hypertension No_Hypertension
+18-39 yrs     35101.87        85940.13
+40-59 yrs     37923.55        92848.45
+60+ yrs       17836.58        43669.42</code></pre>
 </div>
 </div>
 <p>All expected cells are greater than 5.</p>
@@ -2957,139 +1052,26 @@ H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j
 <li><p><span class="math inline">\(\alpha = 0.05\)</span></p></li>
 <li><p>Hypothesis test:</p>
 <ul>
-<li><span class="math inline">\(H_0\)</span> : There is no association between glucose tolerance and diabetes</li>
-<li><span class="math inline">\(H_1\)</span> : There is an association between glucose tolerance and diabetes</li>
+<li><span class="math inline">\(H_0\)</span> : There is no association between age group and hypertension</li>
+<li><span class="math inline">\(H_1\)</span> : There is an association between age group and hypertension</li>
 </ul></li>
 </ol>
 </div><div class="column">
-<ol start="4" type="1">
-<li>Calculate the test statistic and p-value for Chi-squared test in R</li>
-</ol>
+<p>4-5. Calculate the test statistic and p-value for Chi-squared test in R</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="fu">chisq.test</span>(<span class="at">x =</span> SHS_table, <span class="at">correct =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">chisq.test</span>(<span class="at">x =</span> hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Pearson's Chi-squared test with Yates' continuity correction
+    Pearson's Chi-squared test
 
-data:  SHS_table
-X-squared = 152.6, df = 1, p-value &lt; 2.2e-16</code></pre>
+data:  hyp_data2
+X-squared = 66831, df = 2, p-value &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<ol start="5" type="1">
-<li>Conclusion to the hypothesis test</li>
+<ol start="6" type="1">
+<li>Conclusion</li>
 </ol>
-<p>We reject the null hypothesis that glucose tolerance and diabetes are not associated (<span class="math inline">\(p&lt;2.2\cdot10^{-16}\)</span>). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians.</p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="learning-objectives-2" class="title-slide slide level1 center">
-<h1>Learning Objectives</h1>
-<ol type="1">
-<li><p>Recognize the motivation for and focus of our course (categorical responses)</p></li>
-<li><p>Recall features of the Binomial distribution for categorical data analysis and utilize the normal approximation</p></li>
-<li><p>Determine if a single proportion differs from a population value</p></li>
-<li><p>Determine if two proportions differ from each other</p></li>
-<li><p>Display data from two categorical variables, each with 2 or more categories, using R X C contingency tables</p></li>
-<li><p>Determine if a nominal response and nominal explanatory variable are associated with one another using the Chi-squared test</p></li>
-</ol>
-<div class="lob">
-<ol start="7" type="1">
-<li>Determine if a nominal response and nominal explanatory variable are associated with one another using the Fisher Exact test</li>
-</ol>
-</div>
-<ol start="8" type="1">
-<li><p>Determine if a binary, nominal response and an ordinal explanatory variable are associated with one another using the Cochran-Armitage test</p></li>
-<li><p>Determine if an ordinal response and ordinal explanatory variable are associated with one another using the Mantel-Haenszel test</p></li>
-</ol>
-</section>
-<section id="fishers-exact-test-1" class="slide level2">
-<h2>Fisher’s Exact Test</h2>
-<ul>
-<li>Only necessary when expected counts in one or more cells is less than 5</li>
-<li>Given row and column totals fixed, computes exact probability that we observe our data or more extreme data</li>
-<li>Consider a general 2 x 2 table:</li>
-</ul>
-
-<img data-src="./images/fisher_tab.png" class="r-stretch quarto-figure-center"><ul>
-<li>The exact probability of observing a table with cells (a, b, c, d) can be computed based on the hypergeometric distribution</li>
-</ul>
-<p><span class="math display">\[P(a, b, c, d) = \dfrac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{n!\cdot a!\cdot b!\cdot c!\cdot d!}\]</span></p>
-<ul>
-<li>Numerator is fixed and denominator changes</li>
-</ul>
-</section>
-<section id="fishers-exact-test-process" class="slide level2">
-<h2>Fisher’s Exact test: Process</h2>
-<ol type="1">
-<li><p>Check the <span style="color:#70AD47"><strong>expected cell counts</strong></span></p></li>
-<li><p>Set the <span style="color:#70AD47"><strong>level of significance</strong></span> <span class="math inline">\(\alpha\)</span></p></li>
-<li><p>Specify the <span style="color:#70AD47"><strong>null</strong></span> ( <span class="math inline">\(H_0\)</span> ) and <span style="color:#70AD47"><strong>alternative</strong></span> ( <span class="math inline">\(H_A\)</span> ) <span style="color:#70AD47"><strong>hypotheses</strong></span></p>
-<ul>
-<li>In symbols</li>
-<li>In words</li>
-<li>Alternative: one- or two-sided?</li>
-</ul></li>
-<li><p>Calculate the <span style="color:#70AD47"><strong>test statistic</strong></span> and <span style="color:#70AD47"><strong>p-value</strong></span> for Fisher Exact test in R</p>
-<ul>
-<li>We will not discuss the test statistic’s equation</li>
-</ul></li>
-<li><p>Write a <span style="color:#70AD47"><strong>conclusion</strong></span> to the hypothesis test</p>
-<ul>
-<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
-<li>Write a conclusion in the context of the problem</li>
-</ul></li>
-</ol>
-</section>
-<section id="fishers-exact-test-shs-example-not-appropriate-use-of-fishers-exact" class="slide level2">
-<h2>Fisher’s Exact test: SHS Example (not appropriate use of Fisher’s Exact)</h2>
-<div class="columns">
-<div class="column">
-<ol type="1">
-<li>Check expected cell counts threshold</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">expected</span>(SHS_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          
-           Diabetic Not diabetic
-  Impaired  104.226      427.774
-  Normal    221.774      910.226</code></pre>
-</div>
-</div>
-<p>We’re going to pretend they are less than 5.</p>
-<ol start="2" type="1">
-<li><p><span class="math inline">\(\alpha = 0.05\)</span></p></li>
-<li><p>Hypothesis test:</p>
-<ul>
-<li><span class="math inline">\(H_0\)</span> : There is no association between glucose tolerance and diabetes</li>
-<li><span class="math inline">\(H_1\)</span> : There is an association between glucose tolerance and diabetes</li>
-</ul></li>
-</ol>
-</div><div class="column">
-<ol start="4" type="1">
-<li>Calculate the test statistic and p-value for Chi-squared test in R</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="fu">fisher.test</span>(<span class="at">x =</span> SHS_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Fisher's Exact Test for Count Data
-
-data:  SHS_table
-p-value &lt; 2.2e-16
-alternative hypothesis: true odds ratio is not equal to 1
-95 percent confidence interval:
- 3.576595 6.048639
-sample estimates:
-odds ratio 
-  4.644825 </code></pre>
-</div>
-</div>
-<ol start="5" type="1">
-<li>Conclusion to the hypothesis test</li>
-</ol>
-<p>We reject the null hypothesis that glucose tolerance and diabetes are not associated (<span class="math inline">\(p&lt;2.2\cdot10^{-16}\)</span>). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians.</p>
+<p>We reject the null hypothesis that age group and hypertension are not associated (<span class="math inline">\(p&lt;2.2\cdot10^{-16}\)</span>). There is sufficient evidence that age group and hypertension are associated.</p>
 </div>
 </div>
 
@@ -3097,6 +1079,7 @@ odds ratio
 <p>Lesson 16 Slides</p>
 </div>
 </section></section>
+
     </div>
   </div>
 

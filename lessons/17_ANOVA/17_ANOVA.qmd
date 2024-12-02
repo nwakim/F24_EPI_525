@@ -39,6 +39,8 @@ library(broom)
 library(here) 
 library(pwr) 
 
+data("famuss")
+
 # terminal: for icons
 # quarto install extension quarto-ext/fontawesome
 
@@ -48,355 +50,235 @@ theme_set(theme_bw(base_size = 22))
 
 ```
 
+# Learning Objectives
+
+1. Return to our visualizations
+
+2. Learn about ANOVA and SST, SSE, SSG
+
+3. Learn about the F-statistic and F-distribution
+
+4. Run hypothesis test
+
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+.reveal pre.sourceCode code {
+  max-height: 100% !important;
+}
+```
 
 ## Where are we?
 
-<br>
-<br>
-
-![](../img_slides/flowchart_511_continuous_categorical.png){fig-align="center"}
-
-## Where are we? Continuous outcome zoomed in
-
-<br>
-<br>
-
-![](../img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+![](../img_slides/course_map.png){fig-align="center"}
 
 
-## Goals for today (Section 5.5)
+## A little while ago...
 
-* Analysis of Variance (ANOVA)
+-   We looked at inference for a **single mean**
+-   We looked at inference for a difference in **means from two independent samples**
 
-* When to use an ANOVA
-* Hypotheses
-* ANOVA table
-* Different sources of variation in ANOVA
-* ANOVA conditions
-* F-distribution
-* Post-hoc testing of differences in means
-* Running an ANOVA in R
+ 
 
+-   If there are two groups, we could see if they had different means by testing if the difference between the means were the same (null) or different (alternative)
 
+ 
 
-## Disability Discrimination Example 
+-   What happens when we want to compare two **or more** groups' means?
 
-::: columns
-::: {.column width="50%"}
-* The U.S. Rehabilitation Act of 1973 prohibited discrimination against people with physical disabilities. 
-    * The act defined a disabled person as any individual who has a physical or mental impairment that limits the person's major life activities.
-* A 1980's study examined whether physical disabilities affect people's perceptions of employment qualifications 
-    * ([Cesare, Tannenbaum, & Dalessio, 1990](https://psycnet.apa.org/record/1991-07629-001)). 
-:::
+    -   Can no longer rely on the difference in means
+    -   Need a new method to make inference (ANOVA or Linear Regression!)
 
-::: {.column width="50%"}
-* Researchers prepared recorded job interviews, using _same actors and script each time_. 
-* Only difference: job applicant appeared with different disabilities.
-    * _No disability_
-    * _Leg amputation_
-    * _Crutches_
-    * _Hearing impairment_
-    * _Wheelchair confinement_
-* 70 undergrad students were randomly assigned to view one of the videotapes, 
-    * then __rated__ the candidate's qualifications on a __1-10 scale__.
+## From Lesson 8: Data visualization
 
-:::
-:::
+- Study investigating whether ACTN3 genotype at a particular location (residue 577) is associated with change in muscle function
 
-* The research question: __are qualifications evaluated differently depending on the applicant's presented disability?__
+ 
 
+- **Categorical variable:** genotypes (CC, TT, CT)
 
+ 
 
-## Load interview data from `.txt` file
+- **Numeric variable:** Muscle function, measured as percent change in non-dominant arm strength
 
-* `.txt` (text) files are usually tab-deliminated files
-    * `.csv` files are comma-separated files
-* `read_delim` is from the `readr` package, just like `read_csv`, and loads with other `tidyverse` packages
+ 
 
-```{r}
-employ <- read_delim(
-  file = here::here("data", "DisabilityEmployment.txt"), 
-  delim = "\t",   # tab delimited
-  trim_ws = TRUE)
-```
+- We can start the investigation by plotting the relationship
 
-`trim_ws`: 	specify whether leading and trailing white space should be trimmed from each field before parsing it
+## From Lesson 8: Side-by-side boxplots with data points
 
-```{r}
-glimpse(employ)
-```
-
+- We can look at the boxplot of percent change for each genotype **with points shown so we can see the distribution of observations better**
 
 ::: columns
-::: {.column width="50%"}
-
+::: {.column width="53%"}
 ```{r}
-summary(employ)
+#| label: "box_sbs_jitter"
+#| eval: false
+#| code-line-numbers: "7-11"
+ggplot(data = famuss, 
+       aes(x = actn3.r577x, 
+           y = ndrm.ch)) + 
+  geom_boxplot() + 
+  labs(x = "ACTN3 genotype", 
+       y = "Percent Change in Non-Dominant Arm Strength")  +
+  geom_jitter(aes(color = actn3.r577x), 
+    alpha = 0.3,      
+    show.legend = FALSE,      
+    position = position_jitter(     
+      height = 0.4))      
+```
+
+:::
+::: {.column width="47%"}
+```{r}
+#| label: "box_sbs_jitter_out"
+#| ref.label: "box_sbs_jitter"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 7.5
+#| fig.width: 7
 ```
 :::
-::: {.column width="50%"}
-```{r}
-employ %>% tabyl(disability)
-```
-
-:::
 :::
 
+## From Lesson 8: Ridgeline plot 
 
-
-## MoRitz's tip of the day
-
-Read [OHSU's Inclusive Language Guide](https://www.ohsu.edu/sites/default/files/2021-03/OHSU%20Inclusive%20Language%20Guide_031521.pdf) (below is from pgs. 22-25)
- 
-"... an evolving tool to help OHSU members learn about and use inclusive language..."
-
-Sections on: Race and ethnicity, Immigration status, Gender and sexual orientation, and Ability (including physical, mental and chronological attributes)
+- Overlapped densities were easy enough to see with 3 genotypes
+- If you have **many categories**, a ridgeline plot might make it easier to see
 
 ::: columns
-::: {.column width="50%"}
-
-![](../img_slides/OHSU_Inclusive_Language_Guide_Ability_header.png){fig-align="center"}
-![](../img_slides/OHSU_Inclusive_Language_Guide_Respectful.png){fig-align="center"}
-![](../img_slides/OHSU_Inclusive_Language_Guide_Respectful_disability.png){fig-align="center"}
-
-:::
-
-::: {.column width="50%"}
-![](../img_slides/OHSU_Inclusive_Language_Guide_Avoid.png){fig-align="center"}
-:::
-:::
-
-
-## Factor variable: Make `disability` a factor variable
-
-::: columns
-::: {.column width="70%"}
+::: {.column width="53%"}
 ```{r}
-glimpse(employ)
-```
-
-:::
-::: {.column width="30%"}
-```{r}
-summary(employ)
+#| label: "density_ridge"
+#| eval: false
+#| code-line-numbers: "6-7"
+library(ggridges)
+ggplot(data = famuss, 
+       aes(y = actn3.r577x, 
+           x = ndrm.ch, 
+           fill = actn3.r577x)) +
+  geom_density_ridges(alpha = 0.3, 
+          show.legend = FALSE) +      
+  labs(x = "Percent Change in Non-Dominant Arm Strength",
+       y = "ACTN3 genotype",
+       title = "Strength change by genotype")       
 ```
 :::
-:::
-
-Make `disability` a factor variable:
-
+::: {.column width="47%"}
 ```{r}
-employ <- employ %>% 
-  mutate(disability = factor(disability))
-```
-
-<br>
-
-What's different now?
-
-::: columns
-::: {.column width="70%"}
-```{r}
-glimpse(employ)
-```
-
-:::
-::: {.column width="30%"}
-```{r}
-summary(employ)
-```
-:::
-:::
-
-
-## Factor variable: Change order & name of disability levels 
-
-[What are the current level names and order?]{style="color:purple"}
-
-```{r}
-levels(employ$disability)
-```
-
-[What changes are being made below?]{style="color:green"}
-
-```{r}
-employ <- employ %>% 
-  mutate(
-    # make "none" the first level
-    # by only listing the level none, all other levels will be in original order
-    disability = fct_relevel(disability, "none"),
-    # change the level name amputee to amputation
-    disability = fct_recode(disability, amputation = "amputee")
-    )
-```
-
-* `fct_relevel()` and `fct_recode()` are from the `forcats` package: <https://forcats.tidyverse.org/index.html>. 
-* `forcats` is loaded with `library(tidyverse)`.
-
-[New order & names:]{style="color:purple"}
-
-```{r}
-levels(employ$disability) # note the new order and new name
-```
-
-
-
-## Data viz (1/2)
-
-* What are the `score` distribution shapes within each group? 
-* Any unusual values?
-
-::: columns
-::: {.column width="50%"}
-```{r}
-#| fig.width: 7.0
-#| fig.height: 6.0
-ggplot(employ, aes(x=score)) +
-  geom_density() +
-  facet_wrap(~ disability)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| fig.width: 7.0
-#| fig.height: 5.0
-library(ggridges) 
-ggplot(employ, 
-       aes(x=score,
-           y = disability,
-           fill = disability)) + 
-  geom_density_ridges(alpha = 0.4) +
-  theme(legend.position="none")
-```
-:::
-:::
-
-## Data viz (2/2)
-
-* Compare the `score` measures of __center__ and __spread__ between the groups
-
-::: columns
-::: {.column width="45%"}
-```{r}
-#| fig.width: 7.0
-#| fig.height: 6.0
-ggplot(employ, 
-       aes(y=score, 
-           x = disability,
-           fill = disability)) +
-  geom_boxplot(alpha = 0.3) +
-  coord_flip() +
-  geom_jitter(width = 0.1, 
-              alpha = 0.3) +
-  theme(legend.position = "none")
-```
-:::
-
-::: {.column width="55%"}
-```{r}
+#| label: "density_ridge_out"
+#| ref.label: "density_ridge"
+#| echo: false
+#| fig.keep: "first"
+#| fig.height: 7.5
 #| fig.width: 7.5
-#| fig.height: 4.5
-ggplot(employ, 
-       aes(x = disability, 
-           y=score, 
-           fill=disability, 
-           color=disability)) +
-  geom_dotplot(binaxis = "y", alpha = 0.5) +
-  geom_hline(aes(yintercept = mean(score)), 
-             lty = "dashed") +
-  stat_summary(fun ="mean", geom="point", 
-    size = 3, color = "grey33", alpha = 1) +
-  theme(legend.position = "none")
 ```
 :::
 :::
 
-
-## Hypotheses
-
-To test for a difference in means across _k_ groups:
-
-\begin{align}
-H_0 &: \mu_1 = \mu_2 = ... = \mu_k\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
-\end{align}
+## Poll Everywhere Question 4
 
 
-__Hypothetical examples:__  
-In which set (A or B) do you believe the evidence will be stronger 
-that at least one population differs from the others?
-
-![](../img_slides/hypothetical_disability_data_v2.png){fig-align="center"}
-
+# Learning
 
 ## Comparing means
 
+::: columns
+::: {.column width="40%"}
 Whether or not two means are significantly different depends on:
 
 * How far apart the __means__ are
 * How much __variability__ there is within each group
 
-__[Questions:]{style="color:green"}__  
+__[Questions:]{style="color:#C83532"}__  
 
 * How to measure variability __between__ groups?
 * How to measure variability __within__ groups?
 * How to compare the two measures of variability?
 * How to determine significance?
-
-
-## ANOVA in base R
-
-* There are several options to run an ANOVA model in R
-* Two most common are `lm` and `aov`
-    * `lm` = linear model; will be using frequently in BSTA 512
-
-```{r}
-lm(score ~ disability, data = employ) %>% anova()
-
-aov(score ~ disability, data = employ) %>% summary()
-```
-
-Hypotheses:
-
-\begin{align}
-H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
-\end{align}
-
-Do we reject or fail to reject $H_0$?
-
-## ANOVA tables {.nostretch}
-
-Disability example ANOVA table from R:
-
-::: {style="font-size: 90%;"}
-```{r}
-lm(score ~ disability, data = employ) %>% anova()
-```
 :::
 
-Generic ANOVA table:
+::: {.column width="60%"}
+![](../img_slides/toyANOVA.png)
+:::
+:::
 
-![](../img_slides/anova_table.png){fig-align="center" width=80%}
+## Generic ANOVA table
+
+![](../img_slides/anova_table.png){fig-align="center" height=7in}
 
 ## ANOVA: Analysis of Variance  {.nostretch}
 
 __ANOVA__ compares the variability between groups to the variability within groups 
 
 
-![](../img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
+![](../img_slides/anova_total_variability.png){fig-align="center" height=1.75in}
 
-![](../img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width=30%} 
-![](../img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width=30%} 
-![](../img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width=30%} 
+::: columns
+::: {.column width=33%}
+```{r}
+#| fig.width: 7
+#| fig.height: 8
+#| echo: false
+var_tot_plot = ggplot(famuss, aes(x = actn3.r577x, y=ndrm.ch, 
+      fill = actn3.r577x, color = actn3.r577x)) +
+  geom_dotplot(binaxis = "y", alpha =.9) +
+  geom_hline(aes(yintercept = mean(ndrm.ch)), 
+             lty = "dashed", size = 2) +
+  # stat_summary(fun = "mean", geom = "point", 
+  #      size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none") +
+  labs(y = "Percent Change in Non-Dominant Arm Strength",
+       x = "ACTN3 genotype")  
+var_tot_plot
+```
+:::
 
+::: {.column width=33%}
+```{r}
+#| fig.width: 7
+#| fig.height: 8
+#| echo: false
+var_bw_gp_plot = ggplot(famuss, aes(x = actn3.r577x, y=ndrm.ch, 
+      fill = actn3.r577x, color = actn3.r577x)) +
+  geom_dotplot(binaxis = "y", alpha =.2) +
+  geom_hline(aes(yintercept = mean(ndrm.ch)), 
+             lty = "dashed", size = 2) +
+  stat_summary(fun = "mean", geom = "point", 
+       size = 5, color = "grey33", alpha =1)  +
+  theme(legend.position = "none") +
+  labs(y = "Percent Change in Non-Dominant Arm Strength",
+       x = "ACTN3 genotype") 
+var_bw_gp_plot
+```
+:::
+
+::: {.column width=33%}
+```{r}
+#| fig.width: 7
+#| fig.height: 8
+#| echo: false
+var_win_gp_plot = ggplot(famuss, aes(x = actn3.r577x, y=ndrm.ch, 
+      fill = actn3.r577x, color = actn3.r577x)) +
+  geom_dotplot(binaxis = "y", alpha =.5) +
+  # geom_hline(aes(yintercept = mean(ndrm.ch)), 
+  #            lty = "dashed", size = 2)
+  stat_summary(fun = "mean", geom = "point", 
+       size = 5, color = "grey33", alpha =1)  +
+  theme(legend.position = "none") +
+  labs(y = "Percent Change in Non-Dominant Arm Strength",
+       x = "ACTN3 genotype") 
+var_win_gp_plot
+```
+:::
+:::
 
 ## ANOVA: Analysis of Variance  {.nostretch}
 
 __Analysis of Variance (ANOVA)__ compares the variability between groups to the variability within groups 
 
-![](../img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
+![](../img_slides/anova_total_variability.png){fig-align="center" height=2in}
 
 
 $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \ 
@@ -404,7 +286,7 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \
 + \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2$$
 
 
-![](../img_slides/anova_SS_total.png){fig-align="center" height=1.5in}
+![](../img_slides/anova_SS_total.png){fig-align="center" height=2in}
 
 
 
@@ -443,7 +325,7 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \
 
 
 
-## Total Sums of Squares Visually
+## Total Sums of Squares (SST)
 
 ::: columns
 ::: {.column width="40%"}
@@ -451,14 +333,7 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \
 #| fig.width: 7
 #| fig.height: 10
 #| echo: false
-ggplot(employ, aes(x = disability, y=score, 
-      fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.9) +
-  geom_hline(aes(yintercept = mean(score)), 
-             lty = "dashed") +
-  # stat_summary(fun = "mean", geom = "point", 
-  #      size = 3, color = "grey33", alpha =1)  +
-  theme(legend.position = "none")
+var_tot_plot
 ```
 
 :::
@@ -479,52 +354,7 @@ $$SST = \sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 = (N-1)s^2$$
 :::
 :::
 
-
-## Calculate Total Sums of Squares 
-
-Total Sums of Squares:
-
-$$SST = \sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 = (N-1)s^2$$
-
-::: columns
-::: {.column width="35%"}
-
-* where 
-    * $N=\sum_{i=1}^{k}n_i$ is the total sample size and
-    * $s^2$ is the grand standard deviation of all the observations
-:::
-
-::: {.column width="65%"}
-
-Total sample size $N$:
-```{r}
-(Ns <- employ %>% group_by(disability) %>% count())
-```
-
-$SST$: 
-
-```{r}
-(SST <- (sum(Ns$n) - 1) * sd(employ$score)^2)
-```
-
-:::
-:::
-
-
-## ANOVA: Analysis of Variance  {.nostretch}
-
-__ANOVA__ compares the variability between groups to the variability within groups 
-
-
-![](../img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
-
-![](../img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width=30%} 
-![](../img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width=30%} 
-![](../img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width=30%} 
-
-
-
-## Sums of Squares due to Groups Visually ("between" groups)
+## Sums of Squares due to Groups (SSG)
 
 ::: columns
 ::: {.column width="40%"}
@@ -532,14 +362,7 @@ __ANOVA__ compares the variability between groups to the variability within grou
 #| fig.width: 7
 #| fig.height: 10
 #| echo: false
-ggplot(employ, aes(x = disability, y=score, 
-      fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.2) +
-  geom_hline(aes(yintercept = mean(score)), 
-             lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", 
-       size = 3, color = "grey33", alpha =1)  +
-  theme(legend.position = "none")
+var_bw_gp_plot
 ```
 :::
 ::: {.column width="60%"}
@@ -556,67 +379,7 @@ $$SSG = \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2$$
 :::
 :::
 
-
-## Calculate Sums of Squares due to Groups ("between" groups)
-
-$$SSG = \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2$$
-
-::: columns
-::: {.column width="40%"}
-
-```{r}
-#| fig.width: 7
-#| fig.height: 8
-#| echo: false
-ggplot(employ, aes(x = disability, y=score, 
-      fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.2) +
-  geom_hline(aes(yintercept = mean(score)), 
-             lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", 
-       size = 3, color = "grey33", alpha =1)  +
-  theme(legend.position = "none")
-```
-
-:::
-::: {.column width="60%"}
-
-Calculate means $\bar{x}_i$ for each group:
-
-```{r}
-xbar_groups <- employ %>% 
-  group_by(disability) %>% 
-  summarise(mean = mean(score))
-xbar_groups
-```
-
-Calculate $SSG$:
-
-```{r}
-(SSG <- sum(Ns$n *
-  (xbar_groups$mean - mean(employ$score))^2))
-```
-
-
-:::
-:::
-
-
-## ANOVA: Analysis of Variance  {.nostretch}
-
-__ANOVA__ compares the variability between groups to the variability within groups 
-
-
-![](../img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
-
-![](../img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width=30%} 
-![](../img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width=30%} 
-![](../img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width=30%} 
-
-
-
-
-## Sums of Squares Error Visually (within groups)
+## Sums of Squares Error (SSE)
 
 ::: columns
 ::: {.column width="40%"}
@@ -624,14 +387,8 @@ __ANOVA__ compares the variability between groups to the variability within grou
 #| fig.width: 7
 #| fig.height: 10
 #| echo: false
-ggplot(employ, aes(x = disability, y=score, 
-      fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +
-  # geom_hline(aes(yintercept = mean(score)), 
-             # lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", 
-       size = 3, color = "grey33", alpha =1)  +
-  theme(legend.position = "none")
+var_win_gp_plot
+
 ```
 :::
 ::: {.column width="60%"}
@@ -642,642 +399,237 @@ where $s_{i}$ is the standard deviation of the $i^{th}$ group
 
 * This is the sum of the squared differences between each observed $x_{ij}$ value and its group mean $\bar{x}_{i}$. 
 
-* That is, it is the deviation of the $x_{ij}$'s from the predicted score by group.
+* That is, it is the deviation of the $x_{ij}$'s from the predicted ndrm.ch by group.
 
 * Also called the residual sums of squares, or $SS_{residual}.$
 
 :::
 :::
 
+## ANOVA table to hypothesis test?
 
-## Calculate Sums of Squares Error (within groups)
+- Okay, so how do we use all these types of variability to run a test? 
+- How do we determine, statistically, if the groups have different means or not?
 
-$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2 = \sum_{i = 1}^k(n_i-1)s_{i}^2$$
-where $s_{i}$ is the standard deviation of the $i^{th}$ group
-
-::: columns
-::: {.column width="50%"}
-
-```{r}
-#| fig.width: 7
-#| fig.height: 5.5
-#| echo: false
-ggplot(employ, aes(x = disability, y=score, 
-      fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +
-  # geom_hline(aes(yintercept = mean(score)), 
-             # lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", 
-       size = 3, color = "grey33", alpha =1)  +
-  theme(legend.position = "none")
-```
-
-:::
-
-::: {.column width="50%"}
-
-Calculate sd's $s_i$ for each group:
-```{r}
-sd_groups <- employ %>% 
-  group_by(disability) %>% 
-  summarise(SD = sd(score))
-sd_groups
-```
-
-Calculate $SSE$:
-```{r}
-(SSE <- sum(
-  (Ns$n-1)*sd_groups$SD^2))
-```
-
-:::
-:::
-
-
-
-## Verify _SST = SSG + SSE_ {.nostretch}
-
-__ANOVA__ compares the variability between groups to the variability within groups 
-
-![](../img_slides/anova_total_variability.png){fig-align="center" height=1.25in}
-
-$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \ = \ \ n_i\sum_{i = 1}^k(\bar{x}_{i}-\bar{x})^2 \ \ 
-+ \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2$$
-
-$$(N-1)s^2 \ \ 
-= \ \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2 \ \ 
-+ \ \ \sum_{i = 1}^k(n_i-1)s_{i}^2$$
-
-![](../img_slides/anova_SS_total.png){fig-align="center" height=1.25in}
-
-::: columns
-::: {.column width="50%"}
-```{r}
-SST
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-SSG + SSE
-```
-:::
-:::
-
-
-## ANOVA table
-
-::: columns
-::: {.column width="15%"}
-![](../img_slides/SS_all3_vertical.png){fig-align="center"} 
-:::
-::: {.column width="85%"}
-<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 ![](../img_slides/anova_table.png){fig-align="center"}
-:::
-:::
 
+- Answer: We use the F-statistic in a hypothesis test!
+
+# Learning
 
 ## Thinking about the F-statistic
 
 ::: columns
-::: {.column width="50%"}
-__[If the groups are actually different, then which of these is more accurate?]{style="color:green"}__
+::: {.column width="49.5%"}
+__[If the groups are actually different, then which of these is more accurate?]{style="color:#C83532"}__
 
-1. The variability between groups should be higher than the variability within groups
+1. **The variability between groups should be higher than the variability within groups**
 1. The variability within groups should be higher than the variability between groups
 
 :::
 
-::: {.column width="50%"}
-__[If there really is a difference between the groups, we would expect the F-statistic to be which of these: ]{style="color:green"}__
+::: {.column width="1%"}
+:::
 
-1. Higher than we would observe by random chance
+::: {.column width="49.5%"}
+__[If there really is a difference between the groups, we would expect the F-statistic to be which of these: ]{style="color:#C83532"}__
+
+1. **Higher than we would observe by random chance**
 1. Lower than we would observe by random chance
 
 :::
 :::
 
-
-::: columns
-::: {.column width="25%"}
-
-$$F = \frac{MSG}{MSE}$$
-
-:::
-::: {.column width="75%"}
 ![](../img_slides/hypothetical_disability_data_v2.png){fig-align="center"}
-:::
-:::
 
 
-## ANOVA in base R
+## The F-statistic
 
-```{r}
-# Note that I'm saving the tidy anova table
-# Will be pulling p-value from this on future slide
+- F-statistic represents the standardized ratio of variability between groups to the variability within the groups
 
-empl_lm <- lm(score ~ disability, data = employ) %>% 
-  anova() %>% 
-  tidy()
+$$F_{stat} = \dfrac{MSG}{MSE}$$
 
-empl_lm %>% gt()
-```
-
-Hypotheses:
-
-\begin{align}
-H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
-\end{align}
-
-Do we reject or fail to reject $H_0$?
-
-
-
-## Conclusion to hypothesis test
-
-\begin{align}
-H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
-\end{align}
-
-::: columns
-::: {.column width="50%"}
-```{r}
-empl_lm  # tidy anova output
-
-# Note that this is a vector:
-empl_lm$p.value
-```
-
-Pull the p-value using base R:
-
-```{r}
-round(empl_lm$p.value[1],2)
-```
-
-Pull the p-value using tidyverse:
-
-```{r}
-empl_lm %>% 
-  filter(term == "disability") %>% 
-  pull(p.value) %>% 
-  round(2)
-```
-
-:::
-
-::: {.column width="50%"}
-* Use $\alpha$ = 0.05.
-* Do we reject or fail to reject $H_0$?
-
-__Conclusion statement__:
-
-* There is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( $p$-value = `r round(empl_lm$p.value[1],2)`).
-
-:::
-:::
-
-
-## Conditions for ANOVA 
-
-[__IF__ ALL of the following conditions hold:]{style="color:green"}
-
-1. The null hypothesis is true
-2. Sample sizes in each group group are large (each $n \ge 30$) 
-    * OR the data are relatively normally distributed in each group
-
-::: columns
-::: {.column width="50%"}
-3. Variability is "similar" in all group groups:
-    * Is the within group variability about the same for each group?
-    * As a rough rule of thumb, this condition is _violated if the standard deviation of one group is more than double the standard deviation of another group_
-
-:::
-
-::: {.column width="2%"}
-:::
-::: {.column width="48%"}
-Checking the __equal variance__ condition:
-
-```{r}
-sd_groups # previously defined
-max(sd_groups$SD) / min(sd_groups$SD)
-```
-
-:::
-:::
-
-[__THEN__ the sampling distribution of the __F-statistic__ is an __F-distribution__]{style="color:green"}
-
-
-## Testing variances (Condition 3)
-
-__Bartlett’s test for equal variances__
-
-* $H_0:$ population variances of group levels are equal
-* $H_A:$ population variances of group levels are NOT equal
-
-_Note: $H_A$ is same as saying that at least one of the group levels has a different variance_
-
-:::{.callout-caution}
-* Bartlett's test assumes the data in each group are normally distributed. 
-* Do not use if data do not satisfy the normality condition. 
-:::
-
-```{r}
-bartlett.test(score ~ disability, data = employ)
-```
-
-:::{.callout-tip}
-Levene's test for equality of variances is not as restrictive: see <https://www.statology.org/levenes-test-r/> 
-:::
+- F is larger when the variability between groups is larger than variability within groups
 
 
 ## The F-distribution
 
-* The F-distribution is skewed right.
-* The F-distribution has __[two different degrees of freedom]{style="color:green"}__:
-    * one for the [numerator]{style="color:green"} of the ratio [(k – 1)]{style="color:green"} and 
-    * one for the [denominator (N – k)]{style="color:green"}
+::: columns
+::: {.column width="45%"}
 
-* [$p$-__value__]{style="color:purple"}  
-    * is always the __[upper tail]{style="color:purple"}__
+* The F-distribution is skewed right
+* The F-distribution has __[two different degrees of freedom]{style="color:#BF396F"}__:
+    * one for the [numerator]{style="color:#BF396F"} of the ratio [(k – 1)]{style="color:#BF396F"} and 
+    * one for the [denominator (N – k)]{style="color:#BF396F"}
+
+* [$p$-__value__]{style="color:#459B99"}  
+    * $P(F > F_{stat})$
+    * is always the __[upper tail]{style="color:#459B99"}__
     * (the area as extreme or more extreme)
+:::
 
-::: columns
-::: {.column width="50%"}
+::: {.column width="55%"}
 
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 3.75
-#| echo: false
-F_stat <- 2.86158
-ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
-  geom_vline(xintercept = F_stat, color = "red") +
-  # fun = df is specifying (d)ensity of (f) distribution
-  stat_function(fun = df, args = list(df1=4, df2=65), color = "cornflowerblue") +
-  geom_area(stat = "function", fun = df, args = list(df1=4, df2=65), fill = "red", alpha =0.3, xlim = c(F_stat, 5)) +
-  annotate("text", x = 3.5, y = .1, label = "p-value", size=6) 
-```
-
-
-:::
-
-::: {.column width="50%"}
-
-
-```{r}
-empl_lm %>% gt()
-
-# p-value using F-distribution
-
-pf(2.86158, df1=5-1, df2=70-5, 
-   lower.tail = FALSE)
-```
-
-:::
-:::
-
-
-
-## Which groups are statistically different?
-
-::: columns
-::: {.column width="40%"}
-
-<br>
-
-* So far we've only determined that _at least one of the groups is different_ from the others, 
-    * but we don't know which.
-
-<br>
-
-* What's your guess?
-
-:::
-
-::: {.column width="60%"}
-```{r}
-#| fig.width: 8.0
-#| fig.height: 7.0
-#| echo: false
-ggplot(employ, aes(x = disability, y=score, 
-      fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +
-  geom_hline(aes(yintercept = mean(score)), 
-             lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", 
-       size = 3, color = "grey33", alpha =1)  +
-  theme(legend.position = "none")
-```
-
-:::
-:::
-
-
-# Post-hoc testing for ANOVA
-
-_determining which groups are statistically different_
-
-
-## Post-hoc testing: pairwise t-tests
-
-::: columns
-::: {.column width="40%"}
-* In post-hoc testing we [__run all the pairwise t-tests__]{style="color:green"} comparing the means from each pair of groups.
-* With 5 groups, this involves doing ${5 \choose 2} = \frac{5!}{2!3!} = \frac{5\cdot 4}{2}= 10$ different pairwise tests.
-
-__Problem:__
-
-* Although the ANOVA test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), 
-* the [overall Type I error rate will be much higher when running many tests simultaneously]{style="color:darkorange"}.
-
-:::
-
-::: {.column width="2%"}
-:::
-::: {.column width="58%"}
-::: {style="font-size: 85%;"}
-
-\begin{align}
-P(\text{making an error}) = & \alpha\\
-P(\text{not making an error}) = & 1-\alpha\\
-P(\text{not making an error in m tests}) = & (1-\alpha)^m\\
-P(\text{making at least 1 error in m tests}) = & 1-(1-\alpha)^m
-\end{align}
-
-:::
-
-```{r}
-#| fig.height: 6.0
-#| echo: false
-Prob_error_mtests <- tibble(
-  m = 1:100,
-  P_error = 1-(1-.05)^m,
-  P_err_Bonf = 1-(1-.05/m)^m)
-
-ggplot(Prob_error_mtests, aes(x=m, y = P_error)) +
-  geom_point() +
-  labs(x = "Number of tests",
-       y = "P(at least 1 false positive)",
-       title = "Likelihood of a false positive",
-       subtitle = "For m tests and using alpha = 0.05")
-```
-
-:::
-:::
-
-
-## The Bonferroni Correction (1/2)
-
-::: columns
-::: {.column width="50%"}
-A very conservative (but very popular) approach is to divide the $\alpha$ level by how many tests $m$ are being done:
-
-$$\alpha_{Bonf} = \frac{\alpha}{m}$$
-
-* This is equivalent to multiplying the  
-_p_-values by m:
-
-$$p\textrm{-value} < \alpha_{Bonf} = \frac{\alpha}{m}$$ 
-is the same as
-$$m \cdot (p\textrm{-value}) < \alpha$$
-The Bonferroni correction is popular since it's very easy to implement.
-:::
-
-::: {.column width="50%"}
-* The __plot below__ shows the __[likelihood of making at least one Type I error]{style="color:green"}__ depending on how may tests are done.
-* Notice the likelihood decreases very quickly
-    * Unfortunately the likelihood of a Type II error is increasing as well
-    * It becomes "harder" and harder to reject $H_0$ if doing many tests.
-
-```{r}
-#| fig.height: 5
-#| echo: false
-ggplot(Prob_error_mtests, aes(x=m, y = P_err_Bonf)) +
-  geom_point() +
-  labs(x = "Number of tests",
-       y = "P(at least 1 false positive)",
-       title = "Likelihood of a false positive with Bonferroni correction",
-       subtitle = "For m tests and using alpha = 0.05")
-```
-
-:::
-:::
-
-```{r}
-#| eval: false
-#| echo: false
-empl_lm <- lm(score ~ disability, data = employ)
-broom::tidy(anova(empl_lm))
-
-
-```
-
-
-
-## The Bonferroni Correction (2/2)
-
-::: columns
-::: {.column width="50%"}
-Pairwise t-tests without any _p_-value adjustments:
-```{r}
-pairwise.t.test(employ$score, 
-                employ$disability, 
-                p.adj="none") 
-```
-
-:::
-
-::: {.column width="50%"}
-Pairwise t-tests __[with Bonferroni _p_-value adjustments]{style="color:green"}__:
-```{r}
-pairwise.t.test(employ$score,  
-                employ$disability, 
-                p.adj="bonferroni")  
-```
-
-* Since there were 10 tests, all the _p_-values were multiplied by 10.
-* Are there any significant pairwise differences?
-:::
-:::
-
-
-
-## Tukey's Honest Significance Test (HSD)
-
-* Tukey's Honest Significance Test (HSD) controls the "family-wise probability" of making a Type I error using a much less conservative method than Bonferroni
-    * __It is specific to ANOVA__
-* In addition to adjusted _p_-values, it also calculates Tukey adjusted CI's for all pairwise differences
-* The function `TukeyHSD()` creates a __set of confidence intervals__ of the differences between means with the specified __family-wise probability of coverage__.
-
-::: columns
-::: {.column width="60%"}
-```{r}
-# need to run the model using `aov` instead of `lm`
-empl_aov <- aov(score ~ disability, data = employ) 
-
-TukeyHSD(x=empl_aov, conf.level = 0.95) 
-```
-
-:::
-::: {.column width="40%"}
-```{r}
+#| fig.width: 10
 #| fig.height: 8
-plot(TukeyHSD(x=empl_aov, 
-        conf.level = 0.95))
-```
-:::
-:::
-
-
-
-## There are many more multiple testing adjustment procedures
-
-::: columns
-::: {.column width="49%"}
-* Bonferroni is popular because it's so easy to apply
-* Tukey's HSD is usually used for ANOVA
-* Code below used Holm's adjustment
-
-```{r}
-# default is Holm's adjustments
-pairwise.t.test(employ$score, 
-                employ$disability) 
-```
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="49%"}
-* __False discovery rate (fdr)__ _p_-value adjustments are popular in omics, or whenever there are _many_ tests being run:
-
-```{r}
-pairwise.t.test(employ$score, 
-                employ$disability, 
-                p.adj="fdr") 
-```
-
-:::
-:::
-
-
-# Multiple testing
-
-_post-hoc testing vs. testing many outcomes_
-
-![](../img_slides/xkcd_significant2.png){fig-align="center"}
-
-<https://xkcd.com/882/>
-
-
-
-## Multiple testing: controlling the Type I error rate
-
-::: columns
-::: {.column width="40%"}
-* The multiple testing issue is not unique to ANOVA post-hoc testing.
-* It is also a concern when running separate tests for many related outcomes.
-* __[Beware of _p_-hacking!]{style="color:darkorange"}__
-
-__Problem:__
-
-* Although one test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), 
-* the [__overall Type I error rate will be much higher when running many tests simultaneously__]{style="color:darkorange"}.
-
-:::
-
-::: {.column width="2%"}
-:::
-::: {.column width="58%"}
-::: {style="font-size: 85%;"}
-
-\begin{align}
-P(\text{making an error}) = & \alpha\\
-P(\text{not making an error}) = & 1-\alpha\\
-P(\text{not making an error in m tests}) = & (1-\alpha)^m\\
-P(\text{making at least 1 error in m tests}) = & 1-(1-\alpha)^m
-\end{align}
-
-:::
-
-```{r}
-#| fig.height: 6.0
 #| echo: false
-Prob_error_mtests <- tibble(
-  m = 1:100,
-  P_error = 1-(1-.05)^m,
-  P_err_Bonf = 1-(1-.05/m)^m)
-
-ggplot(Prob_error_mtests, aes(x=m, y = P_error)) +
-  geom_point() +
-  labs(x = "Number of tests",
-       y = "P(at least 1 false positive)",
-       title = "Likelihood of a false positive",
-       subtitle = "For m tests and using alpha = 0.05")
+F_stat <- 2.6
+ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
+  # fun = df is specifying (d)ensity of (f) distribution
+  stat_function(fun = df, args = list(df1=4, df2=65), color = "#BF396F", size=3) +
+  geom_vline(xintercept = F_stat, color = "#3070BF", size = 2) +
+  geom_area(stat = "function", fun = df, args = list(df1=4, df2=65), fill = "#459B99", alpha =0.3, xlim = c(F_stat, 5)) +
+  annotate("text", x = 3.29, y = .2, label = "F-statistic", size=10) +
+  annotate("text", x = 3.18, y = .01, label = "p-value", size=10)
 ```
 
 :::
 :::
 
-## ANOVA Summary
 
-::: {style="font-size: 90%;"}
+# Learning Objective 
+
+## Reference: Steps in a Hypothesis Test
+
+1.  Check the [**assumptions**]{style="color:#3070BF"}
+
+2.  Set the [**level of significance**]{style="color:#3070BF"} $\alpha$
+
+3.  Specify the [**null**]{style="color:#3070BF"} ( $H_0$ ) and [**alternative**]{style="color:#3070BF"} ( $H_A$ ) [**hypotheses**]{style="color:#3070BF"}
+
+    1.  In symbols
+    2.  In words
+    3.  ~~Alternative: one- or two-sided?~~
+
+4.  Calculate the [**test statistic**]{style="color:#3070BF"}.
+
+5.  Calculate the [**p-value**]{style="color:#3070BF"} based on the observed test statistic and its sampling distribution
+
+6.  Write a [**conclusion**]{style="color:#3070BF"} to the hypothesis test
+
+    1.  Do we reject or fail to reject $H_0$?
+    2.  Write a conclusion in the context of the problem
+
+## Step 1: Check assumptions
+
+The sampling distribution is an __F-distribution__, if...
+
+- Sample sizes in each group group are large (each $n \ge 30$) 
+    * OR the data are relatively normally distributed in each group
+- Variability is "similar" in all group groups:
+    * Is the within group variability about the same for each group?
+    * As a rough rule of thumb, this condition is _violated if the standard deviation of one group is more than double the standard deviation of another group_
+
+## Step 1: Check assumptions
+
+- Use R to check both assumptions in our example
+
+```{r}
+genotype_groups <- famuss %>% 
+  group_by(actn3.r577x) %>% 
+  summarise(count = n(), 
+            SD = sd(ndrm.ch))
+genotype_groups
+```
+
+- Counts in each group are greater than 30!
+
+```{r}
+max(genotype_groups$SD) / min(genotype_groups$SD)
+```
+
+- Variability in one group vs. another is no more than 1.2 times!
+
+## Step 3: Specify Hypotheses
+
+::::::::::: columns
+:::::: column
+::::: blue
+::: blue-ttl
+General hypotheses
+:::
+
+::: blue-cont
+To test for a difference in means across _k_ groups:
 
 \begin{align}
 H_0 &: \mu_1 = \mu_2 = ... = \mu_k\\
 \text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
 \end{align}
+:::
+:::::
+::::::
 
+:::::: column
+::::: pink
+::: pink-ttl
+Hypotheses test for example
 :::
 
-ANOVA table in R:
-
-::: {style="font-size: 90%;"}
-```{r}
-lm(score ~ disability, data = employ) %>% anova()
-```
+::: pink-cont
+\begin{align}
+H_0 &: \mu_{CC} = \mu_{CT} = \mu_{TT}\\
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
+\end{align}
 :::
+:::::
+::::::
+:::::::::::
+
+## Step 4-5: Find the test statistic and p-value
+
+- Our test statistic is an F-statistic
+    - F-statistic: measurement of the ratio of variability between groups to variability within groups
+
+ 
+
+- Our F-statistic follows an F-distribution
+    - Which is why we cannot use something like the Z-distribution nor T-distribution
+    
+ 
+
+- So we'll need to find the F-statistic and its corresponding p-value using an F-distribution
+    
+
+## Step 4-5: Find the test statistic and p-value
+
+* There are several options to run an ANOVA model (aka calculate F-statistic and p-value)
+* Two most common are `lm` and `aov`
+    * `lm` = linear model; will be using frequently in BSTA 512
 
 ::: columns
-::: {.column width="50%"}
-
-ANOVA table
-
-![](../img_slides/anova_table.png){fig-align="center"}
-
-Post-hoc testing
+::: column
+```{r}
+lm(ndrm.ch ~ actn3.r577x, 
+    data = famuss) %>% anova()
+```
 :::
 
-::: {.column width="50%"}
-F-distribution & p-value
-
+::: column
 ```{r}
-#| fig.width: 5
-#| fig.height: 3
-#| echo: false
-F_stat <- 2.86158
-
-ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
-  geom_vline(xintercept = F_stat, color = "red") +
-  # fun = df is specifying (d)ensity of (f) distribution
-  stat_function(fun = df, args = list(df1=4, df2=65), color = "cornflowerblue") +
-  geom_area(stat = "function", fun = df, args = list(df1=4, df2=65), fill = "red", alpha =0.3, xlim = c(F_stat, 5)) +
-  annotate("text", x = 3.5, y = .1, label = "p-value", size=6) 
+aov(ndrm.ch ~ actn3.r577x, 
+    data = famuss) %>% summary()
 ```
 :::
 :::
 
+## Step 6: Conclusion
 
-## What's next?
+\begin{align}
+H_0 &: \mu_{CC} = \mu_{CT} = \mu_{TT}\\
+\text{vs. } H_A&: \text{At least one pair} \mu_i \neq \mu_j \text{ for } i \neq j
+\end{align}
 
-<br>
-<br>
 
-![](../img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+-   Recall the $p$-value = `r round(0.04022, 4)`
+-   Use $\alpha$ = 0.05
+-   Do we reject or fail to reject $H_0$?
+
+__Conclusion statement__:
+
+* There is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( $p$-value =`r round(0.04022, 4)`)
+
 
 
 

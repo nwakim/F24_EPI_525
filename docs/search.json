@@ -8173,28 +8173,28 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#hypotheses",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Hypotheses",
-    "text": "Hypotheses\nTo test for a difference in means across k groups:\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nHypothetical examples:\nIn which set (A or B) do you believe the evidence will be stronger that at least one population differs from the others?"
+    "text": "Hypotheses\nTo test for a difference in means across k groups:\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nHypotheses for example\n\\[\\begin{align}\nH_0 &: \\mu_{CC} = \\mu_{CT} = \\mu_{TT}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#comparing-means",
     "href": "lessons/17_ANOVA/17_ANOVA.html#comparing-means",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Comparing means",
-    "text": "Comparing means\nWhether or not two means are significantly different depends on:\n\nHow far apart the means are\nHow much variability there is within each group\n\nQuestions:\n\nHow to measure variability between groups?\nHow to measure variability within groups?\nHow to compare the two measures of variability?\nHow to determine significance?"
+    "text": "Comparing means\n\n\nWhether or not two means are significantly different depends on:\n\nHow far apart the means are\nHow much variability there is within each group\n\nQuestions:\n\nHow to measure variability between groups?\nHow to measure variability within groups?\nHow to compare the two measures of variability?\nHow to determine significance?"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-in-base-r",
     "href": "lessons/17_ANOVA/17_ANOVA.html#anova-in-base-r",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "ANOVA in base R",
-    "text": "ANOVA in base R\n\nThere are several options to run an ANOVA model in R\nTwo most common are lm and aov\n\nlm = linear model; will be using frequently in BSTA 512\n\n\n\nlm(score ~ disability, data = employ) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\naov(score ~ disability, data = employ) %&gt;% summary()\n\n            Df Sum Sq Mean Sq F value Pr(&gt;F)  \ndisability   4  30.52   7.630   2.862 0.0301 *\nResiduals   65 173.32   2.666                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
+    "text": "ANOVA in base R\n\nThere are several options to run an ANOVA model in R\nTwo most common are lm and aov\n\nlm = linear model; will be using frequently in BSTA 512\n\n\n\nlm(ndrm.ch ~ actn3.r577x, data = famuss) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: ndrm.ch\n             Df Sum Sq Mean Sq F value  Pr(&gt;F)  \nactn3.r577x   2   7043  3521.6  3.2308 0.04022 *\nResiduals   592 645293  1090.0                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\naov(ndrm.ch ~ actn3.r577x, data = famuss) %&gt;% summary()\n\n             Df Sum Sq Mean Sq F value Pr(&gt;F)  \nactn3.r577x   2   7043    3522   3.231 0.0402 *\nResiduals   592 645293    1090                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-tables",
     "href": "lessons/17_ANOVA/17_ANOVA.html#anova-tables",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "ANOVA tables",
-    "text": "ANOVA tables\nDisability example ANOVA table from R:\n\n\nlm(score ~ disability, data = employ) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nGeneric ANOVA table:"
+    "text": "ANOVA tables\nDisability example ANOVA table from R:\n\n\nlm(ndrm.ch ~ actn3.r577x, data = famuss) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: ndrm.ch\n             Df Sum Sq Mean Sq F value  Pr(&gt;F)  \nactn3.r577x   2   7043  3521.6  3.2308 0.04022 *\nResiduals   592 645293  1090.0                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nGeneric ANOVA table:"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-analysis-of-variance",
@@ -8229,7 +8229,7 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#calculate-total-sums-of-squares",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Calculate Total Sums of Squares",
-    "text": "Calculate Total Sums of Squares\nTotal Sums of Squares:\n\\[SST = \\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(x_{ij} -\\bar{x})^2 = (N-1)s^2\\]\n\n\n\nwhere\n\n\\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and\n\\(s^2\\) is the grand standard deviation of all the observations\n\n\n\nTotal sample size \\(N\\):\n\n(Ns &lt;- employ %&gt;% group_by(disability) %&gt;% count())\n\n# A tibble: 5 × 2\n# Groups:   disability [5]\n  disability     n\n  &lt;fct&gt;      &lt;int&gt;\n1 none          14\n2 amputation    14\n3 crutches      14\n4 hearing       14\n5 wheelchair    14\n\n\n\\(SST\\):\n\n(SST &lt;- (sum(Ns$n) - 1) * sd(employ$score)^2)\n\n[1] 203.8429"
+    "text": "Calculate Total Sums of Squares\nTotal Sums of Squares:\n\\[SST = \\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(x_{ij} -\\bar{x})^2 = (N-1)s^2\\]\n\n\n\nwhere\n\n\\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and\n\\(s^2\\) is the grand standard deviation of all the observations\n\n\n\nTotal sample size \\(N\\):\n\n(Ns &lt;- famuss %&gt;% group_by(actn3.r577x) %&gt;% count())\n\n# A tibble: 3 × 2\n# Groups:   actn3.r577x [3]\n  actn3.r577x     n\n  &lt;fct&gt;       &lt;int&gt;\n1 CC            173\n2 CT            261\n3 TT            161\n\n\n\\(SST\\):\n\n(SST &lt;- (sum(Ns$n) - 1) * sd(famuss$ndrm.ch)^2)\n\n[1] 652335.8"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-analysis-of-variance-2",
@@ -8250,7 +8250,7 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#calculate-sums-of-squares-due-to-groups-between-groups",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Calculate Sums of Squares due to Groups (“between” groups)",
-    "text": "Calculate Sums of Squares due to Groups (“between” groups)\n\\[SSG = \\sum_{i = 1}^k n_i(\\bar{x}_{i}-\\bar{x})^2\\]\n\n\n\n\n\n\n\n\nCalculate means \\(\\bar{x}_i\\) for each group:\n\nxbar_groups &lt;- employ %&gt;% \n  group_by(disability) %&gt;% \n  summarise(mean = mean(score))\nxbar_groups\n\n# A tibble: 5 × 2\n  disability  mean\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        4.9 \n2 amputation  4.43\n3 crutches    5.92\n4 hearing     4.05\n5 wheelchair  5.34\n\n\nCalculate \\(SSG\\):\n\n(SSG &lt;- sum(Ns$n *\n  (xbar_groups$mean - mean(employ$score))^2))\n\n[1] 30.52143"
+    "text": "Calculate Sums of Squares due to Groups (“between” groups)\n\\[SSG = \\sum_{i = 1}^k n_i(\\bar{x}_{i}-\\bar{x})^2\\]\n\n\n\n\n\n\n\n\nCalculate means \\(\\bar{x}_i\\) for each group:\n\nxbar_groups &lt;- famuss %&gt;% \n  group_by(actn3.r577x) %&gt;% \n  summarise(mean = mean(ndrm.ch))\nxbar_groups\n\n# A tibble: 3 × 2\n  actn3.r577x  mean\n  &lt;fct&gt;       &lt;dbl&gt;\n1 CC           48.9\n2 CT           53.2\n3 TT           58.1\n\n\nCalculate \\(SSG\\):\n\n(SSG &lt;- sum(Ns$n *\n  (xbar_groups$mean - mean(famuss$ndrm.ch))^2))\n\n[1] 7043.238"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-analysis-of-variance-3",
@@ -8264,77 +8264,77 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#sums-of-squares-error-visually-within-groups",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Sums of Squares Error Visually (within groups)",
-    "text": "Sums of Squares Error Visually (within groups)\n\n\n\n\n\n\n\n\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2 = \\sum_{i = 1}^k(n_i-1)s_{i}^2\\] where \\(s_{i}\\) is the standard deviation of the \\(i^{th}\\) group\n\nThis is the sum of the squared differences between each observed \\(x_{ij}\\) value and its group mean \\(\\bar{x}_{i}\\).\nThat is, it is the deviation of the \\(x_{ij}\\)’s from the predicted score by group.\nAlso called the residual sums of squares, or \\(SS_{residual}.\\)"
+    "text": "Sums of Squares Error Visually (within groups)\n\n\n\n\n\n\n\n\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2 = \\sum_{i = 1}^k(n_i-1)s_{i}^2\\] where \\(s_{i}\\) is the standard deviation of the \\(i^{th}\\) group\n\nThis is the sum of the squared differences between each observed \\(x_{ij}\\) value and its group mean \\(\\bar{x}_{i}\\).\nThat is, it is the deviation of the \\(x_{ij}\\)’s from the predicted ndrm.ch by group.\nAlso called the residual sums of squares, or \\(SS_{residual}.\\)"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#calculate-sums-of-squares-error-within-groups",
     "href": "lessons/17_ANOVA/17_ANOVA.html#calculate-sums-of-squares-error-within-groups",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Calculate Sums of Squares Error (within groups)",
-    "text": "Calculate Sums of Squares Error (within groups)\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2 = \\sum_{i = 1}^k(n_i-1)s_{i}^2\\] where \\(s_{i}\\) is the standard deviation of the \\(i^{th}\\) group\n\n\n\n\n\n\n\n\nCalculate sd’s \\(s_i\\) for each group:\n\nsd_groups &lt;- employ %&gt;% \n  group_by(disability) %&gt;% \n  summarise(SD = sd(score))\nsd_groups\n\n# A tibble: 5 × 2\n  disability    SD\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        1.79\n2 amputation  1.59\n3 crutches    1.48\n4 hearing     1.53\n5 wheelchair  1.75\n\n\nCalculate \\(SSE\\):\n\n(SSE &lt;- sum(\n  (Ns$n-1)*sd_groups$SD^2))\n\n[1] 173.3214"
+    "text": "Calculate Sums of Squares Error (within groups)\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2 = \\sum_{i = 1}^k(n_i-1)s_{i}^2\\] where \\(s_{i}\\) is the standard deviation of the \\(i^{th}\\) group\n\n\n\n\n\n\n\n\nCalculate sd’s \\(s_i\\) for each group:\n\nsd_groups &lt;- famuss %&gt;% \n  group_by(actn3.r577x) %&gt;% \n  summarise(SD = sd(ndrm.ch))\nsd_groups\n\n# A tibble: 3 × 2\n  actn3.r577x    SD\n  &lt;fct&gt;       &lt;dbl&gt;\n1 CC           30.0\n2 CT           33.2\n3 TT           35.7\n\n\nCalculate \\(SSE\\):\n\n(SSE &lt;- sum(\n  (Ns$n-1)*sd_groups$SD^2))\n\n[1] 645292.6"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#verify-sst-ssg-sse",
     "href": "lessons/17_ANOVA/17_ANOVA.html#verify-sst-ssg-sse",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Verify SST = SSG + SSE",
-    "text": "Verify SST = SSG + SSE\nANOVA compares the variability between groups to the variability within groups\n\n\n\n\n\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(x_{ij} -\\bar{x})^2 \\ \\ = \\ \\ n_i\\sum_{i = 1}^k(\\bar{x}_{i}-\\bar{x})^2 \\ \\\n+ \\ \\ \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2\\]\n\\[(N-1)s^2 \\ \\\n= \\ \\sum_{i = 1}^k n_i(\\bar{x}_{i}-\\bar{x})^2 \\ \\\n+ \\ \\ \\sum_{i = 1}^k(n_i-1)s_{i}^2\\]\n\n\n\n\n\n\n\n\nSST\n\n[1] 203.8429\n\n\n\n\nSSG + SSE\n\n[1] 203.8429"
+    "text": "Verify SST = SSG + SSE\nANOVA compares the variability between groups to the variability within groups\n\n\n\n\n\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(x_{ij} -\\bar{x})^2 \\ \\ = \\ \\ n_i\\sum_{i = 1}^k(\\bar{x}_{i}-\\bar{x})^2 \\ \\\n+ \\ \\ \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2\\]\n\\[(N-1)s^2 \\ \\\n= \\ \\sum_{i = 1}^k n_i(\\bar{x}_{i}-\\bar{x})^2 \\ \\\n+ \\ \\ \\sum_{i = 1}^k(n_i-1)s_{i}^2\\]\n\n\n\n\n\n\n\n\nSST\n\n[1] 652335.8\n\n\n\n\nSSG + SSE\n\n[1] 652335.8"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-table",
     "href": "lessons/17_ANOVA/17_ANOVA.html#anova-table",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "ANOVA table",
-    "text": "ANOVA table"
+    "text": "ANOVA table\n\nOkay, so how do we use all these types of variability to run a test?\nHow do we determine, statistically, if the groups have different means or not?\n\n\n\nAnswer: We use the F-statistic in a hypothesis test! ## Hypotheses\n\nTo test for a difference in means across k groups:\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nHypotheses for example\n\\[\\begin{align}\nH_0 &: \\mu_{CC} = \\mu_{CT} = \\mu_{TT}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#thinking-about-the-f-statistic",
     "href": "lessons/17_ANOVA/17_ANOVA.html#thinking-about-the-f-statistic",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Thinking about the F-statistic",
-    "text": "Thinking about the F-statistic\n\n\nIf the groups are actually different, then which of these is more accurate?\n\nThe variability between groups should be higher than the variability within groups\nThe variability within groups should be higher than the variability between groups\n\n\nIf there really is a difference between the groups, we would expect the F-statistic to be which of these:\n\nHigher than we would observe by random chance\nLower than we would observe by random chance\n\n\n\n\n\n\\[F = \\frac{MSG}{MSE}\\]"
+    "text": "Thinking about the F-statistic\n\n\nIf the groups are actually different, then which of these is more accurate?\n\nThe variability between groups should be higher than the variability within groups\nThe variability within groups should be higher than the variability between groups\n\n\n\n\nIf there really is a difference between the groups, we would expect the F-statistic to be which of these:\n\nHigher than we would observe by random chance\nLower than we would observe by random chance"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-in-base-r-1",
     "href": "lessons/17_ANOVA/17_ANOVA.html#anova-in-base-r-1",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "ANOVA in base R",
-    "text": "ANOVA in base R\n\n# Note that I'm saving the tidy anova table\n# Will be pulling p-value from this on future slide\n\nempl_lm &lt;- lm(score ~ disability, data = employ) %&gt;% \n  anova() %&gt;% \n  tidy()\n\nempl_lm %&gt;% gt()\n\n\n\n\n\n  \n    \n      term\n      df\n      sumsq\n      meansq\n      statistic\n      p.value\n    \n  \n  \n    disability\n4\n30.52143\n7.630357\n2.86158\n0.03012686\n    Residuals\n65\n173.32143\n2.666484\nNA\nNA\n  \n  \n  \n\n\n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
+    "text": "ANOVA in base R\n\n# Note that I'm saving the tidy anova table\n# Will be pulling p-value from this on future slide\n\nempl_lm &lt;- lm(ndrm.ch ~ actn3.r577x, data = famuss) %&gt;% \n  anova() %&gt;% \n  tidy()\n\nempl_lm %&gt;% gt()\n\n\n\n\n\n  \n    \n      term\n      df\n      sumsq\n      meansq\n      statistic\n      p.value\n    \n  \n  \n    actn3.r577x\n2\n7043.238\n3521.619\n3.23078\n0.04022462\n    Residuals\n592\n645292.564\n1090.021\nNA\nNA\n  \n  \n  \n\n\n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#conclusion-to-hypothesis-test",
     "href": "lessons/17_ANOVA/17_ANOVA.html#conclusion-to-hypothesis-test",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Conclusion to hypothesis test",
-    "text": "Conclusion to hypothesis test\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\n\n\nempl_lm  # tidy anova output\n\n# A tibble: 2 × 6\n  term          df sumsq meansq statistic p.value\n  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 disability     4  30.5   7.63      2.86  0.0301\n2 Residuals     65 173.    2.67     NA    NA     \n\n# Note that this is a vector:\nempl_lm$p.value\n\n[1] 0.03012686         NA\n\n\nPull the p-value using base R:\n\nround(empl_lm$p.value[1],2)\n\n[1] 0.03\n\n\nPull the p-value using tidyverse:\n\nempl_lm %&gt;% \n  filter(term == \"disability\") %&gt;% \n  pull(p.value) %&gt;% \n  round(2)\n\n[1] 0.03\n\n\n\n\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nThere is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( \\(p\\)-value = 0.03)."
+    "text": "Conclusion to hypothesis test\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nUse \\(\\alpha\\) = 0.05\nP-value is ___\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nThere is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( \\(p\\)-value = ____."
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#conditions-for-anova",
     "href": "lessons/17_ANOVA/17_ANOVA.html#conditions-for-anova",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Conditions for ANOVA",
-    "text": "Conditions for ANOVA\nIF ALL of the following conditions hold:\n\nThe null hypothesis is true\nSample sizes in each group group are large (each \\(n \\ge 30\\))\n\nOR the data are relatively normally distributed in each group\n\n\n\n\n\nVariability is “similar” in all group groups:\n\nIs the within group variability about the same for each group?\nAs a rough rule of thumb, this condition is violated if the standard deviation of one group is more than double the standard deviation of another group\n\n\n\n\n\nChecking the equal variance condition:\n\nsd_groups # previously defined\n\n# A tibble: 5 × 2\n  disability    SD\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        1.79\n2 amputation  1.59\n3 crutches    1.48\n4 hearing     1.53\n5 wheelchair  1.75\n\nmax(sd_groups$SD) / min(sd_groups$SD)\n\n[1] 1.210425\n\n\n\n\nTHEN the sampling distribution of the F-statistic is an F-distribution"
+    "text": "Conditions for ANOVA\nIF ALL of the following conditions hold:\n\nThe null hypothesis is true\nSample sizes in each group group are large (each \\(n \\ge 30\\))\n\nOR the data are relatively normally distributed in each group\n\n\n\n\n\nVariability is “similar” in all group groups:\n\nIs the within group variability about the same for each group?\nAs a rough rule of thumb, this condition is violated if the standard deviation of one group is more than double the standard deviation of another group\n\n\n\n\n\nChecking the equal variance condition:\n\nsd_groups &lt;- famuss %&gt;% \n  group_by(actn3.r577x) %&gt;% \n  summarise(SD = sd(ndrm.ch))\nsd_groups\n\n# A tibble: 3 × 2\n  actn3.r577x    SD\n  &lt;fct&gt;       &lt;dbl&gt;\n1 CC           30.0\n2 CT           33.2\n3 TT           35.7\n\nmax(sd_groups$SD) / min(sd_groups$SD)\n\n[1] 1.191455\n\n\n\n\nTHEN the sampling distribution of the F-statistic is an F-distribution"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#testing-variances-condition-3",
     "href": "lessons/17_ANOVA/17_ANOVA.html#testing-variances-condition-3",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Testing variances (Condition 3)",
-    "text": "Testing variances (Condition 3)\nBartlett’s test for equal variances\n\n\\(H_0:\\) population variances of group levels are equal\n\\(H_A:\\) population variances of group levels are NOT equal\n\nNote: \\(H_A\\) is same as saying that at least one of the group levels has a different variance\n\n\n\n\n\n\nCaution\n\n\n\nBartlett’s test assumes the data in each group are normally distributed.\nDo not use if data do not satisfy the normality condition.\n\n\n\n\n\nbartlett.test(score ~ disability, data = employ)\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  score by disability\nBartlett's K-squared = 0.7016, df = 4, p-value = 0.9511\n\n\n\n\n\n\n\n\nTip\n\n\nLevene’s test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/"
+    "text": "Testing variances (Condition 3)\nBartlett’s test for equal variances\n\n\\(H_0:\\) population variances of group levels are equal\n\\(H_A:\\) population variances of group levels are NOT equal\n\nNote: \\(H_A\\) is same as saying that at least one of the group levels has a different variance\n\n\n\n\n\n\nCaution\n\n\n\nBartlett’s test assumes the data in each group are normally distributed.\nDo not use if data do not satisfy the normality condition.\n\n\n\n\n\nbartlett.test(ndrm.ch ~ actn3.r577x, data = famuss)\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  ndrm.ch by actn3.r577x\nBartlett's K-squared = 5.1106, df = 2, p-value = 0.07767\n\n\n\n\n\n\n\n\nTip\n\n\nLevene’s test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/\n\n\n\n\n\nLesson 17 Slides"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#the-f-distribution",
     "href": "lessons/17_ANOVA/17_ANOVA.html#the-f-distribution",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "The F-distribution",
-    "text": "The F-distribution\n\nThe F-distribution is skewed right.\nThe F-distribution has two different degrees of freedom:\n\none for the numerator of the ratio (k – 1) and\none for the denominator (N – k)\n\n\\(p\\)-value\n\nis always the upper tail\n(the area as extreme or more extreme)\n\n\n\n\n\n\n\n\n\n\n\nempl_lm %&gt;% gt()\n\n\n\n\n\n  \n    \n      term\n      df\n      sumsq\n      meansq\n      statistic\n      p.value\n    \n  \n  \n    disability\n4\n30.52143\n7.630357\n2.86158\n0.03012686\n    Residuals\n65\n173.32143\n2.666484\nNA\nNA\n  \n  \n  \n\n\n\n# p-value using F-distribution\n\npf(2.86158, df1=5-1, df2=70-5, \n   lower.tail = FALSE)\n\n[1] 0.03012688"
+    "text": "The F-distribution\n\n\n\nThe F-distribution is skewed right\nThe F-distribution has two different degrees of freedom:\n\none for the numerator of the ratio (k – 1) and\none for the denominator (N – k)\n\n\\(p\\)-value\n\n\\(P(F &gt; F_{stat})\\)\nis always the upper tail\n(the area as extreme or more extreme)"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#which-groups-are-statistically-different",
     "href": "lessons/17_ANOVA/17_ANOVA.html#which-groups-are-statistically-different",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Which groups are statistically different?",
-    "text": "Which groups are statistically different?\n\n\n\n\nSo far we’ve only determined that at least one of the groups is different from the others,\n\nbut we don’t know which.\n\n\n\n\nWhat’s your guess?"
+    "text": "Which groups are statistically different?\n\n\n\n\nSo far we’ve only determined that at least one of the groups is different from the others,\n\nbut we don’t know which.\n\n\n\n\nWhat’s your guess?\n\n\n\n\n\n\n\n\n\n\n\nLesson 17 Slides"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#post-hoc-testing-pairwise-t-tests",
@@ -8355,21 +8355,21 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#the-bonferroni-correction-22",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "The Bonferroni Correction (2/2)",
-    "text": "The Bonferroni Correction (2/2)\n\n\nPairwise t-tests without any p-value adjustments:\n\npairwise.t.test(employ$score, \n                employ$disability, \n                p.adj=\"none\") \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none   amputation crutches hearing\namputation 0.4477 -          -        -      \ncrutches   0.1028 0.0184     -        -      \nhearing    0.1732 0.5418     0.0035   -      \nwheelchair 0.4756 0.1433     0.3520   0.0401 \n\nP value adjustment method: none \n\n\n\nPairwise t-tests with Bonferroni p-value adjustments:\n\npairwise.t.test(employ$score,  \n                employ$disability, \n                p.adj=\"bonferroni\")  \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 1.000 -          -        -      \ncrutches   1.000 0.184      -        -      \nhearing    1.000 1.000      0.035    -      \nwheelchair 1.000 1.000      1.000    0.401  \n\nP value adjustment method: bonferroni \n\n\n\nSince there were 10 tests, all the p-values were multiplied by 10.\nAre there any significant pairwise differences?"
+    "text": "The Bonferroni Correction (2/2)\n\n\nPairwise t-tests without any p-value adjustments:\n\npairwise.t.test(famuss$ndrm.ch, \n                famuss$actn3.r577x, \n                p.adj=\"none\") \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  famuss$ndrm.ch and famuss$actn3.r577x \n\n   CC    CT   \nCT 0.179 -    \nTT 0.011 0.144\n\nP value adjustment method: none \n\n\n\nPairwise t-tests with Bonferroni p-value adjustments:\n\npairwise.t.test(famuss$ndrm.ch,  \n                famuss$actn3.r577x, \n                p.adj=\"bonferroni\")  \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  famuss$ndrm.ch and famuss$actn3.r577x \n\n   CC    CT   \nCT 0.537 -    \nTT 0.034 0.433\n\nP value adjustment method: bonferroni \n\n\n\nSince there were 10 tests, all the p-values were multiplied by 10.\nAre there any significant pairwise differences?"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#tukeys-honest-significance-test-hsd",
     "href": "lessons/17_ANOVA/17_ANOVA.html#tukeys-honest-significance-test-hsd",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "Tukey’s Honest Significance Test (HSD)",
-    "text": "Tukey’s Honest Significance Test (HSD)\n\nTukey’s Honest Significance Test (HSD) controls the “family-wise probability” of making a Type I error using a much less conservative method than Bonferroni\n\nIt is specific to ANOVA\n\nIn addition to adjusted p-values, it also calculates Tukey adjusted CI’s for all pairwise differences\nThe function TukeyHSD() creates a set of confidence intervals of the differences between means with the specified family-wise probability of coverage.\n\n\n\n\n# need to run the model using `aov` instead of `lm`\nempl_aov &lt;- aov(score ~ disability, data = employ) \n\nTukeyHSD(x=empl_aov, conf.level = 0.95) \n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = score ~ disability, data = employ)\n\n$disability\n                            diff        lwr        upr     p adj\namputation-none       -0.4714286 -2.2031613  1.2603042 0.9399911\ncrutches-none          1.0214286 -0.7103042  2.7531613 0.4686233\nhearing-none          -0.8500000 -2.5817328  0.8817328 0.6442517\nwheelchair-none        0.4428571 -1.2888756  2.1745899 0.9517374\ncrutches-amputation    1.4928571 -0.2388756  3.2245899 0.1232819\nhearing-amputation    -0.3785714 -2.1103042  1.3531613 0.9724743\nwheelchair-amputation  0.9142857 -0.8174470  2.6460185 0.5781165\nhearing-crutches      -1.8714286 -3.6031613 -0.1396958 0.0277842\nwheelchair-crutches   -0.5785714 -2.3103042  1.1531613 0.8812293\nwheelchair-hearing     1.2928571 -0.4388756  3.0245899 0.2348141\n\n\n\n\nplot(TukeyHSD(x=empl_aov, \n        conf.level = 0.95))"
+    "text": "Tukey’s Honest Significance Test (HSD)\n\nTukey’s Honest Significance Test (HSD) controls the “family-wise probability” of making a Type I error using a much less conservative method than Bonferroni\n\nIt is specific to ANOVA\n\nIn addition to adjusted p-values, it also calculates Tukey adjusted CI’s for all pairwise differences\nThe function TukeyHSD() creates a set of confidence intervals of the differences between means with the specified family-wise probability of coverage.\n\n\n\n\n# need to run the model using `aov` instead of `lm`\nempl_aov &lt;- aov(ndrm.ch ~ actn3.r577x, data = famuss) \n\nTukeyHSD(x=empl_aov, conf.level = 0.95) \n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = ndrm.ch ~ actn3.r577x, data = famuss)\n\n$actn3.r577x\n          diff        lwr      upr     p adj\nCT-CC 4.354822 -3.2504838 11.96013 0.3706250\nTT-CC 9.189631  0.6948462 17.68442 0.0302867\nTT-CT 4.834809 -2.9390775 12.60870 0.3104223\n\n\n\n\nplot(TukeyHSD(x=empl_aov, \n        conf.level = 0.95))"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#there-are-many-more-multiple-testing-adjustment-procedures",
     "href": "lessons/17_ANOVA/17_ANOVA.html#there-are-many-more-multiple-testing-adjustment-procedures",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "There are many more multiple testing adjustment procedures",
-    "text": "There are many more multiple testing adjustment procedures\n\n\n\nBonferroni is popular because it’s so easy to apply\nTukey’s HSD is usually used for ANOVA\nCode below used Holm’s adjustment\n\n\n# default is Holm's adjustments\npairwise.t.test(employ$score, \n                employ$disability) \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 1.000 -          -        -      \ncrutches   0.719 0.165      -        -      \nhearing    0.866 1.000      0.035    -      \nwheelchair 1.000 0.860      1.000    0.321  \n\nP value adjustment method: holm \n\n\n\n\n\n\nFalse discovery rate (fdr) p-value adjustments are popular in omics, or whenever there are many tests being run:\n\n\npairwise.t.test(employ$score, \n                employ$disability, \n                p.adj=\"fdr\") \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 0.528 -          -        -      \ncrutches   0.257 0.092      -        -      \nhearing    0.289 0.542      0.035    -      \nwheelchair 0.528 0.287      0.503    0.134  \n\nP value adjustment method: fdr"
+    "text": "There are many more multiple testing adjustment procedures\n\n\n\nBonferroni is popular because it’s so easy to apply\nTukey’s HSD is usually used for ANOVA\nCode below used Holm’s adjustment\n\n\n# default is Holm's adjustments\npairwise.t.test(famuss$ndrm.ch, \n                famuss$actn3.r577x) \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  famuss$ndrm.ch and famuss$actn3.r577x \n\n   CC    CT   \nCT 0.289 -    \nTT 0.034 0.289\n\nP value adjustment method: holm \n\n\n\n\n\n\nFalse discovery rate (fdr) p-value adjustments are popular in omics, or whenever there are many tests being run:\n\n\npairwise.t.test(famuss$ndrm.ch, \n                famuss$actn3.r577x, \n                p.adj=\"fdr\") \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  famuss$ndrm.ch and famuss$actn3.r577x \n\n   CC    CT   \nCT 0.179 -    \nTT 0.034 0.179\n\nP value adjustment method: fdr"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#multiple-testing-controlling-the-type-i-error-rate",
@@ -8383,7 +8383,7 @@
     "href": "lessons/17_ANOVA/17_ANOVA.html#anova-summary",
     "title": "Lesson 17: Comparing Means with ANOVA",
     "section": "ANOVA Summary",
-    "text": "ANOVA Summary\n\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nANOVA table in R:\n\n\nlm(score ~ disability, data = employ) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\nANOVA table\n\n\n\n\n\nPost-hoc testing\n\nF-distribution & p-value"
+    "text": "ANOVA Summary\n\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nANOVA table in R:\n\n\nlm(ndrm.ch ~ actn3.r577x, data = famuss) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: ndrm.ch\n             Df Sum Sq Mean Sq F value  Pr(&gt;F)  \nactn3.r577x   2   7043  3521.6  3.2308 0.04022 *\nResiduals   592 645293  1090.0                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\nANOVA table\n\n\n\n\n\nPost-hoc testing\n\nF-distribution & p-value"
   },
   {
     "objectID": "lessons/17_ANOVA/17_ANOVA.html#whats-next",
@@ -8402,7 +8402,7 @@
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#where-are-we",
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#where-are-we",
-    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "title": "Lesson 16: Chi-squared test",
     "section": "Where are we?",
     "text": "Where are we?"
   },
@@ -8425,7 +8425,7 @@
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#is-there-an-association-between-depression-and-being-physically-active",
     "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
     "section": "Is there an association between depression and being physically active?",
-    "text": "Is there an association between depression and being physically active?\n\nData sampled from the NHANES R package:\n\nAmerican National Health and Nutrition Examination Surveys\nCollected 2009-2012 by US National Center for Health Statistics (NCHS)\nNHANES dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects\n\nTreat it as a simple random sample from the US population (for pedagogical purposes)\n\n\nDepressed\n\nSelf-reported number of days where participant felt down, depressed or hopeless.\nOne of None, Several, or Most (more than half the days).\nReported for participants aged 18 years or older.\n\nPhysActive\n\nParticipant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No).\nReported for participants 12 years or older."
+    "text": "Is there an association between depression and being physically active?"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#hypotheses-for-a-chi-squared-test-of-association-independence",
@@ -8446,21 +8446,21 @@
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#h_0-variables-are-independent",
     "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
     "section": "\\(H_0\\): Variables are Independent",
-    "text": "\\(H_0\\): Variables are Independent\n\n\n\nRecall from Chapter 2, that events \\(A\\) and \\(B\\) are independent if and only if\n\n\\[P(A~and~B)=P(A)P(B)\\]\n\nIf depression and being physically active are independent variables, then theoretically this condition needs to hold for every combination of levels, i.e.\n\n\n\\[\\begin{align}\nP(None~and~Yes) &= P(None)P(Yes)\\\\\nP(None~and~No) &= P(None)P(No)\\\\\nP(Several~and~Yes) &= P(Several)P(Yes)\\\\\nP(Several~and~No) &= P(Several)P(No)\\\\\nP(Most~and~Yes) &= P(Most)P(Yes)\\\\\nP(Most~and~No) &= P(Most)P(No)\n\\end{align}\\]\n\n\n\n\n\n\n\n\n\n\n\\[\\begin{align}\nP(None~and~Yes) &= \\frac{314}{400}\\cdot\\frac{226}{400}\\\\\n& ...\\\\\nP(Most~and~No) &= \\frac{28}{400}\\cdot\\frac{174}{400}\n\\end{align}\\]\n\nWith these probabilities, for each cell of the table we calculate the expected counts for each cell under the \\(H_0\\) hypothesis that the variables are independent"
+    "text": "\\(H_0\\): Variables are Independent\n\n\n\nRecall from Chapter 2, that events \\(A\\) and \\(B\\) are independent if and only if\n\n\\[P(A \\cap B)=P(A)P(B)\\]\n\nIf depression and being physically active are independent variables, then theoretically this condition needs to hold for every combination of levels, i.e.\n\n\n\\[\\begin{align}\nP(None~and~Yes) &= P(None)P(Yes)\\\\\nP(None~and~No) &= P(None)P(No)\\\\\nP(Several~and~Yes) &= P(Several)P(Yes)\\\\\nP(Several~and~No) &= P(Several)P(No)\\\\\nP(Most~and~Yes) &= P(Most)P(Yes)\\\\\nP(Most~and~No) &= P(Most)P(No)\n\\end{align}\\]\n\n\n\n\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\n\n\n\\[\\begin{align}\nP(None~and~Yes) &= \\frac{314}{400}\\cdot\\frac{226}{400}\\\\\n& ...\\\\\nP(Most~and~No) &= \\frac{28}{400}\\cdot\\frac{174}{400}\n\\end{align}\\]\n\nWith these probabilities, for each cell of the table we calculate the expected counts for each cell under the \\(H_0\\) hypothesis that the variables are independent"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#expected-counts-if-variables-are-independent",
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#expected-counts-if-variables-are-independent",
-    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "title": "Lesson 16: Chi-squared test",
     "section": "Expected counts (if variables are independent)",
-    "text": "Expected counts (if variables are independent)\n\n\n\nThe expected counts (if \\(H_0\\) is true & the variables are independent) for each cell are\n\n\\(np\\) = total table size \\(\\cdot\\) probability of cell\n\n\nExpected count of Yes & None:\n\\[\\begin{align}\n400 \\cdot & P(None~and~Yes)\\\\\n&= 400 \\cdot P(None)P(Yes)\\\\\n&= 400 \\cdot\\frac{314}{400}\\cdot\\frac{226}{400}\\\\\n&= \\frac{314\\cdot 226}{400} \\\\\n&=  177.41\\\\\n&= \\frac{\\text{column total}\\cdot \\text{row total}}{\\text{table total}}\n\\end{align}\\]\n\n\n\n\n\n\n\nIf depression and being physically active are independent variables\n\n(as assumed by \\(H_0\\)),\n\nthen the observed counts should be close to the expected counts for each cell of the table"
+    "text": "Expected counts (if variables are independent)\n\n\n\nThe expected counts (if \\(H_0\\) is true & the variables are independent) for each cell are\n\n\\(np = \\text{total table size} \\cdot \\text{probability of cell}\\)\n\\(\\text{expected count} = \\dfrac{\\text{column total}\\cdot \\text{row total}}{\\text{table total}}\\)\n\n\nExpected count of 40-59 years old and hypertension:\n\\[\\begin{align}\n\\text{expected count} &= \\dfrac{\\text{column total}\\cdot \\text{row total}}{\\text{table total}} \\\\\n&= \\dfrac{\\text{90862}\\cdot \\text{130772}}{\\text{313320}} \\\\\n&= 37923.55\n\\end{align}\\]\n\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 yrs\n8836\n112206\n121042\n\n\n40-59 yrs\n42109\n88663\n130772\n\n\n60+ yrs\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\n\n \n\nIf age group and hypertension are independent variables\n\n(as assumed by \\(H_0\\)),\n\nthen the observed counts should be close to the expected counts for each cell of the table\n\n\n\n\nTest to see how likely is it that we observe our data given the null hypothesis (no association)"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#observed-vs.-expected-counts",
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#observed-vs.-expected-counts",
-    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "title": "Lesson 16: Chi-squared test",
     "section": "Observed vs. Expected counts",
-    "text": "Observed vs. Expected counts\n\n\n\nThe observed counts are the counts in the 2-way table summarizing the data\n\n\n\n\n\n\n\nExpected count for cell \\(i,j\\) :\n\n\nThe expected counts are the counts the we would expect to see in the 2-way table if there was no association between depression and being physically activity\n\n\n\n\n\n\n\n\n\\[\\textrm{Expected Count}_{\\textrm{row } i,\\textrm{ col }j}=\\frac{(\\textrm{row}~i~ \\textrm{total})\\cdot(\\textrm{column}~j~ \\textrm{total})}{\\textrm{table total}}\\]"
+    "text": "Observed vs. Expected counts\n\n\n\nThe observed counts are the counts in the 2-way table summarizing the data\n\n \n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n8836\n112206\n\n\n40-59 yrs\n42109\n88663\n\n\n60+ yrs\n39917\n21589\n\n\n\n\n\n\n\n\n\nThe expected counts are the counts the we would expect to see in the 2-way table if there was no association between age group and hypertension\n\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\n\n\n\n\n18-39 yrs\n35101.87\n85940.13\n\n\n40-59 yrs\n37923.55\n92848.45\n\n\n60+ yrs\n17836.58\n43669.42\n\n\n\n\n\n\n\n\n\n \nExpected count for cell \\(i,j\\) :\n\\[\\textrm{Expected Count}_{\\textrm{row } i,\\textrm{ col }j}=\\frac{(\\textrm{row}~i~ \\textrm{total})\\cdot(\\textrm{column}~j~ \\textrm{total})}{\\textrm{table total}}\\]"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#the-chi2-test-statistic",
@@ -20962,7 +20962,7 @@
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-expected-cell-counts",
     "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
     "section": "Chi-squared test: Expected Cell Counts",
-    "text": "Chi-squared test: Expected Cell Counts\n\nIs the sample size big enough for the chi-square test to be adequate? What are the expected cell counts?\n\n \n\nIf you want an explanation of how to calculate by hand, please see Vu and Harringtion TB (section 8.3.1, page 405)\n\n \n\nToo time consuming for this class, but R does it quickly using the expected() function in the epitools package"
+    "text": "Chi-squared test: Expected Cell Counts\n\nIn the Strong Heart Study…\n\n\nSHS = tibble(Diabetes = c(rep(\"Not diabetic\", \n                   1338), \n                   rep(\"Diabetic\", 326)),\n              Glucose = c(rep(\"Normal\", \n                  1004),#Not diabetic\n          rep(\"Impaired\", 334),\n          rep(\"Normal\", \n              128), #Diabetic\n          rep(\"Impaired\", 198)))\nSHS_table = table(SHS$Glucose, SHS$Diabetes)\nSHS_table\n\n          \n           Diabetic Not diabetic\n  Impaired      198          334\n  Normal        128         1004\n\nlibrary(epitools)\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\n \n\n\n\n\n\nAll expected counts &gt; 5"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-expected-cell-counts-1",
@@ -20976,7 +20976,7 @@
     "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-shs-example",
     "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
     "section": "Chi-squared test: SHS Example",
-    "text": "Chi-squared test: SHS Example\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\nAll expected cells are greater than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes\n\\(H_1\\) : There is an association between glucose tolerance and diabetes\n\n\n\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\n\nchisq.test(x = SHS_table, correct = T)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  SHS_table\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that glucose tolerance and diabetes are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians."
+    "text": "Chi-squared test: SHS Example\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(SHS_table)\n\n          \n           Diabetic Not diabetic\n  Impaired  104.226      427.774\n  Normal    221.774      910.226\n\n\nAll expected cells are greater than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between glucose tolerance and diabetes\n\\(H_1\\) : There is an association between glucose tolerance and diabetes\n\n\n\n\nCalculate the test statistic and p-value for Chi-squared test in R\n\n\nchisq.test(x = SHS_table, correct = T)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  SHS_table\nX-squared = 152.6, df = 1, p-value &lt; 2.2e-16\n\n\n\nConclusion to the hypothesis test\n\nWe reject the null hypothesis that glucose tolerance and diabetes are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that glucose tolerance and diabetes incidence are associated among American Indians.\n\n\n\n\nLesson 16 Slides"
   },
   {
     "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#fishers-exact-test-1",
@@ -22496,5 +22496,334 @@
     "title": "Homework 8 Answers",
     "section": "",
     "text": "No"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#last-times",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#last-times",
+    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "section": "Last time(s)",
+    "text": "Last time(s)\n\nWe looked at inference for a single proportion\nWe looked at inference for a different in independent proportions\n\n \n\nIf there are two groups, we could see if they had different proportions by testing if the difference between the proportions were the same (null) or different (alternative, two-sided, \\(\\neq\\))\n\n \n\nWhat happens when we want to compare two or more groups’ proportions?\n\nCan no longer rely on the difference in proportions\nNeed a new method to make inference (Chi-squared test!)"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#last-time",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#last-time",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Last time",
+    "text": "Last time\n\nWe looked at inference for a single proportion\nWe looked at inference for a difference in two independent proportions\n\n \n\nIf there are two groups, we could see if they had different proportions by testing if the difference between the proportions were the same (null) or different (alternative, two-sided, \\(\\neq\\))\n\n \n\nWhat happens when we want to compare two or more groups’ proportions?\n\nCan no longer rely on the difference in proportions\nNeed a new method to make inference (Chi-squared test!)"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#motivating-example-effectiveness-of-mammograms",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#motivating-example-effectiveness-of-mammograms",
+    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "section": "Motivating example: effectiveness of mammograms",
+    "text": "Motivating example: effectiveness of mammograms\nA 30-year study to investigate the effectiveness of mammograms versus a standard non-mammogram breast cancer exam was conducted in Canada with 89,835 participants. Each person was randomized to receive either annual mammograms or standard physical exams for breast cancer over a 5-year screening period.\nBy the end of the 25-year follow-up period, 1,005 people died from breast cancer. The results are summarized in the following table.\n\n\nDisplaying the contingency table in R\nBC %&gt;% tabyl(Group, Death) %&gt;% \n  adorn_totals(where = c(\"row\", \"col\")) %&gt;% \n  gt() %&gt;% \n  tab_stubhead(label = \"Group\") %&gt;%\n  tab_spanner(label = \"Death from breast cancer?\", \n              columns = c(\"Yes\", \"No\")) %&gt;%\n  tab_options(table.font.size = 45)\n\n\n\n\n\n\n  \n    \n      Group\n      \n        Death from breast cancer?\n      \n      Total\n    \n    \n      Yes\n      No\n    \n  \n  \n    Control Group\n505\n44405\n44910\n    Mammogram Group\n500\n44425\n44925\n    Total\n1005\n88830\n89835\n  \n  \n  \n\n\n\n\n \n\nQuestion: Is there an association between annual check up group and deaths from breast cancer?"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#test-of-general-association-hypotheses",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#test-of-general-association-hypotheses",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Test of General Association + Hypotheses",
+    "text": "Test of General Association + Hypotheses\n\nGeneral research question: Are two variables (both categorical, nominal) associated with each other?\n\n\n\n\n\nGeneral wording for hypotheses\n\n\nTest of “association” wording\n\n\\(H_0\\): There is no association between the two variables\n\\(H_A\\): There is an association between the two variables\n\nTest of “independence” wording\n\n\\(H_0\\): The variables are independent\n\\(H_A\\): The variables are not independent\n\n\n\n\n\n\nHypotheses test for example\n\n\nTest of “association” wording\n\n\\(H_0\\): There is no association between age and hypertension\n\\(H_A\\): There is an association between age and hypertension\n\nTest of “independence” wording\n\n\\(H_0\\): The variables age and hypertension are independent\n\\(H_A\\): The variables age and hypertension are not independent"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#example-hypertension-prevalence-12",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#example-hypertension-prevalence-12",
+    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "section": "Example: hypertension prevalence (1/2)",
+    "text": "Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#example-hypertension-prevalence-22",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#example-hypertension-prevalence-22",
+    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "section": "Example: hypertension prevalence (2/2)",
+    "text": "Example: hypertension prevalence (2/2)\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\n\n \n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent (we will get into this)\n\nWhile the probability of hypertension of a randomly chosen adult is 0.29…\n\nThe conditional probability of hypertension in a person known to be 60 or older is 0.649\n\n\n \n\nQuestion: Is there an association between age group and hypertension?"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#contingency-tables",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#contingency-tables",
+    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "section": "Contingency tables",
+    "text": "Contingency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 years\n8836\n112206\n121042\n\n\n40 to 59 years\n42109\n88663\n130772\n\n\nGreater than 60 years\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#from-lesson-4-example-hypertension-prevalence-12",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#from-lesson-4-example-hypertension-prevalence-12",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "From Lesson 4: Example: hypertension prevalence (1/2)",
+    "text": "From Lesson 4: Example: hypertension prevalence (1/2)\n\nUS CDC estimated that between 2011 and 20141, 29% of the population in America had hypertension\n\n \n\nA health care practitioner seeing a new patient would expect a 29% chance that the patient might have hypertension\n\nHowever, this is only the case if nothing else is known about the patient\n\n\nhttps://www.cdc.gov/nchs/products/databriefs/db220.htm"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#from-lesson-4-example-hypertension-prevalence-22",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#from-lesson-4-example-hypertension-prevalence-22",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "From Lesson 4: Example: hypertension prevalence (2/2)",
+    "text": "From Lesson 4: Example: hypertension prevalence (2/2)\n\nPrevalence of hypertension varies significantly with age\n\nAmong adults aged 18-39, 7.3% have hypertension\nAdults aged 40-59, 32.2%\nAdults aged 60 or older, 64.9% have hypertension\n\n\n \n\nKnowing the age of a patient provides important information about the likelihood of hypertension\n\nAge and hypertension status are not independent - Can we back up this claim??\n\nWhile the probability of hypertension of a randomly chosen adult is 0.29…\n\nThe conditional probability of hypertension in a person known to be 60 or older is 0.649\n\n\n \n\nQuestion: Is there an association between age group and hypertension?"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#from-lesson-4-contingency-tables",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#from-lesson-4-contingency-tables",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "From Lesson 4: Contingency tables",
+    "text": "From Lesson 4: Contingency tables\n\nWe can start looking at the contingency table for hypertension for different age groups\n\nContingency table: type of data table that displays the frequency distribution of two or more categorical variables\n\n\n\n\n\nTable: Contingency table showing hypertension status and age group, in thousands.\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 yrs\n8836\n112206\n121042\n\n\n40-59 yrs\n42109\n88663\n130772\n\n\n60+ yrs\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#h_0-variables-are-independent-under-the-null",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#h_0-variables-are-independent-under-the-null",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "\\(H_0\\): Variables are Independent (under the null)",
+    "text": "\\(H_0\\): Variables are Independent (under the null)\n\n\n\nRecall from Chapter 2, that events \\(A\\) and \\(B\\) are independent if and only if\n\n\\[P(A \\cap B)=P(A)P(B)\\]\n\nIf age and hypertension are independent variables, then theoretically this condition needs to hold for every combination of levels, i.e.\n\n\\[\\begin{align}\nP(18-39 \\cap \\text{hyp}) &= P(18-39)P(\\text{hyp})\\\\\nP(18-39 \\cap \\text{no hyp}) &= P(18-39)P(\\text{no hyp})\\\\\nP(40-59 \\cap \\text{hyp}) &= P(40-59)P(\\text{hyp})\\\\\nP(40-59 \\cap \\text{no hyp}) &= P(40-59)P(\\text{no hyp})\\\\\nP(60+ \\cap \\text{hyp}) &= P(60+)P(\\text{hyp})\\\\\nP(60+ \\cap \\text{no hyp}) &= P(60+)P(\\text{no hyp})\\\\\n\\end{align}\\]\n\n\n\n\n\n\n\n\nAge Group\nHypertension\nNo Hypertension\nTotal\n\n\n\n\n18-39 yrs\n8836\n112206\n121042\n\n\n40-59 yrs\n42109\n88663\n130772\n\n\n60+ yrs\n39917\n21589\n61506\n\n\nTotal\n90862\n222458\n313320\n\n\n\n\n\n\n\n\\[\\begin{align}\nP(18-39 \\cap \\text{hyp}) &= \\frac{121042}{313320}\\cdot\\frac{90862}{313320}\\\\\n& ...\\\\\nP(60+ \\cap \\text{no hyp}) &=\\frac{61506}{313320}\\cdot\\frac{222458}{313320}\n\\end{align}\\]\nWith these probabilities, for each cell of the table we calculate the expected counts for each cell under the \\(H_0\\) hypothesis that the variables are independent"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-assumptions",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-assumptions",
+    "title": "Lesson 16: Chi-squared tests & Fisher’s Exact test",
+    "section": "Chi-squared test assumptions",
+    "text": "Chi-squared test assumptions\n\nTest to see how likely is it that we observe our data given the null hypothesis (no association)\n\n \n\nWe use the null to calculate the expected cell counts and compare them to the observed cell counts\n\n \n\nRequirements to conduct Chi-squared test (expected cell counts)\n\nFor 2 x 2 contingency table:\n\nNo expected cell counts should be less than 10\n\nFor contingency table with 3x2, 3x3, 4x4, etc.:\n\nNo more than 20% of expected cell counts are less than 5\nNo expected cell counts are less than 1"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#reference-steps-in-a-hypothesis-test",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#reference-steps-in-a-hypothesis-test",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Reference: Steps in a Hypothesis Test",
+    "text": "Reference: Steps in a Hypothesis Test\n\nCheck the assumptions\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-1-check-assumptions",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-1-check-assumptions",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 1: Check assumptions",
+    "text": "Step 1: Check assumptions\n\nIndependence\n\nAll individuals are independent from one another\n\nIn particular, observational units cannot be represented in more than one cell\nFor example, someone cannot be in two differnt age groups\n\n\n\n\n\n\nSample size\n\nIn order for the distribution of the test statistic to be appropriately modeled by a chi-squared distribution we need\n2 \\(\\times\\) 2 table\n\nexpected counts are at least 10 for each cell\n\nLarger tables\n\nNo more than 20% of expected counts are less than 5\nAll expected counts are greater than 1\n\n\n\n\n \n \n \n\nexpected(hyp_data2)\n\n          Hypertension No_Hypertension\n18-39 yrs     35101.87        85940.13\n40-59 yrs     37923.55        92848.45\n60+ yrs       17836.58        43669.42\n\n\nAll expected counts &gt; 5"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#using-r-for-expected-cell-counts",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#using-r-for-expected-cell-counts",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Using R for expected cell counts",
+    "text": "Using R for expected cell counts\n\nR calculates expected cell counts using the expected() function in the epitools package\nMake sure dataset is in matrix form using as.matrix()\n\n\nhyp_data2\n\n          Hypertension No_Hypertension\n18-39 yrs         8836          112206\n40-59 yrs        42109           88663\n60+ yrs          39917           21589\n\n\n\nlibrary(epitools)\nexpected(hyp_data2)\n\n          Hypertension No_Hypertension\n18-39 yrs     35101.87        85940.13\n40-59 yrs     37923.55        92848.45\n60+ yrs       17836.58        43669.42"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-example",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#chi-squared-test-example",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Chi-squared test: Example",
+    "text": "Chi-squared test: Example\n\n\n\nCheck expected cell counts threshold\n\n\nexpected(hyp_data2)\n\n          Hypertension No_Hypertension\n18-39 yrs     35101.87        85940.13\n40-59 yrs     37923.55        92848.45\n60+ yrs       17836.58        43669.42\n\n\nAll expected cells are greater than 5.\n\n\\(\\alpha = 0.05\\)\nHypothesis test:\n\n\\(H_0\\) : There is no association between age group and hypertension\n\\(H_1\\) : There is an association between age group and hypertension\n\n\n\n4-5. Calculate the test statistic and p-value for Chi-squared test in R\n\nchisq.test(x = hyp_data2)\n\n\n    Pearson's Chi-squared test\n\ndata:  hyp_data2\nX-squared = 66831, df = 2, p-value &lt; 2.2e-16\n\n\n\nConclusion\n\nWe reject the null hypothesis that age group and hypertension are not associated (\\(p&lt;2.2\\cdot10^{-16}\\)). There is sufficient evidence that age group and hypertension are associated.\n\n\n\n\nLesson 16 Slides"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-2-and-3-significance-level-and-hypotheses",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-2-and-3-significance-level-and-hypotheses",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 2 and 3: Significance level and Hypotheses",
+    "text": "Step 2 and 3: Significance level and Hypotheses\n\nSet \\(\\alpha = 0.05\\)\n\n \n\n\nHypotheses test for example\n\n\nTest of “association” wording\n\n\\(H_0\\): There is no association between age and hypertension\n\\(H_A\\): There is an association between age and hypertension\n\nTest of “independence” wording\n\n\\(H_0\\): The variables age and hypertension are independent\n\\(H_A\\): The variables age and hypertension are not independent"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-4-calculate-the-chi2-test-statistic",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 4: Calculate the \\(\\chi^2\\) test statistic",
+    "text": "Step 4: Calculate the \\(\\chi^2\\) test statistic\n\n\nTest statistic for a test of association (independence):\n\\[\\chi^2 = \\sum_{\\textrm{all cells}} \\frac{(\\textrm{observed} - \\text{expected})^2}{\\text{expected}}\\]\n\nWhen the variables are independent, the observed and expected counts should be close to each other\n\n\n\n\n\n\n\n\n\n\n\n\\[\\begin{align}\n\\chi^2 &=  \\sum\\frac{(O-E)^2}{E} \\\\\n&= \\frac{(199-177.41)^2}{177.41} + \\frac{(26-32.77)^2}{32.77} + \\ldots + \\frac{(27-12.18)^2}{12.18} \\\\\n&=  41.2\n\\end{align}\\]\n\nIs this value big? Big enough to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-5-calculate-the-p-value",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-5-calculate-the-p-value",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 5: Calculate the p-value",
+    "text": "Step 5: Calculate the p-value\n\n\nThe \\(\\chi^2\\) distribution shape depends on its degrees of freedom\n\nIt’s skewed right for smaller df,\n\ngets more symmetric for larger df\n\ndf = (# rows-1) x (# columns-1)\n\n\n\n\n\n\n\n\nThe p-value is always the area to the right of the test statistic for a \\(\\chi^2\\) test.\nWe can use the pchisq function in R to calculate the probability of being at least as big as the \\(\\chi^2\\) test statistic:\n\n\npv &lt;- pchisq(41.2, df = 2, \n       lower.tail = FALSE)\npv\n\n[1] 1.131185e-09\n\n\nWhat’s the conclusion to the \\(\\chi^2\\) test?"
+  },
+  {
+    "objectID": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-6-conclusion",
+    "href": "lessons/16_Chi_sq_Fisher/16_Chi_sq_Fisher.html#step-6-conclusion",
+    "title": "Lesson 16: Chi-squared test",
+    "section": "Step 6: Conclusion",
+    "text": "Step 6: Conclusion\nRecall the hypotheses to our \\(\\chi^2\\) test:\n\n\\(H_0\\): There is no association between depression and being physically activity\n\\(H_A\\): There is an association between depression and being physically activity\n\n\n\n\n\n\n\n\n\nConclusion:\nBased a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (p-value &lt; 0.001).\n\n\n\n\n\n\n\n\nWarning\n\n\nIf we fail to reject, we DO NOT have evidence of no association."
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-data-visualization",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-data-visualization",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "From Lesson 8: Data visualization",
+    "text": "From Lesson 8: Data visualization\n\nStudy investigating whether ACTN3 genotype at a particular location (residue 577) is associated with change in muscle function\n\n \n\nCategorical variable: genotypes (CC, TT, CT)\n\n \n\nNumeric variable: Muscle function, measured as percent change in non-dominant arm strength\n\n \n\nWe can start the investigation by plotting the relationship"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#side-by-side-boxplots",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#side-by-side-boxplots",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Side-by-side boxplots",
+    "text": "Side-by-side boxplots\n\nWe can look at the boxplot of percent change for each genotype\n\n\n\n\nggplot(data = famuss, \n       aes(x = actn3.r577x, \n           y = ndrm.ch)) + \n  geom_boxplot() + \n  labs(x = \"ACTN3 genotype\", \n       y = \"Percent Change in Non-Dominant Arm Strength\")"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#side-by-side-boxplots-with-data-points",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#side-by-side-boxplots-with-data-points",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Side-by-side boxplots with data points",
+    "text": "Side-by-side boxplots with data points\n\nWe can look at the boxplot of percent change for each genotype with points shown so we can see the distribution of observations better\n\n\n\n\nggplot(data = famuss, \n       aes(x = actn3.r577x, \n           y = ndrm.ch)) + \n  geom_boxplot() + \n  labs(x = \"ACTN3 genotype\", \n       y = \"Percent Change in Non-Dominant Arm Strength\")  +\n  geom_jitter(aes(color = actn3.r577x), \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#density-plots-by-group",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#density-plots-by-group",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Density plots by group",
+    "text": "Density plots by group\n\nAllows us to see the densities of percent change for each genotype\n\n\nggplot(data = famuss, aes(color = actn3.r577x, x = ndrm.ch)) + \n  geom_density() + \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\", color = \"ACTN3 genotype\")"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#ridgeline-plot",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#ridgeline-plot",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Ridgeline plot",
+    "text": "Ridgeline plot\n\nOverlapped densities were easy enough to see with 3 genotypes\nIf you have many categories, a ridgeline plot might make it easier to see\n\n\n\n\nlibrary(ggridges)\nggplot(data = famuss, \n       aes(y = actn3.r577x, \n           x = ndrm.ch, \n           fill = actn3.r577x)) +\n  geom_density_ridges(alpha = 0.3, \n          show.legend = FALSE) +      \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\",\n       y = \"ACTN3 genotype\",\n       title = \"Strength change by genotype\")"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#poll-everywhere-question-4",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#poll-everywhere-question-4",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-side-by-side-boxplots",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-side-by-side-boxplots",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "From Lesson 8: Side-by-side boxplots",
+    "text": "From Lesson 8: Side-by-side boxplots\n\nWe can look at the boxplot of percent change for each genotype\n\n\n\n\nggplot(data = famuss, \n       aes(x = actn3.r577x, \n           y = ndrm.ch)) + \n  geom_boxplot() + \n  labs(x = \"ACTN3 genotype\", \n       y = \"Percent Change in Non-Dominant Arm Strength\")"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-side-by-side-boxplots-with-data-points",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-side-by-side-boxplots-with-data-points",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "From Lesson 8: Side-by-side boxplots with data points",
+    "text": "From Lesson 8: Side-by-side boxplots with data points\n\nWe can look at the boxplot of percent change for each genotype with points shown so we can see the distribution of observations better\n\n\n\n\nggplot(data = famuss, \n       aes(x = actn3.r577x, \n           y = ndrm.ch)) + \n  geom_boxplot() + \n  labs(x = \"ACTN3 genotype\", \n       y = \"Percent Change in Non-Dominant Arm Strength\")  +\n  geom_jitter(aes(color = actn3.r577x), \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-density-plots-by-group",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-density-plots-by-group",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "From Lesson 8: Density plots by group",
+    "text": "From Lesson 8: Density plots by group\n\nAllows us to see the densities of percent change for each genotype\n\n\nggplot(data = famuss, aes(color = actn3.r577x, x = ndrm.ch)) + \n  geom_density() + \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\", color = \"ACTN3 genotype\")"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-ridgeline-plot",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#from-lesson-8-ridgeline-plot",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "From Lesson 8: Ridgeline plot",
+    "text": "From Lesson 8: Ridgeline plot\n\nOverlapped densities were easy enough to see with 3 genotypes\nIf you have many categories, a ridgeline plot might make it easier to see\n\n\n\n\nlibrary(ggridges)\nggplot(data = famuss, \n       aes(y = actn3.r577x, \n           x = ndrm.ch, \n           fill = actn3.r577x)) +\n  geom_density_ridges(alpha = 0.3, \n          show.legend = FALSE) +      \n  labs(x = \"Percent Change in Non-Dominant Arm Strength\",\n       y = \"ACTN3 genotype\",\n       title = \"Strength change by genotype\")"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#generic-anova-table",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#generic-anova-table",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Generic ANOVA table",
+    "text": "Generic ANOVA table"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#a-little-while-ago",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#a-little-while-ago",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "A little while ago…",
+    "text": "A little while ago…\n\nWe looked at inference for a single mean\nWe looked at inference for a difference in means from two independent samples\n\n \n\nIf there are two groups, we could see if they had different means by testing if the difference between the means were the same (null) or different (alternative)\n\n \n\nWhat happens when we want to compare two or more groups’ means?\n\nCan no longer rely on the difference in means\nNeed a new method to make inference (ANOVA or Linear Regression!)"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#total-sums-of-squares-sst",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#total-sums-of-squares-sst",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Total Sums of Squares (SST)",
+    "text": "Total Sums of Squares (SST)\n\n\n\n\n\n\n\n\nTotal Sums of Squares:\n\\[SST = \\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(x_{ij} -\\bar{x})^2 = (N-1)s^2\\]\n\nwhere\n\n\\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and\n\\(s^2\\) is the grand standard deviation of all the observations\n\nThis is the sum of the squared differences between each observed \\(x_{ij}\\) value and the grand mean, \\(\\bar{x}\\).\nThat is, it is the total deviation of the \\(x_{ij}\\)’s from the grand mean."
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#sums-of-squares-due-to-groups-ssg",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#sums-of-squares-due-to-groups-ssg",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Sums of Squares due to Groups (SSG)",
+    "text": "Sums of Squares due to Groups (SSG)\n\n\n\n\n\n\n\n\nSums of Squares due to Groups:\n\\[SSG = \\sum_{i = 1}^k n_i(\\bar{x}_{i}-\\bar{x})^2\\]\n\nThis is the sum of the squared differences between each group mean, \\(\\bar{x}_{i}\\), and the grand mean, \\(\\bar{x}\\).\nThat is, it is the deviation of the group means from the grand mean.\nAlso called the Model SS, or \\(SS_{model}.\\)"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#sums-of-squares-error-sse",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#sums-of-squares-error-sse",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Sums of Squares Error (SSE)",
+    "text": "Sums of Squares Error (SSE)\n\n\n\n\n\n\n\n\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(x_{ij}-\\bar{x}_{i})^2 = \\sum_{i = 1}^k(n_i-1)s_{i}^2\\] where \\(s_{i}\\) is the standard deviation of the \\(i^{th}\\) group\n\nThis is the sum of the squared differences between each observed \\(x_{ij}\\) value and its group mean \\(\\bar{x}_{i}\\).\nThat is, it is the deviation of the \\(x_{ij}\\)’s from the predicted ndrm.ch by group.\nAlso called the residual sums of squares, or \\(SS_{residual}.\\)"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#anova-table-to-hypothesis-test",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#anova-table-to-hypothesis-test",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "ANOVA table to hypothesis test?",
+    "text": "ANOVA table to hypothesis test?\n\nOkay, so how do we use all these types of variability to run a test?\nHow do we determine, statistically, if the groups have different means or not?\n\n\n\nAnswer: We use the F-statistic in a hypothesis test!"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#reference-steps-in-a-hypothesis-test",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#reference-steps-in-a-hypothesis-test",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Reference: Steps in a Hypothesis Test",
+    "text": "Reference: Steps in a Hypothesis Test\n\nCheck the assumptions\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 1: Check assumptions",
+    "text": "Step 1: Check assumptions\nThe sampling distribution is an F-distribution, if…\n\nSample sizes in each group group are large (each \\(n \\ge 30\\))\n\nOR the data are relatively normally distributed in each group\n\nVariability is “similar” in all group groups:\n\nIs the within group variability about the same for each group?\nAs a rough rule of thumb, this condition is violated if the standard deviation of one group is more than double the standard deviation of another group"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-3-specify-hypotheses",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-3-specify-hypotheses",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 3: Specify Hypotheses",
+    "text": "Step 3: Specify Hypotheses\n\n\n\n\nGeneral hypotheses\n\n\nTo test for a difference in means across k groups:\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\n\n\n\n\nHypotheses test for example\n\n\n\\[\\begin{align}\nH_0 &: \\mu_{CC} = \\mu_{CT} = \\mu_{TT}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-4-5-find-the-test-statistic-and-p-value",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-4-5-find-the-test-statistic-and-p-value",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 4-5: Find the test statistic and p-value",
+    "text": "Step 4-5: Find the test statistic and p-value\n\nOur test statistic is an F-statistic\n\nF-statistic: measurement of the ratio of variability between groups to variability within groups\n\n\n \n\nOur F-statistic follows an F-distribution\n\nWhich is why we cannot use something like the Z-distribution nor T-distribution\n\n\n \n\nSo we’ll need to find the F-statistic and its corresponding p-value using an F-distribution"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-4-5-find-the-test-statistic-and-p-value-1",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-4-5-find-the-test-statistic-and-p-value-1",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 4-5: Find the test statistic and p-value",
+    "text": "Step 4-5: Find the test statistic and p-value\n\nThere are several options to run an ANOVA model (aka calculate F-statistic and p-value)\nTwo most common are lm and aov\n\nlm = linear model; will be using frequently in BSTA 512\n\n\n\n\n\nlm(ndrm.ch ~ actn3.r577x, \n    data = famuss) %&gt;% anova()\n\nAnalysis of Variance Table\n\nResponse: ndrm.ch\n             Df Sum Sq Mean Sq F value  Pr(&gt;F)  \nactn3.r577x   2   7043  3521.6  3.2308 0.04022 *\nResiduals   592 645293  1090.0                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\naov(ndrm.ch ~ actn3.r577x, \n    data = famuss) %&gt;% summary()\n\n             Df Sum Sq Mean Sq F value Pr(&gt;F)  \nactn3.r577x   2   7043    3522   3.231 0.0402 *\nResiduals   592 645293    1090                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-6-conclusion",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-6-conclusion",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 6: Conclusion",
+    "text": "Step 6: Conclusion\n\\[\\begin{align}\nH_0 &: \\mu_{CC} = \\mu_{CT} = \\mu_{TT}\\\\\n\\text{vs. } H_A&: \\text{At least one pair} \\mu_i \\neq \\mu_j \\text{ for } i \\neq j\n\\end{align}\\]\n\nRecall the \\(p\\)-value = 0.0402\nUse \\(\\alpha\\) = 0.05\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nThere is sufficient evidence that at least one of the genotype groups has a change in arm strength statistically different from the other groups. ( \\(p\\)-value =0.0402)\n\n\n\nLesson 17 Slides"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-conditions-for-anova",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-conditions-for-anova",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 1: Check assumptions: Conditions for ANOVA",
+    "text": "Step 1: Check assumptions: Conditions for ANOVA\nThe sampling distribution is an F-distribution, if…\n\nSample sizes in each group group are large (each \\(n \\ge 30\\))\n\nOR the data are relatively normally distributed in each group\n\nVariability is “similar” in all group groups:\n\nIs the within group variability about the same for each group?\nAs a rough rule of thumb, this condition is violated if the standard deviation of one group is more than double the standard deviation of another group"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-testing-variances-condition-3",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-testing-variances-condition-3",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 1: Check assumptions: Testing variances (Condition 3)",
+    "text": "Step 1: Check assumptions: Testing variances (Condition 3)\nBartlett’s test for equal variances\n\n\\(H_0:\\) population variances of group levels are equal\n\\(H_A:\\) population variances of group levels are NOT equal\n\nNote: \\(H_A\\) is same as saying that at least one of the group levels has a different variance\n\n\n\n\n\n\nCaution\n\n\n\nBartlett’s test assumes the data in each group are normally distributed.\nDo not use if data do not satisfy the normality condition.\n\n\n\n\n\nbartlett.test(ndrm.ch ~ actn3.r577x, data = famuss)\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  ndrm.ch by actn3.r577x\nBartlett's K-squared = 5.1106, df = 2, p-value = 0.07767\n\n\n\n\n\n\n\n\nTip\n\n\nLevene’s test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#equal-variance",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#equal-variance",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "equal variance",
+    "text": "equal variance\nChecking the equal variance condition:\n\nsd_groups &lt;- famuss %&gt;% \n  group_by(actn3.r577x) %&gt;% \n  summarise(SD = sd(ndrm.ch))\nsd_groups\n\n# A tibble: 3 × 2\n  actn3.r577x    SD\n  &lt;fct&gt;       &lt;dbl&gt;\n1 CC           30.0\n2 CT           33.2\n3 TT           35.7\n\nmax(sd_groups$SD) / min(sd_groups$SD)\n\n[1] 1.191455"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-1",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#step-1-check-assumptions-1",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "Step 1: Check assumptions",
+    "text": "Step 1: Check assumptions\n\nUse R to check both assumptions in our example\n\n\ngenotype_groups &lt;- famuss %&gt;% \n  group_by(actn3.r577x) %&gt;% \n  summarise(count = n(), \n            SD = sd(ndrm.ch))\ngenotype_groups\n\n# A tibble: 3 × 3\n  actn3.r577x count    SD\n  &lt;fct&gt;       &lt;int&gt; &lt;dbl&gt;\n1 CC            173  30.0\n2 CT            261  33.2\n3 TT            161  35.7\n\n\n\nCounts in each group are greater than 30!\n\n\nmax(genotype_groups$SD) / min(genotype_groups$SD)\n\n[1] 1.191455\n\n\n\nVariability in one group vs. another is no more than 1.2 times!"
+  },
+  {
+    "objectID": "lessons/17_ANOVA/17_ANOVA.html#the-f-statistic",
+    "href": "lessons/17_ANOVA/17_ANOVA.html#the-f-statistic",
+    "title": "Lesson 17: Comparing Means with ANOVA",
+    "section": "The F-statistic",
+    "text": "The F-statistic\n\nF-statistic represents the standardized ratio of variability between groups to the variability within the groups\n\n\\[F_{stat} = \\dfrac{MSG}{MSE}\\]\n\nF is larger when the variability between groups is larger than variability within groups"
   }
 ]
