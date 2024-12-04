@@ -409,47 +409,32 @@ Meike Niederhausen and Nicky Wakim
 <section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Understand the difference between and appropriate use of parametric and nonparametric tests</p></li>
+<li><p>Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.</p></li>
+<li><p>Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.</p></li>
+<li><p>Use the Fisher’s Exact test to determine if two categorical variables are associated.</p></li>
+<li><p>Use the Kruskal-Wallis test to compare two or more independent numeric samples.</p></li>
+</ol>
+</section>
+<section id="where-are-we" class="slide level2">
+<h2>Where are we?</h2>
 
-</section>
-</section>
+<img data-src="../img_slides/course_map.png" class="r-stretch quarto-figure-center"></section></section>
 <section>
-<section id="goals-for-today-supplemental-material" class="title-slide slide level1 center">
-<h1>Goals for today (Supplemental material)</h1>
-<ul>
-<li><p>Why us a nonparametric approach?</p></li>
-<li><p>What the following tests are &amp; when to use them</p></li>
-<li><p><strong>Sign test</strong></p>
-<ul>
-<li>for paired data or single samples</li>
-</ul></li>
-<li><p><strong>(Wilcoxon) sign-rank test</strong></p>
-<ul>
-<li>for paired data or single samples</li>
-<li>accounts for sizes of differences</li>
-</ul></li>
-<li><p><strong>Wilcoxon Rank-sum test</strong></p>
-<ul>
-<li>for two independent samples</li>
-<li>a.k.a <strong>Mann-Whitney U test</strong></li>
-</ul></li>
-<li><p><strong>Kruskal-Wallis test</strong></p>
-<ul>
-<li>nonparametric ANOVA test</li>
-</ul></li>
-<li><p>How to use R for each test &amp; interpret the results</p></li>
-</ul>
-</section>
-<section id="additional-resource" class="slide level2">
-<h2>Additional resource</h2>
-<ul>
-<li>Chapter 13: Nonparametric tests of Pagano’s <em>Principles of Biostatistics</em>, 2022 edition</li>
-<li>Can download chapter from OHSU library eBook at <a href="https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&amp;pq-origsite=primo" class="uri">https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&amp;pq-origsite=primo</a></li>
-</ul>
-</section></section>
-<section>
-<section id="nonparametric-tests" class="title-slide slide level1 center">
-<h1>Nonparametric tests</h1>
-
+<section id="learning-objectives-1" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<div class="lob">
+<ol type="1">
+<li>Understand the difference between and appropriate use of parametric and nonparametric tests</li>
+</ol>
+</div>
+<ol start="2" type="1">
+<li><p>Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.</p></li>
+<li><p>Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.</p></li>
+<li><p>Use the Fisher’s Exact test to determine if two categorical variables are associated.</p></li>
+<li><p>Use the Kruskal-Wallis test to compare two or more independent numeric samples.</p></li>
+</ol>
 </section>
 <section id="background-parametric-vs-nonparametric" class="slide level2">
 <h2>Background: parametric vs nonparametric</h2>
@@ -477,30 +462,43 @@ Meike Niederhausen and Nicky Wakim
 </ul></li>
 </ul>
 </section>
-<section id="the-good-and-the-bad-about-nonparametric-tests" class="slide level2">
-<h2>The good and the bad about nonparametric tests</h2>
+<section id="nonparametric-tests-pros-vs.-cons" class="slide level2">
+<h2>Nonparametric tests: Pros vs.&nbsp;cons</h2>
 <div class="columns">
 <div class="column">
-<p><strong>Good</strong></p>
+<div class="pink2">
+<div class="pink2-ttl">
+<p><strong>Pros</strong></p>
+</div>
+<div class="pink2-cont">
 <ul>
-<li>Fewer assumptions</li>
+<li>Fewer assumptions
+<ul>
+<li>Can handle smaller sample sizes</li>
+<li>No assumptions about the distribution of the data’s population</li>
+</ul></li>
 <li>Tests are based on ranks
 <ul>
 <li>Therefore outliers have no greater influence than non-outliers.</li>
-<li>Since tests are based on ranks we can apply these procedures to ordinal data
-<ul>
-<li>(where means and standard deviations are not meaningful).</li>
-</ul></li>
+<li>Since tests are based on ranks we can apply these procedures to ordinal data</li>
 </ul></li>
 </ul>
+</div>
+</div>
 </div><div class="column">
-<p><strong>Drawbacks</strong></p>
+<div class="green">
+<div class="green-ttl">
+<p><strong>Cons</strong></p>
+</div>
+<div class="green-cont">
 <ul>
 <li>Less powerful than parametric tests (due to loss of information when data are converted to ranks)</li>
-<li>While the test is easy, it may require substantial (computer) work to develop a confidence interval [by “inverting” the test].</li>
-<li>Theory was developed for continuous data (where ties are not possible); if population or data contain many ties, then a correction to the procedures must be implemented.</li>
-<li>Some procedures have “large” and “small” sample versions; the small sample versions require special tables or a computer.</li>
+<li>While the test is laid out for us, it may require substantial (computer) work to develop a confidence interval</li>
+<li>Ties in ranks make the test harder to implement</li>
+<li>Some nonparametric methods can be computationally intensive, especially for large datasets or complex designs</li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -508,9 +506,9 @@ Meike Niederhausen and Nicky Wakim
 <h2>Parametric and nonparametric tests</h2>
 <table>
 <colgroup>
-<col style="width: 36%">
-<col style="width: 31%">
-<col style="width: 31%">
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -522,37 +520,37 @@ Meike Niederhausen and Nicky Wakim
 <tbody>
 <tr class="odd">
 <td>Single sample, numeric</td>
-<td>Single mean hypothesis test or t-test (Lesson 11)</td>
-<td>Wilcoxon signed-rank test</td>
+<td>Single mean hypothesis test or t-test (L11)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
 </tr>
 <tr class="even">
 <td>Paired sample, numeric</td>
-<td>Mean difference (paired) hypothesis test or t-test (Lesson 12)</td>
-<td>Sign test or Wilcoxon signed-rank test</td>
+<td>Mean difference (paired) hypothesis test or t-test (L12)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
 </tr>
 <tr class="odd">
 <td>Two independent sample, numeric</td>
-<td>Difference in means hypothesis test or two sample t-test (Lesson 13)</td>
+<td>Difference in means hypothesis test or two sample t-test (L13)</td>
 <td>Wilcoxon rank-sum test or Mann-Whitney U test</td>
 </tr>
 <tr class="even">
 <td>Single sample, binary</td>
-<td>Single proportion hypothesis test (Lesson 15)</td>
+<td>Single proportion hypothesis test (L15)</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Two independent sample, binary</td>
-<td>Difference in proportions hypothesis test (Lesson 15)</td>
+<td>Difference in proportions hypothesis test (L15)</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Two or more independent samples, binary</td>
-<td>Chi-squared test (Lesson 16)</td>
+<td>2+ independent samples, binary</td>
+<td>Chi-squared test (L16)</td>
 <td>Fisher’s Exact test</td>
 </tr>
 <tr class="odd">
-<td>Two or more independent samples, numeric</td>
-<td>ANOVA test or F-test (Lesson 17)</td>
+<td>2+ independent samples, numeric</td>
+<td>ANOVA test or F-test (L17)</td>
 <td>Kruskal-Wallis test</td>
 </tr>
 </tbody>
@@ -573,7 +571,7 @@ Meike Niederhausen and Nicky Wakim
 <li>In words</li>
 <li>Alternative: one- or two-sided?</li>
 </ul></li>
-<li><p>Calculate the <span style="color:#70AD47"><strong>test statistic</strong></span> and <span style="color:#70AD47"><strong>p-value</strong></span> for Fisher Exact test in R</p>
+<li><p>Calculate the <span style="color:#70AD47"><strong>test statistic</strong></span> and <span style="color:#70AD47"><strong>p-value</strong></span></p>
 <ul>
 <li>We will not discuss the test statistic’s equation</li>
 </ul></li>
@@ -583,14 +581,85 @@ Meike Niederhausen and Nicky Wakim
 <li>Write a conclusion in the context of the problem</li>
 </ul></li>
 </ol>
+</section>
+<section id="poll-everywhere-question-1" class="slide level2">
+<h2>Poll Everywhere Question 1</h2>
+</section>
+<section id="poll-everywhere-question-2" class="slide level2">
+<h2>Poll Everywhere Question 2</h2>
 </section></section>
 <section>
-<section id="wilcoxon-signed-rank-test" class="title-slide slide level1 center">
-<h1>(Wilcoxon) Signed-rank test</h1>
-<p>For paired data or single samples;<br>
-accounts for sizes of differences</p>
+<section id="learning-objectives-2" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li>Understand the difference between and appropriate use of parametric and nonparametric tests</li>
+</ol>
+<div class="lob">
+<ol start="2" type="1">
+<li>Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.</li>
+</ol>
+</div>
+<ol start="3" type="1">
+<li><p>Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.</p></li>
+<li><p>Use the Fisher’s Exact test to determine if two categorical variables are associated.</p></li>
+<li><p>Use the Kruskal-Wallis test to compare two or more independent numeric samples.</p></li>
+</ol>
 </section>
-<section id="wilcoxon-signed-rank-test-1" class="slide level2">
+<section id="parametric-and-nonparametric-tests-1" class="slide level2">
+<h2>Parametric and nonparametric tests</h2>
+<table>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type of data</th>
+<th>Parametric test</th>
+<th>Nonparametric test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Single sample, numeric</td>
+<td>Single mean hypothesis test or t-test (L11)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="even">
+<td>Paired sample, numeric</td>
+<td>Mean difference (paired) hypothesis test or t-test (L12)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, numeric</td>
+<td>Difference in means hypothesis test or two sample t-test (L13)</td>
+<td>Wilcoxon rank-sum test or Mann-Whitney U test</td>
+</tr>
+<tr class="even">
+<td>Single sample, binary</td>
+<td>Single proportion hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, binary</td>
+<td>Difference in proportions hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2+ independent samples, binary</td>
+<td>Chi-squared test (L16)</td>
+<td>Fisher’s Exact test</td>
+</tr>
+<tr class="odd">
+<td>2+ independent samples, numeric</td>
+<td>ANOVA test or F-test (L17)</td>
+<td>Kruskal-Wallis test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wilcoxon-signed-rank-test" class="slide level2">
 <h2>(Wilcoxon) Signed-rank test</h2>
 <ul>
 <li>The (Wilcoxon) signed-rank test is used for
@@ -598,22 +667,31 @@ accounts for sizes of differences</p>
 <li>Paired samples (i.e., a single set of differences)</li>
 <li>One-sample comparison against a specified value</li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>If we want to see if data are symmetric (centered) around a certain value
 <ul>
 <li>For paired data, we may want to see if the data are symmetric around 0 to determine a difference</li>
 <li>For one sample, we may have an idea of a median value that our data may follow</li>
 </ul></li>
-<li>Think back to the parametric parallel of these!
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Think back to the parametric parallel of these!</strong>
 <ul>
 <li>If we apply the body temperature example to this: We would check if the data were symmetric around 98.6</li>
 </ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
 <li>Data do NOT need to be approximately normal</li>
 </ul>
 </section>
 <section id="example-intraocular-pressure-of-glaucoma-patients" class="slide level2">
 <h2>Example: Intraocular pressure of glaucoma patients</h2>
 <div class="columns">
-<div class="column">
+<div class="column" style="width:60%;">
 <ul>
 <li>Intraocular pressure of glaucoma patients is often reduced by treatment with adrenaline.</li>
 <li>A <strong>new synthetic drug</strong> is being considered, but it is more expensive than the <strong>current adrenaline alternative</strong>.</li>
@@ -624,27 +702,29 @@ accounts for sizes of differences</p>
 </ul></li>
 <li><strong>Reduction in pressure</strong> was recorded in each eye after following treatment (larger numbers indicate greater reduction)</li>
 </ul>
-</div><div class="column">
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:38%;">
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="eajzderdhx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eajzderdhx table {
+<div id="tsymbvmmop" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tsymbvmmop table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eajzderdhx thead, #eajzderdhx tbody, #eajzderdhx tfoot, #eajzderdhx tr, #eajzderdhx td, #eajzderdhx th {
+#tsymbvmmop thead, #tsymbvmmop tbody, #tsymbvmmop tfoot, #tsymbvmmop tr, #tsymbvmmop td, #tsymbvmmop th {
   border-style: none;
 }
 
-#eajzderdhx p {
+#tsymbvmmop p {
   margin: 0;
   padding: 0;
 }
 
-#eajzderdhx .gt_table {
+#tsymbvmmop .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -670,12 +750,12 @@ accounts for sizes of differences</p>
   border-left-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_caption {
+#tsymbvmmop .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eajzderdhx .gt_title {
+#tsymbvmmop .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -687,7 +767,7 @@ accounts for sizes of differences</p>
   border-bottom-width: 0;
 }
 
-#eajzderdhx .gt_subtitle {
+#tsymbvmmop .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -699,7 +779,7 @@ accounts for sizes of differences</p>
   border-top-width: 0;
 }
 
-#eajzderdhx .gt_heading {
+#tsymbvmmop .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -711,13 +791,13 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_bottom_border {
+#tsymbvmmop .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_col_headings {
+#tsymbvmmop .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -732,7 +812,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_col_heading {
+#tsymbvmmop .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -752,7 +832,7 @@ accounts for sizes of differences</p>
   overflow-x: hidden;
 }
 
-#eajzderdhx .gt_column_spanner_outer {
+#tsymbvmmop .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -764,15 +844,15 @@ accounts for sizes of differences</p>
   padding-right: 4px;
 }
 
-#eajzderdhx .gt_column_spanner_outer:first-child {
+#tsymbvmmop .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eajzderdhx .gt_column_spanner_outer:last-child {
+#tsymbvmmop .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eajzderdhx .gt_column_spanner {
+#tsymbvmmop .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -784,11 +864,11 @@ accounts for sizes of differences</p>
   width: 100%;
 }
 
-#eajzderdhx .gt_spanner_row {
+#tsymbvmmop .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eajzderdhx .gt_group_heading {
+#tsymbvmmop .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -814,7 +894,7 @@ accounts for sizes of differences</p>
   text-align: left;
 }
 
-#eajzderdhx .gt_empty_group_heading {
+#tsymbvmmop .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -829,15 +909,15 @@ accounts for sizes of differences</p>
   vertical-align: middle;
 }
 
-#eajzderdhx .gt_from_md > :first-child {
+#tsymbvmmop .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eajzderdhx .gt_from_md > :last-child {
+#tsymbvmmop .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eajzderdhx .gt_row {
+#tsymbvmmop .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -856,7 +936,7 @@ accounts for sizes of differences</p>
   overflow-x: hidden;
 }
 
-#eajzderdhx .gt_stub {
+#tsymbvmmop .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -869,7 +949,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#eajzderdhx .gt_stub_row_group {
+#tsymbvmmop .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -883,15 +963,15 @@ accounts for sizes of differences</p>
   vertical-align: top;
 }
 
-#eajzderdhx .gt_row_group_first td {
+#tsymbvmmop .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eajzderdhx .gt_row_group_first th {
+#tsymbvmmop .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eajzderdhx .gt_summary_row {
+#tsymbvmmop .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -901,16 +981,16 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#eajzderdhx .gt_first_summary_row {
+#tsymbvmmop .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_first_summary_row.thick {
+#tsymbvmmop .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eajzderdhx .gt_last_summary_row {
+#tsymbvmmop .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -920,7 +1000,7 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_grand_summary_row {
+#tsymbvmmop .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -930,7 +1010,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#eajzderdhx .gt_first_grand_summary_row {
+#tsymbvmmop .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -940,7 +1020,7 @@ accounts for sizes of differences</p>
   border-top-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_last_grand_summary_row_top {
+#tsymbvmmop .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -950,11 +1030,11 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_striped {
+#tsymbvmmop .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eajzderdhx .gt_table_body {
+#tsymbvmmop .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -963,7 +1043,7 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_footnotes {
+#tsymbvmmop .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -977,7 +1057,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_footnote {
+#tsymbvmmop .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -986,7 +1066,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#eajzderdhx .gt_sourcenotes {
+#tsymbvmmop .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1000,7 +1080,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#eajzderdhx .gt_sourcenote {
+#tsymbvmmop .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1008,72 +1088,72 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#eajzderdhx .gt_left {
+#tsymbvmmop .gt_left {
   text-align: left;
 }
 
-#eajzderdhx .gt_center {
+#tsymbvmmop .gt_center {
   text-align: center;
 }
 
-#eajzderdhx .gt_right {
+#tsymbvmmop .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eajzderdhx .gt_font_normal {
+#tsymbvmmop .gt_font_normal {
   font-weight: normal;
 }
 
-#eajzderdhx .gt_font_bold {
+#tsymbvmmop .gt_font_bold {
   font-weight: bold;
 }
 
-#eajzderdhx .gt_font_italic {
+#tsymbvmmop .gt_font_italic {
   font-style: italic;
 }
 
-#eajzderdhx .gt_super {
+#tsymbvmmop .gt_super {
   font-size: 65%;
 }
 
-#eajzderdhx .gt_footnote_marks {
+#tsymbvmmop .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eajzderdhx .gt_asterisk {
+#tsymbvmmop .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eajzderdhx .gt_indent_1 {
+#tsymbvmmop .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eajzderdhx .gt_indent_2 {
+#tsymbvmmop .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eajzderdhx .gt_indent_3 {
+#tsymbvmmop .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eajzderdhx .gt_indent_4 {
+#tsymbvmmop .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eajzderdhx .gt_indent_5 {
+#tsymbvmmop .gt_indent_5 {
   text-indent: 25px;
 }
 
-#eajzderdhx .katex-display {
+#tsymbvmmop .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#eajzderdhx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tsymbvmmop div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1206,26 +1286,40 @@ accounts for sizes of differences</p>
 </ul></li>
 <li>Then calculate the <strong>signed ranks</strong> as +/- the rank depending on whether the sign is +/-</li>
 </ul>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>IOP_ranks <span class="ot">&lt;-</span> IOP <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="at">Rank =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="fl">4.5</span>, <span class="fl">1.5</span>, </span>
+<span id="cb3-4"><a href="#cb3-4"></a>             <span class="fl">4.5</span>, <span class="cn">NA</span>, <span class="dv">3</span>, <span class="dv">6</span>),</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="at">Signed_rank =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-6"><a href="#cb3-6"></a>      d <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">~</span> <span class="sc">-</span>Rank,</span>
+<span id="cb3-7"><a href="#cb3-7"></a>      d <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">~</span> Rank</span>
+<span id="cb3-8"><a href="#cb3-8"></a>      )</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column">
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="moppombspv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#moppombspv table {
+<div id="prkbnwqulk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#prkbnwqulk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#moppombspv thead, #moppombspv tbody, #moppombspv tfoot, #moppombspv tr, #moppombspv td, #moppombspv th {
+#prkbnwqulk thead, #prkbnwqulk tbody, #prkbnwqulk tfoot, #prkbnwqulk tr, #prkbnwqulk td, #prkbnwqulk th {
   border-style: none;
 }
 
-#moppombspv p {
+#prkbnwqulk p {
   margin: 0;
   padding: 0;
 }
 
-#moppombspv .gt_table {
+#prkbnwqulk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1251,12 +1345,12 @@ accounts for sizes of differences</p>
   border-left-color: #D3D3D3;
 }
 
-#moppombspv .gt_caption {
+#prkbnwqulk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#moppombspv .gt_title {
+#prkbnwqulk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1268,7 +1362,7 @@ accounts for sizes of differences</p>
   border-bottom-width: 0;
 }
 
-#moppombspv .gt_subtitle {
+#prkbnwqulk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1280,7 +1374,7 @@ accounts for sizes of differences</p>
   border-top-width: 0;
 }
 
-#moppombspv .gt_heading {
+#prkbnwqulk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1292,13 +1386,13 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#moppombspv .gt_bottom_border {
+#prkbnwqulk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#moppombspv .gt_col_headings {
+#prkbnwqulk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1313,7 +1407,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#moppombspv .gt_col_heading {
+#prkbnwqulk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1333,7 +1427,7 @@ accounts for sizes of differences</p>
   overflow-x: hidden;
 }
 
-#moppombspv .gt_column_spanner_outer {
+#prkbnwqulk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1345,15 +1439,15 @@ accounts for sizes of differences</p>
   padding-right: 4px;
 }
 
-#moppombspv .gt_column_spanner_outer:first-child {
+#prkbnwqulk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#moppombspv .gt_column_spanner_outer:last-child {
+#prkbnwqulk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#moppombspv .gt_column_spanner {
+#prkbnwqulk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1365,11 +1459,11 @@ accounts for sizes of differences</p>
   width: 100%;
 }
 
-#moppombspv .gt_spanner_row {
+#prkbnwqulk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#moppombspv .gt_group_heading {
+#prkbnwqulk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1395,7 +1489,7 @@ accounts for sizes of differences</p>
   text-align: left;
 }
 
-#moppombspv .gt_empty_group_heading {
+#prkbnwqulk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1410,15 +1504,15 @@ accounts for sizes of differences</p>
   vertical-align: middle;
 }
 
-#moppombspv .gt_from_md > :first-child {
+#prkbnwqulk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#moppombspv .gt_from_md > :last-child {
+#prkbnwqulk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#moppombspv .gt_row {
+#prkbnwqulk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1437,7 +1531,7 @@ accounts for sizes of differences</p>
   overflow-x: hidden;
 }
 
-#moppombspv .gt_stub {
+#prkbnwqulk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1450,7 +1544,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#moppombspv .gt_stub_row_group {
+#prkbnwqulk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1464,15 +1558,15 @@ accounts for sizes of differences</p>
   vertical-align: top;
 }
 
-#moppombspv .gt_row_group_first td {
+#prkbnwqulk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#moppombspv .gt_row_group_first th {
+#prkbnwqulk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#moppombspv .gt_summary_row {
+#prkbnwqulk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1482,16 +1576,16 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#moppombspv .gt_first_summary_row {
+#prkbnwqulk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#moppombspv .gt_first_summary_row.thick {
+#prkbnwqulk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#moppombspv .gt_last_summary_row {
+#prkbnwqulk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1501,7 +1595,7 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#moppombspv .gt_grand_summary_row {
+#prkbnwqulk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1511,7 +1605,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#moppombspv .gt_first_grand_summary_row {
+#prkbnwqulk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1521,7 +1615,7 @@ accounts for sizes of differences</p>
   border-top-color: #D3D3D3;
 }
 
-#moppombspv .gt_last_grand_summary_row_top {
+#prkbnwqulk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1531,11 +1625,11 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#moppombspv .gt_striped {
+#prkbnwqulk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#moppombspv .gt_table_body {
+#prkbnwqulk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1544,7 +1638,7 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#moppombspv .gt_footnotes {
+#prkbnwqulk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1558,7 +1652,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#moppombspv .gt_footnote {
+#prkbnwqulk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1567,7 +1661,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#moppombspv .gt_sourcenotes {
+#prkbnwqulk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1581,7 +1675,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#moppombspv .gt_sourcenote {
+#prkbnwqulk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1589,72 +1683,72 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#moppombspv .gt_left {
+#prkbnwqulk .gt_left {
   text-align: left;
 }
 
-#moppombspv .gt_center {
+#prkbnwqulk .gt_center {
   text-align: center;
 }
 
-#moppombspv .gt_right {
+#prkbnwqulk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#moppombspv .gt_font_normal {
+#prkbnwqulk .gt_font_normal {
   font-weight: normal;
 }
 
-#moppombspv .gt_font_bold {
+#prkbnwqulk .gt_font_bold {
   font-weight: bold;
 }
 
-#moppombspv .gt_font_italic {
+#prkbnwqulk .gt_font_italic {
   font-style: italic;
 }
 
-#moppombspv .gt_super {
+#prkbnwqulk .gt_super {
   font-size: 65%;
 }
 
-#moppombspv .gt_footnote_marks {
+#prkbnwqulk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#moppombspv .gt_asterisk {
+#prkbnwqulk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#moppombspv .gt_indent_1 {
+#prkbnwqulk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#moppombspv .gt_indent_2 {
+#prkbnwqulk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#moppombspv .gt_indent_3 {
+#prkbnwqulk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#moppombspv .gt_indent_4 {
+#prkbnwqulk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#moppombspv .gt_indent_5 {
+#prkbnwqulk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#moppombspv .katex-display {
+#prkbnwqulk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#moppombspv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#prkbnwqulk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1727,30 +1821,28 @@ accounts for sizes of differences</p>
 </div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section id="wilcoxon-signed-rank-test-test-statistic" class="slide level2">
 <h2>(Wilcoxon) Signed-rank test: Test statistic</h2>
 <ul>
 <li>If the null is true:
 <ul>
-<li>The population is symmetric around some point ( <span class="math inline">\(\tilde{\mu}_0 = 0\)</span> , typically), and</li>
+<li>The population is symmetric around some point (<span class="math inline">\(\tilde{\mu}_0 = 0\)</span> , typically), and</li>
 <li>The <strong>overall size of the positive ranks should be about the same as the overall size of negative ranks</strong>.</li>
 </ul></li>
-<li>Note:
+<li>We can split the positive and negative ranks
 <ul>
-<li>The sum of the ranks (not signed) <span class="math inline">\(1,2,\dotsc, n\)</span> is always <span class="math inline">\(n(n+1)/2\)</span>,</li>
-<li>which can be broken down as the
-<ul>
-<li>sum of the positive ranks ( <span class="math inline">\(T^+\)</span> )</li>
-<li>plus the sum of the negative ranks ( <span class="math inline">\(T^-\)</span> )</li>
-</ul></li>
+<li><span class="math inline">\(T^+\)</span> = sum of the positive ranks</li>
+<li><span class="math inline">\(T^-\)</span> = sum of the negative ranks</li>
 </ul></li>
 <li>Thus, any of the following can be used as a test statistic and will lead to the same conclusion:
 <ul>
-<li><span class="math inline">\(T^+\)</span></li>
+<li><span class="math inline">\(T^+\)</span> (what R is using)</li>
 <li><span class="math inline">\(T^-\)</span></li>
 <li><span class="math inline">\(T^+ - T^-\)</span></li>
-<li><span class="math inline">\(\min(T^+,T^−) = T_0\)</span> (our focus)</li>
+<li><span class="math inline">\(\min(T^+,|T^−|) = T_0\)</span></li>
 </ul></li>
 </ul>
 </section>
@@ -1773,33 +1865,29 @@ accounts for sizes of differences</p>
 </ul>
 <p>&nbsp;</p>
 <ul>
-<li>The sum of the ranks <span class="math inline">\(1,2,\dotsc, n\)</span> is always <span class="math inline">\(n(n+1)/2\)</span>:
-<ul>
-<li><span class="math inline">\(n(n+1)/2 = 6(7)/2 = 21\)</span></li>
-<li><span class="math inline">\(T^+ + |T^-| = 19.5 + |-1.5| = 21\)</span></li>
-</ul></li>
+<li><span class="math inline">\(\min(T^+,|T^−|) = T_0 = 1.5\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="levlcqebae" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#levlcqebae table {
+<div id="vjgqzzqhff" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vjgqzzqhff table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#levlcqebae thead, #levlcqebae tbody, #levlcqebae tfoot, #levlcqebae tr, #levlcqebae td, #levlcqebae th {
+#vjgqzzqhff thead, #vjgqzzqhff tbody, #vjgqzzqhff tfoot, #vjgqzzqhff tr, #vjgqzzqhff td, #vjgqzzqhff th {
   border-style: none;
 }
 
-#levlcqebae p {
+#vjgqzzqhff p {
   margin: 0;
   padding: 0;
 }
 
-#levlcqebae .gt_table {
+#vjgqzzqhff .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1825,12 +1913,12 @@ accounts for sizes of differences</p>
   border-left-color: #D3D3D3;
 }
 
-#levlcqebae .gt_caption {
+#vjgqzzqhff .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#levlcqebae .gt_title {
+#vjgqzzqhff .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1842,7 +1930,7 @@ accounts for sizes of differences</p>
   border-bottom-width: 0;
 }
 
-#levlcqebae .gt_subtitle {
+#vjgqzzqhff .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1854,7 +1942,7 @@ accounts for sizes of differences</p>
   border-top-width: 0;
 }
 
-#levlcqebae .gt_heading {
+#vjgqzzqhff .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1866,13 +1954,13 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#levlcqebae .gt_bottom_border {
+#vjgqzzqhff .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#levlcqebae .gt_col_headings {
+#vjgqzzqhff .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1887,7 +1975,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#levlcqebae .gt_col_heading {
+#vjgqzzqhff .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1907,7 +1995,7 @@ accounts for sizes of differences</p>
   overflow-x: hidden;
 }
 
-#levlcqebae .gt_column_spanner_outer {
+#vjgqzzqhff .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1919,15 +2007,15 @@ accounts for sizes of differences</p>
   padding-right: 4px;
 }
 
-#levlcqebae .gt_column_spanner_outer:first-child {
+#vjgqzzqhff .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#levlcqebae .gt_column_spanner_outer:last-child {
+#vjgqzzqhff .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#levlcqebae .gt_column_spanner {
+#vjgqzzqhff .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1939,11 +2027,11 @@ accounts for sizes of differences</p>
   width: 100%;
 }
 
-#levlcqebae .gt_spanner_row {
+#vjgqzzqhff .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#levlcqebae .gt_group_heading {
+#vjgqzzqhff .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1969,7 +2057,7 @@ accounts for sizes of differences</p>
   text-align: left;
 }
 
-#levlcqebae .gt_empty_group_heading {
+#vjgqzzqhff .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1984,15 +2072,15 @@ accounts for sizes of differences</p>
   vertical-align: middle;
 }
 
-#levlcqebae .gt_from_md > :first-child {
+#vjgqzzqhff .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#levlcqebae .gt_from_md > :last-child {
+#vjgqzzqhff .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#levlcqebae .gt_row {
+#vjgqzzqhff .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2011,7 +2099,7 @@ accounts for sizes of differences</p>
   overflow-x: hidden;
 }
 
-#levlcqebae .gt_stub {
+#vjgqzzqhff .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2024,7 +2112,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#levlcqebae .gt_stub_row_group {
+#vjgqzzqhff .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2038,15 +2126,15 @@ accounts for sizes of differences</p>
   vertical-align: top;
 }
 
-#levlcqebae .gt_row_group_first td {
+#vjgqzzqhff .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#levlcqebae .gt_row_group_first th {
+#vjgqzzqhff .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#levlcqebae .gt_summary_row {
+#vjgqzzqhff .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2056,16 +2144,16 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#levlcqebae .gt_first_summary_row {
+#vjgqzzqhff .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#levlcqebae .gt_first_summary_row.thick {
+#vjgqzzqhff .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#levlcqebae .gt_last_summary_row {
+#vjgqzzqhff .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2075,7 +2163,7 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#levlcqebae .gt_grand_summary_row {
+#vjgqzzqhff .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2085,7 +2173,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#levlcqebae .gt_first_grand_summary_row {
+#vjgqzzqhff .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2095,7 +2183,7 @@ accounts for sizes of differences</p>
   border-top-color: #D3D3D3;
 }
 
-#levlcqebae .gt_last_grand_summary_row_top {
+#vjgqzzqhff .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2105,11 +2193,11 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#levlcqebae .gt_striped {
+#vjgqzzqhff .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#levlcqebae .gt_table_body {
+#vjgqzzqhff .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2118,7 +2206,7 @@ accounts for sizes of differences</p>
   border-bottom-color: #D3D3D3;
 }
 
-#levlcqebae .gt_footnotes {
+#vjgqzzqhff .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2132,7 +2220,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#levlcqebae .gt_footnote {
+#vjgqzzqhff .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2141,7 +2229,7 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#levlcqebae .gt_sourcenotes {
+#vjgqzzqhff .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2155,7 +2243,7 @@ accounts for sizes of differences</p>
   border-right-color: #D3D3D3;
 }
 
-#levlcqebae .gt_sourcenote {
+#vjgqzzqhff .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2163,72 +2251,72 @@ accounts for sizes of differences</p>
   padding-right: 5px;
 }
 
-#levlcqebae .gt_left {
+#vjgqzzqhff .gt_left {
   text-align: left;
 }
 
-#levlcqebae .gt_center {
+#vjgqzzqhff .gt_center {
   text-align: center;
 }
 
-#levlcqebae .gt_right {
+#vjgqzzqhff .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#levlcqebae .gt_font_normal {
+#vjgqzzqhff .gt_font_normal {
   font-weight: normal;
 }
 
-#levlcqebae .gt_font_bold {
+#vjgqzzqhff .gt_font_bold {
   font-weight: bold;
 }
 
-#levlcqebae .gt_font_italic {
+#vjgqzzqhff .gt_font_italic {
   font-style: italic;
 }
 
-#levlcqebae .gt_super {
+#vjgqzzqhff .gt_super {
   font-size: 65%;
 }
 
-#levlcqebae .gt_footnote_marks {
+#vjgqzzqhff .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#levlcqebae .gt_asterisk {
+#vjgqzzqhff .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#levlcqebae .gt_indent_1 {
+#vjgqzzqhff .gt_indent_1 {
   text-indent: 5px;
 }
 
-#levlcqebae .gt_indent_2 {
+#vjgqzzqhff .gt_indent_2 {
   text-indent: 10px;
 }
 
-#levlcqebae .gt_indent_3 {
+#vjgqzzqhff .gt_indent_3 {
   text-indent: 15px;
 }
 
-#levlcqebae .gt_indent_4 {
+#vjgqzzqhff .gt_indent_4 {
   text-indent: 20px;
 }
 
-#levlcqebae .gt_indent_5 {
+#vjgqzzqhff .gt_indent_5 {
   text-indent: 25px;
 }
 
-#levlcqebae .katex-display {
+#vjgqzzqhff .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#levlcqebae div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vjgqzzqhff div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2332,10 +2420,10 @@ accounts for sizes of differences</p>
 <h2>(Wilcoxon) Signed-rank test in R: Glaucoma example</h2>
 <p>“Attempt” with exact p-value &amp; running one sample test with differences</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Exact p-value</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">wilcox.test</span>(<span class="at">x =</span> IOP<span class="sc">$</span>d, </span>
-<span id="cb3-3"><a href="#cb3-3"></a>        <span class="at">alternative =</span> <span class="fu">c</span>(<span class="st">"two.sided"</span>), <span class="at">mu =</span> <span class="dv">0</span>, </span>
-<span id="cb3-4"><a href="#cb3-4"></a>        <span class="at">exact =</span> <span class="cn">TRUE</span>, <span class="at">correct =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Exact p-value</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">wilcox.test</span>(<span class="at">x =</span> IOP<span class="sc">$</span>d, </span>
+<span id="cb4-3"><a href="#cb4-3"></a>        <span class="at">alternative =</span> <span class="fu">c</span>(<span class="st">"two.sided"</span>), <span class="at">mu =</span> <span class="dv">0</span>, </span>
+<span id="cb4-4"><a href="#cb4-4"></a>        <span class="at">exact =</span> <span class="cn">TRUE</span>, <span class="at">correct =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Wilcoxon signed rank test with continuity correction
@@ -2372,7 +2460,7 @@ alternative hypothesis: true location is not equal to 0</code></pre>
 <p>&nbsp;</p>
 <p><strong>Not-so-real example:</strong> Run (Wilcoxon) Signed-rank test for paired data with null <span class="math inline">\(m = 0.7\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">wilcox.test</span>(<span class="at">x =</span> IOP<span class="sc">$</span>d, <span class="at">mu =</span> <span class="fl">0.7</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">wilcox.test</span>(<span class="at">x =</span> IOP<span class="sc">$</span>d, <span class="at">mu =</span> <span class="fl">0.7</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Wilcoxon signed rank test with continuity correction
@@ -2384,12 +2472,77 @@ alternative hypothesis: true location is not equal to 0.7</code></pre>
 </div>
 </section></section>
 <section>
-<section id="wilcoxon-rank-sum-test" class="title-slide slide level1 center">
-<h1>Wilcoxon rank-sum test</h1>
-<p>For two independent samples<br>
-a.k.a Mann-Whitney U test</p>
+<section id="learning-objectives-3" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Understand the difference between and appropriate use of parametric and nonparametric tests</p></li>
+<li><p>Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.</p></li>
+</ol>
+<div class="lob">
+<ol start="3" type="1">
+<li>Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.</li>
+</ol>
+</div>
+<ol start="4" type="1">
+<li><p>Use the Fisher’s Exact test to determine if two categorical variables are associated.</p></li>
+<li><p>Use the Kruskal-Wallis test to compare two or more independent numeric samples.</p></li>
+</ol>
 </section>
-<section id="wilcoxon-rank-sum-test-1" class="slide level2">
+<section id="parametric-and-nonparametric-tests-2" class="slide level2">
+<h2>Parametric and nonparametric tests</h2>
+<table>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type of data</th>
+<th>Parametric test</th>
+<th>Nonparametric test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Single sample, numeric</td>
+<td>Single mean hypothesis test or t-test (L11)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="even">
+<td>Paired sample, numeric</td>
+<td>Mean difference (paired) hypothesis test or t-test (L12)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, numeric</td>
+<td>Difference in means hypothesis test or two sample t-test (L13)</td>
+<td>Wilcoxon rank-sum test or Mann-Whitney U test</td>
+</tr>
+<tr class="even">
+<td>Single sample, binary</td>
+<td>Single proportion hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, binary</td>
+<td>Difference in proportions hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2+ independent samples, binary</td>
+<td>Chi-squared test (L16)</td>
+<td>Fisher’s Exact test</td>
+</tr>
+<tr class="odd">
+<td>2+ independent samples, numeric</td>
+<td>ANOVA test or F-test (L17)</td>
+<td>Kruskal-Wallis test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wilcoxon-rank-sum-test" class="slide level2">
 <h2>Wilcoxon rank-sum test</h2>
 <ul>
 <li><p>The nonparametric alternative to the two-sample <span class="math inline">\(t\)</span>-test</p>
@@ -2418,23 +2571,23 @@ a.k.a Mann-Whitney U test</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="wzftzswpub" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wzftzswpub table {
+<div id="pbdnmrxqdx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pbdnmrxqdx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wzftzswpub thead, #wzftzswpub tbody, #wzftzswpub tfoot, #wzftzswpub tr, #wzftzswpub td, #wzftzswpub th {
+#pbdnmrxqdx thead, #pbdnmrxqdx tbody, #pbdnmrxqdx tfoot, #pbdnmrxqdx tr, #pbdnmrxqdx td, #pbdnmrxqdx th {
   border-style: none;
 }
 
-#wzftzswpub p {
+#pbdnmrxqdx p {
   margin: 0;
   padding: 0;
 }
 
-#wzftzswpub .gt_table {
+#pbdnmrxqdx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2460,12 +2613,12 @@ a.k.a Mann-Whitney U test</p>
   border-left-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_caption {
+#pbdnmrxqdx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wzftzswpub .gt_title {
+#pbdnmrxqdx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2477,7 +2630,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-width: 0;
 }
 
-#wzftzswpub .gt_subtitle {
+#pbdnmrxqdx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2489,7 +2642,7 @@ a.k.a Mann-Whitney U test</p>
   border-top-width: 0;
 }
 
-#wzftzswpub .gt_heading {
+#pbdnmrxqdx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2501,13 +2654,13 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_bottom_border {
+#pbdnmrxqdx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_col_headings {
+#pbdnmrxqdx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2522,7 +2675,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_col_heading {
+#pbdnmrxqdx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2542,7 +2695,7 @@ a.k.a Mann-Whitney U test</p>
   overflow-x: hidden;
 }
 
-#wzftzswpub .gt_column_spanner_outer {
+#pbdnmrxqdx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2554,15 +2707,15 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 4px;
 }
 
-#wzftzswpub .gt_column_spanner_outer:first-child {
+#pbdnmrxqdx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wzftzswpub .gt_column_spanner_outer:last-child {
+#pbdnmrxqdx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wzftzswpub .gt_column_spanner {
+#pbdnmrxqdx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2574,11 +2727,11 @@ a.k.a Mann-Whitney U test</p>
   width: 100%;
 }
 
-#wzftzswpub .gt_spanner_row {
+#pbdnmrxqdx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wzftzswpub .gt_group_heading {
+#pbdnmrxqdx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2604,7 +2757,7 @@ a.k.a Mann-Whitney U test</p>
   text-align: left;
 }
 
-#wzftzswpub .gt_empty_group_heading {
+#pbdnmrxqdx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2619,15 +2772,15 @@ a.k.a Mann-Whitney U test</p>
   vertical-align: middle;
 }
 
-#wzftzswpub .gt_from_md > :first-child {
+#pbdnmrxqdx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wzftzswpub .gt_from_md > :last-child {
+#pbdnmrxqdx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wzftzswpub .gt_row {
+#pbdnmrxqdx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2646,7 +2799,7 @@ a.k.a Mann-Whitney U test</p>
   overflow-x: hidden;
 }
 
-#wzftzswpub .gt_stub {
+#pbdnmrxqdx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2659,7 +2812,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#wzftzswpub .gt_stub_row_group {
+#pbdnmrxqdx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2673,15 +2826,15 @@ a.k.a Mann-Whitney U test</p>
   vertical-align: top;
 }
 
-#wzftzswpub .gt_row_group_first td {
+#pbdnmrxqdx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wzftzswpub .gt_row_group_first th {
+#pbdnmrxqdx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wzftzswpub .gt_summary_row {
+#pbdnmrxqdx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2691,16 +2844,16 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#wzftzswpub .gt_first_summary_row {
+#pbdnmrxqdx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_first_summary_row.thick {
+#pbdnmrxqdx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wzftzswpub .gt_last_summary_row {
+#pbdnmrxqdx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2710,7 +2863,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_grand_summary_row {
+#pbdnmrxqdx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2720,7 +2873,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#wzftzswpub .gt_first_grand_summary_row {
+#pbdnmrxqdx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2730,7 +2883,7 @@ a.k.a Mann-Whitney U test</p>
   border-top-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_last_grand_summary_row_top {
+#pbdnmrxqdx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2740,11 +2893,11 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_striped {
+#pbdnmrxqdx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wzftzswpub .gt_table_body {
+#pbdnmrxqdx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2753,7 +2906,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_footnotes {
+#pbdnmrxqdx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2767,7 +2920,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_footnote {
+#pbdnmrxqdx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2776,7 +2929,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#wzftzswpub .gt_sourcenotes {
+#pbdnmrxqdx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2790,7 +2943,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#wzftzswpub .gt_sourcenote {
+#pbdnmrxqdx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2798,72 +2951,72 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#wzftzswpub .gt_left {
+#pbdnmrxqdx .gt_left {
   text-align: left;
 }
 
-#wzftzswpub .gt_center {
+#pbdnmrxqdx .gt_center {
   text-align: center;
 }
 
-#wzftzswpub .gt_right {
+#pbdnmrxqdx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wzftzswpub .gt_font_normal {
+#pbdnmrxqdx .gt_font_normal {
   font-weight: normal;
 }
 
-#wzftzswpub .gt_font_bold {
+#pbdnmrxqdx .gt_font_bold {
   font-weight: bold;
 }
 
-#wzftzswpub .gt_font_italic {
+#pbdnmrxqdx .gt_font_italic {
   font-style: italic;
 }
 
-#wzftzswpub .gt_super {
+#pbdnmrxqdx .gt_super {
   font-size: 65%;
 }
 
-#wzftzswpub .gt_footnote_marks {
+#pbdnmrxqdx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wzftzswpub .gt_asterisk {
+#pbdnmrxqdx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wzftzswpub .gt_indent_1 {
+#pbdnmrxqdx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wzftzswpub .gt_indent_2 {
+#pbdnmrxqdx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wzftzswpub .gt_indent_3 {
+#pbdnmrxqdx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wzftzswpub .gt_indent_4 {
+#pbdnmrxqdx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wzftzswpub .gt_indent_5 {
+#pbdnmrxqdx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wzftzswpub .katex-display {
+#pbdnmrxqdx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wzftzswpub div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pbdnmrxqdx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2896,23 +3049,23 @@ a.k.a Mann-Whitney U test</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="ymgnszatzz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ymgnszatzz table {
+<div id="ctincwuskl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ctincwuskl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ymgnszatzz thead, #ymgnszatzz tbody, #ymgnszatzz tfoot, #ymgnszatzz tr, #ymgnszatzz td, #ymgnszatzz th {
+#ctincwuskl thead, #ctincwuskl tbody, #ctincwuskl tfoot, #ctincwuskl tr, #ctincwuskl td, #ctincwuskl th {
   border-style: none;
 }
 
-#ymgnszatzz p {
+#ctincwuskl p {
   margin: 0;
   padding: 0;
 }
 
-#ymgnszatzz .gt_table {
+#ctincwuskl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2938,12 +3091,12 @@ a.k.a Mann-Whitney U test</p>
   border-left-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_caption {
+#ctincwuskl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ymgnszatzz .gt_title {
+#ctincwuskl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2955,7 +3108,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-width: 0;
 }
 
-#ymgnszatzz .gt_subtitle {
+#ctincwuskl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2967,7 +3120,7 @@ a.k.a Mann-Whitney U test</p>
   border-top-width: 0;
 }
 
-#ymgnszatzz .gt_heading {
+#ctincwuskl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2979,13 +3132,13 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_bottom_border {
+#ctincwuskl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_col_headings {
+#ctincwuskl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3000,7 +3153,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_col_heading {
+#ctincwuskl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3020,7 +3173,7 @@ a.k.a Mann-Whitney U test</p>
   overflow-x: hidden;
 }
 
-#ymgnszatzz .gt_column_spanner_outer {
+#ctincwuskl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3032,15 +3185,15 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 4px;
 }
 
-#ymgnszatzz .gt_column_spanner_outer:first-child {
+#ctincwuskl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ymgnszatzz .gt_column_spanner_outer:last-child {
+#ctincwuskl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ymgnszatzz .gt_column_spanner {
+#ctincwuskl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3052,11 +3205,11 @@ a.k.a Mann-Whitney U test</p>
   width: 100%;
 }
 
-#ymgnszatzz .gt_spanner_row {
+#ctincwuskl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ymgnszatzz .gt_group_heading {
+#ctincwuskl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3082,7 +3235,7 @@ a.k.a Mann-Whitney U test</p>
   text-align: left;
 }
 
-#ymgnszatzz .gt_empty_group_heading {
+#ctincwuskl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3097,15 +3250,15 @@ a.k.a Mann-Whitney U test</p>
   vertical-align: middle;
 }
 
-#ymgnszatzz .gt_from_md > :first-child {
+#ctincwuskl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ymgnszatzz .gt_from_md > :last-child {
+#ctincwuskl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ymgnszatzz .gt_row {
+#ctincwuskl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3124,7 +3277,7 @@ a.k.a Mann-Whitney U test</p>
   overflow-x: hidden;
 }
 
-#ymgnszatzz .gt_stub {
+#ctincwuskl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3137,7 +3290,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#ymgnszatzz .gt_stub_row_group {
+#ctincwuskl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3151,15 +3304,15 @@ a.k.a Mann-Whitney U test</p>
   vertical-align: top;
 }
 
-#ymgnszatzz .gt_row_group_first td {
+#ctincwuskl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ymgnszatzz .gt_row_group_first th {
+#ctincwuskl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ymgnszatzz .gt_summary_row {
+#ctincwuskl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3169,16 +3322,16 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#ymgnszatzz .gt_first_summary_row {
+#ctincwuskl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_first_summary_row.thick {
+#ctincwuskl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ymgnszatzz .gt_last_summary_row {
+#ctincwuskl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3188,7 +3341,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_grand_summary_row {
+#ctincwuskl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3198,7 +3351,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#ymgnszatzz .gt_first_grand_summary_row {
+#ctincwuskl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3208,7 +3361,7 @@ a.k.a Mann-Whitney U test</p>
   border-top-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_last_grand_summary_row_top {
+#ctincwuskl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3218,11 +3371,11 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_striped {
+#ctincwuskl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ymgnszatzz .gt_table_body {
+#ctincwuskl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3231,7 +3384,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_footnotes {
+#ctincwuskl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3245,7 +3398,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_footnote {
+#ctincwuskl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3254,7 +3407,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#ymgnszatzz .gt_sourcenotes {
+#ctincwuskl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3268,7 +3421,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#ymgnszatzz .gt_sourcenote {
+#ctincwuskl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3276,72 +3429,72 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#ymgnszatzz .gt_left {
+#ctincwuskl .gt_left {
   text-align: left;
 }
 
-#ymgnszatzz .gt_center {
+#ctincwuskl .gt_center {
   text-align: center;
 }
 
-#ymgnszatzz .gt_right {
+#ctincwuskl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ymgnszatzz .gt_font_normal {
+#ctincwuskl .gt_font_normal {
   font-weight: normal;
 }
 
-#ymgnszatzz .gt_font_bold {
+#ctincwuskl .gt_font_bold {
   font-weight: bold;
 }
 
-#ymgnszatzz .gt_font_italic {
+#ctincwuskl .gt_font_italic {
   font-style: italic;
 }
 
-#ymgnszatzz .gt_super {
+#ctincwuskl .gt_super {
   font-size: 65%;
 }
 
-#ymgnszatzz .gt_footnote_marks {
+#ctincwuskl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ymgnszatzz .gt_asterisk {
+#ctincwuskl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ymgnszatzz .gt_indent_1 {
+#ctincwuskl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ymgnszatzz .gt_indent_2 {
+#ctincwuskl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ymgnszatzz .gt_indent_3 {
+#ctincwuskl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ymgnszatzz .gt_indent_4 {
+#ctincwuskl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ymgnszatzz .gt_indent_5 {
+#ctincwuskl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ymgnszatzz .katex-display {
+#ctincwuskl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ymgnszatzz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ctincwuskl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3404,7 +3557,7 @@ a.k.a Mann-Whitney U test</p>
 <h2>Example: Visualize the data</h2>
 <p><strong>Do the independent samples have the same distribution?</strong></p>
 
-<img data-src="19_Non_parametric_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="19_Non_parametric_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="wilcoxon-rank-sum-test-calculating-test-statistic-w" class="slide level2">
 <h2>Wilcoxon rank-sum test: Calculating test statistic <span class="math inline">\(W\)</span></h2>
 <div class="columns">
@@ -3432,23 +3585,23 @@ a.k.a Mann-Whitney U test</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="pfzflpntqa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pfzflpntqa table {
+<div id="fcjefbulsa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fcjefbulsa table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#pfzflpntqa thead, #pfzflpntqa tbody, #pfzflpntqa tfoot, #pfzflpntqa tr, #pfzflpntqa td, #pfzflpntqa th {
+#fcjefbulsa thead, #fcjefbulsa tbody, #fcjefbulsa tfoot, #fcjefbulsa tr, #fcjefbulsa td, #fcjefbulsa th {
   border-style: none;
 }
 
-#pfzflpntqa p {
+#fcjefbulsa p {
   margin: 0;
   padding: 0;
 }
 
-#pfzflpntqa .gt_table {
+#fcjefbulsa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3474,12 +3627,12 @@ a.k.a Mann-Whitney U test</p>
   border-left-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_caption {
+#fcjefbulsa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#pfzflpntqa .gt_title {
+#fcjefbulsa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3491,7 +3644,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-width: 0;
 }
 
-#pfzflpntqa .gt_subtitle {
+#fcjefbulsa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3503,7 +3656,7 @@ a.k.a Mann-Whitney U test</p>
   border-top-width: 0;
 }
 
-#pfzflpntqa .gt_heading {
+#fcjefbulsa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3515,13 +3668,13 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_bottom_border {
+#fcjefbulsa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_col_headings {
+#fcjefbulsa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3536,7 +3689,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_col_heading {
+#fcjefbulsa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3556,7 +3709,7 @@ a.k.a Mann-Whitney U test</p>
   overflow-x: hidden;
 }
 
-#pfzflpntqa .gt_column_spanner_outer {
+#fcjefbulsa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3568,15 +3721,15 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 4px;
 }
 
-#pfzflpntqa .gt_column_spanner_outer:first-child {
+#fcjefbulsa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pfzflpntqa .gt_column_spanner_outer:last-child {
+#fcjefbulsa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pfzflpntqa .gt_column_spanner {
+#fcjefbulsa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3588,11 +3741,11 @@ a.k.a Mann-Whitney U test</p>
   width: 100%;
 }
 
-#pfzflpntqa .gt_spanner_row {
+#fcjefbulsa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#pfzflpntqa .gt_group_heading {
+#fcjefbulsa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3618,7 +3771,7 @@ a.k.a Mann-Whitney U test</p>
   text-align: left;
 }
 
-#pfzflpntqa .gt_empty_group_heading {
+#fcjefbulsa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3633,15 +3786,15 @@ a.k.a Mann-Whitney U test</p>
   vertical-align: middle;
 }
 
-#pfzflpntqa .gt_from_md > :first-child {
+#fcjefbulsa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pfzflpntqa .gt_from_md > :last-child {
+#fcjefbulsa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pfzflpntqa .gt_row {
+#fcjefbulsa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3660,7 +3813,7 @@ a.k.a Mann-Whitney U test</p>
   overflow-x: hidden;
 }
 
-#pfzflpntqa .gt_stub {
+#fcjefbulsa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3673,7 +3826,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#pfzflpntqa .gt_stub_row_group {
+#fcjefbulsa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3687,15 +3840,15 @@ a.k.a Mann-Whitney U test</p>
   vertical-align: top;
 }
 
-#pfzflpntqa .gt_row_group_first td {
+#fcjefbulsa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#pfzflpntqa .gt_row_group_first th {
+#fcjefbulsa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#pfzflpntqa .gt_summary_row {
+#fcjefbulsa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3705,16 +3858,16 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#pfzflpntqa .gt_first_summary_row {
+#fcjefbulsa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_first_summary_row.thick {
+#fcjefbulsa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#pfzflpntqa .gt_last_summary_row {
+#fcjefbulsa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3724,7 +3877,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_grand_summary_row {
+#fcjefbulsa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3734,7 +3887,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#pfzflpntqa .gt_first_grand_summary_row {
+#fcjefbulsa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3744,7 +3897,7 @@ a.k.a Mann-Whitney U test</p>
   border-top-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_last_grand_summary_row_top {
+#fcjefbulsa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3754,11 +3907,11 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_striped {
+#fcjefbulsa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pfzflpntqa .gt_table_body {
+#fcjefbulsa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3767,7 +3920,7 @@ a.k.a Mann-Whitney U test</p>
   border-bottom-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_footnotes {
+#fcjefbulsa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3781,7 +3934,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_footnote {
+#fcjefbulsa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3790,7 +3943,7 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#pfzflpntqa .gt_sourcenotes {
+#fcjefbulsa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3804,7 +3957,7 @@ a.k.a Mann-Whitney U test</p>
   border-right-color: #D3D3D3;
 }
 
-#pfzflpntqa .gt_sourcenote {
+#fcjefbulsa .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3812,72 +3965,72 @@ a.k.a Mann-Whitney U test</p>
   padding-right: 5px;
 }
 
-#pfzflpntqa .gt_left {
+#fcjefbulsa .gt_left {
   text-align: left;
 }
 
-#pfzflpntqa .gt_center {
+#fcjefbulsa .gt_center {
   text-align: center;
 }
 
-#pfzflpntqa .gt_right {
+#fcjefbulsa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pfzflpntqa .gt_font_normal {
+#fcjefbulsa .gt_font_normal {
   font-weight: normal;
 }
 
-#pfzflpntqa .gt_font_bold {
+#fcjefbulsa .gt_font_bold {
   font-weight: bold;
 }
 
-#pfzflpntqa .gt_font_italic {
+#fcjefbulsa .gt_font_italic {
   font-style: italic;
 }
 
-#pfzflpntqa .gt_super {
+#fcjefbulsa .gt_super {
   font-size: 65%;
 }
 
-#pfzflpntqa .gt_footnote_marks {
+#fcjefbulsa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#pfzflpntqa .gt_asterisk {
+#fcjefbulsa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#pfzflpntqa .gt_indent_1 {
+#fcjefbulsa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#pfzflpntqa .gt_indent_2 {
+#fcjefbulsa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#pfzflpntqa .gt_indent_3 {
+#fcjefbulsa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#pfzflpntqa .gt_indent_4 {
+#fcjefbulsa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#pfzflpntqa .gt_indent_5 {
+#fcjefbulsa .gt_indent_5 {
   text-indent: 25px;
 }
 
-#pfzflpntqa .katex-display {
+#fcjefbulsa .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#pfzflpntqa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fcjefbulsa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3977,10 +4130,10 @@ a.k.a Mann-Whitney U test</p>
 <h2>Wilcoxon rank-sum test: using R</h2>
 <p>Exact p-value</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">wilcox.test</span>(Current <span class="sc">~</span> Group, </span>
-<span id="cb7-2"><a href="#cb7-2"></a>            <span class="at">data =</span> CPZdata2, </span>
-<span id="cb7-3"><a href="#cb7-3"></a>            <span class="at">alternative =</span> <span class="fu">c</span>(<span class="st">"two.sided"</span>), <span class="at">mu =</span> <span class="dv">0</span>, </span>
-<span id="cb7-4"><a href="#cb7-4"></a>            <span class="at">exact =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">wilcox.test</span>(Current <span class="sc">~</span> Group, </span>
+<span id="cb8-2"><a href="#cb8-2"></a>            <span class="at">data =</span> CPZdata2, </span>
+<span id="cb8-3"><a href="#cb8-3"></a>            <span class="at">alternative =</span> <span class="fu">c</span>(<span class="st">"two.sided"</span>), <span class="at">mu =</span> <span class="dv">0</span>, </span>
+<span id="cb8-4"><a href="#cb8-4"></a>            <span class="at">exact =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Wilcoxon rank sum exact test
@@ -4006,11 +4159,77 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <p>There is suggestive but inconclusive evidence that the evoked membrane current of dental sensory neurons (in rats) differs between the control group and the group exposed to a mixture of capsaicin plus capsazepine (2-sided Wilcoxon rank-sum test <span class="math inline">\(p\)</span>-value = 0.06494).</p>
 </section></section>
 <section>
-<section id="fishers-exact-test" class="title-slide slide level1 center">
-<h1>Fisher’s Exact Test</h1>
-<p>Use this if expected cell counts are too small</p>
+<section id="learning-objectives-4" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Understand the difference between and appropriate use of parametric and nonparametric tests</p></li>
+<li><p>Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.</p></li>
+<li><p>Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.</p></li>
+</ol>
+<div class="lob">
+<ol start="4" type="1">
+<li>Use the Fisher’s Exact test to determine if two categorical variables are associated.</li>
+</ol>
+</div>
+<ol start="5" type="1">
+<li>Use the Kruskal-Wallis test to compare two or more independent numeric samples.</li>
+</ol>
 </section>
-<section id="fishers-exact-test-1" class="slide level2">
+<section id="parametric-and-nonparametric-tests-3" class="slide level2">
+<h2>Parametric and nonparametric tests</h2>
+<table>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type of data</th>
+<th>Parametric test</th>
+<th>Nonparametric test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Single sample, numeric</td>
+<td>Single mean hypothesis test or t-test (L11)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="even">
+<td>Paired sample, numeric</td>
+<td>Mean difference (paired) hypothesis test or t-test (L12)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, numeric</td>
+<td>Difference in means hypothesis test or two sample t-test (L13)</td>
+<td>Wilcoxon rank-sum test or Mann-Whitney U test</td>
+</tr>
+<tr class="even">
+<td>Single sample, binary</td>
+<td>Single proportion hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, binary</td>
+<td>Difference in proportions hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2+ independent samples, binary</td>
+<td>Chi-squared test (L16)</td>
+<td>Fisher’s Exact test</td>
+</tr>
+<tr class="odd">
+<td>2+ independent samples, numeric</td>
+<td>ANOVA test or F-test (L17)</td>
+<td>Kruskal-Wallis test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fishers-exact-test" class="slide level2">
 <h2>Fisher’s Exact Test</h2>
 <ul>
 <li>Only necessary when expected counts in one or more cells is less than 5</li>
@@ -4092,7 +4311,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <li>Check expected cell counts threshold</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>hyp_data2 <span class="sc">%&gt;%</span> <span class="fu">expected</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>hyp_data2 <span class="sc">%&gt;%</span> <span class="fu">expected</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Hypertension No_Hypertension
 [1,]     3.483871        8.516129
@@ -4114,7 +4333,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <li>Calculate the test statistic and p-value for Chi-squared test in R</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">fisher.test</span>(<span class="at">x =</span> hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">fisher.test</span>(<span class="at">x =</span> hyp_data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Fisher's Exact Test for Count Data
@@ -4132,14 +4351,78 @@ alternative hypothesis: two.sided</code></pre>
 </div>
 </section></section>
 <section>
-<section id="kruskal-wallis-test" class="title-slide slide level1 center">
-<h1>Kruskal-Wallis test</h1>
-<p>Nonparametric ANOVA test</p>
+<section id="learning-objectives-5" class="title-slide slide level1 center">
+<h1>Learning Objectives</h1>
+<ol type="1">
+<li><p>Understand the difference between and appropriate use of parametric and nonparametric tests</p></li>
+<li><p>Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.</p></li>
+<li><p>Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.</p></li>
+<li><p>Use the Fisher’s Exact test to determine if two categorical variables are associated.</p></li>
+</ol>
+<div class="lob">
+<ol start="5" type="1">
+<li>Use the Kruskal-Wallis test to compare two or more independent numeric samples.</li>
+</ol>
+</div>
+</section>
+<section id="parametric-and-nonparametric-tests-4" class="slide level2">
+<h2>Parametric and nonparametric tests</h2>
+<table>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type of data</th>
+<th>Parametric test</th>
+<th>Nonparametric test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Single sample, numeric</td>
+<td>Single mean hypothesis test or t-test (L11)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="even">
+<td>Paired sample, numeric</td>
+<td>Mean difference (paired) hypothesis test or t-test (L12)</td>
+<td>Sign test or (Wilcoxon) signed-rank test</td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, numeric</td>
+<td>Difference in means hypothesis test or two sample t-test (L13)</td>
+<td>Wilcoxon rank-sum test or Mann-Whitney U test</td>
+</tr>
+<tr class="even">
+<td>Single sample, binary</td>
+<td>Single proportion hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Two independent sample, binary</td>
+<td>Difference in proportions hypothesis test (L15)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2+ independent samples, binary</td>
+<td>Chi-squared test (L16)</td>
+<td>Fisher’s Exact test</td>
+</tr>
+<tr class="odd">
+<td>2+ independent samples, numeric</td>
+<td>ANOVA test or F-test (L17)</td>
+<td>Kruskal-Wallis test</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="kruskal-wallis-test-nonparametric-anova-test" class="slide level2">
 <h2>Kruskal-Wallis test: nonparametric ANOVA test</h2>
 <ul>
-<li>Recall that an ANOVA tests means from more than 2 groups</li>
+<li>Recall that an ANOVA tests means from 2 or more groups</li>
 <li>Conditions for ANOVA include
 <ul>
 <li>Sample sizes in each group group are large (each <span class="math inline">\(n \ge 30\)</span>),
@@ -4160,19 +4443,6 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
 <li>With <span class="math inline">\(k=2\)</span> groups, the K-W test is the same as the rank-sum test</li>
 </ul></li>
 </ul>
-</section>
-<section id="k-w-test-statistic-h-fyi" class="slide level2">
-<h2>K-W test statistic: <span class="math inline">\(H\)</span> (fyi)</h2>
-<p><span class="math display">\[H = \frac{12}{{N(N + 1)}} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N + 1)\]</span></p>
-<ul>
-<li><span class="math inline">\(k\)</span> is the number of groups,</li>
-<li><span class="math inline">\(n_i\)</span> is the number of observations in group <span class="math inline">\(i\)</span></li>
-<li><span class="math inline">\(N = n_1 + \ldots + n_k\)</span> is the total number of observations across all groups,</li>
-<li><span class="math inline">\(R_i\)</span> is the sum of ranks for group <span class="math inline">\(i\)</span></li>
-</ul>
-<p>The test statistic <span class="math inline">\(H\)</span> has a Chi-squared distribution with <span class="math inline">\(k-1\)</span> degrees of freedom:</p>
-<p><span class="math display">\[H \sim \chi^2_{k-1}\]</span></p>
-<p>Ranks are calculated similarly to the (Wilcoxon) rank-sum test.</p>
 </section>
 <section id="ranks-for-the-k-w-test" class="slide level2">
 <h2>Ranks for the K-W test</h2>
@@ -4201,23 +4471,23 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="ubekjhmgxf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ubekjhmgxf table {
+<div id="ysiwekoaxt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ysiwekoaxt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ubekjhmgxf thead, #ubekjhmgxf tbody, #ubekjhmgxf tfoot, #ubekjhmgxf tr, #ubekjhmgxf td, #ubekjhmgxf th {
+#ysiwekoaxt thead, #ysiwekoaxt tbody, #ysiwekoaxt tfoot, #ysiwekoaxt tr, #ysiwekoaxt td, #ysiwekoaxt th {
   border-style: none;
 }
 
-#ubekjhmgxf p {
+#ysiwekoaxt p {
   margin: 0;
   padding: 0;
 }
 
-#ubekjhmgxf .gt_table {
+#ysiwekoaxt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4243,12 +4513,12 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-left-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_caption {
+#ysiwekoaxt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ubekjhmgxf .gt_title {
+#ysiwekoaxt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4260,7 +4530,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-bottom-width: 0;
 }
 
-#ubekjhmgxf .gt_subtitle {
+#ysiwekoaxt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4272,7 +4542,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-top-width: 0;
 }
 
-#ubekjhmgxf .gt_heading {
+#ysiwekoaxt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4284,13 +4554,13 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-right-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_bottom_border {
+#ysiwekoaxt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_col_headings {
+#ysiwekoaxt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4305,7 +4575,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-right-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_col_heading {
+#ysiwekoaxt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4325,7 +4595,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   overflow-x: hidden;
 }
 
-#ubekjhmgxf .gt_column_spanner_outer {
+#ysiwekoaxt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4337,15 +4607,15 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   padding-right: 4px;
 }
 
-#ubekjhmgxf .gt_column_spanner_outer:first-child {
+#ysiwekoaxt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ubekjhmgxf .gt_column_spanner_outer:last-child {
+#ysiwekoaxt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ubekjhmgxf .gt_column_spanner {
+#ysiwekoaxt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4357,11 +4627,11 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   width: 100%;
 }
 
-#ubekjhmgxf .gt_spanner_row {
+#ysiwekoaxt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ubekjhmgxf .gt_group_heading {
+#ysiwekoaxt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4387,7 +4657,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   text-align: left;
 }
 
-#ubekjhmgxf .gt_empty_group_heading {
+#ysiwekoaxt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4402,15 +4672,15 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   vertical-align: middle;
 }
 
-#ubekjhmgxf .gt_from_md > :first-child {
+#ysiwekoaxt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ubekjhmgxf .gt_from_md > :last-child {
+#ysiwekoaxt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ubekjhmgxf .gt_row {
+#ysiwekoaxt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4429,7 +4699,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   overflow-x: hidden;
 }
 
-#ubekjhmgxf .gt_stub {
+#ysiwekoaxt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4442,7 +4712,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   padding-right: 5px;
 }
 
-#ubekjhmgxf .gt_stub_row_group {
+#ysiwekoaxt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4456,15 +4726,15 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   vertical-align: top;
 }
 
-#ubekjhmgxf .gt_row_group_first td {
+#ysiwekoaxt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ubekjhmgxf .gt_row_group_first th {
+#ysiwekoaxt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ubekjhmgxf .gt_summary_row {
+#ysiwekoaxt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4474,16 +4744,16 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   padding-right: 5px;
 }
 
-#ubekjhmgxf .gt_first_summary_row {
+#ysiwekoaxt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_first_summary_row.thick {
+#ysiwekoaxt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ubekjhmgxf .gt_last_summary_row {
+#ysiwekoaxt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4493,7 +4763,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-bottom-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_grand_summary_row {
+#ysiwekoaxt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4503,7 +4773,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   padding-right: 5px;
 }
 
-#ubekjhmgxf .gt_first_grand_summary_row {
+#ysiwekoaxt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4513,7 +4783,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-top-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_last_grand_summary_row_top {
+#ysiwekoaxt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4523,11 +4793,11 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-bottom-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_striped {
+#ysiwekoaxt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ubekjhmgxf .gt_table_body {
+#ysiwekoaxt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4536,7 +4806,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-bottom-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_footnotes {
+#ysiwekoaxt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4550,7 +4820,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-right-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_footnote {
+#ysiwekoaxt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4559,7 +4829,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   padding-right: 5px;
 }
 
-#ubekjhmgxf .gt_sourcenotes {
+#ysiwekoaxt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4573,7 +4843,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   border-right-color: #D3D3D3;
 }
 
-#ubekjhmgxf .gt_sourcenote {
+#ysiwekoaxt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4581,72 +4851,72 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
   padding-right: 5px;
 }
 
-#ubekjhmgxf .gt_left {
+#ysiwekoaxt .gt_left {
   text-align: left;
 }
 
-#ubekjhmgxf .gt_center {
+#ysiwekoaxt .gt_center {
   text-align: center;
 }
 
-#ubekjhmgxf .gt_right {
+#ysiwekoaxt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ubekjhmgxf .gt_font_normal {
+#ysiwekoaxt .gt_font_normal {
   font-weight: normal;
 }
 
-#ubekjhmgxf .gt_font_bold {
+#ysiwekoaxt .gt_font_bold {
   font-weight: bold;
 }
 
-#ubekjhmgxf .gt_font_italic {
+#ysiwekoaxt .gt_font_italic {
   font-style: italic;
 }
 
-#ubekjhmgxf .gt_super {
+#ysiwekoaxt .gt_super {
   font-size: 65%;
 }
 
-#ubekjhmgxf .gt_footnote_marks {
+#ysiwekoaxt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ubekjhmgxf .gt_asterisk {
+#ysiwekoaxt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ubekjhmgxf .gt_indent_1 {
+#ysiwekoaxt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ubekjhmgxf .gt_indent_2 {
+#ysiwekoaxt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ubekjhmgxf .gt_indent_3 {
+#ysiwekoaxt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ubekjhmgxf .gt_indent_4 {
+#ysiwekoaxt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ubekjhmgxf .gt_indent_5 {
+#ysiwekoaxt .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ubekjhmgxf .katex-display {
+#ysiwekoaxt .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ubekjhmgxf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ysiwekoaxt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4702,7 +4972,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
 </div><div class="column">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="19_Non_parametric_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<p><img data-src="19_Non_parametric_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -4711,7 +4981,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
 <li>Does not look like each month has equal variance so we cannot use ANOVA</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">max</span>(Oz_mnth<span class="sc">$</span>sd) <span class="sc">/</span> <span class="fu">min</span>(Oz_mnth<span class="sc">$</span>sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">max</span>(Oz_mnth<span class="sc">$</span>sd) <span class="sc">/</span> <span class="fu">min</span>(Oz_mnth<span class="sc">$</span>sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.179317</code></pre>
 </div>
@@ -4720,7 +4990,7 @@ H_0 &amp;: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k
 <section id="k-w-test-in-r" class="slide level2">
 <h2>K-W test in R</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">kruskal.test</span>(Ozone <span class="sc">~</span> Month, <span class="at">data =</span> airquality)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">kruskal.test</span>(Ozone <span class="sc">~</span> Month, <span class="at">data =</span> airquality)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Kruskal-Wallis rank sum test

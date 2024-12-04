@@ -44,44 +44,33 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 # Learning Objectives
 
-## MoRitz's tip: write "nice" R code {visibility="hidden"}
+1.  Understand the difference between and appropriate use of parametric and nonparametric tests
 
-Check out the tidyverse style guide: https://style.tidyverse.org/index.html
+2.  Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.
 
-Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and Chapter 5: [ggplot2](https://style.tidyverse.org/ggplot2.html#ggplot2)
+3.  Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.
 
-# Goals for today (Supplemental material)
+4.  Use the Fisher's Exact test to determine if two categorical variables are associated.
 
--   Why us a nonparametric approach?
+5.  Use the Kruskal-Wallis test to compare two or more independent numeric samples.
 
--   What the following tests are & when to use them
+## Where are we?
 
--   **Sign test**
+![](../img_slides/course_map.png){fig-align="center"}
 
-    -   for paired data or single samples
+# Learning Objectives
 
--   **(Wilcoxon) sign-rank test**
+::: lob
+1.  Understand the difference between and appropriate use of parametric and nonparametric tests
+:::
 
-    -   for paired data or single samples
-    -   accounts for sizes of differences
+2.  Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.
 
--   **Wilcoxon Rank-sum test**
+3.  Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.
 
-    -   for two independent samples
-    -   a.k.a **Mann-Whitney U test**
+4.  Use the Fisher's Exact test to determine if two categorical variables are associated.
 
--   **Kruskal-Wallis test**
-
-    -   nonparametric ANOVA test
-
--   How to use R for each test & interpret the results
-
-## Additional resource
-
--   Chapter 13: Nonparametric tests of Pagano's *Principles of Biostatistics*, 2022 edition
--   Can download chapter from OHSU library eBook at <https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&pq-origsite=primo>
-
-# Nonparametric tests
+5.  Use the Kruskal-Wallis test to compare two or more independent numeric samples.
 
 ## Background: parametric vs nonparametric
 
@@ -97,47 +86,58 @@ Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and
     -   Make fewer assumptions about the structure of the underlying population from which the samples were collected
     -   Work well when distributional assumptions are in doubt.
 
-## The good and the bad about nonparametric tests
+## Nonparametric tests: Pros vs. cons
 
 ::::: columns
 ::: column
-**Good**
-
+::: pink2
+::: pink2-ttl
+**Pros**
+:::
+::: pink2-cont
 -   Fewer assumptions
+    - Can handle smaller sample sizes
+    - No assumptions about the distribution of the data's population
 -   Tests are based on ranks
     -   Therefore outliers have no greater influence than non-outliers.
     -   Since tests are based on ranks we can apply these procedures to ordinal data
-        -   (where means and standard deviations are not meaningful).
+:::
+:::
 :::
 
 ::: column
-**Drawbacks**
-
+::: green
+::: green-ttl
+**Cons**
+:::
+::: green-cont
 -   Less powerful than parametric tests (due to loss of information when data are converted to ranks)
--   While the test is easy, it may require substantial (computer) work to develop a confidence interval \[by "inverting" the test\].
--   Theory was developed for continuous data (where ties are not possible); if population or data contain many ties, then a correction to the procedures must be implemented.
--   Some procedures have "large" and "small" sample versions; the small sample versions require special tables or a computer.
+-   While the test is laid out for us, it may require substantial (computer) work to develop a confidence interval
+-   Ties in ranks make the test harder to implement
+- Some nonparametric methods can be computationally intensive, especially for large datasets or complex designs
+:::
+:::
 :::
 :::::
 
 ## Parametric and nonparametric tests
 
 | Type of data | Parametric test | Nonparametric test |
-|--------------------------|-----------------------|-----------------------|
-| Single sample, numeric | Single mean hypothesis test or t-test (Lesson 11) | Wilcoxon signed-rank test |
-| Paired sample, numeric | Mean difference (paired) hypothesis test or t-test (Lesson 12) | Sign test or Wilcoxon signed-rank test |
-| Two independent sample, numeric | Difference in means hypothesis test or two sample t-test (Lesson 13) | Wilcoxon rank-sum test or Mann-Whitney U test |
-| Single sample, binary | Single proportion hypothesis test (Lesson 15) |  |
-| Two independent sample, binary | Difference in proportions hypothesis test (Lesson 15) |  |
-| Two or more independent samples, binary | Chi-squared test (Lesson 16) | Fisher's Exact test |
-| Two or more independent samples, numeric | ANOVA test or F-test (Lesson 17) | Kruskal-Wallis test |
+|------------------|-----------------------|-----------------------|
+| Single sample, numeric | Single mean hypothesis test or t-test (L11) | Sign test or (Wilcoxon) signed-rank test |
+| Paired sample, numeric | Mean difference (paired) hypothesis test or t-test (L12) | Sign test or (Wilcoxon) signed-rank test |
+| Two independent sample, numeric | Difference in means hypothesis test or two sample t-test (L13) | Wilcoxon rank-sum test or Mann-Whitney U test |
+| Single sample, binary | Single proportion hypothesis test (L15) |  |
+| Two independent sample, binary | Difference in proportions hypothesis test (L15) |  |
+| 2+ independent samples, binary | Chi-squared test (L16) | Fisher's Exact test |
+| 2+ independent samples, numeric | ANOVA test or F-test (L17) | Kruskal-Wallis test |
 
 ## We still follow the general hypothesis test process
 
 1.  Check the [**assumptions**]{style="color:#70AD47"}
 
-    - We will not meet the parametric assumptions!
-    - There are some assumptions for the nonparametric tests
+    -   We will not meet the parametric assumptions!
+    -   There are some assumptions for the nonparametric tests
 
 2.  Set the [**level of significance**]{style="color:#70AD47"} $\alpha$
 
@@ -147,7 +147,7 @@ Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and
     -   In words
     -   Alternative: one- or two-sided?
 
-4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"} for Fisher Exact test in R
+4.  Calculate the [**test statistic**]{style="color:#70AD47"} and [**p-value**]{style="color:#70AD47"}
 
     -   We will not discuss the test statistic's equation
 
@@ -155,28 +155,62 @@ Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and
 
     -   Do we reject or fail to reject $H_0$?
     -   Write a conclusion in the context of the problem
+    
+## Poll Everywhere Question 1
 
-# (Wilcoxon) Signed-rank test
+## Poll Everywhere Question 2
 
-For paired data or single samples;\
-accounts for sizes of differences
+# Learning Objectives
+
+1.  Understand the difference between and appropriate use of parametric and nonparametric tests
+
+::: lob
+2.  Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.
+:::
+
+3.  Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.
+
+4.  Use the Fisher's Exact test to determine if two categorical variables are associated.
+
+5.  Use the Kruskal-Wallis test to compare two or more independent numeric samples.
+
+## Parametric and nonparametric tests
+
+| Type of data | Parametric test | Nonparametric test |
+|------------------|-----------------------|-----------------------|
+| Single sample, numeric | Single mean hypothesis test or t-test (L11) | Sign test or (Wilcoxon) signed-rank test |
+| Paired sample, numeric | Mean difference (paired) hypothesis test or t-test (L12) | Sign test or (Wilcoxon) signed-rank test |
+| Two independent sample, numeric | Difference in means hypothesis test or two sample t-test (L13) | Wilcoxon rank-sum test or Mann-Whitney U test |
+| Single sample, binary | Single proportion hypothesis test (L15) |  |
+| Two independent sample, binary | Difference in proportions hypothesis test (L15) |  |
+| 2+ independent samples, binary | Chi-squared test (L16) | Fisher's Exact test |
+| 2+ independent samples, numeric | ANOVA test or F-test (L17) | Kruskal-Wallis test |
 
 ## (Wilcoxon) Signed-rank test
 
 -   The (Wilcoxon) signed-rank test is used for
     -   Paired samples (i.e., a single set of differences)
     -   One-sample comparison against a specified value
+    
+ 
+    
 -   If we want to see if data are symmetric (centered) around a certain value
-    - For paired data, we may want to see if the data are symmetric around 0 to determine a difference 
-    - For one sample, we may have an idea of a median value that our data may follow
--   Think back to the parametric parallel of these! 
-    - If we apply the body temperature example to this: We would check if the data were symmetric around 98.6
-- Data do NOT need to be approximately normal
+    -   For paired data, we may want to see if the data are symmetric around 0 to determine a difference
+    -   For one sample, we may have an idea of a median value that our data may follow
+
+ 
+
+-   **Think back to the parametric parallel of these!**
+    -   If we apply the body temperature example to this: We would check if the data were symmetric around 98.6
+
+ 
+
+-   Data do NOT need to be approximately normal
 
 ## Example: Intraocular pressure of glaucoma patients
 
 ::::: columns
-::: column
+::: {.column width="60%"}
 -   Intraocular pressure of glaucoma patients is often reduced by treatment with adrenaline.
 -   A **new synthetic drug** is being considered, but it is more expensive than the **current adrenaline alternative**.
 -   7 glaucoma patients were treated with both drugs:
@@ -185,7 +219,10 @@ accounts for sizes of differences
 -   **Reduction in pressure** was recorded in each eye after following treatment (larger numbers indicate greater reduction)
 :::
 
-::: column
+::: {.column width="2%"}
+:::
+
+::: {.column width="38%"}
 ```{r}
 #| echo: false
 IOP_table <- tibble(
@@ -221,8 +258,6 @@ IOP_table %>% gt() %>% tab_options(table.font.size = 40)
 :::
 :::::
 
-
-
 ## (Wilcoxon) Signed-rank test: Hypotheses
 
 ::::::::::: columns
@@ -257,7 +292,7 @@ $H_a:$ the population difference in reduction of intraocular pressure in treatme
 -   If the population is symmetric
     -   then the mean and median coincide,
     -   thus often the null hypothesis is phrased in terms of the median (or median difference) being 0
-    
+
 ## Example: Visualize the differences
 
 Visualize the differences in reduction of pressure $d$ : **Synth - Adren**
@@ -287,43 +322,46 @@ ggplot(IOP_table, aes(x = d)) +
     -   I.e. if ranks 3-7 are tied, then assign (3+7)/2 = 5 as the rank
 -   Then calculate the **signed ranks** as +/- the rank depending on whether the sign is +/-
 
+::: columns
+::: column
 ```{r}
-#| echo: false
 IOP_ranks <- IOP %>% 
   mutate(
-    Rank = c(1.5, 4.5, 1.5, 4.5, NA, 3, 6),
+    Rank = c(1.5, 4.5, 1.5, 
+             4.5, NA, 3, 6),
     Signed_rank = case_when(
       d < 0 ~ -Rank,
       d > 0 ~ Rank
       )
     )
+```
+:::
+::: column
+```{r}
+#| echo: false
 IOP_ranks %>% gt() %>% tab_options(table.font.size = 40)
 ```
+:::
+:::
 
 ## (Wilcoxon) Signed-rank test: Test statistic
 
-- If the null is true:
-    -   The population is symmetric around some point ( $\tilde{\mu}_0 = 0$ , typically), and
+-   If the null is true:
+    -   The population is symmetric around some point ($\tilde{\mu}_0 = 0$ , typically), and
     -   The **overall size of the positive ranks should be about the same as the overall size of negative ranks**.
-
-
--   Note: 
-    -   The sum of the ranks (not signed) $1,2,\dotsc, n$ is always $n(n+1)/2$,
-    -   which can be broken down as the
-        -   sum of the positive ranks ( $T^+$ )
-        -   plus the sum of the negative ranks ( $T^-$ )
-
-- Thus, any of the following can be used as a test statistic and will lead to the same conclusion:
-    -   $T^+$
+- We can split the positive and negative ranks
+    -   $T^+$ = sum of the positive ranks 
+    -   $T^-$ = sum of the negative ranks
+-   Thus, any of the following can be used as a test statistic and will lead to the same conclusion:
+    -   $T^+$ (what R is using)
     -   $T^-$
     -   $T^+ - T^-$
-    -   $\min(T^+,T^−) = T_0$ (our focus)
+    -   $\min(T^+,|T^−|) = T_0$
 
 ## Example: calculate sums of signed ranks
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-
 -   Sum of the positive ranks
     -   $T^+$ = 1.5 + 3 + 4.5 + 4.5 + 6 = 19.5
 
@@ -332,12 +370,10 @@ IOP_ranks %>% gt() %>% tab_options(table.font.size = 40)
 -   Sum of the negative ranks
     -   $T^-$ = -1.5
 
-     
+ 
 
--   The sum of the ranks $1,2,\dotsc, n$ is always $n(n+1)/2$:
-    -   $n(n+1)/2 = 6(7)/2 = 21$
-    -   $T^+ + |T^-| = 19.5 + |-1.5| = 21$
-    
+- $\min(T^+,|T^−|) = T_0 = 1.5$
+
 :::
 
 ::: {.column width="50%"}
@@ -345,9 +381,8 @@ IOP_ranks %>% gt() %>% tab_options(table.font.size = 40)
 #| echo: false
 IOP_ranks %>% gt() %>% tab_options(table.font.size = 40)
 ```
-
 :::
-:::
+:::::
 
 ## (Wilcoxon) Signed-rank test: Exact p-value (fyi)
 
@@ -379,7 +414,6 @@ wilcox.test(x = IOP$d,
 		exact = TRUE, correct = TRUE)
 ```
 
-
 ## (Wilcoxon) Signed-rank test: Conclusion
 
 Recall the hypotheses to the (Wilcoxon) Signed-rank test:
@@ -393,11 +427,9 @@ $H_a:$ the population difference in reduction of intraocular pressure in treatme
 
  
 
-
 **Conclusion**:
 
 There is insufficient evidence the differences in reduction in intraocular pressure differs between the synthetic drug and adrenaline are symmetric about 0 (2-sided Wilcoxon signed rank test $p$-value = 0.07314)
-
 
 ## (Wilcoxon) Signed-rank test with one sample
 
@@ -416,11 +448,31 @@ $H_a:$ The population median is NOT $m$
 wilcox.test(x = IOP$d, mu = 0.7, alternative = "two.sided")
 ```
 
+# Learning Objectives
 
-# Wilcoxon rank-sum test
+1.  Understand the difference between and appropriate use of parametric and nonparametric tests
 
-For two independent samples\
-a.k.a Mann-Whitney U test
+2.  Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.
+
+::: lob
+3.  Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.
+:::
+
+4.  Use the Fisher's Exact test to determine if two categorical variables are associated.
+
+5.  Use the Kruskal-Wallis test to compare two or more independent numeric samples.
+
+## Parametric and nonparametric tests
+
+| Type of data | Parametric test | Nonparametric test |
+|------------------|-----------------------|-----------------------|
+| Single sample, numeric | Single mean hypothesis test or t-test (L11) | Sign test or (Wilcoxon) signed-rank test |
+| Paired sample, numeric | Mean difference (paired) hypothesis test or t-test (L12) | Sign test or (Wilcoxon) signed-rank test |
+| Two independent sample, numeric | Difference in means hypothesis test or two sample t-test (L13) | Wilcoxon rank-sum test or Mann-Whitney U test |
+| Single sample, binary | Single proportion hypothesis test (L15) |  |
+| Two independent sample, binary | Difference in proportions hypothesis test (L15) |  |
+| 2+ independent samples, binary | Chi-squared test (L16) | Fisher's Exact test |
+| 2+ independent samples, numeric | ANOVA test or F-test (L17) | Kruskal-Wallis test |
 
 ## Wilcoxon rank-sum test
 
@@ -446,7 +498,7 @@ $H_a:$ the two populations do NOT have the same median
 
 ## Example
 
-::: columns
+::::: columns
 ::: column
 Dr. Priya Chaudhary (OHSU) examined the evoked membrane current of dental sensory neurons (in rats) under control conditions and a mixture of capsaicin plus capsazepine (CPZ). [J. Dental Research} 80:1518--23, 2001.](https://journals.sagepub.com/doi/10.1177/00220345010800060801)
 
@@ -470,6 +522,7 @@ CPZdata2 %>% group_by(Group) %>% select(-Rat_ID) %>%
   gt() %>% tab_options(table.font.size = 40)
 ```
 :::
+
 ::: column
 ```{r}
 #| echo: false
@@ -482,7 +535,7 @@ CPZdata2 = tibble(
 CPZdata2 %>% gt() %>% tab_options(table.font.size = 40)
 ```
 :::
-:::
+:::::
 
 ## Example: Visualize the data
 
@@ -505,7 +558,7 @@ ggplot(CPZdata2, aes(x = Current)) +
 
 ## Wilcoxon rank-sum test: Calculating test statistic $W$
 
-::: columns
+::::: columns
 ::: {.column width="67%"}
 1.  Combine the two samples together (keep track of which observations came from each sample).
 
@@ -527,12 +580,9 @@ In our example, both groups have equal n; choose either for computing W.
 $$W_{CPZ}=1+2+3+6+7+8 = 27$$
 
 $$W_{control}=4+5+9+10+11+12 = 51$$
-
-::: 
+:::
 
 ::: {.column width="33%"}
-
-
 ```{r}
 #| echo: false
 # CPZdata_long <- CPZdata %>% 
@@ -548,7 +598,7 @@ CPZdata_long = CPZdata2 %>% arrange(Current) %>%
 CPZdata_long %>% gt() %>% tab_options(table.font.size = 37)
 ```
 :::
-:::
+:::::
 
 ## Wilcoxon rank-sum test: Exact p-value approach
 
@@ -577,7 +627,6 @@ wilcox.test(Current ~ Group,
             exact = TRUE) 
 ```
 
-
 ## Wilcoxon rank-sum test: Conclusion
 
 Recall the hypotheses to the Wilcoxon rank-sum test:
@@ -595,9 +644,31 @@ $H_a:$ the control and treated populations do NOT have the same median
 
 There is suggestive but inconclusive evidence that the evoked membrane current of dental sensory neurons (in rats) differs between the control group and the group exposed to a mixture of capsaicin plus capsazepine (2-sided Wilcoxon rank-sum test $p$-value = 0.06494).
 
-# Fisher's Exact Test
+# Learning Objectives
 
-Use this if expected cell counts are too small
+1.  Understand the difference between and appropriate use of parametric and nonparametric tests
+
+2.  Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.
+
+3.  Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.
+
+::: lob
+4.  Use the Fisher's Exact test to determine if two categorical variables are associated.
+:::
+
+5.  Use the Kruskal-Wallis test to compare two or more independent numeric samples.
+
+## Parametric and nonparametric tests
+
+| Type of data | Parametric test | Nonparametric test |
+|------------------|-----------------------|-----------------------|
+| Single sample, numeric | Single mean hypothesis test or t-test (L11) | Sign test or (Wilcoxon) signed-rank test |
+| Paired sample, numeric | Mean difference (paired) hypothesis test or t-test (L12) | Sign test or (Wilcoxon) signed-rank test |
+| Two independent sample, numeric | Difference in means hypothesis test or two sample t-test (L13) | Wilcoxon rank-sum test or Mann-Whitney U test |
+| Single sample, binary | Single proportion hypothesis test (L15) |  |
+| Two independent sample, binary | Difference in proportions hypothesis test (L15) |  |
+| 2+ independent samples, binary | Chi-squared test (L16) | Fisher's Exact test |
+| 2+ independent samples, numeric | ANOVA test or F-test (L17) | Kruskal-Wallis test |
 
 ## Fisher's Exact Test
 
@@ -625,7 +696,7 @@ $$P(a, b, c, d) = \dfrac{(a+b)!\cdot(c+d)!\cdot(a+c)!\cdot(b+d)!}{n!\cdot a!\cdo
 **Question:** Is there an association between age group and hypertension?
 :::
 
-- Let's pretend that we actually had the following numbers
+-   Let's pretend that we actually had the following numbers
 
 ```{r}
 #| echo: false
@@ -679,14 +750,35 @@ We reject the null hypothesis that age group and hypertension are not associated
 :::
 :::::
 
+# Learning Objectives
 
-# Kruskal-Wallis test
+1.  Understand the difference between and appropriate use of parametric and nonparametric tests
 
-Nonparametric ANOVA test
+2.  Use the (Wilcoxon) Signed-rank test to determine if a single sample or paired sample are symmetric around some value.
+
+3.  Use the Wilcoxon Rank-Sum test to compare two independent numeric samples.
+
+4.  Use the Fisher's Exact test to determine if two categorical variables are associated.
+
+::: lob
+5.  Use the Kruskal-Wallis test to compare two or more independent numeric samples.
+:::
+
+## Parametric and nonparametric tests
+
+| Type of data | Parametric test | Nonparametric test |
+|------------------|-----------------------|-----------------------|
+| Single sample, numeric | Single mean hypothesis test or t-test (L11) | Sign test or (Wilcoxon) signed-rank test |
+| Paired sample, numeric | Mean difference (paired) hypothesis test or t-test (L12) | Sign test or (Wilcoxon) signed-rank test |
+| Two independent sample, numeric | Difference in means hypothesis test or two sample t-test (L13) | Wilcoxon rank-sum test or Mann-Whitney U test |
+| Single sample, binary | Single proportion hypothesis test (L15) |  |
+| Two independent sample, binary | Difference in proportions hypothesis test (L15) |  |
+| 2+ independent samples, binary | Chi-squared test (L16) | Fisher's Exact test |
+| 2+ independent samples, numeric | ANOVA test or F-test (L17) | Kruskal-Wallis test |
 
 ## Kruskal-Wallis test: nonparametric ANOVA test
 
--   Recall that an ANOVA tests means from more than 2 groups
+-   Recall that an ANOVA tests means from 2 or more groups
 -   Conditions for ANOVA include
     -   Sample sizes in each group group are large (each $n \ge 30$),
         -   OR the data are relatively normally distributed in each group
@@ -700,21 +792,6 @@ H_0 &: \text{pop median}_1 = \text{pop median}_2 = ... = \text{pop median}_k\\
 
 -   K-W test is an extension of the (Wilcoxon) rank-sum test to more than 2 groups
     -   With $k=2$ groups, the K-W test is the same as the rank-sum test
-
-## K-W test statistic: $H$ (fyi)
-
-$$H = \frac{12}{{N(N + 1)}} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N + 1)$$
-
--   $k$ is the number of groups,
--   $n_i$ is the number of observations in group $i$
--   $N = n_1 + \ldots + n_k$ is the total number of observations across all groups,
--   $R_i$ is the sum of ranks for group $i$
-
-The test statistic $H$ has a Chi-squared distribution with $k-1$ degrees of freedom:
-
-$$H \sim \chi^2_{k-1}$$
-
-Ranks are calculated similarly to the (Wilcoxon) rank-sum test.
 
 ## Ranks for the K-W test
 
@@ -732,7 +809,7 @@ If $H_0$ is true, we expect the populations to have the same medians, and thus t
 -   Daily air quality measurements in New York, May to September 1973.
 -   Question: Do ozone levels differ by month?
 
-::: columns
+::::: columns
 ::: column
 ```{r}
 #| echo: false
@@ -757,9 +834,9 @@ ggplot(airquality,
   labs(y="Month #")
 ```
 :::
-:::
+:::::
 
-- Does not look like each month has equal variance so we cannot use ANOVA
+-   Does not look like each month has equal variance so we cannot use ANOVA
 
 ```{r}
 max(Oz_mnth$sd) / min(Oz_mnth$sd)
@@ -776,5 +853,3 @@ kruskal.test(Ozone ~ Month, data = airquality)
 There is sufficient evidence that the median ozone levels are different in at least two months from May - September, 1973 in New York City (p \< 0.001; Kruskal-Wallis test).
 
 -   (fyi) Since the K-W test is significant, follow-up with pairwise (Wilcoxon) rank-sum tests using a multiple comparison procedure to identify which months have different medians.
-
-
