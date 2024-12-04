@@ -1,0 +1,14 @@
+{
+  "hash": "9240d4f33676d9031592d8dd1ba9d6b2",
+  "result": {
+    "markdown": "---\ntitle: \"Key Info and Announcements\"\ndate: \"12/04/2024\"\ndate-modified: \"today\"\nformat: \n  html:\n    link-external-newwindow: true\neditor_options: \n  chunk_output_type: console\n---\n\n\n## Announcements\n\n-   Class on 12/9!!!\n    - It will be our last class\n- For homework, please make sure to include: `embed-resources: true` at the top of your file\n  - In all of the homeworks, I have a link to the HW qmd file in GitHub!\n\n::: {.cell}\n\n```{.r .cell-code  code-line-numbers=\"14\"}\n---\ntitle: \"Homework 7\"\nauthor: \"Your name here - update this!!!!\"\ndate: \"today\"\nformat: \n  html:\n    link-external-newwindow: true\n    toc: true\n    toc_float:\n      collapsed: false\n    number-sections: true\n    number-depth: 3\n    theme: lumen\n    embed-resources: true\n    html-math-method: mathjax\n---\n```\n:::\n\n-   HW 7 solutions\n    - You can turn this in until 12/6 at 11pm\n-   HW 6 presentations\n    -   Meetings during 12/9-12/12\n    -   Videos due 12/10\n    -   Calendly is up! Check our announcements in Sakai!\n-   I will be finalizing and posting HW 9 tomorrow\n    - Optional!\n- Friday 12/13 is the absolute deadline for turning in materials if you are completing the course!\n    - Please check Sakai to make sure I have all your HW grades in!\n-   Please do your course evaluations!!\n-   Anything else?\n\n## Key Dates\n\n-   Friday (12/6): HW 8 assignment due\n-   Friday (12/6): HW 7 solutions due\n-   Tuesday (12/10): HW 6 videos due\n-   Friday (12/13): HW 8 solutions due\n    - You cannot turn these in late!!\n-   Friday (12/13): HW 9 assignment due (optional!)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

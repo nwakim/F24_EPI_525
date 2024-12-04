@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -160,6 +194,30 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>It will be our last class</li>
 </ul></li>
+<li>For homework, please make sure to include: <code>embed-resources: true</code> at the top of your file
+<ul>
+<li>In all of the homeworks, I have a link to the HW qmd file in GitHub!</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>title<span class="sc">:</span> <span class="st">"Homework 7"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>author<span class="sc">:</span> <span class="st">"Your name here - update this!!!!"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>date<span class="sc">:</span> <span class="st">"today"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>format<span class="sc">:</span> </span>
+<span id="cb1-6"><a href="#cb1-6"></a>  html<span class="sc">:</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    link<span class="sc">-</span>external<span class="sc">-</span>newwindow<span class="sc">:</span> true</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    toc<span class="sc">:</span> true</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    toc_float<span class="sc">:</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>      collapsed<span class="sc">:</span> false</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    number<span class="sc">-</span>sections<span class="sc">:</span> true</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    number<span class="sc">-</span>depth<span class="sc">:</span> <span class="dv">3</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    theme<span class="sc">:</span> lumen</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    embed<span class="sc">-</span>resources<span class="sc">:</span> true</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    html<span class="sc">-</span>math<span class="sc">-</span>method<span class="sc">:</span> mathjax</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
 <li>HW 7 solutions
 <ul>
 <li>You can turn this in until 12/6 at 11pm</li>
@@ -173,6 +231,10 @@ ul.task-list li input[type="checkbox"] {
 <li>I will be finalizing and posting HW 9 tomorrow
 <ul>
 <li>Optional!</li>
+</ul></li>
+<li>Friday 12/13 is the absolute deadline for turning in materials if you are completing the course!
+<ul>
+<li>Please check Sakai to make sure I have all your HW grades in!</li>
 </ul></li>
 <li>Please do your course evaluations!!</li>
 <li>Anything else?</li>

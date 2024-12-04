@@ -13,6 +13,30 @@ editor_options:
 
 -   Class on 12/9!!!
     - It will be our last class
+- For homework, please make sure to include: `embed-resources: true` at the top of your file
+  - In all of the homeworks, I have a link to the HW qmd file in GitHub!
+```{r}
+#| eval: false
+#| code-line-numbers: "14"
+
+---
+title: "Homework 7"
+author: "Your name here - update this!!!!"
+date: "today"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    embed-resources: true
+    html-math-method: mathjax
+---
+
+```
 -   HW 7 solutions
     - You can turn this in until 12/6 at 11pm
 -   HW 6 presentations
@@ -21,6 +45,8 @@ editor_options:
     -   Calendly is up! Check our announcements in Sakai!
 -   I will be finalizing and posting HW 9 tomorrow
     - Optional!
+- Friday 12/13 is the absolute deadline for turning in materials if you are completing the course!
+    - Please check Sakai to make sure I have all your HW grades in!
 -   Please do your course evaluations!!
 -   Anything else?
 
