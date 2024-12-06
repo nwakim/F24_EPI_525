@@ -10,7 +10,7 @@ format:
     number-sections: true
     number-depth: 3
     theme: lumen
-    self-contained: true
+    embed-resources: true
     html-math-method: mathjax
 ---
 
