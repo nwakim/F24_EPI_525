@@ -1,10 +1,9 @@
 ---
-title: "Lesson 18: Simple Linear Regression"
-subtitle: "TB sections 6.1-6.4"
-author: "Meike Niederhausen and Nicky Wakim"
+title: "Lesson 18: Simple Linear Regression (SLR)"
+author: "Nicky Wakim"
 title-slide-attributes:
     data-background-color: "#3070BF"
-date: "12/2/2024"
+date: "12/9/2024"
 format: 
   revealjs:
     theme: "../simple_NW.scss"
@@ -15,27 +14,25 @@ format:
     height: 1100
     footer: Lesson 18 Slides
     html-math-method: mathjax
-    highlight-style: arrow
+    highlight-style: ayu
 execute:
   echo: true
   freeze: auto
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r}
-#| label: "setup"
+#| label: "setup" 
 #| include: false
-knitr::opts_chunk$set(echo = TRUE, fig.height=4, fig.width=5, message = F)
-```
+#| message: false
+#| warning: false
 
-
-## Load packages
-
-* Packages need to be loaded _every time_ you restart R or render an Qmd file
-
-```{r}
-# run these every time you open Rstudio
 library(tidyverse)    
-library(oibiostat)
+library(openintro)
 library(janitor)
 library(rstatix)
 library(knitr)
@@ -45,439 +42,1460 @@ library(gt)
 library(broom) 
 library(here) 
 library(pwr) 
+library(gridExtra) # NEW!!!
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_gray(base_size = 22))
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
 
 ```
 
+# Learning Objectives
 
-- You can check whether a package has been loaded or not 
-  - by looking at the Packages tab and 
-  - seeing whether it has been checked off or not
+1.  Identify the simple linear regression model and define statistics
+    language for key notation
 
-# Goals for Day 15: Simple Linear Regression (Sections 6.1-6.2)
+2.  Illustrate how ordinary least squares (OLS) finds the best model
+    parameter estimates
 
+3.  Apply OLS in R for simple linear regression of real data
 
-* Associations between two variables
-    * Correlation review
-* Simple linear regression: regression with one numerical explanatory variable
-* How do we
-    * calculate slope & intercept?
-    * interpret slope & intercept?
-    * Next time:
-        * do inference for slope & intercept? (CI, p-value)
-        * do prediction with regression line?
-* Regression in R
-* Residuals
-* (Population) regression model
-* LINE conditions
-    * Does the model fit the data well?
-        * Should we be using a line to model the data?
-* Should we add additional variables to the model? Take BSTA 512 to answer that (multiple regression)
+4.  Using a hypothesis test, determine if there is enough evidence that
+    population slope $\beta_1$ is not 0 (applies to $\beta_0$ as well)
 
+5.  Calculate and report the estimate and confidence interval for the
+    population slope $\beta_1$ (applies to $\beta_0$ as well)
+    
 
----
-
-# Life expectancy vs. female adult literacy rate
-
-<https://www.gapminder.org/tools/#$model$markers$bubble$encoding$x$data$concept=literacy_rate_adult_female_percent_of_females_ages_15_above&source=sg&space@=country&=time;;&scale$domain:null&zoomed:null&type:null;;&frame$value=2011;;;;;&chart-type=bubbles&url=v1>
-
-
-
-## Dataset description 
-
-* Data file: `lifeexp_femlit_water_2011.csv`
-* Data were downloaded from <https://www.gapminder.org/data/>
-* 2011 is the most recent year with the most complete data
-* __Life expectancy__ = the average number of years a newborn child would live if current mortality patterns were to stay the same. Source: <https://www.gapminder.org/data/documentation/gd004/>
-
-* __Adult literacy rate__ is the percentage of people ages 15 and above who can, with understanding, read and write a short, simple statement on their everyday life. Source: <http://data.uis.unesco.org/>
-
-* __At least basic water source (%)__ = the percentage of people using at least basic water services. This indicator encompasses both people using basic water services as well as those using safely managed water services. Basic drinking water services is defined as drinking water from an improved source, provided collection time is not more than 30 minutes for a round trip. Improved water sources include piped water, boreholes or tubewells, protect dug wells, protected springs, and packaged or delivered water.
-
-
-## Get to know the data
-
-```{r}
-gapm <- read_csv(here::here("data", "lifeexp_femlit_water_2011.csv"))
-
-glimpse(gapm)
-summary(gapm)
+```{css, echo=FALSE}
+.reveal code {
+  max-height: 100% !important;
+}
+.reveal pre.sourceCode code {
+  max-height: 100% !important;
+}
 ```
 
-## Association between life expectancy and female literacy rate
+## Let's start with an example
 
+::::: columns
+::: {.column width="55%"}
 ```{r}
-ggplot(gapm, 
-       aes(x = female_literacy_rate_2011,
-           y = life_expectancy_years_2011)) +
-  geom_point() +
-  labs(x = "female literacy rate", 
-       y = "life expectancy",
-       title = "Life expectancy vs. 
-             female literacy rate in 2011") +  
-  geom_smooth(method = "lm", 
-              se = FALSE)
-```
-
-
-* Is there a relationship between the two variables? 
-* Is it positive or negative? 
-* Strong, moderate, or weak? 
-* Is it linear?
-
-
-## Dependent vs. independent variables
-
-```{r}
+#| fig-height: 8
+#| fig-width: 11
 #| echo: false
+
+gapm <- read_csv("data/lifeexp_femlit_2011.csv")
 ggplot(gapm, aes(x = female_literacy_rate_2011,
                  y = life_expectancy_years_2011)) +
-  geom_point() +
-  labs(x = "female literacy rate", 
-       y = "life expectancy",
-       title = "Life expectancy vs. female literacy rate in 2011") +  
-  geom_smooth(method = "lm", se = FALSE)
+  geom_point(size = 4) +
+  geom_smooth(method = "lm", se = FALSE, size = 3, colour="#F14124") +
+  labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(size = 30), 
+        axis.text = element_text(size = 25), 
+        title = element_text(size = 30))
+
 ```
+:::
 
+::: {.column width="45%"}
+ 
 
-* $y$ = dependent variable (DV)
-    * also called the outcome or response variable
-* $x$ = independent variable (IV)
-    * also called the predictor variable
-    * or regressor in a regression analysis
+Average life expectancy vs. female literacy rate
 
-* How to determine which is which?
+ 
 
+-   Each point on the plot is for a different country
 
-## Correlation between life expectancy and female literacy rate
+ 
 
-* The base R function for calculating the correlation coefficient is `cor()`. 
-* This can be used within summarize.
+-   $X$ = country's adult female literacy rate
+
+ 
+
+-   $Y$ = country's average life expectancy (years)
+:::
+:::::
+
+::: heq
+$$\widehat{\text{life expectancy}} =  50.9 + 0.232\cdot\text{female literacy rate}$$
+:::
+
+## Reference: How did I code that? {.smaller}
+
+![](../img_slides/pause.png){.absolute top="83%" right="0%" width="120"
+height="120"}
 
 ```{r}
-gapm %>% 
-  summarize(correlation = cor(life_expectancy_years_2011, 
-                              female_literacy_rate_2011,
-                              use =  "complete.obs"))
+#| fig-height: 6.5
+#| fig-width: 10
+#| fig-align: center
 
-# base R:
-cor(gapm$life_expectancy_years_2011, 
-    gapm$female_literacy_rate_2011,
-    use =  "complete.obs")
+ggplot(gapm, aes(x = female_literacy_rate_2011,
+                 y = life_expectancy_years_2011)) +
+  geom_point(size = 4) +
+  geom_smooth(method = "lm", se = FALSE, size = 3, colour="#F14124") +
+  labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(size = 30), 
+        axis.text = element_text(size = 25), 
+        title = element_text(size = 30))
+
 ```
 
+## Dataset description
 
-## (Pearson) Correlation coefficient (r)
+-   Data files
 
+    -   Cleaned: `lifeexp_femlit_2011.csv`
 
-* A _bivariate_ summary statistic since calculated using two variables
-* __-1__ indicates a __perfect negative linear relationship__: As one variable increases, the value of the other variable tends to go down, following a *straight line*.
-* __0__ indicates __no linear relationship__: The values of both variables go up/down independently of each other.
-* __1__ indicates a__ perfect positive linear relationship__: As the value of one variable goes up, the value of the other variable tends to go up as well in a linear fashion.
+    -   Needs cleaning: `lifeexp_femlit_water_2011.csv`
 
+-   Data were downloaded from
+    [Gapminder](https://www.gapminder.org/data/){.uri}
 
-$$r = \frac{1}{n-1}\sum_{i=1}^{n}\Big(\frac{x_i - \bar{x}}{s_x}\Big)\Big(\frac{y_i - \bar{y}}{s_y}\Big)$$
+-   2011 is the most recent year with the most complete data
+
+-   [**Life
+    expectancy**](https://www.gapminder.org/data/documentation/gd004/) =
+    the average number of years a newborn child would live if current
+    mortality patterns were to stay the same.
+
+-   [**Adult literacy rate**](http://data.uis.unesco.org/) is the
+    percentage of people ages 15 and above who can, with understanding,
+    read and write a short, simple statement on their everyday life.
+
+## Get to know the data (1/2)
+
+-   Load data
+
+```{r}
+gapm_original <- read_csv(here::here("data", "lifeexp_femlit_2011.csv"))
+```
+
+-   Glimpse of the data
+
+```{r}
+glimpse(gapm_original)
+```
+
+-   Note the missing values for our variables of interest
+
+## Get to know the data (2/2)
+
+-   Get a sense of the summary statistics
+
+```{r}
+gapm_original %>% 
+  select(life_expectancy_years_2011, female_literacy_rate_2011) %>% 
+  summary()
+```
+
+## Remove missing values (1/2) {visibility="hidden"}
+
+-   Remove rows with missing data for life expectancy and female
+    literacy rate
+
+```{r}
+gapm <- gapm_original %>% 
+  drop_na(life_expectancy_years_2011, female_literacy_rate_2011)
+
+glimpse(gapm)
+
+```
+
+-   No missing values now for our variables of interest
+
+## Remove missing values (2/2) {visibility="hidden"}
+
+-   And no more missing values when we look only at our two variables of
+    interest
+
+```{r}
+gapm %>% select(life_expectancy_years_2011, female_literacy_rate_2011) %>% 
+  get_summary_stats()
+```
+
+::::: blue
+::: blue-ttl
+Note
+:::
+
+::: blue-cont
+-   Removing the rows with missing data was not needed to run the
+    regression model.
+-   I did this step since later we will be calculating the standard
+    deviations of the explanatory and response variables for *just the
+    values included in the regression model*. It'll be easier to do this
+    if we remove the missing values now.
+:::
+:::::
+
+## Poll Everywhere Question 1
+
+## Questions we can ask with a simple linear regression model
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| fig-height: 8
+#| fig-width: 11
+#| echo: false
+
+gapm <- read_csv("data/lifeexp_femlit_2011.csv")
+ggplot(gapm, aes(x = female_literacy_rate_2011,
+                 y = life_expectancy_years_2011)) +
+  geom_point(size = 4) +
+  geom_smooth(method = "lm", se = FALSE, size = 3, colour="#F14124") +
+  labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(
+        size = 30), 
+        axis.text = element_text(
+        size = 25), 
+        title = element_text(
+        size = 30))
+
+```
+:::
+
+::: {.column width="50%"}
+-   How do we...
+    -   calculate slope & intercept?
+    -   interpret slope & intercept?
+    -   do inference for slope & intercept?
+        -   CI, p-value
+    -   do prediction with regression line?
+        -   CI for prediction?
+-   Does the model fit the data well?
+    -   Should we be using a line to model the data?
+-   Should we add additional variables to the model?
+    -   multiple/multivariable regression
+:::
+:::::
+
+::: heq
+$$\widehat{\text{life expectancy}} =  50.9 + 0.232\cdot\text{female literacy rate}$$
+:::
+
+# Learning Objectives
+
+::: lob
+1.  Identify the simple linear regression model and define statistics
+    language for key notation
+:::
+
+2.  Illustrate how ordinary least squares (OLS) finds the best model
+    parameter estimates
+
+3.  Apply OLS in R for simple linear regression of real data
+
+4.  Using a hypothesis test, determine if there is enough evidence that
+    population slope $\beta_1$ is not 0 (applies to $\beta_0$ as well)
+
+5.  Calculate and report the estimate and confidence interval for the
+    population slope $\beta_1$ (applies to $\beta_0$ as well)
+    
+
+## Simple Linear Regression Model
+
+The (population) regression model is denoted by:
+
+ 
+
+::: heq
+$$Y =  \beta_0 + \beta_1X + \epsilon$$
+:::
+
+ 
+
+::::::::::: columns
+:::::: column
+::::: red
+::: red-ttl
+Unobservable population parameters
+:::
+
+::: red-cont
+-   $\beta_0$ and $\beta_1$ are **unknown** population parameters
+
+-   $\epsilon$ (epsilon) is the error about the line
+
+    -   It is assumed to be a random variable with a...
+
+        -   Normal distribution with mean 0 and constant variance
+            $\sigma^2$
+
+        -   i.e. $\epsilon \sim N(0, \sigma^2)$
+:::
+:::::
+::::::
+
+:::::: column
+::::: pink
+::: pink-ttl
+Observable sample data
+:::
+
+::: pink-cont
+-   $Y$ is our dependent variable
+
+    -   Aka outcome or response variable
+
+-   $X$ is our independent variable
+
+    -   Aka predictor, regressor, exposure variable
+:::
+:::::
+::::::
+:::::::::::
+
+## Simple Linear Regression Model (another way to view components)
+
+The (population) regression model is denoted by:
+
+ 
+
+::: heq
+$$Y =  \beta_0 + \beta_1X + \epsilon$$
+:::
+
+ 
+
+|               |                |                                            |
+|---------------|----------------|--------------------------------------------|
+| **Component** | **Type**       | **Name**                                   |
+| $Y$           | Observed       | response, outcome, dependent variable      |
+| $\beta_0$     | Pop. parameter | intercept                                  |
+| $\beta_1$     | Pop. parameter | slope                                      |
+| $X$           | Observed       | predictor, covariate, independent variable |
+| $\epsilon$    | Pop. parameter | residuals, error term                      |
+
+## If the population parameters are unobservable, how did we get the line for life expectancy?
+
+:::::: columns
+:::: {.column width="40%"}
+ 
+
+::: hl
+Note: the **population model is the true, underlying model** that we are
+trying to estimate using our sample data
+
+-   Our goal in simple linear regression is to estimate $\beta_0$ and
+    $\beta_1$
+:::
+::::
+
+::: {.column width="60%"}
+```{r}
+#| fig-height: 8
+#| fig-width: 11
+#| echo: false
+#| fig-align: center
+
+gapm <- read_csv("data/lifeexp_femlit_2011.csv")
+ggplot(gapm, aes(x = female_literacy_rate_2011,
+                 y = life_expectancy_years_2011)) +
+  geom_point(size = 4) +
+  geom_smooth(method = "lm", se = FALSE, size = 3, colour="#F14124") +
+  labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(size = 30), 
+        axis.text = element_text(size = 25), 
+        title = element_text(size = 30))
+
+```
+:::
+::::::
+
+## Poll Everywhere Question 2
 
 ## Regression line = best-fit line
 
-$$\widehat{y} = b_0 + b_1 \cdot x $$
+::::: columns
+::: {.column width="50%"}
+$$\widehat{Y} = \widehat{\beta}_0 + \widehat{\beta}_1 X $$
 
-* $\hat{y}$ is the predicted outcome for a specific value of $x$.
-* $b_0$ is the intercept
-* $b_1$ is the slope of the line, i.e., the increase in $\hat{y}$ for every increase of one (unit increase) in $x$.
-    - slope = *rise over run*
+-   $\widehat{Y}$ is the predicted outcome for a specific value of $X$
+-   $\widehat{\beta}_0$ is the intercept *of the best-fit line*
+-   $\widehat{\beta}_1$ is the slope *of the best-fit line*, i.e., the
+    increase in $\widehat{Y}$ for every increase of one (unit increase)
+    in $X$
+    -   slope = *rise over run*
+:::
 
-
+::: {.column width="50%"}
 ```{r}
+#| fig-height: 8
+#| fig-width: 11
 #| echo: false
-#| fig.height: 3.5
-#| fig.width: 4.0
+
+gapm <- read_csv("data/lifeexp_femlit_2011.csv")
 ggplot(gapm, aes(x = female_literacy_rate_2011,
                  y = life_expectancy_years_2011)) +
-  geom_point() +
-  labs(x = "female literacy rate", 
-       y = "life expectancy",
-       title = "2011 life expectancy vs. female literacy rate") +  
-  geom_smooth(method = "lm", se = FALSE)
+  geom_point(size = 4) +
+  geom_smooth(method = "lm", se = FALSE, size = 3, colour="#F14124") +
+  labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(size = 30), 
+        axis.text = element_text(size = 25), 
+        title = element_text(size = 30))
 ```
-]
+:::
+:::::
 
-__Interpreting coefficients__
+## Simple Linear Regression Model
 
-* __Intercept__
-    - The expected outcome for the $y$-variable when the $x$-variable is 0.
-* __Slope__
-    - For every increase of 1 unit in the $x$-variable, there is an expected increase of, on average, $b_1$ units in the $y$-variable.
-    - We only say that there is an expected increase and not necessarily a causal increase.
+::::::: columns
+:::: {.column width="50%"}
+#### Population regression *model*
 
+::: lob
+$$Y =  \beta_0 + \beta_1X + \epsilon$$
+:::
 
+ 
 
-## Correlation coefficient vs. slope
+##### Components
 
-* Not the same!!!
-* Directly related though:
+|            |                                            |
+|------------|--------------------------------------------|
+| $Y$        | response, outcome, dependent variable      |
+| $\beta_0$  | intercept                                  |
+| $\beta_1$  | slope                                      |
+| $X$        | predictor, covariate, independent variable |
+| $\epsilon$ | residuals, error term                      |
+::::
 
+:::: {.column width="50%"}
+#### Estimated regression *line*
 
-$$b_1 = r\frac{s_y}{s_x}$$
+::: hl
+$$\widehat{Y} =  \widehat{\beta}_0 + \widehat{\beta}_1X$$
+:::
 
-where $s_x$ and $s_y$ are the standard deviations of the $x$ and $y$ variables.
+ 
 
-The correlation coefficient can be computed using the formula below. 
+##### Components
 
-$$r = \frac{1}{n-1}\sum_{i=1}^{n}\Big(\frac{x_i - \bar{x}}{s_x}\Big)\Big(\frac{y_i - \bar{y}}{s_y}\Big)$$
+|                     |                                                   |
+|---------------------|---------------------------------------------------|
+| $\widehat{Y}$       | *estimated expected* response given predictor $X$ |
+| $\widehat{\beta}_0$ | *estimated* intercept                             |
+| $\widehat{\beta}_1$ | *estimated* slope                                 |
+| $X$                 | predictor, covariate, independent variable        |
+::::
+:::::::
 
+# Learning Objectives
 
-We will be using R to do these calculations.
+1.  Identify the simple linear regression model and define statistics
+    language for key notation
 
+::: lob
+2.  Illustrate how ordinary least squares (OLS) finds the best model
+    parameter estimates
+:::
 
+3.  Apply OLS in R for simple linear regression of real data
 
-# How is the best-fit line calculated? (1/3)  
+4.  Using a hypothesis test, determine if there is enough evidence that
+    population slope $\beta_1$ is not 0 (applies to $\beta_0$ as well)
 
-<https://www.rossmanchance.com/applets/2021/regshuffle/regshuffle.htm>
+5.  Calculate and report the estimate and confidence interval for the
+    population slope $\beta_1$ (applies to $\beta_0$ as well)
+    
 
-## How is the best-fit line calculated? (2/3)
+## It all starts with a residual...
 
-* __Observed values__ $y_i$ are the values in the dataset
+::::: columns
+::: {.column width="50%"}
+-   Recall, one characteristic of our population model was that the
+    residuals, $\epsilon$, were Normally distributed:
+    $\epsilon \sim N(0, \sigma^2)$
 
-* __Fitted values__ $\widehat{y}_i$ are the values that fall on the best-fit line for a specific $x_i$
+-   In our population regression model, we had:
+    $$Y =  \beta_0 + \beta_1X + \epsilon$$
 
-* __Residuals__ $e_i = y_i - \widehat{y}_i$ are the differences between the two.
+-   We can also take the average (expected) value of the population
+    model
 
+-   We take the expected value of both sides and get:
 
-The best-line is minimizing "how far" the residuals are from the best-fit line 
-* However, if we add all the residuals we get 0. ( $\sum_{i=1}^n e_i = 0$ )
-* Thus instead, we add the squares of the residuals, which is always positive, and minimize the sums of the squares ( $\sum_{i=1}^n e_i^2 \geq 0$ )
-    - which is why the best-fit line is often called the __least-squares line__
-* This is the same as minimizing the combined area of all the "residual squares" we were looking at in the applet.
+$$\begin{aligned} 
+        E[Y] & = E[\beta_0 + \beta_1X + \epsilon] \\
+        E[Y] & = E[\beta_0] + E[\beta_1X] + E[\epsilon] \\
+        E[Y] & = \beta_0 + \beta_1X + E[\epsilon] \\
+        E[Y|X] & = \beta_0 + \beta_1X \\
+\end{aligned}$$
 
+-   We call $E[Y|X]$ the expected value of $Y$ given $X$
+:::
 
-## Regression model with residuals
+::: {.column width="50%"}
+![](../img_slides/OLSassumptions-1.png){fig-align="center"}
+:::
+:::::
 
+## So now we have two representations of our population model
 
-* __Observed values__ $y_i$ 
-  * the values in the dataset
-* __Fitted values__ $\widehat{y}_i$ 
-  * the values that fall on the best-fit line for a specific $x_i$
-* __Residuals__ $e_i = y_i - \widehat{y}_i$ 
-  * the differences between the observed and fitted values
+::::::::::: columns
+:::::: {.column width="50%"}
+::::: blue
+::: blue-ttl
+With observed $Y$ values and residuals:
+:::
 
+::: blue-cont
+$$Y =  \beta_0 + \beta_1X + \epsilon$$
+:::
+:::::
+::::::
 
+:::::: {.column width="50%"}
+::::: green
+::: green-ttl
+With the population expected value of $Y$ given $X$:
+:::
+
+::: green-cont
+$$E[Y|X] = \beta_0 + \beta_1X$$
+:::
+:::::
+::::::
+:::::::::::
+
+Using the two forms of the model, we can figure out a formula for our
+residuals:
+
+$$\begin{aligned}
+Y & = (\beta_0 + \beta_1X) + \epsilon \\
+Y & = E[Y|X] + \epsilon \\
+Y - E[Y|X] & = \epsilon \\ 
+\epsilon & = Y - E[Y|X]
+\end{aligned}$$
+
+And so we have our **true, population model**, residuals!
+
+::: lob
+This is an important fact! For the **population model**, the residuals:
+$\epsilon = Y - E[Y|X]$
+:::
+
+## Back to our estimated model
+
+We have the same two representations of our estimated/fitted model:
+
+::::::::::: columns
+:::::: {.column width="50%"}
+::::: blue
+::: blue-ttl
+With observed values:
+:::
+
+::: blue-cont
+$$Y =  \widehat{\beta}_0 + \widehat{\beta}_1X + \widehat{\epsilon}$$
+:::
+:::::
+::::::
+
+:::::: {.column width="50%"}
+::::: green
+::: green-ttl
+With the estimated expected value of $Y$ given $X$:
+:::
+
+::: green-cont
+$$\begin{aligned} 
+\widehat{E}[Y|X] & = \widehat{\beta}_0 + \widehat{\beta}_1X \\
+\widehat{E[Y|X]} & = \widehat{\beta}_0 + \widehat{\beta}_1X \\
+\widehat{Y} & = \widehat{\beta}_0 + \widehat{\beta}_1X \\
+\end{aligned}$$
+:::
+:::::
+::::::
+:::::::::::
+
+Using the two forms of the model, we can figure out a formula for our
+estimated residuals:
+
+$$\begin{aligned}
+Y & = (\widehat{\beta}_0 + \widehat{\beta}_1X) + \widehat\epsilon \\
+Y & = \widehat{Y} + \widehat\epsilon \\
+\widehat\epsilon & = Y - \widehat{Y}
+\end{aligned}$$
+
+::: hl
+This is an important fact! For the **estimated/fitted model**, the
+residuals: $\widehat\epsilon = Y - \widehat{Y}$
+:::
+
+## *Individual* $i$ residuals in the estimated/fitted model
+
+::::: columns
+::: {.column width="45%"}
+-   **Observed values for each individual** $i$: $Y_i$
+    -   Value in the dataset for individual $i$
+-   **Fitted value for each individual** $i$: $\widehat{Y}_i$
+    -   Value that falls on the best-fit line for a specific $X_i$
+    -   If two individuals have the same $X_i$, then they have the same
+        $\widehat{Y}_i$
+:::
+
+::: {.column width="55%"}
 ```{r}
-#| fig.width: 10.0
-#| fig.height: 7.0
+#| message: false
+#| echo: false
+#| fig-height: 8
+#| fig-width: 11
+#| fig-align: center
 # code from https://drsimonj.svbtle.com/visualising-residuals
 
 model1 <- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,
                  data = gapm)
 regression_points <- augment(model1)
+# summary(model1)
+# sum(model1$residuals^2)
 
 ggplot(regression_points, 
        aes(x = female_literacy_rate_2011,
                  y = life_expectancy_years_2011)) +
-  geom_smooth(method = "lm", se = FALSE, color = "lightgrey") +
+  # geom_segment(aes(
+  #   xend = female_literacy_rate_2011, 
+  #   yend = .fitted), 
+  #   alpha = 1) +
+  geom_smooth(method = "lm", se = FALSE, color = "#F14124", size=3) +
+  # > Color adjustments made here...
+  geom_point(color = "black", size = 4) +  # Color mapped here
+  #scale_color_gradient2(low = "#213c96", mid = "white", high = "#F14124") +  # Colors to use here
+    #guides(color = "none") +
+  geom_point(aes(y = .fitted), shape = 1, size = 4) +
+labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(size = 30), 
+        axis.text = element_text(size = 25), 
+        title = element_text(size = 30))  
+```
+:::
+:::::
+
+## *Individual* $i$ residuals in the estimated/fitted model
+
+:::::: columns
+:::: {.column width="45%"}
+-   **Observed values for each individual** $i$: $Y_i$
+
+    -   Value in the dataset for individual $i$
+
+-   **Fitted value for each individual** $i$: $\widehat{Y}_i$
+
+    -   Value that falls on the best-fit line for a specific $X_i$
+    -   If two individuals have the same $X_i$, then they have the same
+        $\widehat{Y}_i$
+
+::: hl3
+-   **Residual for each individual:**
+    $\widehat\epsilon_i = Y_i - \widehat{Y}_i$
+
+    -   Difference between the observed and fitted value
+:::
+::::
+
+::: {.column width="55%"}
+```{r}
+#| message: false
+#| echo: false
+#| fig-height: 8
+#| fig-width: 11
+#| fig-align: center
+# code from https://drsimonj.svbtle.com/visualising-residuals
+
+model1 <- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,
+                 data = gapm)
+regression_points <- augment(model1)
+# summary(model1)
+# sum(model1$residuals^2)
+
+ggplot(regression_points, 
+       aes(x = female_literacy_rate_2011,
+                 y = life_expectancy_years_2011)) +
   geom_segment(aes(
     xend = female_literacy_rate_2011, 
     yend = .fitted), 
-    alpha = .2) +
+    alpha = 1, 
+    color = "#4FADF3", 
+    size = 2) +
+  geom_smooth(method = "lm", se = FALSE, color = "#F14124", size=3) +
   # > Color adjustments made here...
-  geom_point(aes(color = .resid), size = 4) +  # Color mapped here
-  scale_color_gradient2(low = "blue", mid = "white", high = "red") +  # Colors to use here
-  guides(color = "none") +
-  geom_point(aes(y = .fitted), shape = 1, size = 3) +
-  labs(x = "Female literacy rate", 
-       y = "Average life expectancy",
-       title = "Regression line with residuals") +
-  theme_bw() + 
-  theme(text = element_text(size = 20))    
+  geom_point(color = "black", size = 4) +  # Color mapped here
+  #scale_color_gradient2(low = "#213c96", mid = "white", high = "#F14124") +  # Colors to use here
+    #guides(color = "none") +
+  geom_point(aes(y = .fitted), shape = 1, size = 4) +
+labs(x = "Female literacy rate (%)", 
+       y = "Life expectancy (years)",
+       title = "Relationship between life expectancy and \n the female literacy rate in 2011") +
+    theme(axis.title = element_text(size = 30), 
+        axis.text = element_text(size = 25), 
+        title = element_text(size = 30))  
 ```
+:::
+::::::
 
+## Poll Everywhere Question 3
 
+## So what do we do with the residuals?
 
-## How is the best-fit line calculated? (3/3)
+-   We want to **minimize the sum of residuals**
 
-In math-speak, we need to find the values $b_0$ and $b_1$ that minimize the equation:
+    -   Aka minimize the difference between the observed $Y$ value and
+        the estimated expected response given the predictor (
+        $\widehat{E}[Y|X]$ )
 
-$$\sum_{i=1}^n e_i^2 = 
-\sum_{i=1}^n (y_i - \hat{y_i})^2 = 
-\sum_{i=1}^n (y_i - b_0 -b_1 x_i)^2$$
+-   **We can use ordinary least squares (OLS) to do this in linear
+    regression!**
 
-where 
+-   Idea behind this: reduce the total error between the fitted line and
+    the observed point (error between is called residuals)
 
-* $y_i$ are the values in the dataset 
-* with $n$ datapoints and 
-* $\widehat{y_i}$ are the fitted values that fall on the best-fit line for a specific value $x_i$.
+    -   Vague use of total error: more precisely, we want to **reduce
+        the sum of squared errors**
+    -   Think back to my R Shiny app!
+    -   We need to mathematically define this!
 
-How do we find the minimum values of an equation??? 
+ 
 
-If you want to see the mathematical details, check out pages 222-223 (pdf pages 10-11) of <https://www.stat.cmu.edu/~hseltman/309/Book/chapter9.pdf>.
+ 
 
-$$b_0 = \bar{y} - b_1\bar{x}, \ \ \ \ \ \ \ \ \ 
-b_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = r\frac{s_y}{s_x}$$
+-   Note: there are other ways to estimate the best-fit line!!
 
+    -   Example: Maximum likelihood estimation
 
-# Regression in R
+# Break 
 
-* We will use R to run a simple linear regression using the command `lm()`.
-* The regression output gives us the coefficients (intercept and slope) for the regression line (along with other statistics that we will cover later in the course).
+# Learning Objectives
 
-##`summary()`
+1.  Identify the simple linear regression model and define statistics
+    language for key notation
+
+2.  Illustrate how ordinary least squares (OLS) finds the best model
+    parameter estimates
+
+::: lob
+3.  Apply OLS in R for simple linear regression of real data
+:::
+
+4.  Using a hypothesis test, determine if there is enough evidence that
+    population slope $\beta_1$ is not 0 (applies to $\beta_0$ as well)
+
+5.  Calculate and report the estimate and confidence interval for the
+    population slope $\beta_1$ (applies to $\beta_0$ as well)
+    
+
+## Setting up for ordinary least squares
+
+:::::::: columns
+::: {.column width="75%"}
+-   Sum of Squared Errors (SSE)
+
+$$ \begin{aligned}
+SSE & = \displaystyle\sum^n_{i=1} \widehat\epsilon_i^2 \\
+SSE & = \displaystyle\sum^n_{i=1} (Y_i - \widehat{Y}_i)^2 \\
+SSE & = \displaystyle\sum^n_{i=1} (Y_i - (\widehat{\beta}_0+\widehat{\beta}_1X_i))^2 \\
+SSE & = \displaystyle\sum^n_{i=1} (Y_i - \widehat{\beta}_0-\widehat{\beta}_1X_i)^2
+\end{aligned}$$
+:::
+
+:::::: {.column width="25%"}
+::::: green
+::: green-ttl
+Things to use
+:::
+
+::: green-cont
+-   $\widehat\epsilon_i = Y_i - \widehat{Y}_i$
+
+-   $\widehat{Y}_i = \widehat\beta_0 + \widehat\beta_1X_i$
+:::
+:::::
+::::::
+::::::::
+
+::: hl
+Then we want to find the estimated coefficient values that minimize the
+SSE!
+:::
+
+## Poll Everywhere Question 4
+
+## So how do I find the coefficient estimates that minimize the SSE?
+
+![](../img_slides/hoopla.jpeg){fig-align="center"}
+
+## Regression in R: `lm()`
+
+-   Let's discuss the syntax of this function
 
 ```{r}
+#| out-height: 800px 
+
 model1 <- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,
                  data = gapm)
+```
 
+## Regression in R: `lm()` + `summary()`
+
+```{r}
+#| out-height: 800px 
+
+model1 <- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,
+                 data = gapm)
 summary(model1)
 ```
 
-* Above we first "fit" the linear regression model to the data using the `lm()` function and save this as `model1`. 
-    - By "fit", we mean "find the best fitting line to this data", which we will discuss later. 
-    - `lm()` stands for "linear model" and is used as follows: `lm(y ~ x, data = data_name)` where:
-        - `y` is the outcome variable, followed by a tilde `~`. Above, `y` is set to `life_expectancy_years_2011`.
-        - `x` is the explanatory variable. Above, `x` is set to `female_literacy_rate_2011`.
+![](../img_slides/summary.png){fig-align="center"}
 
+## Regression in R: `lm()` + `tidy()`
 
-## `tidy()` model
+ 
 
 ```{r}
-tidy(model1) %>% gt()
+tidy(model1) %>% 
+  gt() %>% 
+  tab_options(table.font.size = 45)
 ```
 
+ 
 
-## Regression equation
+-   Regression equation for our model (which we saw a looong time ago):
 
-The values in the `estimate` column are the intercept and slope of the regression model.
+::: heq
+$$\widehat{\text{life expectancy}} =  50.9 + 0.232\cdot\text{female literacy rate}$$
+:::
+
+## How do we interpret the coefficients?
+
+::: heq
+$$\widehat{\text{life expectancy}} =  50.9 + 0.232\cdot\text{female literacy rate}$$
+:::
+
+-   **Intercept**
+    -   The expected outcome for the $Y$-variable when the $X$-variable
+        is 0
+    -   **Example:** The expected/average life expectancy is 50.9 years
+        for a country with 0% female literacy.
+-   **Slope**
+    -   For every increase of 1 unit in the $X$-variable, there is an
+        expected increase of, on average, $\widehat\beta_1$ units in the
+        $Y$-variable.
+
+    -   We only say that there is an expected increase and not
+        necessarily a causal increase.
+
+    -   **Example:** For every 1 percent increase in the female literacy
+        rate, life expectancy increases, on
+        average, 0.232 years.
+
+ 
+   
+-   You can say either expected OR average
+
+# Learning Objectives
+
+1.  Identify the simple linear regression model and define statistics
+    language for key notation
+
+2.  Illustrate how ordinary least squares (OLS) finds the best model
+    parameter estimates
+
+3.  Apply OLS in R for simple linear regression of real data
+
+::: lob
+4.  Using a hypothesis test, determine if there is enough evidence that
+    population slope $\beta_1$ is not 0 (applies to $\beta_0$ as well)
+:::
+
+5.  Calculate and report the estimate and confidence interval for the
+    population slope $\beta_1$ (applies to $\beta_0$ as well)
+    
+    
+## Steps in hypothesis testing
+
+![](../img_slides/hypothesis_test_steps.png)
+
+## General steps for hypothesis test for population **slope** $\beta_1$ (t-test)
+
+:::::::::::::::::::: columns
+::::::::::: {.column width="48%"}
+:::: highlight-container
+::: highlight
+1.  For today's class, we are assuming that we have met the underlying
+    assumptions (checked in our Model Evaluation step)
+:::
+::::
+
+:::: highlight-container
+::: highlight
+2.  State the null hypothesis.
+:::
+::::
+
+Often, we are curious if the coefficient is 0 or not:
+
+\begin{align}
+H_0 &: \beta_1 = 0\\
+\text{vs. } H_A&: \beta_1 \neq 0
+\end{align}
+
+:::: highlight-container
+::: highlight
+3.  Specify the significance level.
+:::
+::::
+
+Often we use $\alpha = 0.05$
+
+:::: highlight-container
+::: highlight
+4.  Specify the test statistic and its distribution under the null
+:::
+::::
+
+The test statistic is $t$, and follows a Student's t-distribution.
+:::::::::::
+
+::: {.column width="4%"}
+:::
+
+::::::::: {.column width="48%"}
+:::: highlight-container
+::: highlight
+5.  Compute the value of the test statistic
+:::
+::::
+
+The calculated **test statistic** for $\widehat\beta_1$ is
+
+$$t = \frac{ \widehat\beta_1 - \beta_1}{ \text{SE}_{\widehat\beta_1}} = \frac{ \widehat\beta_1}{ \text{SE}_{\widehat\beta_1}}$$
+
+when we assume $H_0: \beta_1 = 0$ is true.
+
+:::: highlight-container
+::: highlight
+6.  Calculate the p-value
+:::
+::::
+
+We are generally calculating: $2\cdot P(T > t)$
+
+:::: highlight-container
+::: highlight
+7.  Write conclusion for hypothesis test
+:::
+::::
+
+We (reject/fail to reject) the null hypothesis that the slope is 0 at
+the $100\alpha\%$ significiance level. There is
+(sufficient/insufficient) evidence that there is significant association
+between ($Y$) and ($X$) (p-value = $P(T > t)$).
+:::::::::
+::::::::::::::::::::
+
 
 ```{r}
-tidy(model1) %>% gt()
+#| echo: false
+# recall model1_b1 is regression table restricted to b1 row
+model1_b1 <-tidy(model1) %>% filter(term == "female_literacy_rate_2011")
+# model1_b1 %>% gt() %>%
+#   tab_options(table.font.size = 45) %>% fmt_number(decimals = 4)
 ```
 
-Generic regression equation:
+## Some important notes
 
-$$\widehat{y} = b_0 + b_1 \cdot x $$
+-   Today we are discussing the hypothesis test for a **single**
+    coefficient
 
-Regression equation for our model:
+ 
 
-$$\widehat{\textrm{life expectancy}} = 50.9 + 0.232 \cdot \textrm{female literacy rate} $$
+-   The test statistic for a single coefficient follows a Student's
+    t-distribution
 
+     
 
-## Interpretation of coefficients
+    -   It can also follow an F-distribution, but we will discuss this
+        more with multiple linear regression and multi-level categorical
+        covariates
 
-$$\widehat{\textrm{life expectancy}} = 50.9 + 0.232 \cdot \textrm{female literacy rate} $$
+ 
 
-__Interpretation of the intercept for this example. Is it meaningful?__ 
+-   Single coefficient testing can be done on any coefficient, but it is
+    most useful for continuous covariates or binary covariates
 
-* The average life expectancy in 2011 for countries with no literate female adults was on average 50.9 years.
+     
 
+    -   This is because testing the single coefficient will still tell
+        us something about the overall relationship between the
+        covariate and the outcome
 
-__Interpretation of the slope for this example.__ 
+     
 
-* For every 1 point increase in a country’s female literacy rate, we expect an average 0.232 year increase in the country’s average life expectancy.
+    -   We will talk more about this with multiple linear regression and
+        multi-level categorical covariates
 
+## Poll Everywhere Question 5
 
+## Life expectancy example: hypothesis test for population **slope** $\beta_1$ (1/4)
 
-# The (Population) Regression Model
+-   Steps 1-4 are setting up our hypothesis test: not much change from
+    the general steps
 
+:::: highlight-container
+::: highlight
+1.  For today's class, we are assuming that we have met the underlying
+    assumptions (checked in our Model Evaluation step)
+:::
+::::
 
-## The regresison model
+:::: highlight-container
+::: highlight
+2.  State the null hypothesis.
+:::
+::::
 
-* The (population) regression model is denoted by
+We are testing if the slope is 0 or not:
 
-$$y = \beta_0 + \beta_1 \cdot x + \epsilon$$
+\begin{align}
+H_0 &: \beta_1 = 0\\
+\text{vs. } H_A&: \beta_1 \neq 0
+\end{align}
 
-* $\beta_0$ and $\beta_1$ are unknown population parameters
-* $\epsilon$ (epsilon) is the error about the line
-    * It is assumed to be a random variable with a 
-        * normal distribution with
-        * mean 0 and
-        * constant variance $\sigma^2$
+:::: highlight-container
+::: highlight
+3.  Specify the significance level.
+:::
+::::
 
-* The __line__ is the average (expected) value of $Y$ given a value of $x$: $E(Y|x)$.
+Often we use $\alpha = 0.05$
 
-* The point estimates based on a sample are denoted by $b_0, b_1, s_{residuals}^2$
-    * Note: also common notation is $\widehat{\beta}_0, \widehat{\beta}_1, \widehat{\sigma}^2$
+:::: highlight-container
+::: highlight
+4.  Specify the test statistic and its distribution under the null
+:::
+::::
 
+The test statistic is $t$, and follows a Student's t-distribution.
 
----
+## Life expectancy example: hypothesis test for population **slope** $\beta_1$ (2/4)
 
-## The regresison model visually
+:::: highlight-container
+::: highlight
+5.  Compute the value of the test statistic
+:::
+::::
 
-$$y = \beta_0 + \beta_1 \cdot x + \epsilon, \text{ where } \epsilon \sim N(0, \sigma^2)$$
-
-See slides for figure. 
-
-
-# What are the LINE conditions?
-
-For "good" model fit and to be able to make inferences and predictions based on our models, 4 conditions need to be satisfied.  
-
-Briefly: 
-
-* __L__inearity of relationship between variables
-* __I__ndependence of the Y values
-* __N__ormality of the residuals
-* __E__quality of variance of the residuals (homoscedasticity)
-
-[More in depth](https://bookdown.org/roback/bookdown-bysh/ch-MLRreview.html#ordinary-least-squares-ols-assumptions):
-
-* __L__ : there is a linear relationship between the mean response (Y) and the explanatory variable (X),
-* __I__ : the errors are independent—there’s no connection between how far any two points lie from the regression line,
-* __N__ : the responses are normally distributed at each level of X, and
-* __E__ : the variance or, equivalently, the standard deviation of the responses is equal for all levels of X.
-
-<!-- Note that the __residuals__ play a key role! -->
-
-
-
-## L: Linearity of relationship between variables
-
-Is the association between the variables linear?
-
+-   **Option 1:** Calculate the test statistic using the values in the
+    regression table
 
 ```{r}
-ggplot(gapm, aes(x = female_literacy_rate_2011,
-                 y = life_expectancy_years_2011)) +
-  geom_point() +
-  labs(x = "female literacy rate", 
-       y = "life expectancy",
-       title = "Life expectancy vs. female literacy rate in 2011") +  
-  geom_smooth(method = "lm", se = FALSE) +
-  geom_smooth(se = FALSE, color = "black")
+# recall model1_b1 is regression table restricted to b1 row
+model1_b1 <-tidy(model1) %>% filter(term == "female_literacy_rate_2011")
+model1_b1 %>% gt() %>%
+  tab_options(table.font.size = 40) %>% fmt_number(decimals = 2)
+(TestStat_b1 <- model1_b1$estimate / model1_b1$std.error)
 ```
 
+-   **Option 2:** Get the test statistic value ($t^*$) from `R`
 
+```{r}
+model1_b1 %>% gt() %>%
+  tab_options(table.font.size = 40) %>% fmt_number(decimals = 2)
+```
 
-## I: Independence of the residuals
+## Life expectancy example: hypothesis test for population **slope** $\beta_1$ (3/4)
 
-* __Are the data points independent of each other?__
+:::: highlight-container
+::: highlight
+6.  Calculate the p-value
+:::
+::::
 
-* Examples of when they are *not* independent, include
-    * repeated measures (such as baseline, 3 months, 6 months)
-    * data from clusters, such as different hospitals or families
+-   The $p$-value is the *probability of obtaining a test statistic*
+    **just as extreme or more extreme** *than the **observed** test
+    statistic assuming the null hypothesis* $H_0$ *is true*
 
-* This condition is checked by reviewing the study *design* and not by inspecting the data
+-   We know the probability distribution of the test statistic (the
+    *null distribution*) assuming $H_0$ is true
 
-* How to analyze data using regression models when the $Y$-values are not independent is covered in BSTA 519 (Longitudinal data) 
+-   Statistical theory tells us that the test statistic $t$ can be
+    modeled by a $t$-distribution with $df = n-2$.
 
+    -   We had 80 countries' data, so $n=80$
 
-## N: Normality of the residuals
+-   **Option 1:** Use `pt()` and our calculated test statistic
 
-* The responses Y are normally distributed at each level of x
-* Next time we will go over how to assess this
+```{r}
+(pv = 2*pt(TestStat_b1, df=80-2, lower.tail=F))
+```
 
-See slides for figure.
+-   **Option 2:** Use the regression table output
 
+```{r}
+model1_b1 %>% gt() %>%
+  tab_options(table.font.size = 40)
+```
 
+## Life expectancy example: hypothesis test for population **slope** $\beta_1$ (4/4)
 
-## E: Equality of variance of the residuals
+:::: highlight-container
+::: highlight
+7.  Write conclusion for the hypothesis test
+:::
+::::
 
-* The __variance__ or, equivalently, the standard deviation of the responses is __equal for all values of x__.
-* This is called __homoskedasticity__ (top row)
-* If there is __heteroskedasticity__ (bottom row), then the assumption is not met.
+We reject the null hypothesis that the slope is 0 at the $5\%$
+significance level. There is sufficient evidence that there is
+significant association between female life expectancy and female
+literacy rates (p-value \< 0.0001).
 
-_See slides for figure._
+## Life expectancy ex: hypothesis test for population **intercept** $\beta_0$ (1/4)
 
-We will discuss how to assess this next time.
+-   Steps 1-4 are setting up our hypothesis test: not much change from
+    the general steps
 
+:::: highlight-container
+::: highlight
+1.  For today's class, we are assuming that we have met the underlying
+    assumptions (checked in our Model Evaluation step)
+:::
+::::
 
+:::: highlight-container
+::: highlight
+2.  State the null hypothesis.
+:::
+::::
 
+We are testing if the intercept is 0 or not:
 
+\begin{align}
+H_0 &: \beta_0 = 0\\
+\text{vs. } H_A&: \beta_0 \neq 0
+\end{align}
 
+:::: highlight-container
+::: highlight
+3.  Specify the significance level
+:::
+::::
+
+Often we use $\alpha = 0.05$
+
+:::: highlight-container
+::: highlight
+4.  Specify the test statistic and its distribution under the null
+:::
+::::
+
+This is the same as the slope. The test statistic is $t$, and follows a
+Student's t-distribution.
+
+## Life expectancy ex: hypothesis test for population **intercept** $\beta_0$ (2/4)
+
+:::: highlight-container
+::: highlight
+5.  Compute the value of the test statistic
+:::
+::::
+
+-   **Option 1:** Calculate the test statistic using the values in the
+    regression table
+
+```{r}
+# recall model1_b1 is regression table restricted to b1 row
+model1_b0 <-tidy(model1) %>% filter(term == "(Intercept)")
+model1_b0 %>% gt() %>%
+  tab_options(table.font.size = 40) %>% fmt_number(decimals = 2)
+(TestStat_b0 <- model1_b0$estimate / model1_b0$std.error)
+```
+
+-   **Option 2:** Get the test statistic value ($t^*$) from `R`
+
+```{r}
+model1_b0 %>% gt() %>%
+  tab_options(table.font.size = 40) %>% fmt_number(decimals = 2)
+```
+
+## Life expectancy ex: hypothesis test for population **intercept** $\beta_0$ (3/4)
+
+:::: highlight-container
+::: highlight
+6.  Calculate the p-value
+:::
+::::
+
+ 
+
+-   **Option 1:** Use `pt()` and our calculated test statistic
+
+```{r}
+(pv = 2*pt(TestStat_b0, df=80-2, lower.tail=F))
+```
+
+ 
+
+-   **Option 2:** Use the regression table output
+
+```{r}
+model1_b0 %>% gt() %>%
+  tab_options(table.font.size = 40)
+```
+
+## Life expectancy ex: hypothesis test for population **intercept** $\beta_0$ (4/4)
+
+:::: highlight-container
+::: highlight
+7.  Write conclusion for the hypothesis test
+:::
+::::
+
+We reject the null hypothesis that the intercept is 0 at the $5\%$
+significance level. There is sufficient evidence that the intercept for
+the association between average female life expectancy and female
+literacy rates is different from 0 (p-value \< 0.0001).
+
+   
+
+-   Note: if we fail to reject $H_0$, then we could decide to remove the
+    intercept from the model to force the regression line to go through
+    the origin (0,0) if it makes sense to do so for the application.
+
+# Learning Objectives
+
+1.  Identify the simple linear regression model and define statistics
+    language for key notation
+
+2.  Illustrate how ordinary least squares (OLS) finds the best model
+    parameter estimates
+
+3.  Apply OLS in R for simple linear regression of real data
+
+4.  Using a hypothesis test, determine if there is enough evidence that
+    population slope $\beta_1$ is not 0 (applies to $\beta_0$ as well)
+
+::: lob
+5.  Calculate and report the estimate and confidence interval for the
+    population slope $\beta_1$ (applies to $\beta_0$ as well)
+:::
+
+## Inference for the population **slope**: hypothesis test and CI
+
+:::::::::::: columns
+::::::::: {.column width="45%"}
+::::: green
+::: green-ttl
+Population model
+:::
+
+::: green-cont
+*line + random "noise"*
+
+$$Y = \beta_0 + \beta_1 \cdot X + \varepsilon$$ with
+$\varepsilon \sim N(0,\sigma^2)$\
+$\sigma^2$ is the variance of the residuals
+:::
+:::::
+
+::::: proposition
+::: prop-title
+Sample best-fit (least-squares) line
+:::
+
+::: prop-cont
+$$\widehat{Y} = \widehat{\beta}_0 + \widehat{\beta}_1 \cdot X $$
+
+Note: Some sources use $b$ instead of $\widehat{\beta}$
+:::
+:::::
+:::::::::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+ 
+
+We have two options for inference:
+
+1.  Conduct the **hypothesis test**
+
+\begin{align}
+H_0 &: \beta_1 = 0\\
+\text{vs. } H_A&: \beta_1 \neq 0
+\end{align}
+
+<br>
+
+*Note: R reports p-values for 2-sided tests*
+
+2.  Construct a **95% confidence interval** for the **population slope**
+    $\beta_1$
+
+<br>
+:::
+::::::::::::
+
+## Confidence interval for population **slope** $\beta_1$
+
+Recall the general CI formula:
+
+$$\widehat{\beta}_1 \pm t_{\alpha, n-2}^* \cdot SE_{\widehat{\beta}_1}$$
+
+To construct the confidence interval, we need to:
+
+-   Set our $\alpha$-level
+
+-   Find $\widehat\beta_1$
+
+-   Calculate the $t_{n-2}^*$
+
+-   Calculate $SE_{\widehat{\beta}_1}$
+
+## Calculate CI for population **slope** $\beta_1$ (1/2)
+
+::::: columns
+::: {.column width="50%"}
+$$\widehat{\beta}_1  \pm t^*\cdot SE_{\beta_1}$$
+:::
+
+::: {.column width="50%"}
+where $t^*$ is the $t$-distribution critical value with $df = n -2$.
+:::
+:::::
+
+-   **Option 1:** Calculate using each value
+
+Save values needed for CI:
+
+```{r}
+b1 <- model1_b1$estimate
+SE_b1 <- model1_b1$std.error
+```
+
+```{r}
+nobs(model1) # sample size n
+(tstar <- qt(.975, df = 80-2))
+```
+
+Use formula to calculate each bound
+
+```{r}
+(CI_LB <- b1 - tstar*SE_b1)
+(CI_UB <- b1 + tstar*SE_b1)
+```
+
+## Calculate CI for population **slope** $\beta_1$ (2/2)
+
+::::: columns
+::: {.column width="50%"}
+$$\widehat{\beta}_1  \pm t^*\cdot SE_{\beta_1}$$
+:::
+
+::: {.column width="50%"}
+where $t^*$ is the $t$-distribution critical value with $df = n -2$.
+:::
+:::::
+
+-   **Option 2:** Use the regression table
+
+```{r}
+tidy(model1, conf.int = T) %>% gt() %>%
+  tab_options(table.font.size = 40) %>% fmt_number(decimals = 3)
+```
+
+## Reporting the coefficient estimate of the population slope
+
+-   When we report our results to someone else, we don't usually show
+    them our full hypothesis test
+
+    -   In an informal setting, someone may want to see it
+
+-   Typically, we report the estimate with the confidence interval
+
+    -   From the confidence interval, your audience can also deduce the
+        results of a hypothesis test
+
+-   Once we found our CI, we often just write the interpretation of the
+    coefficient estimate:
+
+::::: blue
+::: blue-ttl
+General statement for population slope inference
+:::
+
+::: blue-cont
+For every increase of 1 unit in the $X$-variable, there is an expected
+average increase of $\widehat\beta_1$ units in the $Y$-variable (95%:
+LB, UB).
+:::
+:::::
+
+-   **In our example:** For every 1% increase in female literacy rate,
+    life expectancy increases, on average,
+    0.232 years (95% CI: 0.170, 0.295).
+    
+## Many options for how to word our results (Reference)
+
+1.   **In our example:** For every 1% increase in female literacy rate,
+    life expectancy increases, [**on average**]{style="color:#C83532;"},
+    0.232 years (95% CI: 0.170, 0.295).
+
+ 
+
+2.   **In our example:** For every 1% increase in female literacy rate,
+    life expectancy [**is expected to**]{style="color:#C83532;"} increase
+    0.232 years (95% CI: 0.170, 0.295).
+
+ 
+
+2.   **In our example:** For every 1% increase in female literacy rate,
+    the [**average**]{style="color:#C83532;"} life expectancy increases
+    0.232 years (95% CI: 0.170, 0.295).
+
+## Poll Everywhere Question 6
+
+## For reference: quick CI for $\beta_0$
+
+-   Calculate CI for population **intercept** $\beta_0$:
+    $\widehat{\beta}_0 \pm t^*\cdot SE_{\beta_0}$
+
+where $t^*$ is the $t$-distribution critical value with $df = n -2$
+
+-   Use the regression table
+
+```{r}
+tidy(model1, conf.int = T) %>% gt() %>%
+  tab_options(table.font.size = 40) %>% fmt_number(decimals = 3)
+```
+
+::::: blue
+::: blue-ttl
+General statement for population intercept inference
+:::
+
+::: blue-cont
+The expected outcome for the $Y$-variable is ($\widehat\beta_0$) when
+the $X$-variable is 0 (95% CI: LB, UB).
+:::
+:::::
+
+-   **For example:** The average life expectancy is 50.9 years
+    when the female literacy rate is 0 (95% CI: 45.63, 56.22).

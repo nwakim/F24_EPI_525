@@ -7961,9 +7961,9 @@
   {
     "objectID": "lessons/18_SLR_01/18_SLR_01.html#dataset-description",
     "href": "lessons/18_SLR_01/18_SLR_01.html#dataset-description",
-    "title": "Lesson 18: Simple Linear Regression",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
     "section": "Dataset description",
-    "text": "Dataset description\n\nData file: lifeexp_femlit_water_2011.csv\nData were downloaded from https://www.gapminder.org/data/\n2011 is the most recent year with the most complete data\nLife expectancy = the average number of years a newborn child would live if current mortality patterns were to stay the same. Source: https://www.gapminder.org/data/documentation/gd004/\nAdult literacy rate is the percentage of people ages 15 and above who can, with understanding, read and write a short, simple statement on their everyday life. Source: http://data.uis.unesco.org/\nAt least basic water source (%) = the percentage of people using at least basic water services. This indicator encompasses both people using basic water services as well as those using safely managed water services. Basic drinking water services is defined as drinking water from an improved source, provided collection time is not more than 30 minutes for a round trip. Improved water sources include piped water, boreholes or tubewells, protect dug wells, protected springs, and packaged or delivered water."
+    "text": "Dataset description\n\nData files\n\nCleaned: lifeexp_femlit_2011.csv\nNeeds cleaning: lifeexp_femlit_water_2011.csv\n\nData were downloaded from Gapminder\n2011 is the most recent year with the most complete data\nLife expectancy = the average number of years a newborn child would live if current mortality patterns were to stay the same.\nAdult literacy rate is the percentage of people ages 15 and above who can, with understanding, read and write a short, simple statement on their everyday life."
   },
   {
     "objectID": "lessons/18_SLR_01/18_SLR_01.html#get-to-know-the-data",
@@ -8003,9 +8003,9 @@
   {
     "objectID": "lessons/18_SLR_01/18_SLR_01.html#regression-line-best-fit-line",
     "href": "lessons/18_SLR_01/18_SLR_01.html#regression-line-best-fit-line",
-    "title": "Lesson 18: Simple Linear Regression",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
     "section": "Regression line = best-fit line",
-    "text": "Regression line = best-fit line\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\n\n\\(\\hat{y}\\) is the predicted outcome for a specific value of \\(x\\).\n\\(b_0\\) is the intercept\n\\(b_1\\) is the slope of the line, i.e., the increase in \\(\\hat{y}\\) for every increase of one (unit increase) in \\(x\\).\n\nslope = rise over run\n\n\n\n]\nInterpreting coefficients\n\nIntercept\n\nThe expected outcome for the \\(y\\)-variable when the \\(x\\)-variable is 0.\n\nSlope\n\nFor every increase of 1 unit in the \\(x\\)-variable, there is an expected increase of, on average, \\(b_1\\) units in the \\(y\\)-variable.\nWe only say that there is an expected increase and not necessarily a causal increase."
+    "text": "Regression line = best-fit line\n\n\n\\[\\widehat{Y} = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 X \\]\n\n\\(\\widehat{Y}\\) is the predicted outcome for a specific value of \\(X\\)\n\\(\\widehat{\\beta}_0\\) is the intercept of the best-fit line\n\\(\\widehat{\\beta}_1\\) is the slope of the best-fit line, i.e., the increase in \\(\\widehat{Y}\\) for every increase of one (unit increase) in \\(X\\)\n\nslope = rise over run"
   },
   {
     "objectID": "lessons/18_SLR_01/18_SLR_01.html#correlation-coefficient-vs.-slope",
@@ -23350,5 +23350,530 @@
     "title": "Homework 9 Answers",
     "section": "3.1 R2: Palmer Penguins SLR",
     "text": "3.1 R2: Palmer Penguins SLR\n\n3.1.1 Scatterplots\n\nFor each of the following pairs of variables, make a scatterplot showing the best fit line and describe the relationship between the variables.\nIn particular address\n\nwhether the association is linear,\nhow strong it is (based purely on the plot), and\nwhat direction (positive, negative, or neither).\n\n\n\nbody mass vs. flipper length\nbill depth vs. flipper length\nbill depth vs. bill length\n\n\n\n3.1.2 Correlations\n\nFor each of the following pairs of variables, find the correlation coefficient \\(r\\).\n\n\nbody mass vs. flipper length\nbill depth vs. flipper length\nbill depth vs. bill length\n\n\n\n3.1.3 Compare associations\nWhich pair of variables has the strongest association? Which has the weakest? Explain how you determined this.\n\n\n3.1.4 Body mass vs. flipper length SLR\nRun the simple linear regression model for body mass vs. flipper length, and display the regression table output.\n\n\n3.1.5 Regression equation\nWrite out the regression equation for this model, using the variable names instead of the generic \\(x\\) and \\(y\\), and inserting the regression coefficient values.\n\n\n3.1.6 Interpret intercept\nWrite a sentence interpreting the intercept for this example. Is it meaningful in this example?\n\n\n3.1.7 Interpret slope\nWrite a sentence interpreting the slope for this example."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#lets-start-with-an-example",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#lets-start-with-an-example",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Let’s start with an example",
+    "text": "Let’s start with an example\n\n\n\n\n\n\n\n\n \nAverage life expectancy vs. female literacy rate\n \n\nEach point on the plot is for a different country\n\n \n\n\\(X\\) = country’s adult female literacy rate\n\n \n\n\\(Y\\) = country’s average life expectancy (years)\n\n\n\n\n\\[\\widehat{\\text{life expectancy}} =  50.9 + 0.232\\cdot\\text{female literacy rate}\\]"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#reference-how-did-i-code-that",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#reference-how-did-i-code-that",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Reference: How did I code that?",
+    "text": "Reference: How did I code that?\n\n\nggplot(gapm, aes(x = female_literacy_rate_2011,\n                 y = life_expectancy_years_2011)) +\n  geom_point(size = 4) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 3, colour=\"#F14124\") +\n  labs(x = \"Female literacy rate (%)\", \n       y = \"Life expectancy (years)\",\n       title = \"Relationship between life expectancy and \\n the female literacy rate in 2011\") +\n    theme(axis.title = element_text(size = 30), \n        axis.text = element_text(size = 25), \n        title = element_text(size = 30))"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#get-to-know-the-data-12",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#get-to-know-the-data-12",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Get to know the data (1/2)",
+    "text": "Get to know the data (1/2)\n\nLoad data\n\n\ngapm_original &lt;- read_csv(here::here(\"data\", \"lifeexp_femlit_2011.csv\"))\n\n\nGlimpse of the data\n\n\nglimpse(gapm_original)\n\nRows: 188\nColumns: 3\n$ country                    &lt;chr&gt; \"Afghanistan\", \"Albania\", \"Algeria\", \"Andor…\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 76.7, 82.6, 60.9, 76.9, 76.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, NA, NA, 58.6, 99.4, 97.9, 99.5,…\n\n\n\nNote the missing values for our variables of interest"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#get-to-know-the-data-22",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#get-to-know-the-data-22",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Get to know the data (2/2)",
+    "text": "Get to know the data (2/2)\n\nGet a sense of the summary statistics\n\n\ngapm_original %&gt;% \n  select(life_expectancy_years_2011, female_literacy_rate_2011) %&gt;% \n  summary()\n\n life_expectancy_years_2011 female_literacy_rate_2011\n Min.   :47.50              Min.   :13.00            \n 1st Qu.:64.30              1st Qu.:70.97            \n Median :72.70              Median :91.60            \n Mean   :70.66              Mean   :81.65            \n 3rd Qu.:76.90              3rd Qu.:98.03            \n Max.   :82.90              Max.   :99.80            \n NA's   :1                  NA's   :108"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-12",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-12",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Remove missing values (1/2)",
+    "text": "Remove missing values (1/2)\n\nRemove rows with missing data for life expectancy and female literacy rate\n\n\ngapm &lt;- gapm_original %&gt;% \n  drop_na(life_expectancy_years_2011, female_literacy_rate_2011)\n\nglimpse(gapm)\n\nRows: 80\nColumns: 3\n$ country                    &lt;chr&gt; \"Afghanistan\", \"Albania\", \"Angola\", \"Antigu…\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n\n\n\nNo missing values now for our variables of interest"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-22",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-22",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Remove missing values (2/2)",
+    "text": "Remove missing values (2/2)\n\nAnd no more missing values when we look only at our two variables of interest\n\n\ngapm %&gt;% select(life_expectancy_years_2011, female_literacy_rate_2011) %&gt;% \n  get_summary_stats()\n\n# A tibble: 2 × 13\n  variable        n   min   max median    q1    q3   iqr   mad  mean    sd    se\n  &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 life_expec…    80    48  81.8   72.4  65.9  75.8  9.95  6.30  69.9  7.95 0.889\n2 female_lit…    80    13  99.8   91.6  71.0  98.0 27.0  11.4   81.7 22.0  2.45 \n# ℹ 1 more variable: ci &lt;dbl&gt;\n\n\n\n\nNote\n\n\n\nRemoving the rows with missing data was not needed to run the regression model.\nI did this step since later we will be calculating the standard deviations of the explanatory and response variables for just the values included in the regression model. It’ll be easier to do this if we remove the missing values now."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 1",
+    "text": "Poll Everywhere Question 1"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#questions-we-can-ask-with-a-simple-linear-regression-model",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#questions-we-can-ask-with-a-simple-linear-regression-model",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Questions we can ask with a simple linear regression model",
+    "text": "Questions we can ask with a simple linear regression model\n\n\n\n\n\n\n\n\n\nHow do we…\n\ncalculate slope & intercept?\ninterpret slope & intercept?\ndo inference for slope & intercept?\n\nCI, p-value\n\ndo prediction with regression line?\n\nCI for prediction?\n\n\nDoes the model fit the data well?\n\nShould we be using a line to model the data?\n\nShould we add additional variables to the model?\n\nmultiple/multivariable regression\n\n\n\n\n\n\\[\\widehat{\\text{life expectancy}} =  50.9 + 0.232\\cdot\\text{female literacy rate}\\]"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#association-vs.-prediction",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#association-vs.-prediction",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Association vs. prediction",
+    "text": "Association vs. prediction\n\n\n\n\nAssociation\n\n\n\nWhat is the association between countries’ life expectancy and female literacy rate?\nUse the slope of the line or correlation coefficient\n\n\n\n\n\n\nPrediction\n\n\n\nWhat is the expected average life expectancy for a country with a specified female literacy rate?    \n\n\n\n\n\n\\[\\widehat{\\text{life expectancy}} =  50.9 + 0.232\\cdot\\text{female literacy rate}\\]"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#three-types-of-study-design-there-are-more",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#three-types-of-study-design-there-are-more",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Three types of study design (there are more)",
+    "text": "Three types of study design (there are more)\n\n\n\n\nExperiment\n\n\n\nObservational units are randomly assigned to important predictor levels\n\nRandom assignment controls for confounding variables (age, gender, race, etc.)\n“gold standard” for determining causality\nObservational unit is often at the participant-level\n\n\n\n\n\n\n\nQuasi-experiment\n\n\n\nParticipants are assigned to intervention levels without randomization\nNot common study design\n\n\n\n\n\n\nObservational\n\n\n\nNo randomization or assignment of intervention conditions\nIn general cannot infer causality\n\nHowever, there are casual inference methods…"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#lets-revisit-the-regression-analysis-process",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#lets-revisit-the-regression-analysis-process",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Let’s revisit the regression analysis process",
+    "text": "Let’s revisit the regression analysis process\n\n  \n\n\n\n\nModel Selection\n\n\n\nBuilding a model\nSelecting variables\nPrediction vs interpretation\nComparing potential models\n\n\n\n\n\n\n\n\nModel Fitting\n\n\n\nFind best fit line\nUsing OLS in this class\nParameter estimation\nCategorical covariates\nInteractions\n\n\n\n\n\n\n\n\nModel Evaluation\n\n\n\nEvaluation of model fit\nTesting model assumptions\nResiduals\nTransformations\nInfluential points\nMulticollinearity\n\n\n\n\n\n\n\n\nModel Use (Inference)\n\n\n\n\n\nInference for coefficients\nHypothesis testing for coefficients\n\n\n\nInference for expected \\(Y\\) given \\(X\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-2",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-2",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 2",
+    "text": "Poll Everywhere Question 2"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#simple-linear-regression-model",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#simple-linear-regression-model",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Simple Linear Regression Model",
+    "text": "Simple Linear Regression Model\nThe (population) regression model is denoted by:\n \n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n \n\n\n\n\nUnobservable population parameters\n\n\n\n\\(\\beta_0\\) and \\(\\beta_1\\) are unknown population parameters\n\\(\\epsilon\\) (epsilon) is the error about the line\n\nIt is assumed to be a random variable with a…\n\nNormal distribution with mean 0 and constant variance \\(\\sigma^2\\)\ni.e. \\(\\epsilon \\sim N(0, \\sigma^2)\\)\n\n\n\n\n\n\n\n\nObservable sample data\n\n\n\n\\(Y\\) is our dependent variable\n\nAka outcome or response variable\n\n\\(X\\) is our independent variable\n\nAka predictor, regressor, exposure variable"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#simple-linear-regression-model-another-way-to-view-components",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#simple-linear-regression-model-another-way-to-view-components",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Simple Linear Regression Model (another way to view components)",
+    "text": "Simple Linear Regression Model (another way to view components)\nThe (population) regression model is denoted by:\n \n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n \n\n\n\n\n\n\n\n\nComponent\nType\nName\n\n\n\\(Y\\)\nObserved\nresponse, outcome, dependent variable\n\n\n\\(\\beta_0\\)\nPop. parameter\nintercept\n\n\n\\(\\beta_1\\)\nPop. parameter\nslope\n\n\n\\(X\\)\nObserved\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nPop. parameter\nresiduals, error term"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#if-the-population-parameters-are-unobservable-how-did-we-get-the-line-for-life-expectancy",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#if-the-population-parameters-are-unobservable-how-did-we-get-the-line-for-life-expectancy",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "If the population parameters are unobservable, how did we get the line for life expectancy?",
+    "text": "If the population parameters are unobservable, how did we get the line for life expectancy?\n\n\n \n\nNote: the population model is the true, underlying model that we are trying to estimate using our sample data\n\nOur goal in simple linear regression is to estimate \\(\\beta_0\\) and \\(\\beta_1\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-3",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-3",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#okay-so-how-do-we-estimate-the-regression-line",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#okay-so-how-do-we-estimate-the-regression-line",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Okay, so how do we estimate the regression line?",
+    "text": "Okay, so how do we estimate the regression line?\n \nAt this point, we are going to move over to an R shiny app that I made.\n \nLet’s see if we can eyeball the best-fit line!"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#simple-linear-regression-model-1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#simple-linear-regression-model-1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Simple Linear Regression Model",
+    "text": "Simple Linear Regression Model\n\n\nPopulation regression model\n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n \nComponents\n\n\n\n\\(Y\\)\nresponse, outcome, dependent variable\n\n\n\\(\\beta_0\\)\nintercept\n\n\n\\(\\beta_1\\)\nslope\n\n\n\\(X\\)\npredictor, covariate, independent variable\n\n\n\\(\\epsilon\\)\nresiduals, error term\n\n\n\n\nEstimated regression line\n\n\\[\\widehat{Y} =  \\widehat{\\beta}_0 + \\widehat{\\beta}_1X\\]\n\n \nComponents\n\n\n\n\n\n\n\n\\(\\widehat{Y}\\)\nestimated expected response given predictor \\(X\\)\n\n\n\\(\\widehat{\\beta}_0\\)\nestimated intercept\n\n\n\\(\\widehat{\\beta}_1\\)\nestimated slope\n\n\n\\(X\\)\npredictor, covariate, independent variable"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#we-get-it-nicky-how-do-we-estimate-the-regression-line",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#we-get-it-nicky-how-do-we-estimate-the-regression-line",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "We get it, Nicky! How do we estimate the regression line?",
+    "text": "We get it, Nicky! How do we estimate the regression line?\nFirst let’s take a break!!"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#it-all-starts-with-a-residual",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#it-all-starts-with-a-residual",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "It all starts with a residual…",
+    "text": "It all starts with a residual…\n\n\n\nRecall, one characteristic of our population model was that the residuals, \\(\\epsilon\\), were Normally distributed: \\(\\epsilon \\sim N(0, \\sigma^2)\\)\nIn our population regression model, we had: \\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\nWe can also take the average (expected) value of the population model\nWe take the expected value of both sides and get:\n\n\\[\\begin{aligned}\n        E[Y] & = E[\\beta_0 + \\beta_1X + \\epsilon] \\\\\n        E[Y] & = E[\\beta_0] + E[\\beta_1X] + E[\\epsilon] \\\\\n        E[Y] & = \\beta_0 + \\beta_1X + E[\\epsilon] \\\\\n        E[Y|X] & = \\beta_0 + \\beta_1X \\\\\n\\end{aligned}\\]\n\nWe call \\(E[Y|X]\\) the expected value of \\(Y\\) given \\(X\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#so-now-we-have-two-representations-of-our-population-model",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#so-now-we-have-two-representations-of-our-population-model",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "So now we have two representations of our population model",
+    "text": "So now we have two representations of our population model\n\n\n\n\nWith observed \\(Y\\) values and residuals:\n\n\n\\[Y =  \\beta_0 + \\beta_1X + \\epsilon\\]\n\n\n\n\n\nWith the population expected value of \\(Y\\) given \\(X\\):\n\n\n\\[E[Y|X] = \\beta_0 + \\beta_1X\\]\n\n\n\n\nUsing the two forms of the model, we can figure out a formula for our residuals:\n\\[\\begin{aligned}\nY & = (\\beta_0 + \\beta_1X) + \\epsilon \\\\\nY & = E[Y|X] + \\epsilon \\\\\nY - E[Y|X] & = \\epsilon \\\\\n\\epsilon & = Y - E[Y|X]\n\\end{aligned}\\]\nAnd so we have our true, population model, residuals!\n\nThis is an important fact! For the population model, the residuals: \\(\\epsilon = Y - E[Y|X]\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#back-to-our-estimated-model",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#back-to-our-estimated-model",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Back to our estimated model",
+    "text": "Back to our estimated model\nWe have the same two representations of our estimated/fitted model:\n\n\n\n\nWith observed values:\n\n\n\\[Y =  \\widehat{\\beta}_0 + \\widehat{\\beta}_1X + \\widehat{\\epsilon}\\]\n\n\n\n\n\nWith the estimated expected value of \\(Y\\) given \\(X\\):\n\n\n\\[\\begin{aligned}\n\\widehat{E}[Y|X] & = \\widehat{\\beta}_0 + \\widehat{\\beta}_1X \\\\\n\\widehat{E[Y|X]} & = \\widehat{\\beta}_0 + \\widehat{\\beta}_1X \\\\\n\\widehat{Y} & = \\widehat{\\beta}_0 + \\widehat{\\beta}_1X \\\\\n\\end{aligned}\\]\n\n\n\n\nUsing the two forms of the model, we can figure out a formula for our estimated residuals:\n\\[\\begin{aligned}\nY & = (\\widehat{\\beta}_0 + \\widehat{\\beta}_1X) + \\widehat\\epsilon \\\\\nY & = \\widehat{Y} + \\widehat\\epsilon \\\\\n\\widehat\\epsilon & = Y - \\widehat{Y}\n\\end{aligned}\\]\n\nThis is an important fact! For the estimated/fitted model, the residuals: \\(\\widehat\\epsilon = Y - \\widehat{Y}\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#individual-i-residuals-in-the-estimatedfitted-model",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#individual-i-residuals-in-the-estimatedfitted-model",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Individual \\(i\\) residuals in the estimated/fitted model",
+    "text": "Individual \\(i\\) residuals in the estimated/fitted model\n\n\n\nObserved values for each individual \\(i\\): \\(Y_i\\)\n\nValue in the dataset for individual \\(i\\)\n\nFitted value for each individual \\(i\\): \\(\\widehat{Y}_i\\)\n\nValue that falls on the best-fit line for a specific \\(X_i\\)\nIf two individuals have the same \\(X_i\\), then they have the same \\(\\widehat{Y}_i\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#individual-i-residuals-in-the-estimatedfitted-model-1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#individual-i-residuals-in-the-estimatedfitted-model-1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Individual \\(i\\) residuals in the estimated/fitted model",
+    "text": "Individual \\(i\\) residuals in the estimated/fitted model\n\n\n\nObserved values for each individual \\(i\\): \\(Y_i\\)\n\nValue in the dataset for individual \\(i\\)\n\nFitted value for each individual \\(i\\): \\(\\widehat{Y}_i\\)\n\nValue that falls on the best-fit line for a specific \\(X_i\\)\nIf two individuals have the same \\(X_i\\), then they have the same \\(\\widehat{Y}_i\\)\n\n\n\n\nResidual for each individual: \\(\\widehat\\epsilon_i = Y_i - \\widehat{Y}_i\\)\n\nDifference between the observed and fitted value"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-4",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-4",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#so-what-do-we-do-with-the-residuals",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#so-what-do-we-do-with-the-residuals",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "So what do we do with the residuals?",
+    "text": "So what do we do with the residuals?\n\nWe want to minimize the sum of residuals\n\nAka minimize the difference between the observed \\(Y\\) value and the estimated expected response given the predictor ( \\(\\widehat{E}[Y|X]\\) )\n\nWe can use ordinary least squares (OLS) to do this in linear regression!\nIdea behind this: reduce the total error between the fitted line and the observed point (error between is called residuals)\n\nVague use of total error: more precisely, we want to reduce the sum of squared errors\nThink back to my R Shiny app!\nWe need to mathematically define this!\n\n\n \n \n\nNote: there are other ways to estimate the best-fit line!!\n\nExample: Maximum likelihood estimation"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#setting-up-for-ordinary-least-squares",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#setting-up-for-ordinary-least-squares",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Setting up for ordinary least squares",
+    "text": "Setting up for ordinary least squares\n\n\n\nSum of Squared Errors (SSE)\n\n\\[ \\begin{aligned}\nSSE & = \\displaystyle\\sum^n_{i=1} \\widehat\\epsilon_i^2 \\\\\nSSE & = \\displaystyle\\sum^n_{i=1} (Y_i - \\widehat{Y}_i)^2 \\\\\nSSE & = \\displaystyle\\sum^n_{i=1} (Y_i - (\\widehat{\\beta}_0+\\widehat{\\beta}_1X_i))^2 \\\\\nSSE & = \\displaystyle\\sum^n_{i=1} (Y_i - \\widehat{\\beta}_0-\\widehat{\\beta}_1X_i)^2\n\\end{aligned}\\]\n\n\n\nThings to use\n\n\n\n\\(\\widehat\\epsilon_i = Y_i - \\widehat{Y}_i\\)\n\\(\\widehat{Y}_i = \\widehat\\beta_0 + \\widehat\\beta_1X_i\\)\n\n\n\n\n\n\nThen we want to find the estimated coefficient values that minimize the SSE!"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#steps-to-estimate-coefficients-using-ols",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#steps-to-estimate-coefficients-using-ols",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Steps to estimate coefficients using OLS",
+    "text": "Steps to estimate coefficients using OLS\n\nSet up SSE (previous slide)\nMinimize SSE with respect to coefficient estimates\n\nNeed to solve a system of equations\n\nCompute derivative of SSE wrt \\(\\widehat\\beta_0\\)\nSet derivative of SSE wrt \\(\\widehat\\beta_0 = 0\\)\nCompute derivative of SSE wrt \\(\\widehat\\beta_1\\)\nSet derivative of SSE wrt \\(\\widehat\\beta_1 = 0\\)\nSubstitute \\(\\widehat\\beta_1\\) back into \\(\\widehat\\beta_0\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#minimize-sse-with-respect-to-coefficients",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#minimize-sse-with-respect-to-coefficients",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "2. Minimize SSE with respect to coefficients",
+    "text": "2. Minimize SSE with respect to coefficients\n\nWant to minimize with respect to (wrt) the potential coefficient estimates ( \\(\\widehat\\beta_0\\) and \\(\\widehat\\beta_1\\))\nTake derivative of SSE wrt \\(\\widehat\\beta_0\\) and \\(\\widehat\\beta_1\\) and set equal to zero to find minimum SSE\n\n\\[\n\\dfrac{\\partial SSE}{\\partial \\widehat\\beta_0} = 0 \\text{ and } \\dfrac{\\partial SSE}{\\partial \\widehat\\beta_1} = 0\n\\]\n\nSolve the above system of equations in steps 3-6"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#compute-derivative-of-sse-wrt-widehatbeta_0",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#compute-derivative-of-sse-wrt-widehatbeta_0",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "3. Compute derivative of SSE wrt \\(\\widehat\\beta_0\\)",
+    "text": "3. Compute derivative of SSE wrt \\(\\widehat\\beta_0\\)\n\n\n\\[\nSSE = \\displaystyle\\sum^n_{i=1} (Y_i - \\widehat{\\beta}_0-\\widehat{\\beta}_1X_i)^2\n\\]\n\\[\\begin{aligned}\n\\frac{\\partial SSE}{\\partial{\\widehat{\\beta}}_0}& =\\frac{\\partial\\sum_{i=1}^{n}\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)^2}{\\partial{\\widehat{\\beta}}_0}=\n\\sum_{i=1}^{n}\\frac{{\\partial\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)}^2}{\\partial{\\widehat{\\beta}}_0} \\\\\n& =\\sum_{i=1}^{n}{2\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)\\left(-1\\right)}=\\sum_{i=1}^{n}{-2\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)} \\\\\n\\frac{\\partial SSE}{\\partial{\\widehat{\\beta}}_0} & = -2\\sum_{i=1}^{n}\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)\n\\end{aligned}\\]\n\n\n\nThings to use\n\n\n\nDerivative rule: derivative of sum is sum of derivative\nDerivative rule: chain rule"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#set-derivative-of-sse-wrt-widehatbeta_0-0",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#set-derivative-of-sse-wrt-widehatbeta_0-0",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "4. Set derivative of SSE wrt \\(\\widehat\\beta_0 = 0\\)",
+    "text": "4. Set derivative of SSE wrt \\(\\widehat\\beta_0 = 0\\)\n\n\n\\[\\begin{aligned}\n\\frac{\\partial SSE}{\\partial{\\widehat{\\beta}}_0} & =0 \\\\ -2\\sum_{i=1}^{n}\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right) & =0 \\\\\n\\sum_{i=1}^{n}\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right) & =0 \\\\ \\sum_{i=1}^{n}Y_i-n{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1\\sum_{i=1}^{n}X_i & =0 \\\\\n\\frac{1}{n}\\sum_{i=1}^{n}Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1\\frac{1}{n}\\sum_{i=1}^{n}X_i & =0 \\\\\n\\overline{Y}-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1\\overline{X} & =0 \\\\\n{\\widehat{\\beta}}_0 & =\\overline{Y}-{\\widehat{\\beta}}_1\\overline{X}\n\\end{aligned}\\]\n\n\n\nThings to use\n\n\n\n\\(\\overline{Y}=\\frac{1}{n}\\sum_{i=1}^{n}Y_i\\)\n\\(\\overline{X}=\\frac{1}{n}\\sum_{i=1}^{n}X_i\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#compute-derivative-of-sse-wrt-widehatbeta_1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#compute-derivative-of-sse-wrt-widehatbeta_1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "5. Compute derivative of SSE wrt \\(\\widehat\\beta_1\\)",
+    "text": "5. Compute derivative of SSE wrt \\(\\widehat\\beta_1\\)\n\n\n\\[\nSSE = \\displaystyle\\sum^n_{i=1} (Y_i - \\widehat{\\beta}_0-\\widehat{\\beta}_1X_i)^2\n\\]\n\\[\\begin{aligned}\n\\frac{\\partial SSE}{\\partial{\\widehat{\\beta}}_1}& =\\frac{\\partial\\sum_{i=1}^{n}{(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i)}^2}{\\partial{\\widehat{\\beta}}_1}=\\sum_{i=1}^{n}\\frac{{\\partial(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i)}^2}{\\partial{\\widehat{\\beta}}_1} \\\\\n&=\\sum_{i=1}^{n}{2\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)(-X_i)}=\\sum_{i=1}^{n}{-2X_i\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)} \\\\ &=-2\\sum_{i=1}^{n}{X_i\\left(Y_i-{\\widehat{\\beta}}_0-{\\widehat{\\beta}}_1X_i\\right)}\n\\end{aligned}\\]\n\n\n\nThings to use\n\n\n\nDerivative rule: derivative of sum is sum of derivative\nDerivative rule: chain rule"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#set-derivative-of-sse-wrt-widehatbeta_1-0",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#set-derivative-of-sse-wrt-widehatbeta_1-0",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "6. Set derivative of SSE wrt \\(\\widehat\\beta_1 = 0\\)",
+    "text": "6. Set derivative of SSE wrt \\(\\widehat\\beta_1 = 0\\)\n\n\n\\[\\begin{aligned}\n\\frac{\\partial SSE}{\\partial{\\widehat{\\beta}}_1} & =0 \\\\ \\sum_{i=1}^{n}\\left({X_iY}_i-{\\widehat{\\beta}}_0X_i-{\\widehat{\\beta}}_1{X_i}^2\\right)&=0 \\\\\n\\sum_{i=1}^{n}{X_iY_i}-\\sum_{i=1}^{n}{X_i{\\widehat{\\beta}}_0}-\\sum_{i=1}^{n}{{X_i}^2{\\widehat{\\beta}}_1}&=0 \\\\\n\\sum_{i=1}^{n}{X_iY_i}-\\sum_{i=1}^{n}{X_i\\left(\\overline{Y}-{\\widehat{\\beta}}_1\\overline{X}\\right)}-\\sum_{i=1}^{n}{{X_i}^2{\\widehat{\\beta}}_1} &=0 \\\\\n\\sum_{i=1}^{n}{X_iY_i}-\\sum_{i=1}^{n}{X_i\\overline{Y}}+\\sum_{i=1}^{n}{{\\widehat{\\beta}}_1X_i\\overline{X}}-\\sum_{i=1}^{n}{{X_i}^2{\\widehat{\\beta}}_1} &=0 \\\\\n\\sum_{i=1}^{n}{X_i(Y_i-\\overline{Y})}+\\sum_{i=1}^{n}{({\\widehat{\\beta}}_1X_i\\overline{X}}-{X_i}^2{\\widehat{\\beta}}_1) &=0 \\\\\n\\sum_{i=1}^{n}{X_i(Y_i-\\overline{Y})}+{\\widehat{\\beta}}_1\\sum_{i=1}^{n}{X_i(\\overline{X}}-X_i) &=0 \\\\\n\\end{aligned}\\]\n\n\n\nThings to use\n\n\n\n\\({\\widehat{\\beta}}_0=\\overline{Y}-{\\widehat{\\beta}}_1\\overline{X}\\)\n\\(\\overline{Y}=\\frac{1}{n}\\sum_{i=1}^{n}Y_i\\)\n\\(\\overline{X}=\\frac{1}{n}\\sum_{i=1}^{n}X_i\\)\n\n\n\n         \n \n\n\\[{\\widehat{\\beta}}_1 =\\frac{\\sum_{i=1}^{n}{X_i(Y_i-\\overline{Y})}}{\\sum_{i=1}^{n}{X_i(}X_i-\\overline{X})}\\]"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#substitute-widehatbeta_1-back-into-widehatbeta_0",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#substitute-widehatbeta_1-back-into-widehatbeta_0",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "7. Substitute \\(\\widehat\\beta_1\\) back into \\(\\widehat\\beta_0\\)",
+    "text": "7. Substitute \\(\\widehat\\beta_1\\) back into \\(\\widehat\\beta_0\\)\nFinal coefficient estimates for SLR\n\n\n\n\nCoefficient estimate for \\(\\widehat\\beta_1\\)\n\n\n\\[{\\widehat{\\beta}}_1 =\\frac{\\sum_{i=1}^{n}{X_i(Y_i-\\overline{Y})}}{\\sum_{i=1}^{n}{X_i(}X_i-\\overline{X})}\\]\n\n\n\n\n\nCoefficient estimate for \\(\\widehat\\beta_0\\)\n\n\n\\[\\begin{aligned}\n{\\widehat{\\beta}}_0 & =\\overline{Y}-{\\widehat{\\beta}}_1\\overline{X} \\\\\n{\\widehat{\\beta}}_0 & = \\overline{Y} - \\frac{\\sum_{i=1}^{n}{X_i(Y_i-\\overline{Y})}}{\\sum_{i=1}^{n}{X_i(}X_i-\\overline{X})} \\overline{X} \\\\\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-5",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-5",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 5",
+    "text": "Poll Everywhere Question 5"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#do-i-need-to-do-all-that-work-every-time",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#do-i-need-to-do-all-that-work-every-time",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Do I need to do all that work every time??",
+    "text": "Do I need to do all that work every time??"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#regression-in-r-lm",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#regression-in-r-lm",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Regression in R: lm()",
+    "text": "Regression in R: lm()\n\nLet’s discuss the syntax of this function\n\n\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#regression-in-r-lm-summary",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#regression-in-r-lm-summary",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Regression in R: lm() + summary()",
+    "text": "Regression in R: lm() + summary()\n\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)\nsummary(model1)\n\n\nCall:\nlm(formula = life_expectancy_years_2011 ~ female_literacy_rate_2011, \n    data = gapm)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-22.299  -2.670   1.145   4.114   9.498 \n\nCoefficients:\n                          Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)               50.92790    2.66041  19.143  &lt; 2e-16 ***\nfemale_literacy_rate_2011  0.23220    0.03148   7.377  1.5e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.142 on 78 degrees of freedom\n  (108 observations deleted due to missingness)\nMultiple R-squared:  0.4109,    Adjusted R-squared:  0.4034 \nF-statistic: 54.41 on 1 and 78 DF,  p-value: 1.501e-10"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#regression-in-r-lm-tidy",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#regression-in-r-lm-tidy",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Regression in R: lm() + tidy()",
+    "text": "Regression in R: lm() + tidy()\n \n\ntidy(model1) %&gt;% \n  gt() %&gt;% \n  tab_options(table.font.size = 45)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n  \n  \n  \n\n\n\n\n \n\nRegression equation for our model (which we saw a looong time ago):\n\n\n\\[\\widehat{\\text{life expectancy}} =  50.9 + 0.232\\cdot\\text{female literacy rate}\\]"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#how-do-we-interpret-the-coefficients",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#how-do-we-interpret-the-coefficients",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "How do we interpret the coefficients?",
+    "text": "How do we interpret the coefficients?\n\n\\[\\widehat{\\text{life expectancy}} =  50.9 + 0.232\\cdot\\text{female literacy rate}\\]\n\n\nIntercept\n\nThe expected outcome for the \\(Y\\)-variable when the \\(X\\)-variable is 0\nExample: The expected/average life expectancy is 50.9 years for a country with 0% female literacy.\n\nSlope\n\nFor every increase of 1 unit in the \\(X\\)-variable, there is an expected increase of, on average, \\(\\widehat\\beta_1\\) units in the \\(Y\\)-variable.\nWe only say that there is an expected increase and not necessarily a causal increase.\nExample: For every 1 percent increase in the female literacy rate, life expectancy increases, on average, 0.232 years.\n\n\n \n\nYou can say either expected OR average"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#next-time",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#next-time",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Next time",
+    "text": "Next time\n\nInference of our estimated coefficients\nInference of estimated expected \\(Y\\) given \\(X\\)\nPrediction\nHypothesis testing!\n\n\n\nLesson 18 Slides"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#steps-in-hypothesis-testing",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#steps-in-hypothesis-testing",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Steps in hypothesis testing",
+    "text": "Steps in hypothesis testing"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#general-steps-for-hypothesis-test-for-population-slope-beta_1-t-test",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#general-steps-for-hypothesis-test-for-population-slope-beta_1-t-test",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "General steps for hypothesis test for population slope \\(\\beta_1\\) (t-test)",
+    "text": "General steps for hypothesis test for population slope \\(\\beta_1\\) (t-test)\n\n\n\n\n\nFor today’s class, we are assuming that we have met the underlying assumptions (checked in our Model Evaluation step)\n\n\n\n\n\n\nState the null hypothesis.\n\n\n\nOften, we are curious if the coefficient is 0 or not:\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\n\n\nSpecify the significance level.\n\n\n\nOften we use \\(\\alpha = 0.05\\)\n\n\n\nSpecify the test statistic and its distribution under the null\n\n\n\nThe test statistic is \\(t\\), and follows a Student’s t-distribution.\n\n\n\n\n\n\nCompute the value of the test statistic\n\n\n\nThe calculated test statistic for \\(\\widehat\\beta_1\\) is\n\\[t = \\frac{ \\widehat\\beta_1 - \\beta_1}{ \\text{SE}_{\\widehat\\beta_1}} = \\frac{ \\widehat\\beta_1}{ \\text{SE}_{\\widehat\\beta_1}}\\]\nwhen we assume \\(H_0: \\beta_1 = 0\\) is true.\n\n\n\nCalculate the p-value\n\n\n\nWe are generally calculating: \\(2\\cdot P(T &gt; t)\\)\n\n\n\nWrite conclusion for hypothesis test\n\n\n\nWe (reject/fail to reject) the null hypothesis that the slope is 0 at the \\(100\\alpha\\%\\) significiance level. There is (sufficient/insufficient) evidence that there is significant association between (\\(Y\\)) and (\\(X\\)) (p-value = \\(P(T &gt; t)\\))."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#standard-error-of-fitted-slope-widehatbeta_1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#standard-error-of-fitted-slope-widehatbeta_1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Standard error of fitted slope \\(\\widehat\\beta_1\\)",
+    "text": "Standard error of fitted slope \\(\\widehat\\beta_1\\)\n\n   \n\n\n\\[\\text{SE}_{\\widehat\\beta_1} = \\frac{s_{\\textrm{residuals}}}{s_x\\sqrt{n-1}}\\]\n\n\\(\\text{SE}_{\\widehat\\beta_1}\\) is the variability of the statistic \\(\\widehat\\beta_1\\)\n\n\n   \n\n\n\n\n\\(s_{\\textrm{residuals}}^2\\) is the sd of the residuals\n\n\n\n\n\n\\(s_x\\) is the sample sd of the explanatory variable \\(x\\)\n\n\n\n\n\n\\(n\\) is the sample size, or the number of (complete) pairs of points"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#calculating-standard-error-for-widehatbeta_1-12",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#calculating-standard-error-for-widehatbeta_1-12",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Calculating standard error for \\(\\widehat\\beta_1\\) (1/2)",
+    "text": "Calculating standard error for \\(\\widehat\\beta_1\\) (1/2)\n\n\nOption 1: Calculate using the formula\n\n\nglance(model1)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.411         0.403  6.14      54.4 1.50e-10     1  -258.  521.  529.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n# standard deviation of the residuals (Residual standard error in summary() output)\n(s_resid &lt;- glance(model1)$sigma)\n\n[1] 6.142157\n\n# standard deviation of x's\n(s_x &lt;- sd(gapm$female_literacy_rate_2011, na.rm=T))\n\n[1] 21.95371\n\n# number of pairs of complete observations\n(n &lt;- nobs(model1))\n\n[1] 80\n\n(se_b1 &lt;- s_resid/(s_x * sqrt(n-1))) # compare to SE in regression output\n\n[1] 0.03147744"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#calculating-standard-error-for-widehatbeta_1-22",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#calculating-standard-error-for-widehatbeta_1-22",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Calculating standard error for \\(\\widehat\\beta_1\\) (2/2)",
+    "text": "Calculating standard error for \\(\\widehat\\beta_1\\) (2/2)\n\n\nOption 2: Use regression table\n\n\n# recall model1_b1 is regression table restricted to b1 row\nmodel1_b1 &lt;-tidy(model1) %&gt;% filter(term == \"female_literacy_rate_2011\")\nmodel1_b1 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 45) %&gt;% fmt_number(decimals = 4)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    female_literacy_rate_2011\n0.2322\n0.0315\n7.3766\n0.0000"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#some-important-notes",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#some-important-notes",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Some important notes",
+    "text": "Some important notes\n\nToday we are discussing the hypothesis test for a single coefficient\n\n \n\nThe test statistic for a single coefficient follows a Student’s t-distribution\n \n\nIt can also follow an F-distribution, but we will discuss this more with multiple linear regression and multi-level categorical covariates\n\n\n \n\nSingle coefficient testing can be done on any coefficient, but it is most useful for continuous covariates or binary covariates\n \n\nThis is because testing the single coefficient will still tell us something about the overall relationship between the covariate and the outcome\n\n \n\nWe will talk more about this with multiple linear regression and multi-level categorical covariates"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-3-1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-3-1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 3",
+    "text": "Poll Everywhere Question 3"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-14",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-14",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (1/4)",
+    "text": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (1/4)\n\nSteps 1-4 are setting up our hypothesis test: not much change from the general steps\n\n\n\n\nFor today’s class, we are assuming that we have met the underlying assumptions (checked in our Model Evaluation step)\n\n\n\n\n\n\nState the null hypothesis.\n\n\n\nWe are testing if the slope is 0 or not:\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\n\n\nSpecify the significance level.\n\n\n\nOften we use \\(\\alpha = 0.05\\)\n\n\n\nSpecify the test statistic and its distribution under the null\n\n\n\nThe test statistic is \\(t\\), and follows a Student’s t-distribution."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-24",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-24",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (2/4)",
+    "text": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (2/4)\n\n\n\nCompute the value of the test statistic\n\n\n\n\nOption 1: Calculate the test statistic using the values in the regression table\n\n\n# recall model1_b1 is regression table restricted to b1 row\nmodel1_b1 &lt;-tidy(model1) %&gt;% filter(term == \"female_literacy_rate_2011\")\nmodel1_b1 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40) %&gt;% fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    female_literacy_rate_2011\n0.23\n0.03\n7.38\n0.00\n  \n  \n  \n\n\n\n(TestStat_b1 &lt;- model1_b1$estimate / model1_b1$std.error)\n\n[1] 7.376557\n\n\n\nOption 2: Get the test statistic value (\\(t^*\\)) from R\n\n\nmodel1_b1 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40) %&gt;% fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    female_literacy_rate_2011\n0.23\n0.03\n7.38\n0.00"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-34",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-34",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (3/4)",
+    "text": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (3/4)\n\n\n\nCalculate the p-value\n\n\n\n\nThe \\(p\\)-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true\nWe know the probability distribution of the test statistic (the null distribution) assuming \\(H_0\\) is true\nStatistical theory tells us that the test statistic \\(t\\) can be modeled by a \\(t\\)-distribution with \\(df = n-2\\).\n\nWe had 80 countries’ data, so \\(n=80\\)\n\nOption 1: Use pt() and our calculated test statistic\n\n\n(pv = 2*pt(TestStat_b1, df=80-2, lower.tail=F))\n\n[1] 1.501286e-10\n\n\n\nOption 2: Use the regression table output\n\n\nmodel1_b1 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-44",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-example-hypothesis-test-for-population-slope-beta_1-44",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (4/4)",
+    "text": "Life expectancy example: hypothesis test for population slope \\(\\beta_1\\) (4/4)\n\n\n\nWrite conclusion for the hypothesis test\n\n\n\nWe reject the null hypothesis that the slope is 0 at the \\(5\\%\\) significance level. There is sufficient evidence that there is significant association between female life expectancy and female literacy rates (p-value &lt; 0.0001)."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#note-on-hypothesis-testing-using-r",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#note-on-hypothesis-testing-using-r",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Note on hypothesis testing using R",
+    "text": "Note on hypothesis testing using R\n\nWe can basically skip Step 5 if we are using the “Option 2” route\n\n \n\nIn our assignments: if you use Option 2, Step 5 is optional\n\nUnless I specifically ask for the test statistic!!"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-14",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-14",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (1/4)",
+    "text": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (1/4)\n\nSteps 1-4 are setting up our hypothesis test: not much change from the general steps\n\n\n\n\nFor today’s class, we are assuming that we have met the underlying assumptions (checked in our Model Evaluation step)\n\n\n\n\n\n\nState the null hypothesis.\n\n\n\nWe are testing if the intercept is 0 or not:\n\\[\\begin{align}\nH_0 &: \\beta_0 = 0\\\\\n\\text{vs. } H_A&: \\beta_0 \\neq 0\n\\end{align}\\]\n\n\n\nSpecify the significance level\n\n\n\nOften we use \\(\\alpha = 0.05\\)\n\n\n\nSpecify the test statistic and its distribution under the null\n\n\n\nThis is the same as the slope. The test statistic is \\(t\\), and follows a Student’s t-distribution."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-24",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-24",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (2/4)",
+    "text": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (2/4)\n\n\n\nCompute the value of the test statistic\n\n\n\n\nOption 1: Calculate the test statistic using the values in the regression table\n\n\n# recall model1_b1 is regression table restricted to b1 row\nmodel1_b0 &lt;-tidy(model1) %&gt;% filter(term == \"(Intercept)\")\nmodel1_b0 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40) %&gt;% fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.93\n2.66\n19.14\n0.00\n  \n  \n  \n\n\n\n(TestStat_b0 &lt;- model1_b0$estimate / model1_b0$std.error)\n\n[1] 19.1429\n\n\n\nOption 2: Get the test statistic value (\\(t^*\\)) from R\n\n\nmodel1_b0 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40) %&gt;% fmt_number(decimals = 2)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.93\n2.66\n19.14\n0.00"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-34",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-34",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (3/4)",
+    "text": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (3/4)\n\n\n\nCalculate the p-value\n\n\n\n \n\nOption 1: Use pt() and our calculated test statistic\n\n\n(pv = 2*pt(TestStat_b0, df=80-2, lower.tail=F))\n\n[1] 3.325312e-31\n\n\n \n\nOption 2: Use the regression table output\n\n\nmodel1_b0 %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.9279\n2.660407\n19.1429\n3.325312e-31"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-44",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#life-expectancy-ex-hypothesis-test-for-population-intercept-beta_0-44",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (4/4)",
+    "text": "Life expectancy ex: hypothesis test for population intercept \\(\\beta_0\\) (4/4)\n\n\n\nWrite conclusion for the hypothesis test\n\n\n\nWe reject the null hypothesis that the intercept is 0 at the \\(5\\%\\) significance level. There is sufficient evidence that the intercept for the association between average female life expectancy and female literacy rates is different from 0 (p-value &lt; 0.0001).\n   \n\nNote: if we fail to reject \\(H_0\\), then we could decide to remove the intercept from the model to force the regression line to go through the origin (0,0) if it makes sense to do so for the application."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#inference-for-the-population-slope-hypothesis-test-and-ci",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#inference-for-the-population-slope-hypothesis-test-and-ci",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Inference for the population slope: hypothesis test and CI",
+    "text": "Inference for the population slope: hypothesis test and CI\n\n\n\n\nPopulation model\n\n\nline + random “noise”\n\\[Y = \\beta_0 + \\beta_1 \\cdot X + \\varepsilon\\] with \\(\\varepsilon \\sim N(0,\\sigma^2)\\)\n\\(\\sigma^2\\) is the variance of the residuals\n\n\n\n\nSample best-fit (least-squares) line\n\n\n\\[\\widehat{Y} = \\widehat{\\beta}_0 + \\widehat{\\beta}_1 \\cdot X \\]\nNote: Some sources use \\(b\\) instead of \\(\\widehat{\\beta}\\)\n\n\n\n\n\n \nWe have two options for inference:\n\nConduct the hypothesis test\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\nNote: R reports p-values for 2-sided tests\n\nConstruct a 95% confidence interval for the population slope \\(\\beta_1\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#confidence-interval-for-population-slope-beta_1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#confidence-interval-for-population-slope-beta_1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Confidence interval for population slope \\(\\beta_1\\)",
+    "text": "Confidence interval for population slope \\(\\beta_1\\)\nRecall the general CI formula:\n\\[\\widehat{\\beta}_1 \\pm t_{\\alpha, n-2}^* \\cdot SE_{\\widehat{\\beta}_1}\\]\nTo construct the confidence interval, we need to:\n\nSet our \\(\\alpha\\)-level\nFind \\(\\widehat\\beta_1\\)\nCalculate the \\(t_{n-2}^*\\)\nCalculate \\(SE_{\\widehat{\\beta}_1}\\)"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#calculate-ci-for-population-slope-beta_1-12",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#calculate-ci-for-population-slope-beta_1-12",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Calculate CI for population slope \\(\\beta_1\\) (1/2)",
+    "text": "Calculate CI for population slope \\(\\beta_1\\) (1/2)\n\n\n\\[\\widehat{\\beta}_1  \\pm t^*\\cdot SE_{\\beta_1}\\]\n\nwhere \\(t^*\\) is the \\(t\\)-distribution critical value with \\(df = n -2\\).\n\n\n\nOption 1: Calculate using each value\n\nSave values needed for CI:\n\nb1 &lt;- model1_b1$estimate\nSE_b1 &lt;- model1_b1$std.error\n\n\nnobs(model1) # sample size n\n\n[1] 80\n\n(tstar &lt;- qt(.975, df = 80-2))\n\n[1] 1.990847\n\n\nUse formula to calculate each bound\n\n(CI_LB &lt;- b1 - tstar*SE_b1)\n\n[1] 0.1695284\n\n(CI_UB &lt;- b1 + tstar*SE_b1)\n\n[1] 0.2948619"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#calculate-ci-for-population-slope-beta_1-22",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#calculate-ci-for-population-slope-beta_1-22",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Calculate CI for population slope \\(\\beta_1\\) (2/2)",
+    "text": "Calculate CI for population slope \\(\\beta_1\\) (2/2)\n\n\n\\[\\widehat{\\beta}_1  \\pm t^*\\cdot SE_{\\beta_1}\\]\n\nwhere \\(t^*\\) is the \\(t\\)-distribution critical value with \\(df = n -2\\).\n\n\n\nOption 2: Use the regression table\n\n\ntidy(model1, conf.int = T) %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40) %&gt;% fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.928\n2.660\n19.143\n0.000\n45.631\n56.224\n    female_literacy_rate_2011\n0.232\n0.031\n7.377\n0.000\n0.170\n0.295"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#reporting-the-coefficient-estimate-of-the-population-slope",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#reporting-the-coefficient-estimate-of-the-population-slope",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Reporting the coefficient estimate of the population slope",
+    "text": "Reporting the coefficient estimate of the population slope\n\nWhen we report our results to someone else, we don’t usually show them our full hypothesis test\n\nIn an informal setting, someone may want to see it\n\nTypically, we report the estimate with the confidence interval\n\nFrom the confidence interval, your audience can also deduce the results of a hypothesis test\n\nOnce we found our CI, we often just write the interpretation of the coefficient estimate:\n\n\n\nGeneral statement for population slope inference\n\n\nFor every increase of 1 unit in the \\(X\\)-variable, there is an expected average increase of \\(\\widehat\\beta_1\\) units in the \\(Y\\)-variable (95%: LB, UB).\n\n\n\nIn our example: For every 1% increase in female literacy rate, life expectancy increases, on average, 0.232 years (95% CI: 0.170, 0.295)."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-4-1",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-4-1",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 4",
+    "text": "Poll Everywhere Question 4"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#for-reference-quick-ci-for-beta_0",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#for-reference-quick-ci-for-beta_0",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "For reference: quick CI for \\(\\beta_0\\)",
+    "text": "For reference: quick CI for \\(\\beta_0\\)\n\nCalculate CI for population intercept \\(\\beta_0\\): \\(\\widehat{\\beta}_0 \\pm t^*\\cdot SE_{\\beta_0}\\)\n\nwhere \\(t^*\\) is the \\(t\\)-distribution critical value with \\(df = n -2\\)\n\nUse the regression table\n\n\ntidy(model1, conf.int = T) %&gt;% gt() %&gt;%\n  tab_options(table.font.size = 40) %&gt;% fmt_number(decimals = 3)\n\n\n\n\n\n  \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.928\n2.660\n19.143\n0.000\n45.631\n56.224\n    female_literacy_rate_2011\n0.232\n0.031\n7.377\n0.000\n0.170\n0.295\n  \n  \n  \n\n\n\n\n\n\nGeneral statement for population intercept inference\n\n\nThe expected outcome for the \\(Y\\)-variable is (\\(\\widehat\\beta_0\\)) when the \\(X\\)-variable is 0 (95% CI: LB, UB).\n\n\n\nFor example: The average life expectancy is 50.9 years when the female literacy rate is 0 (95% CI: 45.63, 56.22).\n\n\n\nLesson 18 Slides"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#regression-analysis-process",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#regression-analysis-process",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Regression analysis process",
+    "text": "Regression analysis process\n\n  \n\n\n\n\nModel Selection\n\n\n\nBuilding a model\nSelecting variables\nPrediction vs interpretation\nComparing potential models\n\n\n\n\n\n\n\n\nModel Fitting\n\n\n\nFind best fit line\nUsing OLS in this class\nParameter estimation\nCategorical covariates\nInteractions\n\n\n\n\n\n\n\n\nModel Evaluation\n\n\n\nEvaluation of model fit\nTesting model assumptions\nResiduals\nTransformations\nInfluential points\nMulticollinearity\n\n\n\n\n\n\n\n\nModel Use (Inference)\n\n\n\n\n\nInference for coefficients\nHypothesis testing for coefficients\n\n\n\nInference for expected \\(Y\\) given \\(X\\)"
+  },
+  {
+    "objectID": "lessons/img_slides/03_SLR_shiny_app.html",
+    "href": "lessons/img_slides/03_SLR_shiny_app.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Loading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.3     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks plotly::filter(), stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nLife Expectancy Simple Linear Regression\nLet’s try to find a model fit with the lowest score!\nClick two distinct points of the plot to draw a line. Try to minimize the score (at the top of the plot) using different lines. To create a new line just click on the plot more than twice. In this activity, the number we get is our “score.” In statistics, this score is actually called the sum of squared errors (SSE). Were you able to get the best-fit line presented in class?"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-12-visibility-hidden",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-12-visibility-hidden",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Remove missing values (1/2) {visibility =“hidden”}",
+    "text": "Remove missing values (1/2) {visibility =“hidden”}\n\nRemove rows with missing data for life expectancy and female literacy rate\n\n\ngapm &lt;- gapm_original %&gt;% \n  drop_na(life_expectancy_years_2011, female_literacy_rate_2011)\n\nglimpse(gapm)\n\nRows: 80\nColumns: 3\n$ country                    &lt;chr&gt; \"Afghanistan\", \"Albania\", \"Angola\", \"Antigu…\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n\n\n\nNo missing values now for our variables of interest"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-22-visibility-hidden",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#remove-missing-values-22-visibility-hidden",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Remove missing values (2/2) {visibility =“hidden”}",
+    "text": "Remove missing values (2/2) {visibility =“hidden”}\n\nAnd no more missing values when we look only at our two variables of interest\n\n\ngapm %&gt;% select(life_expectancy_years_2011, female_literacy_rate_2011) %&gt;% \n  get_summary_stats()\n\n# A tibble: 2 × 13\n  variable        n   min   max median    q1    q3   iqr   mad  mean    sd    se\n  &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 life_expec…    80    48  81.8   72.4  65.9  75.8  9.95  6.30  69.9  7.95 0.889\n2 female_lit…    80    13  99.8   91.6  71.0  98.0 27.0  11.4   81.7 22.0  2.45 \n# ℹ 1 more variable: ci &lt;dbl&gt;\n\n\n\n\nNote\n\n\n\nRemoving the rows with missing data was not needed to run the regression model.\nI did this step since later we will be calculating the standard deviations of the explanatory and response variables for just the values included in the regression model. It’ll be easier to do this if we remove the missing values now."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_Shiny_app/03_SLR_shiny_app.html",
+    "href": "lessons/18_SLR_01/18_SLR_Shiny_app/03_SLR_shiny_app.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Loading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.3     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks plotly::filter(), stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nLife Expectancy Simple Linear Regression\nLet’s try to find a model fit with the lowest score!\nClick two distinct points of the plot to draw a line. Try to minimize the score (at the top of the plot) using different lines. To create a new line just click on the plot more than twice. In this activity, the number we get is our “score.” In statistics, this score is actually called the sum of squared errors (SSE). Were you able to get the best-fit line presented in class?"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#so-how-do-i-find-the-coefficient-estimates-that-minimize-the-sse",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#so-how-do-i-find-the-coefficient-estimates-that-minimize-the-sse",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "So how do I find the coefficient estimates that minimize the SSE?",
+    "text": "So how do I find the coefficient estimates that minimize the SSE?"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#many-options-for-how-to-word-our-results-reference",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#many-options-for-how-to-word-our-results-reference",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Many options for how to word our results (Reference)",
+    "text": "Many options for how to word our results (Reference)\n\nIn our example: For every 1% increase in female literacy rate, life expectancy increases, on average, 0.232 years (95% CI: 0.170, 0.295).\n\n \n\nIn our example: For every 1% increase in female literacy rate, life expectancy is expected to increase 0.232 years (95% CI: 0.170, 0.295).\n\n \n\nIn our example: For every 1% increase in female literacy rate, the average life expectancy increases 0.232 years (95% CI: 0.170, 0.295)."
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-6",
+    "href": "lessons/18_SLR_01/18_SLR_01.html#poll-everywhere-question-6",
+    "title": "Lesson 18: Simple Linear Regression (SLR)",
+    "section": "Poll Everywhere Question 6",
+    "text": "Poll Everywhere Question 6"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01_key_info.html",
+    "href": "lessons/18_SLR_01/18_SLR_01_key_info.html",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "HW 6 presentations\n\nMeetings during 12/9-12/12\nVideos due 12/10\nLet me know if this interferes with any of your other classes’ exams\n\nPlease do your course evaluations!!\nAnything else?"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01_key_info.html#announcements",
+    "href": "lessons/18_SLR_01/18_SLR_01_key_info.html#announcements",
+    "title": "Key Info and Announcements",
+    "section": "",
+    "text": "HW 6 presentations\n\nMeetings during 12/9-12/12\nVideos due 12/10\nLet me know if this interferes with any of your other classes’ exams\n\nPlease do your course evaluations!!\nAnything else?"
+  },
+  {
+    "objectID": "lessons/18_SLR_01/18_SLR_01_key_info.html#key-dates",
+    "href": "lessons/18_SLR_01/18_SLR_01_key_info.html#key-dates",
+    "title": "Key Info and Announcements",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nTuesday (12/10): HW 6 videos due"
   }
 ]
